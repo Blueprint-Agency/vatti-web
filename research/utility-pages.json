@@ -1,0 +1,3313 @@
+{
+  "about-us": {
+    "url": "https://vattimalaysia.com/about-us/",
+    "meta": {
+      "title": "About Us | Best Kitchen Appliance Distributor | VATTI Malaysia",
+      "description": "VATTI, a global-listed corporation in kitchen appliances. We distribute high-quality kitchen appliances worldwide, anytime, anywhere.",
+      "canonical": "https://vattimalaysia.com/about-us/",
+      "h1": [
+        "About VATTI Malaysia"
+      ],
+      "jsonLdTypes": [
+        "Person",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "Article"
+      ],
+      "hasFAQSchema": false,
+      "wordCountVisible": null
+    },
+    "form": null,
+    "visibleText": [
+      "About VATTI Malaysia",
+      "Since 1992, VATTI has pioneered the industry of premium kitchen appliances, keeping innovation as a corporate strategy. It has grown from a locally listed company to a world-class corporation.",
+      "Our Slogan",
+      "We distribute our high quality kitchen appliances to anywhere at anytime",
+      "VATTI Product Innovation",
+      "The VATTI Group adheres to innovation and has been authorized to make 838 valid patents (as of May 10, 2018). The number is among the highest in the industry and has won two honors: the National Industrial Design Center and the Nationally Recognized Enterprise Technology Center.",
+      "Our Vision &",
+      "Core Values",
+      "Leading global provider of high-end kitchen appliances​",
+      "Customer First",
+      "Enterprising Spirit",
+      "Mutual Sharing & Win-win Corporation",
+      "Efficient Collaboration",
+      "Craftsman Spirit",
+      "VATTI Malaysia",
+      "Our Mission",
+      "We, Vatti hope to bring the best products into kitchen of every family and provide cooks the best products experience.",
+      "We have high requirements on the quality of each Vatti product. It is our responsibility to bring the best products to consumers.",
+      "Our development team also constantly developing products with the latest technology and strive to create good looking, user friendly and clean products.",
+      "Create the safest and most comfortable kitchen for consumers.",
+      "Envelope",
+      "Whatsapp",
+      "Youtube",
+      "Our Certifications"
+    ],
+    "maps": [
+      "https://maps.google.com/maps?q=Atria%20Shopping%20Gallery%2C%20Unit%2017%2C%201%2C%20Damansara%20Jaya%2C%2047400%20Petaling%20Jaya%2C%20Selangor%2C%20Malaysia&t=m&z=13&output=embed&iwloc=near",
+      "https://www.googletagmanager.com/ns.html?id=GTM-TWBK2JSG"
+    ],
+    "sectionCount": 6,
+    "sections": [
+      {
+        "index": 0,
+        "elementorId": "528cf7f",
+        "widgets": [
+          {
+            "type": "heading.default",
+            "text": "About VATTI Malaysia",
+            "tag": "h1"
+          },
+          {
+            "type": "text-editor.default",
+            "text": "Since 1992, VATTI has pioneered the industry of premium kitchen appliances, keeping innovation as a corporate strategy. It has grown from a locally listed company to a world-class corporation."
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "elementorId": "dc696b6",
+        "widgets": [
+          {
+            "type": "heading.default",
+            "text": "Our Slogan",
+            "tag": "h2"
+          },
+          {
+            "type": "text-editor.default",
+            "text": "We distribute our high quality kitchen appliances to anywhere at anytime"
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "elementorId": "n0ma4bb",
+        "widgets": [
+          {
+            "type": "heading.default",
+            "text": "VATTI Product Innovation",
+            "tag": "h2"
+          },
+          {
+            "type": "text-editor.default",
+            "text": "The VATTI Group adheres to innovation and has been authorized to make 838 valid patents (as of May 10, 2018). The number is among the highest in the industry and has won two honors: the National Industrial Design Center and the Nationally Recognized Enterprise Technology Center."
+          },
+          {
+            "type": "video.default",
+            "src": null
+          }
+        ]
+      },
+      {
+        "index": 3,
+        "elementorId": "30whh58",
+        "widgets": [
+          {
+            "type": "heading.default",
+            "text": "Our Vision & | Core Values",
+            "tag": "h2"
+          },
+          {
+            "type": "heading.default",
+            "text": "Leading global provider of high-end kitchen appliances​",
+            "tag": "h5"
+          },
+          {
+            "type": "divider.default",
+            "text": ""
+          },
+          {
+            "type": "icon.default",
+            "text": ""
+          },
+          {
+            "type": "heading.default",
+            "text": "Customer First",
+            "tag": "h2"
+          },
+          {
+            "type": "heading.default",
+            "text": "Enterprising Spirit",
+            "tag": "h2"
+          },
+          {
+            "type": "heading.default",
+            "text": "Mutual Sharing & Win-win Corporation",
+            "tag": "h2"
+          },
+          {
+            "type": "heading.default",
+            "text": "Efficient Collaboration",
+            "tag": "h2"
+          },
+          {
+            "type": "heading.default",
+            "text": "Craftsman Spirit",
+            "tag": "h2"
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "elementorId": "q9wsyal",
+        "widgets": [
+          {
+            "type": "heading.default",
+            "text": "VATTI Malaysia",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "Our Mission",
+            "tag": "h2"
+          },
+          {
+            "type": "text-editor.default",
+            "text": "We, Vatti hope to bring the best products into kitchen of every family and provide cooks the best products experience. We have high requirements on the quality of each Vatti product. It is our responsibility to bring the best products to consumers. Our development team also constantly developing products with the latest technology and strive to create good looking, user friendly and clean products. Create the safest and most comfortable kitchen for consumers."
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/03/Team-Vatti-e1679313303385.png?fit=826%2C175&ssl=1",
+            "alt": ""
+          },
+          {
+            "type": "social-icons.default",
+            "text": "Envelope Whatsapp Youtube",
+            "links": [
+              {
+                "label": "Envelope",
+                "href": "https://vattimalaysia.com/contact-us/"
+              },
+              {
+                "label": "Whatsapp",
+                "href": "https://wa.me/60123366082?text="
+              },
+              {
+                "label": "Youtube",
+                "href": "https://www.youtube.com/@vattimalaysia8049"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "index": 5,
+        "elementorId": "ebacd2c",
+        "widgets": [
+          {
+            "type": "heading.default",
+            "text": "Our Certifications",
+            "tag": "h2"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/02/OHASMSC.webp?fit=600%2C820&ssl=1",
+            "alt": ""
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/02/QMSC.webp?fit=600%2C820&ssl=1",
+            "alt": ""
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/02/Certificate.jpg?fit=915%2C653&ssl=1",
+            "alt": ""
+          }
+        ]
+      }
+    ]
+  },
+  "contact-us": {
+    "url": "https://vattimalaysia.com/contact-us/",
+    "meta": {
+      "title": "Contact Us | Call Us Immediately | VATTI Malaysia",
+      "description": "Contact us at +6012-3366082 or email enquiry@vattimalaysia.com. Reach out via our enquiry form. We're here to assist you!",
+      "canonical": "https://vattimalaysia.com/contact-us/",
+      "h1": [
+        "Contact Us"
+      ],
+      "jsonLdTypes": [
+        "Person",
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "Article"
+      ],
+      "hasFAQSchema": false,
+      "wordCountVisible": null
+    },
+    "form": {
+      "action": "/contact-us/#wpcf7-f8-p46-o1",
+      "method": "post",
+      "engine": "Contact Form 7",
+      "formId": "wpcf7-f8-p46",
+      "labels": [
+        "Name |",
+        "Email |",
+        "Contact number |",
+        "Subject |",
+        "Message |",
+        "Δ"
+      ],
+      "fields": [
+        {
+          "name": "your-name",
+          "tag": "input",
+          "type": "text",
+          "required": true,
+          "placeholder": null
+        },
+        {
+          "name": "your-email",
+          "tag": "input",
+          "type": "email",
+          "required": true,
+          "placeholder": null
+        },
+        {
+          "name": "your-contact",
+          "tag": "input",
+          "type": "text",
+          "required": true,
+          "placeholder": null
+        },
+        {
+          "name": "your-subject",
+          "tag": "input",
+          "type": "text",
+          "required": true,
+          "placeholder": null
+        },
+        {
+          "name": "your-message",
+          "tag": "textarea",
+          "type": "textarea",
+          "required": false,
+          "placeholder": null
+        }
+      ]
+    },
+    "visibleText": [
+      "Contact Us",
+      "Our Information",
+      "Service Care Line / Whatsapp:",
+      "012-3366082",
+      "Email us at:",
+      "enquiry@vattimalaysia.com",
+      "Our showroom address",
+      "Atria Shopping Gallery, Unit 17, 1, Damansara Jaya, 47400 Petaling Jaya, Selangor",
+      "Get A Reply Within 48 Hours!",
+      "Name",
+      "Email",
+      "Contact number",
+      "Subject",
+      "Message"
+    ],
+    "maps": [
+      "https://maps.google.com/maps?q=Atria%20Shopping%20Gallery%2C%20Unit%2017%2C%201%2C%20Damansara%20Jaya%2C%2047400%20Petaling%20Jaya%2C%20Selangor&t=m&z=10&output=embed&iwloc=near",
+      "https://maps.google.com/maps?q=Atria%20Shopping%20Gallery%2C%20Unit%2017%2C%201%2C%20Damansara%20Jaya%2C%2047400%20Petaling%20Jaya%2C%20Selangor%2C%20Malaysia&t=m&z=13&output=embed&iwloc=near",
+      "https://www.googletagmanager.com/ns.html?id=GTM-TWBK2JSG"
+    ],
+    "sectionCount": 5,
+    "sections": [
+      {
+        "index": 0,
+        "elementorId": "272dc62e",
+        "widgets": [
+          {
+            "type": "heading.default",
+            "text": "Contact Us",
+            "tag": "h1"
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "elementorId": "158953c",
+        "widgets": []
+      },
+      {
+        "index": 2,
+        "elementorId": "30ed0f7",
+        "widgets": [
+          {
+            "type": "heading.default",
+            "text": "Our Information",
+            "tag": "h2"
+          },
+          {
+            "type": "text-editor.default",
+            "text": "Service Care Line / Whatsapp: 012-3366082"
+          },
+          {
+            "type": "text-editor.default",
+            "text": "Email us at: enquiry@vattimalaysia.com"
+          },
+          {
+            "type": "text-editor.default",
+            "text": "Our showroom address Atria Shopping Gallery, Unit 17, 1, Damansara Jaya, 47400 Petaling Jaya, Selangor"
+          },
+          {
+            "type": "google_maps.default",
+            "iframe": "about:blank"
+          }
+        ]
+      },
+      {
+        "index": 3,
+        "elementorId": "1c7d4f5a",
+        "widgets": [
+          {
+            "type": "heading.default",
+            "text": "Get A Reply Within 48 Hours!",
+            "tag": "h3"
+          },
+          {
+            "type": "ha-cf7.default",
+            "form": {
+              "action": "/contact-us/#wpcf7-f8-p46-o1",
+              "method": "post",
+              "engine": "Contact Form 7",
+              "formId": "wpcf7-f8-p46",
+              "labels": [
+                "Name |",
+                "Email |",
+                "Contact number |",
+                "Subject |",
+                "Message |",
+                "Δ"
+              ],
+              "fields": [
+                {
+                  "name": "your-name",
+                  "tag": "input",
+                  "type": "text",
+                  "required": true,
+                  "placeholder": null
+                },
+                {
+                  "name": "your-email",
+                  "tag": "input",
+                  "type": "email",
+                  "required": true,
+                  "placeholder": null
+                },
+                {
+                  "name": "your-contact",
+                  "tag": "input",
+                  "type": "text",
+                  "required": true,
+                  "placeholder": null
+                },
+                {
+                  "name": "your-subject",
+                  "tag": "input",
+                  "type": "text",
+                  "required": true,
+                  "placeholder": null
+                },
+                {
+                  "name": "your-message",
+                  "tag": "textarea",
+                  "type": "textarea",
+                  "required": false,
+                  "placeholder": null
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "elementorId": "4c36eed",
+        "widgets": []
+      }
+    ]
+  },
+  "vatti-pay": {
+    "url": "https://vattimalaysia.com/vatti-pay/",
+    "meta": {
+      "title": "VATTI Pay - An Efficient and Easy Used Payment System",
+      "description": "Join as a Vatti dealer, use reliable Vatti Pay for efficient payments. Experience convenience and trustworthiness.",
+      "canonical": "https://vattimalaysia.com/vatti-pay/",
+      "h1": [
+        "VATTI Pay"
+      ],
+      "jsonLdTypes": [
+        "Person",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "Article"
+      ],
+      "hasFAQSchema": false,
+      "wordCountVisible": null
+    },
+    "form": null,
+    "visibleText": [
+      "VATTI Pay",
+      "VATTI Pay allows existing dealers to pay the money online.",
+      "It is not able to register through the website.",
+      "Make Payment"
+    ],
+    "maps": [
+      "https://maps.google.com/maps?q=Atria%20Shopping%20Gallery%2C%20Unit%2017%2C%201%2C%20Damansara%20Jaya%2C%2047400%20Petaling%20Jaya%2C%20Selangor%2C%20Malaysia&t=m&z=13&output=embed&iwloc=near",
+      "https://www.googletagmanager.com/ns.html?id=GTM-TWBK2JSG"
+    ],
+    "sectionCount": 5,
+    "sections": [
+      {
+        "index": 0,
+        "elementorId": "2125804",
+        "widgets": [
+          {
+            "type": "heading.default",
+            "text": "VATTI Pay",
+            "tag": "h1"
+          },
+          {
+            "type": "text-editor.default",
+            "text": "VATTI Pay allows existing dealers to pay the money online. It is not able to register through the website."
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "elementorId": "af403f0",
+        "widgets": [
+          {
+            "type": "button.default",
+            "label": "Make Payment",
+            "href": "https://sso.3ex.com.my/saml/module.php/core/loginuserpass.php?AuthState=_ef7e8407b4b29f1f19faca4e3dd344b341d9a5353a%3Ahttps%3A%2F%2Fsso.3ex.com.my%2Fsaml%2Fsaml2%2Fidp%2FSSOService.php%3Fspentityid%3Dhttps%253A%252F%252Fvattipay.3ex.com.my%26cookieTime%3D1676513980%26RelayState%3Dhttps%253A%252F%252Fvattipay.3ex.com.my%252Fdealer"
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "elementorId": "d8eae2f",
+        "widgets": []
+      },
+      {
+        "index": 3,
+        "elementorId": "5a65938",
+        "widgets": [
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/07/maybank.png?fit=329%2C185&ssl=1",
+            "alt": ""
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/07/public-bank.png?fit=361%2C361&ssl=1",
+            "alt": ""
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/07/cimb.png?fit=319%2C199&ssl=1",
+            "alt": ""
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/07/ocbc.png?fit=256%2C187&ssl=1",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "elementorId": "c7ba228",
+        "widgets": [
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/07/hsbc.png?fit=352%2C114&ssl=1",
+            "alt": ""
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/07/sc-bank.jpg?fit=389%2C157&ssl=1",
+            "alt": ""
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/07/am-bank.png?fit=304%2C130&ssl=1",
+            "alt": ""
+          }
+        ]
+      }
+    ]
+  },
+  "store-locations": {
+    "url": "https://vattimalaysia.com/store-locations/",
+    "meta": {
+      "title": "Store Locations | Authorized Dealers in Malaysia",
+      "description": "Purchase authentic VATTI Malaysia products from the store from our authorized dealers. Get the nearest store locations via the map below",
+      "canonical": "https://vattimalaysia.com/store-locations/",
+      "h1": [
+        "Locate Us"
+      ],
+      "jsonLdTypes": [
+        "Person",
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "Article"
+      ],
+      "hasFAQSchema": false,
+      "wordCountVisible": null
+    },
+    "form": null,
+    "visibleText": [
+      "Locate Us",
+      "IMPORTANT NOTICE",
+      "To ensure you receive genuine Vatti products with full warranty and reliable after-sales service, please purchase only from Vatti Malaysia Authorized Dealers.",
+      "We have identified cases of",
+      "unauthorized sellers promoting Vatti products inaccurately",
+      ", causing misunderstanding among customers.",
+      "Please note:",
+      "Some Vatti units purchased directly from China",
+      "are",
+      "not the same models",
+      "as those officially imported by Vatti Malaysia. Their components, specifications, and spare parts",
+      "differ from Malaysia-market versions",
+      "These units are",
+      "not ST or SIRIM certified",
+      ", which may pose safety risks and affect product reliability. Therefore, such products:",
+      "Cannot be serviced by Vatti Malaysia",
+      "Are not covered by Vatti Malaysia warranty",
+      "Cannot receive official spare parts or technical support.",
+      "For your safety and peace of mind, please buy only from authorized dealers to enjoy full warranty, genuine parts, and professional support. Thank you for your trust and support.",
+      "East Coast Malaysia",
+      "Klang Valley Malaysia",
+      "Northern Region Malaysia",
+      "Sabah & Sarawak",
+      "Southern Region Malaysia",
+      "ADAMAS TRADING (M) SDN. BHD.",
+      "27, Persiaran Skudai 8, Taman Perusahaan, 81300 Skudai, Johor",
+      "Tel: 07-562 8003",
+      "Direction",
+      "Alat Dapur Shah Alam",
+      "45, 47, 49, Jln Sungai Burung Z 32/Z, Bukit Rimau, 40460 Shah Alam, Selangor",
+      "Tel: 011-6563 0688",
+      "ALATDAPUR CHERAS",
+      "Lot 357, Batu 10, Jalan Cheras, 43200 Selangor",
+      "Tel: 012-3417585",
+      "ALATDAPUR SEMENYIH",
+      "52 & 52A & 56, Jln Ecohill 1/5A, Setia Ecohill Taipan, Semenyih, 43500, Selangor, Malaysia",
+      "Tel: 012-9387585",
+      "BAN HIN BEE SDN BHD (KITCHENTECH)",
+      "117, Anson Road, 10400 Penang",
+      "Tel: 012-438 2880",
+      "BENOVA MARKETING SDN BHD",
+      "22, Jln Wan KAdir 4, Taman Tun Dr Ismail, 60000 Kuala Lumpur",
+      "Tel: 016-33 63877",
+      "Bright Scott Electrical Sdn Bhd Sandakan",
+      "LOT 79-81,BLOCK K,BANDAR PASARAYA, MILE 4 NORTH ROAD 90000 SANDAKAN, Sandakan, Malaysia, 90000",
+      "Tel: +60 89 232 500",
+      "DARSON XTRA (MUAR)",
+      "1,3,5 Jln Sayang Pekan Muar 84000 Muar Johor",
+      "Tel: 06-910 1061",
+      "DE BATHLABZ (BATU TIGA) SDN BHD",
+      "89A, JALAN BATU TIGA, 41300 KLANG SELANGOR",
+      "Tel: 014-6676988 / 03-33459888",
+      "DE BATHLABZ SDN BHD",
+      "2A,6,8, Lorong Batu Nilam 4A, Bandar Bukit Tinggi, 41200 Klang, Selangor",
+      "Tel: 013-627 7812",
+      "E.S.H ELECTRICAL SDN. BHD. (EkoCheras)",
+      "S-02 & 02A, 2nd Floor, EkoCheras Mall No. 693, Batu, 5, Jln Cheras, 56000 Kuala Lumpur, Malaysia",
+      "Tel: 016-661 8003",
+      "E.S.H ELECTRICAL SDN. BHD. (Metro Prima)",
+      "No C46, C48 & C50, Vista Magna Jalan Prima, Off, Jln Kepong, Metro Prima, 52100 Kuala Lumpur, Malaysia",
+      "Tel: 03-6252 1899",
+      "E.S.H ELECTRICAL SDN. BHD. (The Starling)",
+      "F124, 1st Floor, The Starling Mall, 6, SS21/37, Damansara Utama, 47400 Petaling Jaya, Selangor",
+      "Tel: 016-660 5884",
+      "EASTONE GALLERY & MARKETING",
+      "PT 2518, Jln Abdul Kadir Adabi, Taman Kenangan, 15200 Kota Bharu, Kelantan",
+      "Tel: 09-748 8989",
+      "Eastone Gallery Sdn Bhd - Tunjung",
+      "Lot 1297, Kampung Tunjung, 16010 Kota Bharu, Kelantan",
+      "Tel: 011-2603 8778",
+      "EMART (NUSA BESTARI)",
+      "21-33 Jln Bestari 12/2, Taman Nusa Bestari 81300 Johor Bahru",
+      "Tel: 07-556 3418",
+      "EMART (PLENTONG)",
+      "2 Jln Mutiara 4, Kawasan Perindustrian Plentong 81750 Masai Johor Bahru",
+      "Tel: 07-334 3166",
+      "ESH ELECTRICAL SDN BHD (Petaling Jaya)",
+      "6, 8, 10, 12, Jln SS 2/24, SS 2, 47300 Petaling Jaya, Selangor",
+      "Tel: 03-7875 3692",
+      "EUROTAN ENTERPRISE SDN BHD",
+      "264, Jln Sultan Azlan Shah, Jalan Ipoh, 51200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+      "Tel: 016-2887177",
+      "1, Jln Emas SD 5/1B, Bandar Sri Damansara, 52200 Kuala Lumpur",
+      "FELICITA HOMES DECO",
+      "NO 77, Jln Sejahtera 2, Medan Sejahtera, 32000, Perak",
+      "Tel: 016-441 0366",
+      "Filken Bukit Indah",
+      "19G, Jalan Bestari 6/2 Taman Nusa Bestari Iskandar Puteri, 79150 Johor, Johor Darul Ta'zim, Malaysia",
+      "Tel: 016-710 9461",
+      "Filken Kulai",
+      "6032, Jalan Siantan 1, Bandar Indahpura, 81000 Kulai, Johor Darul Ta'zim",
+      "Tel: 011-3339 9461",
+      "FLO PLUS HOME SDN BHD",
+      "22, Jalan Seroja 45, Taman Johor Jaya Johor Jaya, 81100 Johor Bahru, Johor Darul Ta'zim",
+      "Tel: 018-312 8383",
+      "Grand Filken Setia Indah",
+      "43, Jalan Setia 3/3, Taman Setia Indah, 81100 Johor Bahru, Johor, Malaysia",
+      "Tel: 016-449 9461",
+      "HENG FOONG SANITARYWARE TRADING",
+      "30,31,32 , Ground Floor, Taman Bandar Baru, Mergong, Persiaran Bandar Bari Mergong 05150 Alor Setar, Kedah",
+      "Tel: 04-733 7188",
+      "HK Home Electrical Sdn Bhd",
+      "24, Jalan Psk Satu. Pekan Simpang Kuala, 05400 Alor Setar, Kedah",
+      "Tel: 012-552 9001",
+      "HOME CARE KITCHEN SUPPLY SDN BHD",
+      "43 Jln Rosmerah 2/1, Taman Johor Jaya 81100 Johor Bahru",
+      "Tel: 07-350 4039",
+      "Home Style Marketing Sdn Bhd",
+      "140 Jalan Sentral 1, Taman Nusa Sentral 79100 Iskandar Puteri, Johor Bahru",
+      "Tel: 012-7553313",
+      "HOMEWORKS (SOUTHERN) SDN BHD",
+      "No11, Jalan Jaya Putra 7/4, Bandar Jaya Putra, 81100 Johor Bahru, Johor Darul Ta'zim, Malaysia",
+      "Tel: 018 - 9533380",
+      "Homeworks Sdn Bhd",
+      "No 27, Jalan Setia Jaya Utama, Taman Setia Jaya, 83000 Batu Pahat, Johor",
+      "Tel: 07-431 2121 / 016-776 6533",
+      "IN CERAMICS SDN.BHD",
+      "Sublot 8, 11A Jalan Padi , 96000 Sibu , Sarawak",
+      "Tel: 016-888 2928",
+      "JF HOME APPLIANCES SDN BHD",
+      "No 23-G Jln USJ 9/5N, UEP Subang Jaya 47620 Selangor",
+      "Tel: 013-299 6299",
+      "JW SANITARY HOME SDN BHD",
+      "Lot 10233-C, Jln Batu Caves, Batu 8, 68100 Batu Caves, Selangor",
+      "Tel: 016-888 7140",
+      "Kah Hoe Enterprise",
+      "No 11, Jalan PKY 1, Pusat Komersil Yayasan, 85000 Segamat, Johor.",
+      "Tel: 013-770 6118",
+      "KBO MEGASTORE SDN BHD (JINJANG)",
+      "NO.29, Jln Kepong Jinjang Selatan 52000 Kuala Lumpur",
+      "Tel: 011-2672 7698",
+      "Kbo Megastore Sdn Bhd (Kuchai Lama)",
+      "G-7 & G-8, DATARAN LOKA, 9, Jalan Kuchai Lama, KUCHAI LAMA, 58200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+      "Tel: 019-981 6881",
+      "KBO MEGASTORE SDN BHD (UPTOWN)",
+      "70, Jalan SS 21/1, Damansara Utama, 47400 Petaling Jaya, Selangor",
+      "KBO TOTAL HOME DIY SDN BHD",
+      "39G Jln TPK 2/8, Taman Perindustrian Kinrara 47180 Puchong, Selangor",
+      "Tel: 03-8079 1268",
+      "Kitchenwise Sdn Bhd",
+      "72-74g, Jalan Puteri 5/1, Bandar Puteri, 47100 Puchong, Selangor",
+      "Tel: 03-8069 1177",
+      "LIVING PORTAL (M) SDN BHD",
+      "G31 & G33, Jalan Pandan Prima 2, Dataran Pandan Prima, Ampang, 55100 Kuala Lumpur.",
+      "Tel: 03-920 04511",
+      "LTL GLOBAL ( KOTA BAYUEMAS )",
+      "No. 10-1, 12-1, 14-1 Ground Floor, Jalan Bayu Impian 4A/KS9, Kota Bayuemas, 41200 Klang, Selangor, Malaysia",
+      "Tel: 0 19-285 1588",
+      "Mandi B.P. Sdn Bhd",
+      "No. 1, Jalan Pinggir, 2 1/2 Miles Jalan Ipoh, 51200 Kuala Lumpur.",
+      "Tel: 03-4043 8833",
+      "MULTI SKILL KITCHEN DESIGN SDN BHD",
+      "B820, Ground Floor & Basement, Jalan Bukit Ubi, 25300 Kuantan, Pahang",
+      "Tel: 012-9009939",
+      "MUM KITCH (BANDAR SUNWAY)",
+      "No 2, Jalan PJS 5/26, Taman Desaria, 46150 Petaling Jaya",
+      "Tel: 018 - 211 3618",
+      "MUM KITCH (BUKIT JALIL)",
+      "No 1-9-G, Jalan Jalil Perkasa 13, 57000 Bukit Jalil, Kuala Lumpur",
+      "Tel: 011-1148 9784",
+      "Nikko Kitchen & Design (Melaka)",
+      "No. 9 Jalan SP 1 Taman Semabok Perdana 75050 Semabok Melaka",
+      "Tel: 011-5167 3995",
+      "Nikko Kitchen & Design (Muar)",
+      "No. 16, Jalan Sutera 1/6 Taman Sungai Abong Sutera 84000 Muar Johor",
+      "Tel: 011-516 73995",
+      "NOVO BATH HOME SDN BHD",
+      "NO.B-G-01, LOT 23A, Ground Floor, BLOCK B, Lorong Inanam Kapital 3, Inanam Kapital, 88450 Inanam, Kota Kinabalu, Sabah.",
+      "Tel: 016-589 4848",
+      "P&Y LIGHTING SDN. BHD.",
+      "13, Lorong Haji Hassan Nindung, Pusat Perniagaan Mas Jaya, 84000 Muar, Johor Darul Ta'zim",
+      "Tel: 019-654 9788",
+      "Perfect Electrical Setia Alam",
+      "37-1 & 39-1, Jalan Setia Prima A U13/A, Seksyen U13, 40170 Shah Alam, Selangor D.E.",
+      "Tel: 03-3191 3020",
+      "Perfect Electrical USJ Taipan",
+      "65, 67, Jalan USJ 10/1a, Taipan Business Centre, 47610 Subang Jaya, Selangor",
+      "Tel: 012-218 3766",
+      "SIN JIN DA HARDWARE SDN BHD",
+      "843 & 844, Jln Juru Jaya, Pusat Perniagaan Persekutuan Jaya, 14000 Bukit Mertajam, Pulau Pinang",
+      "Tel: 04-507 4151",
+      "SK Hardware (Bintulu)",
+      "83, 86, Medan Jaya Commercial Centre, 97000 Bintulu, Sarawak, Malaysia",
+      "Tel: 012-884 0389",
+      "SK Hardware (Kuching) Sdn Bhd",
+      "5th Mile, Lot 1121, 246, Jalan Penrissen, 93250 Kuching, Sarawak, Malaysia",
+      "Tel: 082-522 833",
+      "SK LIFESTYLES (MIRI) SDN BHD",
+      "NO.255, Jln Baiduri 1, Pujut 3A, 98000 Miri, Sarawak",
+      "Tel: 085-622 595",
+      "Standard Kitchen Sdn Bhd",
+      "Lorong 4, 3 1, Jalan Penrissen, no.37, 2Mile, Jalan Everbright Park, 93250 Kuching, Sarawak, Malaysia",
+      "Tel: 082-456 669",
+      "TAHOL MARKETING",
+      "NO.273, Jln RAJA Permaisuri Bainun, Jln Kampar, 30250 Ipoh, Perak",
+      "Tel: 05-253 1061",
+      "TANRADIO (JOHOR JAYA)",
+      "Lot2, Jalan Dedap 3, Johor Jaya, 81100 Johor Bharu.",
+      "Tel: 019-797 7388",
+      "TANRADIO.COM (Batu Pahat)",
+      "No 6, 8, 10&12, Jln Penjaja, Pusat Komersial Bentara, 83000 Batu Bahat, Johor",
+      "Tel: 011 - 1562 9709",
+      "TANRADIO.COM (KULAI)",
+      "1152, Jalan Kasturi 36/41, Asiatic Indahpura Car City, 81000 Kulai, Johor",
+      "Tel: 017-7999469",
+      "TANRADIO.COM (SERI ALAM)",
+      "GRAVITY GREEN, TANRADIO.COM BLOCK A1, Jln Suria, Bandar Baru Seri Alam, 81750 Masai, Johor",
+      "Tel: 010-8269021",
+      "TANRADIO.COM (TUN AMINAH)",
+      "83 & 85, Jalan, Jalan Bentara 20, Taman Ungku Tun Aminah, 81300 Skudai, Johor",
+      "Tel: 018-7840940",
+      "TANRADIO.COM ELECTRICAL SDN BHD",
+      "No. 40, Jalan Tasik Indah 1/1, Taman Tasik Indah, 86000 Kluang, Johor, Malaysia",
+      "Tel: 07-739 2711",
+      "THYE HIN TRADING",
+      "Lot 27447, Jalan BBN 5/1a, Bandar Nilai Utama, 71800 Nilai, Negeri Sembilan.",
+      "Tel: 011-3310 3935",
+      "UNION MOTORS & ELECTRICAL SUPPLIES SDN BHD",
+      "56 & 58, Jalan Sultan Ismail, 20200 Kuala Terengganu, Terengganu",
+      "Tel: 09-6261450",
+      "62 Jalan Sultan Ismail, 20200 Kuala Terengganu, Terengganu",
+      "URBANEZ SDN BHD (KLANG)",
+      "9, Jln Bayu Tinggi 1A, Taman Batu Unjur, 41200 Klang, Selangor ( Klang Branch )",
+      "Tel: 03-3324 8133",
+      "URBANEZ SDN BHD (KOTA DAMANSARA)",
+      "No. 36-2, 1st Floor Jalan PJU 5/8 Dataran Sunway, Kota Damansara, 47810 Petaling Jaya, Selangor ( KD Branch )",
+      "Tel: 03-6140 8255",
+      "VINTAGE BATH & KITCHEN KOTA KINABALU",
+      "Lorong Plaza 333-6, 89500 Penampang, Sabah, Malaysia",
+      "Tel: +60 16-455 8898",
+      "Vintage Bath & Kitchen Tawau",
+      "1st Floor, Wisma TAI & TAI, 254C Jln Dunlop, 91000 Tawau, Sabah",
+      "Tel: 089-772 666",
+      "VIVA NUEVA SDN BHD",
+      "NO 1 JALAN KENCANA EMAS 2/3, KAWASAN PERINDUSTRIAN TEBRAU III, 81100 JOHOR BAHRU, JOHOR",
+      "Tel: 07-2212888",
+      "WORLD BATH & KITCHEN SDN BHD",
+      "NO 13-G, Dataran Mutiara, Jalan 7/4, Taman Serdang Jaya, 43300 Seri Kembangan, Selangor",
+      "Tel: 017-661 8797",
+      "WPC IDEAS ENTERPRISE",
+      "Lot 9339, Jln Kuantan - Kemaman, Kawasan Perindustrian Jakar Ii, 24000 Chukai, Terengganu, Malaysia",
+      "Tel: 09-858 5033",
+      "Xam Max Kitchen",
+      "P1-1-19 & P1-1-20, Residensi Damai Meriah, No. 2, Jalan PJU 10/1A, Damansara Damai, 47830 Petaling Jaya, Selangor",
+      "Tel: 018-221 5022"
+    ],
+    "maps": [
+      "https://maps.google.com/maps?q=Atria%20Shopping%20Gallery%2C%20Unit%2017%2C%201%2C%20Damansara%20Jaya%2C%2047400%20Petaling%20Jaya%2C%20Selangor%2C%20Malaysia&t=m&z=13&output=embed&iwloc=near",
+      "https://www.googletagmanager.com/ns.html?id=GTM-TWBK2JSG"
+    ],
+    "sectionCount": 5,
+    "sections": [
+      {
+        "index": 0,
+        "elementorId": "464986d1",
+        "widgets": [
+          {
+            "type": "heading.default",
+            "text": "Locate Us",
+            "tag": "h1"
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "elementorId": "b855505",
+        "widgets": [
+          {
+            "type": "taxonomy-filter.default",
+            "terms": [
+              "east-coast-malaysia",
+              "klang-valley-malaysia",
+              "northern-region-malaysia",
+              "sabah-sarawak",
+              "southern-region-malaysia"
+            ]
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "elementorId": "a8a7901",
+        "widgets": []
+      },
+      {
+        "index": 3,
+        "elementorId": "8a9a2ca",
+        "widgets": [
+          {
+            "type": "loop-grid.post",
+            "itemCount": 75,
+            "itemClasses": [
+              "type-store",
+              "store-state-southern-region-malaysia",
+              "store-state-klang-valley-malaysia",
+              "store-state-northern-region-malaysia",
+              "store-state-sabah-sarawak",
+              "store-state-east-coast-malaysia"
+            ],
+            "linkedPosts": []
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2024/04/Adamas.webp?fit=1280%2C960&ssl=1",
+            "alt": "ADAMAS TRADING (M) SDN. BHD."
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "ADAMAS TRADING (M) SDN. BHD.",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "27, Persiaran Skudai 8, Taman Perusahaan, 81300 Skudai, Johor",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 07-562 8003",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/C6RCgfaP9MMhAut88"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2026/03/Alat-Dapur-Shah-Alam.webp?fit=1080%2C810&ssl=1",
+            "alt": "Alat Dapur Shah Alam"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "Alat Dapur Shah Alam",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "45, 47, 49, Jln Sungai Burung Z 32/Z, Bukit Rimau, 40460 Shah Alam, Selangor",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 011-6563 0688",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/YBSvLFpLwWBPsiZf7"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2025/09/ALATDAPUR-CHERAS.webp?fit=2560%2C1920&ssl=1",
+            "alt": "ALATDAPUR CHERAS"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "ALATDAPUR CHERAS",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "Lot 357, Batu 10, Jalan Cheras, 43200 Selangor",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 012-3417585",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/pEwwswERRxxpaf757"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2025/09/ALATDAPUR-SEMENYIH.webp?fit=2560%2C1920&ssl=1",
+            "alt": "ALATDAPUR SEMENYIH"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "ALATDAPUR SEMENYIH",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "52 & 52A & 56, Jln Ecohill 1/5A, Setia Ecohill Taipan, Semenyih, 43500, Selangor, Malaysia",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 012-9387585",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/QRWjgz1irMFayUFJ7"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2024/09/BAN-HIN-BEE-SDN-BHD-KITCHENTECH.png?fit=1024%2C768&ssl=1",
+            "alt": "BAN HIN BEE SDN BHD (KITCHENTECH)"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "BAN HIN BEE SDN BHD (KITCHENTECH)",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "117, Anson Road, 10400 Penang",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 012-438 2880",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/ESmiDgHVysvk8bpd6"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2024/08/Benova-marketing.webp?fit=2560%2C1920&ssl=1",
+            "alt": "Benova marketing store"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "BENOVA MARKETING SDN BHD",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "22, Jln Wan KAdir 4, Taman Tun Dr Ismail, 60000 Kuala Lumpur",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 016-33 63877",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/yfzao8RRdhXLhxwE7"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2026/05/Bright-Scott-Electrical-Sdn-Bhd-Sandakan.webp?fit=810%2C1080&ssl=1",
+            "alt": "Bright Scott Electrical Sdn Bhd Sandakan"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "Bright Scott Electrical Sdn Bhd Sandakan",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "LOT 79-81,BLOCK K,BANDAR PASARAYA, MILE 4 NORTH ROAD 90000 SANDAKAN, Sandakan, Malaysia, 90000",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: +60 89 232 500",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://share.google/UKFSpU3jIgKd9tLMk"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/DARXON_SR.webp?fit=940%2C600&ssl=1",
+            "alt": "DARSON XTRA"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "DARSON XTRA (MUAR)",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "1,3,5 Jln Sayang Pekan Muar 84000 Muar Johor",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 06-910 1061",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/A6ZYnqU2hZxMYSCg7"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2024/09/DE-BATHLABZ-BATU-TIGA-SDN-BHD.webp?fit=585%2C439&ssl=1",
+            "alt": "DE BATHLABZ (BATU TIGA) SDN BHD"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "DE BATHLABZ (BATU TIGA) SDN BHD",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "89A, JALAN BATU TIGA, 41300 KLANG SELANGOR",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 014-6676988 / 03-33459888",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/YPiXRdodnf1Bcecw9"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2024/09/DE-BATHLABZ-SDN-BHD.webp?fit=1360%2C1020&ssl=1",
+            "alt": "DE BATHLABZ SDN BHD"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "DE BATHLABZ SDN BHD",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "2A,6,8, Lorong Batu Nilam 4A, Bandar Bukit Tinggi, 41200 Klang, Selangor",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 013-627 7812",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/By3ixucrx14XeQRQ9"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2024/03/ESH-Electrical-EkoCheras-674767269-e1709628276686.webp?fit=1280%2C720&ssl=1",
+            "alt": "ESH Electrical EkoCheras"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "E.S.H ELECTRICAL SDN. BHD. (EkoCheras)",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "S-02 & 02A, 2nd Floor, EkoCheras Mall No. 693, Batu, 5, Jln Cheras, 56000 Kuala Lumpur, Malaysia",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 016-661 8003",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/LJbsbmQKbN2kTfaK9"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2024/02/ESH-Electrical-Kepong-3951670084-e1708070253893.jpeg?fit=1280%2C720&ssl=1",
+            "alt": "ESH Electrical Kepong"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "E.S.H ELECTRICAL SDN. BHD. (Metro Prima)",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "No C46, C48 & C50, Vista Magna Jalan Prima, Off, Jln Kepong, Metro Prima, 52100 Kuala Lumpur, Malaysia",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 03-6252 1899",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/WAHHAfc1834vtQqd6"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2024/05/ESH-Electrical-The-Starling-3580601891-e1715006062664.webp?fit=1280%2C720&ssl=1",
+            "alt": "ESH Electrical The Starling"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "E.S.H ELECTRICAL SDN. BHD. (The Starling)",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "F124, 1st Floor, The Starling Mall, 6, SS21/37, Damansara Utama, 47400 Petaling Jaya, Selangor",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 016-660 5884",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/Az1NfgicCq6xZ2yM6"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/easton_ec.webp?fit=940%2C600&ssl=1",
+            "alt": "EASTONE GALLERY & MARKETING"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "EASTONE GALLERY & MARKETING",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "PT 2518, Jln Abdul Kadir Adabi, Taman Kenangan, 15200 Kota Bharu, Kelantan",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 09-748 8989",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/ob49h9AQGhGywbjF8"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2025/04/Eastone-Gallery-Sdn-Bhd_Tunjung.webp?fit=1371%2C641&ssl=1",
+            "alt": "Eastone Gallery Sdn Bhd_Tunjung"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "Eastone Gallery Sdn Bhd - Tunjung",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "Lot 1297, Kampung Tunjung, 16010 Kota Bharu, Kelantan",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 011-2603 8778",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/cKeU7hdc7UB5qCcK8"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/EMARTNUSA_SR.webp?fit=940%2C600&ssl=1",
+            "alt": "EMART (NUSA BESTARI)"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "EMART (NUSA BESTARI)",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "21-33 Jln Bestari 12/2, Taman Nusa Bestari 81300 Johor Bahru",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 07-556 3418",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/jSS6CR5gUqMwPD3z9"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/Emart-Plentong_SR.webp?fit=940%2C600&ssl=1",
+            "alt": "EMART (PLENTONG)"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "EMART (PLENTONG)",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "2 Jln Mutiara 4, Kawasan Perindustrian Plentong 81750 Masai Johor Bahru",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 07-334 3166",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/TLukjaCNBUHpSLwAA"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/ESH_KV.webp?fit=940%2C600&ssl=1",
+            "alt": "ESH ELECTRICAL SDN BHD (Petaling Jaya)"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "ESH ELECTRICAL SDN BHD (Petaling Jaya)",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "6, 8, 10, 12, Jln SS 2/24, SS 2, 47300 Petaling Jaya, Selangor",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 03-7875 3692",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/1fuoe4qxy7PHTP9CA"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2024/09/EUROTAN-ENTERPRISE-SDN-BHD.webp?fit=2560%2C1920&ssl=1",
+            "alt": "EUROTAN ENTERPRISE SDN BHD"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "EUROTAN ENTERPRISE SDN BHD",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "264, Jln Sultan Azlan Shah, Jalan Ipoh, 51200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 016-2887177",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/X6372vXqyy36CNuYA"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/EUROTAN_kv.webp?fit=940%2C600&ssl=1",
+            "alt": "EUROTAN"
+          },
+          {
+            "type": "heading.default",
+            "text": "1, Jln Emas SD 5/1B, Bandar Sri Damansara, 52200 Kuala Lumpur",
+            "tag": "h6"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2025/03/felicita-home-deco-johor-bahru.webp?fit=750%2C1000&ssl=1",
+            "alt": "felicita home deco johor bahru"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "FELICITA HOMES DECO",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "NO 77, Jln Sejahtera 2, Medan Sejahtera, 32000, Perak",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 016-441 0366",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/Tnuf4BehGGjgoBV49"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2025/10/Filken-Bukit-Indah.webp?fit=911%2C611&ssl=1",
+            "alt": ""
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "Filken Bukit Indah",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "19G, Jalan Bestari 6/2 Taman Nusa Bestari Iskandar Puteri, 79150 Johor, Johor Darul Ta'zim, Malaysia",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 016-710 9461",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/SVDRaSbjC9DUA5Ex7"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2026/03/Filken-Kulai.webp?fit=720%2C990&ssl=1",
+            "alt": "Filken Kulai"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "Filken Kulai",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "6032, Jalan Siantan 1, Bandar Indahpura, 81000 Kulai, Johor Darul Ta'zim",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 011-3339 9461",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/rKWKZhR7WHPEpDWUA"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2026/03/FLO-PLUS-HOME-SDN-BHD.webp?fit=1280%2C960&ssl=1",
+            "alt": "FLO PLUS HOME SDN BHD"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "FLO PLUS HOME SDN BHD",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "22, Jalan Seroja 45, Taman Johor Jaya Johor Jaya, 81100 Johor Bahru, Johor Darul Ta'zim",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 018-312 8383",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/XsN5sFt5GUhX9j3V8"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2025/10/Grand-Filken-Setia-Indah.webp?fit=618%2C430&ssl=1",
+            "alt": "Grand Filken Setia Indah"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "Grand Filken Setia Indah",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "43, Jalan Setia 3/3, Taman Setia Indah, 81100 Johor Bahru, Johor, Malaysia",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 016-449 9461",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/WpPipyvTJVf4EQ9n8"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/HENG-FOONG_nr.webp?fit=940%2C600&ssl=1",
+            "alt": "HENG FOONG SANITARYWARE TRADING"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "HENG FOONG SANITARYWARE TRADING",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "30,31,32 , Ground Floor, Taman Bandar Baru, Mergong, Persiaran Bandar Bari Mergong 05150 Alor Setar, Kedah",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 04-733 7188",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/kTDicoBiQ3LUqHZ46"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2024/07/WhatsApp-Image-2024-07-03-at-12.14.57-PM-3980772768-e1720014211773.jpeg?fit=540%2C405&ssl=1",
+            "alt": "HK Home Electrical Sdn Bhd"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "HK Home Electrical Sdn Bhd",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "24, Jalan Psk Satu. Pekan Simpang Kuala, 05400 Alor Setar, Kedah",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 012-552 9001",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/QDizqRmeQsyARJuS7"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/Home-care_sr.webp?fit=940%2C600&ssl=1",
+            "alt": "Vatti Store Location"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "HOME CARE KITCHEN SUPPLY SDN BHD",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "43 Jln Rosmerah 2/1, Taman Johor Jaya 81100 Johor Bahru",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 07-350 4039",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/YxGKgDrMdUtuQWeXA"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2026/07/Home-Style-Marketing-Sdn-Bhd.webp?fit=508%2C1015&ssl=1",
+            "alt": "Home Style Marketing Sdn Bhd"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "Home Style Marketing Sdn Bhd",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "140 Jalan Sentral 1, Taman Nusa Sentral 79100 Iskandar Puteri, Johor Bahru",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 012-7553313",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/1rsxfAZvnAr5PW4w9"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2025/04/HOMEWORKS_SOUNTHERN.webp?fit=1927%2C2560&ssl=1",
+            "alt": "HOMEWORKS_SOUNTHERN"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "HOMEWORKS (SOUTHERN) SDN BHD",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "No11, Jalan Jaya Putra 7/4, Bandar Jaya Putra, 81100 Johor Bahru, Johor Darul Ta'zim, Malaysia",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 018 - 9533380",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/CKGB4wuz5fAEXiTR8"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2024/01/Homeworks-Sdn-Bhd-2884562863-e1706051892225.webp?fit=1917%2C1319&ssl=1",
+            "alt": "Homeworks Sdn Bhd"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "Homeworks Sdn Bhd",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "No 27, Jalan Setia Jaya Utama, Taman Setia Jaya, 83000 Batu Pahat, Johor",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 07-431 2121 / 016-776 6533",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/kTbNxAkBhUgFiozTA"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2026/04/IN-CERAMICS-SDN-BHD.webp?fit=1188%2C1163&ssl=1",
+            "alt": "IN CERAMICS SDN BHD"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "IN CERAMICS SDN.BHD",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "Sublot 8, 11A Jalan Padi , 96000 Sibu , Sarawak",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 016-888 2928",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://www.google.com/maps?q=2.350839614868164,111.8393325805664&z=17&hl=en"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/jf_kv.webp?fit=940%2C600&ssl=1",
+            "alt": "JF HOME APPLIANCES SDN BHD"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "JF HOME APPLIANCES SDN BHD",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "No 23-G Jln USJ 9/5N, UEP Subang Jaya 47620 Selangor",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 013-299 6299",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/cPoTYBfoAZpBiisb8"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/JW-SANITARY_kv.webp?fit=940%2C600&ssl=1",
+            "alt": "JW SANITARY HOME SDN BHD"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "JW SANITARY HOME SDN BHD",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "Lot 10233-C, Jln Batu Caves, Batu 8, 68100 Batu Caves, Selangor",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 016-888 7140",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/iHmkrEuwujmqVVgCA"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/Kah-Hoe-Enterprise_SR.webp?fit=940%2C600&ssl=1",
+            "alt": "Vatti Store Location"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "Kah Hoe Enterprise",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "No 11, Jalan PKY 1, Pusat Komersil Yayasan, 85000 Segamat, Johor.",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 013-770 6118",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/KNsLho357kFMF4W2A"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/kbo_jingjang_kv.webp?fit=940%2C600&ssl=1",
+            "alt": "KBO MEGASTORE SDN BHD (JINJANG)"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "KBO MEGASTORE SDN BHD (JINJANG)",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "NO.29, Jln Kepong Jinjang Selatan 52000 Kuala Lumpur",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 011-2672 7698",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/jRxRPns2DuDapicq6"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2024/12/Kbo-megastore-Kucai-Lama.webp?fit=1280%2C960&ssl=1",
+            "alt": "Kbo Megastore Sdn Bhd (Kuchai Lama)"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "Kbo Megastore Sdn Bhd (Kuchai Lama)",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "G-7 & G-8, DATARAN LOKA, 9, Jalan Kuchai Lama, KUCHAI LAMA, 58200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 019-981 6881",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/Ap2Ff498pFxHtBTj9"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/KUCHA-UPTOWN_KV.webp?fit=940%2C600&ssl=1",
+            "alt": "KBO MEGASTORE SDN BHD (UPTOWN)"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "KBO MEGASTORE SDN BHD (UPTOWN)",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "70, Jalan SS 21/1, Damansara Utama, 47400 Petaling Jaya, Selangor",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/a24szWss89eRLYeQA"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/KBO_Seminyih.webp?fit=940%2C600&ssl=1",
+            "alt": "KBO TOTAL HOME DIY SDN BHD"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "KBO TOTAL HOME DIY SDN BHD",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "39G Jln TPK 2/8, Taman Perindustrian Kinrara 47180 Puchong, Selangor",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 03-8079 1268",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/CC7oj9LkKAGRBvBr6"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2024/12/Kitchenwise-Sdn-Bhd.webp?fit=1280%2C960&ssl=1",
+            "alt": "KItchenwise Sdn Bhd"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "Kitchenwise Sdn Bhd",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "72-74g, Jalan Puteri 5/1, Bandar Puteri, 47100 Puchong, Selangor",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 03-8069 1177",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/1kRDMGRfM5bUfsSV8"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/Living-Portal_KV-2069217299-e1699415095490.webp?fit=1280%2C719&ssl=1",
+            "alt": "LIVING PORTAL (M) SDN BHD"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "LIVING PORTAL (M) SDN BHD",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "G31 & G33, Jalan Pandan Prima 2, Dataran Pandan Prima, Ampang, 55100 Kuala Lumpur.",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 03-920 04511",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/2hQRaNBdoSTuYBW9A"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2026/03/LTL-Global-Sdn-Bhd.webp?fit=720%2C960&ssl=1",
+            "alt": "LTL Global Sdn Bhd"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "LTL GLOBAL ( KOTA BAYUEMAS )",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "No. 10-1, 12-1, 14-1 Ground Floor, Jalan Bayu Impian 4A/KS9, Kota Bayuemas, 41200 Klang, Selangor, Malaysia",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 0 19-285 1588",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/7k4S9XjzjmgsgyaA7"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/mandi_KV.webp?fit=1600%2C901&ssl=1",
+            "alt": "{\"type\":\"elementor\",\"siteurl\":\"https://vattimalaysia.com/wp-json/\",\"elements\":[{\"id\":\"0d64701\",\"elType\":\"widget\",\"isInner\":false,\"isLocked\":false,\"settings\":{\"image\":{\"id\":4631,\"url\":\"https://vattimalaysia.com/wp-content/uploads/2023/11/LTL_KV.webp\",\"alt\":\"VATTI Store Location\",\"source\":\"library\",\"size\":\"\"},\"image_size\":\"full\",\"align\":\"left\",\"width\":{\"unit\":\"%\",\"size\":100,\"sizes\":[]},\"image_border_radius\":{\"unit\":\"px\",\"top\":\"8\",\"right\":\"8\",\"bottom\":\"8\",\"left\":\"8\",\"isLinked\":true},\"ha_advanced_tooltip_content\":\"I am a tooltip\",\"image_custom_dimension\":{\"width\":\"\",\"height\":\"\"},\"align_tablet\":\"\",\"align_mobile\":\"\",\"caption_source\":\"none\",\"caption\":\"\",\"link_to\":\"none\",\"link\":{\"url\":\"\",\"is_external\":\"\",\"nofollow\":\"\",\"custom_attributes\":\"\"},\"open_lightbox\":\"default\",\"view\":\"traditional\",\"width_tablet\":{\"unit\":\"%\",\"size\":\"\",\"sizes\":[]},\"width_mobile\":{\"unit\":\"%\",\"size\":\"\",\"sizes\":[]},\"space\":{\"unit\":\"%\",\"size\":\"\",\"sizes\":[]},\"space_tablet\":{\"unit\":\"%\",\"size\":\"\",\"sizes\":[]},\"space_mobile\":{\"unit\":\"%\",\"size\":\"\",\"sizes\":[]},\"height\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"height_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"height_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"object-fit\":\"\",\"object-fit_tablet\":\"\",\"object-fit_mobile\":\"\",\"object-position\":\"center center\",\"object-position_tablet\":\"\",\"object-position_mobile\":\"\",\"opacity\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"css_filters_css_filter\":\"\",\"css_filters_blur\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"css_filters_brightness\":{\"unit\":\"px\",\"size\":100,\"sizes\":[]},\"css_filters_contrast\":{\"unit\":\"px\",\"size\":100,\"sizes\":[]},\"css_filters_saturate\":{\"unit\":\"px\",\"size\":100,\"sizes\":[]},\"css_filters_hue\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"opacity_hover\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"css_filters_hover_css_filter\":\"\",\"css_filters_hover_blur\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"css_filters_hover_brightness\":{\"unit\":\"px\",\"size\":100,\"sizes\":[]},\"css_filters_hover_contrast\":{\"unit\":\"px\",\"size\":100,\"sizes\":[]},\"css_filters_hover_saturate\":{\"unit\":\"px\",\"size\":100,\"sizes\":[]},\"css_filters_hover_hue\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"background_hover_transition\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"hover_animation\":\"\",\"image_border_border\":\"\",\"image_border_width\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"image_border_width_tablet\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"image_border_width_mobile\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"image_border_color\":\"\",\"image_border_radius_tablet\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"image_border_radius_mobile\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"image_box_shadow_box_shadow_type\":\"\",\"image_box_shadow_box_shadow\":{\"horizontal\":0,\"vertical\":0,\"blur\":10,\"spread\":0,\"color\":\"rgba(0,0,0,0.5)\"},\"caption_align\":\"\",\"caption_align_tablet\":\"\",\"caption_align_mobile\":\"\",\"text_color\":\"\",\"caption_background_color\":\"\",\"caption_typography_typography\":\"\",\"caption_typography_font_family\":\"\",\"caption_typography_font_size\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"caption_typography_font_size_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"caption_typography_font_size_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"caption_typography_font_weight\":\"\",\"caption_typography_text_transform\":\"\",\"caption_typography_font_style\":\"\",\"caption_typography_text_decoration\":\"\",\"caption_typography_line_height\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"caption_typography_line_height_tablet\":{\"unit\":\"em\",\"size\":\"\",\"sizes\":[]},\"caption_typography_line_height_mobile\":{\"unit\":\"em\",\"size\":\"\",\"sizes\":[]},\"caption_typography_letter_spacing\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"caption_typography_letter_spacing_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"caption_typography_letter_spacing_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"caption_typography_word_spacing\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"caption_typography_word_spacing_tablet\":{\"unit\":\"em\",\"size\":\"\",\"sizes\":[]},\"caption_typography_word_spacing_mobile\":{\"unit\":\"em\",\"size\":\"\",\"sizes\":[]},\"caption_text_shadow_text_shadow_type\":\"\",\"caption_text_shadow_text_shadow\":{\"horizontal\":0,\"vertical\":0,\"blur\":10,\"color\":\"rgba(0,0,0,0.3)\"},\"caption_space\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"caption_space_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"caption_space_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_title\":\"\",\"_margin\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"_margin_tablet\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"_margin_mobile\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"_padding\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"_padding_tablet\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"_padding_mobile\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"_element_width\":\"\",\"_element_width_tablet\":\"\",\"_element_width_mobile\":\"\",\"_element_custom_width\":{\"unit\":\"%\",\"size\":\"\",\"sizes\":[]},\"_element_custom_width_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_element_custom_width_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_element_vertical_align\":\"\",\"_element_vertical_align_tablet\":\"\",\"_element_vertical_align_mobile\":\"\",\"_position\":\"\",\"_offset_orientation_h\":\"start\",\"_offset_x\":{\"unit\":\"px\",\"size\":\"0\",\"sizes\":[]},\"_offset_x_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_offset_x_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_offset_x_end\":{\"unit\":\"px\",\"size\":\"0\",\"sizes\":[]},\"_offset_x_end_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_offset_x_end_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_offset_orientation_v\":\"start\",\"_offset_y\":{\"unit\":\"px\",\"size\":\"0\",\"sizes\":[]},\"_offset_y_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_offset_y_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_offset_y_end\":{\"unit\":\"px\",\"size\":\"0\",\"sizes\":[]},\"_offset_y_end_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_offset_y_end_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_z_index\":\"\",\"_z_index_tablet\":\"\",\"_z_index_mobile\":\"\",\"_element_id\":\"\",\"_css_classes\":\"\",\"ha_floating_fx\":\"\",\"ha_floating_fx_translate_toggle\":\"\",\"ha_floating_fx_translate_x\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":{\"from\":0,\"to\":5}},\"ha_floating_fx_translate_y\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":{\"from\":0,\"to\":5}},\"ha_floating_fx_translate_duration\":{\"unit\":\"px\",\"size\":1000,\"sizes\":[]},\"ha_floating_fx_translate_delay\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_floating_fx_rotate_toggle\":\"\",\"ha_floating_fx_rotate_x\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":{\"from\":0,\"to\":45}},\"ha_floating_fx_rotate_y\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":{\"from\":0,\"to\":45}},\"ha_floating_fx_rotate_z\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":{\"from\":0,\"to\":45}},\"ha_floating_fx_rotate_duration\":{\"unit\":\"px\",\"size\":1000,\"sizes\":[]},\"ha_floating_fx_rotate_delay\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_floating_fx_scale_toggle\":\"\",\"ha_floating_fx_scale_x\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":{\"from\":1,\"to\":1.2}},\"ha_floating_fx_scale_y\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":{\"from\":1,\"to\":1.2}},\"ha_floating_fx_scale_duration\":{\"unit\":\"px\",\"size\":1000,\"sizes\":[]},\"ha_floating_fx_scale_delay\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_element_link\":{\"url\":\"\",\"is_external\":\"\",\"nofollow\":\"\",\"custom_attributes\":\"\"},\"ha_transform_fx\":\"\",\"ha_transform_fx_translate_toggle\":\"\",\"ha_transform_fx_translate_x\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_translate_x_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_translate_x_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_translate_y\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_translate_y_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_translate_y_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_rotate_toggle\":\"\",\"ha_transform_fx_rotate_mode\":\"loose\",\"ha_transform_fx_rotate_x\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_rotate_x_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_rotate_x_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_rotate_y\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_rotate_y_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_rotate_y_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_rotate_z\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_rotate_z_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_rotate_z_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_scale_toggle\":\"\",\"ha_transform_fx_scale_mode\":\"loose\",\"ha_transform_fx_scale_x\":{\"unit\":\"px\",\"size\":1,\"sizes\":[]},\"ha_transform_fx_scale_x_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_scale_x_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_scale_y\":{\"unit\":\"px\",\"size\":1,\"sizes\":[]},\"ha_transform_fx_scale_y_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_scale_y_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_skew_toggle\":\"\",\"ha_transform_fx_skew_x\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_skew_x_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_skew_x_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_skew_y\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_skew_y_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_skew_y_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_translate_toggle_hover\":\"\",\"ha_transform_fx_translate_x_hover\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_translate_x_hover_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_translate_x_hover_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_translate_y_hover\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_translate_y_hover_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_translate_y_hover_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_rotate_toggle_hover\":\"\",\"ha_transform_fx_rotate_mode_hover\":\"loose\",\"ha_transform_fx_rotate_x_hover\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_rotate_x_hover_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_rotate_x_hover_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_rotate_y_hover\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_rotate_y_hover_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_rotate_y_hover_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_rotate_z_hover\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_rotate_z_hover_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_rotate_z_hover_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_scale_toggle_hover\":\"\",\"ha_transform_fx_scale_mode_hover\":\"loose\",\"ha_transform_fx_scale_x_hover\":{\"unit\":\"px\",\"size\":1,\"sizes\":[]},\"ha_transform_fx_scale_x_hover_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_scale_x_hover_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_scale_y_hover\":{\"unit\":\"px\",\"size\":1,\"sizes\":[]},\"ha_transform_fx_scale_y_hover_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_scale_y_hover_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_skew_toggle_hover\":\"\",\"ha_transform_fx_skew_x_hover\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_skew_x_hover_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_skew_x_hover_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_skew_y_hover\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_skew_y_hover_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_skew_y_hover_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_transform_fx_transition_duration\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_advanced_tooltip_enable\":\"\",\"ha_advanced_tooltip_position\":\"top\",\"ha_advanced_tooltip_position_tablet\":\"\",\"ha_advanced_tooltip_position_mobile\":\"\",\"ha_advanced_tooltip_animation\":\"\",\"ha_advanced_tooltip_duration\":1000,\"ha_advanced_tooltip_arrow\":\"true\",\"ha_advanced_tooltip_trigger\":\"hover\",\"ha_advanced_tooltip_distance\":{\"unit\":\"px\",\"size\":\"0\",\"sizes\":[]},\"ha_advanced_tooltip_distance_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_advanced_tooltip_distance_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_advanced_tooltip_align\":\"center\",\"ha_advanced_tooltip_align_tablet\":\"\",\"ha_advanced_tooltip_align_mobile\":\"\",\"ha_advanced_tooltip_width\":{\"unit\":\"px\",\"size\":\"120\",\"sizes\":[]},\"ha_advanced_tooltip_width_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_advanced_tooltip_width_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_advanced_tooltip_arrow_size\":{\"unit\":\"px\",\"size\":\"5\",\"sizes\":[]},\"ha_advanced_tooltip_arrow_size_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_advanced_tooltip_arrow_size_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_advanced_tooltip_typography_typography\":\"yes\",\"ha_advanced_tooltip_typography_font_family\":\"Nunito\",\"ha_advanced_tooltip_typography_font_size\":{\"unit\":\"px\",\"size\":\"14\",\"sizes\":[]},\"ha_advanced_tooltip_typography_font_size_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_advanced_tooltip_typography_font_size_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_advanced_tooltip_typography_font_weight\":\"500\",\"ha_advanced_tooltip_typography_text_transform\":\"\",\"ha_advanced_tooltip_typography_font_style\":\"\",\"ha_advanced_tooltip_typography_text_decoration\":\"\",\"ha_advanced_tooltip_typography_line_height\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_advanced_tooltip_typography_line_height_tablet\":{\"unit\":\"em\",\"size\":\"\",\"sizes\":[]},\"ha_advanced_tooltip_typography_line_height_mobile\":{\"unit\":\"em\",\"size\":\"\",\"sizes\":[]},\"ha_advanced_tooltip_typography_letter_spacing\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_advanced_tooltip_typography_letter_spacing_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_advanced_tooltip_typography_letter_spacing_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_advanced_tooltip_typography_word_spacing\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_advanced_tooltip_typography_word_spacing_tablet\":{\"unit\":\"em\",\"size\":\"\",\"sizes\":[]},\"ha_advanced_tooltip_typography_word_spacing_mobile\":{\"unit\":\"em\",\"size\":\"\",\"sizes\":[]},\"ha_advanced_tooltip_title_section_bg_color_background\":\"\",\"ha_advanced_tooltip_title_section_bg_color_color\":\"\",\"ha_advanced_tooltip_title_section_bg_color_color_stop\":{\"unit\":\"%\",\"size\":0,\"sizes\":[]},\"ha_advanced_tooltip_title_section_bg_color_color_b\":\"#f2295b\",\"ha_advanced_tooltip_title_section_bg_color_color_b_stop\":{\"unit\":\"%\",\"size\":100,\"sizes\":[]},\"ha_advanced_tooltip_title_section_bg_color_gradient_type\":\"linear\",\"ha_advanced_tooltip_title_section_bg_color_gradient_angle\":{\"unit\":\"deg\",\"size\":180,\"sizes\":[]},\"ha_advanced_tooltip_title_section_bg_color_gradient_position\":\"center center\",\"ha_advanced_tooltip_title_section_bg_color_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"ha_advanced_tooltip_title_section_bg_color_image_tablet\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"ha_advanced_tooltip_title_section_bg_color_image_mobile\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"ha_advanced_tooltip_title_section_bg_color_position\":\"\",\"ha_advanced_tooltip_title_section_bg_color_position_tablet\":\"\",\"ha_advanced_tooltip_title_section_bg_color_position_mobile\":\"\",\"ha_advanced_tooltip_title_section_bg_color_xpos\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"ha_advanced_tooltip_title_section_bg_color_xpos_tablet\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"ha_advanced_tooltip_title_section_bg_color_xpos_mobile\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"ha_advanced_tooltip_title_section_bg_color_ypos\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"ha_advanced_tooltip_title_section_bg_color_ypos_tablet\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"ha_advanced_tooltip_title_section_bg_color_ypos_mobile\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"ha_advanced_tooltip_title_section_bg_color_attachment\":\"\",\"ha_advanced_tooltip_title_section_bg_color_repeat\":\"\",\"ha_advanced_tooltip_title_section_bg_color_repeat_tablet\":\"\",\"ha_advanced_tooltip_title_section_bg_color_repeat_mobile\":\"\",\"ha_advanced_tooltip_title_section_bg_color_size\":\"\",\"ha_advanced_tooltip_title_section_bg_color_size_tablet\":\"\",\"ha_advanced_tooltip_title_section_bg_color_size_mobile\":\"\",\"ha_advanced_tooltip_title_section_bg_color_bg_width\":{\"unit\":\"%\",\"size\":100,\"sizes\":[]},\"ha_advanced_tooltip_title_section_bg_color_bg_width_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_advanced_tooltip_title_section_bg_color_bg_width_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"ha_advanced_tooltip_title_section_bg_color_video_link\":\"\",\"ha_advanced_tooltip_title_section_bg_color_video_start\":\"\",\"ha_advanced_tooltip_title_section_bg_color_video_end\":\"\",\"ha_advanced_tooltip_title_section_bg_color_play_once\":\"\",\"ha_advanced_tooltip_title_section_bg_color_play_on_mobile\":\"\",\"ha_advanced_tooltip_title_section_bg_color_privacy_mode\":\"\",\"ha_advanced_tooltip_title_section_bg_color_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"ha_advanced_tooltip_title_section_bg_color_slideshow_gallery\":[],\"ha_advanced_tooltip_title_section_bg_color_slideshow_loop\":\"yes\",\"ha_advanced_tooltip_title_section_bg_color_slideshow_slide_duration\":5000,\"ha_advanced_tooltip_title_section_bg_color_slideshow_slide_transition\":\"fade\",\"ha_advanced_tooltip_title_section_bg_color_slideshow_transition_duration\":500,\"ha_advanced_tooltip_title_section_bg_color_slideshow_background_size\":\"\",\"ha_advanced_tooltip_title_section_bg_color_slideshow_background_size_tablet\":\"\",\"ha_advanced_tooltip_title_section_bg_color_slideshow_background_size_mobile\":\"\",\"ha_advanced_tooltip_title_section_bg_color_slideshow_background_position\":\"\",\"ha_advanced_tooltip_title_section_bg_color_slideshow_background_position_tablet\":\"\",\"ha_advanced_tooltip_title_section_bg_color_slideshow_background_position_mobile\":\"\",\"ha_advanced_tooltip_title_section_bg_color_slideshow_lazyload\":\"\",\"ha_advanced_tooltip_title_section_bg_color_slideshow_ken_burns\":\"\",\"ha_advanced_tooltip_title_section_bg_color_slideshow_ken_burns_zoom_direction\":\"in\",\"ha_advanced_tooltip_background_color\":\"#000000\",\"ha_advanced_tooltip_color\":\"#ffffff\",\"ha_advanced_tooltip_border_border\":\"\",\"ha_advanced_tooltip_border_width\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"ha_advanced_tooltip_border_width_tablet\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"ha_advanced_tooltip_border_width_mobile\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"ha_advanced_tooltip_border_color\":\"\",\"ha_advanced_tooltip_border_radius\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"ha_advanced_tooltip_border_radius_tablet\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"ha_advanced_tooltip_border_radius_mobile\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"ha_advanced_tooltip_padding\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"ha_advanced_tooltip_padding_tablet\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"ha_advanced_tooltip_padding_mobile\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"ha_advanced_tooltip_box_shadow_box_shadow_type\":\"\",\"ha_advanced_tooltip_box_shadow_box_shadow\":{\"horizontal\":0,\"vertical\":0,\"blur\":10,\"spread\":0,\"color\":\"rgba(0,0,0,0.5)\"},\"ha_advanced_tooltip_box_shadow_box_shadow_position\":\" \",\"eael_wrapper_link_switch\":\"\",\"eael_wrapper_link\":{\"url\":\"\",\"is_external\":\"\",\"nofollow\":\"\",\"custom_attributes\":\"\"},\"motion_fx_motion_fx_scrolling\":\"\",\"motion_fx_translateY_effect\":\"\",\"motion_fx_translateY_direction\":\"\",\"motion_fx_translateY_speed\":{\"unit\":\"px\",\"size\":4,\"sizes\":[]},\"motion_fx_translateY_affectedRange\":{\"unit\":\"%\",\"size\":\"\",\"sizes\":{\"start\":0,\"end\":100}},\"motion_fx_translateX_effect\":\"\",\"motion_fx_translateX_direction\":\"\",\"motion_fx_translateX_speed\":{\"unit\":\"px\",\"size\":4,\"sizes\":[]},\"motion_fx_translateX_affectedRange\":{\"unit\":\"%\",\"size\":\"\",\"sizes\":{\"start\":0,\"end\":100}},\"motion_fx_opacity_effect\":\"\",\"motion_fx_opacity_direction\":\"out-in\",\"motion_fx_opacity_level\":{\"unit\":\"px\",\"size\":10,\"sizes\":[]},\"motion_fx_opacity_range\":{\"unit\":\"%\",\"size\":\"\",\"sizes\":{\"start\":20,\"end\":80}},\"motion_fx_blur_effect\":\"\",\"motion_fx_blur_direction\":\"out-in\",\"motion_fx_blur_level\":{\"unit\":\"px\",\"size\":7,\"sizes\":[]},\"motion_fx_blur_range\":{\"unit\":\"%\",\"size\":\"\",\"sizes\":{\"start\":20,\"end\":80}},\"motion_fx_rotateZ_effect\":\"\",\"motion_fx_rotateZ_direction\":\"\",\"motion_fx_rotateZ_speed\":{\"unit\":\"px\",\"size\":1,\"sizes\":[]},\"motion_fx_rotateZ_affectedRange\":{\"unit\":\"%\",\"size\":\"\",\"sizes\":{\"start\":0,\"end\":100}},\"motion_fx_scale_effect\":\"\",\"motion_fx_scale_direction\":\"out-in\",\"motion_fx_scale_speed\":{\"unit\":\"px\",\"size\":4,\"sizes\":[]},\"motion_fx_scale_range\":{\"unit\":\"%\",\"size\":\"\",\"sizes\":{\"start\":20,\"end\":80}},\"motion_fx_transform_origin_x\":\"center\",\"motion_fx_transform_origin_y\":\"center\",\"motion_fx_devices\":[\"desktop\",\"tablet\",\"mobile\"],\"motion_fx_range\":\"\",\"motion_fx_motion_fx_mouse\":\"\",\"motion_fx_mouseTrack_effect\":\"\",\"motion_fx_mouseTrack_direction\":\"\",\"motion_fx_mouseTrack_speed\":{\"unit\":\"px\",\"size\":1,\"sizes\":[]},\"motion_fx_tilt_effect\":\"\",\"motion_fx_tilt_direction\":\"\",\"motion_fx_tilt_speed\":{\"unit\":\"px\",\"size\":4,\"sizes\":[]},\"sticky\":\"\",\"sticky_on\":[\"desktop\",\"tablet\",\"mobile\"],\"sticky_offset\":0,\"sticky_offset_tablet\":\"\",\"sticky_offset_mobile\":\"\",\"sticky_effects_offset\":0,\"sticky_effects_offset_tablet\":\"\",\"sticky_effects_offset_mobile\":\"\",\"sticky_parent\":\"\",\"_animation\":\"\",\"_animation_tablet\":\"\",\"_animation_mobile\":\"\",\"animation_duration\":\"\",\"_animation_delay\":\"\",\"_transform_rotate_popover\":\"\",\"_transform_rotateZ_effect\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_rotateZ_effect_tablet\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_rotateZ_effect_mobile\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_rotate_3d\":\"\",\"_transform_rotateX_effect\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_rotateX_effect_tablet\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_rotateX_effect_mobile\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_rotateY_effect\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_rotateY_effect_tablet\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_rotateY_effect_mobile\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_perspective_effect\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_perspective_effect_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_perspective_effect_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_translate_popover\":\"\",\"_transform_translateX_effect\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_translateX_effect_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_translateX_effect_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_translateY_effect\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_translateY_effect_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_translateY_effect_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_scale_popover\":\"\",\"_transform_keep_proportions\":\"yes\",\"_transform_scale_effect\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_scale_effect_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_scale_effect_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_scaleX_effect\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_scaleX_effect_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_scaleX_effect_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_scaleY_effect\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_scaleY_effect_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_scaleY_effect_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_skew_popover\":\"\",\"_transform_skewX_effect\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_skewX_effect_tablet\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_skewX_effect_mobile\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_skewY_effect\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_skewY_effect_tablet\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_skewY_effect_mobile\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_flipX_effect\":\"\",\"_transform_flipY_effect\":\"\",\"_transform_rotate_popover_hover\":\"\",\"_transform_rotateZ_effect_hover\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_rotateZ_effect_hover_tablet\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_rotateZ_effect_hover_mobile\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_rotate_3d_hover\":\"\",\"_transform_rotateX_effect_hover\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_rotateX_effect_hover_tablet\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_rotateX_effect_hover_mobile\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_rotateY_effect_hover\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_rotateY_effect_hover_tablet\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_rotateY_effect_hover_mobile\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_perspective_effect_hover\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_perspective_effect_hover_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_perspective_effect_hover_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_translate_popover_hover\":\"\",\"_transform_translateX_effect_hover\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_translateX_effect_hover_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_translateX_effect_hover_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_translateY_effect_hover\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_translateY_effect_hover_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_translateY_effect_hover_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_scale_popover_hover\":\"\",\"_transform_keep_proportions_hover\":\"yes\",\"_transform_scale_effect_hover\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_scale_effect_hover_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_scale_effect_hover_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_scaleX_effect_hover\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_scaleX_effect_hover_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_scaleX_effect_hover_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_scaleY_effect_hover\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_scaleY_effect_hover_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_scaleY_effect_hover_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_skew_popover_hover\":\"\",\"_transform_skewX_effect_hover\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_skewX_effect_hover_tablet\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_skewX_effect_hover_mobile\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_skewY_effect_hover\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_transform_skewY_effect_hover_tablet\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_skewY_effect_hover_mobile\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_flipX_effect_hover\":\"\",\"_transform_flipY_effect_hover\":\"\",\"_transform_transition_hover\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"motion_fx_transform_x_anchor_point\":\"\",\"motion_fx_transform_x_anchor_point_tablet\":\"\",\"motion_fx_transform_x_anchor_point_mobile\":\"\",\"motion_fx_transform_y_anchor_point\":\"\",\"motion_fx_transform_y_anchor_point_tablet\":\"\",\"motion_fx_transform_y_anchor_point_mobile\":\"\",\"_background_background\":\"\",\"_background_color\":\"\",\"_background_color_stop\":{\"unit\":\"%\",\"size\":0,\"sizes\":[]},\"_background_color_b\":\"#f2295b\",\"_background_color_b_stop\":{\"unit\":\"%\",\"size\":100,\"sizes\":[]},\"_background_gradient_type\":\"linear\",\"_background_gradient_angle\":{\"unit\":\"deg\",\"size\":180,\"sizes\":[]},\"_background_gradient_position\":\"center center\",\"_background_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_image_tablet\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_image_mobile\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_position\":\"\",\"_background_position_tablet\":\"\",\"_background_position_mobile\":\"\",\"_background_xpos\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"_background_xpos_tablet\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"_background_xpos_mobile\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"_background_ypos\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"_background_ypos_tablet\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"_background_ypos_mobile\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"_background_attachment\":\"\",\"_background_repeat\":\"\",\"_background_repeat_tablet\":\"\",\"_background_repeat_mobile\":\"\",\"_background_size\":\"\",\"_background_size_tablet\":\"\",\"_background_size_mobile\":\"\",\"_background_bg_width\":{\"unit\":\"%\",\"size\":100,\"sizes\":[]},\"_background_bg_width_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_background_bg_width_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_background_video_link\":\"\",\"_background_video_start\":\"\",\"_background_video_end\":\"\",\"_background_play_once\":\"\",\"_background_play_on_mobile\":\"\",\"_background_privacy_mode\":\"\",\"_background_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_slideshow_gallery\":[],\"_background_slideshow_loop\":\"yes\",\"_background_slideshow_slide_duration\":5000,\"_background_slideshow_slide_transition\":\"fade\",\"_background_slideshow_transition_duration\":500,\"_background_slideshow_background_size\":\"\",\"_background_slideshow_background_size_tablet\":\"\",\"_background_slideshow_background_size_mobile\":\"\",\"_background_slideshow_background_position\":\"\",\"_background_slideshow_background_position_tablet\":\"\",\"_background_slideshow_background_position_mobile\":\"\",\"_background_slideshow_lazyload\":\"\",\"_background_slideshow_ken_burns\":\"\",\"_background_slideshow_ken_burns_zoom_direction\":\"in\",\"_background_hover_background\":\"\",\"_background_hover_color\":\"\",\"_background_hover_color_stop\":{\"unit\":\"%\",\"size\":0,\"sizes\":[]},\"_background_hover_color_b\":\"#f2295b\",\"_background_hover_color_b_stop\":{\"unit\":\"%\",\"size\":100,\"sizes\":[]},\"_background_hover_gradient_type\":\"linear\",\"_background_hover_gradient_angle\":{\"unit\":\"deg\",\"size\":180,\"sizes\":[]},\"_background_hover_gradient_position\":\"center center\",\"_background_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_image_tablet\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_image_mobile\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_position\":\"\",\"_background_hover_position_tablet\":\"\",\"_background_hover_position_mobile\":\"\",\"_background_hover_xpos\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"_background_hover_xpos_tablet\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"_background_hover_xpos_mobile\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"_background_hover_ypos\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"_background_hover_ypos_tablet\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"_background_hover_ypos_mobile\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"_background_hover_attachment\":\"\",\"_background_hover_repeat\":\"\",\"_background_hover_repeat_tablet\":\"\",\"_background_hover_repeat_mobile\":\"\",\"_background_hover_size\":\"\",\"_background_hover_size_tablet\":\"\",\"_background_hover_size_mobile\":\"\",\"_background_hover_bg_width\":{\"unit\":\"%\",\"size\":100,\"sizes\":[]},\"_background_hover_bg_width_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_background_hover_bg_width_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_background_hover_video_link\":\"\",\"_background_hover_video_start\":\"\",\"_background_hover_video_end\":\"\",\"_background_hover_play_once\":\"\",\"_background_hover_play_on_mobile\":\"\",\"_background_hover_privacy_mode\":\"\",\"_background_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_slideshow_gallery\":[],\"_background_hover_slideshow_loop\":\"yes\",\"_background_hover_slideshow_slide_duration\":5000,\"_background_hover_slideshow_slide_transition\":\"fade\",\"_background_hover_slideshow_transition_duration\":500,\"_background_hover_slideshow_background_size\":\"\",\"_background_hover_slideshow_background_size_tablet\":\"\",\"_background_hover_slideshow_background_size_mobile\":\"\",\"_background_hover_slideshow_background_position\":\"\",\"_background_hover_slideshow_background_position_tablet\":\"\",\"_background_hover_slideshow_background_position_mobile\":\"\",\"_background_hover_slideshow_lazyload\":\"\",\"_background_hover_slideshow_ken_burns\":\"\",\"_background_hover_slideshow_ken_burns_zoom_direction\":\"in\",\"_background_hover_transition\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_ha_background_overlay_background\":\"\",\"_ha_background_overlay_color\":\"\",\"_ha_background_overlay_color_stop\":{\"unit\":\"%\",\"size\":0,\"sizes\":[]},\"_ha_background_overlay_color_b\":\"#f2295b\",\"_ha_background_overlay_color_b_stop\":{\"unit\":\"%\",\"size\":100,\"sizes\":[]},\"_ha_background_overlay_gradient_type\":\"linear\",\"_ha_background_overlay_gradient_angle\":{\"unit\":\"deg\",\"size\":180,\"sizes\":[]},\"_ha_background_overlay_gradient_position\":\"center center\",\"_ha_background_overlay_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_ha_background_overlay_image_tablet\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_ha_background_overlay_image_mobile\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_ha_background_overlay_position\":\"\",\"_ha_background_overlay_position_tablet\":\"\",\"_ha_background_overlay_position_mobile\":\"\",\"_ha_background_overlay_xpos\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"_ha_background_overlay_xpos_tablet\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"_ha_background_overlay_xpos_mobile\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"_ha_background_overlay_ypos\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"_ha_background_overlay_ypos_tablet\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"_ha_background_overlay_ypos_mobile\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"_ha_background_overlay_attachment\":\"\",\"_ha_background_overlay_repeat\":\"\",\"_ha_background_overlay_repeat_tablet\":\"\",\"_ha_background_overlay_repeat_mobile\":\"\",\"_ha_background_overlay_size\":\"\",\"_ha_background_overlay_size_tablet\":\"\",\"_ha_background_overlay_size_mobile\":\"\",\"_ha_background_overlay_bg_width\":{\"unit\":\"%\",\"size\":100,\"sizes\":[]},\"_ha_background_overlay_bg_width_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_ha_background_overlay_bg_width_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_ha_background_overlay_video_link\":\"\",\"_ha_background_overlay_video_start\":\"\",\"_ha_background_overlay_video_end\":\"\",\"_ha_background_overlay_play_once\":\"\",\"_ha_background_overlay_play_on_mobile\":\"\",\"_ha_background_overlay_privacy_mode\":\"\",\"_ha_background_overlay_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_ha_background_overlay_slideshow_gallery\":[],\"_ha_background_overlay_slideshow_loop\":\"yes\",\"_ha_background_overlay_slideshow_slide_duration\":5000,\"_ha_background_overlay_slideshow_slide_transition\":\"fade\",\"_ha_background_overlay_slideshow_transition_duration\":500,\"_ha_background_overlay_slideshow_background_size\":\"\",\"_ha_background_overlay_slideshow_background_size_tablet\":\"\",\"_ha_background_overlay_slideshow_background_size_mobile\":\"\",\"_ha_background_overlay_slideshow_background_position\":\"\",\"_ha_background_overlay_slideshow_background_position_tablet\":\"\",\"_ha_background_overlay_slideshow_background_position_mobile\":\"\",\"_ha_background_overlay_slideshow_lazyload\":\"\",\"_ha_background_overlay_slideshow_ken_burns\":\"\",\"_ha_background_overlay_slideshow_ken_burns_zoom_direction\":\"in\",\"_ha_background_overlay_opacity\":{\"unit\":\"px\",\"size\":0.5,\"sizes\":[]},\"_ha_css_filters_css_filter\":\"\",\"_ha_css_filters_blur\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"_ha_css_filters_brightness\":{\"unit\":\"px\",\"size\":100,\"sizes\":[]},\"_ha_css_filters_contrast\":{\"unit\":\"px\",\"size\":100,\"sizes\":[]},\"_ha_css_filters_saturate\":{\"unit\":\"px\",\"size\":100,\"sizes\":[]},\"_ha_css_filters_hue\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"_ha_overlay_blend_mode\":\"\",\"_ha_background_overlay_hover_background\":\"\",\"_ha_background_overlay_hover_color\":\"\",\"_ha_background_overlay_hover_color_stop\":{\"unit\":\"%\",\"size\":0,\"sizes\":[]},\"_ha_background_overlay_hover_color_b\":\"#f2295b\",\"_ha_background_overlay_hover_color_b_stop\":{\"unit\":\"%\",\"size\":100,\"sizes\":[]},\"_ha_background_overlay_hover_gradient_type\":\"linear\",\"_ha_background_overlay_hover_gradient_angle\":{\"unit\":\"deg\",\"size\":180,\"sizes\":[]},\"_ha_background_overlay_hover_gradient_position\":\"center center\",\"_ha_background_overlay_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_ha_background_overlay_hover_image_tablet\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_ha_background_overlay_hover_image_mobile\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_ha_background_overlay_hover_position\":\"\",\"_ha_background_overlay_hover_position_tablet\":\"\",\"_ha_background_overlay_hover_position_mobile\":\"\",\"_ha_background_overlay_hover_xpos\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"_ha_background_overlay_hover_xpos_tablet\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"_ha_background_overlay_hover_xpos_mobile\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"_ha_background_overlay_hover_ypos\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"_ha_background_overlay_hover_ypos_tablet\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"_ha_background_overlay_hover_ypos_mobile\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"_ha_background_overlay_hover_attachment\":\"\",\"_ha_background_overlay_hover_repeat\":\"\",\"_ha_background_overlay_hover_repeat_tablet\":\"\",\"_ha_background_overlay_hover_repeat_mobile\":\"\",\"_ha_background_overlay_hover_size\":\"\",\"_ha_background_overlay_hover_size_tablet\":\"\",\"_ha_background_overlay_hover_size_mobile\":\"\",\"_ha_background_overlay_hover_bg_width\":{\"unit\":\"%\",\"size\":100,\"sizes\":[]},\"_ha_background_overlay_hover_bg_width_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_ha_background_overlay_hover_bg_width_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_ha_background_overlay_hover_video_link\":\"\",\"_ha_background_overlay_hover_video_start\":\"\",\"_ha_background_overlay_hover_video_end\":\"\",\"_ha_background_overlay_hover_play_once\":\"\",\"_ha_background_overlay_hover_play_on_mobile\":\"\",\"_ha_background_overlay_hover_privacy_mode\":\"\",\"_ha_background_overlay_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_ha_background_overlay_hover_slideshow_gallery\":[],\"_ha_background_overlay_hover_slideshow_loop\":\"yes\",\"_ha_background_overlay_hover_slideshow_slide_duration\":5000,\"_ha_background_overlay_hover_slideshow_slide_transition\":\"fade\",\"_ha_background_overlay_hover_slideshow_transition_duration\":500,\"_ha_background_overlay_hover_slideshow_background_size\":\"\",\"_ha_background_overlay_hover_slideshow_background_size_tablet\":\"\",\"_ha_background_overlay_hover_slideshow_background_size_mobile\":\"\",\"_ha_background_overlay_hover_slideshow_background_position\":\"\",\"_ha_background_overlay_hover_slideshow_background_position_tablet\":\"\",\"_ha_background_overlay_hover_slideshow_background_position_mobile\":\"\",\"_ha_background_overlay_hover_slideshow_lazyload\":\"\",\"_ha_background_overlay_hover_slideshow_ken_burns\":\"\",\"_ha_background_overlay_hover_slideshow_ken_burns_zoom_direction\":\"in\",\"_ha_background_overlay_hover_opacity\":{\"unit\":\"px\",\"size\":0.5,\"sizes\":[]},\"_ha_css_filters_hover_css_filter\":\"\",\"_ha_css_filters_hover_blur\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"_ha_css_filters_hover_brightness\":{\"unit\":\"px\",\"size\":100,\"sizes\":[]},\"_ha_css_filters_hover_contrast\":{\"unit\":\"px\",\"size\":100,\"sizes\":[]},\"_ha_css_filters_hover_saturate\":{\"unit\":\"px\",\"size\":100,\"sizes\":[]},\"_ha_css_filters_hover_hue\":{\"unit\":\"px\",\"size\":0,\"sizes\":[]},\"_ha_background_overlay_hover_transition\":{\"unit\":\"px\",\"size\":0.3,\"sizes\":[]},\"_border_border\":\"\",\"_border_width\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"_border_width_tablet\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"_border_width_mobile\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"_border_color\":\"\",\"_border_radius\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"_border_radius_tablet\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"_border_radius_mobile\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"_box_shadow_box_shadow_type\":\"\",\"_box_shadow_box_shadow\":{\"horizontal\":0,\"vertical\":0,\"blur\":10,\"spread\":0,\"color\":\"rgba(0,0,0,0.5)\"},\"_box_shadow_box_shadow_position\":\" \",\"_border_hover_border\":\"\",\"_border_hover_width\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"_border_hover_width_tablet\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"_border_hover_width_mobile\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"_border_hover_color\":\"\",\"_border_radius_hover\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"_border_radius_hover_tablet\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"_border_radius_hover_mobile\":{\"unit\":\"px\",\"top\":\"\",\"right\":\"\",\"bottom\":\"\",\"left\":\"\",\"isLinked\":true},\"_box_shadow_hover_box_shadow_type\":\"\",\"_box_shadow_hover_box_shadow\":{\"horizontal\":0,\"vertical\":0,\"blur\":10,\"spread\":0,\"color\":\"rgba(0,0,0,0.5)\"},\"_box_shadow_hover_box_shadow_position\":\" \",\"_border_hover_transition\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_mask_switch\":\"\",\"_mask_shape\":\"circle\",\"_mask_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_mask_notice\":\"\",\"_mask_size\":\"contain\",\"_mask_size_tablet\":\"\",\"_mask_size_mobile\":\"\",\"_mask_size_scale\":{\"unit\":\"%\",\"size\":100,\"sizes\":[]},\"_mask_size_scale_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_mask_size_scale_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_mask_position\":\"center center\",\"_mask_position_tablet\":\"\",\"_mask_position_mobile\":\"\",\"_mask_position_x\":{\"unit\":\"%\",\"size\":0,\"sizes\":[]},\"_mask_position_x_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_mask_position_x_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_mask_position_y\":{\"unit\":\"%\",\"size\":0,\"sizes\":[]},\"_mask_position_y_tablet\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_mask_position_y_mobile\":{\"unit\":\"px\",\"size\":\"\",\"sizes\":[]},\"_mask_repeat\":\"no-repeat\",\"_mask_repeat_tablet\":\"\",\"_mask_repeat_mobile\":\"\",\"hide_desktop\":\"\",\"hide_tablet\":\"\",\"hide_mobile\":\"\",\"_attributes\":\"\",\"custom_css\":\"\"},\"defaultEditSettings\":{\"defaultEditRoute\":\"content\"},\"elements\":[],\"widgetType\":\"image\",\"htmlCache\":\"\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\",\"editSettings\":{\"defaultEditRoute\":\"content\",\"panel\":{\"activeTab\":\"advanced\",\"activeSection\":\"_section_style\"}}}]}"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "Mandi B.P. Sdn Bhd",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "No. 1, Jalan Pinggir, 2 1/2 Miles Jalan Ipoh, 51200 Kuala Lumpur.",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 03-4043 8833",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/QvedKYFzCNek6LnHA"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2024/09/MULTI-SKILL-KITCHEN-DESIGN-SDN-BHD-3206942857-e1726978855677.webp?fit=830%2C888&ssl=1",
+            "alt": "MULTI SKILL KITCHEN DESIGN SDN BHD"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "MULTI SKILL KITCHEN DESIGN SDN BHD",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "B820, Ground Floor & Basement, Jalan Bukit Ubi, 25300 Kuantan, Pahang",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 012-9009939",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/Q26MLtwCDSJ4XZtD7"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2024/01/MUM-KITCH-BANDAR-SUNWAY-1452887243-e1706051540154.webp?fit=1280%2C901&ssl=1",
+            "alt": "MUM KITCH (BANDAR SUNWAY)"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "MUM KITCH (BANDAR SUNWAY)",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "No 2, Jalan PJS 5/26, Taman Desaria, 46150 Petaling Jaya",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 018 - 211 3618",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/QddooSWr7kyvbqnQ8"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/MUM-KITCH-BJ_KV.webp?fit=940%2C600&ssl=1",
+            "alt": "Vatti Store Loction"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "MUM KITCH (BUKIT JALIL)",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "No 1-9-G, Jalan Jalil Perkasa 13, 57000 Bukit Jalil, Kuala Lumpur",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 011-1148 9784",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/XbBY9kw5enD3UP3B8"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2024/09/Nikko-Kitchen-Design-Melaka.webp?fit=1024%2C768&ssl=1",
+            "alt": "Nikko Kitchen & Design (Melaka)"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "Nikko Kitchen & Design (Melaka)",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "No. 9 Jalan SP 1 Taman Semabok Perdana 75050 Semabok Melaka",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 011-5167 3995",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/4oLyu76mhGs8q6cZ7"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2024/09/Nikko-Kitchen-Design-Muar.webp?fit=1024%2C768&ssl=1",
+            "alt": ""
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "Nikko Kitchen & Design (Muar)",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "No. 16, Jalan Sutera 1/6 Taman Sungai Abong Sutera 84000 Muar Johor",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 011-516 73995",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/EmmvgebFNST5P1sF6"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/NOVA_SM.webp?fit=940%2C600&ssl=1",
+            "alt": "NOVO BATH HOME SDN BHD"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "NOVO BATH HOME SDN BHD",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "NO.B-G-01, LOT 23A, Ground Floor, BLOCK B, Lorong Inanam Kapital 3, Inanam Kapital, 88450 Inanam, Kota Kinabalu, Sabah.",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 016-589 4848",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/cY872ieWZELbADPs5"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2024/12/PY-LIGHTING-SDN.-BHD.webp?fit=649%2C749&ssl=1",
+            "alt": "P&Y LIGHTING SDN. BHD."
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "P&Y LIGHTING SDN. BHD.",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "13, Lorong Haji Hassan Nindung, Pusat Perniagaan Mas Jaya, 84000 Muar, Johor Darul Ta'zim",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 019-654 9788",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/tDuECTHPdSxVfkwi9"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2026/04/Perfect-Electrical-Setia-Alam.webp?fit=1920%2C2560&ssl=1",
+            "alt": "Perfect Electrical Setia Alam"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "Perfect Electrical Setia Alam",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "37-1 & 39-1, Jalan Setia Prima A U13/A, Seksyen U13, 40170 Shah Alam, Selangor D.E.",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 03-3191 3020",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/LQkkUn1ctnqN2Fqh6"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2026/04/Perfect-Electrical-USJ-Taipan.webp?fit=1920%2C2560&ssl=1",
+            "alt": "Perfect Electrical USJ Taipan"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "Perfect Electrical USJ Taipan",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "65, 67, Jalan USJ 10/1a, Taipan Business Centre, 47610 Subang Jaya, Selangor",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 012-218 3766",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/fhzzXRECQTV15zgT9"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/sin-jin-da_nr.webp?fit=940%2C600&ssl=1",
+            "alt": "SIN JIN DA HARDWARE SDN BHD"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "SIN JIN DA HARDWARE SDN BHD",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "843 & 844, Jln Juru Jaya, Pusat Perniagaan Persekutuan Jaya, 14000 Bukit Mertajam, Pulau Pinang",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 04-507 4151",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/cjzUs7hVTbYDWYH2A"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/SK-Bintulu_SM-1.webp?fit=940%2C600&ssl=1",
+            "alt": "SK Hardware (Bintulu)"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "SK Hardware (Bintulu)",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "83, 86, Medan Jaya Commercial Centre, 97000 Bintulu, Sarawak, Malaysia",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 012-884 0389",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/11KkgtKX9HPMsMM29"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/SK-hardware-Kuching.webp?fit=940%2C600&ssl=1",
+            "alt": "SK hardware (Kuching)"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "SK Hardware (Kuching) Sdn Bhd",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "5th Mile, Lot 1121, 246, Jalan Penrissen, 93250 Kuching, Sarawak, Malaysia",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 082-522 833",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/wWDd6hiDL3gmDYT49"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/SK-miri_SM.webp?fit=940%2C600&ssl=1",
+            "alt": "SK LIFESTYLES (MIRI) SDN BHD"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "SK LIFESTYLES (MIRI) SDN BHD",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "NO.255, Jln Baiduri 1, Pujut 3A, 98000 Miri, Sarawak",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 085-622 595",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/K76v9svmVRYpeB8h7"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/standard-kitchen-sdn-bhd_sm-3610734275-e1699975461764.webp?fit=1360%2C853&ssl=1",
+            "alt": "Standard Kitchen Sdn Bhd"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "Standard Kitchen Sdn Bhd",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "Lorong 4, 3 1, Jalan Penrissen, no.37, 2Mile, Jalan Everbright Park, 93250 Kuching, Sarawak, Malaysia",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 082-456 669",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/H2pzZiRQJDKQakUbA"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/TAHOL-MARKETING_NR.webp?fit=940%2C600&ssl=1",
+            "alt": "TAHOL MARKETING"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "TAHOL MARKETING",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "NO.273, Jln RAJA Permaisuri Bainun, Jln Kampar, 30250 Ipoh, Perak",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 05-253 1061",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/YgoW7xB8JRzyybqA7"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/TANRADIO-JOHOR-JAYA.webp?fit=640%2C400&ssl=1",
+            "alt": "TANRADIO (JOHOR JAYA)"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "TANRADIO (JOHOR JAYA)",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "Lot2, Jalan Dedap 3, Johor Jaya, 81100 Johor Bharu.",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 019-797 7388",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/NMvNi5DW9281A8166"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2025/03/TR-BP-TANRADIO.COM-BATU-PAHAT-BRANCH.webp?fit=2560%2C1920&ssl=1",
+            "alt": "TANRADIO.COM (Batu Pahat)"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "TANRADIO.COM (Batu Pahat)",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "No 6, 8, 10&12, Jln Penjaja, Pusat Komersial Bentara, 83000 Batu Bahat, Johor",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 011 - 1562 9709",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/zfhTsdAqgq1V63nn6"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2024/09/TANRADIO.COM-KULAI-1.webp?fit=382%2C287&ssl=1",
+            "alt": "TANRADIO.COM (KULAI)"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "TANRADIO.COM (KULAI)",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "1152, Jalan Kasturi 36/41, Asiatic Indahpura Car City, 81000 Kulai, Johor",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 017-7999469",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/X5AWLLFptMkPkQVF6"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2024/09/TANRADIO.COM-SERI-ALAM.webp?fit=640%2C404&ssl=1",
+            "alt": "TANRADIO.COM (SERI ALAM)"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "TANRADIO.COM (SERI ALAM)",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "GRAVITY GREEN, TANRADIO.COM BLOCK A1, Jln Suria, Bandar Baru Seri Alam, 81750 Masai, Johor",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 010-8269021",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/U1p9WMppqYXNeyPJ7"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2024/09/TANRADIO.COM-TUN-AMINAH.webp?fit=601%2C291&ssl=1",
+            "alt": "TANRADIO.COM (TUN AMINAH)"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "TANRADIO.COM (TUN AMINAH)",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "83 & 85, Jalan, Jalan Bentara 20, Taman Ungku Tun Aminah, 81300 Skudai, Johor",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 018-7840940",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/8LqGcj5zWvE8gQg56"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2024/09/TANRADIO.COM-ELECTRICAL-SDN-BHD.webp?fit=259%2C194&ssl=1",
+            "alt": "TANRADIO.COM ELECTRICAL SDN BHD"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "TANRADIO.COM ELECTRICAL SDN BHD",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "No. 40, Jalan Tasik Indah 1/1, Taman Tasik Indah, 86000 Kluang, Johor, Malaysia",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 07-739 2711",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/EccC5Z4Psah619L87"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/THT_KV-4233391037-e1699975237720.webp?fit=720%2C432&ssl=1",
+            "alt": "THYE HIN TRADING"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "THYE HIN TRADING",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "Lot 27447, Jalan BBN 5/1a, Bandar Nilai Utama, 71800 Nilai, Negeri Sembilan.",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 011-3310 3935",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/Cw4JJxC3pie5QATn8"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2026/01/UNION-MOTORS-ELECTRICAL-SUPPLIES-SDN-BHD.webp?fit=1080%2C810&ssl=1",
+            "alt": "UNION MOTORS & ELECTRICAL SUPPLIES SDN BHD"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "UNION MOTORS & ELECTRICAL SUPPLIES SDN BHD",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "56 & 58, Jalan Sultan Ismail, 20200 Kuala Terengganu, Terengganu",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 09-6261450",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/ZBncWVctPSFSSUSX9"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/UNION-MOTORS_ECM.jpg?fit=940%2C600&ssl=1",
+            "alt": "UNION MOTORS & ELECTRICAL SUPPLIES SDN BHD"
+          },
+          {
+            "type": "heading.default",
+            "text": "62 Jalan Sultan Ismail, 20200 Kuala Terengganu, Terengganu",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/VLZAFzMSyJyhTSnYA"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/URBANEZ-KLANG_KV.webp?fit=940%2C600&ssl=1",
+            "alt": "Vatti Store Loction"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "URBANEZ SDN BHD (KLANG)",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "9, Jln Bayu Tinggi 1A, Taman Batu Unjur, 41200 Klang, Selangor ( Klang Branch )",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 03-3324 8133",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/kCmWenf6Z2taKucUA"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/URBANEZ-KD_KV.webp?fit=940%2C600&ssl=1",
+            "alt": "URBANEZ SDN BHD (KOTA DAMANSARA)"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "URBANEZ SDN BHD (KOTA DAMANSARA)",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "No. 36-2, 1st Floor Jalan PJU 5/8 Dataran Sunway, Kota Damansara, 47810 Petaling Jaya, Selangor ( KD Branch )",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 03-6140 8255",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/p4G9EzvBgthkqeaN8"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2025/03/VINTAGE-BATH-KITCHEN_Sabah_store.webp?fit=732%2C1080&ssl=1",
+            "alt": "VINTAGE BATH & KITCHEN"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "VINTAGE BATH & KITCHEN KOTA KINABALU",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "Lorong Plaza 333-6, 89500 Penampang, Sabah, Malaysia",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: +60 16-455 8898",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/oro1sWuF2rKAnF387"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2025/11/Vintage-Bath-Kitchen-Tawau.webp?fit=1920%2C2560&ssl=1",
+            "alt": "Vintage Bath & Kitchen Tawau"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "Vintage Bath & Kitchen Tawau",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "1st Floor, Wisma TAI & TAI, 254C Jln Dunlop, 91000 Tawau, Sabah",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 089-772 666",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/tRnedE8tGoZLfRMe9"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2026/07/VIVA-NUEVA-SDN-BHD.webp?fit=960%2C1280&ssl=1",
+            "alt": "VIVA NUEVA SDN BHD"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "VIVA NUEVA SDN BHD",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "NO 1 JALAN KENCANA EMAS 2/3, KAWASAN PERINDUSTRIAN TEBRAU III, 81100 JOHOR BAHRU, JOHOR",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 07-2212888",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": null
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2024/12/WORLD-BATH-KITCHEN-SDN-BHD.webp?fit=1000%2C750&ssl=1",
+            "alt": "WORLD BATH & KITCHEN SDN BHD"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "WORLD BATH & KITCHEN SDN BHD",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "NO 13-G, Dataran Mutiara, Jalan 7/4, Taman Serdang Jaya, 43300 Seri Kembangan, Selangor",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 017-661 8797",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/FqPBaJ7hNZYXf5Tq8"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/wpc_ec.webp?fit=940%2C600&ssl=1",
+            "alt": "WPC Ideas Enterprise"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "WPC IDEAS ENTERPRISE",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "Lot 9339, Jln Kuantan - Kemaman, Kawasan Perindustrian Jakar Ii, 24000 Chukai, Terengganu, Malaysia",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 09-858 5033",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/yQQU7UmoqmTxWwnk9"
+          },
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/xammax.webp?fit=1024%2C576&ssl=1",
+            "alt": "Xam Max Kitchen"
+          },
+          {
+            "type": "theme-post-title.default",
+            "text": "Xam Max Kitchen",
+            "tag": "h4"
+          },
+          {
+            "type": "heading.default",
+            "text": "P1-1-19 & P1-1-20, Residensi Damai Meriah, No. 2, Jalan PJU 10/1A, Damansara Damai, 47830 Petaling Jaya, Selangor",
+            "tag": "h6"
+          },
+          {
+            "type": "heading.default",
+            "text": "Tel: 018-221 5022",
+            "tag": "h6"
+          },
+          {
+            "type": "button.default",
+            "label": "Direction",
+            "href": "https://maps.app.goo.gl/MdCorzgCyTud7oTZ6"
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "elementorId": "325f82f",
+        "widgets": []
+      }
+    ]
+  },
+  "vatti-ewarranty": {
+    "url": "https://vattimalaysia.com/vatti-ewarranty/",
+    "meta": {
+      "title": "VATTI eWarranty | Product Quality Can be Compromised",
+      "description": "Unlock the full benefits of VATTI eWarranty. Register your products here for quality assurance and comprehensive warranty coverage.",
+      "canonical": "https://vattimalaysia.com/vatti-ewarranty/",
+      "h1": [
+        "VATTI eWarranty"
+      ],
+      "jsonLdTypes": [
+        "Person",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "Article"
+      ],
+      "hasFAQSchema": false,
+      "wordCountVisible": null
+    },
+    "form": {
+      "engine": "WPForms",
+      "formId": "1879",
+      "action": "/vatti-ewarranty/?wpforms_form_id=1879",
+      "method": "post",
+      "multiStep": true,
+      "pageCount": 4,
+      "submitLabel": "Submit",
+      "contentBlocks": [
+        "Please fill in the following fields to register your Vatti product. Registration must be submitted within 14 days from the date of purchase. Our Warranty Policy is valid only with products purchased from authorised dealers and retailers throughout Malaysia.",
+        "TERMS & CONDITIONS\n- Warranty effective only for original buyers, and it is necessary for VATTI products buy only from authorized dealers;\n- For warranty claim, it is necessary to fill up e-warranty properly and completely time of purchase;\n- Any kind of VATTI product warranty claim based on manufacture defect or poor workmanship under the normal use;\n- Product warranty period and maintenance are as per VATTI malaysia policy;\n- In case of providing home service, visit charges will be applicable as per policy;\nWarranty Period\n- 2 years for cooker hood, cooker hob, combi oven built in oven and built in steam oven.\n- Lifetime warranty for cooker hob glasstop.\n- 10 years warranty for all models cooker hood motor.\nThose who fall into one of the following situations are not covered by the free maintenance:\n- Damage caused by improper use;\n- Damage caused by non-VATTI service outlet installation, disassembly and maintenance;\n- Cannot provide warranty card or valid purchase certificate, or the warranty card and valid certificate have been altered.\n- The product model and product serial number on the warranty card or valid purchase certificate do not match the product model and serial number being repaired.\n- Electric short circuit, voltage fluctuation, poor wiring, wrong use, miss parts, accidental damage and force majeure;\n- Products that exceed the warranty period;\nIf the product fails out of the warranty period, VATTI after-sales outlets will also provide you with warm, thoughtful and timely paid services as per policy."
+      ],
+      "fields": [
+        {
+          "kind": "radio",
+          "label": "TITLE",
+          "name": "wpforms[fields][7]",
+          "type": "radio",
+          "required": true,
+          "options": [
+            "Mr",
+            "Ms",
+            "Mrs",
+            "Mdm",
+            "Dr"
+          ]
+        },
+        {
+          "kind": "name",
+          "label": "Customer Name",
+          "name": "wpforms[fields][0]",
+          "type": "text",
+          "required": true
+        },
+        {
+          "kind": "name",
+          "label": "Identity Card No. / Passport No.",
+          "name": "wpforms[fields][8]",
+          "type": "text",
+          "required": true
+        },
+        {
+          "kind": "email",
+          "label": "Email",
+          "name": "wpforms[fields][1]",
+          "type": "email",
+          "required": true
+        },
+        {
+          "kind": "textarea",
+          "label": "Address",
+          "name": "wpforms[fields][10]",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "kind": "phone",
+          "label": "Mobile Number",
+          "name": "wpforms[fields][11]",
+          "type": "tel",
+          "required": true
+        },
+        {
+          "kind": "repeater",
+          "label": "Add Product",
+          "name": null,
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "kind": "name",
+          "label": "Warranty Card No. / Serial No.",
+          "name": "wpforms[fields][20]",
+          "type": "text",
+          "required": true
+        },
+        {
+          "kind": "date-time",
+          "label": "Date of Purchase",
+          "name": "wpforms[fields][13][date]",
+          "type": "text",
+          "required": true
+        },
+        {
+          "kind": "name",
+          "label": "Invoice No.",
+          "name": "wpforms[fields][21]",
+          "type": "text",
+          "required": true
+        },
+        {
+          "kind": "select",
+          "label": "Select Authorize Dealer Name",
+          "name": "wpforms[fields][19]",
+          "type": "select",
+          "required": true,
+          "options": [
+            "ADAMAS TRADING (M) SDN. BHD.",
+            "ALAT DAPUR SEMENYIH",
+            "ALAT DAPUR CHERAS",
+            "ALAT DAPUR Shah Alam",
+            "BAN HIN BEE SDN BHD ( KITCHENTECH)",
+            "BENOVA MARKETING SDN BHD",
+            "BRIGHT SCOTT ELECTRICAL SDN BHD (PRIMA SQUARE)",
+            "Bright Scott Electrical Sdn Bhd Sandakan",
+            "CASA SANITARY SDN.BHD.",
+            "DE HOMEBIZ SDN BHD",
+            "DE BATHLABZ SDN BHD",
+            "DARSON ELECTRONICS SDN BHD ( EMART )",
+            "DE BATHLABZ (BATU TIGA) SDN BHD",
+            "DE BATHLABZ SDN BHD",
+            "EASTONE GALLERY & MARKETING",
+            "Eastone Gallery Sdn Bhd – Tunjung",
+            "EASTONE GALLERY SDN BHD",
+            "EUROTAN ENTERPRISE SDN BHD",
+            "ESH ELECTRICAL SDN BHD",
+            "E.S.H ELECTRICAL SDN. BHD. (EkoCheras)",
+            "E.S.H ELECTRICAL SDN. BHD. (Metro Prima)",
+            "E.S.H ELECTRICAL SDN. BHD. (The Starling)",
+            "ESH ELECTRICAL SDN BHD (Petaling Jaya)",
+            "EMART (NUSA BESTARI)",
+            "EMART (PLENTONG)",
+            "ELLE ONNI TRADING",
+            "FELICITA HOMES DECO",
+            "Filken Kulai",
+            "Flo Plus Home Sdn Bhd",
+            "FILKEN BUKIT INDAH",
+            "GRAND FILKEN SETIA INDAH",
+            "HK HOME ELECTRICAL SDN.BHD.",
+            "HENG FOONG SANITARYWARE TRADING",
+            "HOME CARE KITCHEN SUPPLY SDN BHD",
+            "HOMEWORKS SDN BHD",
+            "HOMEWORKS (SOUTHERN) SDN. BHD.",
+            "IN CERAMICS SDN.BHD",
+            "JW SANITARY HOME SDN BHD",
+            "JF HOME APPLIANCES SDN BHD",
+            "Kah Hoe Enterprise",
+            "KBO MEGASTORE SDN BHD (JINJANG)",
+            "Kbo Megastore Sdn Bhd (Kuchai Lama)",
+            "KBO MEGASTORE SDN BHD (SEMENYIH)",
+            "KBO MEGASTORE SDN BHD (UPTOWN)",
+            "KBO TOTAL HOME DIY SDN BHD",
+            "Kitchenwise Sdn Bhd",
+            "LIVING PORTAL (M) SDN BHD",
+            "LTL Global",
+            "MANDI B.P. SDN BHD",
+            "MULTI SKILL KITCHEN DESIGN SDN BHD",
+            "MUM KITCH (BANDAR SUNWAY)",
+            "MUM KITCH (BUKIT JALIL)",
+            "Nikko Kitchen & Design (Melaka)",
+            "Nikko Kitchen & Design (Muar)",
+            "NOVO BATH HOME SDN BHD",
+            "P&Y LIGHTING SDN BHD",
+            "PERFECT ELECTRICAL USJ TAIPAN",
+            "PERFECT ELECTRICAL SETIA ALAM",
+            "SIN JIN DA HARDWARE SDN.BHD.",
+            "SK HARDWARE SDN BHD ( BINTULU)",
+            "STANDARD KITCHEN SDN.BHD.",
+            "SK HARDWARE -(KUCHING) SDN BHD",
+            "SK LIFESTYLES (MIRI) SDN.BHD",
+            "THYE HIN TRADING (M) SDN BHD",
+            "TAI & TAI -TAWAU SDN.BHD.",
+            "TANRADIO (JOHOR JAYA)",
+            "TANRADIO.COM (Batu Pahat)",
+            "TANRADIO.COM (KULAI)",
+            "TANRADIO.COM (SERI ALAM)",
+            "TANRADIO.COM (TUN AMINAH)",
+            "TANRADIO.COM ELECTRICAL SDN BHD",
+            "TAHOL MARKETING",
+            "URBANEZ SDN BHD",
+            "UNION MOTORS & ELECTRICAL SUPPLIES SDN. BHD.",
+            "Vatti Flagship Store Atria Mall",
+            "VINTAGE BATH & KITCHEN KOTA KINABALU",
+            "Vintage Bath & Kitchen Tawau",
+            "WPC ⁯IDEAS ENTERPRISE",
+            "WORLD BATH & KITCHEN SDN BHD",
+            "XAM-MAX ENTERPRISE SDN BHD"
+          ]
+        },
+        {
+          "kind": "payment-select",
+          "label": "Type of Product",
+          "name": "wpforms[fields][25]",
+          "type": "select",
+          "required": false,
+          "options": [
+            "Hood",
+            "Hob",
+            "Built in Oven",
+            "Combi Oven",
+            "Steam Oven",
+            "Microwave",
+            "Dishwasher",
+            "One Tap Water Purifier"
+          ]
+        },
+        {
+          "kind": "payment-select",
+          "label": "Hood Product Code",
+          "name": "wpforms[fields][26]",
+          "type": "select",
+          "required": true,
+          "options": [
+            "V931",
+            "V935",
+            "V936",
+            "V937",
+            "V991",
+            "V993",
+            "V995",
+            "V996",
+            "V999",
+            "V998",
+            "V919",
+            "V997",
+            "V929",
+            "V960",
+            "V938",
+            "V917 (White)",
+            "V917 (Carbon Grey)"
+          ]
+        },
+        {
+          "kind": "payment-select",
+          "label": "Hob Product Code",
+          "name": "wpforms[fields][27]",
+          "type": "select",
+          "required": true,
+          "options": [
+            "C836G",
+            "C835G",
+            "C720S",
+            "M821G",
+            "C821G",
+            "C822G",
+            "C830G",
+            "C861G",
+            "C823G",
+            "M822G",
+            "ER5902T",
+            "ER3601T"
+          ]
+        },
+        {
+          "kind": "payment-select",
+          "label": "Combi Oven Product Code",
+          "name": "wpforms[fields][28]",
+          "type": "select",
+          "required": true,
+          "options": [
+            "VA01",
+            "VA03",
+            "VA04",
+            "VA05",
+            "VA06"
+          ]
+        },
+        {
+          "kind": "payment-select",
+          "label": "Built In Oven Product Code",
+          "name": "wpforms[fields][29]",
+          "type": "select",
+          "required": true,
+          "options": [
+            "O755P",
+            "O07549",
+            "07559"
+          ]
+        },
+        {
+          "kind": "payment-select",
+          "label": "Steam Oven Product Code",
+          "name": "wpforms[fields][52]",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Z4501"
+          ]
+        },
+        {
+          "kind": "payment-select",
+          "label": "Microwave Product Code",
+          "name": "wpforms[fields][53]",
+          "type": "select",
+          "required": true,
+          "options": [
+            "M626"
+          ]
+        },
+        {
+          "kind": "payment-select",
+          "label": "Dishwasher Product Code",
+          "name": "wpforms[fields][55]",
+          "type": "select",
+          "required": true,
+          "options": [
+            "DWBB7"
+          ]
+        },
+        {
+          "kind": "payment-select",
+          "label": "One Tap Water Purifier Product Code",
+          "name": "wpforms[fields][56]",
+          "type": "select",
+          "required": true,
+          "options": [
+            "WDHG01 + V818WD"
+          ]
+        },
+        {
+          "kind": "superaddons",
+          "label": "End Repeater",
+          "name": "wpforms[fields][59]",
+          "type": "hidden",
+          "required": false
+        },
+        {
+          "kind": "file-upload",
+          "label": "Proof of Purchase - Invoice / Receipt",
+          "name": "wpforms_1879_3",
+          "type": "text",
+          "required": true
+        },
+        {
+          "kind": "checkbox",
+          "label": "I have read and agree to the terms and conditions of the Vatti Product Warranty Agreement.",
+          "name": "wpforms[fields][45][]",
+          "type": "checkbox",
+          "required": true
+        }
+      ]
+    },
+    "visibleText": [
+      "VATTI eWarranty",
+      "Guarantee the security of your products with VATTI eWarranty.",
+      "VATTI eWarranty Registration",
+      "Please fill in the following fields to register your Vatti product. Registration must be submitted within 14 days from the date of purchase. Our Warranty Policy is valid only with products purchased from authorised dealers and retailers throughout Malaysia.",
+      "Next",
+      "TITLE",
+      "Mrs",
+      "Mdm",
+      "Customer Name",
+      "Identity Card No. / Passport No.",
+      "Email",
+      "Address",
+      "Mobile Number",
+      "Add Product",
+      "Warranty Card No. / Serial No.",
+      "Date of Purchase",
+      "Invoice No.",
+      "Select Authorize Dealer Name",
+      "ADAMAS TRADING (M) SDN. BHD.",
+      "ALAT DAPUR SEMENYIH",
+      "ALAT DAPUR CHERAS",
+      "ALAT DAPUR Shah Alam",
+      "BAN HIN BEE SDN BHD ( KITCHENTECH)",
+      "BENOVA MARKETING SDN BHD",
+      "BRIGHT SCOTT ELECTRICAL SDN BHD (PRIMA SQUARE)",
+      "Bright Scott Electrical Sdn Bhd Sandakan",
+      "CASA SANITARY SDN.BHD.",
+      "DE HOMEBIZ SDN BHD",
+      "DE BATHLABZ SDN BHD",
+      "DARSON ELECTRONICS SDN BHD ( EMART )",
+      "DE BATHLABZ (BATU TIGA) SDN BHD",
+      "EASTONE GALLERY & MARKETING",
+      "Eastone Gallery Sdn Bhd – Tunjung",
+      "EASTONE GALLERY SDN BHD",
+      "EUROTAN ENTERPRISE SDN BHD",
+      "ESH ELECTRICAL SDN BHD",
+      "E.S.H ELECTRICAL SDN. BHD. (EkoCheras)",
+      "E.S.H ELECTRICAL SDN. BHD. (Metro Prima)",
+      "E.S.H ELECTRICAL SDN. BHD. (The Starling)",
+      "ESH ELECTRICAL SDN BHD (Petaling Jaya)",
+      "EMART (NUSA BESTARI)",
+      "EMART (PLENTONG)",
+      "ELLE ONNI TRADING",
+      "FELICITA HOMES DECO",
+      "Filken Kulai",
+      "Flo Plus Home Sdn Bhd",
+      "FILKEN BUKIT INDAH",
+      "GRAND FILKEN SETIA INDAH",
+      "HK HOME ELECTRICAL SDN.BHD.",
+      "HENG FOONG SANITARYWARE TRADING",
+      "HOME CARE KITCHEN SUPPLY SDN BHD",
+      "HOMEWORKS SDN BHD",
+      "HOMEWORKS (SOUTHERN) SDN. BHD.",
+      "IN CERAMICS SDN.BHD",
+      "JW SANITARY HOME SDN BHD",
+      "JF HOME APPLIANCES SDN BHD",
+      "Kah Hoe Enterprise",
+      "KBO MEGASTORE SDN BHD (JINJANG)",
+      "Kbo Megastore Sdn Bhd (Kuchai Lama)",
+      "KBO MEGASTORE SDN BHD (SEMENYIH)",
+      "KBO MEGASTORE SDN BHD (UPTOWN)",
+      "KBO TOTAL HOME DIY SDN BHD",
+      "Kitchenwise Sdn Bhd",
+      "LIVING PORTAL (M) SDN BHD",
+      "LTL Global",
+      "MANDI B.P. SDN BHD",
+      "MULTI SKILL KITCHEN DESIGN SDN BHD",
+      "MUM KITCH (BANDAR SUNWAY)",
+      "MUM KITCH (BUKIT JALIL)",
+      "Nikko Kitchen & Design (Melaka)",
+      "Nikko Kitchen & Design (Muar)",
+      "NOVO BATH HOME SDN BHD",
+      "P&Y LIGHTING SDN BHD",
+      "PERFECT ELECTRICAL USJ TAIPAN",
+      "PERFECT ELECTRICAL SETIA ALAM",
+      "SIN JIN DA HARDWARE SDN.BHD.",
+      "SK HARDWARE SDN BHD ( BINTULU)",
+      "STANDARD KITCHEN SDN.BHD.",
+      "SK HARDWARE -(KUCHING) SDN BHD",
+      "SK LIFESTYLES (MIRI) SDN.BHD",
+      "THYE HIN TRADING (M) SDN BHD",
+      "TAI & TAI -TAWAU SDN.BHD.",
+      "TANRADIO (JOHOR JAYA)",
+      "TANRADIO.COM (Batu Pahat)",
+      "TANRADIO.COM (KULAI)",
+      "TANRADIO.COM (SERI ALAM)",
+      "TANRADIO.COM (TUN AMINAH)",
+      "TANRADIO.COM ELECTRICAL SDN BHD",
+      "TAHOL MARKETING",
+      "URBANEZ SDN BHD",
+      "UNION MOTORS & ELECTRICAL SUPPLIES SDN. BHD.",
+      "Vatti Flagship Store Atria Mall",
+      "VINTAGE BATH & KITCHEN KOTA KINABALU",
+      "Vintage Bath & Kitchen Tawau",
+      "WPC ⁯IDEAS ENTERPRISE",
+      "WORLD BATH & KITCHEN SDN BHD",
+      "XAM-MAX ENTERPRISE SDN BHD",
+      "Type of Product",
+      "Hood",
+      "Hob",
+      "Built in Oven",
+      "Combi Oven",
+      "Steam Oven",
+      "Microwave",
+      "Dishwasher",
+      "One Tap Water Purifier",
+      "Hood Product Code",
+      "V931",
+      "V935",
+      "V936",
+      "V937",
+      "V991",
+      "V993",
+      "V995",
+      "V996",
+      "V999",
+      "V998",
+      "V919",
+      "V997",
+      "V929",
+      "V960",
+      "V938",
+      "V917 (White)",
+      "V917 (Carbon Grey)",
+      "Hob Product Code",
+      "C836G",
+      "C835G",
+      "C720S",
+      "M821G",
+      "C821G",
+      "C822G",
+      "C830G",
+      "C861G",
+      "C823G",
+      "M822G",
+      "ER5902T",
+      "ER3601T",
+      "Combi Oven Product Code",
+      "VA01",
+      "VA03",
+      "VA04",
+      "VA05",
+      "VA06",
+      "Built In Oven Product Code",
+      "O755P",
+      "O07549",
+      "07559",
+      "Steam Oven Product Code",
+      "Z4501",
+      "Microwave Product Code",
+      "M626",
+      "Dishwasher Product Code",
+      "DWBB7",
+      "One Tap Water Purifier Product Code",
+      "WDHG01 + V818WD",
+      "End Repeater",
+      "Add more...",
+      "Proof of Purchase - Invoice / Receipt",
+      "Click or drag files to this area to upload.",
+      "You can upload up to 5 files.",
+      "Previous",
+      "TERMS & CONDITIONS",
+      "Warranty effective only for original buyers, and it is necessary for VATTI products buy only from authorized dealers;",
+      "For warranty claim, it is necessary to fill up e-warranty properly and completely time of purchase;",
+      "Any kind of VATTI product warranty claim based on manufacture defect or poor workmanship under the normal use;",
+      "Product warranty period and maintenance are as per VATTI malaysia policy;",
+      "In case of providing home service, visit charges will be applicable as per policy;",
+      "Warranty Period",
+      "2 years for cooker hood, cooker hob, combi oven built in oven and built in steam oven.",
+      "Lifetime warranty for cooker hob glasstop.",
+      "10 years warranty for all models cooker hood motor.",
+      "Those who fall into one of the following situations are not covered by the free maintenance:",
+      "Damage caused by improper use;",
+      "Damage caused by non-VATTI service outlet installation, disassembly and maintenance;",
+      "Cannot provide warranty card or valid purchase certificate, or the warranty card and valid certificate have been altered.",
+      "The product model and product serial number on the warranty card or valid purchase certificate do not match the product model and serial number being repaired.",
+      "Electric short circuit, voltage fluctuation, poor wiring, wrong use, miss parts, accidental damage and force majeure;",
+      "Products that exceed the warranty period;",
+      "If the product fails out of the warranty period, VATTI after-sales outlets will also provide you with warm, thoughtful and timely paid services as per policy.",
+      "I have read and agree to the terms and conditions of the Vatti Product Warranty Agreement.",
+      "I Agree",
+      "Submit"
+    ],
+    "maps": [
+      "https://maps.google.com/maps?q=Atria%20Shopping%20Gallery%2C%20Unit%2017%2C%201%2C%20Damansara%20Jaya%2C%2047400%20Petaling%20Jaya%2C%20Selangor%2C%20Malaysia&t=m&z=13&output=embed&iwloc=near",
+      "https://www.googletagmanager.com/ns.html?id=GTM-TWBK2JSG"
+    ],
+    "sectionCount": 3,
+    "sections": [
+      {
+        "index": 0,
+        "elementorId": "5b2629aa",
+        "widgets": [
+          {
+            "type": "heading.default",
+            "text": "VATTI eWarranty",
+            "tag": "h1"
+          },
+          {
+            "type": "text-editor.default",
+            "text": "Guarantee the security of your products with VATTI eWarranty."
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "elementorId": "4e2b58c",
+        "widgets": []
+      },
+      {
+        "index": 2,
+        "elementorId": "d83c1ea",
+        "widgets": [
+          {
+            "type": "image.default",
+            "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/08/e-WARRANTY-2.jpg?fit=800%2C800&ssl=1",
+            "alt": ""
+          },
+          {
+            "type": "eael-wpforms.default",
+            "text": "VATTI eWarranty Registration Please fill in the following fields to register your Vatti product. Registration must be submitted within 14 days from the date of purchase. Our Warranty Policy is valid only with products purchased from authorised dealers and retailers throughout Malaysia. Next TITLE *Mr Ms Mrs Mdm Dr Customer Name * Identity Card No. / Passport No. * Email * Address * Mobile Number * Next Add Product Add Product 1 Warranty Card No. / Serial No. * Date of Purchase * Invoice No. * Select Authorize Dealer Name *ADAMAS TRADING (M) SDN. BHD.ALAT DAPUR SEMENYIHALAT DAPUR CHERASALAT DAPUR Shah AlamBAN HIN BEE SDN BHD ( KITCHENTECH)BENOVA MARKETING SDN BHDBRIGHT SCOTT ELECTRICAL SDN BHD (PRIMA SQUARE)Bright Scott Electrical Sdn Bhd SandakanCASA SANITARY SDN.BHD.DE HOMEBIZ SDN BHDDE BATHLABZ SDN BHDDARSON ELECTRONICS SDN BHD ( EMART )DE BATHLABZ (BATU TIGA) SDN BHDDE BATHLABZ SDN BHDEASTONE GALLERY & MARKETINGEastone Gallery Sdn Bhd – TunjungEASTONE GALLERY SDN BHDEUROTAN ENTERPRISE SDN BHDESH ELECTRICAL SDN BHDE.S.H ELECTRICAL SDN. BHD. (EkoCheras)E.S.H ELECTRICAL SDN. BHD. (Metro Prima)E.S.H ELECTRICAL SDN. BHD. (The Starling)ESH ELECTRICAL SDN BHD (Petaling Jaya)EMART (NUSA",
+            "images": [
+              "https://vattimalaysia.com/wp-content/plugins/wpforms/assets/images/submit-spin.svg"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

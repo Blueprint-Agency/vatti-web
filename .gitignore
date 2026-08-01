@@ -1,0 +1,38 @@
+# dependencies
+node_modules/
+.pnp
+.pnp.js
+.yarn/
+
+# next.js
+.next/
+out/
+build/
+next-env.d.ts
+
+# build artifact — regenerated from data/sql/ by `pnpm db:build`, never edit or commit
+.data/
+*.db
+*.db-shm
+*.db-wal
+
+# env
+.env
+.env.*
+!.env.example
+
+# media staged for the R2 upload (Phase 2); never committed
+media-staging/
+
+# local tool state — machine-specific paths, session ids, per-user permission grants
+.claude/settings.local.json
+.impeccable/
+
+# misc
+.DS_Store
+Thumbs.db
+*.log
+.vercel
+.idea/
+.vscode/
+coverage/

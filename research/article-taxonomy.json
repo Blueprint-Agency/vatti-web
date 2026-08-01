@@ -1,0 +1,1188 @@
+{
+ "generated": "2026-08-01T16:47:05.893Z",
+ "source": "https://vattimalaysia.com sitemap-1.xml + post-sitemap.xml",
+ "totals": {
+  "articles": 107,
+  "sections": {
+   "buying-guide": 25,
+   "recipe": 26,
+   "tips-tricks": 54,
+   "uncategorized": 1,
+   "oven": 1
+  }
+ },
+ "wp_categories": [
+  {
+   "name": "Tips & Tricks",
+   "slug": "tips-tricks",
+   "url": "https://vattimalaysia.com/category/tips-tricks/",
+   "count": 44,
+   "posts": [
+    "kitchen-hygiene-and-cooking-safety-10-tips",
+    "how-to-remove-cloudiness-from-glass-stovetop",
+    "stainless-steel-cleaning-solutions-5-tips",
+    "how-to-remove-onion-smell-from-wood-cutting-boards",
+    "how-to-clean-a-burnt-microwave-oven",
+    "how-to-clean-white-spots-on-glass-stove-tops",
+    "how-to-clean-stove-grates-a-step-by-step-guide",
+    "how-to-remove-rust-from-electric-stove-step-by-step-guide",
+    "how-to-unstick-food-from-aluminum-foil-handy-tips",
+    "how-to-remove-scratches-on-stove-top",
+    "how-to-clean-oven-racks-tips-and-tricks",
+    "how-to-place-a-dishwasher-in-the-kitchen",
+    "dishwasher-salt-alternative",
+    "what-can-you-wash-in-dishwasher",
+    "gas-hob-igniter-not-working",
+    "how-to-avoid-cooking-smell-in-the-house-fast",
+    "how-to-use-charcoal-at-home",
+    "range-hood-maintenance",
+    "electric-stove-safety-tips",
+    "what-is-not-dishwasher-safe",
+    "how-often-replace-water-filter",
+    "clean-baking-sheets",
+    "is-water-filter-good-for-health",
+    "water-purifier-vs-water-filter",
+    "clean-baking-sheets-2",
+    "water-for-plants",
+    "water-filter-for-aquarium",
+    "water-flow",
+    "drinking-water-bottle",
+    "glass-water-bottle",
+    "type-of-water",
+    "range-hood-making-noise",
+    "how-to-clean-kitchen-hood-filter",
+    "kitchen-hood-without-vent",
+    "oven-symbol-for-baking",
+    "baking-cake-oven-setting",
+    "how-long-to-preheat-oven",
+    "dishes-in-the-dishwasher-overnight",
+    "how-to-clean-dishwashers",
+    "which-oven-symbol-for-pizza",
+    "oven-symbol-for-baking-cookies",
+    "oven-symbol-for-grill",
+    "how-to-install-chimney-hood",
+    "how-to-measure-suction-power"
+   ]
+  },
+  {
+   "name": "Buying Guide",
+   "slug": "buying-guide",
+   "url": "https://vattimalaysia.com/category/buying-guide/",
+   "count": 35,
+   "posts": [
+    "types-of-range-hoods",
+    "what-is-a-combi-oven",
+    "glass-vs-stainless-gas-hob-which-gas-hob-are-best",
+    "wall-oven-sizes-how-to-choose-perfect-built-in-oven-size",
+    "induction-cooker-vs-gas-stove",
+    "convection-oven-vs-infrared-which-should-you-choose",
+    "which-is-better-induction-or-ceramic-cooker",
+    "air-fryer-vs-convection-oven",
+    "is-a-ceramic-cooktop-same-as-a-glass-cooktop",
+    "is-infrared-gas-stove-good",
+    "ceramic-cooker-vs-infrared-cooker-what-is-the-difference",
+    "is-an-infrared-gas-stove-worth-it",
+    "difference-between-induction-and-electric-cooker",
+    "convection-oven-or-regular-oven",
+    "is-a-dishwasher-worth-it",
+    "is-a-dishwasher-necessary",
+    "induction-cooker-problems",
+    "why-choose-silent-kitchen-hood-expert-answer",
+    "when-to-replace-your-range-hood",
+    "which-is-better-ducted-or-ductless-range-hood",
+    "how-water-filters-work",
+    "can-water-filters-remove-bacteria",
+    "what-is-reverse-osmosis-water",
+    "drinking-filtered-water",
+    "reverse-osmosis-water",
+    "induction-vs-ceramic-features",
+    "induction-vs-ceramic-safety",
+    "oven-symbols-and-meanings",
+    "what-is-a-chimney-hood",
+    "what-is-bldc-motor",
+    "wok-cooking-right-wok-setup",
+    "how-to-clean-grease-filter",
+    "what-is-t-shape-hood",
+    "what-hood-size-do-i-need",
+    "what-is-auto-clean"
+   ]
+  },
+  {
+   "name": "Recipe",
+   "slug": "recipe",
+   "url": "https://vattimalaysia.com/category/recipe/",
+   "count": 27,
+   "posts": [
+    "cream-puff-with-custard-filing-recipe",
+    "spicy-enoki-mushrooms-recipe-step-by-step-guide",
+    "5-creative-vegan-breakfast-ideas-to-kickstart-your-day",
+    "5-easy-homemade-pasta-sauce-recipes",
+    "5-quick-and-easy-one-pot-rice-meals-for-family-gatherings",
+    "5-quick-and-easy-south-indian-one-pot-rice-recipes",
+    "5-quick-and-easy-rice-cooking-wine-recipes",
+    "5-delicous-and-easy-rice-cooker-recipes-for-every-meal",
+    "5-quick-smoothie-bowl-recipes",
+    "detox-smoothie-recipe-for-weight-loss",
+    "5-best-asian-soup-recipes",
+    "keto-chicken-recipes-for-weight-loss",
+    "avocado-and-tomato-breakfast-tacos-recipes",
+    "blueberry-smoothie-bowl-with-almond-butter-recipes",
+    "chickpea-and-spinach-breakfast-burrito-recipes",
+    "peanut-butter-and-banana-overnight-oats-recipes",
+    "sweet-potato-breakfast-hash-with-black-bean-recipes",
+    "tofu-scramble-best-vegan-recipes",
+    "acai-bowl-recipes-quick-and-easy",
+    "how-to-prepare-granola",
+    "homemade-breakfast-burritos-recipes-vegan",
+    "scallion-pancake-recipe",
+    "cheesy-baked-potato",
+    "oven-roasted-potatoes",
+    "baked-sweet-potato-recipes",
+    "simple-chicken-lasagna-recipe",
+    "baking-cake-oven-setting"
+   ]
+  }
+ ],
+ "wp_tags": {
+  "note": "Vatti has NO WordPress tag taxonomy — zero rel=\"tag\" / /tag/ links render on any of the 107 posts.",
+  "items": []
+ },
+ "rankmath_focus_keywords": [
+  {
+   "keyword": "induction cooker vs ceramic cooker",
+   "count": 3,
+   "posts": [
+    "induction-vs-ceramic-features",
+    "induction-vs-ceramic-safety",
+    "induction-vs-ceramic-guide"
+   ]
+  },
+  {
+   "keyword": "clean baking sheets",
+   "count": 2,
+   "posts": [
+    "clean-baking-sheets",
+    "clean-baking-sheets-2"
+   ]
+  },
+  {
+   "keyword": "Types of Range Hoods",
+   "count": 1,
+   "posts": [
+    "types-of-range-hoods"
+   ]
+  },
+  {
+   "keyword": "combi oven",
+   "count": 1,
+   "posts": [
+    "what-is-a-combi-oven"
+   ]
+  },
+  {
+   "keyword": "cream puff",
+   "count": 1,
+   "posts": [
+    "cream-puff-with-custard-filing-recipe"
+   ]
+  },
+  {
+   "keyword": "gas hob",
+   "count": 1,
+   "posts": [
+    "glass-vs-stainless-gas-hob-which-gas-hob-are-best"
+   ]
+  },
+  {
+   "keyword": "built-in oven size",
+   "count": 1,
+   "posts": [
+    "wall-oven-sizes-how-to-choose-perfect-built-in-oven-size"
+   ]
+  },
+  {
+   "keyword": "spicy enoki mushrooms recipe",
+   "count": 1,
+   "posts": [
+    "spicy-enoki-mushrooms-recipe-step-by-step-guide"
+   ]
+  },
+  {
+   "keyword": "kitchen hygiene",
+   "count": 1,
+   "posts": [
+    "kitchen-hygiene-and-cooking-safety-10-tips"
+   ]
+  },
+  {
+   "keyword": "breakfast tacos",
+   "count": 1,
+   "posts": [
+    "avocado-and-tomato-breakfast-tacos-recipes"
+   ]
+  },
+  {
+   "keyword": "blueberry smoothie bowl",
+   "count": 1,
+   "posts": [
+    "blueberry-smoothie-bowl-with-almond-butter-recipes"
+   ]
+  },
+  {
+   "keyword": "Breakfast Burrito Recipes",
+   "count": 1,
+   "posts": [
+    "chickpea-and-spinach-breakfast-burrito-recipes"
+   ]
+  },
+  {
+   "keyword": "banana overnight oats",
+   "count": 1,
+   "posts": [
+    "peanut-butter-and-banana-overnight-oats-recipes"
+   ]
+  },
+  {
+   "keyword": "Sweet Potato Breakfast Hash",
+   "count": 1,
+   "posts": [
+    "sweet-potato-breakfast-hash-with-black-bean-recipes"
+   ]
+  },
+  {
+   "keyword": "tofu scramble",
+   "count": 1,
+   "posts": [
+    "tofu-scramble-best-vegan-recipes"
+   ]
+  },
+  {
+   "keyword": "acai bowl",
+   "count": 1,
+   "posts": [
+    "acai-bowl-recipes-quick-and-easy"
+   ]
+  },
+  {
+   "keyword": "How to Prepare Granola",
+   "count": 1,
+   "posts": [
+    "how-to-prepare-granola"
+   ]
+  },
+  {
+   "keyword": "breakfast burritos",
+   "count": 1,
+   "posts": [
+    "homemade-breakfast-burritos-recipes-vegan"
+   ]
+  },
+  {
+   "keyword": "scallion pancake",
+   "count": 1,
+   "posts": [
+    "scallion-pancake-recipe"
+   ]
+  },
+  {
+   "keyword": "Cheesy baked potato",
+   "count": 1,
+   "posts": [
+    "cheesy-baked-potato"
+   ]
+  },
+  {
+   "keyword": "Oven Roasted Potatoes",
+   "count": 1,
+   "posts": [
+    "oven-roasted-potatoes"
+   ]
+  },
+  {
+   "keyword": "Baked Sweet Potato Recipes",
+   "count": 1,
+   "posts": [
+    "baked-sweet-potato-recipes"
+   ]
+  },
+  {
+   "keyword": "simple chicken lasagna recipe",
+   "count": 1,
+   "posts": [
+    "simple-chicken-lasagna-recipe"
+   ]
+  },
+  {
+   "keyword": "Is a Dishwasher Worth it",
+   "count": 1,
+   "posts": [
+    "is-a-dishwasher-worth-it"
+   ]
+  },
+  {
+   "keyword": "Is a dishwasher necessary",
+   "count": 1,
+   "posts": [
+    "is-a-dishwasher-necessary"
+   ]
+  },
+  {
+   "keyword": "How to Place a Dishwasher in the Kitchen",
+   "count": 1,
+   "posts": [
+    "how-to-place-a-dishwasher-in-the-kitchen"
+   ]
+  },
+  {
+   "keyword": "dishwasher salt alternative",
+   "count": 1,
+   "posts": [
+    "dishwasher-salt-alternative"
+   ]
+  },
+  {
+   "keyword": "What Can You Wash in Dishwasher",
+   "count": 1,
+   "posts": [
+    "what-can-you-wash-in-dishwasher"
+   ]
+  },
+  {
+   "keyword": "Induction Cooker Problems",
+   "count": 1,
+   "posts": [
+    "induction-cooker-problems"
+   ]
+  },
+  {
+   "keyword": "gas hob igniter not working",
+   "count": 1,
+   "posts": [
+    "gas-hob-igniter-not-working"
+   ]
+  },
+  {
+   "keyword": "Silent Kitchen Hood",
+   "count": 1,
+   "posts": [
+    "why-choose-silent-kitchen-hood-expert-answer"
+   ]
+  },
+  {
+   "keyword": "cooking smell",
+   "count": 1,
+   "posts": [
+    "how-to-avoid-cooking-smell-in-the-house-fast"
+   ]
+  },
+  {
+   "keyword": "replace your range hood",
+   "count": 1,
+   "posts": [
+    "when-to-replace-your-range-hood"
+   ]
+  },
+  {
+   "keyword": "which is better ducted or ductless range hood",
+   "count": 1,
+   "posts": [
+    "which-is-better-ducted-or-ductless-range-hood"
+   ]
+  },
+  {
+   "keyword": "how to use charcoal at home",
+   "count": 1,
+   "posts": [
+    "how-to-use-charcoal-at-home"
+   ]
+  },
+  {
+   "keyword": "range hood maintenance",
+   "count": 1,
+   "posts": [
+    "range-hood-maintenance"
+   ]
+  },
+  {
+   "keyword": "electric stove safety tips",
+   "count": 1,
+   "posts": [
+    "electric-stove-safety-tips"
+   ]
+  },
+  {
+   "keyword": "What is Not Dishwasher Safe",
+   "count": 1,
+   "posts": [
+    "what-is-not-dishwasher-safe"
+   ]
+  },
+  {
+   "keyword": "how water filters work",
+   "count": 1,
+   "posts": [
+    "how-water-filters-work"
+   ]
+  },
+  {
+   "keyword": "how often replace water filter",
+   "count": 1,
+   "posts": [
+    "how-often-replace-water-filter"
+   ]
+  },
+  {
+   "keyword": "can water filters remove bacteria",
+   "count": 1,
+   "posts": [
+    "can-water-filters-remove-bacteria"
+   ]
+  },
+  {
+   "keyword": "is water filter good for health",
+   "count": 1,
+   "posts": [
+    "is-water-filter-good-for-health"
+   ]
+  },
+  {
+   "keyword": "water purifier vs water filter",
+   "count": 1,
+   "posts": [
+    "water-purifier-vs-water-filter"
+   ]
+  },
+  {
+   "keyword": "what is reverse osmosis water",
+   "count": 1,
+   "posts": [
+    "what-is-reverse-osmosis-water"
+   ]
+  },
+  {
+   "keyword": "drinking filtered water",
+   "count": 1,
+   "posts": [
+    "drinking-filtered-water"
+   ]
+  },
+  {
+   "keyword": "reverse osmosis water",
+   "count": 1,
+   "posts": [
+    "reverse-osmosis-water"
+   ]
+  },
+  {
+   "keyword": "water for plants",
+   "count": 1,
+   "posts": [
+    "water-for-plants"
+   ]
+  },
+  {
+   "keyword": "water filter for aquarium",
+   "count": 1,
+   "posts": [
+    "water-filter-for-aquarium"
+   ]
+  },
+  {
+   "keyword": "Water Flow",
+   "count": 1,
+   "posts": [
+    "water-flow"
+   ]
+  },
+  {
+   "keyword": "drinking water bottle",
+   "count": 1,
+   "posts": [
+    "drinking-water-bottle"
+   ]
+  },
+  {
+   "keyword": "type of water",
+   "count": 1,
+   "posts": [
+    "type-of-water"
+   ]
+  },
+  {
+   "keyword": "range hood making nois",
+   "count": 1,
+   "posts": [
+    "range-hood-making-noise"
+   ]
+  },
+  {
+   "keyword": "how to clean kitchen hood filter",
+   "count": 1,
+   "posts": [
+    "how-to-clean-kitchen-hood-filter"
+   ]
+  },
+  {
+   "keyword": "Kitchen Hood Without Vent",
+   "count": 1,
+   "posts": [
+    "kitchen-hood-without-vent"
+   ]
+  },
+  {
+   "keyword": "oven symbol for baking",
+   "count": 1,
+   "posts": [
+    "oven-symbol-for-baking"
+   ]
+  },
+  {
+   "keyword": "baking cake oven setting",
+   "count": 1,
+   "posts": [
+    "baking-cake-oven-setting"
+   ]
+  },
+  {
+   "keyword": "oven symbols and meanings",
+   "count": 1,
+   "posts": [
+    "oven-symbols-and-meanings"
+   ]
+  },
+  {
+   "keyword": "how long to preheat oven",
+   "count": 1,
+   "posts": [
+    "how-long-to-preheat-oven"
+   ]
+  },
+  {
+   "keyword": "is it ok to leave dishes in the dishwasher overnight",
+   "count": 1,
+   "posts": [
+    "dishes-in-the-dishwasher-overnight"
+   ]
+  },
+  {
+   "keyword": "how to clean dishwashers",
+   "count": 1,
+   "posts": [
+    "how-to-clean-dishwashers"
+   ]
+  },
+  {
+   "keyword": "which oven symbol for pizza",
+   "count": 1,
+   "posts": [
+    "which-oven-symbol-for-pizza"
+   ]
+  },
+  {
+   "keyword": "oven symbol for baking cookies",
+   "count": 1,
+   "posts": [
+    "oven-symbol-for-baking-cookies"
+   ]
+  },
+  {
+   "keyword": "oven symbol for grill",
+   "count": 1,
+   "posts": [
+    "oven-symbol-for-grill"
+   ]
+  },
+  {
+   "keyword": "how to install chimney hood",
+   "count": 1,
+   "posts": [
+    "how-to-install-chimney-hood"
+   ]
+  },
+  {
+   "keyword": "how to measure suction power",
+   "count": 1,
+   "posts": [
+    "how-to-measure-suction-power"
+   ]
+  },
+  {
+   "keyword": "What Is a Chimney Hood",
+   "count": 1,
+   "posts": [
+    "what-is-a-chimney-hood"
+   ]
+  },
+  {
+   "keyword": "what is BLDC motor",
+   "count": 1,
+   "posts": [
+    "what-is-bldc-motor"
+   ]
+  },
+  {
+   "keyword": "wok cooking",
+   "count": 1,
+   "posts": [
+    "wok-cooking-right-wok-setup"
+   ]
+  },
+  {
+   "keyword": "how to clean grease filter",
+   "count": 1,
+   "posts": [
+    "how-to-clean-grease-filter"
+   ]
+  },
+  {
+   "keyword": "T-shape hood",
+   "count": 1,
+   "posts": [
+    "what-is-t-shape-hood"
+   ]
+  },
+  {
+   "keyword": "hood size",
+   "count": 1,
+   "posts": [
+    "what-hood-size-do-i-need"
+   ]
+  },
+  {
+   "keyword": "auto clean",
+   "count": 1,
+   "posts": [
+    "what-is-auto-clean"
+   ]
+  }
+ ],
+ "linked_product_categories": [
+  {
+   "slug": "cooker-hob-in-malaysia",
+   "count": 28,
+   "posts": [
+    "glass-vs-stainless-gas-hob-which-gas-hob-are-best",
+    "kitchen-hygiene-and-cooking-safety-10-tips",
+    "5-delicous-and-easy-rice-cooker-recipes-for-every-meal",
+    "5-best-asian-soup-recipes",
+    "keto-chicken-recipes-for-weight-loss",
+    "which-is-better-induction-or-ceramic-cooker",
+    "ceramic-cooker-vs-infrared-cooker-what-is-the-difference",
+    "difference-between-induction-and-electric-cooker",
+    "how-to-remove-cloudiness-from-glass-stovetop",
+    "how-to-remove-onion-smell-from-wood-cutting-boards",
+    "how-to-clean-white-spots-on-glass-stove-tops",
+    "avocado-and-tomato-breakfast-tacos-recipes",
+    "blueberry-smoothie-bowl-with-almond-butter-recipes",
+    "chickpea-and-spinach-breakfast-burrito-recipes",
+    "peanut-butter-and-banana-overnight-oats-recipes",
+    "sweet-potato-breakfast-hash-with-black-bean-recipes",
+    "tofu-scramble-best-vegan-recipes",
+    "acai-bowl-recipes-quick-and-easy",
+    "how-to-prepare-granola",
+    "homemade-breakfast-burritos-recipes-vegan",
+    "scallion-pancake-recipe",
+    "simple-chicken-lasagna-recipe",
+    "induction-cooker-problems",
+    "gas-hob-igniter-not-working",
+    "electric-stove-safety-tips",
+    "induction-vs-ceramic-safety",
+    "what-is-bldc-motor",
+    "wok-cooking-right-wok-setup"
+   ]
+  },
+  {
+   "slug": "kitchen-hood-in-malaysia",
+   "count": 18,
+   "posts": [
+    "types-of-range-hoods",
+    "kitchen-hygiene-and-cooking-safety-10-tips",
+    "why-choose-silent-kitchen-hood-expert-answer",
+    "how-to-avoid-cooking-smell-in-the-house-fast",
+    "when-to-replace-your-range-hood",
+    "which-is-better-ducted-or-ductless-range-hood",
+    "range-hood-maintenance",
+    "range-hood-making-noise",
+    "how-to-clean-kitchen-hood-filter",
+    "how-to-install-chimney-hood",
+    "how-to-measure-suction-power",
+    "what-is-a-chimney-hood",
+    "what-is-bldc-motor",
+    "wok-cooking-right-wok-setup",
+    "how-to-clean-grease-filter",
+    "what-is-t-shape-hood",
+    "what-hood-size-do-i-need",
+    "what-is-auto-clean"
+   ]
+  },
+  {
+   "slug": "combi-and-steam-oven-in-malaysia",
+   "count": 16,
+   "posts": [
+    "what-is-a-combi-oven",
+    "cream-puff-with-custard-filing-recipe",
+    "wall-oven-sizes-how-to-choose-perfect-built-in-oven-size",
+    "spicy-enoki-mushrooms-recipe-step-by-step-guide",
+    "convection-oven-vs-infrared-which-should-you-choose",
+    "how-to-clean-a-burnt-microwave-oven",
+    "cheesy-baked-potato",
+    "oven-roasted-potatoes",
+    "baked-sweet-potato-recipes",
+    "clean-baking-sheets",
+    "clean-baking-sheets-2",
+    "baking-cake-oven-setting",
+    "oven-symbols-and-meanings",
+    "which-oven-symbol-for-pizza",
+    "oven-symbol-for-baking-cookies",
+    "oven-symbol-for-grill"
+   ]
+  },
+  {
+   "slug": "one-tap-purifier-in-malaysia",
+   "count": 14,
+   "posts": [
+    "how-water-filters-work",
+    "how-often-replace-water-filter",
+    "can-water-filters-remove-bacteria",
+    "is-water-filter-good-for-health",
+    "water-purifier-vs-water-filter",
+    "what-is-reverse-osmosis-water",
+    "drinking-filtered-water",
+    "reverse-osmosis-water",
+    "water-for-plants",
+    "water-filter-for-aquarium",
+    "water-flow",
+    "drinking-water-bottle",
+    "glass-water-bottle",
+    "type-of-water"
+   ]
+  },
+  {
+   "slug": "kitchen-hood",
+   "count": 10,
+   "posts": [
+    "types-of-range-hoods",
+    "why-choose-silent-kitchen-hood-expert-answer",
+    "how-to-avoid-cooking-smell-in-the-house-fast",
+    "which-is-better-ducted-or-ductless-range-hood",
+    "range-hood-maintenance",
+    "reverse-osmosis-water",
+    "kitchen-hood-without-vent",
+    "how-to-install-chimney-hood",
+    "what-is-a-chimney-hood",
+    "what-is-bldc-motor"
+   ]
+  },
+  {
+   "slug": "built-in-oven",
+   "count": 7,
+   "posts": [
+    "oven-symbol-for-baking",
+    "baking-cake-oven-setting",
+    "oven-symbols-and-meanings",
+    "how-long-to-preheat-oven",
+    "which-oven-symbol-for-pizza",
+    "oven-symbol-for-baking-cookies",
+    "oven-symbol-for-grill"
+   ]
+  },
+  {
+   "slug": "dishwasher-in-malaysia",
+   "count": 6,
+   "posts": [
+    "is-a-dishwasher-worth-it",
+    "is-a-dishwasher-necessary",
+    "how-to-place-a-dishwasher-in-the-kitchen",
+    "dishwasher-salt-alternative",
+    "what-can-you-wash-in-dishwasher",
+    "what-is-not-dishwasher-safe"
+   ]
+  },
+  {
+   "slug": "steamer-combi-oven",
+   "count": 4,
+   "posts": [
+    "what-is-a-combi-oven",
+    "which-oven-symbol-for-pizza",
+    "oven-symbol-for-baking-cookies",
+    "oven-symbol-for-grill"
+   ]
+  },
+  {
+   "slug": "cooker-hob",
+   "count": 4,
+   "posts": [
+    "glass-vs-stainless-gas-hob-which-gas-hob-are-best",
+    "is-an-infrared-gas-stove-worth-it",
+    "induction-vs-ceramic-features",
+    "induction-vs-ceramic-guide"
+   ]
+  },
+  {
+   "slug": "dishwasher",
+   "count": 3,
+   "posts": [
+    "is-a-dishwasher-necessary",
+    "dishes-in-the-dishwasher-overnight",
+    "how-to-clean-dishwashers"
+   ]
+  },
+  {
+   "slug": "one-tap-purifier",
+   "count": 1,
+   "posts": [
+    "is-water-filter-good-for-health"
+   ]
+  }
+ ],
+ "linked_products": [
+  {
+   "slug": "vatti-dishwasher-dwbb7",
+   "count": 4,
+   "posts": [
+    "is-a-dishwasher-worth-it",
+    "is-a-dishwasher-necessary",
+    "dishes-in-the-dishwasher-overnight",
+    "how-to-clean-dishwashers"
+   ]
+  },
+  {
+   "slug": "professional-series-c720s",
+   "count": 3,
+   "posts": [
+    "glass-vs-stainless-gas-hob-which-gas-hob-are-best",
+    "induction-cooker-vs-gas-stove",
+    "is-an-infrared-gas-stove-worth-it"
+   ]
+  },
+  {
+   "slug": "vatti-one-tap-water-purifier-wdhg01-with-v818wd",
+   "count": 3,
+   "posts": [
+    "how-water-filters-work",
+    "can-water-filters-remove-bacteria",
+    "what-is-reverse-osmosis-water"
+   ]
+  },
+  {
+   "slug": "vatti-built-in-oven-o755p",
+   "count": 3,
+   "posts": [
+    "oven-symbol-for-baking",
+    "oven-symbols-and-meanings",
+    "which-oven-symbol-for-pizza"
+   ]
+  },
+  {
+   "slug": "vatti-aetheris-series-cooker-hood-v929",
+   "count": 3,
+   "posts": [
+    "how-to-install-chimney-hood",
+    "how-to-measure-suction-power",
+    "what-is-a-chimney-hood"
+   ]
+  },
+  {
+   "slug": "vatti-slim-series-type-range-hood-v996",
+   "count": 3,
+   "posts": [
+    "how-to-install-chimney-hood",
+    "how-to-measure-suction-power",
+    "what-is-a-chimney-hood"
+   ]
+  },
+  {
+   "slug": "triple-intake-series-t-type-cooker-hood-v937",
+   "count": 3,
+   "posts": [
+    "how-to-measure-suction-power",
+    "what-is-a-chimney-hood",
+    "what-is-t-shape-hood"
+   ]
+  },
+  {
+   "slug": "artemis-series-t-type-range-hood-v931",
+   "count": 2,
+   "posts": [
+    "types-of-range-hoods",
+    "what-is-t-shape-hood"
+   ]
+  },
+  {
+   "slug": "athena-series-lifting-type-range-hood-v999",
+   "count": 2,
+   "posts": [
+    "types-of-range-hoods",
+    "why-choose-silent-kitchen-hood-expert-answer"
+   ]
+  },
+  {
+   "slug": "vatti-built-in-air-fryer-oven-07559",
+   "count": 2,
+   "posts": [
+    "wall-oven-sizes-how-to-choose-perfect-built-in-oven-size",
+    "oven-symbols-and-meanings"
+   ]
+  },
+  {
+   "slug": "vatti-3-burner-gas-hob-c830g",
+   "count": 2,
+   "posts": [
+    "is-infrared-gas-stove-good",
+    "wok-cooking-right-wok-setup"
+   ]
+  },
+  {
+   "slug": "ceramic-cooker-hob-er5902t",
+   "count": 2,
+   "posts": [
+    "induction-vs-ceramic-features",
+    "induction-vs-ceramic-guide"
+   ]
+  },
+  {
+   "slug": "athena-series-lifting-type-range-hood-v993",
+   "count": 1,
+   "posts": [
+    "types-of-range-hoods"
+   ]
+  },
+  {
+   "slug": "professional-series-c821g",
+   "count": 1,
+   "posts": [
+    "glass-vs-stainless-gas-hob-which-gas-hob-are-best"
+   ]
+  },
+  {
+   "slug": "built-in-combi-oven-va03",
+   "count": 1,
+   "posts": [
+    "wall-oven-sizes-how-to-choose-perfect-built-in-oven-size"
+   ]
+  },
+  {
+   "slug": "built-in-combi-oven-va04",
+   "count": 1,
+   "posts": [
+    "wall-oven-sizes-how-to-choose-perfect-built-in-oven-size"
+   ]
+  },
+  {
+   "slug": "vatti-flexi-hob-c822g",
+   "count": 1,
+   "posts": [
+    "is-a-ceramic-cooktop-same-as-a-glass-cooktop"
+   ]
+  },
+  {
+   "slug": "ceramic-cooker-hob-er3601t",
+   "count": 1,
+   "posts": [
+    "induction-cooker-problems"
+   ]
+  },
+  {
+   "slug": "vatti-magic-series-cooker-hood-v919",
+   "count": 1,
+   "posts": [
+    "how-to-avoid-cooking-smell-in-the-house-fast"
+   ]
+  },
+  {
+   "slug": "athena-series-lifting-type-range-hood-v991",
+   "count": 1,
+   "posts": [
+    "what-is-a-chimney-hood"
+   ]
+  },
+  {
+   "slug": "slim-series-type-range-hood-v995",
+   "count": 1,
+   "posts": [
+    "what-hood-size-do-i-need"
+   ]
+  },
+  {
+   "slug": "vatti-hidden-series-range-hood-v938",
+   "count": 1,
+   "posts": [
+    "what-is-auto-clean"
+   ]
+  },
+  {
+   "slug": "vatti-stellar-series-cooker-hood-v960",
+   "count": 1,
+   "posts": [
+    "what-is-auto-clean"
+   ]
+  },
+  {
+   "slug": "vatti-cooker-hood-v917-carbon-grey",
+   "count": 1,
+   "posts": [
+    "what-is-auto-clean"
+   ]
+  }
+ ],
+ "recipe_taxonomy": {
+  "recipeCategory": [
+   [
+    "breakfast",
+    10
+   ],
+   [
+    "Recipe",
+    2
+   ],
+   [
+    "Appetizers",
+    1
+   ],
+   [
+    "Snacks",
+    1
+   ],
+   [
+    "snack",
+    1
+   ],
+   [
+    "side dish",
+    1
+   ],
+   [
+    "Side Dish",
+    1
+   ],
+   [
+    "various",
+    1
+   ]
+  ],
+  "recipeCuisine": [
+   [
+    "Vegan",
+    5
+   ],
+   [
+    "American",
+    3
+   ],
+   [
+    "Mexican",
+    2
+   ],
+   [
+    "China",
+    1
+   ],
+   [
+    "Healthy",
+    1
+   ],
+   [
+    "Tex-Mex",
+    1
+   ],
+   [
+    "overnight oats",
+    1
+   ],
+   [
+    "healthy",
+    1
+   ],
+   [
+    "Italian",
+    1
+   ]
+  ],
+  "recipe_keywords": [
+   [
+    "breakfast tacos",
+    2
+   ],
+   [
+    "Mexican tacos",
+    2
+   ],
+   [
+    "tofu scramble",
+    2
+   ],
+   [
+    "custard cream puff",
+    1
+   ],
+   [
+    "cream puff",
+    1
+   ],
+   [
+    "French dessert",
+    1
+   ],
+   [
+    "Spicy Enoki Mushroom",
+    1
+   ],
+   [
+    "Enoki Mushroom",
+    1
+   ],
+   [
+    "healthy bowl",
+    1
+   ],
+   [
+    "smoothie bowl",
+    1
+   ],
+   [
+    "blueberry smoothie bowl",
+    1
+   ],
+   [
+    "Overnight oats",
+    1
+   ],
+   [
+    "peanut butter and banana overnight oats",
+    1
+   ],
+   [
+    "Sweet Potato Breakfast Hash with Black Beans",
+    1
+   ],
+   [
+    "acai bowl",
+    1
+   ],
+   [
+    "granola",
+    1
+   ],
+   [
+    "burritos",
+    1
+   ],
+   [
+    "Cheesy Baked Potato",
+    1
+   ],
+   [
+    "Oven Roasted Potatoes",
+    1
+   ],
+   [
+    "baked sweet potato",
+    1
+   ],
+   [
+    "Chicken Lasagna",
+    1
+   ]
+  ]
+ }
+}

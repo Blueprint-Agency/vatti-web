@@ -1,0 +1,420 @@
+{
+  "url": "https://vattimalaysia.com/",
+  "meta": {
+    "title": "Kitchen Appliances Supplier in Malaysia | VATTI",
+    "description": "Explore the Best Kitchen Appliances Supplier in Malaysia: Combi Ovens, Cooker Hoods, Cooker Hobs & Built-In Ovens by VATTI. Enhance Your Cooking Now!",
+    "canonical": "https://vattimalaysia.com/",
+    "h1": [
+      "Kitchen Appliances Distributor | | Built-in Oven, Cooker Hob & Cooker Hood"
+    ],
+    "jsonLdTypes": [
+      "Person",
+      "Organization",
+      "WebSite",
+      "ImageObject",
+      "WebPage",
+      "Person",
+      "Article",
+      "Organization",
+      "LocalBusiness"
+    ],
+    "hasFAQSchema": false,
+    "wordCountVisible": null
+  },
+  "sectionCount": 13,
+  "sections": [
+    {
+      "index": 0,
+      "elementorId": "5e4d0612",
+      "widgets": [
+        {
+          "type": "heading.default",
+          "text": "Kitchen Appliances Distributor | | Built-in Oven, Cooker Hob & Cooker Hood",
+          "tag": "h1"
+        },
+        {
+          "type": "text-editor.default",
+          "text": "Trusted since 1992 · Red Dot & iF Design Award winner · Serving Klang Valley, Northern, Southern & East Coast Malaysia"
+        },
+        {
+          "type": "text-editor.default",
+          "text": "VATTI is one of the best kitchen appliances suppliers in Malaysia. We provide modern, energy-efficient kitchen appliances — including cooker hoods, cooker hobs, built-in ovens, combi & steam ovens, and dishwashers — designed to elevate your cooking and lower your energy bills."
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "elementorId": "362be8b",
+      "widgets": []
+    },
+    {
+      "index": 2,
+      "elementorId": "5cf35da",
+      "widgets": [
+        {
+          "type": "heading.default",
+          "text": "Welcome to VATTI Malaysia",
+          "tag": "h3"
+        },
+        {
+          "type": "text-editor.default",
+          "text": "VATTI offers high-quality kitchen appliances, including built-in ovens, steam ovens, range hoods, cooker hobs, and cooker hoods. VATTI has experienced remarkable growth, expanding our presence throughout Malaysia. Now, we are serving in the"
+        },
+        {
+          "type": "text-editor.default",
+          "text": "Klang Valley, Northern Region, Southern Region, and East Coast."
+        },
+        {
+          "type": "button.default",
+          "label": "Visit our showroom today",
+          "href": "https://vattimalaysia.com/store-locations/"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "elementorId": "68968ff",
+      "widgets": []
+    },
+    {
+      "index": 4,
+      "elementorId": "25c9270",
+      "widgets": [
+        {
+          "type": "heading.default",
+          "text": "Who We Are?",
+          "tag": "h2"
+        },
+        {
+          "type": "text-editor.default",
+          "text": "Since 1992, VATTI has been focusing on the industry of premium kitchen appliances keeping innovation as a corporate strategy. It has grown from a locally listed company to a world-famous corporation."
+        },
+        {
+          "type": "button.default",
+          "label": "Learn more",
+          "href": "https://vattimalaysia.com/about-us/"
+        },
+        {
+          "type": "video.default",
+          "src": "https://videos.files.wordpress.com/LlUxjQBb/vatti-corperate-video-1.mp4"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "elementorId": "g8nqm12",
+      "widgets": [
+        {
+          "type": "heading.default",
+          "text": "Explore Our Product Categories |",
+          "tag": "h2"
+        },
+        {
+          "type": "icon-box.default",
+          "title": "Kitchen Hood",
+          "description": "Clean hood, excellent suction performance. We make your cooker hood lifetime free maintenance."
+        },
+        {
+          "type": "button.default",
+          "label": "Explore our Kitchen Hood Malaysia",
+          "href": "https://vattimalaysia.com/kitchen-hood-in-malaysia/"
+        },
+        {
+          "type": "icon-box.default",
+          "title": "Cooker Hob",
+          "description": "VATTI cooker hob puts you in control of your cooking experience to achieve professional cooking results."
+        },
+        {
+          "type": "button.default",
+          "label": "Explore our Cooker Hob Malaysia",
+          "href": "https://vattimalaysia.com/cooker-hob-in-malaysia/"
+        },
+        {
+          "type": "icon-box.default",
+          "title": "Built-in Oven & Microwave",
+          "description": "The best type of self-cleaning oven.Eco Friendly,Energy Saving,Safety,Efficiency."
+        },
+        {
+          "type": "button.default",
+          "label": "Explore our Built-in Oven & Microwave",
+          "href": "https://vattimalaysia.com/combi-and-steam-oven-in-malaysia/"
+        },
+        {
+          "type": "icon-box.default",
+          "title": "Built-in Combi Oven & Steam Oven",
+          "description": "Be inspired to fully master the power of steam by the latest, larger combi-steam oven."
+        },
+        {
+          "type": "button.default",
+          "label": "Explore our Combi & Steam Oven",
+          "href": "https://vattimalaysia.com/combi-and-steam-oven-in-malaysia/"
+        },
+        {
+          "type": "icon-box.default",
+          "title": "Dishwasher, Dish Washing Machine",
+          "description": "VATTI Dishwasher features multiple wash functions, triple disinfection for enhanced hygiene and high-temperature washing."
+        },
+        {
+          "type": "button.default",
+          "label": "Explore our Dishwasher Malaysia",
+          "href": "https://vattimalaysia.com/dishwasher-in-malaysia/"
+        },
+        {
+          "type": "icon-box.default",
+          "title": "One Tap Water Purifier",
+          "description": "The One Tap Water Purifier & Hot Water Dispenser offers four temperature modes ranging from 45°C to 100°C, ensuring convenient access to both chilled and hot water."
+        },
+        {
+          "type": "button.default",
+          "label": "Explore our Single Tap Water Purifier",
+          "href": "https://vattimalaysia.com/one-tap-purifier-in-malaysia/"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "elementorId": "rme2dff",
+      "widgets": [
+        {
+          "type": "heading.default",
+          "text": "Browse Here",
+          "tag": "h5"
+        },
+        {
+          "type": "heading.default",
+          "text": "Our Bestsellers",
+          "tag": "h2"
+        },
+        {
+          "type": "image.default",
+          "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2024/03/Megic-Series-Hood-V919_Product-Image-1.webp?resize=1200%2C1200&ssl=1",
+          "alt": "Magic Series Hood V919_Product Image"
+        },
+        {
+          "type": "heading.default",
+          "text": "\"Magic Series\" | V919",
+          "tag": "h3"
+        },
+        {
+          "type": "button.default",
+          "label": "Learn more",
+          "href": "https://vattimalaysia.com/vatti-magic-series-cooker-hood-v919/"
+        },
+        {
+          "type": "text-editor.default",
+          "text": "VATTI Cooker Hood"
+        },
+        {
+          "type": "image.default",
+          "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2024/03/Magic-Stove-08.webp?fit=1024%2C699&ssl=1",
+          "alt": "Magic Series Cooker Hob C861G"
+        },
+        {
+          "type": "heading.default",
+          "text": "\"Magic Series\" | C861G",
+          "tag": "h3"
+        },
+        {
+          "type": "button.default",
+          "label": "Learn more",
+          "href": "https://vattimalaysia.com/vatti-magic-series-cooker-hob-c861g/"
+        },
+        {
+          "type": "text-editor.default",
+          "text": "VATTI Cooker Hob"
+        },
+        {
+          "type": "image.default",
+          "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2024/03/Magic-Stove-06_large.webp?fit=1024%2C998&ssl=1",
+          "alt": "Megic Series Combi Oven VA06"
+        },
+        {
+          "type": "heading.default",
+          "text": "\"Magic Series\" | VA06",
+          "tag": "h3"
+        },
+        {
+          "type": "button.default",
+          "label": "Learn more",
+          "href": "https://vattimalaysia.com/vatti-magic-series-combi-oven-va06/"
+        },
+        {
+          "type": "image.default",
+          "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/11/VA05-with-shadow.webp?fit=482%2C475&ssl=1",
+          "alt": "Vatti Combi Oven VA05"
+        },
+        {
+          "type": "heading.default",
+          "text": "\"Built-In Combi Oven\" VA05",
+          "tag": "h3"
+        },
+        {
+          "type": "button.default",
+          "label": "Learn more",
+          "href": "https://vattimalaysia.com/built-in-combi-oven-va05/"
+        },
+        {
+          "type": "text-editor.default",
+          "text": "VATTI Combi Oven"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "elementorId": "ea9d9ab",
+      "widgets": [
+        {
+          "type": "stratum-advanced-slider.default",
+          "slides": [
+            {
+              "subtitle": "",
+              "heading": "Reddot Award 2017 Winner",
+              "body": "",
+              "images": [],
+              "bgImages": [
+                "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/12/ball.webp?fit=6912%2C2880"
+              ],
+              "links": []
+            },
+            {
+              "subtitle": "",
+              "heading": "iF Product Design Award",
+              "body": "",
+              "images": [],
+              "bgImages": [
+                "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/01/Untitled-design-15.png?fit=6912%2C2880"
+              ],
+              "links": []
+            },
+            {
+              "subtitle": "",
+              "heading": "AWE Award",
+              "body": "",
+              "images": [],
+              "bgImages": [
+                "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/12/aaward.webp?fit=6912%2C2880"
+              ],
+              "links": []
+            }
+          ],
+          "allText": "Our Achievements Reddot Award 2017 Winner The Red Dot Design Award is a German international design prize awarded by Red Dot GMBH & Co.KG. VATTI as the winners for product design, brands and design concept. Our Achievements iF Product Design Award | The iF DESIGN AWARD has been a globally recognized trademark when it comes to excellent design since 1954. VATTI brand is internationally established as a symbol of design excellence. Our Achievements AWE Award China AWE Award presented by China Household Electrical Appliances Association. After testing by market and customers,VATTI are recognized as leaders in the industry."
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "elementorId": "f794de7",
+      "widgets": [
+        {
+          "type": "heading.default",
+          "text": "Our Partners",
+          "tag": "h3"
+        },
+        {
+          "type": "image-carousel.default",
+          "slides": [
+            "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/05/Untitled-design-2.jpg?fit=2400%2C576&ssl=1",
+            "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/05/Untitled-design-3.jpg?fit=2400%2C576&ssl=1",
+            "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/12/business2.webp?fit=2400%2C576&ssl=1",
+            "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/02/Untitled-design-14-1.png?fit=2400%2C576&ssl=1",
+            "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/12/business.webp?fit=2400%2C576&ssl=1",
+            "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/02/Untitled-design-12-1.png?fit=2400%2C576&ssl=1",
+            "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/04/Untitled-design.png?fit=2400%2C576&ssl=1"
+          ],
+          "slideLinks": []
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "elementorId": "d48b12e",
+      "widgets": [
+        {
+          "type": "image.default",
+          "src": "https://i0.wp.com/vattimalaysia.com/wp-content/uploads/2023/03/pexels-ron-lach-8190289.jpg?fit=6187%2C4125&ssl=1",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "elementorId": "d67e1ce",
+      "widgets": []
+    },
+    {
+      "index": 11,
+      "elementorId": "3c3a875",
+      "widgets": []
+    },
+    {
+      "index": 12,
+      "elementorId": "f9c96f3",
+      "widgets": [
+        {
+          "type": "heading.default",
+          "text": "Drop Us A Message",
+          "tag": "h3"
+        },
+        {
+          "type": "heading.default",
+          "text": "Get A Reply Within 48 hours!",
+          "tag": "h2"
+        },
+        {
+          "type": "ha-cf7.default",
+          "form": {
+            "action": "/#wpcf7-f8-p2-o1",
+            "method": "post",
+            "engine": "Contact Form 7",
+            "formId": "wpcf7-f8-p2",
+            "labels": [
+              "Name |",
+              "Email |",
+              "Contact number |",
+              "Subject |",
+              "Message |",
+              "Δ"
+            ],
+            "fields": [
+              {
+                "name": "your-name",
+                "tag": "input",
+                "type": "text",
+                "required": true,
+                "placeholder": null
+              },
+              {
+                "name": "your-email",
+                "tag": "input",
+                "type": "email",
+                "required": true,
+                "placeholder": null
+              },
+              {
+                "name": "your-contact",
+                "tag": "input",
+                "type": "text",
+                "required": true,
+                "placeholder": null
+              },
+              {
+                "name": "your-subject",
+                "tag": "input",
+                "type": "text",
+                "required": true,
+                "placeholder": null
+              },
+              {
+                "name": "your-message",
+                "tag": "textarea",
+                "type": "textarea",
+                "required": false,
+                "placeholder": null
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
