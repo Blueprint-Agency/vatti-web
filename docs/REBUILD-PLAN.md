@@ -449,10 +449,9 @@ CREATE TABLE redirect (
 );
 
 -- ── search ─────────────────────────────────────────────────────────────────
-CREATE VIRTUAL TABLE article_fts USING fts5(
-  title, body_md, content='article', content_rowid='id', tokenize='porter unicode61');
-CREATE VIRTUAL TABLE product_fts USING fts5(
-  name, model_code, series, specs_text, content='', tokenize='porter unicode61');
+-- NO FTS5. Node's bundled SQLite ships without the extension, and a static site
+-- has no runtime database to query anyway — site search must be a client-side
+-- index generated at build. Revisit when search is actually built.
 ```
 
 **Why this shape.** No `series` or `region` lookup tables — closed sets that join to nothing, so
@@ -464,7 +463,7 @@ categories and products.
 ### Surfacing it in Next.js
 
 ```
-data/sql/*.sql  →  pnpm db:build  →  .data/vatti.db  →  better-sqlite3 (read-only)
+data/sql/*.sql  →  pnpm db:build  →  .data/vatti.db  →  node:sqlite (read-only)
                                                      →  generateStaticParams
                                                      →  next build  →  static HTML
 ```

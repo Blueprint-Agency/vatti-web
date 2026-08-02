@@ -15,7 +15,11 @@ remove it.
 ## Stack
 
 - Next.js (App Router), TypeScript, Tailwind
-- SQLite via `better-sqlite3`, queried **at build time only**
+- SQLite via **`node:sqlite`** (stdlib), queried **at build time only**. Not `better-sqlite3` —
+  it needs a native build, has no prebuild for current Node, and the stdlib module covers every
+  read we make. Requires Node ≥23.4 (`engines` enforces it); set the same on Vercel.
+  Caveat: Node's bundled SQLite has **no FTS5**. Site search must be a client-side index generated
+  at build, which is what a static site needs anyway.
 - Every page is statically generated. **Do not set `output: 'export'`** — it disables route
   handlers, and the two form endpoints need them. Plain Next.js on Vercel already emits static HTML
   for every page here.
@@ -30,7 +34,7 @@ They send email via Resend. **They never write to SQLite** — the filesystem is
 data/sql/*.sql   ← source of truth, committed, reviewable in PRs
       ↓  pnpm db:build
 .data/vatti.db   ← build artifact, gitignored
-      ↓  src/lib/db.ts (better-sqlite3, read-only)
+      ↓  src/lib/db.ts (node:sqlite, read-only)
 generateStaticParams / page components
       ↓  next build
 static HTML

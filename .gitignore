@@ -24,6 +24,13 @@ next-env.d.ts
 # media staged for the R2 upload (Phase 2); never committed
 media-staging/
 
+# raw WordPress media export — source for the R2 migration, far too large for git
+old-media/
+
+# browser verification artifacts
+.playwright-mcp/
+/*.png
+
 # local tool state — machine-specific paths, session ids, per-user permission grants
 .claude/settings.local.json
 .impeccable/
