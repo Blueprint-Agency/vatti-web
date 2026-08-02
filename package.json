@@ -3,14 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": ">=23.4"
+    "node": "24.x"
   },
   "scripts": {
     "db:build": "node scripts/db-build.mjs",
     "db:check": "node scripts/db-check.mjs",
-    "prebuild": "node scripts/db-build.mjs",
     "dev": "node scripts/db-build.mjs && next dev",
-    "build": "next build",
+    "build": "node scripts/db-build.mjs && next build",
     "start": "next start"
   },
   "dependencies": {

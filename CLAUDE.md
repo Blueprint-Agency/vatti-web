@@ -41,8 +41,18 @@ static HTML
 ```
 
 Content changes are SQL edits. Never edit `.data/vatti.db` directly — it is regenerated on every
-build and your change will vanish. `pnpm db:build` is wired into `prebuild`, so `next build` is
-always working from current SQL.
+build and your change will vanish.
+
+`db:build` is called **explicitly** at the front of the `build` script, not via a `prebuild` hook.
+pnpm does not reliably run pre/post lifecycle scripts in CI (`enable-pre-post-scripts`), and a
+missing `.data/vatti.db` fails the build on Vercel while working fine locally. Do not "tidy" this
+back into a `prebuild` entry.
+
+Node is pinned to `24.x` in `engines`. `node:sqlite` is only unflagged from Node 23.4, and Vercel
+must be set to the same major.
+
+If a build fails with `EPERM` or `Device or resource busy` on `.data/vatti.db`, a dev/prod server is
+still running and holding the file — stop it first.
 
 ## Commands
 
