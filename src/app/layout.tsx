@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Archivo, Martian_Mono } from "next/font/google";
+
+import { SiteFooter } from "@/components/SiteFooter";
 import "./globals.css";
 
 // Archivo carries display, UI and body — its width axis supplies
@@ -41,6 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to content
         </a>
         {children}
+        <SiteFooter />
       </body>
     </html>
   );

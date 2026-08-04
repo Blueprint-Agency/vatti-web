@@ -72,7 +72,8 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
     <>
       <SiteHeader />
 
-      <main id="main" className="pb-28 lg:pb-0">
+      {/* The footer carries the bottom padding that clears the mobile CTA bar. */}
+      <main id="main">
         {/* Identity + gallery */}
         <div className="mx-auto max-w-6xl px-5 py-8 sm:px-8 sm:py-12">
           <nav aria-label="Breadcrumb" className="mb-8 text-sm">
