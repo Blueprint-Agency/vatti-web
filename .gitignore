@@ -43,3 +43,6 @@ Thumbs.db
 .idea/
 .vscode/
 coverage/
+
+# TypeScript incremental build cache
+*.tsbuildinfo

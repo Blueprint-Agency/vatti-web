@@ -8,6 +8,12 @@ import { ReadoutStrip } from "@/components/ReadoutStrip";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SpecTable } from "@/components/SpecTable";
 import {
+  categorySlugs,
+  getCategory,
+  getCategoryProducts,
+  type Category,
+} from "@/lib/queries/category";
+import {
   getColourways,
   getDownloads,
   getFacets,
@@ -17,12 +23,23 @@ import {
   getSpecs,
   getVideos,
   productSlugs,
+  type Product,
 } from "@/lib/queries/product";
+import { WHATSAPP } from "@/lib/site";
 
-const WHATSAPP = "https://wa.me/60123366082";
+import { CategoryView } from "./CategoryView";
 
+/**
+ * Almost every URL on this site is flat at the root — 39 products AND the 5
+ * category pages. Next.js allows only one dynamic segment per level, so both
+ * families resolve here: product first (39 slugs), then category (5), then 404.
+ * Articles join the same two lines once the `article` table lands.
+ *
+ * Static segments (/about-us/, /store-locations/, /category/…) win over this
+ * route on their own, so they need no special case.
+ */
 export function generateStaticParams() {
-  return productSlugs().map((slug) => ({ slug }));
+  return [...productSlugs(), ...categorySlugs()].map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -32,8 +49,29 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const product = getProduct(slug);
-  if (!product) return {};
+  if (product) return productMetadata(product);
 
+  const category = getCategory(slug);
+  if (category) return categoryMetadata(category);
+
+  return {};
+}
+
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+
+  const product = getProduct(slug);
+  if (product) return <ProductView product={product} />;
+
+  const category = getCategory(slug);
+  if (category) {
+    return <CategoryView category={category} products={getCategoryProducts(category.id)} />;
+  }
+
+  notFound();
+}
+
+function productMetadata(product: Product): Metadata {
   const hero = getImages(product.id, "hero")[0] ?? getImages(product.id)[0];
   return {
     // absolute: the legacy <title> already reads "Cooker Hood | VATTI Athena
@@ -52,11 +90,31 @@ export async function generateMetadata({
   };
 }
 
-export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const product = getProduct(slug);
-  if (!product) notFound();
+/**
+ * product_category.seo_title and .meta_description are NULL for all 5 rows in
+ * data/sql/products.sql, so both fall back. The legacy strings that these pages
+ * rank on are sitting in research/categories.json — importing them is a
+ * data/sql change, which this file does not own.
+ */
+function categoryMetadata(category: Category): Metadata {
+  const title = category.seo_title
+    ? { absolute: category.seo_title }
+    : `${category.name} in Malaysia`;
+  return {
+    title,
+    description:
+      category.meta_description ??
+      `Compare every VATTI ${category.name.toLowerCase()} sold in Malaysia — measured specifications, model by model, and the authorised dealers who stock them.`,
+    alternates: { canonical: `/${category.slug}/` },
+    openGraph: {
+      title: category.seo_title ?? `${category.name} in Malaysia`,
+      description: category.meta_description ?? undefined,
+      url: `/${category.slug}/`,
+    },
+  };
+}
 
+function ProductView({ product }: { product: Product }) {
   const facets = getFacets(product.id);
   const specs = getSpecs(product.id);
   const all = getImages(product.id);

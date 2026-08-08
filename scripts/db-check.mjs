@@ -55,17 +55,85 @@ check("products with no images", `
 check("self-referencing related products", `
   SELECT product_id FROM product_related WHERE product_id = related_id`);
 
+// Every owner of an image_id has to appear here or its rows read as orphans.
 check("orphan images (in image, unused)", `
-  SELECT i.url FROM image i
-   LEFT JOIN product_image pi ON pi.image_id = i.id
-   LEFT JOIN product p ON p.hero_image_id = i.id
-   WHERE pi.image_id IS NULL AND p.id IS NULL`);
+  SELECT i.url FROM image i WHERE i.id NOT IN (
+    SELECT image_id FROM product_image
+    UNION SELECT hero_image_id FROM product WHERE hero_image_id IS NOT NULL
+    UNION SELECT image_id FROM article_image
+    UNION SELECT featured_image_id FROM article WHERE featured_image_id IS NOT NULL
+    UNION SELECT hero_image_id FROM recipe WHERE hero_image_id IS NOT NULL
+    UNION SELECT image_id FROM store WHERE image_id IS NOT NULL)`);
 
 check("facets pointing at a missing spec row", `
   SELECT f.product_id, f.facet FROM product_facet f
    LEFT JOIN product_spec s
      ON s.product_id = f.product_id AND s.position = f.source_position
    WHERE s.id IS NULL`);
+
+check("duplicate article slugs", `
+  SELECT slug, count(*) n FROM article GROUP BY slug HAVING n > 1`);
+
+check("duplicate article paths", `
+  SELECT path, count(*) n FROM article GROUP BY path HAVING n > 1`);
+
+// path is the URL that must resolve 200; section is what the route matches on.
+check("article path not under its section", `
+  SELECT slug, section, path FROM article WHERE path <> section || '/' || slug`);
+
+check("articles with no primary category", `
+  SELECT a.slug FROM article a
+   LEFT JOIN article_category ac ON ac.article_id = a.id AND ac.is_primary = 1
+   WHERE ac.article_id IS NULL`);
+
+// The whole point of article_category: the URL wins over the WordPress filing.
+check("primary category disagreeing with the URL section", `
+  SELECT a.slug, a.section, c.slug AS primary_category
+    FROM article a
+    JOIN article_category ac ON ac.article_id = a.id AND ac.is_primary = 1
+    JOIN blog_category c ON c.id = ac.category_id
+   WHERE a.section <> c.slug AND a.section <> 'uncategorized'`);
+
+check("recipes hanging off a non-recipe article", `
+  SELECT a.slug FROM recipe r JOIN article a ON a.id = r.article_id
+   WHERE a.section <> 'recipe'`);
+
+check("recipes with no ingredients or no steps", `
+  SELECT r.id FROM recipe r
+   LEFT JOIN recipe_ingredient i ON i.recipe_id = r.id
+   LEFT JOIN recipe_step s ON s.recipe_id = r.id
+   GROUP BY r.id HAVING count(DISTINCT i.position) = 0 OR count(DISTINCT s.position) = 0`);
+
+// Keyed on the href, not on kind: the scrape files some offsite links (YouTube,
+// Pinterest share buttons) as 'other-page', and 'home' has no slug by design.
+check("internal article links with no target slug", `
+  SELECT article_id, href FROM article_link
+   WHERE kind <> 'home'
+     AND href LIKE 'https://vattimalaysia.com/_%'
+     AND target_slug IS NULL`);
+
+check("duplicate store slugs", `
+  SELECT slug, count(*) n FROM store GROUP BY slug HAVING n > 1`);
+
+check("stores with no image", `
+  SELECT slug FROM store WHERE image_id IS NULL`);
+
+// Dealer pages live under /store/, from the WP REST slug. research/stores.json's
+// root-level permalinks are stale and 301 to the homepage — building from them
+// would 404 61 of 75. See the note on `store` in schema.sql.
+check("store path not /store/<slug>", `
+  SELECT slug, path FROM store WHERE path <> 'store/' || slug`);
+
+check("stores missing their WordPress id", `
+  SELECT slug FROM store WHERE wp_id IS NULL`);
+
+// Products and categories share one root [slug] route segment, so a collision
+// is a page that silently shadows another. Stores are NOT in this namespace.
+check("slug collisions across the root namespace", `
+  SELECT slug, count(*) n FROM (
+    SELECT slug FROM product
+    UNION ALL SELECT slug FROM product_category)
+   GROUP BY slug HAVING n > 1`);
 
 check("redirect loops", `
   SELECT r.from_path FROM redirect r JOIN redirect r2
@@ -80,6 +148,12 @@ if (process.env.MEDIA_MIGRATED === "1") {
   check("legacy media URLs surviving into the DB", `
     SELECT url FROM image
      WHERE url LIKE '%/wp-content/uploads/%' OR url LIKE '%i0.wp.com%'`);
+
+  // Article bodies are rendered as-is, so the same two hosts must be gone there
+  // too — a surviving i0.wp.com src bypasses the CDN and the R2 migration.
+  check("legacy media URLs surviving into article bodies", `
+    SELECT slug FROM article
+     WHERE body_md LIKE '%/wp-content/uploads/%' OR body_md LIKE '%i0.wp.com%'`);
 }
 
 if (process.argv.includes("--assets")) {

@@ -5,8 +5,7 @@ import Link from "next/link";
 import { ScaleAxis } from "@/components/ScaleAxis";
 import { SiteHeader } from "@/components/SiteHeader";
 import { getBestsellers, getCategoryRows, getScale } from "@/lib/queries/home";
-
-const WHATSAPP = "https://wa.me/60123366082";
+import { WHATSAPP } from "@/lib/site";
 
 /** research/stores.json — 75 dealers, counted by region. No store table yet. */
 const DEALERS = [
