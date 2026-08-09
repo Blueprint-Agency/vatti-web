@@ -55,7 +55,7 @@ export function SiteFooter() {
                 012-3366082
               </a>
             </p>
-            <p className="mt-1 text-sm text-ink-muted">Open daily, 10am – 8pm</p>
+            <p className="mt-1 text-sm text-ink-muted">Open daily, 10am - 8pm</p>
             <p className="mt-4">
               <a
                 href="https://www.facebook.com/vattimalaysia/"

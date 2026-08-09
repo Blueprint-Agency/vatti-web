@@ -96,6 +96,86 @@
   .animate-readout {
     animation: readout-settle 620ms var(--ease-out-expo);
   }
+
+  /* Must match CYCLE_MS in ProductShowcase. */
+  .animate-tab-rail {
+    animation: tab-rail 6000ms linear forwards;
+  }
+
+  /* A newly selected showcase panel settling in. Base state is visible, as
+     everywhere else here, so a skipped animation still shows the product. */
+  .animate-panel {
+    animation: readout-settle 420ms var(--ease-out-expo);
+  }
+
+  /* Half-transparent chassis over photography: the hero cards sit on the
+     kitchen banner and have to stay legible over both the bright window and
+     the dark cabinetry. void/50 plus blur clears 4.5:1 for ink over every
+     part of that image; do not thin it further. The inner top highlight is
+     the only edge-light on the site — it reads as a pane, not a shadow. */
+  .glass {
+    background: color-mix(in oklch, var(--color-void) 50%, transparent);
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+    border: 1px solid oklch(1 0 0 / 0.14);
+    box-shadow:
+      inset 0 1px 0 oklch(1 0 0 / 0.1),
+      0 24px 60px oklch(0.16 0.012 200 / 0.45);
+  }
+
+  /* Parallax drift for the pinned hero backdrop. Scroll-driven CSS, so it
+     never touches the main thread and there is no scroll listener to leak.
+     Unsupported browsers simply get the still image — the sticky stage
+     already carries the depth. */
+  .hero-scene {
+    view-timeline-name: --hero;
+    view-timeline-axis: block;
+  }
+  .hero-drift {
+    transform: scale(1.08);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-drift {
+      animation: hero-drift linear both;
+      animation-timeline: --hero;
+      animation-range: cover 0% cover 100%;
+    }
+  }
+}
+
+@keyframes hero-drift {
+  from {
+    transform: scale(1.08) translateY(-3.5%);
+  }
+  to {
+    transform: scale(1.08) translateY(3.5%);
+  }
+}
+
+/* Blur is expensive to composite and some readers turn transparency off at
+   the OS level. Fall back to the solid raised surface, which is what the rest
+   of the site's panels already use. */
+@media (prefers-reduced-transparency: reduce) {
+  .glass {
+    background: var(--color-raised);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+/* The countdown rail on the selected model in the bestseller showcase. Scale
+   rather than height so it composites on the GPU; origin-top is set on the
+   element so the fill grows downward. */
+@keyframes tab-rail {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
 }
 
 @keyframes readout-settle {
