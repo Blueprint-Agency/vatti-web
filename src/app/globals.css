@@ -188,6 +188,48 @@
       0 24px 60px var(--glass-shadow);
   }
 
+  /* Horizontal rails: the model grid on a phone, the review wall, the two
+     comparison tables. A default scrollbar under a row of cards is an OS
+     widget sitting on a designed surface — it is the wrong weight, the wrong
+     colour, and in the light ground it is a grey slab on near-white.
+
+     Both syntaxes, because they have no overlap: Firefox only understands the
+     standard properties, Safari only the pseudo-elements, and Chrome from 121
+     lets the standard ones win where both are given. Everything is a token, so
+     the bar follows the ground the visitor chose.
+
+     Teal on hover is not decoration for its own sake: every other control on
+     this site — chips, buttons, card borders, sort headers — goes teal under
+     the pointer, and a rail is a control. */
+  .rail {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-line-strong) transparent;
+  }
+  .rail:hover {
+    scrollbar-color: var(--color-teal) transparent;
+  }
+  .rail::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+  }
+  .rail::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .rail::-webkit-scrollbar-thumb {
+    background: var(--color-line-strong);
+    border-radius: 999px;
+  }
+  .rail::-webkit-scrollbar-thumb:hover {
+    background: var(--color-teal);
+  }
+
+  /* The FAQ disclosures. `list-style: none` alone leaves the triangle in
+     Safari, which still draws it through this pseudo-element — the only way to
+     get a <summary> we can lay out ourselves in every browser. */
+  .disclosure::-webkit-details-marker {
+    display: none;
+  }
+
   /* The ground selector in the header. Which half is lit is read from the
      <html> attribute, never from React state: the boot script sets that
      attribute before the first paint, so the knob is already under the right
@@ -213,6 +255,48 @@
   }
   .hero-drift {
     transform: scale(1.08);
+  }
+
+  /* The signature band on the category pages. The photograph drifts against
+     the scroll, so the copy set over it reads as sitting in front of a scene
+     rather than on top of a picture.
+
+     Scroll-driven CSS on a view-timeline, exactly as .hero-drift does, so there
+     is no scroll listener, nothing on the main thread, and nothing to clean up.
+     A browser without animation-timeline gets the still frame, which is the
+     composition anyway. */
+  /* The band pins: a tall scroll track with a viewport-height sticky frame
+     inside it, so the section holds still under the pointer while the scroll
+     keeps advancing, the copy arrives, and then the page carries on. Same
+     device as the home page hero, and it costs no JavaScript — the "freeze" is
+     `position: sticky`, and the progress driving the copy is the view-timeline
+     below reading the track it is stuck inside.
+
+     The track height is set under @supports for a reason: without scroll-driven
+     animation there is nothing to reveal, and a browser that pinned the section
+     anyway would hold the reader still through a viewport and a half of scroll
+     for no reason at all. There, the section is its own height and behaves like
+     every other one on the page.
+
+     The frame carries the overflow clip, NOT this element. An ancestor with
+     `overflow: hidden` between a sticky element and its scroll container stops
+     it sticking, and that is a silent failure — it simply scrolls past. */
+  .signature-scene {
+    view-timeline-name: --signature;
+    view-timeline-axis: block;
+  }
+  /* Three layers moving at three speeds down one scroll: the photograph travels
+     furthest and downward, the copy column drifts gently upward against it, and
+     the lines inside that column fade in one after another. Opposed directions
+     are what read as depth; everything sliding the same way just looks like the
+     section moving.
+
+     Scaled so the drift has somewhere to travel without exposing an edge: the
+     photograph shifts by 10% of its height in each direction, so it needs at
+     least 1.2 to stay covered. Do not lower this without lowering the keyframe
+     travel with it. */
+  .signature-drift {
+    transform: scale(1.22);
   }
 
   /* The partner wall, running. Each rail holds the same list twice, so at -50%
@@ -264,6 +348,35 @@
       animation-timeline: --hero;
       animation-range: cover 0% cover 100%;
     }
+    /* 210vh of track against a 100dvh frame leaves 110vh pinned — about one
+       further page-scroll held still, which is long enough to read six lines
+       arriving and short enough not to feel like the page has stopped
+       responding. Everything in SignatureBand's `rise` windows is calculated
+       against this number; changing it moves the pin window and the copy has
+       to move with it. */
+    .signature-scene {
+      height: 210vh;
+    }
+    .signature-drift {
+      animation: signature-drift linear both;
+      animation-timeline: --signature;
+      animation-range: cover 0% cover 100%;
+    }
+    .signature-copy {
+      animation: signature-copy linear both;
+      animation-timeline: --signature;
+      animation-range: cover 0% cover 100%;
+    }
+    /* The per-line fade. Both ends of the range come from the element, so the
+       stagger is data on the markup rather than five near-identical rules
+       here; SignatureBand computes them. Everything is in by the time the
+       section reaches the middle of the viewport — a reader who has scrolled
+       far enough to be looking at it should never be waiting on it. */
+    .signature-rise {
+      animation: signature-rise linear both;
+      animation-timeline: --signature;
+      animation-range: cover var(--rise-from) cover var(--rise-to);
+    }
   }
 }
 
@@ -281,6 +394,69 @@
     transform: scale(1.08) translateY(3.5%);
   }
 }
+
+/* The stops at 32% and 68% are the pin window, and they are the whole point.
+   210vh of track against a 100dvh frame makes the cover pass 310vh, so the
+   frame is stuck to the top of the viewport from 100/310 to 210/310 — and
+   through all of that the photograph holds exactly still.
+
+   Parallax is depth read from RELATIVE motion: the background lags the content
+   scrolling past it. Pin the frame and there is no content scrolling past, so a
+   background still drifting is just a picture sliding on its own, against a
+   scrim and a headline that are not moving. It reads as a fault, because
+   nothing in the frame explains it.
+
+   So the drift belongs to the approach and the departure, when the section
+   really is travelling, and the pin gets stillness. Move the track height in
+   .signature-scene and these two stops move with it. */
+@keyframes signature-drift {
+  0% {
+    transform: scale(1.22) translateY(-8%);
+  }
+  32% {
+    transform: scale(1.22) translateY(0);
+  }
+  68% {
+    transform: scale(1.22) translateY(0);
+  }
+  100% {
+    transform: scale(1.22) translateY(8%);
+  }
+}
+
+/* Against the photograph on the way in and out, and still while pinned, for
+   the same reason. A third of its travel: enough to separate the two planes,
+   not enough to look like the copy is sliding off its own band. */
+@keyframes signature-copy {
+  0% {
+    transform: translateY(3%);
+  }
+  32% {
+    transform: translateY(0);
+  }
+  68% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-3%);
+  }
+}
+
+/* Base state is the visible one, as everywhere else here: this only ever runs
+   inside the @supports + no-preference guard, so a crawler, a reduced-motion
+   reader and a browser without scroll-driven animations all get the copy
+   sitting there at full opacity rather than a section that never arrives. */
+@keyframes signature-rise {
+  from {
+    opacity: 0;
+    transform: translateY(1.75rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 
 /* Without color-mix there is no half-transparent pane to have, so fall back to
    the solid panel the rest of the site's cards use. This has to be said out

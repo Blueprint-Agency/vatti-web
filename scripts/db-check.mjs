@@ -71,6 +71,39 @@ check("facets pointing at a missing spec row", `
      ON s.product_id = f.product_id AND s.position = f.source_position
    WHERE s.id IS NULL`);
 
+// The category page fronts this model. A signature filed under another
+// category renders a hood at the top of the dishwasher page.
+check("signature product outside its own category", `
+  SELECT c.slug, p.slug AS product
+    FROM product_category c JOIN product p ON p.id = c.signature_product_id
+   WHERE p.category_id <> c.id OR p.is_published = 0`);
+
+// The series filter is the primary way the grid is browsed, so a published
+// model in no term is a model that disappears whichever chip is pressed. Only
+// enforced on categories that HAVE a taxonomy — four of the five do not.
+check("published product missing from its category's series taxonomy", `
+  SELECT p.slug FROM product p
+   WHERE p.is_published = 1
+     AND EXISTS (SELECT 1 FROM product_collection c WHERE c.category_id = p.category_id)
+     AND NOT EXISTS (
+       SELECT 1 FROM product_collection_member m
+         JOIN product_collection c ON c.id = m.collection_id
+        WHERE m.product_id = p.id AND c.category_id = p.category_id)`);
+
+// A term borrowed across categories would put a hood in the hob filter.
+check("series member filed under another category", `
+  SELECT c.slug AS series, p.slug AS product
+    FROM product_collection_member m
+    JOIN product_collection c ON c.id = m.collection_id
+    JOIN product p ON p.id = m.product_id
+   WHERE p.category_id <> c.category_id`);
+
+check("category content for a category with no products", `
+  SELECT c.slug FROM product_category c
+   WHERE (SELECT count(*) FROM product p WHERE p.category_id = c.id AND p.is_published = 1) = 0
+     AND ((SELECT count(*) FROM category_guide g WHERE g.category_id = c.id) > 0
+       OR (SELECT count(*) FROM category_faq f WHERE f.category_id = c.id) > 0)`);
+
 check("duplicate article slugs", `
   SELECT slug, count(*) n FROM article GROUP BY slug HAVING n > 1`);
 
@@ -141,6 +174,40 @@ check("slug collisions across the root namespace", `
     SELECT slug FROM product
     UNION ALL SELECT slug FROM product_category)
    GROUP BY slug HAVING n > 1`);
+
+// Hand-authored copy is the one place a link is typed rather than derived, and
+// a 404 inside an FAQ answer is invisible until somebody clicks it. Checked
+// here rather than by the crawler because the crawler needs a built site.
+{
+  const paths = new Set([
+    ...db.prepare("SELECT slug FROM product WHERE is_published = 1").all().map((r) => r.slug),
+    ...db.prepare("SELECT slug FROM product_category").all().map((r) => r.slug),
+    ...db.prepare("SELECT path FROM article WHERE is_published = 1").all().map((r) => r.path),
+    ...db.prepare("SELECT path FROM store").all().map((r) => r.path),
+    ...db.prepare("SELECT from_path FROM redirect").all().map((r) => r.from_path),
+    // Static routes, which have no table.
+    "about-us", "contact-us", "store-locations", "vatti-ewarranty", "vatti-pay",
+  ]);
+  const broken = [];
+  const rows = [
+    ...db.prepare("SELECT category_id, question AS ctx, answer_md AS md FROM category_faq").all(),
+    ...db.prepare("SELECT category_id, heading AS ctx, body_md AS md FROM category_guide").all(),
+    ...db.prepare("SELECT category_id, title AS ctx, body_md AS md FROM category_reason").all(),
+  ];
+  for (const row of rows) {
+    for (const m of row.md.matchAll(/\]\((\/[^)\s]*)\)/g)) {
+      const path = m[1].replace(/^\/|\/$/g, "");
+      if (!paths.has(path)) broken.push({ ctx: row.ctx, href: m[1] });
+    }
+  }
+  if (broken.length) {
+    failures.push({ name: "category copy linking to a page that does not exist", rows: broken });
+    console.log(`FAIL  category copy linking to a page that does not exist (${broken.length})`);
+    for (const b of broken) console.log(`        ${JSON.stringify(b)}`);
+  } else {
+    console.log("ok    category copy linking to a page that does not exist");
+  }
+}
 
 check("redirect loops", `
   SELECT r.from_path FROM redirect r JOIN redirect r2

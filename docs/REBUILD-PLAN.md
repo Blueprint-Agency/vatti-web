@@ -408,6 +408,11 @@ CREATE TABLE recipe_step (
 );
 
 -- Polymorphic: category pages carry ~12 Q&A each, 5 articles have prose FAQs.
+-- SHIPPED DIFFERENTLY: this landed as `category_faq(category_id, ...)` with a
+-- real foreign key. A polymorphic owner_id cannot carry one, and
+-- `PRAGMA foreign_key_check` in scripts/db-check.mjs is the thing that catches
+-- content pointing at a row that no longer exists. Give the article FAQs their
+-- own table when they are actually imported.
 CREATE TABLE faq (
   id          INTEGER PRIMARY KEY,
   owner_type  TEXT NOT NULL CHECK (owner_type IN ('article','product_category','product')),
@@ -593,5 +598,11 @@ should hold position. Both are directly observable through the connected GSC pro
    Vercel — there is no writable database at runtime. Given the form captures serial numbers,
    purchase dates and invoices, a searchable registry is a plausible business need. If so, that
    needs a real runtime DB (Turso or Postgres) and is out of the current scope.
-5. **Google reviews widget** on category pages — third-party embed. Keep it, or render cached
-   reviews from the DB to avoid the render-blocking script?
+5. ~~**Google reviews widget** on category pages — third-party embed. Keep it, or render cached
+   reviews from the DB to avoid the render-blocking script?~~ **Resolved: rendered from the DB.**
+   Four of the ten reviews the Trustindex widget rotates are in the `review` table, carried over
+   verbatim, with the aggregate count as a dated constant in `src/lib/site.ts`. The embed costs a
+   render-blocking third-party script on the highest-traffic template on the site and its markup is
+   not ours to make accessible. No `Review`/`AggregateRating` JSON-LD is emitted: self-serving
+   review markup on your own site is against Google's guidelines and the widget does not publish a
+   per-review rating for us to carry anyway. Refreshing the reviews is a SQL edit.

@@ -68,21 +68,33 @@ const BASE: Question[] = [
 export function EnquiryBuilder({
   categories,
   regions,
+  category,
 }: {
-  categories: CategoryCard[];
+  /** The whole catalogue, for the front page. Omitted on a category page. */
+  categories?: CategoryCard[];
   regions: Region[];
+  /**
+   * One category name, when this sits on that category's own page. It answers
+   * "what are you looking for?" on the visitor's behalf, so that question is
+   * dropped rather than asked about a page they are already standing on.
+   */
+  category?: string;
 }) {
   // Category and region wording comes from the database so the message uses the
   // same names as the catalogue and the dealer list.
   const questions = useMemo<Question[]>(
     () => [
-      {
-        id: "looking",
-        legend: "What are you looking for?",
-        label: "Looking at",
-        options: categories.map((c) => c.name),
-        multiple: true,
-      },
+      ...(category
+        ? []
+        : [
+            {
+              id: "looking",
+              legend: "What are you looking for?",
+              label: "Looking at",
+              options: (categories ?? []).map((c) => c.name),
+              multiple: true,
+            },
+          ]),
       ...BASE,
       {
         id: "area",
@@ -91,7 +103,7 @@ export function EnquiryBuilder({
         options: regions.map((r) => r.region),
       },
     ],
-    [categories, regions]
+    [categories, category, regions]
   );
 
   const [answers, setAnswers] = useState<Record<string, string[]>>({});
@@ -122,9 +134,11 @@ export function EnquiryBuilder({
     // category names are singular in the database, and pluralising them in code
     // would be a rule waiting to be broken by the next category added.
     const lines: string[] = [
-      looking.length > 0
-        ? `Hi VATTI Malaysia. I am shopping for: ${looking.join(", ")}.`
-        : "Hi VATTI Malaysia. I would like some help choosing kitchen appliances.",
+      category
+        ? `Hi VATTI Malaysia. I am looking at your ${category.toLowerCase()} range.`
+        : looking.length > 0
+          ? `Hi VATTI Malaysia. I am shopping for: ${looking.join(", ")}.`
+          : "Hi VATTI Malaysia. I would like some help choosing kitchen appliances.",
     ];
 
     const details = questions
@@ -138,7 +152,7 @@ export function EnquiryBuilder({
     if (details.length > 0) lines.push("", ...details);
     if (name.trim()) lines.push("", `Thanks, ${name.trim()}`);
     return lines.join("\n");
-  }, [answers, name, questions]);
+  }, [answers, category, name, questions]);
 
   const href = `${WHATSAPP}?text=${encodeURIComponent(message)}`;
 

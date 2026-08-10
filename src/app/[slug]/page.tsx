@@ -8,11 +8,21 @@ import { ReadoutStrip } from "@/components/ReadoutStrip";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SpecTable } from "@/components/SpecTable";
 import {
+  buildFilters,
   categorySlugs,
   getCategory,
   getCategoryProducts,
+  getCollections,
+  getCompareColumns,
+  getFaqs,
+  getGuides,
+  getRangeSummary,
+  getReasons,
+  getReviews,
+  getSignature,
   type Category,
 } from "@/lib/queries/category";
+import { getArticlesByPath, getRegions } from "@/lib/queries/home";
 import {
   getColourways,
   getDownloads,
@@ -64,11 +74,55 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   if (product) return <ProductView product={product} />;
 
   const category = getCategory(slug);
-  if (category) {
-    return <CategoryView category={category} products={getCategoryProducts(category.id)} />;
-  }
+  if (category) return <CategoryPage category={category} />;
 
   notFound();
+}
+
+/**
+ * The long-form buying guide each category sends readers to. Editorial, and
+ * only where one exists: the dishwasher and the purifier have no guide written
+ * for them yet, and the section is simply absent on those two pages.
+ *
+ * These are the same three guides the homepage promotes, so a visitor who came
+ * via the front page is not sent to a fourth article about the same decision.
+ */
+const CATEGORY_GUIDE: Record<string, string> = {
+  "kitchen-hood-in-malaysia": "buying-guide/types-of-range-hoods",
+  "cooker-hob-in-malaysia": "buying-guide/glass-vs-stainless-gas-hob-which-gas-hob-are-best",
+  "combi-and-steam-oven-in-malaysia": "buying-guide/what-is-a-combi-oven",
+};
+
+function CategoryPage({ category }: { category: Category }) {
+  const products = getCategoryProducts(category.id);
+  // Before buildFilters: it writes band membership back into each product's
+  // `filters`, so the summary and the columns are read off the same array
+  // either way, but the grid needs the mutated one.
+  const summary = getRangeSummary(products);
+  const columns = getCompareColumns(products);
+  const filters = buildFilters(products, getCollections(category.id));
+  const guidePath = CATEGORY_GUIDE[category.slug];
+
+  return (
+    <CategoryView
+      category={category}
+      products={products}
+      filters={filters}
+      summary={summary}
+      columns={columns}
+      signature={
+        category.signature_product_id ? getSignature(category.signature_product_id) : undefined
+      }
+      guides={getGuides(category.id)}
+      reasons={getReasons(category.id)}
+      faqs={getFaqs(category.id)}
+      // All ten the widget rotates. The rail is scrollable, so there is no
+      // reason to hold seven of them back.
+      reviews={getReviews(10)}
+      regions={getRegions()}
+      guideArticle={guidePath ? getArticlesByPath([guidePath])[0] : undefined}
+    />
+  );
 }
 
 function productMetadata(product: Product): Metadata {

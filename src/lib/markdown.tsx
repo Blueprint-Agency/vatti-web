@@ -68,7 +68,7 @@ export function Markdown({ md, sizes = {} }: { md: string; sizes?: ImageSizes })
     if (line.startsWith("|")) {
       const parsed = table(lines, i);
       out.push(
-        <div key={i} className="my-8 overflow-x-auto">
+        <div key={i} className="rail my-8 overflow-x-auto pb-2">
           {parsed.node}
         </div>
       );
@@ -135,6 +135,20 @@ export function Markdown({ md, sizes = {} }: { md: string; sizes?: ImageSizes })
   }
 
   return <>{out}</>;
+}
+
+/**
+ * The inline half of the renderer above, with no block handling and no
+ * paragraph of its own.
+ *
+ * The category page's guide, reason and FAQ copy is one paragraph per row and
+ * the surrounding component owns its type — measure, leading and colour differ
+ * per block. Wrapping those strings in `Markdown` would hand the paragraph
+ * class back to this file, where it would have to be right for all three.
+ * Links and emphasis are the only constructs those columns carry.
+ */
+export function Inline({ text }: { text: string }) {
+  return <>{inline(text)}</>;
 }
 
 const HEADING: Record<number, string> = {

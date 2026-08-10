@@ -29,7 +29,12 @@ CREATE TABLE product_category (
   seo_title        TEXT,
   meta_description TEXT,
   intro_md         TEXT,
-  sort_order       INTEGER NOT NULL DEFAULT 0
+  sort_order       INTEGER NOT NULL DEFAULT 0,
+  -- The model the category leads with. Editorial: there is no sales data, and
+  -- "first by sort_order" picks the oldest hood, not the one worth showing.
+  -- Set in category-content.sql, which runs after products.sql — the FK is
+  -- resolved at UPDATE time, not at CREATE TABLE time.
+  signature_product_id INTEGER REFERENCES product(id)
 );
 
 CREATE TABLE product (
@@ -48,6 +53,12 @@ CREATE TABLE product (
   intro_md         TEXT,
   seo_title        TEXT,
   meta_description TEXT,
+  -- The "Best for" row of the comparison table: who this model is the right
+  -- answer for, in four or five words. Editorial and unavoidably so — it is a
+  -- judgement across four measurements at once, which is exactly the judgement
+  -- a buyer is trying to make and cannot make from the numbers alone. Written
+  -- in category-content.sql, because products.sql is generated.
+  best_for         TEXT,
   hero_image_id    INTEGER REFERENCES image(id),
   is_published     INTEGER NOT NULL DEFAULT 1,
   sort_order       INTEGER NOT NULL DEFAULT 0
@@ -116,6 +127,103 @@ CREATE TABLE product_related (
   position   INTEGER NOT NULL,
   PRIMARY KEY (product_id, related_id),
   CHECK (product_id <> related_id)   -- source has 5 self-references; rejected at import
+);
+
+-- The series a category is browsed by: 'Heavy-Duty Cooking Series', 'Small
+-- Kitchen Series'. This is the WordPress `kitchen-hood-categor` taxonomy the
+-- live category page filters on, and it is editorial — it groups models by the
+-- job they are for, which is not derivable from any measurement. V960 and V937
+-- are both High-Efficiency Air Capture and their airflow figures are 1,190
+-- apart.
+--
+-- A join table rather than a column on `product`, because it is a taxonomy:
+-- terms are named, ordered and shared, and WordPress permits a product in two
+-- of them even though today every one carries exactly one.
+CREATE TABLE product_collection (
+  id          INTEGER PRIMARY KEY,
+  category_id INTEGER NOT NULL REFERENCES product_category(id) ON DELETE CASCADE,
+  slug        TEXT NOT NULL,          -- 'heavy-duty-cooking-series', from the live term
+  name        TEXT NOT NULL,          -- 'Heavy-Duty Cooking Series'
+  sort_order  INTEGER NOT NULL DEFAULT 0,
+  UNIQUE (category_id, slug)
+);
+
+CREATE TABLE product_collection_member (
+  collection_id INTEGER NOT NULL REFERENCES product_collection(id) ON DELETE CASCADE,
+  product_id    INTEGER NOT NULL REFERENCES product(id) ON DELETE CASCADE,
+  PRIMARY KEY (collection_id, product_id)
+);
+CREATE INDEX product_collection_member_idx ON product_collection_member(product_id);
+
+-- ── category page content ──────────────────────────────────────────────────
+-- The three hand-authored blocks the category template renders below the model
+-- grid. Every one of them is optional: a category with no rows simply does not
+-- render that section, which is how four of the five categories ship today.
+--
+-- Deliberately three narrow tables rather than one `category_block(kind, ...)`
+-- bag. The blocks do not share a shape — a guide carries an optional measured
+-- figure, a reason carries a claim, an FAQ carries a question — and a shared
+-- table would be half NULL and would need a CHECK per kind to stay honest.
+
+-- "How to choose one". Blocks WITH a figure render as readout tiles, blocks
+-- without render as prose. Ducted vs ductless is two rows, not a special kind.
+CREATE TABLE category_guide (
+  category_id INTEGER NOT NULL REFERENCES product_category(id) ON DELETE CASCADE,
+  position    INTEGER NOT NULL,
+  heading     TEXT NOT NULL,
+  body_md     TEXT NOT NULL,
+  figure      TEXT,   -- TEXT, not REAL: '650-800' and 'up to 1,700' both exist
+  figure_unit TEXT,
+  PRIMARY KEY (category_id, position)
+);
+
+-- "Why buy this category from VATTI". figure is the measured backing for the
+-- claim where one exists in product_facet — never a number invented for copy.
+--
+-- `icon` names the SUBJECT, not a glyph: 'airflow', not 'wind'. The mapping to
+-- an actual icon lives in the component, so swapping icon sets is a code
+-- change and never a data migration. The CHECK is the contract between the two
+-- — write a name the component does not know and the build fails here, loudly,
+-- rather than rendering a reason with a hole where its icon should be.
+CREATE TABLE category_reason (
+  category_id INTEGER NOT NULL REFERENCES product_category(id) ON DELETE CASCADE,
+  position    INTEGER NOT NULL,
+  title       TEXT NOT NULL,
+  body_md     TEXT NOT NULL,
+  figure      TEXT,
+  figure_unit TEXT,
+  icon        TEXT CHECK (icon IN (
+                'airflow','filtration','noise','motor','clean','controls',
+                'power','safety','water','smart','heat')),
+  PRIMARY KEY (category_id, position)
+);
+
+-- Rendered as <details> and emitted as FAQPage JSON-LD. answer_md is inline
+-- markdown only (links, bold) — no headings, no lists.
+CREATE TABLE category_faq (
+  category_id INTEGER NOT NULL REFERENCES product_category(id) ON DELETE CASCADE,
+  position    INTEGER NOT NULL,
+  question    TEXT NOT NULL,
+  answer_md   TEXT NOT NULL,
+  PRIMARY KEY (category_id, position)
+);
+
+-- Google reviews, carried over verbatim from the Trustindex widget the live
+-- site embeds. Site-wide, not per category: all of them are about the service,
+-- which is the same service whichever appliance was bought.
+--
+-- rating and posted_at ARE in the widget markup, they are just not in the text
+-- it renders: every card carries five filled star images and the wrapper
+-- carries a `data-time` unix timestamp. Both are read out of that rather than
+-- estimated. The aggregate count is a dated constant in src/lib/site.ts.
+CREATE TABLE review (
+  id        INTEGER PRIMARY KEY,
+  position  INTEGER NOT NULL,
+  author    TEXT NOT NULL,
+  body      TEXT NOT NULL,
+  rating    INTEGER NOT NULL CHECK (rating BETWEEN 1 AND 5),
+  posted_at TEXT NOT NULL,          -- ISO date, from the widget's data-time
+  source    TEXT NOT NULL DEFAULT 'Google'
 );
 
 -- ── editorial ──────────────────────────────────────────────────────────────
