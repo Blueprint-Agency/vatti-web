@@ -101,7 +101,7 @@ export default function ContactPage() {
                 Come and see one running
               </h2>
               <p className="mt-3 max-w-[62ch] text-ink-muted">
-                The flagship showroom is at Atria Shopping Gallery in Petaling Jaya, and 75
+                The flagship showroom is at Atria Shopping Gallery in Petaling Jaya, and 76
                 authorised dealers stock VATTI across Malaysia — including Sabah and Sarawak.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">

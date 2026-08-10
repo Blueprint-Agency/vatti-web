@@ -47,7 +47,7 @@ export function getStore(slug: string): Store | undefined {
 }
 
 /**
- * The whole directory in one query — 75 dealers and their images — grouped in
+ * The whole directory in one query — 76 dealers and their images — grouped in
  * JS afterwards. A CASE-ranked ORDER BY would do the same work in SQL and read
  * worse; the grouping is five array pushes.
  */

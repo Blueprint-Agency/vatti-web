@@ -141,7 +141,7 @@ export default function AboutPage() {
                 Our certifications
               </h2>
               <p className="mt-5 max-w-[52ch] leading-relaxed text-ink-muted">
-                VATTI Malaysia is the appointed national distributor, supplying 75 authorised
+                VATTI Malaysia is the appointed national distributor, supplying 76 authorised
                 dealers across the country.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">

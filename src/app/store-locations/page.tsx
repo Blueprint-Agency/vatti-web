@@ -55,7 +55,7 @@ export default function StoreLocationsPage() {
             </p>
           </div>
 
-          {/* Jump links: 75 entries is a long scroll on the phones that are 64%
+          {/* Jump links: 76 entries is a long scroll on the phones that are 64%
               of this page's traffic. */}
           <nav aria-label="Regions" className="mt-10">
             <ul className="flex flex-wrap gap-2">

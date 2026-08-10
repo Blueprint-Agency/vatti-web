@@ -1,11 +1,13 @@
-// research/stores-rest.json + research/stores.json  ->  data/sql/stores.sql
+// research/stores-rest.json + research/stores.json + research/stores-local.json
+//   ->  data/sql/stores.sql
 //
-// Run this when the scrape changes. The generated SQL is the committed source of
-// truth and is what gets reviewed in PRs; nothing reads either JSON at build.
+// Run this when the scrape changes or a dealer is added. The generated SQL is the
+// committed source of truth and is what gets reviewed in PRs; nothing reads any
+// of the JSON at build.
 //
 //   node scripts/import-stores.mjs
 //
-// TWO sources, because neither is complete on its own:
+// TWO sources for the scraped dealers, because neither is complete on its own:
 //
 //   research/stores-rest.json  the authoritative slug and permalink, straight
 //                              from WordPress, plus each record's featured-media
@@ -28,6 +30,11 @@
 //
 // The eWarranty form's 80 hardcoded dealer options are a third list that was
 // never scraped, so nothing here flags which stores appear in it.
+//
+//   research/stores-local.json  dealers appointed since the scrape. Not in
+//                               WordPress, so they have no wp_id and no legacy
+//                               permalink; hand-maintained, and the only file
+//                               here you edit to add a dealer.
 
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -38,6 +45,7 @@ import { required } from "./env.mjs";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const rest = JSON.parse(readFileSync(join(root, "research/stores-rest.json"), "utf8"));
 const { stores, regions } = JSON.parse(readFileSync(join(root, "research/stores.json"), "utf8"));
+const local = JSON.parse(readFileSync(join(root, "research/stores-local.json"), "utf8")).stores;
 
 const q = (v) =>
   v === null || v === undefined || v === "" ? "NULL" : `'${String(v).replace(/'/g, "''")}'`;
@@ -127,21 +135,34 @@ const unwrapJetpack = (url) => {
   return s.split("?")[0].split("#")[0];
 };
 
+// Once per store: unwrapJetpack counts what it rewrites, so calling it twice for
+// the same photo would double the tally in the summary.
+const scrapedImage = (url) => {
+  const legacy = unwrapJetpack(url);
+  return { cdn: toCdn(legacy), legacy };
+};
+
 // products.sql writes image rows with literal ids and runs first, so no explicit
 // id here. OR IGNORE + a lookup on the UNIQUE legacy_url keeps a shared file on
 // one row. db-build.mjs pins the file order.
+//
+// A locally added dealer's photo never lived on WordPress, so it has no
+// legacy_url to 301 and nothing to key the lookup on but `url`. Both shapes go
+// through here so the dedupe set is shared.
 const imageRows = [];
 const seenImage = new Set();
-function imageFor(url, alt) {
-  const legacy = unwrapJetpack(url);
-  if (!seenImage.has(legacy)) {
-    seenImage.add(legacy);
+function imageFor({ cdn, legacy }, alt) {
+  const key = legacy ?? cdn;
+  if (!seenImage.has(key)) {
+    seenImage.add(key);
     imageRows.push(
       `INSERT OR IGNORE INTO image (url, legacy_url, alt) VALUES ` +
-        `(${q(toCdn(legacy))}, ${q(legacy)}, ${q(alt)});`
+        `(${q(cdn)}, ${q(legacy)}, ${q(alt)});`
     );
   }
-  return `(SELECT id FROM image WHERE legacy_url = ${q(legacy)})`;
+  return legacy
+    ? `(SELECT id FROM image WHERE legacy_url = ${q(legacy)})`
+    : `(SELECT id FROM image WHERE url = ${q(cdn)})`;
 }
 
 // ── build ──────────────────────────────────────────────────────────────────
@@ -170,42 +191,77 @@ const REGION_NAME = Object.fromEntries(
     return [name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""), name];
   })
 );
-for (const { store } of matched) {
-  if (!REGION_ORDER.includes(store.regionSlug)) {
-    throw new Error(`unmapped region "${store.regionSlug}" on ${store.name}`);
+// One shape for both sources, so the sort, the region checks and the emitted
+// row are written once. `image.legacy` is null for a local dealer — see imageFor.
+const rows = [
+  ...matched.map(({ store: s, wp }) => ({
+    slug: wp.slug,
+    wpId: wp.id,
+    // the decoded WordPress title is the canonical name; the scrape agrees
+    // on 74 of 75 and differs only by an en-dash entity on the last
+    name: decode(wp.title),
+    regionSlug: s.regionSlug,
+    address: s.address,
+    phone: s.phone,
+    directionsUrl: s.directionsUrl,
+    image: s.image ? scrapedImage(s.image) : null,
+  })),
+  ...local.map((s) => ({
+    slug: s.slug,
+    wpId: null,
+    name: s.name,
+    regionSlug: s.regionSlug,
+    address: s.address,
+    phone: s.phone ?? null,
+    directionsUrl: s.directionsUrl ?? null,
+    // an R2 bucket key, not a URL: the file never existed under /wp-content/
+    image: s.image ? { cdn: `${CDN}/${s.image}`, legacy: null } : null,
+  })),
+];
+
+for (const r of rows) {
+  if (!REGION_ORDER.includes(r.regionSlug)) {
+    throw new Error(`unmapped region "${r.regionSlug}" on ${r.name}`);
   }
-  if (!REGION_NAME[store.regionSlug]) {
-    throw new Error(`no taxonomy display name for region "${store.regionSlug}"`);
+  if (!REGION_NAME[r.regionSlug]) {
+    throw new Error(`no taxonomy display name for region "${r.regionSlug}"`);
   }
 }
-const ordered = [...matched].sort(
+
+// slug is UNIQUE and is the URL. A local addition reusing a WordPress slug would
+// fail the build far from here, with nothing pointing at the file to fix.
+const bySlug = new Map();
+for (const r of rows) {
+  if (bySlug.has(r.slug)) throw new Error(`two stores share the slug "${r.slug}"`);
+  bySlug.set(r.slug, r);
+}
+
+const ordered = [...rows].sort(
   (a, b) =>
-    REGION_ORDER.indexOf(a.store.regionSlug) - REGION_ORDER.indexOf(b.store.regionSlug) ||
-    a.store.name.localeCompare(b.store.name)
+    REGION_ORDER.indexOf(a.regionSlug) - REGION_ORDER.indexOf(b.regionSlug) ||
+    a.name.localeCompare(b.name)
 );
 
 const body = [];
 const noDirections = [];
 
-ordered.forEach(({ store: s, wp }, i) => {
-  if (!s.directionsUrl) noDirections.push(wp.slug);
+ordered.forEach((r, i) => {
+  if (!r.directionsUrl) noDirections.push(r.slug);
   body.push(
     `INSERT INTO store (id, slug, path, wp_id, name, region, region_slug, address, phone, ` +
       `directions_url, image_id, sort_order) VALUES (` +
       [
         i + 1,
-        q(wp.slug),
-        q(`store/${wp.slug}`),
-        wp.id,
-        // the decoded WordPress title is the canonical name; the scrape agrees
-        // on 74 of 75 and differs only by an en-dash entity on the last
-        q(decode(wp.title)),
-        q(REGION_NAME[s.regionSlug]),
-        q(s.regionSlug),
-        q(s.address),
-        q(s.phone),
-        q(s.directionsUrl),
-        s.image ? imageFor(s.image, decode(wp.title)) : "NULL",
+        q(r.slug),
+        q(`store/${r.slug}`),
+        r.wpId ?? "NULL",
+        q(r.name),
+        q(REGION_NAME[r.regionSlug]),
+        q(r.regionSlug),
+        q(r.address),
+        q(r.phone),
+        q(r.directionsUrl),
+        r.image ? imageFor(r.image, r.name) : "NULL",
         i,
       ].join(", ") +
       `);`
@@ -217,10 +273,10 @@ mkdirSync(join(root, "data/sql"), { recursive: true });
 writeFileSync(join(root, "data/sql/stores.sql"), sql);
 
 const byRegion = {};
-ordered.forEach(({ store: s }) => (byRegion[s.regionSlug] = (byRegion[s.regionSlug] || 0) + 1));
+ordered.forEach((r) => (byRegion[r.regionSlug] = (byRegion[r.regionSlug] || 0) + 1));
 const slugAgrees = matched.filter(({ store, wp }) => store.slug === wp.slug).length;
 
-console.log(`stores        ${ordered.length}`);
+console.log(`stores        ${ordered.length} (${matched.length} scraped + ${local.length} local)`);
 console.log(`join          ${matched.length}/${stores.length} matched on featured-image filename, 0 dropped`);
 console.log(`              names cross-check: ${matched.length}/${matched.length} agree`);
 console.log(`slugs         ${slugAgrees}/${matched.length} of the stores.json slugs agreed with WordPress`);

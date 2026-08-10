@@ -2,7 +2,7 @@
 //   node scripts/db-check.mjs            structural checks only (fast, offline)
 //   node scripts/db-check.mjs --assets   also HEAD every image and PDF (network)
 
-import { existsSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { DatabaseSync } from "node:sqlite";
@@ -124,8 +124,15 @@ check("stores with no image", `
 check("store path not /store/<slug>", `
   SELECT slug, path FROM store WHERE path <> 'store/' || slug`);
 
+// wp_id is provenance from the scrape, so it is the evidence that the join in
+// import-stores.mjs produced this row. Dealers appointed since the scrape have
+// no CPT page and legitimately have none — every OTHER row must still carry one.
+const localSlugs = JSON.parse(
+  readFileSync(join(root, "research/stores-local.json"), "utf8")
+).stores.map((s) => `'${s.slug.replace(/'/g, "''")}'`);
 check("stores missing their WordPress id", `
-  SELECT slug FROM store WHERE wp_id IS NULL`);
+  SELECT slug FROM store
+   WHERE wp_id IS NULL AND slug NOT IN (${localSlugs.join(", ") || "''"})`);
 
 // Products and categories share one root [slug] route segment, so a collision
 // is a page that silently shadows another. Stores are NOT in this namespace.

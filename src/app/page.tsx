@@ -610,7 +610,7 @@ export default function HomePage() {
             the dealer network is the one claim that belongs to all five
             regions equally, and a left-aligned column would leave two thirds
             of the band empty. The obvious filler for that space would be a
-            showroom photograph, but all 75 stored dealer photos are
+            showroom photograph, but all 76 stored dealer photos are
             multi-brand storefronts carrying Bosch, Smeg and Teka signage. */}
         <section
           aria-labelledby="dealers-heading"

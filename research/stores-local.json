@@ -1,0 +1,15 @@
+{
+  "note": "Dealers appointed since the WordPress scrape. They have no CPT page, so no wp_id, no permalink to preserve and no /wp-content/ URL for the photo — `image` is an R2 bucket key, staged under old-media/ and pushed with scripts/media-upload.mjs. scripts/import-stores.mjs folds these into data/sql/stores.sql alongside the scraped 75; the slug becomes /store/<slug>/, so it must not collide with a WordPress one.",
+  "fields": ["slug", "name", "regionSlug", "address", "phone", "directionsUrl", "image"],
+  "stores": [
+    {
+      "slug": "emart-kompleks-karamunsing",
+      "name": "Emart Kompleks Karamunsing",
+      "regionSlug": "sabah-sarawak",
+      "address": "Lot G98 Ground Floor, Block C, Kompleks Karamunsing, 88300 Kota Kinabalu, Sabah",
+      "phone": "088-257 811",
+      "directionsUrl": "https://share.google/4e9vQWFtWtPFZEUom",
+      "image": "2026/08/Emart-Kompleks-Karamunsing.jpeg"
+    }
+  ]
+}

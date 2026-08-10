@@ -8,10 +8,11 @@ import { getStore, storeSlugs, telHref, type Store } from "@/lib/queries/store";
 import { WHATSAPP } from "@/lib/site";
 
 /**
- * The 75 dealer pages. These live under /store/ — they are NOT in the root
- * [slug] namespace; `store.path` is 'store/<slug>' and those URLs are live 200s
- * on WordPress today. The legacy pages are empty stubs with no address in the
- * markup and appear in no sitemap, so everything below is net new.
+ * The 76 dealer pages. These live under /store/ — they are NOT in the root
+ * [slug] namespace; `store.path` is 'store/<slug>' and 75 of those URLs are live
+ * 200s on WordPress today (the 76th is a dealer appointed since the scrape, so
+ * it has no legacy page to preserve). The legacy pages are empty stubs with no
+ * address in the markup and appear in no sitemap, so everything below is net new.
  */
 export function generateStaticParams() {
   return storeSlugs().map((slug) => ({ slug }));
@@ -109,7 +110,7 @@ export default async function StorePage({ params }: { params: Promise<{ slug: st
               </dl>
 
               <div className="mt-8 flex flex-wrap gap-3">
-                {/* One of the 75 has no directions_url. It gets no button at
+                {/* One of the 76 has no directions_url. It gets no button at
                     all rather than a dead link or a "coming soon" placeholder. */}
                 {store.directions_url && (
                   <a
