@@ -24,8 +24,8 @@
   --color-paper-line: oklch(0.86 0.008 200);
   --color-teal-deep: oklch(0.52 0.084 193);
 
-  --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
-  --font-readout: var(--font-martian), ui-monospace, monospace;
+  --font-display: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-readout: var(--font-geist-mono), ui-monospace, monospace;
 
   /* semantic z-index — never arbitrary values */
   --z-dropdown: 10;

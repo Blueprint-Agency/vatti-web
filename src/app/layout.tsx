@@ -1,25 +1,25 @@
 import type { Metadata } from "next";
-import { Archivo, Martian_Mono } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 
 import { SiteFooter } from "@/components/SiteFooter";
 import "./globals.css";
 
-// Archivo carries display, UI and body — its width axis supplies
-// condensed-through-expanded from one family, so the contrast comes from one
-// voice rather than a mismatched pair.
-const archivo = Archivo({
+// Geist carries display, UI and body. It replaced Archivo, whose case rested on
+// a width axis this site never once used; what matters here instead is that the
+// mono below is the same design. The readouts sit beside sans labels everywhere
+// on the site, and drawn on one skeleton they read as one system rather than
+// two families agreeing to share a page.
+const geist = Geist({
   subsets: ["latin"],
-  axes: ["wdth"],
   display: "swap",
-  variable: "--font-archivo",
+  variable: "--font-geist",
 });
 
 // Measured values ONLY. Never body copy, headings or nav.
-const martian = Martian_Mono({
+const geistMono = Geist_Mono({
   subsets: ["latin"],
-  weight: ["400", "600"],
   display: "swap",
-  variable: "--font-martian",
+  variable: "--font-geist-mono",
 });
 
 export const metadata: Metadata = {
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-MY" className={`${archivo.variable} ${martian.variable}`}>
+    <html lang="en-MY" className={`${geist.variable} ${geistMono.variable}`}>
       <body className="min-h-dvh bg-void text-ink antialiased">
         <a
           href="#main"
