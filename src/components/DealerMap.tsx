@@ -67,7 +67,7 @@ export function DealerMap({ regions }: { regions: Region[] }) {
                     // Region label.
                     className="pointer-events-auto absolute z-10 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-1 whitespace-nowrap"
                   >
-                    <span className="readout rounded-sm bg-teal px-2.5 py-1 text-sm font-semibold text-void shadow-[0_6px_20px_oklch(0.16_0.012_200/0.6)] transition-transform duration-300 group-hover:scale-110 group-focus-visible:scale-110 group-focus-visible:ring-2 group-focus-visible:ring-ink group-focus-visible:ring-offset-2 group-focus-visible:ring-offset-void">
+                    <span className="readout rounded-sm bg-teal px-2.5 py-1 text-sm font-semibold text-void shadow-[0_6px_20px_var(--pin-shadow)] transition-transform duration-300 group-hover:scale-110 group-focus-visible:scale-110 group-focus-visible:ring-2 group-focus-visible:ring-ink group-focus-visible:ring-offset-2 group-focus-visible:ring-offset-void">
                       {row.count}
                     </span>
                     {/* The label sits on the landmass, so it carries its own

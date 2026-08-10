@@ -100,8 +100,8 @@ export function Markdown({ md, sizes = {} }: { md: string; sizes?: ImageSizes })
                 aria-hidden="true"
                 className={
                   ordered
-                    ? "readout shrink-0 text-sm text-teal-deep"
-                    : "mt-[0.6em] size-1.5 shrink-0 rounded-full bg-teal-deep"
+                    ? "readout shrink-0 text-sm text-teal"
+                    : "mt-[0.6em] size-1.5 shrink-0 rounded-full bg-teal"
                 }
               >
                 {ordered ? `${k + 1}.` : null}
@@ -123,8 +123,11 @@ export function Markdown({ md, sizes = {} }: { md: string; sizes?: ImageSizes })
       if (!s || STRUCTURAL.test(s)) break;
       buf.push(s);
     }
+    // Leading is a token, not a literal: DESIGN.md § Typography gives
+    // light-on-dark +0.05 over the light-mode equivalent, and the reading
+    // surface is now whichever ground the visitor chose.
     out.push(
-      <p key={i} className="my-5 leading-[1.75]">
+      <p key={i} className="my-5 leading-[var(--leading-prose)]">
         {inline(buf.join(" "))}
       </p>
     );
@@ -197,7 +200,7 @@ function inline(text: string): ReactNode[] {
 }
 
 const LINK =
-  "text-teal-deep underline decoration-teal-deep/35 underline-offset-[3px] transition-colors hover:decoration-teal-deep";
+  "text-teal underline decoration-teal/35 underline-offset-[3px] transition-colors hover:decoration-teal";
 
 /* ── tables ──────────────────────────────────────────────────────────────── */
 

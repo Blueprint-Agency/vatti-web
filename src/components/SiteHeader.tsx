@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { CATALOGUE } from "@/lib/site";
 
 /**
@@ -102,7 +103,10 @@ function Section({ label, items }: { label: string; items: typeof CATEGORIES }) 
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-[var(--z-sticky)] border-b border-line bg-void/92 backdrop-blur-sm">
-      <div className="mx-auto flex max-w-6xl items-center gap-6 px-5 py-3.5 sm:px-8">
+      {/* gap-3 below sm: the wordmark, the ground selector and the menu button
+          are all fixed-width, so on a 360px Android — common here — gap-6
+          between the last two is what tips the row into overflowing. */}
+      <div className="mx-auto flex max-w-6xl items-center gap-3 px-5 py-3.5 sm:gap-6 sm:px-8">
         <Link
           href="/"
           className="font-semibold tracking-[-0.02em] text-ink transition-colors hover:text-teal"
@@ -134,7 +138,12 @@ export function SiteHeader() {
           </ul>
         </nav>
 
-        <details className="group ml-auto lg:hidden">
+        {/* Between the nav and the menu button in the DOM, which puts it on the
+            right on both layouts: on desktop the nav already carries ml-auto,
+            on mobile the nav is gone and the switch takes it. */}
+        <ThemeToggle className="ml-auto lg:ml-0" />
+
+        <details className="group lg:hidden">
           <summary className="flex cursor-pointer list-none items-center gap-2 rounded-sm border border-line-strong px-3.5 py-2 text-sm font-medium text-ink [&::-webkit-details-marker]:hidden">
             Menu
             <Chevron />

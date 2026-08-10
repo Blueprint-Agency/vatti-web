@@ -125,7 +125,7 @@ export default async function Page({ params }: Params) {
             {recipes.length > 0 && (
               <>
                 <span aria-hidden="true">·</span>
-                <a href="#recipe" className="font-medium text-teal-deep underline-offset-[3px] hover:underline">
+                <a href="#recipe" className="font-medium text-teal underline-offset-[3px] hover:underline">
                   Jump to recipe
                 </a>
               </>
@@ -167,7 +167,7 @@ export default async function Page({ params }: Params) {
                 </h2>
                 <Link
                   href={`/category/${article.section}/`}
-                  className="text-sm font-medium text-teal-deep underline-offset-[3px] hover:underline"
+                  className="text-sm font-medium text-teal underline-offset-[3px] hover:underline"
                 >
                   See all
                 </Link>
@@ -261,7 +261,7 @@ function RecipeCard({ recipe }: { recipe: Recipe }) {
                 <li key={i} className="flex gap-3 leading-snug">
                   <span
                     aria-hidden="true"
-                    className="mt-[0.55em] size-1.5 shrink-0 rounded-full bg-teal-deep"
+                    className="mt-[0.55em] size-1.5 shrink-0 rounded-full bg-teal"
                   />
                   {text}
                 </li>
@@ -278,7 +278,7 @@ function RecipeCard({ recipe }: { recipe: Recipe }) {
             <ol className="mt-4 flex flex-col gap-4">
               {recipe.steps.map((text, i) => (
                 <li key={i} className="flex gap-4 leading-relaxed">
-                  <span aria-hidden="true" className="readout shrink-0 text-sm text-teal-deep">
+                  <span aria-hidden="true" className="readout shrink-0 text-sm text-teal">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   {text}
@@ -321,7 +321,7 @@ function MoreCard({ article }: { article: ArticleCard }) {
           />
         </div>
       )}
-      <p className="font-medium leading-snug transition-colors group-hover:text-teal-deep">
+      <p className="font-medium leading-snug transition-colors group-hover:text-teal">
         {article.title}
       </p>
       <p className="readout mt-auto text-xs text-paper-muted">

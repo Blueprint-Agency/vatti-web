@@ -229,7 +229,7 @@ export default function HomePage() {
                     {/* Hairline matched to the pane edge, not to --color-line:
                         an opaque rule on a half-transparent panel reads as a
                         seam in the glass. */}
-                    <div className="border-t border-white/[0.14] p-5">
+                    <div className="border-t border-glass-edge p-5">
                       <p className="readout text-xs text-teal">{hero.model_code}</p>
                       <p className="mt-1 font-medium leading-snug transition-colors group-hover:text-teal">
                         {hero.name}
@@ -272,7 +272,7 @@ export default function HomePage() {
                       </li>
                     ))}
                   </ul>
-                  <p className="border-t border-white/[0.14] pt-5 text-sm leading-relaxed text-ink-muted">
+                  <p className="border-t border-glass-edge pt-5 text-sm leading-relaxed text-ink-muted">
                     Building premium kitchen appliances since 1992.
                   </p>
                 </div>
@@ -290,7 +290,7 @@ export default function HomePage() {
                   <p className="mt-3 text-sm text-ink-muted">
                     models across {categories.length} categories
                   </p>
-                  <p className="mt-5 border-t border-white/[0.14] pt-5 leading-relaxed">
+                  <p className="mt-5 border-t border-glass-edge pt-5 leading-relaxed">
                     {categories.map((c) => c.name).join(", ")}.
                   </p>
                 </div>
@@ -302,7 +302,7 @@ export default function HomePage() {
                   <p className="mt-3 text-sm text-ink-muted">
                     authorised dealers across {regions.length} regions
                   </p>
-                  <div className="mt-5 border-t border-white/[0.14] pt-5">
+                  <div className="mt-5 border-t border-glass-edge pt-5">
                     <p className="leading-relaxed">
                       Sold, installed and serviced locally, from the Klang Valley to Sabah and
                       Sarawak.

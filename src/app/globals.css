@@ -2,9 +2,16 @@
 
 /* Vatti — Instrument.
    Every colour here is verified: see DESIGN.md § Verification. Do not nudge a
-   value without re-running the contrast check. */
+   value without re-running the contrast check.
+
+   The site ships in two grounds, switched by `data-theme` on <html>. @theme
+   below holds the DARK values, which is what the static HTML renders with; the
+   light ground is a variable override further down. Tailwind v4 compiles
+   `bg-void` to `background-color: var(--color-void)`, so re-pointing the token
+   flips every utility at once — nothing in a component names a theme. Keep it
+   that way: a `dark:` variant anywhere here means a token is missing. */
 @theme {
-  /* dark — the chassis (product, category, home) */
+  /* the chassis (product, category, home) */
   --color-void: oklch(0.16 0.012 200);
   --color-surface: oklch(0.21 0.014 200);
   --color-raised: oklch(0.26 0.016 200);
@@ -16,13 +23,18 @@
   --color-teal-core: oklch(0.68 0.105 190);
   --color-ember: oklch(0.76 0.15 55);
 
-  /* light — the reading surface (articles) */
-  --color-paper: oklch(0.985 0.003 200);
-  --color-paper-surface: oklch(0.955 0.005 200);
-  --color-paper-ink: oklch(0.24 0.015 200);
-  --color-paper-muted: oklch(0.49 0.015 200);
-  --color-paper-line: oklch(0.86 0.008 200);
-  --color-teal-deep: oklch(0.52 0.084 193);
+  /* the reading surface (articles) — one step off the chassis, not a second
+     palette. In the dark ground it is a lifted near-black; in the light ground
+     it is the paper the articles were designed on. */
+  --color-paper: oklch(0.19 0.013 200);
+  --color-paper-surface: oklch(0.245 0.015 200);
+  --color-paper-ink: oklch(0.95 0.004 200);
+  --color-paper-muted: oklch(0.76 0.012 200);
+  --color-paper-line: oklch(0.31 0.018 200);
+
+  /* The hairline on a half-transparent pane. An opaque rule reads as a seam in
+     the glass, so this is an alpha edge, not --color-line. */
+  --color-glass-edge: oklch(1 0 0 / 0.14);
 
   --font-display: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
   --font-readout: var(--font-geist-mono), ui-monospace, monospace;
@@ -37,6 +49,59 @@
 
   --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ---------------------------------------------------------------------------
+   The light ground.
+
+   Roles are preserved, not inverted: --ink stays "the text colour" and --teal
+   stays "the accent you can read", they just land on different values. That is
+   why `bg-teal text-void` — the primary CTA everywhere on the site — survives
+   the flip without a single class change: in the dark ground it is bright teal
+   under near-black text, in the light ground deep teal under near-white.
+
+   Every value is checked in DESIGN.md § Verification. --line-strong is the tight
+   one at 3.46:1 on --void; it carries input borders, so it may not go lighter.
+   --------------------------------------------------------------------------- */
+:root {
+  color-scheme: dark;
+  /* DESIGN.md § Typography: light-on-dark gets +0.05 over the light equivalent. */
+  --leading-prose: 1.8;
+  --glass-tint: 50%;
+  --glass-highlight: oklch(1 0 0 / 0.1);
+  --glass-shadow: oklch(0.16 0.012 200 / 0.45);
+  --pin-shadow: oklch(0.16 0.012 200 / 0.6);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --leading-prose: 1.75;
+
+  --color-void: oklch(0.985 0.003 200);
+  --color-surface: oklch(0.955 0.005 200);
+  --color-raised: oklch(0.915 0.007 200);
+  --color-line: oklch(0.86 0.008 200);
+  --color-line-strong: oklch(0.62 0.022 200);
+  --color-ink: oklch(0.24 0.015 200);
+  --color-ink-muted: oklch(0.49 0.015 200);
+  --color-teal: oklch(0.52 0.084 193);
+  --color-teal-core: oklch(0.45 0.072 190);
+  --color-ember: oklch(0.55 0.155 45);
+
+  --color-paper: oklch(0.985 0.003 200);
+  --color-paper-surface: oklch(0.955 0.005 200);
+  --color-paper-ink: oklch(0.24 0.015 200);
+  --color-paper-muted: oklch(0.49 0.015 200);
+  --color-paper-line: oklch(0.86 0.008 200);
+
+  /* Dark ink on a pale pane needs more body than light ink on a dark one: over
+     the darkest part of the hero photograph, void/50 leaves --ink at 3.98:1 and
+     void/62 at 5.90:1. 62% is the floor, not a taste call. */
+  --glass-tint: 62%;
+  --color-glass-edge: oklch(0.24 0.015 200 / 0.18);
+  --glass-highlight: oklch(1 0 0 / 0.5);
+  --glass-shadow: oklch(0.24 0.015 200 / 0.16);
+  --pin-shadow: oklch(0.24 0.015 200 / 0.28);
 }
 
 @layer base {
@@ -114,13 +179,28 @@
      part of that image; do not thin it further. The inner top highlight is
      the only edge-light on the site — it reads as a pane, not a shadow. */
   .glass {
-    background: color-mix(in oklch, var(--color-void) 50%, transparent);
+    background: color-mix(in oklch, var(--color-void) var(--glass-tint), transparent);
     backdrop-filter: blur(20px) saturate(140%);
     -webkit-backdrop-filter: blur(20px) saturate(140%);
-    border: 1px solid oklch(1 0 0 / 0.14);
+    border: 1px solid var(--color-glass-edge);
     box-shadow:
-      inset 0 1px 0 oklch(1 0 0 / 0.1),
-      0 24px 60px oklch(0.16 0.012 200 / 0.45);
+      inset 0 1px 0 var(--glass-highlight),
+      0 24px 60px var(--glass-shadow);
+  }
+
+  /* The ground selector in the header. Which half is lit is read from the
+     <html> attribute, never from React state: the boot script sets that
+     attribute before the first paint, so the knob is already under the right
+     glyph in the first frame and hydration has nothing to correct. */
+  .ground-knob {
+    transition: transform 260ms var(--ease-out-quart);
+  }
+  :root[data-theme="light"] .ground-knob {
+    transform: translateX(100%);
+  }
+  :root:not([data-theme="light"]) .ground-switch [data-ground="dark"],
+  :root[data-theme="light"] .ground-switch [data-ground="light"] {
+    color: var(--color-ink);
   }
 
   /* Parallax drift for the pinned hero backdrop. Scroll-driven CSS, so it
@@ -152,6 +232,19 @@
   }
   to {
     transform: scale(1.08) translateY(3.5%);
+  }
+}
+
+/* Without color-mix there is no half-transparent pane to have, so fall back to
+   the solid panel the rest of the site's cards use. This has to be said out
+   loud: the bundler synthesises its own fallback for the rule above by reading
+   --void's declared value, which is the DARK one, and would paint a near-black
+   slab under near-black text in the light ground. */
+@supports not (color: color-mix(in lab, red, red)) {
+  .glass {
+    background: var(--color-surface);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
 }
 

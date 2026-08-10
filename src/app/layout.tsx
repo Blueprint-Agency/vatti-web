@@ -22,6 +22,14 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
 });
 
+// Every page here is static HTML, and it ships with the dark ground baked in —
+// that is the brand surface, so it is the right default and the right thing to
+// have in the file. A visitor who has chosen light would otherwise get one dark
+// frame before React booted, so this re-applies their choice synchronously, as
+// the first thing in <body> and therefore before anything is painted. It is the
+// only inline script on the site; keep it to this one job.
+const GROUND_BOOT = `try{var g=localStorage.getItem("vatti-theme");if(g==="light"||g==="dark")document.documentElement.dataset.theme=g}catch(e){}`;
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://vattimalaysia.com"),
   title: {
@@ -34,8 +42,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-MY" className={`${geist.variable} ${geistMono.variable}`}>
+    // suppressHydrationWarning: the boot script below rewrites data-theme on
+    // this element before React sees it. It is scoped to this one tag.
+    <html
+      lang="en-MY"
+      data-theme="dark"
+      suppressHydrationWarning
+      className={`${geist.variable} ${geistMono.variable}`}
+    >
       <body className="min-h-dvh bg-void text-ink antialiased">
+        <script dangerouslySetInnerHTML={{ __html: GROUND_BOOT }} />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[var(--z-toast)] focus:rounded-sm focus:bg-teal focus:px-4 focus:py-2 focus:font-semibold focus:text-void"
