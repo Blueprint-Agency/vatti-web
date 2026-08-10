@@ -214,6 +214,47 @@
   .hero-drift {
     transform: scale(1.08);
   }
+
+  /* The partner wall, running. Each rail holds the same list twice, so at -50%
+     the track has advanced by exactly one copy and the seam lands where the
+     first copy started — no jump, no JS, no measuring.
+
+     That identity only holds while every slot is the same width AND the spacing
+     lives inside the slot. A flex `gap` would put one more gap between the
+     copies than within them, leaving half a gap unaccounted for at the wrap, and
+     the row would twitch once per cycle. Hence padded fixed-width slots.
+
+     translateX percentages resolve against the track's own width, so the slots
+     can change size at a breakpoint without breaking the seam. */
+  .partner-rail {
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 5rem,
+      #000 calc(100% - 5rem),
+      transparent
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 5rem,
+      #000 calc(100% - 5rem),
+      transparent
+    );
+  }
+  .partner-track {
+    animation: partner-marquee 60s linear infinite;
+  }
+  /* Second row against the first. Same keyframes played backwards, so both
+     rails stay in step and only one duration is written down. */
+  .partner-track-reverse {
+    animation-direction: reverse;
+  }
+  /* Stop under the pointer, so a logo someone is reading can be read. */
+  .partner-rail:hover .partner-track {
+    animation-play-state: paused;
+  }
 }
 
 @supports (animation-timeline: view()) {
@@ -223,6 +264,12 @@
       animation-timeline: --hero;
       animation-range: cover 0% cover 100%;
     }
+  }
+}
+
+@keyframes partner-marquee {
+  to {
+    transform: translateX(-50%);
   }
 }
 
@@ -292,5 +339,17 @@
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  /* The reset above freezes each rail at translateX(0), which would strand
+     every partner past the first screenful behind an animation that never
+     runs. Drop the duplicate copy and hand the row back to the scrollbar, so
+     the full list is still reachable without motion. Unlayered, so it wins
+     over the overflow in @layer utilities. */
+  .partner-rail {
+    overflow-x: auto;
+  }
+  .partner-clone {
+    display: none;
   }
 }

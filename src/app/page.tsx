@@ -15,6 +15,7 @@ import {
   getProductCard,
   getRegions,
 } from "@/lib/queries/home";
+import { PARTNER_ROWS } from "@/lib/partners";
 
 /**
  * The three award marks, keyed out of the Elementor section backgrounds on the
@@ -654,6 +655,81 @@ export default function HomePage() {
           >
             Find a dealer
           </Link>
+        </section>
+
+        {/* Our Partners, directly under the dealer network rather than up with
+            the awards: the map counts the network and this shows whose names are
+            over the doors, so the two belong together.
+
+            Two rails running opposite ways, which reads as one moving object
+            rather than as a row that happens to slide. All of it is CSS — a
+            duplicated list and one translate — so there is no carousel library,
+            no autoplay timer and nothing to hydrate for 29 static logos. */}
+        <section aria-labelledby="partners-heading" className="border-t border-line bg-surface">
+          <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
+            <h2
+              id="partners-heading"
+              className="text-3xl font-semibold tracking-[-0.03em] sm:text-4xl"
+            >
+              Our Partners
+            </h2>
+            <p className="mt-5 max-w-[58ch] leading-relaxed text-ink-muted">
+              The kitchen, bath and electrical retailers who stock VATTI and stand behind it after
+              the sale.
+            </p>
+
+            {/* White, and deliberately not --color-paper, for the same reason
+                the category wells are: every mark is opaque artwork on a white
+                plate, several with a black or orange tile of their own baked in.
+                A themed surface would put each logo in a visible box. Third-party
+                artwork is not ours to recolour, so the wall stays white in both
+                themes and the marks stay correct.
+
+                Vertical padding only: the rails have to reach the plate edges so
+                logos leave under the mask fade rather than at a margin. */}
+            <div className="mt-10 flex flex-col gap-6 overflow-hidden rounded-sm bg-white py-8 sm:gap-8 sm:py-10">
+              {PARTNER_ROWS.map((row, i) => (
+                <div key={i} className="partner-rail">
+                  <ul
+                    className={`partner-track flex w-max ${i % 2 ? "partner-track-reverse" : ""}`}
+                  >
+                    {/* The list twice. The second pass is the one that makes the
+                        loop seamless and says nothing new, so it is hidden from
+                        assistive tech and dropped entirely under reduced motion. */}
+                    {[...row, ...row].map((p, j) => {
+                      const clone = j >= row.length;
+                      return (
+                        <li
+                          key={j}
+                          aria-hidden={clone || undefined}
+                          className={`flex w-44 shrink-0 items-center justify-center px-6 sm:w-60 sm:px-8 ${
+                            clone ? "partner-clone" : ""
+                          }`}
+                        >
+                          {/* Capped on both axes, so the slot width sets the size
+                              of a wordmark and the height cap sets the size of a
+                              square. 72px rather than the 56px the awards row
+                              uses: eight of these stack a mark over a name over a
+                              tagline, and at 56px the bottom line of Kah Hoe and
+                              Sin Jin Da closes up into a smudge. Wide marks are
+                              unaffected — the slot clamps them, not the cap. */}
+                          <Image
+                            src={p.src}
+                            alt={p.name}
+                            width={p.width}
+                            height={p.height}
+                            loading="lazy"
+                            sizes="180px"
+                            className="h-auto max-h-14 w-auto max-w-full object-contain sm:max-h-18"
+                          />
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
         </section>
 
       </main>
