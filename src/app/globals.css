@@ -202,6 +202,16 @@
      this site — chips, buttons, card borders, sort headers — goes teal under
      the pointer, and a rail is a control. */
   .rail {
+    /* Not decoration: this is what stops the rails scrolling the whole page
+       sideways. An absolutely positioned descendant is only clipped by an
+       ancestor's overflow if that ancestor is in its containing-block chain,
+       and every card in here holds an .sr-only span — which is position:
+       absolute. With no positioned ancestor inside the rail, those spans took
+       the nearest one outside it, kept their static position 2,600px along the
+       scrolled row, escaped the clip entirely and handed that width to the
+       document. Making the scroller its own containing block clips them with
+       the rest of the card. */
+    position: relative;
     scrollbar-width: thin;
     scrollbar-color: var(--color-line-strong) transparent;
   }

@@ -65,7 +65,14 @@ export function ReviewWall({ reviews, heading }: { reviews: Review[]; heading: s
             />
           </div>
 
-          <div className="relative">
+          {/* min-w-0 is load-bearing. A grid track sized `auto` takes its base
+              size from its items' min-content, and the min-content of a nowrap
+              flex row is the sum of its items — ten 17rem cards, 2,900px. The
+              rail scrolls, so it never needed that width, but the track grew to
+              it anyway and pushed the whole page sideways. The lg template
+              guards the same trap with minmax(0,…); below lg the column is
+              implicit and this is the only place to say it. */}
+          <div className="relative min-w-0">
             {/* Scroll-snap and a real scrollbar underneath, so the rail works
                 by swipe, by trackpad and by keyboard even before the arrows
                 are found. The bar was hidden here at first, on the grounds

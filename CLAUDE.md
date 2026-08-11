@@ -23,7 +23,7 @@ remove it.
 - Every page is statically generated. **Do not set `output: 'export'`** — it disables route
   handlers, and the two form endpoints need them. Plain Next.js on Vercel already emits static HTML
   for every page here.
-- Deployed on Vercel. Media on Cloudflare R2 behind a CDN.
+- Deployed on Vercel. **All** media on Cloudflare R2 behind a CDN — see § Images.
 
 Serverless route handlers exist only for the two forms (`/api/enquiry`, `/api/ewarranty`).
 They send email via Resend. **They never write to SQLite** — the filesystem is read-only at runtime.
@@ -73,11 +73,54 @@ pnpm links:check  # crawls the built output, fails on any 404 or broken internal
 - Specs are an **ordered list of bullets with a nullable key**, not columns. The source site has no
   spec table; only 41 of 332 bullets parse as `Key: Value`. Do not "improve" this into a wide table —
   it would be ~90% NULL. See `product_specs`.
-- Images: every URL in the DB points at the R2 CDN. Use `next/image` with a fixed `loader`.
-  Legacy `i0.wp.com` (Jetpack) and `/wp-content/uploads/` URLs must not survive into the DB.
+- **Images live on R2, never in `public/`.** See § Images — it is a hard rule, not a default.
 - Category pages exist in two parallel URL families (`/kitchen-hood/` and
   `/kitchen-hood-in-malaysia/`). Both stay live. The `-in-malaysia` page is canonical — it carries
   the traffic. See § Duplicate categories in the plan.
+
+## Images
+
+**Every image belongs on R2. `public/` is not for content images.** That covers product hero
+shots, every image on a product page, category and article imagery, store photos, and PDFs. Do
+not put a picture in `public/` because it is quicker — quicker is the whole reason the rule
+exists.
+
+Why: R2 is already the media host the URL contract points at. The `/wp-content/uploads/` prefix
+301s there, 1,228 legacy objects live there, and several PDFs rank on their own. A second home
+for media means two places to look, two cache stories, and image bytes in git.
+
+The route in:
+
+```bash
+# 1. stage the file at the bucket key it should be served under
+cp shot.webp old-media/2026/08/v929-detail-01.webp
+# 2. upload — idempotent, skips anything already there at the same size
+node scripts/media-upload.mjs
+# 3. reference https://<CDN_HOST>/2026/08/v929-detail-01.webp
+```
+
+`old-media/` is gitignored, and a file's path inside it **is** its bucket key. `next.config.ts`
+already allows the CDN host in `images.remotePatterns`, so `next/image` needs nothing new.
+
+- **Product and page images are data, not code.** Their URLs belong in `data/sql/*.sql` and are
+  read from the DB. Never hardcode a product image path in a component.
+- Legacy `i0.wp.com` (Jetpack) and `/wp-content/uploads/` URLs must not survive into the DB.
+  `pnpm db:check` asserts this.
+- Give a changed picture a **new key**. R2 is served with a long max-age and the image optimizer
+  caches by path, so replacing the bytes under an existing key serves the old picture to everyone
+  who has already seen the page.
+- The CDN host is written down twice — `CDN_HOST` in `next.config.ts` and the duplicate in
+  `src/lib/site.ts`. Swap both together at cutover.
+
+**Uploads are blocked on this machine.** `scripts/media-upload.mjs` needs `R2_ACCESS_KEY_ID`,
+`R2_SECRET_ACCESS_KEY`, `R2_BUCKET` and `R2_ENDPOINT`. `.env.local` currently holds only
+`R2_PUBLIC_HOST`, so step 2 fails until the write keys are restored from the Cloudflare dashboard.
+
+**Not yet migrated.** 40 files (2.6 MB) still sit in `public/` and predate this rule:
+`hero-kitchen.png`, `hero-v929-panel.webp`, `signature-v929-scene.webp`, four `showcase-*.webp`,
+three `award-*.png`, `google-mark.svg`, and 29 `partners/*`. Each is referenced by a literal path
+in TSX, so moving them is an upload plus an edit at every call site. Move them when the write keys
+are back. Until then, do not add to them.
 
 ## Gotchas inherited from the source site
 
