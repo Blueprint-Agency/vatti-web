@@ -42,7 +42,7 @@ export default function VattiPayPage() {
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-ink-muted">
               VATTI Pay lets existing dealers settle their invoices online. Accounts are issued by
-              VATTI Malaysia — you cannot register through this website.
+              VATTI Malaysia, and you cannot register through this website.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <a

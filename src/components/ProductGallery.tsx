@@ -15,7 +15,7 @@ export function ProductGallery({ images, name }: { images: ProductImage[]; name:
       <div className="relative aspect-square overflow-hidden rounded-sm border border-line bg-surface">
         <Image
           src={current.url}
-          alt={current.alt || `${name} — view ${active + 1} of ${images.length}`}
+          alt={current.alt || `${name}, view ${active + 1} of ${images.length}`}
           fill
           priority
           sizes="(max-width: 1024px) 100vw, 46vw"

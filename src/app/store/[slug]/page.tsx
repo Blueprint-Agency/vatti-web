@@ -29,11 +29,11 @@ export async function generateMetadata({
 
   const description = `${store.name} is an authorised VATTI dealer in ${store.region}. Address, phone number and directions.`;
   return {
-    title: `${store.name} — Authorised VATTI Dealer`,
+    title: `${store.name} | Authorised VATTI Dealer`,
     description,
     alternates: { canonical: `/store/${store.slug}/` },
     openGraph: {
-      title: `${store.name} — Authorised VATTI Dealer`,
+      title: `${store.name} | Authorised VATTI Dealer`,
       description,
       url: `/store/${store.slug}/`,
       images: store.url ? [{ url: store.url }] : undefined,
@@ -153,8 +153,8 @@ export default async function StorePage({ params }: { params: Promise<{ slug: st
                 Why buy from an authorised dealer
               </h2>
               <p className="mt-3 max-w-[62ch] leading-relaxed text-ink-muted">
-                Units bought outside this network — including VATTI models imported directly from
-                China — are often different specifications entirely, are not ST or SIRIM certified,
+                Units bought outside this network, including VATTI models imported directly from
+                China, are often different specifications entirely, are not ST or SIRIM certified,
                 and cannot be serviced, warranted or supplied with official spare parts by VATTI
                 Malaysia.
               </p>

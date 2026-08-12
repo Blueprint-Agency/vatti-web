@@ -48,7 +48,7 @@ export default function StoreLocationsPage() {
             <p className="mt-3 leading-relaxed text-ink-muted">
               We have identified unauthorised sellers promoting VATTI products inaccurately. Some
               units bought directly from China are <strong className="text-ink">not the same
-              models</strong> as those officially imported — components, specifications and spare
+              models</strong> as those officially imported: components, specifications and spare
               parts differ, and they are not ST or SIRIM certified. Those units cannot be serviced
               by VATTI Malaysia, are not covered by our warranty, and cannot receive official spare
               parts or technical support.

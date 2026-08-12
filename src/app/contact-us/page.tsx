@@ -26,9 +26,9 @@ export default function ContactPage() {
                 Contact Us
               </h1>
               <p className="mt-6 max-w-[54ch] text-lg leading-relaxed text-ink-muted">
-                Tell us your kitchen layout — hob width, ceiling height, whether you cook with a wok
-                daily — and we will point you at the right model and the dealer who stocks it.
-                Replies within 48 hours.
+                Tell us your kitchen layout: hob width, ceiling height, whether you cook with a wok
+                daily. We will point you at the right model and the dealer who stocks it. Replies
+                within 48 hours.
               </p>
               {/* The source page ran a Contact Form 7 widget here. The owner has
                   decided there are no forms on the new site: WhatsApp is the
@@ -102,7 +102,7 @@ export default function ContactPage() {
               </h2>
               <p className="mt-3 max-w-[62ch] text-ink-muted">
                 The flagship showroom is at Atria Shopping Gallery in Petaling Jaya, and 76
-                authorised dealers stock VATTI across Malaysia — including Sabah and Sarawak.
+                authorised dealers stock VATTI across Malaysia, including Sabah and Sarawak.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link

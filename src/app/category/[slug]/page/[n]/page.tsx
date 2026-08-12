@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   if (!archive || !Number.isInteger(page) || page < 2 || page > archive.pages) return {};
 
   return {
-    title: `${archive.name} — Page ${page}`,
+    title: `${archive.name} | Page ${page}`,
     description: `Page ${page} of ${archive.pages}: VATTI Malaysia ${archive.name.toLowerCase()} articles on built-in kitchen appliances.`,
     alternates: { canonical: `/category/${archive.slug}/page/${page}/` },
   };

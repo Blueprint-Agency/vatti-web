@@ -158,7 +158,7 @@ function categoryMetadata(category: Category): Metadata {
     title,
     description:
       category.meta_description ??
-      `Compare every VATTI ${category.name.toLowerCase()} sold in Malaysia — measured specifications, model by model, and the authorised dealers who stock them.`,
+      `Compare every VATTI ${category.name.toLowerCase()} sold in Malaysia: measured specifications, model by model, and the authorised dealers who stock them.`,
     alternates: { canonical: `/${category.slug}/` },
     openGraph: {
       title: category.seo_title ?? `${category.name} in Malaysia`,

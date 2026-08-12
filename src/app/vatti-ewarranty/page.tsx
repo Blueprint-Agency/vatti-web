@@ -109,8 +109,8 @@ export default function EWarrantyPage() {
                 Register your product
               </h2>
               <p className="mt-5 max-w-[52ch] leading-relaxed text-ink-muted">
-                Send us a WhatsApp message within 14 days of purchase with the details opposite —
-                one set per product — and we will register the warranty and confirm it back to you.
+                Send us a WhatsApp message within 14 days of purchase with the details opposite,
+                one set per product, and we will register the warranty and confirm it back to you.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a

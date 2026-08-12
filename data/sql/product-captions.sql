@@ -470,19 +470,19 @@ UPDATE product_image SET caption_md = '### HEAT AUTO CLEAN
 
 17min
 
-01 The first high temperature heating — 3min
+01 The first high temperature heating, 3min
 
-02 Continuous heating to peel off oil stains — 2min
+02 Continuous heating to peel off oil stains, 2min
 
-03 The high speed fan running and throws off oil — 30 second
+03 The high speed fan running and throws off oil, 30 second
 
-04 The second high temperature heating deeply dissolves oil stains — 5min
+04 The second high temperature heating deeply dissolves oil stains, 5min
 
-05 The high speed fan running for deep oil removal — 30 second
+05 The high speed fan running for deep oil removal, 30 second
 
-06 The third high temperature heating dissolves stubborn oil stains — 5min
+06 The third high temperature heating dissolves stubborn oil stains, 5min
 
-07 The high speed fan running for drying inner cabinet — 1min'
+07 The high speed fan running for drying inner cabinet, 1min'
   WHERE product_id = (SELECT id FROM product WHERE slug = 'vatti-slim-series-type-range-hood-v996') AND position = 5;
 -- 2023/11/V996-PG7.jpg
 UPDATE product_image SET caption_md = '### New side & top inlet structure, new art of aesthetics
@@ -1080,7 +1080,7 @@ Hidden in Form · Open in Space · Refined in Living'
 -- 2026/05/V938-PG3.webp
 UPDATE product_image SET caption_md = '### Half Hidden. Fully Refined.
 
-Designed to give space back to living. Not filled—freed.
+Designed to give space back to living. Not filled, freed.
 
 Seamlessly integrated into cabinetry, reducing visual weight above.
 
@@ -1099,7 +1099,7 @@ Smart Gesture Control
 
 Gesture sensing for effortless control. No fingerprints. No distractions.
 
-Switch modes with a simple wave—no need to search for buttons.
+Switch modes with a simple wave, no need to search for buttons.
 
 Gesture Sensing
 Intuitive & Responsive
@@ -1119,14 +1119,14 @@ Smart sensing detects airflow resistance and adjusts extraction automatically.
 
 No smoke overflow. No manual adjustments.
 
-Just effortless cooking—every time.'
+Just effortless cooking, every time.'
   WHERE product_id = (SELECT id FROM product WHERE slug = 'vatti-hidden-series-range-hood-v938') AND position = 6;
 -- 2026/05/V938-PG6.webp
 UPDATE product_image SET caption_md = '### Quiet Moments. Designed for Living.
 
 Engineered with precision components and advanced noise reduction materials.
 
-Noise fades into the background—so you can stay present.
+Noise fades into the background, so you can stay present.
 
 Hear the gentle sizzle. Feel the calm of every moment in the kitchen.
 
@@ -1137,7 +1137,7 @@ UPDATE product_image SET caption_md = 'Smart Sync. Effortless Control.
 
 ### Auto Start. Auto Stop.
 
-Ignition triggers extraction—instantly. Cooking ends, airflow continues.
+Ignition triggers extraction, instantly. Cooking ends, airflow continues.
 
 Clears residual smoke, then powers down automatically.
 
@@ -1148,7 +1148,7 @@ Clears residual smoke, then powers down automatically.
 -- 2026/05/V938-PG14.webp
 UPDATE product_image SET caption_md = '### Smart Control. One Tap Away.
 
-Connected to your smart home ecosystem. Control everything from your phone—simple, seamless, instant.
+Connected to your smart home ecosystem. Control everything from your phone, simple, seamless, instant.
 
 More Functions, Unlocked
 
@@ -1242,9 +1242,9 @@ Engineered for Silent Power.
 
 Precision-built for durability. Stable. Efficient. Long-lasting.
 
-- 3.2 kg Core Weight — Soiid internal build
-- 2000 rpm — High-speed rotation
-- 30,000+ Hours — Tested for endurance
+- 3.2 kg Core Weight: Soiid internal build
+- 2000 rpm: High-speed rotation
+- 30,000+ Hours: Tested for endurance
 
 High Airflow • Strong Pressure • Brushless Inverter Motor'
   WHERE product_id = (SELECT id FROM product WHERE slug = 'vatti-hidden-series-range-hood-v938') AND position = 12;
@@ -1255,7 +1255,7 @@ UPDATE product_image SET caption_md = 'Quiet Air. Healthier Living.
 
 Automatically detects air quality. Adjusts ventilation in real time.
 
-Even on standby, it refreshes your space—continuously.
+Even on standby, it refreshes your space, continuously.
 
 Always clean. Always ready.
 
@@ -1305,7 +1305,7 @@ UPDATE product_image SET caption_md = '### Vertical Capture System. Smoke, Insta
 
 Captures fumes at the source. Locks in grease and smoke instantly.
 
-From high-heat stir-fry to relaxed dining—seamlessly.
+From high-heat stir-fry to relaxed dining, seamlessly.
 
 No lingering fumes. Just clean air.
 
@@ -1347,7 +1347,7 @@ Advanced 5th-generation cleaning system. Cleans not only the fan, but the inner 
 
 Steam dissolves grease. Hot water flushes it away.
 
-Deep, complete cleaning—maintaining powerful suction over time.
+Deep, complete cleaning, maintaining powerful suction over time.
 
 - Full Coverage Cleaning Rate: 99.1%
 - Deep Clean Rate: 99.2%
@@ -1388,21 +1388,21 @@ VATTI Stellar Series Cooker Hood V960
 
 华帝全新品牌代言人 张凌赫
 
-- Ultra-Slim Design — Seamless Flush Installation
-- 3690m³/h — Powerful Suction
-- 1700Pa — High Static Pressure
-- Dual-Chamber Air Capture — Precision Direct Extraction
-- PM2.5 — Air Purification Control
-- Easy Clean Inside & Out — One-Touch Auto Cleaning'
+- Ultra-Slim Design: Seamless Flush Installation
+- 3690m³/h: Powerful Suction
+- 1700Pa: High Static Pressure
+- Dual-Chamber Air Capture: Precision Direct Extraction
+- PM2.5: Air Purification Control
+- Easy Clean Inside & Out: One-Touch Auto Cleaning'
   WHERE product_id = (SELECT id FROM product WHERE slug = 'vatti-stellar-series-cooker-hood-v960') AND position = 3;
 -- 2026/05/V960-PG2.webp
 UPDATE product_image SET caption_md = '### 225mm Slim. Seamless by Design.
 
 Redefining Kitchen Order.
 
-- Ultra-slim 225mm — Space-saving design
-- Opens Without Protrusion — Clean visual line
-- Function Meets Elegance — Cook in comfort, live in style
+- Ultra-slim 225mm: Space-saving design
+- Opens Without Protrusion: Clean visual line
+- Function Meets Elegance: Cook in comfort, live in style
 
 - 225mm
 - 190mm'
@@ -1410,13 +1410,13 @@ Redefining Kitchen Order.
 -- 2026/05/V960-PG3.webp
 UPDATE product_image SET caption_md = '### Smart Motion Display Lights Up As You Approach
 
-As you step into the kitchen, the display awakens like soft night light—gentle, refined, and responsive.
-As you leave, it fades quietly into calm—undisturbed, preserving every moment of cooking.'
+As you step into the kitchen, the display awakens like soft night light, gentle, refined, and responsive.
+As you leave, it fades quietly into calm, undisturbed, preserving every moment of cooking.'
   WHERE product_id = (SELECT id FROM product WHERE slug = 'vatti-stellar-series-cooker-hood-v960') AND position = 5;
 -- 2026/05/V960-PG4.webp
 UPDATE product_image SET caption_md = '### Dual-Chamber for Dual Burners Precision Extraction • Smoke-Free Cooking
 
-Dual chambers with dual exhaust—each burner gets dedicated, precise smoke capture.
+Dual chambers with dual exhaust, each burner gets dedicated, precise smoke capture.
 No escape for fumes. Your kitchen stays fresh from start to finish.
 
 ### Certified Level-1 Smoke Extraction
@@ -1426,31 +1426,31 @@ Proven Core Performance in Clean Air Power'
 -- 2026/05/V960-PG5.webp
 UPDATE product_image SET caption_md = '### 1700Pa High Static Pressure
 
-High-pressure airflow breaks through duct resistance, expelling heavy cooking fumes instantly—even during peak usage.
+High-pressure airflow breaks through duct resistance, expelling heavy cooking fumes instantly, even during peak usage.
 
-- Strong Pressure — Powerful Smoke Extraction
-- Anti-Backflow — No Return of Fumes Even on Lower Floors
-- Breaks Duct Resistance — Smooth Exhaust All the Way
-- Peak Cooking Ready — Clear Air Every Time'
+- Strong Pressure: Powerful Smoke Extraction
+- Anti-Backflow: No Return of Fumes Even on Lower Floors
+- Breaks Duct Resistance: Smooth Exhaust All the Way
+- Peak Cooking Ready: Clear Air Every Time'
   WHERE product_id = (SELECT id FROM product WHERE slug = 'vatti-stellar-series-cooker-hood-v960') AND position = 7;
 -- 2026/05/V960-PG6.webp
 UPDATE product_image SET caption_md = '### POWERFUL AIRFLOW PERFORMANCE
 
 ### 3690 m³/h RAPID EXTRACTION
 
-- Strong Suction — Powerful, worry-free cooking
-- 25.9s Smoke Clearing* — Quickly removes heavy fumes
-- Open Kitchen Friendly — Keeps your home fresh and clean
+- Strong Suction: Powerful, worry-free cooking
+- 25.9s Smoke Clearing*: Quickly removes heavy fumes
+- Open Kitchen Friendly: Keeps your home fresh and clean
 
 Clears heavy cooking fumes in just 25.9 seconds.
-Effortlessly handles stir-fry, high-heat cooking, and open kitchens—keeping your space fresh and smoke-free.
+Effortlessly handles stir-fry, high-heat cooking, and open kitchens, keeping your space fresh and smoke-free.
 
 ### 4-LEVEL AIRFLOW CONTROL
 
-- LEVEL 1 — Gentle simmering & soups
-- LEVEL 2 — Steaming, boiling & light frying
-- LEVEL 3 — Fast stir-fry & braising
-- LEVEL 4 — High-heat wok cooking
+- LEVEL 1: Gentle simmering & soups
+- LEVEL 2: Steaming, boiling & light frying
+- LEVEL 3: Fast stir-fry & braising
+- LEVEL 4: High-heat wok cooking
 
 *Based on a standard 6m² kitchen with 2.3m ceiling height. Actual performance may vary depending on kitchen size and conditions.
 3690 m³/h refers to maximum airflow during high-heat cooking, tested under standard laboratory conditions.'
@@ -1460,18 +1460,18 @@ UPDATE product_image SET caption_md = '### Silence, Engineered. Power You Can Ba
 
 Maintains powerful suction with ultra-quiet operation.
 
-As low as 48dB—enjoy cooking, videos, and conversations without disturbance.
+As low as 48dB, enjoy cooking, videos, and conversations without disturbance.
 
-- Ultra-Quiet Performance — As Low as 48dB
-- Powerful Suction — Worry-free cooking
-- Open Kitchen Friendly — Keeps your home fresh and clean
+- Ultra-Quiet Performance: As Low as 48dB
+- Powerful Suction: Worry-free cooking
+- Open Kitchen Friendly: Keeps your home fresh and clean
 
 AS LOW AS 48dB
 
-- INVERTER DC MOTOR — Active noise reduction operation
-- TOP-MOUNTED AIR CHAMBER — Moves noise further away from ear level
-- V-SHAPE PATENTED VOLUTE — Reduces airflow turbulence noise
-- MICRO-PERFORATED SOUND ABSORPTION — Effectively absorbs fan noise'
+- INVERTER DC MOTOR: Active noise reduction operation
+- TOP-MOUNTED AIR CHAMBER: Moves noise further away from ear level
+- V-SHAPE PATENTED VOLUTE: Reduces airflow turbulence noise
+- MICRO-PERFORATED SOUND ABSORPTION: Effectively absorbs fan noise'
   WHERE product_id = (SELECT id FROM product WHERE slug = 'vatti-stellar-series-cooker-hood-v960') AND position = 9;
 -- 2026/05/V960-PG9.webp
 UPDATE product_image SET caption_md = '### Microwave Radar
@@ -1483,10 +1483,10 @@ Zero-touch control for power on/off and fan speed adjustment.
 
 ### Supports Multiple Gestures
 
-- Forward Palm Wave — Power On / Off
-- Upward Palm Lift — Increase Fan Speed
-- Backhand Upward Motion — Decrease Fan Speed
-- Side Arm Swipe — Pause / Resume'
+- Forward Palm Wave: Power On / Off
+- Upward Palm Lift: Increase Fan Speed
+- Backhand Upward Motion: Decrease Fan Speed
+- Side Arm Swipe: Pause / Resume'
   WHERE product_id = (SELECT id FROM product WHERE slug = 'vatti-stellar-series-cooker-hood-v960') AND position = 10;
 -- 2026/05/V960-PG10.webp
 UPDATE product_image SET caption_md = '### Just a Wave. Control Everything.
@@ -1518,10 +1518,10 @@ Continues extraction for 3 minutes after cooking. Clears the air completely.
 -- 2026/05/V960-PG11.webp
 UPDATE product_image SET caption_md = '### Smooth. Clean. Refined.
 
-- Low Reflection — Easy on the eyes
-- Anti-Fingerprint — Stays pristine
-- Scratch Resistant — Built to last
-- Wipe Clean — Effortless care
+- Low Reflection: Easy on the eyes
+- Anti-Fingerprint: Stays pristine
+- Scratch Resistant: Built to last
+- Wipe Clean: Effortless care
 
 ### AG Glass Panel
 
@@ -1549,9 +1549,9 @@ UPDATE product_image SET caption_md = '### EASY OUTSIDE CLEANING
 Vatti Pulse-Wave Wash Tech.
 Powerful suction. Lasting freshness.
 
-- One-Tap Wash — Deep clean, instantly.
-- High-Pressure Rinse — Breaks down grease.
-- Turbo Dry — Clean. Dry. Ready.
+- One-Tap Wash: Deep clean, instantly.
+- High-Pressure Rinse: Breaks down grease.
+- Turbo Dry: Clean. Dry. Ready.
 
 *Auto wash cycle runs for 60 minutes with the hood closed. "Self-Cleaning" indicator flashes during the cycle and will notify you when complete. Cleaning effectiveness ≥99%.
 Sterilization rate ≥99.9%. (Test Report No.: WTS2025-20453)'
@@ -1582,12 +1582,12 @@ UPDATE product_image SET caption_md = '### PM2.5 Smart Air Management Pure Air i
 
 Built-in high-precision PM2.5 sensor monitors air quality in real time, automatically adjusting to optimal suction performance.
 
-After cooking, intelligent delay extraction continues—keeping even open kitchens fresh and free from lingering fumes.
+After cooking, intelligent delay extraction continues, keeping even open kitchens fresh and free from lingering fumes.
 
-- PM2.5 Real-Time Monitoring — High-Precision Sensor Detects Air Quality
-- Automatic Suction Adjustment — Smartly Adapts to Air Quality for Optimal Performance
-- Intelligent Delay Extraction — Continues Purifying After Cooking Ends
-- Fresh Air, All Around — Open Kitchen Friendly No Lingering Fumes'
+- PM2.5 Real-Time Monitoring: High-Precision Sensor Detects Air Quality
+- Automatic Suction Adjustment: Smartly Adapts to Air Quality for Optimal Performance
+- Intelligent Delay Extraction: Continues Purifying After Cooking Ends
+- Fresh Air, All Around: Open Kitchen Friendly No Lingering Fumes'
   WHERE product_id = (SELECT id FROM product WHERE slug = 'vatti-stellar-series-cooker-hood-v960') AND position = 15;
 
 -- vatti-cooker-hood-v917-carbon-grey — 6 of 9 images carry text
@@ -1636,13 +1636,13 @@ Step upgrade 2-step high-frequency dissolution
 
 17min
 
-- 01 The first high temperature heating — 3min
-- 02 Continuous heating to peel off oil stains — 2min
-- 03 The high speed fan running to throws off oil — 30 second
-- 04 The second high temperature heating deeply dissolved stains — 5min
-- 05 The high speed fan running for deep oil removal — 30 second
-- 06 The third high temperature heating dissolves stubborn oil stains — 5min
-- 07 The high speed fan rotates for drying inner surface — 1min'
+- 01 The first high temperature heating: 3min
+- 02 Continuous heating to peel off oil stains, 2min
+- 03 The high speed fan running to throws off oil, 30 second
+- 04 The second high temperature heating deeply dissolved stains, 5min
+- 05 The high speed fan running for deep oil removal, 30 second
+- 06 The third high temperature heating dissolves stubborn oil stains, 5min
+- 07 The high speed fan rotates for drying inner surface, 1min'
   WHERE product_id = (SELECT id FROM product WHERE slug = 'vatti-cooker-hood-v917-carbon-grey') AND position = 7;
 -- 2026/05/V917-Carbon-Grey-Cooker-Hood-description-6.png
 UPDATE product_image SET caption_md = '### Removable smoke guide plate
@@ -1821,9 +1821,9 @@ Saluran sedutan bawah menyedut dengan lebih pantas dan berkesan.'
 -- 2026/05/V997-Batik-Cabinet-Description-B-5.webp
 UPDATE product_image SET caption_md = '### Pembersihan Auto-Haba
 
-Tingkatkan langkah — Pembersihan berpanjangan selama 17 minit
+Tingkatkan langkah, Pembersihan berpanjangan selama 17 minit
 
-Tingkatkan langkah — Pelarutan frekuensi tinggi 2 langkah
+Tingkatkan langkah, Pelarutan frekuensi tinggi 2 langkah
 
 ### Proses pembersihan selama 17 minit
 
@@ -1910,7 +1910,7 @@ C720S
 UPDATE product_image SET caption_md = 'C821G
 
 - SOLID SQUARE RACK
-- POWERFUL FLAME — 4.5kW
+- POWERFUL FLAME: 4.5kW
 - GRADE 1 ENERGY EFFICIENCY
 
 ### ROTATIONAL POLYTHERMAL FORCE
@@ -2404,9 +2404,9 @@ Long Simmering, No Need to Watch
 
 Precisely controls the ideal cooking time for different dishes. Manage your time efficiently, reduce waiting, and enjoy worry-free cooking.
 
-- 10 min — Get ready and change clothes. Breakfast will be ready to enjoy
-- 60min — Set and relax. Tender, slow-braised meat
-- 180 min — Nutritious slow-cooked soup. Perfectly ready when time is up'
+- 10 min: Get ready and change clothes. Breakfast will be ready to enjoy
+- 60min: Set and relax. Tender, slow-braised meat
+- 180 min: Nutritious slow-cooked soup. Perfectly ready when time is up'
   WHERE product_id = (SELECT id FROM product WHERE slug = 'vatti-flexi-hob-c836g') AND position = 3;
 -- 2025/12/Vatti-cooker-hob-C836G-product-description-5.webp
 UPDATE product_image SET caption_md = '### Smart Temperature Detection
@@ -2502,7 +2502,7 @@ One More Ring Than Dual-Ring
 
 Even Heat Across the Wok • No Burning, Better Taste
 
-Dual-ring burners deliver stronger flames on the inner and outer rings, but leave a heat gap in the center. The added third ring fills this gap, expanding the combustion area, balancing heat distribution, and eliminating undercooked spots, Fast searing, even doneness, no charring — Healthier cooking with consistent results.
+Dual-ring burners deliver stronger flames on the inner and outer rings, but leave a heat gap in the center. The added third ring fills this gap, expanding the combustion area, balancing heat distribution, and eliminating undercooked spots, Fast searing, even doneness, no charring, Healthier cooking with consistent results.
 
 ### Inner Ring – Concentrated Heat
 
@@ -2523,13 +2523,13 @@ Greater flame coverage for large cookware
 
 Healthy Dishes with Real Wok Hei
 
-- Triple-Ring Intense Flame — More even flame distribution
-- Ordinary 3D Flame — Overlapping flames'
+- Triple-Ring Intense Flame: More even flame distribution
+- Ordinary 3D Flame: Overlapping flames'
   WHERE product_id = (SELECT id FROM product WHERE slug = 'vatti-flexi-hob-c836g') AND position = 7;
 -- 2025/12/Vatti-cooker-hob-C836G-product-description-13.webp
 UPDATE product_image SET caption_md = '### Master the Flame, Master the Flavor
 
-It embodies the art of precise flame control — gentle and steady for slow simmering, powerful and responsive for high-heat stir-frying.
+It embodies the art of precise flame control, gentle and steady for slow simmering, powerful and responsive for high-heat stir-frying.
 
 Every turn of the control knob is a precise calculation of heat and timing, activating food molecules at it their best, turning every cooking moment into something worth anticipating.'
   WHERE product_id = (SELECT id FROM product WHERE slug = 'vatti-flexi-hob-c836g') AND position = 8;
@@ -2538,7 +2538,7 @@ UPDATE product_image SET caption_md = '### Nano Anti-Stain Glass Surface
 
 No Oil Marks · No Water Stains
 
-Vatti applies a nano-polymer water-and oil-repellent coating that effectively reduces grease adhesion and fingerprint residue. Scratch-resistant and wear-resistant for daily use — one wipe restores a like-new finish.
+Vatti applies a nano-polymer water-and oil-repellent coating that effectively reduces grease adhesion and fingerprint residue. Scratch-resistant and wear-resistant for daily use, one wipe restores a like-new finish.
 
 - Easy to Clean
 - Anti-Fingerprint
@@ -2548,16 +2548,16 @@ Vatti applies a nano-polymer water-and oil-repellent coating that effectively re
 
 ### Oil & Water Repellency Test
 
-Without Coating — Oil droplets spread and stick to the surface
+Without Coating, Oil droplets spread and stick to the surface
 
-Nano Oil-Repellent Coating — Oil forms beads and slides off easily'
+Nano Oil-Repellent Coating, Oil forms beads and slides off easily'
   WHERE product_id = (SELECT id FROM product WHERE slug = 'vatti-flexi-hob-c836g') AND position = 9;
 -- 2025/12/Vatti-cooker-hob-C836G-product-description-4.webp
 UPDATE product_image SET caption_md = '### No Modification Required · Install with Ease
 
 Fits Multiple Cut-Out Sizes
 
-Adjustable base design accommodates a wider range of cut-out dimensions. Easy replacement without re-cutting the countertop — simple, hassle-free installation.
+Adjustable base design accommodates a wider range of cut-out dimensions. Easy replacement without re-cutting the countertop, simple, hassle-free installation.
 
 - 650 – 700mm
 - 350 – 400mm
@@ -2577,11 +2577,11 @@ UPDATE product_image SET caption_md = '### AI Hood–Hob Linkage
 
 Automatic Smoke Extraction When Cooking Starts
 
-When the hob ignites, the cooker hood activates automatically — powerfully extracting smoke with no lingering odors.
+When the hob ignites, the cooker hood activates automatically, powerfully extracting smoke with no lingering odors.
 
-Low Flame — Lower Suction Power
+Low Flame, Lower Suction Power
 
-High Flame — Stronger Suction Power
+High Flame, Stronger Suction Power
 
 - This function requires pairing with a compatible Vatti cooker hood to enable hood–hob linkage.
 - When the hob is ignited, the hood automatically activates "Smart Sensing Mode" for intelligent smoke extraction.'
@@ -2624,9 +2624,9 @@ Ingredients are seared fast, locking in nutrition while unleashing rich, bold wo
 -- 2025/12/Vatti-cooker-hob-C836G-product-description-12.webp
 UPDATE product_image SET caption_md = '### Master-Level 5-Step Precision Flame Control
 
-"Click" — Perfect Heat, Instantly
+"Click", Perfect Heat, Instantly
 
-5-step mechanical precision control delivers real tactile feedback. Accurate flame levels for gentle simmering or powerful stir-frying. No more vague, stepless adjustment — effortlessly master aroma, texture, and flavor in every dish.
+5-step mechanical precision control delivers real tactile feedback. Accurate flame levels for gentle simmering or powerful stir-frying. No more vague, stepless adjustment, effortlessly master aroma, texture, and flavor in every dish.
 
 ### Level 1 Gentle Simmer
 
@@ -2648,9 +2648,9 @@ High heat locks in aroma
 
 Precise Heat Control for Every Texture
 
-- Level 1 Medium Rare Seared Steak — Juicy, tender, and delicate texture
-- Level 3 Medium Seared Steak — Balanced texture, rich layers
-- Level 5 Medium Well Seared Steak — Firm texture with satisfying bite'
+- Level 1 Medium Rare Seared Steak: Juicy, tender, and delicate texture
+- Level 3 Medium Seared Steak: Balanced texture, rich layers
+- Level 5 Medium Well Seared Steak: Firm texture with satisfying bite'
   WHERE product_id = (SELECT id FROM product WHERE slug = 'vatti-flexi-hob-c836g') AND position = 14;
 
 -- vatti-3-burner-gas-hob-c830g — 7 of 9 images carry text
@@ -3145,11 +3145,11 @@ MEDIUM HUMIDITY TENDER'
 -- 2023/11/Built-in-Combi-Oven-VA03-10-1.webp
 UPDATE product_image SET caption_md = '### PARAMETERS ACCORDING TO THE COMPONENT
 
-1 egg — STEAM EGG / °C / times: SOFT 70 8min; MEDIUM 110 3min; HARD 110 9 min
+1 egg, STEAM EGG / °C / times: SOFT 70 8min; MEDIUM 110 3min; HARD 110 9 min
 
-3 egg — STEAM EGG / °C / times: SOFT 70 13min; MEDIUM 110 3min; HARD 110 11min
+3 egg, STEAM EGG / °C / times: SOFT 70 13min; MEDIUM 110 3min; HARD 110 11min
 
-5 egg — STEAM EGG / °C / times: SOFT 70 15min; MEDIUM 110 3min; HARD 110 15 min
+5 egg, STEAM EGG / °C / times: SOFT 70 15min; MEDIUM 110 3min; HARD 110 15 min
 
 ### VATTI INTELLIGENT MULTI STEP COOKING
 
@@ -3780,10 +3780,10 @@ UPDATE product_image SET caption_md = '### 600G big capacity Enjoy a glass of wa
 -- 2025/01/One-Tap-water-purifier-WDHG01-Image-info-4.png
 UPDATE product_image SET caption_md = '### Patented 4 layer precision filtration
 
-- 1st level filtering — PP Cotton Filter element
-- 2nd level filtering — Pre Activated Carbon
-- 3rd level filtering — RO Reverse Osmosis membrane
-- 4th level filtering — Post Activated Carbon'
+- 1st level filtering: PP Cotton Filter element
+- 2nd level filtering: Pre Activated Carbon
+- 3rd level filtering: RO Reverse Osmosis membrane
+- 4th level filtering: Post Activated Carbon'
   WHERE product_id = (SELECT id FROM product WHERE slug = 'vatti-one-tap-water-purifier-wdhg01-with-v818wd') AND position = 7;
 -- 2025/01/One-Tap-water-purifier-WDHG01-Image-info-5.png
 UPDATE product_image SET caption_md = '### RO membrane filter
@@ -3803,10 +3803,10 @@ UPDATE product_image SET caption_md = '### Multi level water temperature
 Convenience and efficiency in enhancing daily hydration'
   WHERE product_id = (SELECT id FROM product WHERE slug = 'vatti-one-tap-water-purifier-wdhg01-with-v818wd') AND position = 10;
 -- 2025/01/One-Tap-water-purifier-WDHG01-Image-info-8.png
-UPDATE product_image SET caption_md = '- 1st Mode — 100℃ Brewing tea
-- 2nd Mode — 85℃ Brewing Coffee
-- 3rd Mode — 45℃ Make Milk
-- 4th Mode — Room Temperature'
+UPDATE product_image SET caption_md = '- 1st Mode, 100℃ Brewing tea
+- 2nd Mode: 85℃ Brewing Coffee
+- 3rd Mode: 45℃ Make Milk
+- 4th Mode: Room Temperature'
   WHERE product_id = (SELECT id FROM product WHERE slug = 'vatti-one-tap-water-purifier-wdhg01-with-v818wd') AND position = 11;
 -- 2025/01/One-Tap-water-purifier-WDHG01-Image-info-9.png
 UPDATE product_image SET caption_md = '### Intelligent digital display

@@ -33,7 +33,7 @@ const GROUND_BOOT = `try{var g=localStorage.getItem("vatti-theme");if(g==="light
 export const metadata: Metadata = {
   metadataBase: new URL("https://vattimalaysia.com"),
   title: {
-    default: "VATTI Malaysia — Kitchen Hoods, Hobs & Built-in Ovens",
+    default: "VATTI Malaysia | Kitchen Hoods, Hobs & Built-in Ovens",
     template: "%s | VATTI Malaysia",
   },
   description:
