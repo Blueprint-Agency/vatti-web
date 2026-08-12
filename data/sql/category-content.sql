@@ -51,6 +51,31 @@ UPDATE product_category SET signature_product_id =
   (SELECT id FROM product WHERE slug = 'vatti-one-tap-water-purifier-wdhg01-with-v818wd')
   WHERE slug = 'one-tap-purifier-in-malaysia';
 
+-- ── the decorative backdrops ───────────────────────────────────────────────
+-- The hero and the band that asks about the visitor's kitchen both now stand
+-- on a photograph of one, knocked back far enough to read as a ground rather
+-- than a picture. Hoods only: there is a hood in both frames, and putting
+-- either behind the dishwasher page would be showing the wrong product while
+-- talking about another.
+UPDATE product_category SET
+  hero_image_url =
+    'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/kitchen-hood-hero-backdrop.jpg',
+  finder_image_url =
+    'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/kitchen-hood-finder-backdrop.jpg'
+  WHERE slug = 'kitchen-hood-in-malaysia';
+
+-- ── the product beside the hero headline ───────────────────────────────────
+-- A cut-out on transparency, not a scene, so it is set over the backdrop with
+-- no frame and no crop. The supplied file carried ~9% empty margin on every
+-- side; it is staged trimmed to its own alpha bounds, which is what lets the
+-- top of the hood sit against the header instead of floating below it.
+UPDATE product_category SET
+  hero_product_image_url =
+    'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/v996-hero-cutout.webp',
+  hero_product_image_alt =
+    'A VATTI V996 cooker hood in black glass, its angled canopy open over the grease filters and the control strip lit.'
+  WHERE slug = 'kitchen-hood-in-malaysia';
+
 -- The signature block prints the model's own intro, and 38 of 39 products have
 -- none — the scrape found intro copy on the V938 alone. Written here rather
 -- than in products.sql because that file is generated; same arrangement as

@@ -34,7 +34,27 @@ CREATE TABLE product_category (
   -- "first by sort_order" picks the oldest hood, not the one worth showing.
   -- Set in category-content.sql, which runs after products.sql — the FK is
   -- resolved at UPDATE time, not at CREATE TABLE time.
-  signature_product_id INTEGER REFERENCES product(id)
+  signature_product_id INTEGER REFERENCES product(id),
+  -- Decorative backdrops: one behind the hero, one behind the "tell us about
+  -- your kitchen" band. Plain URLs rather than FKs into `image`: nothing reads
+  -- their alt (they are backgrounds, so they ship alt=""), nothing reads their
+  -- intrinsic size, and every id in `image` is handed out by the generated
+  -- products.sql — a hand-authored row in there would be squatting on a number
+  -- the next scrape wants back. NULL means that band renders flat, which is
+  -- what four of the five categories do.
+  --
+  -- Two columns rather than one category_image(slot, url): the same call the
+  -- category content blocks made a few tables down. Two slots is not a
+  -- taxonomy, and a slot column buys nothing but a join.
+  hero_image_url   TEXT,
+  finder_image_url TEXT,
+  -- The product shot beside the hero headline. Not decorative — it is the
+  -- picture the page is about, so it carries real alt text. Lived in a
+  -- CATEGORY_SCENE record inside CategoryView until it moved here; the record
+  -- held exactly one entry and a hardcoded public/ path, which the images rule
+  -- in CLAUDE.md does not allow for anything new.
+  hero_product_image_url TEXT,
+  hero_product_image_alt TEXT
 );
 
 CREATE TABLE product (

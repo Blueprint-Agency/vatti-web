@@ -10,6 +10,12 @@ export type Category = {
   meta_description: string | null;
   intro_md: string | null;
   signature_product_id: number | null;
+  /** Decorative backdrops for the hero and the questionnaire band. Usually null. */
+  hero_image_url: string | null;
+  finder_image_url: string | null;
+  /** The product shot beside the hero headline. Carries real alt text. */
+  hero_product_image_url: string | null;
+  hero_product_image_alt: string | null;
 };
 
 export type CategoryProduct = {
@@ -88,7 +94,9 @@ export function categorySlugs(): string[] {
 
 export function getCategory(slug: string): Category | undefined {
   return get<Category>(
-    `SELECT id, slug, name, h1, seo_title, meta_description, intro_md, signature_product_id
+    `SELECT id, slug, name, h1, seo_title, meta_description, intro_md, signature_product_id,
+            hero_image_url, finder_image_url,
+            hero_product_image_url, hero_product_image_alt
        FROM product_category WHERE slug = ?`,
     slug
   );

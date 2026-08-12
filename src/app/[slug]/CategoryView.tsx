@@ -3,7 +3,6 @@ import { Funnel } from "@phosphor-icons/react/dist/ssr/Funnel";
 import { HandWaving } from "@phosphor-icons/react/dist/ssr/HandWaving";
 import { Lightning } from "@phosphor-icons/react/dist/ssr/Lightning";
 import { ShieldCheck } from "@phosphor-icons/react/dist/ssr/ShieldCheck";
-import { SpeakerSimpleLow } from "@phosphor-icons/react/dist/ssr/SpeakerSimpleLow";
 import { Sparkle } from "@phosphor-icons/react/dist/ssr/Sparkle";
 import { Thermometer } from "@phosphor-icons/react/dist/ssr/Thermometer";
 import { WifiHigh } from "@phosphor-icons/react/dist/ssr/WifiHigh";
@@ -11,6 +10,7 @@ import { Wind } from "@phosphor-icons/react/dist/ssr/Wind";
 import { Drop } from "@phosphor-icons/react/dist/ssr/Drop";
 import Image from "next/image";
 import Link from "next/link";
+import type { ReactNode } from "react";
 
 import { CompareSelector } from "@/components/CompareSelector";
 import { CompareTable } from "@/components/CompareTable";
@@ -20,6 +20,7 @@ import { Reveal } from "@/components/Reveal";
 import { ReviewWall } from "@/components/ReviewWall";
 import { SignatureBand } from "@/components/SignatureBand";
 import { SiteHeader } from "@/components/SiteHeader";
+import { SoundLevelMark } from "@/components/SoundLevelMark";
 import { Inline } from "@/lib/markdown";
 import type {
   Category,
@@ -82,7 +83,7 @@ export function CategoryView({
   const noun = category.name.toLowerCase();
   const figures = guides.filter((g) => g.figure);
   const prose = guides.filter((g) => !g.figure);
-  const scene = CATEGORY_SCENE[category.slug];
+  const scene = category.hero_product_image_url;
 
   return (
     <>
@@ -93,69 +94,113 @@ export function CategoryView({
             and single-column where there is not: a hero built around a cut-out
             on a white plate is the same picture the grid repeats sixteen times
             two screens further down. */}
-        <section className="mx-auto max-w-6xl px-5 pb-12 pt-8 sm:px-8 sm:pb-16 sm:pt-12">
-          <nav aria-label="Breadcrumb" className="mb-8 text-sm">
-            <ol className="flex flex-wrap items-center gap-2 text-ink-muted">
-              <li>
-                <Link href="/" className="transition-colors hover:text-ink">
-                  Home
-                </Link>
-              </li>
-              <li aria-hidden="true">/</li>
-              <li className="text-ink">{category.name}</li>
-            </ol>
-          </nav>
+        <section className="hero-scene relative isolate">
+          {/* Full bleed, which is why the width constraint sits on the div
+              below rather than on the section: a banner backdrop stopping at
+              the 6xl gutter reads as a floating panel, not as the ground the
+              hero stands on. Same treatment as the questionnaire band — half
+              transparent, then a wash of --void that carries the contrast in
+              both themes.
 
-          <div
-            className={
-              scene
-                ? "grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-16"
-                : ""
-            }
-          >
-            <div>
-              <h1 className="max-w-[18ch] text-balance text-[clamp(2rem,1.2rem+3.2vw,3.75rem)] font-semibold leading-[1.03] tracking-[-0.04em]">
-                {category.h1 ?? `${category.name} in Malaysia`}
-              </h1>
+              The frame carries the overflow clip and the drift element carries
+              the movement, the same division the home page hero makes: .hero-
+              drift is scaled 1.08 so it has somewhere to travel, and without a
+              clip here that overscan shows past the section edge. The clip goes
+              on this frame rather than on the section because an overflow-
+              hidden ancestor silently stops any sticky below it.
 
-              {category.intro_md && (
-                <p className="mt-6 max-w-[54ch] text-[1.0625rem] leading-relaxed text-ink-muted">
-                  {category.intro_md}
-                </p>
-              )}
-
-              <div className="mt-9 flex flex-wrap gap-3">
-                <a
-                  href={WHATSAPP}
-                  className="rounded-sm bg-teal px-6 py-3 font-semibold text-void transition-opacity hover:opacity-90"
-                >
-                  WhatsApp us
-                </a>
-                {/* Only where there is a range to see. One model does not
-                    need an anchor down to a grid holding it. */}
-                {products.length > 1 && (
-                  <a
-                    href="#models"
-                    className="rounded-sm border border-line-strong px-6 py-3 font-medium text-ink transition-colors hover:border-teal hover:text-teal"
-                  >
-                    See all {products.length} models
-                  </a>
-                )}
-              </div>
-            </div>
-
-            {scene && (
-              <div className="relative aspect-[4/3] overflow-hidden rounded-sm border border-line">
+              The wash sits outside the drift on purpose. It is a contrast
+              floor, not scenery — if it moved with the photograph the type
+              would drift in and out of its own knock-down. */}
+          {category.hero_image_url && (
+            <div aria-hidden className="absolute inset-0 -z-10 overflow-hidden">
+              <div className="category-hero-drift absolute inset-0">
                 <Image
-                  src={scene.src}
-                  alt={scene.alt}
+                  src={category.hero_image_url}
+                  alt=""
                   fill
                   priority
-                  sizes="(max-width: 1024px) 100vw, 560px"
-                  className="object-cover"
+                  sizes="100vw"
+                  className="object-cover opacity-50"
                 />
               </div>
-            )}
+              <div className="absolute inset-0 bg-void/45" />
+            </div>
+          )}
+
+          <div className="relative mx-auto max-w-6xl px-5 pb-12 pt-8 sm:px-8 sm:pb-16 sm:pt-12">
+            <nav aria-label="Breadcrumb" className="mb-8 text-sm">
+              <ol className="flex flex-wrap items-center gap-2 text-ink-muted">
+                <li>
+                  <Link href="/" className="transition-colors hover:text-ink">
+                    Home
+                  </Link>
+                </li>
+                <li aria-hidden="true">/</li>
+                <li className="text-ink">{category.name}</li>
+              </ol>
+            </nav>
+
+            <div
+              className={
+                scene
+                  ? "grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-16"
+                  : ""
+              }
+            >
+              <div>
+                <h1 className="max-w-[18ch] text-balance text-[clamp(2rem,1.2rem+3.2vw,3.75rem)] font-semibold leading-[1.03] tracking-[-0.04em]">
+                  {category.h1 ?? `${category.name} in Malaysia`}
+                </h1>
+
+                {category.intro_md && (
+                  <p className="mt-6 max-w-[54ch] text-[1.0625rem] leading-relaxed text-ink-muted">
+                    {category.intro_md}
+                  </p>
+                )}
+
+                <div className="mt-9 flex flex-wrap gap-3">
+                  <a
+                    href={WHATSAPP}
+                    className="rounded-sm bg-teal px-6 py-3 font-semibold text-void transition-opacity hover:opacity-90"
+                  >
+                    WhatsApp us
+                  </a>
+                  {/* Only where there is a range to see. One model does not
+                      need an anchor down to a grid holding it. */}
+                  {products.length > 1 && (
+                    <a
+                      href="#models"
+                      className="rounded-sm border border-line-strong px-6 py-3 font-medium text-ink transition-colors hover:border-teal hover:text-teal"
+                    >
+                      See all {products.length} models
+                    </a>
+                  )}
+                </div>
+              </div>
+
+              {/* A cut-out on transparency, so no frame, no plate and no
+                  crop — object-contain, because cropping a product shot is
+                  cropping the thing the page is selling. Above lg it leaves
+                  the grid and pins to the top of the section, which puts the
+                  hood against the header rather than floating below it with
+                  the copy; the file is staged trimmed to its alpha bounds so
+                  object-top lands on the metal and not on empty pixels. The
+                  column it vacates is the one the copy is already sitting
+                  beside, so the grid still reserves the space. */}
+              {scene && (
+                <div className="relative aspect-square lg:absolute lg:inset-y-0 lg:right-8 lg:aspect-auto lg:w-[calc(50%-3rem)]">
+                  <Image
+                    src={scene}
+                    alt={category.hero_product_image_alt ?? ""}
+                    fill
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 560px"
+                    className="object-contain object-top"
+                  />
+                </div>
+              )}
+            </div>
           </div>
         </section>
 
@@ -311,8 +356,40 @@ export function CategoryView({
         {products.length > 2 && (
           <section
             aria-labelledby="finder-heading"
-            className="border-t border-line bg-surface"
+            // No overflow-hidden here, however much the absolute backdrop below
+            // looks like it wants one. The readout panel inside EnquiryBuilder
+            // is lg:sticky, and an ancestor that hides overflow becomes its
+            // scroll container — the panel would then stick to a box that never
+            // scrolls and sit dead while the questions move past it. Nothing
+            // escapes anyway: `fill` is inset to this box and object-cover
+            // clips at the element. `isolate` stays, so the -z-10 backdrop
+            // lands behind this section rather than behind the page.
+            className="relative isolate border-t border-line bg-surface"
           >
+            {/* The kitchen the questions are about, standing behind them. Half
+                transparent as asked, and then a wash of --void over that, which
+                is doing the real work: the photograph is a bright white kitchen,
+                so at 50% alone it lifts the dark ground to mid-grey and takes
+                --ink-muted — every helper line and every chip label in the left
+                column — with it. The wash puts the ground back where the tokens
+                were checked, and because --void flips with the theme it darkens
+                the plate in the dark ground and lightens it in the light one
+                off a single rule. Re-measure per DESIGN.md § Verification if
+                the percentage moves. Decorative, so alt="" — the heading
+                underneath already says what the section is. */}
+            {category.finder_image_url && (
+              <div aria-hidden className="absolute inset-0 -z-10">
+                <Image
+                  src={category.finder_image_url}
+                  alt=""
+                  fill
+                  sizes="100vw"
+                  className="object-cover opacity-50"
+                />
+                <div className="absolute inset-0 bg-void/45" />
+              </div>
+            )}
+
             <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
               <div className="max-w-[52ch]">
                 <h2
@@ -388,60 +465,49 @@ export function CategoryView({
           </section>
         )}
 
-        {/* Why this brand. Six claims, three of them with the measured value
-            that backs them; the three without deliberately show no figure
-            rather than a number written to fill the slot. */}
+        {/* Why this brand. Six claims, each carried by its title and its copy
+            alone. The measured figures that used to close three of these six
+            cells are gone from the page but not from category_reason: the same
+            numbers are printed by the summary band at the top of this page and
+            again in the comparison table, so a third appearance here was the
+            page repeating itself rather than evidencing itself. */}
         {reasons.length > 0 && (
           <section aria-labelledby="reasons-heading" className="border-y border-line bg-surface">
             <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
               <h2
                 id="reasons-heading"
-                className="max-w-[20ch] text-3xl font-semibold tracking-[-0.03em] sm:text-4xl"
+                className="mx-auto max-w-[24ch] text-center text-3xl font-semibold tracking-[-0.03em] sm:text-4xl"
               >
                 {reasons.length} reasons to buy a VATTI {noun}
               </h2>
 
-              {/* The figure sits at the FOOT of each cell, not the head. Three
-                  of these six have no measured value behind them, and leading
-                  with a number means the three that cannot reserve a blank line
-                  where one would go. Anchored to the bottom, a cell without a
-                  figure simply ends, and the ones with a figure still line up
-                  with each other because the grid height-matches the row. */}
               <dl className="mt-12 grid gap-px bg-line sm:grid-cols-2 lg:grid-cols-3">
                 {reasons.map((r) => {
                   const Icon = r.icon ? REASON_ICONS[r.icon] : undefined;
                   return (
-                  <div key={r.title} className="flex flex-col bg-surface p-6 sm:p-7">
+                  <div key={r.title} className="reason-cell flex flex-col bg-surface p-6 sm:p-7">
                     {/* Light weight and ink-muted, deliberately. Teal on this
-                        site means "measured value" — spending it on eleven
-                        decorative marks would cost the figures at the foot of
-                        these cells the thing that makes them read as readouts.
-                        The mark is here to give the eye somewhere to land, not
-                        to compete with the number. */}
+                        site means "measured value", and a mark is not one.
+                        It is here to give the eye somewhere to land and to
+                        state the claim a second way — once in the glyph, once
+                        in how it moves. See REASON_MOTION. */}
                     {Icon && (
                       <Icon
                         size={26}
                         weight="light"
                         aria-hidden="true"
-                        className="mb-5 shrink-0 text-ink-muted"
+                        className={[
+                          "mb-5 shrink-0 text-ink-muted",
+                          r.icon ? REASON_MOTION[r.icon] : undefined,
+                        ]
+                          .filter(Boolean)
+                          .join(" ")}
                       />
                     )}
                     <dt className="font-semibold leading-snug">{r.title}</dt>
-                    {/* mb-6 here rather than mt-6 on the figure below: in a
-                        flex column the figure carries mt-auto to sit on the
-                        bottom edge, and auto would otherwise collapse to zero
-                        in the cells whose copy fills the height. */}
-                    <dd className="mb-6 mt-3 text-[0.9375rem] leading-relaxed text-ink-muted">
+                    <dd className="mt-3 text-[0.9375rem] leading-relaxed text-ink-muted">
                       <Inline text={r.body_md} />
                     </dd>
-                    {r.figure && (
-                      <dd className="mt-auto flex items-baseline gap-1.5 border-t border-line pt-5">
-                        <span className="readout text-3xl font-semibold leading-none text-teal">
-                          {r.figure}
-                        </span>
-                        <span className="readout text-sm text-ink-muted">{r.figure_unit}</span>
-                      </dd>
-                    )}
                   </div>
                   );
                 })}
@@ -657,11 +723,23 @@ function openingThree(products: CategoryProduct[], signatureSlug?: string): stri
  * its barrel: these are decorative marks on a statically generated page, and
  * the client build of this library carries a React context for size and weight
  * that would make the whole reasons grid a Client Component to draw six SVGs.
+ *
+ * `noise` is the one entry Phosphor does not supply. Its speaker family stops
+ * at two waves and the claim needs four falling to one, so it is drawn here —
+ * see SoundLevelMark, which is built out of Phosphor's own geometry to sit
+ * level with the ten around it.
  */
-const REASON_ICONS: Record<string, typeof Wind> = {
+type ReasonMark = (props: {
+  size?: number;
+  weight?: "light";
+  className?: string;
+  "aria-hidden"?: boolean | "true";
+}) => ReactNode;
+
+const REASON_ICONS: Record<string, ReasonMark> = {
   airflow: Wind,
   filtration: Funnel,
-  noise: SpeakerSimpleLow,
+  noise: SoundLevelMark,
   motor: Fan,
   clean: Sparkle,
   controls: HandWaving,
@@ -672,6 +750,31 @@ const REASON_ICONS: Record<string, typeof Wind> = {
   heat: Thermometer,
 };
 
+/**
+ * How each mark moves, keyed by the same subject REASON_ICONS is keyed by.
+ *
+ * The motion is a second reading of the claim, not decoration: the motor
+ * turns, the hand waves, the sparkle catches, air gusts past, sound pulses,
+ * and what the filter catches settles through it. Nothing here should be
+ * given a motion that merely looks lively — a mark with no honest way to move
+ * is better still, which is why the five subjects no page renders today are
+ * absent rather than assigned something plausible.
+ *
+ * The keyframes are in globals.css. They are deliberately not Tailwind
+ * utilities: six bespoke curves are CSS, and arbitrary-value animation classes
+ * would put the timing somewhere Tailwind has to be read to find.
+ */
+const REASON_MOTION: Record<string, string> = {
+  airflow: "reason-gust",
+  filtration: "reason-sift",
+  // `noise` is absent on purpose. Its motion is a countdown across four
+  // separate waves, so it lives on the paths inside SoundLevelMark; a class on
+  // the <svg> could only move the mark as a whole.
+  motor: "reason-spin",
+  clean: "reason-twinkle",
+  controls: "reason-wave",
+};
+
 /** Written out rather than interpolated: Tailwind scans source for literals. */
 const SUMMARY_COLUMNS: Record<number, string> = {
   2: "grid-cols-2",
@@ -679,21 +782,17 @@ const SUMMARY_COLUMNS: Record<number, string> = {
   4: "grid-cols-2 md:grid-cols-4",
 };
 
-const CATEGORY_SCENE: Record<string, { src: string; alt: string }> = {
-  "kitchen-hood-in-malaysia": {
-    src: "/hero-v929-panel.webp",
-    alt: "A VATTI V929 cooker hood mounted over a hob in a fitted kitchen, its control panel lit.",
-  },
-};
-
 /**
  * The photograph the signature band is built on, where one exists.
  *
- * Separate from CATEGORY_SCENE above because the two do different jobs: that
- * one is a product shot beside the headline, this one is a full-bleed plate
- * that copy is set over, and it has to be a wide frame with somewhere quiet
- * for the type to sit. A category with no entry falls back to the catalogue
- * cut-out layout inside SignatureBand.
+ * The hero's own product shot used to sit beside this in a CATEGORY_SCENE
+ * record; it now comes off product_category.hero_product_image_url, where the
+ * images rule says a content picture belongs. This one is still a literal
+ * because its file is part of the unmigrated public/ set — move it the same
+ * way when those go to R2.
+ *
+ * A category with no entry falls back to the catalogue cut-out layout inside
+ * SignatureBand.
  *
  * Supplied by the client. Give this a NEW filename whenever the shot changes:
  * public/ is served with a long max-age under a hash-less URL and the image

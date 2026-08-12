@@ -255,16 +255,73 @@
     color: var(--color-ink);
   }
 
-  /* Parallax drift for the pinned hero backdrop. Scroll-driven CSS, so it
-     never touches the main thread and there is no scroll listener to leak.
-     Unsupported browsers simply get the still image — the sticky stage
-     already carries the depth. */
+  /* The reason grid's hairlines are not borders. `gap-px bg-line` paints one
+     background behind the cells and lets it show through 1px gaps, so the line
+     between two cards belongs to neither of them. That is why the glow is a
+     ring laid INTO the gap — inset by -1px, so it covers the hairline itself
+     rather than sitting inside the card next to it.
+
+     Hover has to raise the cell. The ring overflows into the gap on all four
+     sides, and grid items paint in DOM order, so without this the next card's
+     opaque background paints straight over the half of the ring on its side
+     and the glow appears on two edges instead of four. */
+  .reason-cell {
+    position: relative;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .reason-cell::after {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      pointer-events: none;
+      box-shadow:
+        0 0 0 1px var(--color-teal),
+        0 0 18px -4px var(--color-teal);
+      opacity: 0;
+      transition: opacity 240ms var(--ease-out-quart);
+    }
+    .reason-cell:hover {
+      z-index: 1;
+    }
+    .reason-cell:hover::after {
+      opacity: 0.6;
+    }
+  }
+
+  /* Parallax drift for a hero backdrop. Scroll-driven CSS, so it never touches
+     the main thread and there is no scroll listener to leak. Unsupported
+     browsers simply get the still image.
+
+     One timeline, two drifts, and they are not interchangeable. On the home
+     page the drift is the smaller half of the effect: it rides a 100dvh sticky
+     stage that holds the backdrop still through a whole page of scroll, so
+     3.5% is a finishing touch on depth that is already there. The category
+     hero has no sticky and is only as tall as its own copy, so the same 3.5%
+     buys about 28px of travel — real, and invisible. There the drift is the
+     entire effect and is scaled to match.
+
+     Both sections sit at the top of their page, so both start life around the
+     middle of the range rather than at its start; the movement a reader sees
+     is the second half. That is why the travel is budgeted for one direction,
+     not two.
+
+     Whichever drifts, the scaled element MUST have an ancestor clipping
+     overflow or the overscan shows past the section edge. Put that clip on the
+     backdrop frame, never on the section: an `overflow: hidden` ancestor
+     silently kills `position: sticky` on anything below it, which is how the
+     questionnaire's readout panel stopped pinning. */
   .hero-scene {
     view-timeline-name: --hero;
     view-timeline-axis: block;
   }
   .hero-drift {
     transform: scale(1.08);
+  }
+  /* 1.25 leaves 12.5% of overscan on each edge; the keyframes spend 8%, which
+     the scale multiplies to 10% of the frame. Under the margin, so no edge
+     can swing into view at either end of the range. */
+  .category-hero-drift {
+    transform: scale(1.25);
   }
 
   /* The signature band on the category pages. The photograph drifts against
@@ -349,12 +406,69 @@
   .partner-rail:hover .partner-track {
     animation-play-state: paused;
   }
+
+  /* The reason marks, each moving the way the thing it stands for moves: the
+     motor turns, the hand waves, the sparkle catches, air gusts past, sound
+     pulses, and what the filter catches settles through it. A mark that moved
+     decoratively would be worse than a still one — the whole point is that the
+     motion is a second reading of the label.
+
+     Transform and opacity only, so all six stay on the compositor and none of
+     them reads back layout. No reduced-motion guard here on purpose: the
+     blanket reset near the foot of this file already stops them, which is why
+     every one of these rests at its neutral pose at 0% AND 100% — frozen on
+     the last frame is the pose a reduced-motion reader is left looking at.
+
+     Six durations, none a multiple of another, so the marks never fall into
+     step and start reading as one mechanism. REASON_ICONS carries eleven
+     subjects; these are the six any page renders today, and an unmatched
+     subject gets a still mark rather than a borrowed motion. */
+  .reason-gust {
+    animation: reason-gust 4.3s ease-in-out infinite;
+  }
+  .reason-sift {
+    animation: reason-sift 5.1s ease-in-out infinite;
+  }
+  /* The noise mark counts down instead of moving: four waves, then three, two,
+     one, and a rest on the single wave. One duration, three different hold
+     lengths — the stagger is in the keyframes, not in animation-delay, because
+     a delay would leave the waves out of step on the first pass through and
+     only settle from the second cycle on.
+
+     The innermost wave carries no class at all. It is the resting state and
+     must never blink. */
+  .reason-vol-2 {
+    animation: reason-vol-2 4.4s linear infinite;
+  }
+  .reason-vol-3 {
+    animation: reason-vol-3 4.4s linear infinite;
+  }
+  .reason-vol-4 {
+    animation: reason-vol-4 4.4s linear infinite;
+  }
+  .reason-spin {
+    animation: reason-spin 7s linear infinite;
+  }
+  .reason-twinkle {
+    animation: reason-twinkle 4.9s ease-in-out infinite;
+  }
+  /* Pivots at the wrist, not the middle of the glyph — a hand rotating about
+     its own centre waves the forearm too. */
+  .reason-wave {
+    transform-origin: 50% 85%;
+    animation: reason-wave 3.1s ease-in-out infinite;
+  }
 }
 
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
     .hero-drift {
       animation: hero-drift linear both;
+      animation-timeline: --hero;
+      animation-range: cover 0% cover 100%;
+    }
+    .category-hero-drift {
+      animation: category-hero-drift linear both;
       animation-timeline: --hero;
       animation-range: cover 0% cover 100%;
     }
@@ -396,12 +510,146 @@
   }
 }
 
+/* Air moving past, not an object sliding: it thins as it goes and comes back
+   at full weight. */
+@keyframes reason-gust {
+  0%,
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(2.5px);
+    opacity: 0.72;
+  }
+}
+
+/* The funnel taking a load: it settles and narrows, then recovers. */
+@keyframes reason-sift {
+  0%,
+  100% {
+    transform: translateY(0) scaleY(1);
+  }
+  50% {
+    transform: translateY(1.5px) scaleY(0.9);
+  }
+}
+
+/* Loud, then one wave quieter at a time, then a long rest at quiet.
+
+   All three come back together over the first 6% — the reset is a single
+   event, not a countdown running backwards. From there each wave holds until
+   its turn and takes 8% to go, outermost first, so what you read is the volume
+   coming down rather than three separate marks blinking.
+
+   Every one of them ends at 0. The mark's rest state is the single wave, which
+   is both the claim the card makes and the still frame reduced motion leaves
+   on screen. */
+@keyframes reason-vol-4 {
+  0% {
+    opacity: 0;
+  }
+  6%,
+  22% {
+    opacity: 1;
+  }
+  30%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes reason-vol-3 {
+  0% {
+    opacity: 0;
+  }
+  6%,
+  40% {
+    opacity: 1;
+  }
+  48%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes reason-vol-2 {
+  0% {
+    opacity: 0;
+  }
+  6%,
+  58% {
+    opacity: 1;
+  }
+  66%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Linear and unbroken: a motor under load does not ease. */
+@keyframes reason-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Catches, then rests. The long flat stretch is the point — a sparkle that
+   twinkles continuously is a strobe. */
+@keyframes reason-twinkle {
+  0%,
+  62%,
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  74% {
+    transform: scale(1.16) rotate(10deg);
+    opacity: 0.8;
+  }
+  86% {
+    transform: scale(0.98) rotate(-3deg);
+    opacity: 1;
+  }
+}
+
+/* Three decaying swings and a rest, which is what a wave actually looks
+   like. An even back-and-forth reads as a metronome. */
+@keyframes reason-wave {
+  0%,
+  52%,
+  100% {
+    transform: rotate(0deg);
+  }
+  64% {
+    transform: rotate(-11deg);
+  }
+  76% {
+    transform: rotate(8deg);
+  }
+  88% {
+    transform: rotate(-4deg);
+  }
+}
+
 @keyframes hero-drift {
   from {
     transform: scale(1.08) translateY(-3.5%);
   }
   to {
     transform: scale(1.08) translateY(3.5%);
+  }
+}
+
+/* Keep the scale identical to the .category-hero-drift base rule. A keyframe
+   that restates the transform replaces the whole property, so a mismatch here
+   would snap the frame to a different size the moment the animation attaches. */
+@keyframes category-hero-drift {
+  from {
+    transform: scale(1.25) translateY(-8%);
+  }
+  to {
+    transform: scale(1.25) translateY(8%);
   }
 }
 
