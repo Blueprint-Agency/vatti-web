@@ -101,12 +101,107 @@ const BESTSELLER_SLUGS = [
   "built-in-combi-oven-va05",
 ];
 
+/**
+ * The five questions this page is already shown for and answers nowhere.
+ * "is vatti a good brand" sits at position 3.3 and "from which country" at 2,
+ * on a homepage that states neither, which is why a Reddit thread ranks second
+ * for "best kitchen appliances brand malaysia". Counts are interpolated from
+ * the database so a new dealer or model does not date the copy.
+ */
+function homeFaqs(models: number, dealers: number) {
+  return [
+    {
+      q: "Is VATTI a good brand?",
+      a: `VATTI has manufactured kitchen appliances since 1992 and is listed on the Shenzhen Stock Exchange. Its products have won the Red Dot, iF Design and AWE awards, and the group holds 838 valid patents. In Malaysia the range is sold through ${dealers} authorised dealers who install and service what they sell.`,
+    },
+    {
+      q: "Where is VATTI from?",
+      a: "VATTI is headquartered in Zhongshan, Guangdong, China, and has manufactured kitchen appliances there since 1992. VATTI (M) Sdn Bhd is the appointed national distributor for Malaysia.",
+    },
+    {
+      q: "What does VATTI Malaysia sell?",
+      a: `Kitchen hoods, cooker hobs, combi and steam ovens, dishwashers and one tap water purifiers. ${models} models in total.`,
+    },
+    {
+      q: "What warranty do VATTI appliances carry?",
+      a: "Two years on cooker hoods, cooker hobs, combi ovens, built-in ovens and built-in steam ovens. Ten years on the cooker hood motor across all models, and a lifetime warranty on the cooker hob glass top. Register within 14 days of purchase.",
+    },
+    {
+      q: "Where can I buy VATTI in Malaysia?",
+      a: `Through ${dealers} authorised dealers across the Klang Valley, Northern, Southern and East Coast regions plus Sabah and Sarawak, and at the flagship showroom in Atria Shopping Gallery, Petaling Jaya. Buying outside this network means no warranty, no official spare parts and no service.`,
+    },
+  ];
+}
+
+/**
+ * The brand entity, structured. Nothing on this site declared an Organization
+ * before, so the queries that ask what VATTI *is* had only prose to work from.
+ *
+ * No `logo` key: there is no logo asset on this site yet and a URL that 404s is
+ * worse than an absent property. Add it when the mark lands on R2.
+ */
+const ORGANIZATION = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "VATTI Malaysia",
+  alternateName: "VATTI (M) Sdn Bhd",
+  url: "https://vattimalaysia.com/",
+  foundingDate: "1992",
+  areaServed: { "@type": "Country", name: "Malaysia" },
+  parentOrganization: {
+    "@type": "Organization",
+    name: "VATTI",
+    foundingDate: "1992",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Zhongshan",
+      addressRegion: "Guangdong",
+      addressCountry: "CN",
+    },
+  },
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Atria Shopping Gallery, Damansara Jaya",
+    addressLocality: "Petaling Jaya",
+    addressRegion: "Selangor",
+    addressCountry: "MY",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+60123366082",
+    contactType: "sales",
+    areaServed: "MY",
+  },
+  sameAs: ["https://www.facebook.com/vattimalaysia/"],
+};
+
+/** Read at module scope because `metadata` is an object, not a function, and
+ *  every query in this file runs at build time anyway. */
+const DEALER_COUNT = getRegions().reduce((n, r) => n + r.count, 0);
+
+/** Same shape CategoryView builds, over editorial answers rather than DB rows. */
+function faqPage(faqs: { q: string; a: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+}
+
 // The legacy title and description are kept verbatim: this page earns the
 // brand-term traffic and titles are a CTR surface. See PRODUCT.md.
 export const metadata: Metadata = {
   title: { absolute: "Kitchen Appliances Supplier in Malaysia | VATTI" },
-  description:
-    "Explore the Best Kitchen Appliances Supplier in Malaysia: Combi Ovens, Cooker Hoods, Cooker Hobs & Built-In Ovens by VATTI. Enhance Your Cooking Now!",
+  // Title verbatim, description not: "Enhance Your Cooking Now!" was the only
+  // clause in it and it says nothing. The dealer count and the founding date
+  // are both true and both are what a first-time visitor is weighing.
+  // Counted from the database rather than typed, so the description cannot
+  // drift from the number the page itself prints.
+  description: `VATTI Malaysia supplies cooker hoods, cooker hobs, combi ovens, built-in ovens and dishwashers through ${DEALER_COUNT} authorised dealers nationwide. Building kitchen appliances since 1992.`,
   alternates: { canonical: "/" },
 };
 
@@ -120,6 +215,7 @@ export default function HomePage() {
   const totalModels = categories.reduce((n, c) => n + c.model_count, 0);
   const dealers = regions.reduce((n, r) => n + r.count, 0);
   const hero = getProductCard(HERO_PRODUCT);
+  const faqs = homeFaqs(totalModels, dealers);
 
   return (
     <>
@@ -165,10 +261,15 @@ export default function HomePage() {
             {/* Not .readout: Martian Mono is for measured values, and a brand
                 line is not one. See DESIGN.md § Typography. */}
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-teal">
-              VATTI Malaysia · since 1992
+              Since 1992
             </p>
+            {/* Brand, geography and the category noun all sit in the H1: this
+                page earns 89% of its clicks on "vatti" and "vatti malaysia",
+                and the old line carried neither token. "Since 1992" moves up
+                to the eyebrow now that the brand name is no longer needed
+                there. See PRODUCT.md § Homepage. */}
             <h1 className="mt-5 max-w-[26ch] text-balance text-[clamp(2.25rem,1.2rem+3.4vw,4rem)] font-semibold leading-[1.02] tracking-[-0.04em]">
-              Kitchen appliances measured for wok heat.
+              VATTI Malaysia, modern kitchen appliances built for Malaysian homes
             </h1>
             {/* Full ink, not ink-muted: contrast against a photograph cannot be
                 pinned to a single ratio the way it can against --color-surface,
@@ -249,7 +350,7 @@ export default function HomePage() {
               <Reveal delay={80} className="lg:col-span-5">
                 <div className="glass flex h-full flex-col rounded-sm p-6 sm:p-8">
                   <h2 className="text-3xl font-semibold tracking-[-0.03em] sm:text-4xl">
-                    Built for how we cook here
+                    Built for how Malaysians cook
                   </h2>
                   <p className="mt-5 text-lg leading-relaxed text-ink-muted">
                     High heat and heavy oil are hard on a kitchen. These are hoods, hobs and ovens
@@ -333,7 +434,7 @@ export default function HomePage() {
             id="categories-heading"
             className="max-w-[20ch] text-3xl font-semibold tracking-[-0.03em] sm:text-4xl"
           >
-            Everything that goes in the kitchen
+            Our kitchen appliance range in Malaysia
           </h2>
 
           <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-6 lg:gap-5">
@@ -401,11 +502,108 @@ export default function HomePage() {
           </ul>
         </section>
 
+        {/* Who VATTI is, in plain terms, with a date and a ticker.
+            "is vatti a good brand", "vatti brand" and "from which country" are
+            queries this page is already surfaced for and answered nowhere, and
+            what fills that gap today is a Reddit thread ranking second for
+            "best kitchen appliances brand malaysia". Stating the Chinese origin
+            outright is the point rather than a risk: the credibility is the
+            listing and the patents, and neither reads as credible next to a
+            hedge about where the company is from.
+
+            The awards move here from the old about section. Corporate facts and
+            the marks that back them are one argument, not two, and the hero
+            bento already shows the logos without naming them. */}
+        <section aria-labelledby="about-heading" className="border-t border-line bg-surface">
+          <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
+            <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] lg:gap-16">
+              <div>
+                <h2
+                  id="about-heading"
+                  className="max-w-[20ch] text-3xl font-semibold tracking-[-0.03em] sm:text-4xl"
+                >
+                  About VATTI: a kitchen appliance manufacturer since 1992
+                </h2>
+                <Link
+                  href="/about-us/"
+                  className="mt-6 inline-block text-teal transition-opacity hover:opacity-80"
+                >
+                  About VATTI Malaysia →
+                </Link>
+              </div>
+
+              <div className="max-w-[62ch]">
+                <p className="leading-relaxed text-ink-muted">
+                  VATTI has built kitchen appliances since 1992 from its base in Zhongshan,
+                  Guangdong, and is publicly listed on the Shenzhen Stock Exchange under ticker
+                  002035. The group held 838 valid patents as of 2018, among the highest counts in
+                  its industry, and its products have taken the Red Dot Design Award, the iF Design
+                  Award and the AWE Award.
+                </p>
+                <p className="mt-4 leading-relaxed text-ink-muted">
+                  In Malaysia, VATTI (M) Sdn Bhd is the appointed national distributor. We supply{" "}
+                  {totalModels} models across {categories.length} categories through {dealers}{" "}
+                  authorised dealers, from the Klang Valley to Sabah and Sarawak, with a flagship
+                  showroom at Atria Shopping Gallery in Petaling Jaya.
+                </p>
+                <p className="mt-4 leading-relaxed text-ink-muted">
+                  Every unit sold through that network is ST and SIRIM certified, covered by the
+                  VATTI Malaysia warranty, and serviced with official spare parts.
+                </p>
+              </div>
+            </div>
+
+            {/* Cards are bg-surface, not bg-void: the gap-px hairline grid draws
+                the rules with the parent's bg-line showing through, so the cards
+                have to match the band they now sit on. */}
+            <dl className="mt-14 grid gap-px bg-line sm:grid-cols-3">
+              {AWARDS.map((a) => (
+                <div key={a.name} className="bg-surface p-5">
+                  <dt className="font-semibold leading-snug">{a.name}</dt>
+                  <dd className="readout mt-1 text-xs text-teal">{a.year}</dd>
+                  <dd className="mt-3 text-sm leading-relaxed text-ink-muted">{a.body}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </section>
+
+        {/* Bestsellers. Was a scroll-snap shelf, which always cut the fourth
+            card in half; on a trackpad, with no scrollbar showing, that reads
+            as a layout fault rather than an invitation to scroll. A tab list
+            names all four and hides none. */}
+        {bestsellers.length > 0 && (
+          <section
+            aria-labelledby="bestsellers-heading"
+            className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24"
+          >
+            <div className="flex flex-wrap items-end justify-between gap-4">
+              <h2
+                id="bestsellers-heading"
+                className="max-w-[24ch] text-3xl font-semibold tracking-[-0.03em] sm:text-4xl"
+              >
+                Best-selling VATTI hoods, hobs and ovens
+              </h2>
+              <Link href="#categories" className="text-teal transition-opacity hover:opacity-80">
+                All categories →
+              </Link>
+            </div>
+
+            <div className="mt-10">
+              <ProductShowcase products={bestsellers} />
+            </div>
+          </section>
+        )}
+
         {/* Enquiry. The questionnaire writes a WhatsApp message rather than
             posting anywhere: site.ts records that this site has no forms, and
             WhatsApp is the line the service team actually answers. Asking the
             eight questions up front is what turns "hi, price?" into a
-            conversation someone can answer in one reply. */}
+            conversation someone can answer in one reply.
+
+            Below the range and the credibility case, not above them: every
+            brand site on page 1 puts the ask last, and this one used to sit
+            second, in front of the argument for asking at all. */}
         <section aria-labelledby="contact-heading" className="border-t border-line bg-surface">
           <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
             <div className="max-w-[52ch]">
@@ -413,7 +611,7 @@ export default function HomePage() {
                 id="contact-heading"
                 className="text-3xl font-semibold tracking-[-0.03em] sm:text-4xl"
               >
-                Tell us about your kitchen
+                Get a quote for your kitchen
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-ink-muted">
                 Answer what you can. We will point you at the right model and the dealer who stocks
@@ -457,90 +655,19 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Bestsellers. Was a scroll-snap shelf, which always cut the fourth
-            card in half; on a trackpad, with no scrollbar showing, that reads
-            as a layout fault rather than an invitation to scroll. A tab list
-            names all four and hides none. */}
-        {bestsellers.length > 0 && (
-          <section
-            aria-labelledby="bestsellers-heading"
-            className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24"
-          >
-            <div className="flex flex-wrap items-end justify-between gap-4">
-              <h2
-                id="bestsellers-heading"
-                className="text-3xl font-semibold tracking-[-0.03em] sm:text-4xl"
-              >
-                The ones people buy
-              </h2>
-              <Link href="#categories" className="text-teal transition-opacity hover:opacity-80">
-                All categories →
-              </Link>
-            </div>
-
-            <div className="mt-10">
-              <ProductShowcase products={bestsellers} />
-            </div>
-          </section>
-        )}
-
-        {/* Trust. Two of the three awards below are the reason a showroom
-            visitor takes the brand seriously, so they get names and dates
-            rather than a logo strip.
-
-            A hairline, not a surface change: moving the questionnaire up the
-            page left this section and the showcase above it both on void, and
-            without a seam the two read as one very long band. */}
-        <section
-          aria-labelledby="about-heading"
-          className="mx-auto max-w-6xl border-t border-line px-5 py-16 sm:px-8 sm:py-24"
-        >
-          <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] lg:gap-16">
-            <div>
-              <h2
-                id="about-heading"
-                className="text-3xl font-semibold tracking-[-0.03em] sm:text-4xl"
-              >
-                Thirty-odd years of kitchens
-              </h2>
-              <p className="mt-5 max-w-[52ch] leading-relaxed text-ink-muted">
-                VATTI has built premium kitchen appliances since 1992, growing from a locally listed
-                company into a manufacturer sold worldwide. In Malaysia we supply the Klang Valley,
-                Northern, Southern and East Coast regions, plus Sabah and Sarawak.
-              </p>
-              <Link
-                href="/about-us/"
-                className="mt-6 inline-block text-teal transition-opacity hover:opacity-80"
-              >
-                About VATTI Malaysia →
-              </Link>
-            </div>
-
-            <dl className="grid gap-px self-start bg-line sm:grid-cols-3">
-              {AWARDS.map((a) => (
-                <div key={a.name} className="bg-void p-5">
-                  <dt className="font-semibold leading-snug">{a.name}</dt>
-                  <dd className="readout mt-1 text-xs text-teal">{a.year}</dd>
-                  <dd className="mt-3 text-sm leading-relaxed text-ink-muted">{a.body}</dd>
-                </div>
-              ))}
-            </dl>
-          </div>
-        </section>
-
         {/* 105 posts existed with no route in from the front page. Guides on
             the left because they precede a purchase, recipes on the right
             because they follow one. */}
-        <section
-          aria-labelledby="reading-heading"
-          className="border-y border-line bg-surface"
-        >
+        {/* Void with a hairline, not a surface band: the questionnaire above it
+            is bg-surface now that it has moved down the page, and two surface
+            bands in a row read as one section with a stray rule through it. */}
+        <section aria-labelledby="reading-heading" className="border-t border-line">
           <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
             <h2
               id="reading-heading"
               className="text-3xl font-semibold tracking-[-0.03em] sm:text-4xl"
             >
-              Work out what you need
+              Kitchen appliance buying guides
             </h2>
 
             <div className="mt-10 grid gap-12 lg:grid-cols-2 lg:gap-16">
@@ -615,13 +742,13 @@ export default function HomePage() {
             multi-brand storefronts carrying Bosch, Smeg and Teka signage. */}
         <section
           aria-labelledby="dealers-heading"
-          className="mx-auto max-w-6xl px-5 py-16 text-center sm:px-8 sm:py-24"
+          className="mx-auto max-w-6xl border-t border-line px-5 py-16 text-center sm:px-8 sm:py-24"
         >
           <h2
             id="dealers-heading"
-            className="mx-auto max-w-[16ch] text-3xl font-semibold tracking-[-0.03em] sm:text-4xl"
+            className="mx-auto max-w-[18ch] text-3xl font-semibold tracking-[-0.03em] sm:text-4xl"
           >
-            See it before you buy it
+            Where to buy VATTI in Malaysia
           </h2>
           <p className="mx-auto mt-5 max-w-[54ch] leading-relaxed text-ink-muted">
             Every model is sold, installed and serviced through an authorised dealer. Find the
@@ -732,7 +859,42 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* The brand-evaluation questions, last because nobody arrives looking
+            for them and everybody who is hesitating ends up there. Same
+            FAQPage treatment as the category pages, minus the database: these
+            five are editorial and none of them belongs to one category.
+
+            A <dl>, not a disclosure widget. Five short answers are cheaper to
+            read open than to click open, and collapsed copy is copy a visitor
+            has to work for. */}
+        <section
+          aria-labelledby="faq-heading"
+          className="mx-auto max-w-6xl border-t border-line px-5 py-16 sm:px-8 sm:py-24"
+        >
+          <h2 id="faq-heading" className="text-3xl font-semibold tracking-[-0.03em] sm:text-4xl">
+            VATTI Malaysia FAQ
+          </h2>
+          <dl className="mt-10 max-w-[72ch]">
+            {faqs.map((f) => (
+              <div key={f.q} className="border-b border-line py-6 first:border-t">
+                <dt className="text-lg font-semibold tracking-[-0.02em]">{f.q}</dt>
+                <dd className="mt-3 leading-relaxed text-ink-muted">{f.a}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
       </main>
+
+      {/* Static JSON from constants and DB counts, serialised with
+          JSON.stringify. Same treatment as CategoryView. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPage(faqs)) }}
+      />
     </>
   );
 }
