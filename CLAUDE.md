@@ -112,15 +112,23 @@ already allows the CDN host in `images.remotePatterns`, so `next/image` needs no
 - The CDN host is written down twice — `CDN_HOST` in `next.config.ts` and the duplicate in
   `src/lib/site.ts`. Swap both together at cutover.
 
-**Uploads are blocked on this machine.** `scripts/media-upload.mjs` needs `R2_ACCESS_KEY_ID`,
-`R2_SECRET_ACCESS_KEY`, `R2_BUCKET` and `R2_ENDPOINT`. `.env.local` currently holds only
-`R2_PUBLIC_HOST`, so step 2 fails until the write keys are restored from the Cloudflare dashboard.
+**Uploads work.** `scripts/media-upload.mjs` needs `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`,
+`R2_BUCKET`, `R2_ENDPOINT` and `R2_PUBLIC_HOST`, and `.env.local` holds all five. If step 2 fails
+on a missing variable, the keys are in the Cloudflare dashboard under R2 → Manage API tokens.
+
+Upload **before** you push anything that references a new key. The build embeds the CDN URL in
+static HTML, so a deploy that lands ahead of its objects serves a page with a hole in it, and the
+optimizer caches the 404.
 
 **Not yet migrated.** 40 files (2.6 MB) still sit in `public/` and predate this rule:
 `hero-kitchen.png`, `hero-v929-panel.webp`, `signature-v929-scene.webp`, four `showcase-*.webp`,
 three `award-*.png`, `google-mark.svg`, and 29 `partners/*`. Each is referenced by a literal path
-in TSX, so moving them is an upload plus an edit at every call site. Move them when the write keys
-are back. Until then, do not add to them.
+in TSX, so moving them is an upload plus an edit at every call site.
+
+Nothing blocks that migration now except the work itself. Do not add to them. Two of the literals
+are shared across pages rather than owned by one — `hero-v929-panel.webp` is the home page hero
+AND was the hood category's hero panel, and `signature-v929-scene.webp` sits in `SIGNATURE_SCENE`
+in `CategoryView.tsx`. Grep the whole of `src/` before you assume a file has one call site.
 
 ## Gotchas inherited from the source site
 
