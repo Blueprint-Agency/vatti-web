@@ -32,8 +32,8 @@ const rise = (index: number) =>
  *
  * Two layouts, picked by whether an installed photograph exists for the
  * category. The band below is the one this was designed for; `SignaturePlate`
- * at the foot of this file is what the other four categories get, and it is
- * the studio cut-out on a white well that the whole site already uses.
+ * at the foot of this file is what the remaining three categories get, and it
+ * is the studio cut-out on a white well that the whole site already uses.
  *
  * Everything that moves here is scroll-driven CSS on a view-timeline (see
  * globals.css § .signature-scene). No client component, no scroll listener,
@@ -46,7 +46,7 @@ export function SignatureBand({
   heading,
 }: {
   signature: Signature;
-  scene?: { src: string; alt: string };
+  scene?: { src: string; alt: string; focus: string | null };
   heading: string;
 }) {
   if (!scene) return <SignaturePlate signature={signature} heading={heading} />;
@@ -74,12 +74,16 @@ export function SignatureBand({
               alt={scene.alt}
               fill
               sizes="100vw"
-              // Biased up and left. Up because the crop tightens vertically on
-              // tall viewports and the hood is the top half of the frame; left
-              // because the hood is the left two thirds of it and the copy now
-              // sits over the right, so that is the side that can afford to be
-              // cropped away.
-              className="object-cover object-[38%_38%]"
+              // The frame is a full viewport tall, so cover crops hard and in
+              // a different direction on a phone than on a desktop. What has
+              // to survive both is the appliance, and that sits somewhere
+              // different in every photograph — so the anchor comes from the
+              // category alongside the picture rather than being a constant
+              // here. An inline style, not an arbitrary Tailwind class:
+              // Tailwind scans source for literals and would never see a value
+              // that arrives from the database.
+              style={{ objectPosition: scene.focus ?? undefined }}
+              className="object-cover"
             />
           </div>
 

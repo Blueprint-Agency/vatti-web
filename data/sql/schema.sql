@@ -54,7 +54,30 @@ CREATE TABLE product_category (
   -- held exactly one entry and a hardcoded public/ path, which the images rule
   -- in CLAUDE.md does not allow for anything new.
   hero_product_image_url TEXT,
-  hero_product_image_alt TEXT
+  hero_product_image_alt TEXT,
+  -- Where the contained shot sits in the hero column, as a CSS
+  -- object-position. NULL centres it, which is both the CSS default and what
+  -- a wide appliance wants — it floats in the middle of the banner. The hood
+  -- is the exception and says so: its cut-out is tall and is pinned to the top
+  -- so the canopy meets the header instead of drifting down beside the copy.
+  hero_product_image_focus TEXT,
+  -- The photograph the signature band is built on: the category's lead model
+  -- installed and working. Same move as the two columns above, out of a
+  -- SIGNATURE_SCENE record in CategoryView that held one entry and a public/
+  -- path. NULL falls back to SignaturePlate, the studio cut-out on a white
+  -- well, which is what three of the five categories still get.
+  --
+  -- Not decorative: it is the model the section is selling, so it carries real
+  -- alt text like hero_product_image_url does.
+  --
+  -- _focus is the CSS object-position the crop is anchored on ('38% 38%').
+  -- It has to travel with the picture rather than sit in the component: the
+  -- band is a full-height frame and cover-crops hard on a phone, so the point
+  -- that must survive is the appliance, and that is somewhere different in
+  -- every photograph. NULL centres it.
+  signature_image_url   TEXT,
+  signature_image_alt   TEXT,
+  signature_image_focus TEXT
 );
 
 CREATE TABLE product (

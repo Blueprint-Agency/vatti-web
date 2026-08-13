@@ -10,7 +10,7 @@ import { Wind } from "@phosphor-icons/react/dist/ssr/Wind";
 import { Drop } from "@phosphor-icons/react/dist/ssr/Drop";
 import Image from "next/image";
 import Link from "next/link";
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 import { CompareSelector } from "@/components/CompareSelector";
 import { CompareTable } from "@/components/CompareTable";
@@ -85,6 +85,20 @@ export function CategoryView({
   const prose = guides.filter((g) => !g.figure);
   const scene = category.hero_product_image_url;
 
+  /**
+   * The hero runs full screen when the photograph IS the hero: a backdrop, and
+   * no cut-out set over it.
+   *
+   * Both halves of that condition earn their place. Without a backdrop this
+   * would be a viewport of empty ground, which is what the three categories
+   * with no imagery would otherwise get. And with a cut-out the section height
+   * is already set by the product column standing in it, so stretching it to
+   * the screen would scale that product to fill a viewport it was not shot
+   * for. The hood keeps the shallow band it was composed as; the hob, whose
+   * backdrop is the appliance installed, gets the whole screen.
+   */
+  const banner = !scene && Boolean(category.hero_image_url);
+
   return (
     <>
       <SiteHeader />
@@ -94,7 +108,15 @@ export function CategoryView({
             and single-column where there is not: a hero built around a cut-out
             on a white plate is the same picture the grid repeats sixteen times
             two screens further down. */}
-        <section className="hero-scene relative isolate">
+        {/* 3.375rem is the sticky header: py-3.5 either side of a 1.5rem line,
+            plus its bottom border. Subtracting it puts the hero's bottom edge
+            exactly on the fold rather than one header-height below it. Keep
+            the two in step if SiteHeader's padding moves. */}
+        <section
+          className={`hero-scene relative isolate ${
+            banner ? "flex min-h-[calc(100dvh-3.375rem)] flex-col" : ""
+          }`}
+        >
           {/* Full bleed, which is why the width constraint sits on the div
               below rather than on the section: a banner backdrop stopping at
               the 6xl gutter reads as a floating panel, not as the ground the
@@ -114,13 +136,27 @@ export function CategoryView({
               would drift in and out of its own knock-down. */}
           {category.hero_image_url && (
             <div aria-hidden className="absolute inset-0 -z-10 overflow-hidden">
-              <div className="category-hero-drift absolute inset-0">
+              {/* One drift class or the other, never both: each carries its own
+                  scale AND its own animation, so applying the pair would leave
+                  the cascade to pick a scale from one and keyframes from the
+                  other. See globals.css for why the full-screen banner needs
+                  its own tuning rather than a bigger number. */}
+              <div
+                className={`${
+                  banner ? "category-hero-drift-deep" : "category-hero-drift"
+                } absolute inset-0`}
+              >
                 <Image
                   src={category.hero_image_url}
                   alt=""
                   fill
                   priority
-                  sizes="100vw"
+                  // The frame is overscanned by the drift's scale, so it is
+                  // painted larger than the viewport it sits in. Asking for
+                  // 100vw hands the optimizer a candidate it then has to
+                  // stretch; 150vw covers the deep variant. The source is
+                  // 1200px, so this only helps up to that.
+                  sizes={banner ? "150vw" : "100vw"}
                   className="object-cover opacity-50"
                 />
               </div>
@@ -128,7 +164,11 @@ export function CategoryView({
             </div>
           )}
 
-          <div className="relative mx-auto max-w-6xl px-5 pb-12 pt-8 sm:px-8 sm:pb-16 sm:pt-12">
+          <div
+            className={`relative mx-auto w-full max-w-6xl px-5 pb-12 pt-8 sm:px-8 sm:pb-16 sm:pt-12 ${
+              banner ? "flex flex-1 flex-col" : ""
+            }`}
+          >
             <nav aria-label="Breadcrumb" className="mb-8 text-sm">
               <ol className="flex flex-wrap items-center gap-2 text-ink-muted">
                 <li>
@@ -141,25 +181,91 @@ export function CategoryView({
               </ol>
             </nav>
 
+            {/* my-auto, not a centred flex parent: it leaves the breadcrumb at
+                the top of the section where it belongs and centres the copy in
+                whatever height is left under it. */}
             <div
               className={
                 scene
                   ? "grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-16"
-                  : ""
+                  : banner
+                    ? "my-auto"
+                    : ""
               }
             >
-              <div>
-                <h1 className="max-w-[18ch] text-balance text-[clamp(2rem,1.2rem+3.2vw,3.75rem)] font-semibold leading-[1.03] tracking-[-0.04em]">
+              {/* No product shot means the copy has the whole banner, so it
+                  centres over the photograph rather than ranging left against
+                  an empty half. The hob page is the case this is written for:
+                  its backdrop is already the appliance installed, so there is
+                  nothing to set beside the words. */}
+              {/* No max-w on the centred block. The headline sets its own
+                  measure below and the paragraph carries its own 54ch, so a
+                  cap here would only ever be the thing that stopped the
+                  headline using the banner it is standing on. */}
+              <div className={scene ? "" : "mx-auto text-center"}>
+                {/* The three planes. Descending --depth, so the headline
+                    travels furthest and the buttons least: the block layers
+                    against the backdrop instead of sliding as one slab. Only
+                    on the full-screen hero — see .hero-parallax.
+
+                    The banner headline is set to run the width of the section
+                    and break twice, longest line first. Three things had to
+                    move together for that:
+
+                    * The 18ch measure. At this type size that is about 20
+                      characters a line, and both written headlines are in the
+                      mid-60s, so it could not come out as anything but three
+                      lines stacked down the middle of an empty banner.
+                    * text-balance. It equalises the lines it breaks, which is
+                      the opposite of the ask. Greedy wrapping fills the first
+                      line before it starts the second, so a long-then-short
+                      pair is what it gives you for free. text-pretty keeps
+                      the one guarantee worth having, that the last line is
+                      never left as a single orphan word.
+                    * The type scale. Filling the measure needs ~42 characters
+                      a line, and at 3.75rem that wants ~1120px against the
+                      1088px this section actually has. 3.5rem fits, and the
+                      slower vw coefficient keeps it fitting down the range
+                      rather than only at the top of it: the headline grows
+                      more slowly than the column it sits in, where before it
+                      outran it.
+
+                    Under ~850px the two lines come out near enough equal
+                    again, because below that the column is narrowing faster
+                    than the type. That is phone and small-tablet width, where
+                    a headline of this length is wrapping anyway. If the break
+                    has to be exact at every width it has to be authored into
+                    the copy, which is a data change, not this. */}
+                <h1
+                  style={banner ? ({ "--depth": 1.15 } as CSSProperties) : undefined}
+                  className={
+                    banner
+                      ? "hero-parallax mx-auto text-pretty text-[clamp(2rem,1.2rem+2.8vw,3.5rem)] font-semibold leading-[1.06] tracking-[-0.035em]"
+                      : `max-w-[18ch] text-balance text-[clamp(2rem,1.2rem+3.2vw,3.75rem)] font-semibold leading-[1.03] tracking-[-0.04em] ${
+                          scene ? "" : "mx-auto"
+                        }`
+                  }
+                >
                   {category.h1 ?? `${category.name} in Malaysia`}
                 </h1>
 
                 {category.intro_md && (
-                  <p className="mt-6 max-w-[54ch] text-[1.0625rem] leading-relaxed text-ink-muted">
+                  <p
+                    style={banner ? ({ "--depth": 0.85 } as CSSProperties) : undefined}
+                    className={`mt-6 max-w-[54ch] text-[1.0625rem] leading-relaxed text-ink-muted ${
+                      scene ? "" : "mx-auto"
+                    } ${banner ? "hero-parallax" : ""}`}
+                  >
                     {category.intro_md}
                   </p>
                 )}
 
-                <div className="mt-9 flex flex-wrap gap-3">
+                <div
+                  style={banner ? ({ "--depth": 0.6 } as CSSProperties) : undefined}
+                  className={`mt-9 flex flex-wrap gap-3 ${scene ? "" : "justify-center"} ${
+                    banner ? "hero-parallax" : ""
+                  }`}
+                >
                   <a
                     href={WHATSAPP}
                     className="rounded-sm bg-teal px-6 py-3 font-semibold text-void transition-opacity hover:opacity-90"
@@ -182,12 +288,20 @@ export function CategoryView({
               {/* A cut-out on transparency, so no frame, no plate and no
                   crop — object-contain, because cropping a product shot is
                   cropping the thing the page is selling. Above lg it leaves
-                  the grid and pins to the top of the section, which puts the
-                  hood against the header rather than floating below it with
-                  the copy; the file is staged trimmed to its alpha bounds so
-                  object-top lands on the metal and not on empty pixels. The
-                  column it vacates is the one the copy is already sitting
-                  beside, so the grid still reserves the space. */}
+                  the grid and spans the full height of the section; the column
+                  it vacates is the one the copy is already sitting beside, so
+                  the grid still reserves the space.
+
+                  Where it sits in that column comes from the category, because
+                  it depends on the shape of the appliance: a wide hob floats
+                  centred, and the hood is pinned to the top so its canopy
+                  meets the header instead of drifting down beside the copy.
+                  NULL centres, which is the CSS default.
+
+                  Every file here is staged trimmed to its alpha bounds. It
+                  matters more than it looks: contain scales the whole canvas,
+                  so a shot with empty margin scales the margin too and the
+                  appliance comes out small and off-centre. */}
               {scene && (
                 <div className="relative aspect-square lg:absolute lg:inset-y-0 lg:right-8 lg:aspect-auto lg:w-[calc(50%-3rem)]">
                   <Image
@@ -196,7 +310,8 @@ export function CategoryView({
                     fill
                     priority
                     sizes="(max-width: 1024px) 100vw, 560px"
-                    className="object-contain object-top"
+                    style={{ objectPosition: category.hero_product_image_focus ?? undefined }}
+                    className="object-contain"
                   />
                 </div>
               )}
@@ -207,21 +322,34 @@ export function CategoryView({
         {/* What the range reaches. The same component as the product page's
             readout strip, one level up: there it is this model's figures, here
             it is the best each measurement gets to across the category, with
-            the model that holds it named underneath. */}
+            the model that holds it named underneath.
+
+            overflow-hidden clips the drifting grid at the band edge. Safe
+            here and nowhere near as safe as it looks elsewhere on this page:
+            an overflow-hidden ancestor silently kills position:sticky in
+            everything below it, which is what broke the questionnaire panel
+            once already. This section holds one dl and nothing sticky. */}
         {summary.length > 0 && (
           <section
             aria-label={`${category.name} range summary`}
-            className="border-y border-line bg-surface"
+            className="readout-band overflow-hidden border-y border-line bg-surface"
           >
             {/* Columns follow the cell count. Hoods fill all four; a category
                 measured on one figure would otherwise leave half the band
-                empty at desktop width. */}
+                empty at desktop width.
+
+                The band lags the scroll and that is the whole of it. The cells
+                carry no entrance of their own: they are figures, and a figure
+                that assembles itself on approach reads as a page still
+                loading. The band was on `.animate-readout` — a 620ms settle
+                fired at load — and then on a staggered scroll-driven arrival;
+                both have been taken out. The numbers are simply there. */}
             <dl
-              className={`mx-auto grid max-w-6xl gap-px bg-line ${
+              className={`readout-drift mx-auto grid max-w-6xl gap-px bg-line ${
                 SUMMARY_COLUMNS[summary.length + 1] ?? "grid-cols-2 md:grid-cols-4"
               }`}
             >
-              <div className="animate-readout bg-surface px-5 py-6 sm:px-7 sm:py-8">
+              <div className="bg-surface px-5 py-6 sm:px-7 sm:py-8">
                 <dt className="text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-ink-muted">
                   Models
                 </dt>
@@ -232,12 +360,8 @@ export function CategoryView({
                 </dd>
                 <dd className="mt-3 text-xs text-ink-muted">in the current range</dd>
               </div>
-              {summary.map((s, i) => (
-                <div
-                  key={s.facet}
-                  className="animate-readout bg-surface px-5 py-6 sm:px-7 sm:py-8"
-                  style={{ animationDelay: `${(i + 1) * 70}ms` }}
-                >
+              {summary.map((s) => (
+                <div key={s.facet} className="bg-surface px-5 py-6 sm:px-7 sm:py-8">
                   <dt className="text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-ink-muted">
                     {s.label}
                   </dt>
@@ -260,7 +384,15 @@ export function CategoryView({
         {signature && products.length >= 3 && (
           <SignatureBand
             signature={signature}
-            scene={SIGNATURE_SCENE[category.slug]}
+            scene={
+              category.signature_image_url
+                ? {
+                    src: category.signature_image_url,
+                    alt: category.signature_image_alt ?? "",
+                    focus: category.signature_image_focus,
+                  }
+                : undefined
+            }
             heading={
               signature.series
                 ? `The ${signature.series} is where the range starts`
@@ -405,7 +537,17 @@ export function CategoryView({
               </div>
 
               <div className="mt-10">
-                <EnquiryBuilder regions={regions} category={category.name} />
+                {/* Hob width is a real question on the two pages where the
+                    cooking surface decides the model, and noise on the oven
+                    page. See EnquiryBuilder. */}
+                <EnquiryBuilder
+                  regions={regions}
+                  category={category.name}
+                  hobWidth={
+                    category.slug === "kitchen-hood-in-malaysia" ||
+                    category.slug === "cooker-hob-in-malaysia"
+                  }
+                />
               </div>
             </div>
           </section>
@@ -674,15 +816,6 @@ export function CategoryView({
 }
 
 /**
- * An installed photograph per category, where one exists.
- *
- * Same arrangement as SHOWCASE_IMAGES in ProductShowcase and for the same
- * reason: the database hero for every product is a cut-out on a studio plate,
- * which is the right picture for a product page and a poor one for the top of
- * a category page. A category with no entry here gets a single-column hero
- * rather than a duplicate of the first card in its own grid.
- */
-/**
  * The three models the comparison opens on: the signature, then the first two
  * from series it has not already shown.
  *
@@ -755,10 +888,13 @@ const REASON_ICONS: Record<string, ReasonMark> = {
  *
  * The motion is a second reading of the claim, not decoration: the motor
  * turns, the hand waves, the sparkle catches, air gusts past, sound pulses,
- * and what the filter catches settles through it. Nothing here should be
- * given a motion that merely looks lively — a mark with no honest way to move
- * is better still, which is why the five subjects no page renders today are
- * absent rather than assigned something plausible.
+ * what the filter catches settles through it, the bolt strikes, heat climbs,
+ * the shield takes a knock and holds, the drop gathers, and the signal goes
+ * out from its own source. Nothing here should be given a motion that merely
+ * looks lively — a mark with no honest way to move is better still. All
+ * eleven subjects are now rendered by some page and all eleven move; add the
+ * motion with the subject if a twelfth is ever introduced, or leave the mark
+ * still rather than borrow one.
  *
  * The keyframes are in globals.css. They are deliberately not Tailwind
  * utilities: six bespoke curves are CSS, and arbitrary-value animation classes
@@ -773,6 +909,11 @@ const REASON_MOTION: Record<string, string> = {
   motor: "reason-spin",
   clean: "reason-twinkle",
   controls: "reason-wave",
+  power: "reason-strike",
+  heat: "reason-climb",
+  safety: "reason-guard",
+  smart: "reason-signal",
+  water: "reason-drip",
 };
 
 /** Written out rather than interpolated: Tailwind scans source for literals. */
@@ -780,30 +921,6 @@ const SUMMARY_COLUMNS: Record<number, string> = {
   2: "grid-cols-2",
   3: "grid-cols-1 sm:grid-cols-3",
   4: "grid-cols-2 md:grid-cols-4",
-};
-
-/**
- * The photograph the signature band is built on, where one exists.
- *
- * The hero's own product shot used to sit beside this in a CATEGORY_SCENE
- * record; it now comes off product_category.hero_product_image_url, where the
- * images rule says a content picture belongs. This one is still a literal
- * because its file is part of the unmigrated public/ set — move it the same
- * way when those go to R2.
- *
- * A category with no entry falls back to the catalogue cut-out layout inside
- * SignatureBand.
- *
- * Supplied by the client. Give this a NEW filename whenever the shot changes:
- * public/ is served with a long max-age under a hash-less URL and the image
- * optimizer caches by path, so replacing the bytes serves the old picture to
- * anyone who has already seen the page.
- */
-const SIGNATURE_SCENE: Record<string, { src: string; alt: string }> = {
-  "kitchen-hood-in-malaysia": {
-    src: "/signature-v929-scene.webp",
-    alt: "A VATTI V929 cooker hood drawing steam off a steak searing in a pan on a gas hob.",
-  },
 };
 
 function faqPage(faqs: Faq[]) {

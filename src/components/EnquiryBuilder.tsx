@@ -29,7 +29,10 @@ type Question = {
   multiple?: boolean;
 };
 
-/** Fixed questions. The two data-driven ones are built in the component. */
+/**
+ * Fixed questions. The two data-driven ones are built in the component, and
+ * one of these is dropped on the pages it does not apply to — see `hobWidth`.
+ */
 const BASE: Question[] = [
   {
     id: "project",
@@ -69,6 +72,7 @@ export function EnquiryBuilder({
   categories,
   regions,
   category,
+  hobWidth = true,
 }: {
   /** The whole catalogue, for the front page. Omitted on a category page. */
   categories?: CategoryCard[];
@@ -79,6 +83,19 @@ export function EnquiryBuilder({
    * dropped rather than asked about a page they are already standing on.
    */
   category?: string;
+  /**
+   * Ask how much hob space there is. True everywhere it is a real question:
+   * the front page, where the visitor has not said what they are after yet,
+   * and the hood and hob pages, where the width of the cooking surface is the
+   * measurement that rules models out — a hood narrower than the hob leaks
+   * smoke at the edges however hard it pulls.
+   *
+   * False on the oven page. Nothing about an oven follows from the hob it
+   * happens to sit under, and a questionnaire that asks anyway reads as a form
+   * built for a different product and reused, which is the impression this
+   * whole section exists to avoid.
+   */
+  hobWidth?: boolean;
 }) {
   // Category and region wording comes from the database so the message uses the
   // same names as the catalogue and the dealer list.
@@ -95,7 +112,7 @@ export function EnquiryBuilder({
               multiple: true,
             },
           ]),
-      ...BASE,
+      ...BASE.filter((q) => q.id !== "hob" || hobWidth),
       {
         id: "area",
         legend: "Where are you?",
@@ -103,7 +120,7 @@ export function EnquiryBuilder({
         options: regions.map((r) => r.region),
       },
     ],
-    [categories, category, regions]
+    [categories, category, regions, hobWidth]
   );
 
   const [answers, setAnswers] = useState<Record<string, string[]>>({});

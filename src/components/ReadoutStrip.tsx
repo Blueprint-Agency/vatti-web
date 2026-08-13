@@ -4,8 +4,8 @@ import type { Facet } from "@/lib/queries/product";
  * The signature component. These figures are Vatti's only objective advantage
  * over Bosch/Rubine/Elba and the source site buries them inside JPEGs.
  *
- * Degrades to null: the dishwasher and the two ceramic hobs have no measured
- * value in the source data, and a wrong spec number is worse than an absent one.
+ * Degrades to null: the dishwasher publishes no measured value in the source
+ * data, and a wrong spec number is worse than an absent one.
  */
 export function ReadoutStrip({ facets }: { facets: Facet[] }) {
   if (facets.length === 0) return null;

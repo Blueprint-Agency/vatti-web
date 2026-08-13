@@ -120,15 +120,20 @@ Upload **before** you push anything that references a new key. The build embeds 
 static HTML, so a deploy that lands ahead of its objects serves a page with a hole in it, and the
 optimizer caches the 404.
 
-**Not yet migrated.** 40 files (2.6 MB) still sit in `public/` and predate this rule:
-`hero-kitchen.png`, `hero-v929-panel.webp`, `signature-v929-scene.webp`, four `showcase-*.webp`,
-three `award-*.png`, `google-mark.svg`, and 29 `partners/*`. Each is referenced by a literal path
-in TSX, so moving them is an upload plus an edit at every call site.
+**Not yet migrated.** 39 files (2.5 MB) still sit in `public/` and predate this rule:
+`hero-kitchen.png`, `hero-v929-panel.webp`, four `showcase-*.webp`, three `award-*.png`,
+`google-mark.svg`, and 29 `partners/*`. Each is referenced by a literal path in TSX, so moving
+them is an upload plus an edit at every call site.
 
-Nothing blocks that migration now except the work itself. Do not add to them. Two of the literals
-are shared across pages rather than owned by one — `hero-v929-panel.webp` is the home page hero
-AND was the hood category's hero panel, and `signature-v929-scene.webp` sits in `SIGNATURE_SCENE`
-in `CategoryView.tsx`. Grep the whole of `src/` before you assume a file has one call site.
+Nothing blocks that migration now except the work itself. Do not add to them. `hero-v929-panel.webp`
+is shared rather than owned by one page — it is the home page hero AND was the hood category's
+hero panel. Grep the whole of `src/` before you assume a file has one call site.
+
+`signature-v929-scene.webp` was the third shared literal and is done: it is on R2 under
+`2026/08/kitchen-hood-signature-scene.webp` and its URL now lives in
+`product_category.signature_image_url`, which is where a page picture belongs. That is the third
+category image to leave `CategoryView.tsx` for a column, after the hero backdrops and the hero
+product shot. There is no image record left in that file.
 
 ## Gotchas inherited from the source site
 

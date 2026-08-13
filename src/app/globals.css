@@ -324,6 +324,33 @@
     transform: scale(1.25);
   }
 
+  /* The same drift for a hero that runs the full screen, and worth a separate
+     class rather than a bigger number on the one above: the two are different
+     shapes and the tuning does not carry across. The hood's hero is only as
+     tall as its own copy, and 10% of a 450px frame is 45px of travel spread
+     over the whole pass. A viewport-tall banner has twice the height and four
+     times the scroll to spend it over, so the same percentage disappears.
+
+     1.45 leaves 22.5% of overscan per edge and the keyframes spend 14%, which
+     the scale multiplies to 20.3% of the frame — under the margin, so no edge
+     swings into view. That is the ceiling, and it is set by the SOURCE rather
+     than by taste: this backdrop is 1200px wide, already upscaled at 1.25 on
+     any desktop, and every further point of scale is softer. Past ~1.5 the
+     photograph starts to look out of focus rather than deep. A larger original
+     is what buys more than this. */
+  .category-hero-drift-deep {
+    transform: scale(1.45);
+  }
+
+  /* The range summary band gets its own timeline rather than borrowing --hero.
+     It is a sibling of the hero, not a descendant, and it comes into view a
+     whole screen later; read against the hero's progress it would be finished
+     before it was ever looked at. */
+  .readout-band {
+    view-timeline-name: --readout;
+    view-timeline-axis: block;
+  }
+
   /* The signature band on the category pages. The photograph drifts against
      the scroll, so the copy set over it reads as sitting in front of a scene
      rather than on top of a picture.
@@ -419,10 +446,10 @@
      every one of these rests at its neutral pose at 0% AND 100% — frozen on
      the last frame is the pose a reduced-motion reader is left looking at.
 
-     Six durations, none a multiple of another, so the marks never fall into
-     step and start reading as one mechanism. REASON_ICONS carries eleven
-     subjects; these are the six any page renders today, and an unmatched
-     subject gets a still mark rather than a borrowed motion. */
+     Eleven durations, none a multiple of another, so the marks never fall into
+     step and start reading as one mechanism. That covers every subject
+     REASON_ICONS carries. A twelfth arrives with its own motion or with none
+     at all — a still mark is always better than a borrowed one. */
   .reason-gust {
     animation: reason-gust 4.3s ease-in-out infinite;
   }
@@ -458,6 +485,32 @@
     transform-origin: 50% 85%;
     animation: reason-wave 3.1s ease-in-out infinite;
   }
+  /* The bolt striking. Most of the cycle is rest: an arc that fired
+     continuously would read as a fault in the mark rather than as power. */
+  .reason-strike {
+    animation: reason-strike 5.7s ease-in-out infinite;
+  }
+  /* Climbs off the bulb, which is where a thermometer is anchored. Scaling
+     about the middle of the glyph would slide the bulb down the card. */
+  .reason-climb {
+    transform-origin: 50% 88%;
+    animation: reason-climb 6.3s ease-in-out infinite;
+  }
+  .reason-guard {
+    animation: reason-guard 3.7s ease-in-out infinite;
+  }
+  /* Breathes out of the source dot, so what reads is signal leaving it rather
+     than the whole mark growing. Same reasoning as the wrist above. */
+  .reason-signal {
+    transform-origin: 50% 86%;
+    animation: reason-signal 4.7s ease-in-out infinite;
+  }
+  /* Hangs from the neck of the drop, which is where a drop is held before it
+     falls. Scaling about the centre would make it pulse like a heartbeat. */
+  .reason-drip {
+    transform-origin: 50% 12%;
+    animation: reason-drip 5.3s ease-in-out infinite;
+  }
 }
 
 @supports (animation-timeline: view()) {
@@ -472,6 +525,43 @@
       animation-timeline: --hero;
       animation-range: cover 0% cover 100%;
     }
+    .category-hero-drift-deep {
+      animation: category-hero-drift-deep linear both;
+      animation-timeline: --hero;
+      animation-range: cover 0% cover 100%;
+    }
+    /* The hero copy, travelling AGAINST the backdrop. The backdrop drifts down
+       as the page scrolls up, so the copy lifting is what makes the two read
+       as separate planes: opposite directions is the strongest depth cue
+       available, and it costs one more animation on a timeline that already
+       exists. --depth scales the travel per line, so the headline moves more
+       than the buttons and the block layers rather than sliding as a slab.
+
+       Only ever on the full-screen hero. The whole scheme rests on the pass
+       sitting near the middle of its range at rest, and that is only true when
+       the section is about a viewport tall. Applied to the hood's shallow band
+       the same rule would load at roughly 63% of the range: the copy would
+       come up already lifted and part-faded. See CategoryView, which gates
+       this on `banner` for that reason. */
+    .hero-parallax {
+      animation: hero-parallax linear both;
+      animation-timeline: --hero;
+      animation-range: cover 0% cover 100%;
+    }
+    /* The band drifts as one piece. Uniform on purpose: these cells share a
+       baseline and a rule between them, and per-cell travel would leave a row
+       of readouts sitting at four different heights the moment it moved. The
+       stagger goes on the ARRIVAL below, which converges to zero and stays. */
+    .readout-drift {
+      animation: readout-drift linear both;
+      animation-timeline: --readout;
+      animation-range: cover 0% cover 100%;
+    }
+    /* No per-cell arrival to go with this. The cells used to fade and rise in
+       sequence and it was wrong for what they are: a row of measurements is
+       reference material, and a figure that assembles itself as you reach it
+       reads as a page that has not finished loading. The band moves; the
+       numbers in it do not. */
     /* 210vh of track against a 100dvh frame leaves 110vh pinned — about one
        further page-scroll held still, which is long enough to read six lines
        arriving and short enough not to feel like the page has stopped
@@ -613,6 +703,86 @@
   }
 }
 
+/* A cut and a snap back. The long flat stretch is the claim: power on tap is
+   not a flicker, and a bolt that fired every second would read as a fault. */
+@keyframes reason-strike {
+  0%,
+  68%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  73% {
+    opacity: 0.3;
+    transform: scale(0.96);
+  }
+  78% {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+  86% {
+    transform: scale(1);
+  }
+}
+
+/* Rising and settling, slowly, off the bulb. Heat climbs — it does not pulse,
+   and the slowest duration in the set is part of saying so. */
+@keyframes reason-climb {
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  55% {
+    transform: scaleY(1.08);
+  }
+}
+
+/* Takes a knock and holds it. One recoil against a long steady stretch,
+   because the claim is that the protection is already there rather than that
+   something is happening. */
+@keyframes reason-guard {
+  0%,
+  72%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  78% {
+    transform: translateY(-1.5px) scale(1.05);
+  }
+  88% {
+    transform: translateY(0) scale(0.995);
+  }
+}
+
+/* A drop gathering weight. It lengthens and narrows as it hangs, then rounds
+   back — which is what a drop does right up until it lets go. It never lets
+   go: a mark that fell would have to snap back to the top to loop, and the
+   snap is the only frame anyone would notice. */
+@keyframes reason-drip {
+  0%,
+  100% {
+    transform: scaleY(1) scaleX(1);
+  }
+  55% {
+    transform: scaleY(1.07) scaleX(0.96);
+  }
+}
+
+/* Out from the dot. It draws in toward the source and releases, so the arcs
+   read as signal leaving it. Rests at the full mark, which is the pose a
+   reduced-motion reader is left looking at. */
+@keyframes reason-signal {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  45% {
+    transform: scale(0.93);
+    opacity: 0.68;
+  }
+}
+
 /* Three decaying swings and a rest, which is what a wave actually looks
    like. An even back-and-forth reads as a metronome. */
 @keyframes reason-wave {
@@ -641,6 +811,63 @@
   }
 }
 
+/* The hero copy against the backdrop.
+ *
+ * Flat between 40% and 55% rather than pivoting on a single midpoint, and that
+ * plateau is the load-bearing part. A full-screen hero under the sticky header
+ * sits at (H - 53) / (2H - 53) of its cover pass at rest — 48.5% at a 900px
+ * viewport, 49.2% at 1400px — so the resting point MOVES with the window. A
+ * single neutral frame at 50% would leave the copy a shade lifted and a shade
+ * transparent before anyone had scrolled, by an amount that changed with the
+ * browser size. The plateau swallows that whole range.
+ *
+ * The 0% end is written for completeness and is never reached: this section
+ * starts at the top of the document, so a reader only ever sees the departure.
+ */
+@keyframes hero-parallax {
+  0% {
+    opacity: 0;
+    transform: translateY(calc(var(--depth, 1) * 6%));
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  55% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(calc(var(--depth, 1) * -8%));
+  }
+}
+
+/* The summary band lagging the scroll.
+ *
+ * 0.75rem, and the ceiling is structural rather than taste. The hairlines
+ * between these cells are not borders — they are the <dl>'s own background
+ * showing through a 1px grid gap, so they travel with it, and the band keeps
+ * the height it laid out at. Every pixel this moves is a pixel of hairline
+ * missing from one edge of the band and overshooting the other. The overshoot
+ * is clipped by overflow-hidden on the section; the shortfall is the honest
+ * cost, and at 12px against a ~120px band it reads as an inset rule rather
+ * than a broken one. Take this much past ~1rem and it starts to look like a
+ * rendering fault.
+ *
+ * Which is also why the cells do not drift independently. Move them relative
+ * to the <dl> and the gap they expose is the line colour, not the surface, so
+ * the artefact stops being subtle immediately.
+ */
+@keyframes readout-drift {
+  from {
+    transform: translateY(0.75rem);
+  }
+  to {
+    transform: translateY(-0.75rem);
+  }
+}
+
 /* Keep the scale identical to the .category-hero-drift base rule. A keyframe
    that restates the transform replaces the whole property, so a mismatch here
    would snap the frame to a different size the moment the animation attaches. */
@@ -650,6 +877,45 @@
   }
   to {
     transform: scale(1.25) translateY(8%);
+  }
+}
+
+/* The full-screen banner's backdrop, and the reason it is worth its own set of
+ * keyframes rather than bigger numbers on the pair above: the travel is spent
+ * ASYMMETRICALLY, because half of it was never being seen.
+ *
+ * This section is the top of the document, so its cover pass starts before the
+ * page does. At rest it already sits at ~48% of the range, and a reader can
+ * only ever scroll forwards from there. A symmetric -8% to 8% therefore spends
+ * half its budget on an approach that does not exist and leaves 5% of frame
+ * for the part anyone actually sees — about 45px, which is why the drift read
+ * as no drift at all.
+ *
+ * So: 4% behind the resting point, purely so the pass has somewhere to come
+ * from, and the whole remaining 14% ahead of it. That is 20.3% of the frame
+ * travelling against a screen of scroll, and against copy moving the other way
+ * it is unmistakable.
+ *
+ * The stop at 48% IS the resting point, and it holds across viewport sizes for
+ * the same reason .hero-parallax's plateau does: a full-screen hero under the
+ * sticky header rests at (H - 53) / (2H - 53), which is 48.5% at 900px and
+ * 49.2% at 1400px. Slightly past the stop either way, so the backdrop sits a
+ * few pixels into its travel at load. On a photograph at half opacity that is
+ * invisible; on the copy it would not be, which is why that one gets a plateau
+ * and this one does not need one.
+ *
+ * Keep the scale identical to the .category-hero-drift-deep base rule. A
+ * keyframe that restates the transform replaces the whole property, so a
+ * mismatch snaps the frame to a different size the moment this attaches. */
+@keyframes category-hero-drift-deep {
+  0% {
+    transform: scale(1.45) translateY(-4%);
+  }
+  48% {
+    transform: scale(1.45) translateY(0);
+  }
+  100% {
+    transform: scale(1.45) translateY(14%);
   }
 }
 

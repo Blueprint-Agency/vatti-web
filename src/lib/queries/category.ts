@@ -13,9 +13,20 @@ export type Category = {
   /** Decorative backdrops for the hero and the questionnaire band. Usually null. */
   hero_image_url: string | null;
   finder_image_url: string | null;
-  /** The product shot beside the hero headline. Carries real alt text. */
+  /**
+   * The product shot beside the hero headline. Carries real alt text.
+   * `_focus` is a CSS object-position; NULL centres it in the column.
+   */
   hero_product_image_url: string | null;
   hero_product_image_alt: string | null;
+  hero_product_image_focus: string | null;
+  /**
+   * The photograph the signature band is built on. NULL falls back to the
+   * studio cut-out plate. `_focus` is a CSS object-position; NULL centres it.
+   */
+  signature_image_url: string | null;
+  signature_image_alt: string | null;
+  signature_image_focus: string | null;
 };
 
 export type CategoryProduct = {
@@ -96,7 +107,8 @@ export function getCategory(slug: string): Category | undefined {
   return get<Category>(
     `SELECT id, slug, name, h1, seo_title, meta_description, intro_md, signature_product_id,
             hero_image_url, finder_image_url,
-            hero_product_image_url, hero_product_image_alt
+            hero_product_image_url, hero_product_image_alt, hero_product_image_focus,
+            signature_image_url, signature_image_alt, signature_image_focus
        FROM product_category WHERE slug = ?`,
     slug
   );
@@ -159,6 +171,20 @@ const BETTER: Record<string, "high" | "low"> = {
   flow: "high",
   efficiency: "high",
   noise: "low",
+  burners: "high",
+  functions: "high",
+};
+
+/**
+ * How the summary band names a facet's best value, where "Peak <label>" is
+ * wrong. Everything not listed here gets that default, which suits any
+ * measurement; the exceptions are the facets that are not measurements. Noise
+ * is best at the bottom, and a burner count is counted rather than measured.
+ */
+const SUPERLATIVE: Record<string, string> = {
+  noise: "Quietest",
+  burners: "Most burners",
+  functions: "Most functions",
 };
 
 export function getCategoryProducts(categoryId: number): CategoryProduct[] {
@@ -397,7 +423,7 @@ export function getRangeSummary(products: CategoryProduct[]): Extreme[] {
       );
       return {
         facet,
-        label: (BETTER[facet] ?? "high") === "low" ? `Quietest` : `Peak ${best.f.label.toLowerCase()}`,
+        label: SUPERLATIVE[facet] ?? `Peak ${best.f.label.toLowerCase()}`,
         value: best.f.value,
         unit: best.f.unit,
         model: best.model,

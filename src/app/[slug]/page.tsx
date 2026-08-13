@@ -80,17 +80,21 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 }
 
 /**
- * The long-form buying guide each category sends readers to. Editorial, and
- * only where one exists: the dishwasher and the purifier have no guide written
- * for them yet, and the section is simply absent on those two pages.
+ * The long-form buying guide each category sends readers to. Editorial: one
+ * per category, and the same article the live page promotes at the foot of
+ * each, so a visitor arriving from either site meets the same guide.
  *
- * These are the same three guides the homepage promotes, so a visitor who came
- * via the front page is not sent to a fourth article about the same decision.
+ * The first three are also the ones the homepage promotes, which is why a
+ * visitor who came via the front page is never sent to a second article about
+ * the same decision. The dishwasher and purifier entries have no homepage slot
+ * to agree with and simply match their own live pages.
  */
 const CATEGORY_GUIDE: Record<string, string> = {
   "kitchen-hood-in-malaysia": "buying-guide/types-of-range-hoods",
   "cooker-hob-in-malaysia": "buying-guide/glass-vs-stainless-gas-hob-which-gas-hob-are-best",
   "combi-and-steam-oven-in-malaysia": "buying-guide/what-is-a-combi-oven",
+  "dishwasher-in-malaysia": "buying-guide/is-a-dishwasher-necessary",
+  "one-tap-purifier-in-malaysia": "buying-guide/how-water-filters-work",
 };
 
 function CategoryPage({ category }: { category: Category }) {
