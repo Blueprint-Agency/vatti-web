@@ -48,10 +48,16 @@ import { WHATSAPP } from "@/lib/site";
  * what owners say about the service, the guide, the FAQ, and how to buy.
  *
  * Every section below the grid renders from its own table and disappears when
- * that table has no rows for the category. Only kitchen hoods carry the copy
- * today; the other four pages fall back to the hero, the grid, the comparison
- * and the closing band, which is more than they had before and does not print
- * an empty heading.
+ * that table has no rows for the category, so a page with nothing written for
+ * it prints no empty heading. All five carry that copy now.
+ *
+ * The sections that are not copy are gated on the model count instead, and
+ * those gates open and close by themselves as the catalogue changes: the grid
+ * needs two models to be a grid, the signature band steps aside at exactly two
+ * (see below), and the questionnaire and the comparison table both need more
+ * than two to have anything to narrow or to compare. The dishwasher page is
+ * the one model case today — hero, the band, the guide, the reasons, the
+ * reviews and the FAQ, and no chrome around a range of one.
  */
 export function CategoryView({
   category,
@@ -378,10 +384,16 @@ export function CategoryView({
           </section>
         )}
 
-        {/* The model the range leads with. Suppressed where the category has
-            fewer than three models: promoting one of two, with the grid right
-            underneath, is a section that says nothing the grid does not. */}
-        {signature && products.length >= 3 && (
+        {/* The model the range leads with. Suppressed at exactly two models:
+            promoting one of a pair, with the grid right underneath holding
+            both, is a section that says nothing the grid does not.
+
+            One model is the other side of that same argument. There the grid
+            below is a single card, so this band is not competing with it — it
+            IS the product section, and the grid is the part that goes. The
+            dishwasher page is the case: one machine, shown once, at the size
+            the only thing on the page deserves. */}
+        {signature && products.length !== 2 && (
           <SignatureBand
             signature={signature}
             scene={
@@ -393,36 +405,48 @@ export function CategoryView({
                   }
                 : undefined
             }
+            // "Where the range starts" is a claim about a range, and a
+            // category with one model does not have one. There the band takes
+            // over the sentence the grid used to carry — "Every dishwasher we
+            // sell", now said about the single machine it is said of.
             heading={
-              signature.series
-                ? `The ${signature.series} is where the range starts`
-                : `The ${signature.model_code} is where the range starts`
+              products.length === 1
+                ? `The ${signature.model_code} is the ${noun} we sell`
+                : signature.series
+                  ? `The ${signature.series} is where the range starts`
+                  : `The ${signature.model_code} is where the range starts`
             }
           />
         )}
 
-        {/* Every model, with the filters over it. */}
-        <section
-          id="models"
-          aria-labelledby="models-heading"
-          className="mx-auto max-w-6xl scroll-mt-20 border-t border-line px-5 py-16 sm:px-8 sm:py-24"
-        >
-          <h2
-            id="models-heading"
-            className="max-w-[20ch] text-3xl font-semibold tracking-[-0.03em] sm:text-4xl"
+        {/* Every model, with the filters over it. Gone where there is only one
+            of them: "Every dishwasher we sell", a filter bar with nothing to
+            filter, and a grid of one card is three controls' worth of chrome
+            around a product the band above has just shown at full height and
+            linked. */}
+        {products.length > 1 && (
+          <section
+            id="models"
+            aria-labelledby="models-heading"
+            className="mx-auto max-w-6xl scroll-mt-20 border-t border-line px-5 py-16 sm:px-8 sm:py-24"
           >
-            Every {noun} we sell
-          </h2>
-          <p className="mt-4 max-w-[56ch] leading-relaxed text-ink-muted">
-            {filters.length > 0
-              ? "Filter by what the kitchen has to do. The figures on each card are the measured ones, taken from the same spec sheet the product page prints."
-              : "The figures on each card are the measured ones, taken from the same spec sheet the product page prints."}
-          </p>
+            <h2
+              id="models-heading"
+              className="max-w-[20ch] text-3xl font-semibold tracking-[-0.03em] sm:text-4xl"
+            >
+              Every {noun} we sell
+            </h2>
+            <p className="mt-4 max-w-[56ch] leading-relaxed text-ink-muted">
+              {filters.length > 0
+                ? "Filter by what the kitchen has to do. The figures on each card are the measured ones, taken from the same spec sheet the product page prints."
+                : "The figures on each card are the measured ones, taken from the same spec sheet the product page prints."}
+            </p>
 
-          <div className="mt-10">
-            <ModelGrid products={products} groups={filters} noun={noun} />
-          </div>
-        </section>
+            <div className="mt-10">
+              <ModelGrid products={products} groups={filters} noun={noun} />
+            </div>
+          </section>
+        )}
 
         {/* How to choose one. Blocks with a measured figure lead; the prose
             blocks follow in a 2x2, which is where ducted and ductless sit side

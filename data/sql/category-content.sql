@@ -80,10 +80,9 @@ UPDATE product_category SET signature_product_id =
 -- picture: opacity-50 under a wash of --void, at which strength what reads is
 -- the room and not the appliance in it.
 --
--- Hoods, hobs and ovens have a photograph of their own appliance. The
--- dishwasher and purifier pages do not, and stand on the hood's until they
--- do: putting a hood behind the dishwasher page is showing one product while
--- talking about another.
+-- All five stand on a photograph of their own appliance now. The purifier was
+-- the last one holding a hood behind a page that talks about a purifier, and
+-- it is not doing that any more.
 UPDATE product_category SET
   hero_image_url =
     'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/kitchen-hood-hero-backdrop.jpg',
@@ -123,26 +122,41 @@ UPDATE product_category SET
     'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/kitchen-hood-finder-backdrop.jpg'
   WHERE slug = 'combi-and-steam-oven-in-malaysia';
 
--- PLACEHOLDERS. The dishwasher and purifier pages still stand on the hood's
--- two photographs because the client asked for one set across them while the
--- real ones are being produced. They are the wrong appliance: there is a hood
--- in both frames and nothing else, so the dishwasher page currently argues for
--- a dishwasher over a picture of a cooker hood.
+-- The dishwasher leads with its own machine as well: a built-in fronted in
+-- black glass, set into a dark cabinet run under a marble counter. Same terms
+-- as the hob and the oven — no cut-out over it, so the photograph IS the hero
+-- and the banner runs the full screen.
 --
--- What carries it in the meantime is the treatment rather than the subject.
--- Both are whole rooms rather than product shots, and at opacity-50 under a
--- wash of --void what reads is a kitchen, not the appliance in it. That is a
--- reason it is survivable, NOT a reason to leave it: replace both the moment
--- the correct images land, and this comment goes with them.
+-- The questionnaire backdrop is the hood's room shot and is not rendered on
+-- this page at all: that band needs more than two models to have anything to
+-- narrow, and there is one. It is set so the row is ready the day a second
+-- machine is published, on the same reasoning the hob and oven keep it — the
+-- band asks about the visitor's kitchen, not about the appliance.
 UPDATE product_category SET
   hero_image_url =
-    'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/kitchen-hood-hero-backdrop.jpg',
+    'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/dishwasher-hero-backdrop.jpg',
   finder_image_url =
     'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/kitchen-hood-finder-backdrop.jpg'
-  WHERE slug IN (
-    'dishwasher-in-malaysia',
-    'one-tap-purifier-in-malaysia'
-  );
+  WHERE slug = 'dishwasher-in-malaysia';
+
+-- The purifier now leads with its own units: the WDHG01 and the V818WD heater
+-- beside it on a marble counter, the tap in the same frame, in a kitchen of
+-- pale wood and daylight. It replaces the hood photograph this page stood on
+-- while the real ones were produced, which was the wrong appliance behind an
+-- argument about a purifier. Same terms as the hob, the oven and the
+-- dishwasher: no cut-out over it, so the photograph IS the hero and the banner
+-- runs the full screen.
+--
+-- The questionnaire backdrop is still the hood's room shot, and as on the
+-- dishwasher page it is not rendered here at all: that band needs more than
+-- two models to have anything to narrow, and there is one. It is set so the
+-- row is ready the day a second purifier is published.
+UPDATE product_category SET
+  hero_image_url =
+    'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/water-purifier-hero-backdrop.jpg',
+  finder_image_url =
+    'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/kitchen-hood-finder-backdrop.jpg'
+  WHERE slug = 'one-tap-purifier-in-malaysia';
 
 -- ── the photograph under the signature band ────────────────────────────────
 -- The lead model installed and working, which is the argument the band makes.
@@ -157,7 +171,19 @@ UPDATE product_category SET
 -- crops to a phone. The oven is a tall unit standing just left of centre in
 -- its frame, so it holds close to the middle horizontally, which also keeps
 -- it clear of the copy weighted right, and lifts a little vertically so the
--- control panel survives the crop rather than the plinth below the door.
+-- control panel survives the crop rather than the plinth below the door. The
+-- dishwasher stands open in a wide kitchen with its door down, and the part of
+-- it that reads at any size is the lit interior behind that door rather than
+-- the black slab of the door itself. So it holds a little left of centre,
+-- which is where the light is, and a portrait crop keeps the baskets instead
+-- of a dark panel. It drops below the middle for the same reason the oven
+-- lifts above it: crop the top of this frame and what is left is worktop.
+-- Measured at 52% first, which centres the door and loses the light.
+-- The purifier is two boxes and a tap on a counter, and the pair of boxes is
+-- the whole subject: they sit left of centre in a wide frame with the tap out
+-- at 75%, so the crop holds well left. That is also the side the desktop
+-- gradient leaves lit, the copy being weighted right. It drops below the
+-- middle for the dishwasher's reason: above the units there is only cabinet.
 UPDATE product_category SET
   signature_image_url =
     'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/kitchen-hood-signature-scene.webp',
@@ -179,6 +205,20 @@ UPDATE product_category SET
     'A VATTI built-in combi oven fitted at eye level into a dark walnut cabinet run, its display lit beside a marble backsplash.',
   signature_image_focus = '48% 46%'
   WHERE slug = 'combi-and-steam-oven-in-malaysia';
+UPDATE product_category SET
+  signature_image_url =
+    'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/dishwasher-signature-scene.jpg',
+  signature_image_alt =
+    'A VATTI DWBB7 dishwasher built into a grey cabinet run, its door down and its baskets lit, in a kitchen with a marble backsplash.',
+  signature_image_focus = '42% 55%'
+  WHERE slug = 'dishwasher-in-malaysia';
+UPDATE product_category SET
+  signature_image_url =
+    'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/water-purifier-signature-scene.jpg',
+  signature_image_alt =
+    'A VATTI WDHG01 water purifier and its V818WD heater on a marble counter, with the stainless One Tap fitted at the sink beside them.',
+  signature_image_focus = '40% 58%'
+  WHERE slug = 'one-tap-purifier-in-malaysia';
 
 -- ── the product beside the hero headline ───────────────────────────────────
 -- Nothing sets it, and that is now the arrangement on both written pages.
@@ -215,6 +255,21 @@ UPDATE product SET intro_md =
 UPDATE product SET intro_md =
   'A hob is usually a choice between a flame strong enough for a wok and a top that is quick to wipe down afterwards. The C861G lifts its burners clear of the glass, so the surface underneath cleans in one pass.'
   WHERE slug = 'vatti-magic-series-cooker-hob-c861g' AND intro_md IS NULL;
+UPDATE product SET intro_md =
+  'Most kitchens end up filtering the water in one place and heating it in another: a filter at the sink, a kettle on the counter and a jug in the fridge door. The WDHG01 does all three at one tap, from cold to 100°C, with 45°C in between for making up formula.'
+  WHERE slug = 'vatti-one-tap-water-purifier-wdhg01-with-v818wd' AND intro_md IS NULL;
+
+-- The DWBB7 is the one product whose intro is OVERWRITTEN rather than filled
+-- in. The V938 was the only model the scrape found real intro copy on; what it
+-- found here is the first line of the user manual listing ("provides detailed
+-- instructions on installation, operation, maintenance and troubleshooting"),
+-- which describes a PDF rather than the machine. That string is the lead
+-- paragraph of the signature band and of the product page, and on the
+-- dishwasher page the band is now the whole product section, so it is replaced
+-- outright. Not guarded on NULL for that reason.
+UPDATE product SET intro_md =
+  'The argument for a dishwasher in a Malaysian kitchen is not the washing up, it is the wok. The DWBB7 runs its wash at 75°C and dries at 110°C, which is water hotter than hands can work in and the reason cooking oil comes off a plate rather than moving around it.'
+  WHERE slug = 'vatti-dishwasher-dwbb7';
 
 -- ── kitchen hood: the series filter ────────────────────────────────────────
 -- The five terms the live page filters on, in the live tab order, read out of
@@ -830,16 +885,19 @@ UPDATE product SET best_for = CASE slug
 -- One published model, and that is the whole shape of this page.
 --
 -- Four sections of the template do not render here and none of it is a styling
--- decision: the signature band needs three models to be worth promoting one
--- out of, and the questionnaire and the comparison table both need more than
--- two to have anything to narrow or to compare. The range summary needs two
--- products carrying the same measurement before "best in range" means
+-- decision: the model grid needs a second model before it is a grid rather
+-- than a card, the questionnaire and the comparison table both need more than
+-- two to have anything to narrow or to compare, and the range summary needs
+-- two products carrying the same measurement before "best in range" means
 -- anything. All four gates are counts, so all four open by themselves the day
 -- a second dishwasher is published — the copy below needs no revisiting for
 -- that, only the "Best for" row needs a second line.
 --
--- What does render: the full-screen hero, the model grid, how to choose, six
--- reasons, the reviews, the buying guide and the FAQ.
+-- What does render: the full-screen hero, the signature band carrying the
+-- DWBB7 on its own, how to choose, six reasons, the reviews, the buying guide
+-- and the FAQ. The band is the product section on this page, which is why it
+-- is the one gate that is not a floor — it is suppressed at exactly two
+-- models, where the grid underneath would say the same thing twice.
 
 -- ── dishwasher: the measured figures ───────────────────────────────────────
 -- So the one card in the grid carries numbers rather than a blank where the
@@ -977,6 +1035,22 @@ UPDATE product SET best_for = 'Large families, oily cookware'
 -- ═══════════════════════════════════════════════════════════════════════════
 -- One published model, so the same four sections are absent for the same
 -- reason as on the dishwasher page. See that block above.
+
+-- ── purifier: the measured figures ─────────────────────────────────────────
+-- The readout under the signature copy carries one figure otherwise — the flow
+-- rate products.sql already reads off the spec sheet. These two come off the
+-- same sheet: bullet 5, 'Hot Water Temperature range 45°C to 100°C', and
+-- bullet 1, '4 Temperature mode'. source_position records which.
+--
+-- Positions 1 and 2, not 0 and 1: flow is already at 0 in products.sql, and
+-- that file is generated.
+INSERT INTO product_facet (product_id, facet, value, unit, label, position, source_position)
+SELECT p.id, m.facet, m.value, m.unit, m.label, m.position, m.source
+  FROM product p
+  JOIN (SELECT 'temperature' AS facet, 100 AS value, '°C' AS unit, 'Hot water' AS label, 1 AS position, 5 AS source
+  UNION ALL SELECT 'modes', 4, '', 'Temperatures', 2, 1
+  ) m
+ WHERE p.slug = 'vatti-one-tap-water-purifier-wdhg01-with-v818wd';
 
 -- ── purifier: how to choose ────────────────────────────────────────────────
 INSERT INTO category_guide (category_id, position, heading, body_md, figure, figure_unit) VALUES
