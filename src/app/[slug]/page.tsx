@@ -35,7 +35,7 @@ import {
   productSlugs,
   type Product,
 } from "@/lib/queries/product";
-import { WHATSAPP } from "@/lib/site";
+import { whatsappLink } from "@/lib/site";
 
 import { CategoryView } from "./CategoryView";
 
@@ -172,6 +172,22 @@ function categoryMetadata(category: Category): Metadata {
   };
 }
 
+/**
+ * What the product page's WhatsApp buttons type for the visitor. The model code
+ * gets a line of its own rather than being buried in the sentence: it is the one
+ * thing the sales team needs, the legacy H1 often carries it in prose too, and a
+ * secondary model (the hob a hood is sold beside) would otherwise be lost.
+ */
+function enquiryMessage(product: Product): string {
+  return [
+    `Hi VATTI Malaysia. I am enquiring about the ${product.name}.`,
+    "",
+    `Model: ${product.model_code}${product.secondary_model ? ` + ${product.secondary_model}` : ""}`,
+    "",
+    "Could you tell me the price and where I can see it?",
+  ].join("\n");
+}
+
 function ProductView({ product }: { product: Product }) {
   const facets = getFacets(product.id);
   const specs = getSpecs(product.id);
@@ -183,6 +199,7 @@ function ProductView({ product }: { product: Product }) {
   const videos = getVideos(product.id);
   const related = getRelated(product.id);
   const colourways = getColourways(product.id);
+  const enquireHref = whatsappLink(enquiryMessage(product));
 
   return (
     <>
@@ -282,7 +299,7 @@ function ProductView({ product }: { product: Product }) {
                   pushing these to the bottom opened a dead gap. */}
               <div className="hidden gap-3 pt-10 lg:flex">
                 <a
-                  href="#enquire"
+                  href={enquireHref}
                   className="rounded-sm bg-teal px-6 py-3 font-semibold text-void transition-opacity hover:opacity-90"
                 >
                   Enquire about {product.model_code}
@@ -426,7 +443,7 @@ function ProductView({ product }: { product: Product }) {
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
-                  href={WHATSAPP}
+                  href={enquireHref}
                   className="rounded-sm bg-teal px-6 py-3 font-semibold text-void transition-opacity hover:opacity-90"
                 >
                   WhatsApp us
@@ -486,11 +503,12 @@ function ProductView({ product }: { product: Product }) {
         )}
       </main>
 
-      {/* Mobile sticky CTA — 64% of traffic */}
+      {/* Mobile sticky CTA — 64% of traffic. Same prefilled message as the
+          desktop hero button: this bar is that button on a phone. */}
       <div className="fixed inset-x-0 bottom-0 z-[var(--z-sticky)] border-t border-line bg-void/95 px-4 py-3 backdrop-blur-sm lg:hidden">
         <div className="flex gap-3">
           <a
-            href={WHATSAPP}
+            href={enquireHref}
             className="flex-1 rounded-sm bg-teal px-4 py-3 text-center font-semibold text-void"
           >
             WhatsApp

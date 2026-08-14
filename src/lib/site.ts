@@ -2,6 +2,16 @@
  *  cart, no checkout, and (by the owner's decision) no forms. */
 export const WHATSAPP = "https://wa.me/60123366082";
 
+/**
+ * The same line, with `message` already typed into the chat. Nothing is sent:
+ * wa.me only fills the composer, and the visitor still presses send inside
+ * WhatsApp. Use it wherever the page knows what the enquiry is about, so the
+ * sales team reads the model code instead of asking for it.
+ */
+export function whatsappLink(message: string): string {
+  return `${WHATSAPP}?text=${encodeURIComponent(message)}`;
+}
+
 /** The "Catalog" menu item. WordPress links the raw /wp-content/ path; that
  *  path 301s to R2 via next.config.ts, but Vercel's firewall currently denies
  *  /wp-content/* before the redirect runs, so link the CDN object directly.

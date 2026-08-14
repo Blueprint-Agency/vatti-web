@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 
 import type { CategoryCard, Region } from "@/lib/queries/home";
-import { WHATSAPP } from "@/lib/site";
+import { whatsappLink } from "@/lib/site";
 
 /**
  * Composes a WhatsApp message out of a short questionnaire.
@@ -171,7 +171,7 @@ export function EnquiryBuilder({
     return lines.join("\n");
   }, [answers, category, name, questions]);
 
-  const href = `${WHATSAPP}?text=${encodeURIComponent(message)}`;
+  const href = whatsappLink(message);
 
   return (
     <div className="grid gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-14">
