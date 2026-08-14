@@ -1,5 +1,10 @@
-/** The sales line. Every conversion path on this site ends here — there is no
- *  cart, no checkout, and (by the owner's decision) no forms. */
+/** The sales line. Every *sales* path on this site ends here — there is no cart
+ *  and no checkout, and by the owner's decision no enquiry form either.
+ *
+ *  One exception, and only one: /vatti-ewarranty/ posts a real form to
+ *  /api/ewarranty. A registration carries a serial number, an invoice number
+ *  and a photograph of a receipt, which is not something to retype into a chat
+ *  window. Nothing else on the site submits anything. */
 export const WHATSAPP = "https://wa.me/60123366082";
 
 /**

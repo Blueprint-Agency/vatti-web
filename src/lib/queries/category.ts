@@ -103,6 +103,23 @@ export function categorySlugs(): string[] {
   ).map((r) => r.slug);
 }
 
+/**
+ * The five category hero backdrops, for a page that needs a kitchen behind its
+ * heading but does not belong to one category.
+ *
+ * These are already on R2 and already carry the hero treatment they were shot
+ * for, so borrowing one costs no upload and no new column. They are decorative
+ * by definition — the `image` table is not involved and there is no alt text,
+ * because a backdrop that needs describing is doing a job the copy should be
+ * doing. Ordered, so a caller that wants a stable pick can index it.
+ */
+export function categoryBackdrops(): string[] {
+  return all<{ url: string }>(
+    `SELECT hero_image_url AS url FROM product_category
+      WHERE hero_image_url IS NOT NULL ORDER BY sort_order`
+  ).map((r) => r.url);
+}
+
 export function getCategory(slug: string): Category | undefined {
   return get<Category>(
     `SELECT id, slug, name, h1, seo_title, meta_description, intro_md, signature_product_id,

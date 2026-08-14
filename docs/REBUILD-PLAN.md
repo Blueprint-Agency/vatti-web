@@ -148,7 +148,7 @@ in a bulk edit, so they publish no structured data at all. Re-enabling it is fre
 | 105 of 418 product images have no alt text | write alts |
 | FAQ schema missing on cooker-hob, dishwasher, one-tap-purifier despite visible FAQs | emit from DB |
 | `/oven/` and `/oven/recipe/` are empty orphan stubs, indexable | see § open questions |
-| eWarranty dealer dropdown has 80 hardcoded options; store CPT has 75 | unify into one `dealer` table |
+| eWarranty dealer dropdown has 80 hardcoded options; store CPT has 75 | ~~unify into one `dealer` table~~ **extracted to `warranty_dealer` (79 after one duplicate); kept separate from `store`, see schema.sql** |
 | Elementor's default "Sahara" palette was never rebranded | see § design |
 
 ---
@@ -169,7 +169,7 @@ in a bulk edit, so they publish no structured data at all. Re-enabling it is fre
 | 8 | `/store/[slug]/` | Dealer detail | 75 | `dealer` |
 | 9 | `/about-us/`, `/contact-us/`, `/vatti-pay/`, `/vatti-ewarranty/` | Static | 4 | SQL content blocks |
 | 10 | `/oven/`, `/oven/recipe/` | Stub | 2 | — |
-| 11 | `/api/enquiry`, `/api/ewarranty` | Route handler | 2 | — (email only) |
+| 11 | `/api/ewarranty/` | Route handler | 1 | `warranty_dealer`, `warranty_model` (email only) |
 
 Routes 2 and 3 share one dynamic segment. Next.js cannot have two dynamic segments at the same
 level, so `app/[slug]/page.tsx` resolves the slug against the DB and branches:
@@ -548,10 +548,17 @@ verified by hand.*
 Product detail, category, article/recipe, blog archive, homepage, dealer directory and detail, four
 static pages. *Done when: all ~238 URLs build and `pnpm links:check` finds no broken internal link.*
 
-**Phase 4 — Forms**
-`/api/enquiry` and `/api/ewarranty` route handlers → Resend. The eWarranty wizard reproduces all 23
-fields, the multi-product repeater, the conditional model selects, and the file upload (attached to
-the email; nothing persisted). *Done when: both forms deliver, including an attachment.*
+**Phase 4 — Forms** *(done)*
+`/api/ewarranty` → Resend. The wizard reproduces every field of the WPForms original, the
+multi-product repeater, the conditional model select and the file upload (attached to the email;
+nothing persisted). Three steps rather than four: the original's first and last pages were warranty
+periods and terms, which are now sections of the page itself, readable before anyone starts typing.
+Attachments are capped at 5 files and 4 MB total, which is Vercel's 4.5 MB request-body limit
+minus the JSON.
+
+`/api/enquiry` is **not built**. The owner's decision that the site carries no enquiry form
+(`src/lib/site.ts`) removed the thing it was for; EnquiryBuilder composes a WhatsApp message
+instead and submits nothing.
 
 **Phase 5 — SEO parity**
 Sitemap, robots, canonicals, Open Graph. JSON-LD: `Product` (absent today), `Recipe` (16),
@@ -597,7 +604,10 @@ should hold position. Both are directly observable through the connected GSC pro
 4. **eWarranty registrations are emailed, not stored.** That follows from build-time SQLite on
    Vercel — there is no writable database at runtime. Given the form captures serial numbers,
    purchase dates and invoices, a searchable registry is a plausible business need. If so, that
-   needs a real runtime DB (Turso or Postgres) and is out of the current scope.
+   needs a real runtime DB (Turso or Postgres) and is out of the current scope. **Shipped this
+   way.** The form is live and the email is the only record, so the service desk's inbox is now the
+   registry. Still open, and now urgent enough to answer before the traffic arrives rather than
+   after: an inbox is not searchable by serial number.
 5. ~~**Google reviews widget** on category pages — third-party embed. Keep it, or render cached
    reviews from the DB to avoid the render-blocking script?~~ **Resolved: rendered from the DB.**
    Four of the ten reviews the Trustindex widget rotates are in the `review` table, carried over

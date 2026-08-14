@@ -8,7 +8,8 @@ The current site is WordPress + Elementor: ~465 KB of HTML on the homepage, 891 
 with a statically-generated Next.js site backed by SQLite, **preserving every existing URL**.
 
 It is a lead-generation site, not a shop. There is no cart, no checkout and no prices — enquiries go
-to a form, and buyers are routed to one of 75 dealer stores.
+to WhatsApp, and buyers are routed to one of 75 dealer stores. The one form on the site is the
+eWarranty registration.
 
 ## Quick start
 
@@ -52,11 +53,23 @@ docs/REBUILD-PLAN.md   page inventory, data model, phased build plan, SEO guardr
 - `/kitchen-hood-in-malaysia/` outranks the homepage and is the single most valuable page on the
   site. Treat it accordingly.
 
+## Environment
+
+`.env.local` locally, project environment variables on Vercel. All are gitignored.
+
+| Variable | Used by | Notes |
+|---|---|---|
+| `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET`, `R2_ENDPOINT`, `R2_PUBLIC_HOST` | `scripts/media-upload.mjs` | Local only. Media is uploaded from a workstation, never at build time. |
+| `RESEND_API_KEY` | `/api/ewarranty` | Runtime. Without it the endpoint returns 503 and the form says so rather than losing the registration. |
+| `EWARRANTY_TO` | `/api/ewarranty` | Where registrations land. Comma-separated for more than one inbox. Defaults to `enquiry@vattimalaysia.com`, so it works unset. |
+| `EWARRANTY_FROM` | `/api/ewarranty` | Must be on a domain verified in Resend. Use `onboarding@resend.dev` until `vattimalaysia.com` is verified there. |
+
 ## Deployment
 
 Vercel. `prebuild` runs `db:build`, so the database is always current. Media is served from
-Cloudflare R2 via CDN. The only server-side code is two form handlers (`/api/enquiry`,
-`/api/ewarranty`) which email through Resend and persist nothing.
+Cloudflare R2 via CDN. The only server-side code is the form handlers, which email through Resend
+and persist nothing. `/api/ewarranty` is live; `/api/enquiry` is not built, because every other
+conversion path on the site ends in WhatsApp instead.
 
 Full detail, including the phased migration and verification steps, is in
 [`docs/REBUILD-PLAN.md`](docs/REBUILD-PLAN.md).

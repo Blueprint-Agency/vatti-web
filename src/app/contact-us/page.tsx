@@ -31,8 +31,10 @@ export default function ContactPage() {
                 within 48 hours.
               </p>
               {/* The source page ran a Contact Form 7 widget here. The owner has
-                  decided there are no forms on the new site: WhatsApp is the
-                  line the service team actually answers. */}
+                  decided there is no enquiry form on the new site: WhatsApp is
+                  the line the service team actually answers. The eWarranty
+                  registration is the one form that stayed, for the reason in
+                  src/lib/site.ts. */}
               <div className="mt-9 flex flex-wrap gap-3">
                 <a
                   href={WHATSAPP}

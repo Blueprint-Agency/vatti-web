@@ -406,9 +406,9 @@ CREATE TABLE recipe_step (
 -- Because they live under /store/, stores do NOT share the root [slug] segment
 -- with products and categories — they need their own route.
 --
--- ponytail: no is_warranty_dealer flag. The eWarranty dropdown's 80 hardcoded
--- options are not in this scrape, so the flag would be a guess on every row.
--- Add it when that list is actually extracted.
+-- No is_warranty_dealer flag. The eWarranty dropdown has now been extracted,
+-- but it lives in `warranty_dealer` below rather than as a column here — the
+-- two lists do not line up row for row, and the reasoning is written down there.
 CREATE TABLE store (
   id             INTEGER PRIMARY KEY,
   slug           TEXT NOT NULL UNIQUE,   -- authoritative, from WP REST
@@ -426,6 +426,46 @@ CREATE TABLE store (
   sort_order     INTEGER NOT NULL DEFAULT 0
 );
 CREATE INDEX store_region_idx ON store(region_slug, name);
+
+-- ---------------------------------------------------------------------------
+-- eWarranty registration.
+--
+-- The dropdowns behind /vatti-ewarranty/, extracted from the live WPForms
+-- markup — see data/sql/warranty.sql for the reading and what was cleaned.
+-- Deliberately NOT merged into `store`: 79 warranty dealers against 76 shop
+-- records, and 15 of the 79 have no match in `store` even after case and
+-- punctuation are normalised away. Some of those are the same business under a
+-- shorter name (`URBANEZ SDN BHD` here, two branches there), some have no
+-- shopfront page at all (`Vatti Flagship Store Atria Mall`, `ELLE ONNI
+-- TRADING`), and telling the two apart is a judgement call about the client's
+-- business, not a string comparison. A fuzzy join would silently drop dealers
+-- off a warranty form, which is worse than carrying the list twice. The
+-- unification in docs/REBUILD-PLAN.md § 6 needs the client to reconcile them
+-- by hand first.
+--
+-- Nothing a visitor submits comes back here. The registration is emailed and
+-- never persisted — SQLite is read-only at runtime; see § 9.4 of the plan.
+CREATE TABLE warranty_dealer (
+  id   INTEGER PRIMARY KEY,
+  name TEXT NOT NULL UNIQUE
+);
+
+CREATE TABLE warranty_product_type (
+  id         INTEGER PRIMARY KEY,
+  name       TEXT NOT NULL UNIQUE,   -- 'Hood', 'One Tap Water Purifier'
+  sort_order INTEGER NOT NULL DEFAULT 0
+);
+
+-- The model shown once a type is chosen. Not a FK to `product`: the form lists
+-- V935 and M821G, which are no longer in the catalogue, and a warranty form
+-- that cannot name a discontinued unit is useless to the person holding one.
+CREATE TABLE warranty_model (
+  id         INTEGER PRIMARY KEY,
+  type_id    INTEGER NOT NULL REFERENCES warranty_product_type(id) ON DELETE CASCADE,
+  code       TEXT NOT NULL,
+  sort_order INTEGER NOT NULL DEFAULT 0,
+  UNIQUE (type_id, code)
+);
 
 CREATE TABLE redirect (
   from_path TEXT PRIMARY KEY,

@@ -52,6 +52,7 @@ try {
     ["product_category", "product", "product_facet", "product_spec", "image", "product_image", "product_download", "product_video", "product_related"],
     ["blog_category", "article", "article_category", "article_image", "article_link", "recipe", "recipe_ingredient", "recipe_step"],
     ["store", "redirect"],
+    ["warranty_dealer", "warranty_product_type", "warranty_model"],
   ];
   for (const g of groups) console.log(g.map((t) => `${t}=${count(t)}`).join("  "));
   db.close();

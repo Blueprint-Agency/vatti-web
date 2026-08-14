@@ -25,8 +25,21 @@ remove it.
   for every page here.
 - Deployed on Vercel. **All** media on Cloudflare R2 behind a CDN — see § Images.
 
-Serverless route handlers exist only for the two forms (`/api/enquiry`, `/api/ewarranty`).
-They send email via Resend. **They never write to SQLite** — the filesystem is read-only at runtime.
+One serverless route handler exists: `/api/ewarranty`, which emails the registration via Resend
+(plain `fetch`, no SDK) and **never writes to SQLite** — the filesystem is read-only at runtime, so
+the email is the record. `/api/enquiry` was planned and is not built: every other conversion path
+ends in WhatsApp by the owner's decision. See `src/lib/site.ts`.
+
+The eWarranty form is therefore the only form on the site. Its two big selects are data, not code:
+`warranty_dealer` (79 authorised dealers) and `warranty_model` (41 codes under 8 appliance types).
+Appointing a dealer is a SQL edit in `data/sql/warranty.sql`. That list is deliberately **not** the
+same as `store` — 79 against 76, and they do not line up row for row. Do not "unify" them without
+the client reconciling the two by hand first; a fuzzy name match silently drops dealers off a
+warranty form.
+
+`RESEND_API_KEY`, `EWARRANTY_TO` and `EWARRANTY_FROM` configure delivery — see README § Environment.
+Without the key the endpoint returns 503 and the form tells the visitor, rather than swallowing a
+registration.
 
 ## Data flow
 

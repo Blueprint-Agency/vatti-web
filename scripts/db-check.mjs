@@ -167,6 +167,23 @@ check("stores missing their WordPress id", `
   SELECT slug FROM store
    WHERE wp_id IS NULL AND slug NOT IN (${localSlugs.join(", ") || "''"})`);
 
+// The eWarranty selects. An appliance type with no models renders a chooser
+// with nothing in it, and the field is required — the visitor cannot finish the
+// form and nothing on the page says why.
+check("warranty product types with no models", `
+  SELECT t.name FROM warranty_product_type t
+   LEFT JOIN warranty_model m ON m.type_id = t.id
+   WHERE m.id IS NULL`);
+
+// Two dealers whose names differ only by case or trailing punctuation read as
+// duplicates in a 79-option select, and the UNIQUE on name does not catch it.
+check("near-duplicate warranty dealers", `
+  SELECT a.name, b.name AS other FROM warranty_dealer a
+   JOIN warranty_dealer b
+     ON a.id < b.id
+    AND replace(replace(lower(a.name), '.', ''), ' ', '')
+      = replace(replace(lower(b.name), '.', ''), ' ', '')`);
+
 // Products and categories share one root [slug] route segment, so a collision
 // is a page that silently shadows another. Stores are NOT in this namespace.
 check("slug collisions across the root namespace", `
