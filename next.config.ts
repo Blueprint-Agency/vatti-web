@@ -29,6 +29,24 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "vattimalaysia.com" },
     ],
     formats: ["image/avif", "image/webp"],
+
+    // A year. The default is 60 seconds, and it applies here because R2 sends
+    // no Cache-Control of its own — check with `curl -I` against the CDN host
+    // and you get Content-Type, ETag and Last-Modified, nothing more. With no
+    // upstream max-age to inherit, every optimised image falls back to this
+    // number.
+    //
+    // Safe only because a changed picture gets a NEW KEY under § Images, so a
+    // URL's bytes never change and there is nothing to invalidate. If that rule
+    // ever stops holding, this has to come down with it.
+    //
+    // Worth knowing before tuning it: this is not what makes a hero appear
+    // late. Next serves an expired entry immediately and revalidates behind it
+    // (X-Nextjs-Cache: STALE, ~7ms), and browsers revalidate to a 304 with an
+    // empty body. Vercel also applies its own floor — deployed responses come
+    // back max-age=3600 regardless. What this buys is fewer re-transforms of
+    // pictures that are never going to change, not a faster first paint.
+    minimumCacheTTL: 31536000,
   },
 
   // The URL contract is data, not code: the 177 verified legacy 301s live in the

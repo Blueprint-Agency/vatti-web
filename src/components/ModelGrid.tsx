@@ -202,8 +202,23 @@ export function ModelGrid({
                       src={p.url}
                       alt={p.alt || ""}
                       fill
-                      // The first row is above the fold on every viewport.
-                      loading={i < 4 ? "eager" : "lazy"}
+                      // Lazy for the whole grid, including the first row.
+                      //
+                      // This said "the first row is above the fold on every
+                      // viewport" and loaded four of them eagerly. That was true
+                      // when a category hero was a shallow band. It is not true
+                      // now: every category has a backdrop and no cut-out, so
+                      // CategoryView takes the `banner` branch and the hero runs
+                      // a full 100dvh. This grid is the far side of a screenful
+                      // on all five.
+                      //
+                      // It was not merely wasted, it was contended. next/image
+                      // emits a <link rel=preload as=image> per eager image, so
+                      // the hero backdrop was racing four product shots that
+                      // nobody had scrolled to yet, none of the five carrying
+                      // fetchpriority. The LCP element should not be sharing the
+                      // preload queue with images a screen below it.
+                      loading="lazy"
                       // 256px below sm, not 100vw: the card is a fixed-width
                       // rail item there, and asking for a full-viewport image
                       // to fill a quarter of one is the kind of waste that

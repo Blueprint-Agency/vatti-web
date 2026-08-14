@@ -96,12 +96,18 @@ export function CategoryView({
    * no cut-out set over it.
    *
    * Both halves of that condition earn their place. Without a backdrop this
-   * would be a viewport of empty ground, which is what the three categories
-   * with no imagery would otherwise get. And with a cut-out the section height
+   * would be a viewport of empty ground. And with a cut-out the section height
    * is already set by the product column standing in it, so stretching it to
-   * the screen would scale that product to fill a viewport it was not shot
-   * for. The hood keeps the shallow band it was composed as; the hob, whose
-   * backdrop is the appliance installed, gets the whole screen.
+   * the screen would scale that product to fill a viewport it was not shot for.
+   *
+   * As it stands all five categories carry a backdrop and none carries a
+   * cut-out, so every one of them takes the full-screen branch. The split hero
+   * below is therefore unexercised by current data rather than dead: it is what
+   * `hero_product_image_url` is for, and filling that column in is what turns a
+   * category page back into a split. Anything measured against the full-screen
+   * hero — the deep drift, the parallax on the copy, what counts as
+   * below-the-fold in ModelGrid — is being measured against the only shape the
+   * five actually take today.
    */
   const banner = !scene && Boolean(category.hero_image_url);
 
