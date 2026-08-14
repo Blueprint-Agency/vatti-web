@@ -726,60 +726,93 @@
 }
 
 /* Rising and settling, slowly, off the bulb. Heat climbs — it does not pulse,
-   and the slowest duration in the set is part of saying so. */
+   and the slowest duration in the set is part of saying so.
+
+   It climbs, holds at the top for a quarter of the cycle, then falls away.
+   The hold is the claim: what these pages say about heat is that the machine
+   gets there and stays there. Measured at 1.08 first, which is 2px on a 26px
+   glyph and reads as a still mark next to a hood page where a fan turns. */
 @keyframes reason-climb {
   0%,
   100% {
     transform: scaleY(1);
   }
-  55% {
-    transform: scaleY(1.08);
+  34%,
+  62% {
+    transform: scaleY(1.18);
   }
 }
 
 /* Takes a knock and holds it. One recoil against a long steady stretch,
    because the claim is that the protection is already there rather than that
-   something is happening. */
+   something is happening.
+
+   The recoil decays across three poses, the way reason-wave does: up hard,
+   past level on the way back, then level. A single 1.5px lift was too small
+   to read as an impact at all, which left the mark looking still. */
 @keyframes reason-guard {
   0%,
-  72%,
+  64%,
   100% {
     transform: translateY(0) scale(1);
   }
-  78% {
-    transform: translateY(-1.5px) scale(1.05);
+  70% {
+    transform: translateY(-3px) scale(1.1);
   }
-  88% {
-    transform: translateY(0) scale(0.995);
+  78% {
+    transform: translateY(1px) scale(0.95);
+  }
+  86% {
+    transform: translateY(0) scale(1.02);
   }
 }
 
 /* A drop gathering weight. It lengthens and narrows as it hangs, then rounds
    back — which is what a drop does right up until it lets go. It never lets
    go: a mark that fell would have to snap back to the top to loop, and the
-   snap is the only frame anyone would notice. */
+   snap is the only frame anyone would notice.
+
+   Two beats, not one: it hangs and narrows, then rounds back a shade past
+   where it started before it rests. The rebound is what makes it read as
+   surface tension rather than as a mark being scaled. */
 @keyframes reason-drip {
   0%,
   100% {
     transform: scaleY(1) scaleX(1);
   }
-  55% {
-    transform: scaleY(1.07) scaleX(0.96);
+  40% {
+    transform: scaleY(1.18) scaleX(0.9);
+  }
+  64% {
+    transform: scaleY(0.96) scaleX(1.05);
+  }
+  82% {
+    transform: scaleY(1.01) scaleX(0.99);
   }
 }
 
 /* Out from the dot. It draws in toward the source and releases, so the arcs
    read as signal leaving it. Rests at the full mark, which is the pose a
-   reduced-motion reader is left looking at. */
+   reduced-motion reader is left looking at.
+
+   It draws in far enough to be seen doing it and releases a shade past full,
+   so the arcs leave the dot rather than breathe around it. */
 @keyframes reason-signal {
   0%,
   100% {
     transform: scale(1);
     opacity: 1;
   }
-  45% {
-    transform: scale(0.93);
-    opacity: 0.68;
+  28% {
+    transform: scale(0.82);
+    opacity: 0.4;
+  }
+  52% {
+    transform: scale(1.06);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(1);
   }
 }
 
