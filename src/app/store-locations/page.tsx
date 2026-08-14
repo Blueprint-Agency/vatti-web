@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 import { SiteHeader } from "@/components/SiteHeader";
@@ -74,7 +75,7 @@ export default function StoreLocationsPage() {
           </nav>
         </div>
 
-        {regions.map((region) => (
+        {regions.map((region, ri) => (
           <section
             key={region.slug}
             id={region.slug}
@@ -89,11 +90,38 @@ export default function StoreLocationsPage() {
             </h2>
 
             <ul className="mt-8 grid gap-5 [grid-template-columns:repeat(auto-fit,minmax(280px,1fr))]">
-              {region.stores.map((s) => (
+              {region.stores.map((s, i) => (
                 <li
                   key={s.slug}
-                  className="flex flex-col gap-3 rounded-sm border border-line bg-surface p-5"
+                  className="group flex flex-col gap-3 rounded-sm border border-line bg-surface p-5"
                 >
+                  {/* The shopfront photo is how someone recognises the place they
+                      are about to drive to, so it leads the card. All 76 dealers
+                      have one; the guard is for a dealer appointed before their
+                      picture arrives. It is decorative here — alt is empty and
+                      the link is out of the tab order, because the heading below
+                      is the same link with the same destination and a name. */}
+                  {s.url && (
+                    <Link
+                      href={`/store/${s.slug}/`}
+                      tabIndex={-1}
+                      aria-hidden="true"
+                      className="relative aspect-[3/2] overflow-hidden rounded-sm bg-void"
+                    >
+                      <Image
+                        src={s.url}
+                        alt=""
+                        fill
+                        // Only the first region's opening row is anywhere near
+                        // the fold — the notice block and the region nav push
+                        // everything else well below it.
+                        loading={ri === 0 && i < 3 ? "eager" : "lazy"}
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 45vw, 300px"
+                        className="object-cover transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover:scale-[1.03]"
+                      />
+                    </Link>
+                  )}
+
                   <h3 className="font-medium leading-snug">
                     <Link
                       href={`/store/${s.slug}/`}
