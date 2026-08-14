@@ -351,6 +351,92 @@
     view-timeline-axis: block;
   }
 
+  /* The five core values, on cards that turn over.
+   *
+   * Both faces are always in the DOM and neither is ever display:none, so the
+   * description is read by assistive tech, indexed by a crawler and printed,
+   * whichever way the card happens to be facing.
+   *
+   * The DEFAULT state is not a flip at all. Unturned, the two faces simply
+   * stack and the card reads icon, name, description down one column — which
+   * is what a phone gets, what a reduced-motion reader gets, and what anything
+   * without a real pointer gets. The turn is added on top of that, and only
+   * inside the query below: hover-only content that a finger can never reach
+   * is content that is not there.
+   *
+   * Padding is set here for both states rather than as a utility on the
+   * element. The back face has no top padding while it is stacked under the
+   * front, and a full box once it is a face of its own, and splitting that
+   * across two systems is how one of them ends up quietly winning.
+   */
+  .value-card-label {
+    display: none;
+  }
+  .value-card-back {
+    padding: 0 1.5rem 1.5rem;
+  }
+
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    .value-card {
+      perspective: 1000px;
+    }
+    .value-card-inner {
+      position: relative;
+      height: 100%;
+      transform-style: preserve-3d;
+      /* Ease-out-quart, as everywhere else here. A flip on a linear curve
+         reads as a mechanism being cranked; this one has to settle. */
+      transition: transform 620ms var(--ease-out-quart);
+    }
+    /* :focus-visible as well as :hover, and the tabindex that makes it
+       reachable is on the card in the markup. A sighted keyboard user has no
+       other way to turn one of these over. */
+    .value-card:hover .value-card-inner,
+    .value-card:focus-visible .value-card-inner {
+      transform: rotateY(180deg);
+    }
+    .value-card-face {
+      height: 100%;
+      backface-visibility: hidden;
+    }
+    .value-card-back {
+      position: absolute;
+      inset: 0;
+      padding: 1.5rem;
+      /* One step off the card in front of it, so turning one over reads as
+         seeing its other side rather than as the text being swapped. It also
+         keeps the back opaque: the card's own --surface sits flat behind the
+         rotation, and two coplanar layers at z=0 flicker. */
+      background: var(--color-raised);
+      transform: rotateY(180deg);
+    }
+    /* The name again, on the back. Without it a turned card is a paragraph
+       with nothing to attach itself to. Hidden while the faces are stacked,
+       where the front is saying it an inch higher up. */
+       The gap under it rides on the same rule. Set as a utility on the element
+       it would survive the label being hidden, and the stacked card would open
+       with three quarters of a line of nothing under the name. */
+    .value-card-label {
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  /* The closing band on the about page, which is the second photographic scene
+     on that page. Its own timeline rather than borrowing --hero, for the reason
+     .readout-band gives just above: --hero is declared by the banner at the top
+     of the same document, and a timeline name declared twice on one page is a
+     name resolved by accident. Travel is the shallow variant's — this band is
+     only as tall as its own copy, so keep .close-drift's scale in step with
+     .category-hero-drift, whose keyframes it borrows. */
+  .close-scene {
+    view-timeline-name: --close;
+    view-timeline-axis: block;
+  }
+  .close-drift {
+    transform: scale(1.25);
+  }
+
   /* The signature band on the category pages. The photograph drifts against
      the scroll, so the copy set over it reads as sitting in front of a scene
      rather than on top of a picture.
@@ -528,6 +614,14 @@
     .category-hero-drift-deep {
       animation: category-hero-drift-deep linear both;
       animation-timeline: --hero;
+      animation-range: cover 0% cover 100%;
+    }
+    /* Same keyframes as the shallow category hero, on the about page's own
+       timeline. The two are the same shape of band and want the same travel;
+       only the name they read differs. */
+    .close-drift {
+      animation: category-hero-drift linear both;
+      animation-timeline: --close;
       animation-range: cover 0% cover 100%;
     }
     /* The hero copy, travelling AGAINST the backdrop. The backdrop drifts down
