@@ -80,8 +80,10 @@ UPDATE product_category SET signature_product_id =
 -- picture: opacity-50 under a wash of --void, at which strength what reads is
 -- the room and not the appliance in it.
 --
--- Hoods and hobs only. Putting either behind the dishwasher page would be
--- showing one product while talking about another.
+-- Hoods, hobs and ovens have a photograph of their own appliance. The
+-- dishwasher and purifier pages do not, and stand on the hood's until they
+-- do: putting a hood behind the dishwasher page is showing one product while
+-- talking about another.
 UPDATE product_category SET
   hero_image_url =
     'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/kitchen-hood-hero-backdrop.jpg',
@@ -105,8 +107,24 @@ UPDATE product_category SET
     'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/kitchen-hood-finder-backdrop.jpg'
   WHERE slug = 'cooker-hob-in-malaysia';
 
--- PLACEHOLDERS. The oven, dishwasher and purifier pages share the hood's two
--- photographs because the client asked for one set across all three while the
+-- The oven now leads with its own appliance too: a built-in combi set in a
+-- walnut cabinet run at eye level, which is the height the guide beside it
+-- argues an oven belongs at. Same treatment as the hob, and the same reason
+-- it is a full-screen banner rather than a shallow band: no cut-out is set
+-- over it, so the photograph IS the hero.
+--
+-- The questionnaire band below it is still the hood's room shot, on the same
+-- terms the hob keeps it: that band asks about the visitor's kitchen, not
+-- about the appliance, and nothing in the copy beside it names a product.
+UPDATE product_category SET
+  hero_image_url =
+    'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/combi-oven-hero-backdrop.jpg',
+  finder_image_url =
+    'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/kitchen-hood-finder-backdrop.jpg'
+  WHERE slug = 'combi-and-steam-oven-in-malaysia';
+
+-- PLACEHOLDERS. The dishwasher and purifier pages still stand on the hood's
+-- two photographs because the client asked for one set across them while the
 -- real ones are being produced. They are the wrong appliance: there is a hood
 -- in both frames and nothing else, so the dishwasher page currently argues for
 -- a dishwasher over a picture of a cooker hood.
@@ -114,15 +132,14 @@ UPDATE product_category SET
 -- What carries it in the meantime is the treatment rather than the subject.
 -- Both are whole rooms rather than product shots, and at opacity-50 under a
 -- wash of --void what reads is a kitchen, not the appliance in it. That is a
--- reason it is survivable, NOT a reason to leave it: replace all three the
--- moment the correct images land, and this comment goes with them.
+-- reason it is survivable, NOT a reason to leave it: replace both the moment
+-- the correct images land, and this comment goes with them.
 UPDATE product_category SET
   hero_image_url =
     'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/kitchen-hood-hero-backdrop.jpg',
   finder_image_url =
     'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/kitchen-hood-finder-backdrop.jpg'
   WHERE slug IN (
-    'combi-and-steam-oven-in-malaysia',
     'dishwasher-in-malaysia',
     'one-tap-purifier-in-malaysia'
   );
@@ -137,7 +154,10 @@ UPDATE product_category SET
 -- up and left and the right edge is the side that can afford to go. The hob
 -- sits centre and slightly low in a wide countertop shot, so it holds nearer
 -- the middle and drops a little to keep the burners in frame when the band
--- crops to a phone.
+-- crops to a phone. The oven is a tall unit standing just left of centre in
+-- its frame, so it holds close to the middle horizontally, which also keeps
+-- it clear of the copy weighted right, and lifts a little vertically so the
+-- control panel survives the crop rather than the plinth below the door.
 UPDATE product_category SET
   signature_image_url =
     'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/kitchen-hood-signature-scene.webp',
@@ -152,6 +172,13 @@ UPDATE product_category SET
     'A VATTI C861G cooker hob set into a marble countertop, its brushed grey glass and lit touch strip between a toaster, a kettle and a chopping board.',
   signature_image_focus = '45% 62%'
   WHERE slug = 'cooker-hob-in-malaysia';
+UPDATE product_category SET
+  signature_image_url =
+    'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/combi-oven-signature-scene.jpg',
+  signature_image_alt =
+    'A VATTI built-in combi oven fitted at eye level into a dark walnut cabinet run, its display lit beside a marble backsplash.',
+  signature_image_focus = '48% 46%'
+  WHERE slug = 'combi-and-steam-oven-in-malaysia';
 
 -- ── the product beside the hero headline ───────────────────────────────────
 -- Nothing sets it, and that is now the arrangement on both written pages.
