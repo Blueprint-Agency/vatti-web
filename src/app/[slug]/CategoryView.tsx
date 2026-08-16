@@ -173,6 +173,55 @@ export function CategoryView({
                 />
               </div>
               <div className="absolute inset-0 bg-void/45" />
+              {/* The wash above is a contrast floor and nothing else: it lowers
+                  the whole frame by one flat amount, so whatever the photograph
+                  is already doing survives at full amplitude. On four of these
+                  five backdrops what it is doing is architecture — a countertop
+                  run on the dishwasher page, a cabinet line on the hood page —
+                  and a flat knock-down leaves that edge as a hard, full-width
+                  brightness step landing just under the breadcrumb. Measured
+                  against --void: 66 above the dishwasher's counter edge and 16
+                  below it, across the whole width. At that amplitude, with no
+                  lighting anywhere else in the frame to explain it, the eye
+                  reads a rendering fault rather than a kitchen.
+
+                  So the frame gets lit. These two ramp --void back in towards
+                  every edge and leave the middle untouched, which is a vignette
+                  built the way the rest of the file builds things — two utility
+                  layers on a token that flips with the ground, rather than a
+                  filter or a second image.
+
+                  Symmetric on both axes, and that is the requirement rather
+                  than the taste: this copy is CENTRED. The home page hero
+                  weights its ramp left (`from-void/92 ... to-void/15`) because
+                  its copy ranges left against a lit hood, and the same ramp
+                  here would leave the headline sitting off the bright side of
+                  its own backdrop. `via-void/0` rather than `via-transparent`
+                  so the midpoint is this colour at zero alpha and the ramp
+                  cannot pick up a cast on the way through.
+
+                  Horizontal is the stronger of the two because the imbalance
+                  is: the oven backdrop runs 66 down the left gutter against 28
+                  through the column. Vertical is lighter, and bottom-heavy
+                  rather than even — the top only needs enough to stop the
+                  breadcrumb strip reading as its own plate, while the foot is
+                  also the join into the summary band, which is the seam the
+                  home hero spends its third layer on.
+
+                  Measured over all five backdrops at 1920, 1440, 1280 and 1100
+                  in both grounds, worst case: the vertical step falls 47 -> 32
+                  and the horizontal 45 -> 27 in the dark ground, and 47 -> 43
+                  and 44 -> 34 in the light one, where the wash has already
+                  carried the photograph most of the way to white and there is
+                  less left to compress. They cannot flatten a photograph
+                  completely and should not: what is left is a gradient, and a
+                  gradient reads as light falling on a room. A step that is IN
+                  the picture — the dishwasher's counter edge is the one that
+                  survives largest — wants a different backdrop, not a heavier
+                  overlay. Re-measure per DESIGN.md § Verification if either
+                  number moves. */}
+              <div className="absolute inset-0 bg-gradient-to-r from-void/45 via-void/0 to-void/45" />
+              <div className="absolute inset-0 bg-gradient-to-b from-void/35 via-void/0 to-void/45" />
             </div>
           )}
 
