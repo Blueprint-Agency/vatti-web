@@ -93,6 +93,18 @@ const GUIDE_PATHS = [
 const HERO_PRODUCT = "vatti-aetheris-series-cooker-hood-v929";
 const HERO_IMAGE = "/hero-v929-panel.webp";
 
+/**
+ * The kitchen behind the questionnaire. On R2 like every other content image,
+ * but a literal rather than a DB read: the home page has no row of its own, and
+ * a table for one decorative backdrop is more machinery than the picture. Same
+ * reasoning as CATALOGUE in site.ts.
+ *
+ * Give this a NEW key whenever the picture changes — R2 is served with a long
+ * max-age and the optimizer caches by path.
+ */
+const ENQUIRY_BACKDROP =
+  "https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/home-enquiry-kitchen-backdrop.jpg";
+
 /** Editorial, from the source homepage — there is no sales data in the DB. */
 const BESTSELLER_SLUGS = [
   "vatti-magic-series-cooker-hood-v919",
@@ -604,7 +616,48 @@ export default function HomePage() {
             Below the range and the credibility case, not above them: every
             brand site on page 1 puts the ask last, and this one used to sit
             second, in front of the argument for asking at all. */}
-        <section aria-labelledby="contact-heading" className="border-t border-line bg-surface">
+        <section
+          aria-labelledby="contact-heading"
+          className="relative isolate border-t border-line bg-surface"
+        >
+          {/* The kitchen the questions are about, half-strength behind them.
+              Decorative, so the whole stack is hidden from the tree.
+
+              A band at the picture's own aspect, not the section's. Eight
+              questions make this section around 1700px tall, and object-cover
+              over that box scales a 16:9 frame past 2x — you get a blurred
+              worktop and a bowl, and the hood, the hob and the oven that are
+              the whole reason to run the photograph are off the edge. Pinned to
+              16:9 it lands at roughly 1:1 on a desktop and the frame survives.
+              Portrait gets 4:5, because 16:9 across a phone is a strip of
+              cabinet: the taller box crops to the middle of the frame, which is
+              the hood over the hob, and that is the half worth showing small.
+
+              Ramped like the hero, and for the same reason: the questions and
+              their hairline chips sit straight on this ground with nothing
+              opaque under them, so the left carries a knock-down the right does
+              not — the summary card is opaque and the space beside the heading
+              is empty, which is where the picture gets to be a picture. On a
+              phone the copy crosses the full width, so there an even one is
+              honest.
+
+              The foot dissolves back into surface well before the contact grid:
+              those three cells are opaque bg-surface against a bg-line parent,
+              and over a photograph they would read as a patch rather than as a
+              hairline rule. */}
+          <div aria-hidden className="absolute inset-0 -z-10 overflow-hidden">
+            <div className="absolute inset-x-0 top-0 aspect-[4/5] sm:aspect-[16/9]">
+              <Image src={ENQUIRY_BACKDROP} alt="" fill sizes="100vw" className="object-cover opacity-50" />
+              <div className="absolute inset-0 bg-surface/70 lg:hidden" />
+              <div className="absolute inset-0 hidden bg-gradient-to-r from-surface/90 via-surface/55 to-surface/20 lg:block" />
+              {/* to-surface/0, not to-transparent: `transparent` is transparent
+                  BLACK, so the ramp interpolates through a dark step and lays a
+                  grey haze across the middle of the band on the light ground.
+                  Fading the ground colour out against itself has no midpoint. */}
+              <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-surface via-surface/75 to-surface/0" />
+            </div>
+          </div>
+
           <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
             <div className="max-w-[52ch]">
               <h2
