@@ -1,0 +1,171 @@
+{
+  "product": "vatti-magic-series-combi-oven-va06",
+  "note": "A 27-slide deck. Curated to the fifteen that carry a distinct argument; the rest repeat them. Slide32 is the specification slide and is dropped, its figures going to product_dimension. Mode labels printed on a picture (LOW/MEDIUM/HIGH, STEW 1/2/3, ROOT CROPS/MEAT) stay: they name what is in the frame.",
+  "crops": [
+    {
+      "from": "2024/04/Slide1-2.jpg",
+      "to": "2026/08/va06-hero.webp",
+      "box": [
+        0,
+        0,
+        0.6,
+        0.76
+      ],
+      "why": "claim across the foot"
+    },
+    {
+      "from": "2024/04/Slide2-2.jpg",
+      "to": "2026/08/va06-five-in-one.webp",
+      "box": [
+        0.02,
+        0.14,
+        0.98,
+        1
+      ],
+      "why": "title above; the five mode labels stay"
+    },
+    {
+      "from": "2024/04/Slide3-2.jpg",
+      "to": "2026/08/va06-screen.webp",
+      "box": [
+        0,
+        0,
+        0.56,
+        1
+      ],
+      "why": "copy set down the right"
+    },
+    {
+      "from": "2024/04/Slide4-2.jpg",
+      "to": "2026/08/va06-steam.webp",
+      "box": [
+        0,
+        0,
+        0.52,
+        1
+      ],
+      "why": "copy set down the right"
+    },
+    {
+      "from": "2024/04/Slide5-2.jpg",
+      "to": "2026/08/va06-humidity.webp",
+      "box": [
+        0.02,
+        0.18,
+        0.98,
+        0.79
+      ],
+      "why": "title above, caption below"
+    },
+    {
+      "from": "2024/04/Slide12-1.jpg",
+      "to": "2026/08/va06-steam-grill.webp",
+      "box": [
+        0,
+        0.4,
+        1,
+        1
+      ],
+      "why": "the comparison copy sits above the two photographs"
+    },
+    {
+      "from": "2024/04/Slide13-1.jpg",
+      "to": "2026/08/va06-humidity-roast.webp",
+      "box": [
+        0.05,
+        0.16,
+        0.95,
+        0.95
+      ],
+      "why": "title above; the humidity labels stay"
+    },
+    {
+      "from": "2024/04/Slide14.jpg",
+      "to": "2026/08/va06-ingredients.webp",
+      "box": [
+        0.05,
+        0.19,
+        0.95,
+        0.98
+      ],
+      "why": "title above; each dish is labelled with its humidity"
+    },
+    {
+      "from": "2024/04/Slide17.jpg",
+      "to": "2026/08/va06-bake-compare.webp",
+      "box": [
+        0.02,
+        0.14,
+        0.66,
+        0.55
+      ],
+      "why": "the verdict is set to the right of the pictures"
+    },
+    {
+      "from": "2024/04/Slide18.jpg",
+      "to": "2026/08/va06-air-fry.webp",
+      "box": [
+        0.42,
+        0,
+        1,
+        1
+      ],
+      "why": "heading set to the left"
+    },
+    {
+      "from": "2024/04/Slide19.jpg",
+      "to": "2026/08/va06-air-fry-modes.webp",
+      "box": [
+        0.02,
+        0.24,
+        0.72,
+        1
+      ],
+      "why": "title above; the two mode labels stay"
+    },
+    {
+      "from": "2024/04/Slide20.jpg",
+      "to": "2026/08/va06-stew.webp",
+      "box": [
+        0,
+        0,
+        0.42,
+        1
+      ],
+      "why": "heading and copy set to the right"
+    },
+    {
+      "from": "2024/04/Slide21.jpg",
+      "to": "2026/08/va06-stew-modes.webp",
+      "box": [
+        0.02,
+        0.16,
+        0.98,
+        1
+      ],
+      "why": "title above; the three stew labels stay"
+    },
+    {
+      "from": "2024/04/Slide31.jpg",
+      "to": "2026/08/va06-auto-clean.webp",
+      "box": [
+        0,
+        0.26,
+        1,
+        1
+      ],
+      "why": "heading above"
+    },
+    {
+      "from": "2024/04/Slide28.jpg",
+      "to": "2026/08/va06-recipes.webp",
+      "box": [
+        0,
+        0.2,
+        1,
+        0.72
+      ],
+      "why": "heading above"
+    }
+  ]
+}

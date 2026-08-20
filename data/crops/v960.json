@@ -1,0 +1,138 @@
+{
+  "product": "vatti-stellar-series-cooker-hood-v960",
+  "note": "Twelve posters on one template: heading at the top, photograph under it. V960-PG13 is a specification sheet and is dropped; its figures are in product_dimension.",
+  "crops": [
+    {
+      "from": "2026/05/V960-PG1.webp",
+      "to": "2026/08/v960-hero.webp",
+      "box": [
+        0.02,
+        0.3,
+        0.62,
+        0.8
+      ],
+      "why": "title block and icon row; the ambassador portrait is left out of the crop"
+    },
+    {
+      "from": "2026/05/V960-PG2.webp",
+      "to": "2026/08/v960-slim.webp",
+      "box": [
+        0,
+        0.4,
+        1,
+        1
+      ],
+      "why": "heading above; the 225mm and 190mm callouts are dimensions and stay"
+    },
+    {
+      "from": "2026/05/V960-PG3.webp",
+      "to": "2026/08/v960-motion-display.webp",
+      "box": [
+        0,
+        0.36,
+        1,
+        0.95
+      ],
+      "why": "heading and paragraph above"
+    },
+    {
+      "from": "2026/05/V960-PG4.webp",
+      "to": "2026/08/v960-dual-chamber.webp",
+      "box": [
+        0,
+        0.3,
+        1,
+        0.8
+      ],
+      "why": "heading above, certificate badge below"
+    },
+    {
+      "from": "2026/05/V960-PG5.webp",
+      "to": "2026/08/v960-pressure.webp",
+      "box": [
+        0,
+        0.36,
+        1,
+        0.8
+      ],
+      "why": "heading above"
+    },
+    {
+      "from": "2026/05/V960-PG6.webp",
+      "to": "2026/08/v960-airflow.webp",
+      "box": [
+        0,
+        0.35,
+        1,
+        0.72
+      ],
+      "why": "heading above"
+    },
+    {
+      "from": "2026/05/V960-PG8.webp",
+      "to": "2026/08/v960-quiet.webp",
+      "box": [
+        0.42,
+        0.3,
+        1,
+        0.78
+      ],
+      "why": "heading above"
+    },
+    {
+      "from": "2026/05/V960-PG9.webp",
+      "to": "2026/08/v960-radar.webp",
+      "box": [
+        0,
+        0.4,
+        1,
+        0.8
+      ],
+      "why": "heading above"
+    },
+    {
+      "from": "2026/05/V960-PG10.webp",
+      "to": "2026/08/v960-auto-sync.webp",
+      "box": [
+        0.36,
+        0.26,
+        1,
+        0.95
+      ],
+      "why": "heading above"
+    },
+    {
+      "from": "2026/05/V960-PG11.webp",
+      "to": "2026/08/v960-surface.webp",
+      "box": [
+        0,
+        0.5,
+        1,
+        0.78
+      ],
+      "why": "heading and bullet list above"
+    },
+    {
+      "from": "2026/05/V960-PG12.webp",
+      "to": "2026/08/v960-self-clean.webp",
+      "box": [
+        0,
+        0.44,
+        1,
+        0.82
+      ],
+      "why": "heading above"
+    },
+    {
+      "from": "2026/05/V960-PG7.webp",
+      "to": "2026/08/v960-pm25.webp",
+      "box": [
+        0,
+        0.42,
+        1,
+        0.8
+      ],
+      "why": "heading and paragraph above"
+    }
+  ]
+}

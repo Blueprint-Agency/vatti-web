@@ -1,0 +1,116 @@
+{
+  "product": "vatti-magic-series-cooker-hob-c861g",
+  "note": "Landscape slides, heading over or beside the picture, plus two clean studio renders that need no crop.",
+  "crops": [
+    {
+      "from": "2024/04/Slide1-1.jpg",
+      "to": "2026/08/c861g-flip-up.webp",
+      "box": [
+        0,
+        0,
+        0.62,
+        0.7
+      ],
+      "why": "title set across the foot and the model name to the right"
+    },
+    {
+      "from": "2024/04/Slide2-1.jpg",
+      "to": "2026/08/c861g-reversible.webp",
+      "box": [
+        0,
+        0.3,
+        0.5,
+        0.85
+      ],
+      "why": "heading above, patent line below, second panel to the right"
+    },
+    {
+      "from": "2024/04/Slide2-1.jpg",
+      "to": "2026/08/c861g-save-space.webp",
+      "box": [
+        0.52,
+        0.6,
+        0.98,
+        0.98
+      ],
+      "why": "the drawer-clearance photo from the same slide"
+    },
+    {
+      "from": "2024/04/Slide3-1.jpg",
+      "to": "2026/08/c861g-oxygen.webp",
+      "box": [
+        0.52,
+        0.42,
+        0.98,
+        0.92
+      ],
+      "why": "heading above; the suspension diagram is the right half"
+    },
+    {
+      "from": "2024/04/Slide4-1.jpg",
+      "to": "2026/08/c861g-touch.webp",
+      "box": [
+        0,
+        0,
+        1,
+        0.72
+      ],
+      "why": "claim across the foot"
+    },
+    {
+      "from": "2024/04/Slide10-1.jpg",
+      "to": "2026/08/c861g-power.webp",
+      "box": [
+        0,
+        0.24,
+        1,
+        0.86
+      ],
+      "why": "heading and efficiency line above"
+    },
+    {
+      "from": "2024/04/Slide5-1.jpg",
+      "to": "2026/08/c861g-easy-clean.webp",
+      "box": [
+        0,
+        0.18,
+        1,
+        1
+      ],
+      "why": "heading above"
+    },
+    {
+      "from": "2024/04/Slide7-1.jpg",
+      "to": "2026/08/c861g-sensor.webp",
+      "box": [
+        0,
+        0.28,
+        1,
+        1
+      ],
+      "why": "heading and paragraph above"
+    },
+    {
+      "from": "2024/04/Slide8-1.jpg",
+      "to": "2026/08/c861g-management.webp",
+      "box": [
+        0,
+        0.3,
+        1,
+        0.92
+      ],
+      "why": "heading above"
+    },
+    {
+      "from": "2024/04/Slide9-1.jpg",
+      "to": "2026/08/c861g-temperature.webp",
+      "box": [
+        0,
+        0.3,
+        1,
+        1
+      ],
+      "why": "heading and paragraph above"
+    }
+  ]
+}

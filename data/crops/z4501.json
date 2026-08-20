@@ -1,0 +1,52 @@
+{
+  "product": "built-in-steam-oven-z4501",
+  "note": "Two posters and two GIFs, the animations cut at their last frame.",
+  "crops": [
+    {
+      "from": "2023/11/Built-in-Steam-Oven-Z4501-8.webp",
+      "to": "2026/08/z4501-hero.webp",
+      "box": [
+        0,
+        0.34,
+        1,
+        1
+      ],
+      "why": "title and feature list above"
+    },
+    {
+      "from": "2023/11/Built-in-Steam-Oven-Z4501-4.webp",
+      "to": "2026/08/z4501-no-drip.webp",
+      "box": [
+        0,
+        0.22,
+        1,
+        0.55
+      ],
+      "why": "heading above, comparison notes below"
+    },
+    {
+      "from": "2023/02/VA01-PRESENTATION-5.gif",
+      "to": "2026/08/z4501-steam-grill.webp",
+      "frame": -1,
+      "box": [
+        0,
+        0.2,
+        1,
+        0.52
+      ],
+      "why": "animation; heading printed across the top"
+    },
+    {
+      "from": "2023/02/BBB.gif",
+      "to": "2026/08/z4501-recipes.webp",
+      "frame": -1,
+      "box": [
+        0,
+        0.26,
+        1,
+        1
+      ],
+      "why": "animation; heading and paragraph above"
+    }
+  ]
+}

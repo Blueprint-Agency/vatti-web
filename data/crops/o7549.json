@@ -1,0 +1,50 @@
+{
+  "product": "vatti-built-in-oven-o7549",
+  "note": "Four tall posters plus two clean studio renders that need no crop.",
+  "crops": [
+    {
+      "from": "2023/11/Built-in-Oven-O754-7.webp",
+      "to": "2026/08/o7549-hero.webp",
+      "box": [
+        0,
+        0.3,
+        1,
+        1
+      ],
+      "why": "title above"
+    },
+    {
+      "from": "2023/11/Built-in-Oven-O754-5.webp",
+      "to": "2026/08/o7549-capacity.webp",
+      "box": [
+        0,
+        0.22,
+        1,
+        1
+      ],
+      "why": "claim above"
+    },
+    {
+      "from": "2023/11/Built-in-Oven-O754-1.webp",
+      "to": "2026/08/o7549-modes.webp",
+      "box": [
+        0.02,
+        0.24,
+        0.98,
+        1
+      ],
+      "why": "heading above"
+    },
+    {
+      "from": "2023/11/Built-in-Oven-O754-2.webp",
+      "to": "2026/08/o7549-door.webp",
+      "box": [
+        0.02,
+        0.2,
+        0.98,
+        1
+      ],
+      "why": "heading above; the three door labels stay"
+    }
+  ]
+}

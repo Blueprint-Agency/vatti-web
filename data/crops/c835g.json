@@ -1,0 +1,106 @@
+{
+  "product": "vatti-ai-hob-c835g",
+  "note": "Tall posters, heading over photograph. One source is a 100-frame GIF; frame -1 takes its last frame, as on the V999.",
+  "crops": [
+    {
+      "from": "2023/11/VATTI-AI-Hob-C835G.webp",
+      "to": "2026/08/c835g-hero.webp",
+      "box": [
+        0,
+        0.28,
+        1,
+        0.88
+      ],
+      "why": "title block above, feature list below"
+    },
+    {
+      "from": "2023/11/VATTI-AI-Hob-C835G_11.webp",
+      "to": "2026/08/c835g-flame.webp",
+      "box": [
+        0,
+        0.2,
+        1,
+        0.62
+      ],
+      "why": "heading above, power line below; the fire-cover labels stay"
+    },
+    {
+      "from": "2023/11/VATTI-AI-Hob-C835G_2.webp",
+      "to": "2026/08/c835g-eight-speed.webp",
+      "box": [
+        0,
+        0.22,
+        1,
+        0.82
+      ],
+      "why": "heading above; the cooking-mode labels stay"
+    },
+    {
+      "from": "2023/11/VATTI-AI-Hob-C835G_5.webp",
+      "to": "2026/08/c835g-intelligent.webp",
+      "frame": -1,
+      "box": [
+        0,
+        0.3,
+        1,
+        0.72
+      ],
+      "why": "animation; caption printed across the foot"
+    },
+    {
+      "from": "2023/11/VATTI-AI-Hob-C835G_12.webp",
+      "to": "2026/08/c835g-pot-mode.webp",
+      "box": [
+        0,
+        0.12,
+        1,
+        0.92
+      ],
+      "why": "heading below the readout; the two temperature labels stay"
+    },
+    {
+      "from": "2023/11/VATTI-AI-Hob-C835G_6.webp",
+      "to": "2026/08/c835g-timer.webp",
+      "box": [
+        0,
+        0.72,
+        1,
+        1
+      ],
+      "why": "heading and paragraph above"
+    },
+    {
+      "from": "2023/11/VATTI-AI-Hob-C835G_10.webp",
+      "to": "2026/08/c835g-oxygen.webp",
+      "box": [
+        0,
+        0.2,
+        1,
+        0.86
+      ],
+      "why": "heading above; the three level labels are the diagram"
+    },
+    {
+      "from": "2023/11/VATTI-AI-Hob-C835G_4.webp",
+      "to": "2026/08/c835g-panel.webp",
+      "box": [
+        0.55,
+        0.42,
+        1,
+        0.78
+      ],
+      "why": "heading above, pot-area note below"
+    },
+    {
+      "from": "2023/11/VATTI-AI-Hob-C835G_3.webp",
+      "to": "2026/08/c835g-gold-trim.webp",
+      "box": [
+        0.55,
+        0.1,
+        1,
+        0.45
+      ],
+      "why": "heading above, fire-cover note below"
+    }
+  ]
+}

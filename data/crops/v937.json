@@ -1,0 +1,105 @@
+{
+  "product": "triple-intake-series-t-type-cooker-hood-v937",
+  "note": "Nine tall posters. Two of them (V937-8, V937-9) are measured drawings and are dropped from the page: their figures are in product_dimension. The rest give up one photograph each.",
+  "crops": [
+    {
+      "from": "2023/11/v937-1.webp",
+      "to": "2026/08/v937-hero.webp",
+      "box": [
+        0,
+        0.055,
+        1,
+        0.55
+      ],
+      "why": "title above, spec icons below"
+    },
+    {
+      "from": "2023/11/V937-3.webp",
+      "to": "2026/08/v937-smart-suction.webp",
+      "box": [
+        0,
+        0.315,
+        1,
+        1
+      ],
+      "why": "heading and paragraph above"
+    },
+    {
+      "from": "2023/11/V937-5.webp",
+      "to": "2026/08/v937-oil-filter.webp",
+      "box": [
+        0,
+        0.6,
+        1,
+        1
+      ],
+      "why": "the four cleaning steps above become text"
+    },
+    {
+      "from": "2023/11/V937-2.webp",
+      "to": "2026/08/v937-three-cavity.webp",
+      "box": [
+        0,
+        0.24,
+        1,
+        0.545
+      ],
+      "why": "heading above, comparison tiles below"
+    },
+    {
+      "from": "2023/11/V937-4.webp",
+      "to": "2026/08/v937-auto-clean.webp",
+      "box": [
+        0,
+        0.345,
+        1,
+        0.72
+      ],
+      "why": "heading and icon row above, tiles below"
+    },
+    {
+      "from": "2023/11/V937-6.webp",
+      "to": "2026/08/v937-noise.webp",
+      "box": [
+        0,
+        0.478,
+        1,
+        0.7
+      ],
+      "why": "heading above, noise chart below"
+    },
+    {
+      "from": "2023/11/V937-7.webp",
+      "to": "2026/08/v937-led-light.webp",
+      "box": [
+        0.02,
+        0.075,
+        0.48,
+        0.2
+      ],
+      "why": "photo of the LED tile, its label dropped"
+    },
+    {
+      "from": "2023/11/V937-7.webp",
+      "to": "2026/08/v937-filter-out.webp",
+      "box": [
+        0.02,
+        0.262,
+        0.48,
+        0.4
+      ],
+      "why": "photo of the detachable-filter tile"
+    },
+    {
+      "from": "2023/11/V937-7.webp",
+      "to": "2026/08/v937-gesture.webp",
+      "box": [
+        0.52,
+        0.465,
+        0.98,
+        0.61
+      ],
+      "why": "photo of the hand-gesture tile"
+    }
+  ]
+}

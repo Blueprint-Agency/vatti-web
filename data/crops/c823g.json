@@ -1,0 +1,50 @@
+{
+  "product": "vatti-flexi-hob-c823g",
+  "note": "Four square posters plus a clean studio render. C823G-PG-7 is the specification panel and is dropped; its figures are in product_dimension.",
+  "crops": [
+    {
+      "from": "2025/07/C823G-PG-2.webp",
+      "to": "2026/08/c823g-power.webp",
+      "box": [
+        0,
+        0.22,
+        1,
+        0.78
+      ],
+      "why": "heading above, burner notes below"
+    },
+    {
+      "from": "2025/07/C823G-PG-5.webp",
+      "to": "2026/08/c823g-safety.webp",
+      "box": [
+        0.42,
+        0.04,
+        1,
+        0.52
+      ],
+      "why": "the safety claim is set to the left of the picture"
+    },
+    {
+      "from": "2025/07/C823G-PG-5.webp",
+      "to": "2026/08/c823g-ignition.webp",
+      "box": [
+        0.42,
+        0.54,
+        1,
+        0.98
+      ],
+      "why": "second panel of the same poster"
+    },
+    {
+      "from": "2025/07/C823G-PG-4.webp",
+      "to": "2026/08/c823g-cutout.webp",
+      "box": [
+        0,
+        0.16,
+        1,
+        0.62
+      ],
+      "why": "heading above, tiles below; the cut-out range is marked on the drawing"
+    }
+  ]
+}

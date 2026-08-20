@@ -1,0 +1,40 @@
+{
+  "product": "free-standing-combi-oven-va01",
+  "note": "One poster and two animations. Picture1.gif is a Chinese-language panel and is dropped rather than shown untranslated on an English page.",
+  "crops": [
+    {
+      "from": "2023/11/Free-Standing-Combi-Oven-VA01-1.webp",
+      "to": "2026/08/va01-hero.webp",
+      "box": [
+        0,
+        0.24,
+        1,
+        0.8
+      ],
+      "why": "title above"
+    },
+    {
+      "from": "2023/11/Free-Standing-Combi-Oven-VA01-2.webp",
+      "to": "2026/08/va01-functions.webp",
+      "box": [
+        0,
+        0.22,
+        1,
+        0.62
+      ],
+      "why": "heading and function list above"
+    },
+    {
+      "from": "2023/07/VA01-PRESENTATION-5.gif",
+      "to": "2026/08/va01-steam-grill.webp",
+      "frame": -1,
+      "box": [
+        0,
+        0.2,
+        1,
+        0.52
+      ],
+      "why": "animation; heading printed across the top"
+    }
+  ]
+}

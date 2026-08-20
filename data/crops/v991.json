@@ -1,0 +1,50 @@
+{
+  "product": "athena-series-lifting-type-range-hood-v991",
+  "note": "Two posters, each holding two panels; the other two images are clean studio renders and need no crop.",
+  "crops": [
+    {
+      "from": "2023/11/Slide2.webp",
+      "to": "2026/08/v991-hand-gesture.webp",
+      "box": [
+        0,
+        0.09,
+        0.45,
+        0.4
+      ],
+      "why": "heading above, gesture list to the right"
+    },
+    {
+      "from": "2023/11/Slide2.webp",
+      "to": "2026/08/v991-baffle-plate.webp",
+      "box": [
+        0.05,
+        0.55,
+        0.95,
+        0.885
+      ],
+      "why": "heading above, caption below"
+    },
+    {
+      "from": "2023/11/Slide4.webp",
+      "to": "2026/08/v991-v-housing.webp",
+      "box": [
+        0.15,
+        0.085,
+        0.95,
+        0.415
+      ],
+      "why": "heading above"
+    },
+    {
+      "from": "2023/11/Slide4.webp",
+      "to": "2026/08/v991-piano-black.webp",
+      "box": [
+        0.05,
+        0.56,
+        0.95,
+        0.95
+      ],
+      "why": "heading and bullet pair above"
+    }
+  ]
+}

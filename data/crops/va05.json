@@ -1,0 +1,94 @@
+{
+  "product": "built-in-combi-oven-va05",
+  "note": "Nine tall posters, heading over photograph. VA05-PI14 is the specification poster and is dropped; its figures are in product_dimension.",
+  "crops": [
+    {
+      "from": "2023/11/VA05-PI1.webp",
+      "to": "2026/08/va05-hero.webp",
+      "box": [
+        0,
+        0.26,
+        1,
+        0.75
+      ],
+      "why": "title above, food photograph below"
+    },
+    {
+      "from": "2023/11/VA05-PI3.webp",
+      "to": "2026/08/va05-in-kitchen.webp",
+      "box": [
+        0,
+        0.2,
+        1,
+        0.88
+      ],
+      "why": "heading above, caption below"
+    },
+    {
+      "from": "2023/11/VA05-PI7.webp",
+      "to": "2026/08/va05-steam.webp",
+      "box": [
+        0,
+        0.26,
+        1,
+        1
+      ],
+      "why": "heading and paragraph above"
+    },
+    {
+      "from": "2023/11/VA05-PI6.webp",
+      "to": "2026/08/va05-heating.webp",
+      "box": [
+        0,
+        0.22,
+        1,
+        1
+      ],
+      "why": "heading and paragraph above"
+    },
+    {
+      "from": "2023/11/VA05-PI5.webp",
+      "to": "2026/08/va05-dual-control.webp",
+      "box": [
+        0,
+        0.19,
+        1,
+        0.62
+      ],
+      "why": "heading above, comparison tiles below"
+    },
+    {
+      "from": "2023/11/VA05-PI4.webp",
+      "to": "2026/08/va05-probe.webp",
+      "box": [
+        0,
+        0.22,
+        1,
+        0.88
+      ],
+      "why": "heading and paragraph above"
+    },
+    {
+      "from": "2023/11/VA05-PI11.webp",
+      "to": "2026/08/va05-enamel.webp",
+      "box": [
+        0,
+        0.33,
+        1,
+        1
+      ],
+      "why": "heading above"
+    },
+    {
+      "from": "2023/11/VA05-PI12.webp",
+      "to": "2026/08/va05-descale.webp",
+      "box": [
+        0.03,
+        0.16,
+        0.97,
+        1
+      ],
+      "why": "heading above; the two mode captions stay"
+    }
+  ]
+}

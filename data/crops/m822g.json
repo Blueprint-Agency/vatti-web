@@ -1,0 +1,84 @@
+{
+  "product": "vatti-oylimpic-hob-m822g",
+  "note": "Landscape posters, heading over photograph, plus one 109-frame GIF cut at its last frame. The Olympic torch imagery is the brand story VATTI tells about this burner.",
+  "crops": [
+    {
+      "from": "2023/02/JPEG-5.gif",
+      "to": "2026/08/m822g-microflame.webp",
+      "frame": -1,
+      "box": [
+        0,
+        0.22,
+        1,
+        1
+      ],
+      "why": "animation; heading printed across the top"
+    },
+    {
+      "from": "2023/11/VATTI-Oylimpic-Hob-M821G_3.webp",
+      "to": "2026/08/m822g-partition.webp",
+      "box": [
+        0,
+        0.32,
+        1,
+        1
+      ],
+      "why": "heading above"
+    },
+    {
+      "from": "2023/11/VATTI-Oylimpic-Hob-M821G_6.webp",
+      "to": "2026/08/m822g-plate.webp",
+      "box": [
+        0.55,
+        0.22,
+        1,
+        0.88
+      ],
+      "why": "heading above; the angle and hole-count labels stay"
+    },
+    {
+      "from": "2023/11/VATTI-Oylimpic-Hob-M821G_4.webp",
+      "to": "2026/08/m822g-torch.webp",
+      "box": [
+        0,
+        0,
+        1,
+        0.72
+      ],
+      "why": "claim printed across the foot"
+    },
+    {
+      "from": "2023/11/VATTI-Oylimpic-Hob-M821G_5.webp",
+      "to": "2026/08/m822g-oxygen.webp",
+      "box": [
+        0,
+        0.18,
+        1,
+        0.86
+      ],
+      "why": "heading above; the three level labels are the diagram"
+    },
+    {
+      "from": "2023/11/VATTI-Oylimpic-Hob-M821G_9.webp",
+      "to": "2026/08/m822g-safety.webp",
+      "box": [
+        0,
+        0.22,
+        1,
+        0.72
+      ],
+      "why": "heading above"
+    },
+    {
+      "from": "2023/11/VATTI-Oylimpic-Hob-M821G_10.webp",
+      "to": "2026/08/m822g-kitchen.webp",
+      "box": [
+        0,
+        0.18,
+        1,
+        0.8
+      ],
+      "why": "heading above"
+    }
+  ]
+}

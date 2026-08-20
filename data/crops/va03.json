@@ -1,0 +1,94 @@
+{
+  "product": "built-in-combi-oven-va03",
+  "note": "Ten tall posters plus a clean studio render. VA03-10-1 is a table of steaming times and VA03-11-1 a function list: both are text and are dropped, their content going into the FAQ and the block copy.",
+  "crops": [
+    {
+      "from": "2023/11/Built-in-Combi-Oven-VA03-3-1.webp",
+      "to": "2026/08/va03-hero.webp",
+      "box": [
+        0,
+        0.34,
+        1,
+        1
+      ],
+      "why": "title and feature list above"
+    },
+    {
+      "from": "2023/11/Built-in-Combi-Oven-VA03-4-1.webp",
+      "to": "2026/08/va03-nozzle.webp",
+      "box": [
+        0,
+        0.2,
+        1,
+        0.7
+      ],
+      "why": "heading above, comparison notes below"
+    },
+    {
+      "from": "2023/11/Built-in-Combi-Oven-VA03-5-1.webp",
+      "to": "2026/08/va03-tank.webp",
+      "box": [
+        0,
+        0.16,
+        1,
+        0.86
+      ],
+      "why": "the four notes are set around the picture"
+    },
+    {
+      "from": "2023/11/Built-in-Combi-Oven-VA03-6-1.webp",
+      "to": "2026/08/va03-convection.webp",
+      "box": [
+        0,
+        0.22,
+        1,
+        0.88
+      ],
+      "why": "heading above; the element labels stay"
+    },
+    {
+      "from": "2023/11/Built-in-Combi-Oven-VA03-7-1.webp",
+      "to": "2026/08/va03-dual-temp.webp",
+      "box": [
+        0,
+        0.26,
+        1,
+        0.8
+      ],
+      "why": "heading and paragraph above"
+    },
+    {
+      "from": "2023/11/Built-in-Combi-Oven-VA03-8-1.webp",
+      "to": "2026/08/va03-humidity.webp",
+      "box": [
+        0,
+        0.2,
+        1,
+        0.9
+      ],
+      "why": "heading above; the three humidity labels stay"
+    },
+    {
+      "from": "2023/11/Built-in-Combi-Oven-VA03-9-1.webp",
+      "to": "2026/08/va03-menus.webp",
+      "box": [
+        0,
+        0.26,
+        1,
+        0.92
+      ],
+      "why": "heading above; the function labels stay"
+    },
+    {
+      "from": "2023/11/Built-in-Combi-Oven-VA03-12-1.webp",
+      "to": "2026/08/va03-enamel.webp",
+      "box": [
+        0,
+        0.28,
+        1,
+        0.86
+      ],
+      "why": "heading above"
+    }
+  ]
+}

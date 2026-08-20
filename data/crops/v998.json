@@ -1,0 +1,171 @@
+{
+  "product": "vatti-smart-oxygen-range-hood-v998",
+  "note": "Twelve tall posters, each a heading, a paragraph and one or more photographs. The headings and paragraphs become the block text; the photographs are cut out here. V998-PG15 is a specification sheet in pixels and is dropped entirely: its figures went into product_dimension.",
+  "crops": [
+    {
+      "from": "2026/04/V998-PG1.webp",
+      "to": "2026/08/v998-hero.webp",
+      "box": [
+        0,
+        0.305,
+        1,
+        1
+      ],
+      "why": "title block above"
+    },
+    {
+      "from": "2026/04/V998-PG10.webp",
+      "to": "2026/08/v998-auto-link.webp",
+      "box": [
+        0,
+        0.285,
+        1,
+        1
+      ],
+      "why": "heading and paragraph above"
+    },
+    {
+      "from": "2026/04/V998-PG9.webp",
+      "to": "2026/08/v998-wide-screen.webp",
+      "box": [
+        0,
+        0.315,
+        1,
+        0.655
+      ],
+      "why": "heading above, angle label below"
+    },
+    {
+      "from": "2026/04/V998-PG9.webp",
+      "to": "2026/08/v998-screen-compared.webp",
+      "box": [
+        0,
+        0.735,
+        1,
+        0.985
+      ],
+      "why": "the two labelled comparison tiles"
+    },
+    {
+      "from": "2026/04/V998-PG13.webp",
+      "to": "2026/08/v998-ag-glass.webp",
+      "box": [
+        0.03,
+        0.148,
+        0.97,
+        0.415
+      ],
+      "why": "heading above, layer diagram below"
+    },
+    {
+      "from": "2026/04/V998-PG13.webp",
+      "to": "2026/08/v998-glass-layers.webp",
+      "box": [
+        0.04,
+        0.45,
+        0.42,
+        0.72
+      ],
+      "why": "the peeled-glass illustration, labels to its right dropped"
+    },
+    {
+      "from": "2026/04/V998-PG5.webp",
+      "to": "2026/08/v998-ultraslim.webp",
+      "box": [
+        0,
+        0.29,
+        1,
+        0.705
+      ],
+      "why": "heading above, comparison tiles below"
+    },
+    {
+      "from": "2026/04/V998-PG7.webp",
+      "to": "2026/08/v998-flat-install.webp",
+      "box": [
+        0,
+        0.305,
+        1,
+        0.9
+      ],
+      "why": "heading above"
+    },
+    {
+      "from": "2026/04/V998-PG8.webp",
+      "to": "2026/08/v998-dual-suction.webp",
+      "box": [
+        0,
+        0.165,
+        1,
+        0.72
+      ],
+      "why": "heading above, figures set over the photo below"
+    },
+    {
+      "from": "2026/04/V998-PG11.webp",
+      "to": "2026/08/v998-steam-wash.webp",
+      "box": [
+        0.08,
+        0.297,
+        0.95,
+        0.585
+      ],
+      "why": "heading and paragraph above, comparison panel below"
+    },
+    {
+      "from": "2026/04/V998-PG12.webp",
+      "to": "2026/08/v998-guide-plate.webp",
+      "box": [
+        0.58,
+        0.14,
+        0.96,
+        0.325
+      ],
+      "why": "photo half of the first cleaning tile"
+    },
+    {
+      "from": "2026/04/V998-PG12.webp",
+      "to": "2026/08/v998-meshless.webp",
+      "box": [
+        0.52,
+        0.37,
+        0.96,
+        0.545
+      ],
+      "why": "photo half of the second cleaning tile"
+    },
+    {
+      "from": "2026/04/V998-PG12.webp",
+      "to": "2026/08/v998-oil-cup.webp",
+      "box": [
+        0.52,
+        0.59,
+        0.96,
+        0.765
+      ],
+      "why": "photo half of the third cleaning tile"
+    },
+    {
+      "from": "2026/04/V998-PG14.webp",
+      "to": "2026/08/v998-ui-panel.webp",
+      "box": [
+        0.05,
+        0.118,
+        0.95,
+        0.272
+      ],
+      "why": "the control readout, label below it dropped"
+    },
+    {
+      "from": "2026/04/V998-PG4.webp",
+      "to": "2026/08/v998-particle-capture.webp",
+      "box": [
+        0,
+        0.238,
+        1,
+        0.952
+      ],
+      "why": "heading and paragraph above, footnote below"
+    }
+  ]
+}

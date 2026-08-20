@@ -1,0 +1,109 @@
+{
+  "product": "vatti-built-in-oven-o755p",
+  "note": "Tall posters plus two 100-frame GIFs, cut at their last frame. Built-in-Oven-O755P-6 carries the dimension drawing and is dropped; its figures are in product_dimension.",
+  "crops": [
+    {
+      "from": "2023/11/Built-in-Oven-O755P-3.webp",
+      "to": "2026/08/o755p-hero.webp",
+      "box": [
+        0,
+        0.35,
+        1,
+        1
+      ],
+      "why": "title above"
+    },
+    {
+      "from": "2023/11/Built-in-Oven-O755P-2.webp",
+      "to": "2026/08/o755p-capacity.webp",
+      "box": [
+        0,
+        0.22,
+        1,
+        1
+      ],
+      "why": "claim above; the 75L mark is on the tray"
+    },
+    {
+      "from": "2023/11/Built-in-Oven-O755P-4.webp",
+      "to": "2026/08/o755p-modes.webp",
+      "box": [
+        0.02,
+        0.2,
+        0.98,
+        1
+      ],
+      "why": "heading above"
+    },
+    {
+      "from": "2023/02/O755P-PRESENTATION-8.gif",
+      "to": "2026/08/o755p-ceramic.webp",
+      "frame": -1,
+      "box": [
+        0.02,
+        0.18,
+        0.98,
+        0.55
+      ],
+      "why": "animation; heading and caption above"
+    },
+    {
+      "from": "2023/02/O755P-PRESENTATION-8.gif",
+      "to": "2026/08/o755p-enamel.webp",
+      "frame": -1,
+      "box": [
+        0.02,
+        0.66,
+        0.98,
+        1
+      ],
+      "why": "the enamel comparison at the foot of the same slide"
+    },
+    {
+      "from": "2023/07/O755P-PRESENTATION-7.gif",
+      "to": "2026/08/o755p-runners.webp",
+      "frame": -1,
+      "box": [
+        0.02,
+        0.16,
+        0.98,
+        0.55
+      ],
+      "why": "heading above"
+    },
+    {
+      "from": "2023/07/O755P-PRESENTATION-7.gif",
+      "to": "2026/08/o755p-soft-close.webp",
+      "frame": -1,
+      "box": [
+        0.02,
+        0.6,
+        0.98,
+        0.92
+      ],
+      "why": "second section of the same slide"
+    },
+    {
+      "from": "2023/11/Built-in-Oven-O755P-5.webp",
+      "to": "2026/08/o755p-child-lock.webp",
+      "box": [
+        0.02,
+        0.24,
+        0.98,
+        1
+      ],
+      "why": "heading and paragraph above"
+    },
+    {
+      "from": "2023/11/Built-in-Oven-O755P-6.webp",
+      "to": "2026/08/o755p-layers.webp",
+      "box": [
+        0,
+        0.1,
+        1,
+        0.5
+      ],
+      "why": "heading above, dimension drawing below"
+    }
+  ]
+}

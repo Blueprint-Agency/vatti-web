@@ -1,0 +1,61 @@
+{
+  "product": "vatti-built-in-air-fryer-oven-07559",
+  "note": "Six tall posters on the VATTI oven template. description-5 is the dimension panel and is dropped; its figures are in product_dimension.",
+  "crops": [
+    {
+      "from": "2024/08/Built-in-air-fryer-oven-07559-product-description-1-1.webp",
+      "to": "2026/08/o7559-hero.webp",
+      "box": [
+        0,
+        0.3,
+        1,
+        1
+      ],
+      "why": "title above"
+    },
+    {
+      "from": "2024/08/Built-in-air-fryer-oven-07559-product-description-2.webp",
+      "to": "2026/08/o7559-airfry.webp",
+      "box": [
+        0,
+        0.16,
+        1,
+        1
+      ],
+      "why": "heading and paragraph above; the element labels stay"
+    },
+    {
+      "from": "2024/08/Built-in-air-fryer-oven-07559-product-description-3.webp",
+      "to": "2026/08/o7559-capacity.webp",
+      "box": [
+        0,
+        0.22,
+        1,
+        1
+      ],
+      "why": "claim above"
+    },
+    {
+      "from": "2024/08/Built-in-air-fryer-oven-07559-product-description-1.webp",
+      "to": "2026/08/o7559-modes.webp",
+      "box": [
+        0.02,
+        0.24,
+        0.98,
+        1
+      ],
+      "why": "heading above"
+    },
+    {
+      "from": "2024/08/Built-in-air-fryer-oven-07559-product-description-4.webp",
+      "to": "2026/08/o7559-door.webp",
+      "box": [
+        0.02,
+        0.2,
+        0.98,
+        1
+      ],
+      "why": "heading above; the three door labels stay"
+    }
+  ]
+}

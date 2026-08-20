@@ -561,13 +561,20 @@ minus the JSON.
 instead and submits nothing.
 
 **Phase 5 — SEO parity**
-Sitemap, robots, canonicals, Open Graph. JSON-LD: `Product` (absent today), `Recipe` (16),
-`FAQPage` (all 5 categories + 5 articles), `BlogPosting` (including the 30 currently switched off),
-`LocalBusiness` for dealers. *Done when: every URL in the legacy sitemap resolves, verified by
+Sitemap, robots, canonicals, Open Graph. JSON-LD: `Product` (**done** — with `BreadcrumbList`,
+`FAQPage` and `VideoObject`, on the product template, so every product page carries it; no `offers`
+node because dealers quote their own installed price, and no `aggregateRating` on purpose),
+`Recipe` (16), `FAQPage` (all 5 categories + 5 articles), `BlogPosting` (including the 30 currently
+switched off), `LocalBusiness` for dealers. *Done when: every URL in the legacy sitemap resolves, verified by
 script.*
 
 **Phase 6 — Content upgrades** *(parallel with 3–5; client copy input)*
-Transcribe feature-image text into `product_image.caption_md`. Write `intro_md` for the 37 products
+Transcribe feature-image text into `product_image.caption_md`, then take the next step and split the
+composite in two: the copy into `product_feature`, the picture into a crop of itself with the text
+cut off, uploaded to R2 under a new key. The transcription makes the words readable; the split is
+what stops the page saying everything twice. **Done, for all 39 products**
+(`data/sql/product-features.sql`, `data/sql/product-content.sql`, crop boxes in `data/crops/`).
+Phase 6's image work is finished: 46,272 words of product copy where the composites used to be. Write `intro_md` for the 37 products
 with no prose. Alt text for 105 images. Merge the induction-vs-ceramic cluster. Rewrite titles and
 meta descriptions for the low-CTR set.
 

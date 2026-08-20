@@ -1,0 +1,50 @@
+{
+  "product": "professional-series-c821g",
+  "note": "Four tall posters. Cooker-hob-C821G_5 is the dimension panel and is dropped; its figures are in product_dimension.",
+  "crops": [
+    {
+      "from": "2023/11/Cooker-hob-C821G_1.webp",
+      "to": "2026/08/c821g-hero.webp",
+      "box": [
+        0,
+        0.42,
+        1,
+        0.8
+      ],
+      "why": "model block above, flame-ring notes below"
+    },
+    {
+      "from": "2023/11/Cooker-hob-C821G_3.webp",
+      "to": "2026/08/c821g-oxygen.webp",
+      "box": [
+        0,
+        0.18,
+        1,
+        0.86
+      ],
+      "why": "heading above; the three level labels are the diagram"
+    },
+    {
+      "from": "2023/11/Cooker-hob-C821G_6.webp",
+      "to": "2026/08/c821g-install.webp",
+      "box": [
+        0,
+        0.14,
+        1,
+        0.3
+      ],
+      "why": "heading above, safety section below"
+    },
+    {
+      "from": "2023/11/Cooker-hob-C821G_6.webp",
+      "to": "2026/08/c821g-safety.webp",
+      "box": [
+        0.45,
+        0.62,
+        1,
+        1
+      ],
+      "why": "second section of the same poster"
+    }
+  ]
+}

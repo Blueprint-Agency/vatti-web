@@ -1,0 +1,116 @@
+{
+  "product": "vatti-flexi-hob-c822g",
+  "note": "Eight tall posters, heading over photograph, several with an icon row or a comparison table at the foot. The clean white product render needs no crop.",
+  "crops": [
+    {
+      "from": "2023/10/Vatti-Flexi-Hob-C822G-Product-description-_1_.webp",
+      "to": "2026/08/c822g-hero.webp",
+      "box": [
+        0,
+        0.25,
+        1,
+        0.72
+      ],
+      "why": "title above, icon row below"
+    },
+    {
+      "from": "2023/10/Vatti-Flexi-Hob-C822G-Product-description-_2_.webp",
+      "to": "2026/08/c822g-firepower.webp",
+      "box": [
+        0,
+        0.26,
+        1,
+        0.72
+      ],
+      "why": "heading and paragraph above, comparison tiles below"
+    },
+    {
+      "from": "2023/10/Vatti-Flexi-Hob-C822G-Product-description-_2_.webp",
+      "to": "2026/08/c822g-wok-compare.webp",
+      "box": [
+        0.03,
+        0.74,
+        0.97,
+        0.99
+      ],
+      "why": "the two labelled comparison tiles"
+    },
+    {
+      "from": "2023/10/Vatti-Flexi-Hob-C822G-Product-description-_3_.webp",
+      "to": "2026/08/c822g-burner.webp",
+      "box": [
+        0,
+        0.2,
+        1,
+        0.5
+      ],
+      "why": "heading above, comparison table below"
+    },
+    {
+      "from": "2023/10/Vatti-Flexi-Hob-C822G-Product-description-_9_.webp",
+      "to": "2026/08/c822g-glass.webp",
+      "box": [
+        0,
+        0.13,
+        1,
+        0.3
+      ],
+      "why": "heading above"
+    },
+    {
+      "from": "2023/10/Vatti-Flexi-Hob-C822G-Product-description-_9_.webp",
+      "to": "2026/08/c822g-pan-support.webp",
+      "box": [
+        0,
+        0.52,
+        1,
+        0.75
+      ],
+      "why": "second section of the same poster"
+    },
+    {
+      "from": "2023/10/Vatti-Flexi-Hob-C822G-Product-description-_4_.webp",
+      "to": "2026/08/c822g-timer.webp",
+      "box": [
+        0,
+        0.3,
+        1,
+        0.88
+      ],
+      "why": "heading and paragraph above"
+    },
+    {
+      "from": "2023/10/Vatti-Flexi-Hob-C822G-Product-description-_7_.webp",
+      "to": "2026/08/c822g-detachable.webp",
+      "box": [
+        0,
+        0.26,
+        1,
+        1
+      ],
+      "why": "heading and paragraph above"
+    },
+    {
+      "from": "2023/10/Vatti-Flexi-Hob-C822G-Product-description-_10_.webp",
+      "to": "2026/08/c822g-details.webp",
+      "box": [
+        0,
+        0.3,
+        1,
+        1
+      ],
+      "why": "heading and bullet pair above"
+    },
+    {
+      "from": "2023/10/Vatti-Flexi-Hob-C822G-Product-description-_5_.webp",
+      "to": "2026/08/c822g-efficiency.webp",
+      "box": [
+        0,
+        0.2,
+        1,
+        0.42
+      ],
+      "why": "heading above, energy table below"
+    }
+  ]
+}

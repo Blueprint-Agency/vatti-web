@@ -1,0 +1,138 @@
+{
+  "product": "vatti-flexi-hob-c836g",
+  "note": "Thirteen tall posters on one template: heading and subheading at the top, photograph beneath, and on some a row of labelled tiles at the foot. Part labels printed on a photograph stay; headings become block text.",
+  "crops": [
+    {
+      "from": "2025/12/Vatti-cooker-hob-C836G-product-description-1.webp",
+      "to": "2026/08/c836g-hero.webp",
+      "box": [
+        0,
+        0.3,
+        1,
+        1
+      ],
+      "why": "claim set down the right"
+    },
+    {
+      "from": "2025/12/Vatti-cooker-hob-C836G-product-description-10.webp",
+      "to": "2026/08/c836g-power.webp",
+      "box": [
+        0,
+        0.24,
+        1,
+        1
+      ],
+      "why": "heading above"
+    },
+    {
+      "from": "2025/12/Vatti-cooker-hob-C836G-product-description-11.webp",
+      "to": "2026/08/c836g-triple-ring.webp",
+      "box": [
+        0,
+        0.34,
+        0.44,
+        0.7
+      ],
+      "why": "heading and comparison line above"
+    },
+    {
+      "from": "2025/12/Vatti-cooker-hob-C836G-product-description-12.webp",
+      "to": "2026/08/c836g-flame-control.webp",
+      "box": [
+        0,
+        0.2,
+        1,
+        0.55
+      ],
+      "why": "heading above"
+    },
+    {
+      "from": "2025/12/Vatti-cooker-hob-C836G-product-description-13.webp",
+      "to": "2026/08/c836g-flame-art.webp",
+      "box": [
+        0,
+        0.3,
+        1,
+        1
+      ],
+      "why": "heading and paragraph above"
+    },
+    {
+      "from": "2025/12/Vatti-cooker-hob-C836G-product-description-3.webp",
+      "to": "2026/08/c836g-timer.webp",
+      "box": [
+        0,
+        0.18,
+        1,
+        1
+      ],
+      "why": "heading and paragraph above; the timer marks stay"
+    },
+    {
+      "from": "2025/12/Vatti-cooker-hob-C836G-product-description-5.webp",
+      "to": "2026/08/c836g-temperature.webp",
+      "box": [
+        0,
+        0.14,
+        1,
+        0.62
+      ],
+      "why": "heading above, protection tiles below"
+    },
+    {
+      "from": "2025/12/Vatti-cooker-hob-C836G-product-description-4.webp",
+      "to": "2026/08/c836g-cutout.webp",
+      "box": [
+        0,
+        0.28,
+        1,
+        0.7
+      ],
+      "why": "heading above, compatibility tiles below; the two cut-out ranges are marked on the drawing"
+    },
+    {
+      "from": "2025/12/Vatti-cooker-hob-C836G-product-description-6.webp",
+      "to": "2026/08/c836g-hood-link.webp",
+      "box": [
+        0,
+        0.22,
+        1,
+        0.88
+      ],
+      "why": "heading above"
+    },
+    {
+      "from": "2025/12/Vatti-cooker-hob-C836G-product-description-9.webp",
+      "to": "2026/08/c836g-wok-support.webp",
+      "box": [
+        0,
+        0.2,
+        1,
+        0.68
+      ],
+      "why": "heading and paragraph above"
+    },
+    {
+      "from": "2025/12/Vatti-cooker-hob-C836G-product-description-2.webp",
+      "to": "2026/08/c836g-nano-glass.webp",
+      "box": [
+        0,
+        0.35,
+        1,
+        0.68
+      ],
+      "why": "heading and paragraph above"
+    },
+    {
+      "from": "2025/12/Vatti-cooker-hob-C836G-product-description-7.webp",
+      "to": "2026/08/c836g-easy-clean.webp",
+      "box": [
+        0,
+        0.2,
+        1,
+        1
+      ],
+      "why": "heading above; the four part labels stay"
+    }
+  ]
+}

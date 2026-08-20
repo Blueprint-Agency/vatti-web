@@ -1,0 +1,160 @@
+{
+  "product": "vatti-one-tap-water-purifier-wdhg01-with-v818wd",
+  "note": "Thirteen portrait posters, heading at the top and picture beneath. Labels that name a filter stage, a temperature mode or a replacement interval stay: they are the diagram, and the copy repeats them as text.",
+  "crops": [
+    {
+      "from": "2025/01/One-Tap-water-purifier-WDHG01-Image-info-1.png",
+      "to": "2026/08/wdhg01-hero.webp",
+      "box": [
+        0,
+        0.24,
+        1,
+        1
+      ],
+      "why": "title block above"
+    },
+    {
+      "from": "2025/01/One-Tap-water-purifier-WDHG01-Image-info-2.png",
+      "to": "2026/08/wdhg01-fast-heat.webp",
+      "box": [
+        0,
+        0.22,
+        1,
+        0.84
+      ],
+      "why": "heading above, caption below"
+    },
+    {
+      "from": "2025/01/One-Tap-water-purifier-WDHG01-Image-info-3.png",
+      "to": "2026/08/wdhg01-flow.webp",
+      "box": [
+        0,
+        0.23,
+        1,
+        1
+      ],
+      "why": "heading above"
+    },
+    {
+      "from": "2025/01/One-Tap-water-purifier-WDHG01-Image-info-4.png",
+      "to": "2026/08/wdhg01-filters.webp",
+      "box": [
+        0,
+        0.2,
+        1,
+        1
+      ],
+      "why": "heading above; the four stage labels stay"
+    },
+    {
+      "from": "2025/01/One-Tap-water-purifier-WDHG01-Image-info-5.png",
+      "to": "2026/08/wdhg01-ro.webp",
+      "box": [
+        0,
+        0.2,
+        1,
+        0.86
+      ],
+      "why": "heading above, micron figure below"
+    },
+    {
+      "from": "2025/01/One-Tap-water-purifier-WDHG01-Image-info-6.png",
+      "to": "2026/08/wdhg01-certificates.webp",
+      "box": [
+        0,
+        0.16,
+        1,
+        0.85
+      ],
+      "why": "heading above, claim below"
+    },
+    {
+      "from": "2025/01/One-Tap-water-purifier-WDHG01-Image-info-7.png",
+      "to": "2026/08/wdhg01-temperatures.webp",
+      "box": [
+        0,
+        0.3,
+        1,
+        1
+      ],
+      "why": "heading and subheading above"
+    },
+    {
+      "from": "2025/01/One-Tap-water-purifier-WDHG01-Image-info-8.png",
+      "to": "2026/08/wdhg01-modes.webp",
+      "box": [
+        0.03,
+        0.02,
+        0.97,
+        0.98
+      ],
+      "why": "the four mode tiles, each labelled with its temperature"
+    },
+    {
+      "from": "2025/01/One-Tap-water-purifier-WDHG01-Image-info-9.png",
+      "to": "2026/08/wdhg01-display.webp",
+      "box": [
+        0,
+        0.26,
+        1,
+        1
+      ],
+      "why": "heading and subheading above"
+    },
+    {
+      "from": "2025/01/One-Tap-water-purifier-WDHG01-Image-info-11.png",
+      "to": "2026/08/wdhg01-water-channel.webp",
+      "box": [
+        0,
+        0.17,
+        1,
+        0.83
+      ],
+      "why": "heading above, caption below"
+    },
+    {
+      "from": "2025/01/One-Tap-water-purifier-WDHG01-Image-info-12.png",
+      "to": "2026/08/wdhg01-filter-change.webp",
+      "box": [
+        0,
+        0.15,
+        1,
+        0.66
+      ],
+      "why": "heading above, numbered steps below"
+    },
+    {
+      "from": "2025/01/One-Tap-water-purifier-WDHG01-Image-info-12.png",
+      "to": "2026/08/wdhg01-change-steps.webp",
+      "box": [
+        0.02,
+        0.72,
+        0.98,
+        0.99
+      ],
+      "why": "the three numbered steps, each labelled"
+    },
+    {
+      "from": "2025/01/12.png",
+      "to": "2026/08/wdhg01-consumables.webp",
+      "box": [
+        0,
+        0.2,
+        1,
+        0.86
+      ],
+      "why": "claim below; the two filter labels carry the intervals and stay"
+    },
+    {
+      "from": "2025/01/One-Tap-water-purifier-WDHG01-Image-info-14.png",
+      "to": "2026/08/wdhg01-under-cabinet.webp",
+      "box": [
+        0,
+        0.56,
+        1,
+        1
+      ],
+      "why": "claim set over the middle of the picture"
+    }
+  ]
+}

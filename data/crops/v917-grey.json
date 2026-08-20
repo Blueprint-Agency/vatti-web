@@ -1,0 +1,72 @@
+{
+  "product": "vatti-cooker-hood-v917-carbon-grey",
+  "note": "The Carbon Grey colourway has its own five panels, in English, with the copy set down one side of each picture. The White colourway's panels are separate and Malay-language: see v917.json.",
+  "crops": [
+    {
+      "from": "2026/05/V917-Carbon-Grey-Cooker-Hood-description-2.webp",
+      "to": "2026/08/v917g-turbo.webp",
+      "box": [
+        0.42,
+        0.02,
+        1,
+        0.72
+      ],
+      "why": "claim top left, big figure across the foot"
+    },
+    {
+      "from": "2026/05/V917-Carbon-Grey-Cooker-Hood-description-3.webp",
+      "to": "2026/08/v917g-pressure.webp",
+      "box": [
+        0.18,
+        0.3,
+        0.8,
+        1
+      ],
+      "why": "claim top left, vertical 900Pa down the right"
+    },
+    {
+      "from": "2026/05/V917-Carbon-Grey-Cooker-Hood-description-4.webp",
+      "to": "2026/08/v917g-gesture.webp",
+      "box": [
+        0,
+        0.24,
+        1,
+        0.8
+      ],
+      "why": "heading above, gesture tiles below"
+    },
+    {
+      "from": "2026/05/V917-Carbon-Grey-Cooker-Hood-description-5.webp",
+      "to": "2026/08/v917g-heat-clean.webp",
+      "box": [
+        0.2,
+        0.16,
+        0.8,
+        0.55
+      ],
+      "why": "heading above, cycle wheel below"
+    },
+    {
+      "from": "2026/05/V917-Carbon-Grey-Cooker-Hood-description-5.webp",
+      "to": "2026/08/v917g-clean-cycle.webp",
+      "box": [
+        0.02,
+        0.6,
+        0.98,
+        1
+      ],
+      "why": "the labelled 17-minute cycle wheel"
+    },
+    {
+      "from": "2026/05/V917-Carbon-Grey-Cooker-Hood-description-6.png",
+      "to": "2026/08/v917g-guide-plate.webp",
+      "box": [
+        0.46,
+        0.1,
+        1,
+        0.95
+      ],
+      "why": "heading and bullet list down the left"
+    }
+  ]
+}

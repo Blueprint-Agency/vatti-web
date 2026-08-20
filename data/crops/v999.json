@@ -1,0 +1,137 @@
+{
+  "product": "athena-series-lifting-type-range-hood-v999",
+  "note": "Six of these sources are 100-frame GIFs, 53MB between them on one page. frame -1 takes the last frame: the motion is marketing, the information is the still plus the text beside it. Chinese overlay labels are left where they sit on the photograph.",
+  "crops": [
+    {
+      "from": "2023/11/Vatti-Kitchen-Hood-V999-1.webp",
+      "to": "2026/08/v999-side-hood.webp",
+      "box": [
+        0,
+        0,
+        1,
+        0.6
+      ],
+      "why": "claim block across the lower third"
+    },
+    {
+      "from": "2023/02/PG3.gif",
+      "to": "2026/08/v999-wide-angle.webp",
+      "frame": -1,
+      "box": [
+        0,
+        0.02,
+        1,
+        0.355
+      ],
+      "why": "bullets below the photo"
+    },
+    {
+      "from": "2023/02/PG3.gif",
+      "to": "2026/08/v999-impeller.webp",
+      "frame": -1,
+      "box": [
+        0,
+        0.61,
+        1,
+        1
+      ],
+      "why": "second panel of the same slide"
+    },
+    {
+      "from": "2023/07/PG5.gif",
+      "to": "2026/08/v999-dc-motor.webp",
+      "frame": -1,
+      "box": [
+        0.3,
+        0.02,
+        1,
+        0.3
+      ],
+      "why": "figures set under the motor"
+    },
+    {
+      "from": "2023/07/PG5.gif",
+      "to": "2026/08/v999-suction.webp",
+      "frame": -1,
+      "box": [
+        0,
+        0.478,
+        1,
+        0.715
+      ],
+      "why": "caption band under the panel"
+    },
+    {
+      "from": "2023/07/PG7.gif",
+      "to": "2026/08/v999-steam-clean.webp",
+      "frame": -1,
+      "box": [
+        0,
+        0.065,
+        1,
+        1
+      ],
+      "why": "title band at the top; the three step labels are annotations and stay"
+    },
+    {
+      "from": "2023/02/PG-2.gif",
+      "to": "2026/08/v999-smoke-chamber.webp",
+      "frame": -1,
+      "box": [
+        0,
+        0.075,
+        1,
+        0.325
+      ],
+      "why": "heading above, rating tables below"
+    },
+    {
+      "from": "2023/07/PG4.gif",
+      "to": "2026/08/v999-laser-weld.webp",
+      "frame": -1,
+      "box": [
+        0,
+        0.015,
+        0.495,
+        0.305
+      ],
+      "why": "left panel of the pair"
+    },
+    {
+      "from": "2023/07/PG4.gif",
+      "to": "2026/08/v999-r80-curve.webp",
+      "frame": -1,
+      "box": [
+        0.505,
+        0.015,
+        1,
+        0.255
+      ],
+      "why": "right panel of the pair"
+    },
+    {
+      "from": "2023/07/PG4.gif",
+      "to": "2026/08/v999-hand-sensor.webp",
+      "frame": -1,
+      "box": [
+        0,
+        0.545,
+        1,
+        0.8
+      ],
+      "why": "heading above, bullets below"
+    },
+    {
+      "from": "2023/07/PG8.gif",
+      "to": "2026/08/v999-waterproof-motor.webp",
+      "frame": -1,
+      "box": [
+        0.38,
+        0.06,
+        1,
+        0.3
+      ],
+      "why": "bullet list to the left of the part"
+    }
+  ]
+}

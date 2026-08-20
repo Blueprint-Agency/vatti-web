@@ -1,0 +1,61 @@
+{
+  "product": "vatti-3-burner-gas-hob-c830g",
+  "note": "Five square posters, claim printed across the picture. Where the claim sits over the photograph the crop takes the clean half.",
+  "crops": [
+    {
+      "from": "2023/10/Vatti-3-burner-gas-hob-C830G-Product-description-_3_.webp",
+      "to": "2026/08/c830g-power.webp",
+      "box": [
+        0,
+        0.55,
+        1,
+        1
+      ],
+      "why": "the 6KW claim is set across the middle"
+    },
+    {
+      "from": "2023/10/Vatti-3-burner-gas-hob-C830G-Product-description-_2_.webp",
+      "to": "2026/08/c830g-three-pans.webp",
+      "box": [
+        0,
+        0.1,
+        1,
+        0.88
+      ],
+      "why": "heading below; the three dish labels stay"
+    },
+    {
+      "from": "2023/10/Vatti-3-burner-gas-hob-C830G-Product-description-_4_.webp",
+      "to": "2026/08/c830g-timer.webp",
+      "box": [
+        0,
+        0,
+        1,
+        0.82
+      ],
+      "why": "claim across the foot"
+    },
+    {
+      "from": "2023/10/Vatti-3-burner-gas-hob-C830G-Product-description-_6_.webp",
+      "to": "2026/08/c830g-pan-support.webp",
+      "box": [
+        0.02,
+        0.2,
+        0.98,
+        0.68
+      ],
+      "why": "heading above, numbered notes below"
+    },
+    {
+      "from": "2023/10/Vatti-3-burner-gas-hob-C830G-Product-description-_5_.webp",
+      "to": "2026/08/c830g-safety.webp",
+      "box": [
+        0.1,
+        0.14,
+        0.9,
+        0.92
+      ],
+      "why": "the shield diagram; its six labels stay"
+    }
+  ]
+}

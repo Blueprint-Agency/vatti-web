@@ -86,6 +86,23 @@ pnpm links:check  # crawls the built output, fails on any 404 or broken internal
 - Specs are an **ordered list of bullets with a nullable key**, not columns. The source site has no
   spec table; only 41 of 332 bullets parse as `Key: Value`. Do not "improve" this into a wide table —
   it would be ~90% NULL. See `product_specs`.
+- **Product page content is four hand-authored tables**, all keyed on slug, all in
+  `data/sql/product-*.sql`: `product_feature` (the story), `product_dimension` (the drawing as
+  text), `product_faq` (per-model questions, answers may carry internal markdown links, which
+  `db:check` verifies) and the metadata columns on `product_video`. The template renders whichever
+  of them a product has. **All 39 published products are done.** Nothing is left on the caption
+  stack; `product_image.caption_md` is now a transcription record rather than a rendering source.
+  Five products have no dimension figures because VATTI publishes none for them (V936, C830G,
+  C861G, C835G, M822G, ER3601T, ER5902T, M626 and the O7549 among them state only what their own
+  panels state) and their FAQ says so rather than borrowing another model's numbers. One hood, V936, has no published
+  dimension drawing and therefore no `product_dimension` rows: the table and the fit checker stay
+  off that page rather than being filled with a guess.
+- **Cutting the picture out of a composite is a manifest, not a script.** Boxes live in
+  `data/crops/<model>.json` as fractions of the source; `node scripts/feature-crop.mjs [model]`
+  writes them into `old-media/` and `node scripts/media-upload.mjs` pushes them. Sources are cached
+  under `.cache/crop-src/`, so re-cutting after nudging a box is free. Verify a batch by building a
+  contact sheet of the OUTPUT and looking at it — a crop that still clips a letter is the one defect
+  this whole exercise exists to remove.
 - **Images live on R2, never in `public/`.** See § Images — it is a hard rule, not a default.
 - Category pages exist in two parallel URL families (`/kitchen-hood/` and
   `/kitchen-hood-in-malaysia/`). Both stay live. The `-in-malaysia` page is canonical — it carries
@@ -158,8 +175,14 @@ product shot. There is no image record left in that file.
   category is corrected in the DB.
 - `tips-tricks/clean-baking-sheets-2` is a true duplicate of `clean-baking-sheets` → 301.
 - Product feature content is **baked into images** on the source site (5–20 full-width JPEGs per
-  product, text rendered as pixels). Transcribing that to real text is a content task, not a code
-  task, and it is the single biggest quality win available. Tracked in the plan.
+  product, text rendered as pixels). `product_image.caption_md` transcribes that text verbatim for
+  the products still on the old stack; `product_feature` replaces it, holding the copy as real text
+  beside a crop of the same picture with the words cut off. A product with rows in
+  `data/sql/product-features.sql` renders those blocks instead of the JPEG stack — see
+  `ProductFeatures.tsx`. **V993 is the first one done**; the other 33 are still on captions.
+  Cropping is a prep step, not a build step: cut the picture out of the composite, save it under a
+  new key in `old-media/`, upload, and record the crop box in a comment on the row. It is the single
+  biggest quality win available.
 
 ## Style
 

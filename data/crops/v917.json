@@ -1,0 +1,116 @@
+{
+  "product": "vatti-cooker-hood-v917-white",
+  "note": "Malaysian-market posters, written in Malay, shared by both V917 colourways. The four batik kitchens are the same hood in four cabinet styles; the B-series posters set their copy down one side of the picture.",
+  "crops": [
+    {
+      "from": "2026/05/V997-Batik-Cabinet-Description-2.webp",
+      "to": "2026/08/v917-batik-blue.webp",
+      "box": [
+        0,
+        0.4,
+        1,
+        1
+      ],
+      "why": "heading block above"
+    },
+    {
+      "from": "2026/05/V997-Batik-Cabinet-Description-3.webp",
+      "to": "2026/08/v917-batik-timber.webp",
+      "box": [
+        0,
+        0.4,
+        1,
+        1
+      ],
+      "why": "heading block above"
+    },
+    {
+      "from": "2026/05/V997-Batik-Cabinet-Description-4.webp",
+      "to": "2026/08/v917-batik-white.webp",
+      "box": [
+        0,
+        0.42,
+        1,
+        1
+      ],
+      "why": "heading block above"
+    },
+    {
+      "from": "2026/05/V997-Batik-Cabinet-Description-5.webp",
+      "to": "2026/08/v917-batik-warm.webp",
+      "box": [
+        0,
+        0.4,
+        1,
+        1
+      ],
+      "why": "heading block above"
+    },
+    {
+      "from": "2026/05/V997-Batik-Cabinet-Description-B-1.webp",
+      "to": "2026/08/v917-turbo.webp",
+      "box": [
+        0.36,
+        0.12,
+        1,
+        1
+      ],
+      "why": "claim and bullet list down the left"
+    },
+    {
+      "from": "2026/05/V997-Batik-Cabinet-Description-B-2.webp",
+      "to": "2026/08/v917-gesture.webp",
+      "box": [
+        0.62,
+        0.04,
+        1,
+        0.84
+      ],
+      "why": "heading left, feature bullets in the middle"
+    },
+    {
+      "from": "2026/05/V997-Batik-Cabinet-Description-B-3.webp",
+      "to": "2026/08/v917-guide-plate.webp",
+      "box": [
+        0.34,
+        0.26,
+        1,
+        1
+      ],
+      "why": "heading left, warning box top right"
+    },
+    {
+      "from": "2026/05/V997-Batik-Cabinet-Description-B-4.webp",
+      "to": "2026/08/v917-3d-design.webp",
+      "box": [
+        0.42,
+        0.09,
+        1,
+        1
+      ],
+      "why": "heading and bullets down the left"
+    },
+    {
+      "from": "2026/05/V997-Batik-Cabinet-Description-B-5.webp",
+      "to": "2026/08/v917-heat-clean.webp",
+      "box": [
+        0.02,
+        0.22,
+        0.6,
+        0.58
+      ],
+      "why": "heading above, cycle wheel to the right"
+    },
+    {
+      "from": "2026/05/V997-Batik-Cabinet-Description-B-5.webp",
+      "to": "2026/08/v917-clean-cycle.webp",
+      "box": [
+        0.52,
+        0.26,
+        1,
+        0.98
+      ],
+      "why": "the labelled 17-minute cycle wheel"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "product": "professional-series-c720s",
+  "note": "Tall posters, heading over photograph. VATTI-C720S-Cooker-Hob_11-1 is the specification panel and is dropped; its figures, including the cut-out, are in product_dimension.",
+  "crops": [
+    {
+      "from": "2023/11/VATTI-C720S-Cooker-Hob_10.webp",
+      "to": "2026/08/c720s-hero.webp",
+      "box": [
+        0,
+        0.3,
+        1,
+        0.78
+      ],
+      "why": "title block above"
+    },
+    {
+      "from": "2023/11/VATTI-C720S-Cooker-Hob_5.webp",
+      "to": "2026/08/c720s-thor.webp",
+      "box": [
+        0.4,
+        0.02,
+        1,
+        0.62
+      ],
+      "why": "heading and paragraph above"
+    },
+    {
+      "from": "2023/11/VATTI-C720S-Cooker-Hob_7.webp",
+      "to": "2026/08/c720s-pan-support.webp",
+      "box": [
+        0,
+        0.28,
+        1,
+        1
+      ],
+      "why": "heading and paragraph above"
+    },
+    {
+      "from": "2023/11/VATTI-C720S-Cooker-Hob_3.webp",
+      "to": "2026/08/c720s-easy-clean.webp",
+      "box": [
+        0,
+        0.24,
+        1,
+        1
+      ],
+      "why": "heading above"
+    },
+    {
+      "from": "2023/11/VATTI-C720S-Cooker-Hob_4.webp",
+      "to": "2026/08/c720s-child-lock.webp",
+      "box": [
+        0,
+        0.26,
+        1,
+        0.72
+      ],
+      "why": "heading above, second section below"
+    },
+    {
+      "from": "2023/11/VATTI-C720S-Cooker-Hob_6.webp",
+      "to": "2026/08/c720s-flame-failure.webp",
+      "box": [
+        0,
+        0,
+        1,
+        0.3
+      ],
+      "why": "heading and paragraph above"
+    },
+    {
+      "from": "2023/11/VATTI-C720S-Cooker-Hob_8.webp",
+      "to": "2026/08/c720s-detail.webp",
+      "box": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "why": "no text on this one"
+    }
+  ]
+}

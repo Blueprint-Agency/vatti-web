@@ -1,0 +1,193 @@
+{
+  "product": "vatti-hidden-series-range-hood-v938",
+  "note": "Seventeen posters, every one a heading over a photograph. V938-PG17 is a specification sheet and is dropped: its figures are in product_dimension and the readout strip.",
+  "crops": [
+    {
+      "from": "2026/05/V938-PG2.webp",
+      "to": "2026/08/v938-hero.webp",
+      "box": [
+        0,
+        0.03,
+        1,
+        0.6
+      ],
+      "why": "title block below"
+    },
+    {
+      "from": "2026/05/V938-PG3.webp",
+      "to": "2026/08/v938-half-hidden.webp",
+      "box": [
+        0,
+        0.322,
+        1,
+        0.755
+      ],
+      "why": "heading above, inset below"
+    },
+    {
+      "from": "2026/05/V938-PG4.webp",
+      "to": "2026/08/v938-gesture.webp",
+      "box": [
+        0,
+        0.348,
+        1,
+        0.81
+      ],
+      "why": "heading above, icon row below"
+    },
+    {
+      "from": "2026/05/V938-PG5.webp",
+      "to": "2026/08/v938-ai-adjust.webp",
+      "box": [
+        0,
+        0.432,
+        1,
+        0.95
+      ],
+      "why": "heading above"
+    },
+    {
+      "from": "2026/05/V938-PG6.webp",
+      "to": "2026/08/v938-quiet.webp",
+      "box": [
+        0,
+        0.372,
+        1,
+        1
+      ],
+      "why": "heading above"
+    },
+    {
+      "from": "2026/05/V938-PG7.webp",
+      "to": "2026/08/v938-auto-start.webp",
+      "box": [
+        0,
+        0.422,
+        1,
+        1
+      ],
+      "why": "heading and icon row above"
+    },
+    {
+      "from": "2026/05/V938-PG14.webp",
+      "to": "2026/08/v938-app.webp",
+      "box": [
+        0,
+        0.305,
+        1,
+        0.755
+      ],
+      "why": "heading above, step list below"
+    },
+    {
+      "from": "2026/05/V938-PG15.webp",
+      "to": "2026/08/v938-style-classic.webp",
+      "box": [
+        0.03,
+        0.328,
+        0.97,
+        0.44
+      ],
+      "why": "first of three style photos, label above it"
+    },
+    {
+      "from": "2026/05/V938-PG15.webp",
+      "to": "2026/08/v938-style-italian.webp",
+      "box": [
+        0.03,
+        0.545,
+        0.97,
+        0.675
+      ],
+      "why": "second style photo"
+    },
+    {
+      "from": "2026/05/V938-PG15.webp",
+      "to": "2026/08/v938-style-minimal.webp",
+      "box": [
+        0.03,
+        0.755,
+        0.97,
+        0.885
+      ],
+      "why": "third style photo"
+    },
+    {
+      "from": "2026/05/V938-PG8.webp",
+      "to": "2026/08/v938-clean-cooking.webp",
+      "box": [
+        0,
+        0.325,
+        1,
+        0.62
+      ],
+      "why": "heading above, motor section below"
+    },
+    {
+      "from": "2026/05/V938-PG8.webp",
+      "to": "2026/08/v938-bldc-motor.webp",
+      "box": [
+        0.5,
+        0.665,
+        1,
+        0.93
+      ],
+      "why": "the motor cutaway, its bullet list to the left"
+    },
+    {
+      "from": "2026/05/V938-PG9.webp",
+      "to": "2026/08/v938-air-manager.webp",
+      "box": [
+        0,
+        0.478,
+        1,
+        0.95
+      ],
+      "why": "heading and icon row above"
+    },
+    {
+      "from": "2026/05/V938-PG10.webp",
+      "to": "2026/08/v938-display.webp",
+      "box": [
+        0,
+        0.3,
+        1,
+        0.62
+      ],
+      "why": "heading above, indicator tiles below"
+    },
+    {
+      "from": "2026/05/V938-PG11.webp",
+      "to": "2026/08/v938-vertical-capture.webp",
+      "box": [
+        0,
+        0.448,
+        1,
+        0.93
+      ],
+      "why": "heading above"
+    },
+    {
+      "from": "2026/05/V938-PG12.webp",
+      "to": "2026/08/v938-capture-ratio.webp",
+      "box": [
+        0.03,
+        0.03,
+        0.97,
+        0.325
+      ],
+      "why": "top photo of the panel, ratio text below it"
+    },
+    {
+      "from": "2026/05/V938-PG13.webp",
+      "to": "2026/08/v938-steam-clean.webp",
+      "box": [
+        0,
+        0.462,
+        1,
+        0.85
+      ],
+      "why": "heading above, cleaning rates below"
+    }
+  ]
+}

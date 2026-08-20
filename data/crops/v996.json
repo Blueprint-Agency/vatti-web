@@ -1,0 +1,105 @@
+{
+  "product": "vatti-slim-series-type-range-hood-v996",
+  "note": "Eight posters, heading over photograph. V996-PG8 is an installation drawing and is dropped; its figures are in product_dimension. PG2's main photograph carries its explanation printed across the picture and cannot be cut free of it, so only the two summary tiles at its foot are taken.",
+  "crops": [
+    {
+      "from": "2023/11/V996-PG1.jpg",
+      "to": "2026/08/v996-hero.webp",
+      "box": [
+        0,
+        0.245,
+        1,
+        1
+      ],
+      "why": "heading above"
+    },
+    {
+      "from": "2023/11/V996-PG3.jpg",
+      "to": "2026/08/v996-pressure.webp",
+      "box": [
+        0,
+        0.195,
+        0.72,
+        1
+      ],
+      "why": "heading above, vertical 500Pa set down the right"
+    },
+    {
+      "from": "2023/11/V996-PG5.jpg",
+      "to": "2026/08/v996-heat-clean.webp",
+      "box": [
+        0,
+        0.15,
+        1,
+        0.48
+      ],
+      "why": "heading above, cycle wheel below"
+    },
+    {
+      "from": "2023/11/V996-PG5.jpg",
+      "to": "2026/08/v996-clean-cycle.webp",
+      "box": [
+        0.02,
+        0.56,
+        0.98,
+        1
+      ],
+      "why": "the labelled 17-minute cycle wheel"
+    },
+    {
+      "from": "2023/11/V996-PG7.jpg",
+      "to": "2026/08/v996-in-cabinets.webp",
+      "box": [
+        0.02,
+        0.115,
+        0.98,
+        0.5
+      ],
+      "why": "heading above"
+    },
+    {
+      "from": "2023/11/V996-PG7.jpg",
+      "to": "2026/08/v996-on-wall.webp",
+      "box": [
+        0.02,
+        0.535,
+        0.98,
+        0.95
+      ],
+      "why": "second photo of the same poster"
+    },
+    {
+      "from": "2023/11/V996-PG2.jpg",
+      "to": "2026/08/v996-depth-tiles.webp",
+      "box": [
+        0.02,
+        0.695,
+        0.98,
+        0.95
+      ],
+      "why": "the two summary tiles at the foot"
+    },
+    {
+      "from": "2023/11/V996-PG4.jpg",
+      "to": "2026/08/v996-hand-sensor.webp",
+      "box": [
+        0,
+        0.09,
+        1,
+        0.6
+      ],
+      "why": "heading above, gesture tiles below"
+    },
+    {
+      "from": "2023/11/V996-PG6.jpg",
+      "to": "2026/08/v996-guide-plate.webp",
+      "box": [
+        0,
+        0.21,
+        1,
+        1
+      ],
+      "why": "heading and paragraph above"
+    }
+  ]
+}

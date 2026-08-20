@@ -1,0 +1,215 @@
+{
+  "product": "vatti-dishwasher-dwbb7",
+  "note": "Sixteen portrait posters on one template: heading at the top, picture under it. description-9 is the parameter sheet and is dropped; its figures are in product_dimension.",
+  "crops": [
+    {
+      "from": "2024/08/Vatti-DWBB7-Dishwasher-product-description-1.webp",
+      "to": "2026/08/dwbb7-hero.webp",
+      "box": [
+        0,
+        0.145,
+        1,
+        1
+      ],
+      "why": "heading above; the four hexagon labels are the machine's four jobs and stay"
+    },
+    {
+      "from": "2024/08/Vatti-DWBB7-Dishwasher-product-description-13.webp",
+      "to": "2026/08/dwbb7-motor.webp",
+      "box": [
+        0,
+        0.24,
+        1,
+        1
+      ],
+      "why": "heading and paragraph above"
+    },
+    {
+      "from": "2024/08/Vatti-DWBB7-Dishwasher-product-description-11.webp",
+      "to": "2026/08/dwbb7-zero-residual.webp",
+      "box": [
+        0,
+        0.22,
+        1,
+        1
+      ],
+      "why": "heading above"
+    },
+    {
+      "from": "2024/08/Vatti-DWBB7-Dishwasher-product-description-7.webp",
+      "to": "2026/08/dwbb7-disinfection.webp",
+      "box": [
+        0,
+        0.13,
+        1,
+        1
+      ],
+      "why": "heading above; the 99.99% and 75°C marks are on the picture"
+    },
+    {
+      "from": "2024/08/Vatti_Dishwasher-09.png",
+      "to": "2026/08/dwbb7-condensation.webp",
+      "box": [
+        0,
+        0.155,
+        1,
+        1
+      ],
+      "why": "heading above; the duct labels are the diagram"
+    },
+    {
+      "from": "2024/08/Vatti-DWBB7-Dishwasher-product-description-2.webp",
+      "to": "2026/08/dwbb7-ventilation.webp",
+      "box": [
+        0,
+        0.17,
+        1,
+        0.82
+      ],
+      "why": "heading above, paragraph below"
+    },
+    {
+      "from": "2024/08/Vatti-DWBB7-Dishwasher-product-description-4.webp",
+      "to": "2026/08/dwbb7-load-modes.webp",
+      "box": [
+        0.03,
+        0.21,
+        0.97,
+        0.53
+      ],
+      "why": "heading and paragraph above"
+    },
+    {
+      "from": "2024/08/Vatti-DWBB7-Dishwasher-product-description-4.webp",
+      "to": "2026/08/dwbb7-programmes.webp",
+      "box": [
+        0.03,
+        0.66,
+        0.97,
+        0.98
+      ],
+      "why": "the three programme photos at the foot"
+    },
+    {
+      "from": "2024/08/Vatti-DWBB7-Dishwasher-product-description-6.webp",
+      "to": "2026/08/dwbb7-glass.webp",
+      "box": [
+        0.6,
+        0.12,
+        0.97,
+        0.35
+      ],
+      "why": "photo half of the first panel"
+    },
+    {
+      "from": "2024/08/Vatti-DWBB7-Dishwasher-product-description-6.webp",
+      "to": "2026/08/dwbb7-steel-liner.webp",
+      "box": [
+        0.03,
+        0.38,
+        0.62,
+        0.62
+      ],
+      "why": "photo half of the second panel"
+    },
+    {
+      "from": "2024/08/Vatti-DWBB7-Dishwasher-product-description-6.webp",
+      "to": "2026/08/dwbb7-self-clean.webp",
+      "box": [
+        0.38,
+        0.66,
+        0.97,
+        0.95
+      ],
+      "why": "photo half of the third panel"
+    },
+    {
+      "from": "2024/08/Vatti-DWBB7-Dishwasher-product-description-14.webp",
+      "to": "2026/08/dwbb7-capacity.webp",
+      "box": [
+        0,
+        0.13,
+        1,
+        1
+      ],
+      "why": "heading above"
+    },
+    {
+      "from": "2024/08/Vatti-DWBB7-Dishwasher-product-description-12.webp",
+      "to": "2026/08/dwbb7-spray-arms.webp",
+      "box": [
+        0,
+        0,
+        1,
+        0.42
+      ],
+      "why": "the claim is printed across the middle of this one"
+    },
+    {
+      "from": "2024/08/Vatti-DWBB7-Dishwasher-product-description-8.webp",
+      "to": "2026/08/dwbb7-energy.webp",
+      "box": [
+        0,
+        0.38,
+        1,
+        1
+      ],
+      "why": "heading, paragraph and half-load tiles above"
+    },
+    {
+      "from": "2024/08/Vatti-DWBB7-Dishwasher-product-description-10.webp",
+      "to": "2026/08/dwbb7-drying.webp",
+      "box": [
+        0,
+        0.15,
+        1,
+        0.7
+      ],
+      "why": "heading above, heater panel below"
+    },
+    {
+      "from": "2024/08/Vatti-DWBB7-Dishwasher-product-description-10.webp",
+      "to": "2026/08/dwbb7-heater.webp",
+      "box": [
+        0.55,
+        0.75,
+        1,
+        0.98
+      ],
+      "why": "the PTC heater photo, its caption to the left"
+    },
+    {
+      "from": "2024/08/Vatti_Dishwasher-10.png",
+      "to": "2026/08/dwbb7-pumps.webp",
+      "box": [
+        0,
+        0.265,
+        1,
+        1
+      ],
+      "why": "heading above; the pump labels are the diagram"
+    },
+    {
+      "from": "2024/08/Vatti-DWBB7-Dishwasher-product-description-3.webp",
+      "to": "2026/08/dwbb7-programme-tiles.webp",
+      "box": [
+        0,
+        0.17,
+        1,
+        0.8
+      ],
+      "why": "heading above, programme counts below"
+    },
+    {
+      "from": "2024/08/Vatti-DWBB7-Dishwasher-product-description-5.webp",
+      "to": "2026/08/dwbb7-filtration.webp",
+      "box": [
+        0,
+        0.19,
+        1,
+        1
+      ],
+      "why": "heading above; the three filter labels are the diagram"
+    }
+  ]
+}

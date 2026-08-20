@@ -1,0 +1,105 @@
+{
+  "product": "vatti-range-hood-v997",
+  "note": "Eight posters. Picture-3-1 is a specification sheet and Picture-10 is a tick-list against a traditional hood: both are dropped, and what they said is now the dimension table and the block copy.",
+  "crops": [
+    {
+      "from": "2025/10/00-C.png",
+      "to": "2026/08/v997-colour-grey.webp",
+      "box": [
+        0.02,
+        0.078,
+        0.98,
+        0.245
+      ],
+      "why": "caption band above each photo"
+    },
+    {
+      "from": "2025/10/00-C.png",
+      "to": "2026/08/v997-colour-white.webp",
+      "box": [
+        0.02,
+        0.452,
+        0.98,
+        0.6
+      ],
+      "why": "second colourway"
+    },
+    {
+      "from": "2025/10/00-C.png",
+      "to": "2026/08/v997-colour-black.webp",
+      "box": [
+        0.02,
+        0.748,
+        0.98,
+        0.885
+      ],
+      "why": "third colourway"
+    },
+    {
+      "from": "2025/08/V997_Product-Picture-11.webp",
+      "to": "2026/08/v997-suction-types.webp",
+      "box": [
+        0.02,
+        0.17,
+        0.98,
+        0.55
+      ],
+      "why": "question heading above; the three labelled panels are the comparison"
+    },
+    {
+      "from": "2025/08/V997_Product-Picture-11.webp",
+      "to": "2026/08/v997-combination.webp",
+      "box": [
+        0.02,
+        0.62,
+        0.98,
+        0.93
+      ],
+      "why": "the two-part diagram, its labels kept"
+    },
+    {
+      "from": "2025/08/V997_Product-Picture-7.webp",
+      "to": "2026/08/v997-hero.webp",
+      "box": [
+        0,
+        0.275,
+        1,
+        1
+      ],
+      "why": "title pill at the top"
+    },
+    {
+      "from": "2025/08/V997_Product-Picture-9.webp",
+      "to": "2026/08/v997-generations.webp",
+      "box": [
+        0.03,
+        0.32,
+        0.97,
+        0.95
+      ],
+      "why": "heading above; the generation labels stay"
+    },
+    {
+      "from": "2025/08/V997_Product-Picture-1-1.webp",
+      "to": "2026/08/v997-turbo-wash.webp",
+      "box": [
+        0,
+        0.205,
+        1,
+        0.95
+      ],
+      "why": "heading above, patent line below"
+    },
+    {
+      "from": "2025/08/V997_Product-Picture-5.webp",
+      "to": "2026/08/v997-bldc-motor.webp",
+      "box": [
+        0,
+        0.175,
+        1,
+        1
+      ],
+      "why": "heading above; the two figures are set over the picture and stay"
+    }
+  ]
+}
