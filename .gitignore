@@ -27,6 +27,9 @@ media-staging/
 # raw WordPress media export — source for the R2 migration, far too large for git
 old-media/
 
+# Sources pulled from R2 by scripts/feature-crop.mjs. Re-fetchable, never edited.
+.cache/
+
 # browser verification artifacts
 .playwright-mcp/
 /*.png

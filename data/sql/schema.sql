@@ -147,6 +147,97 @@ CREATE TABLE product_image (
   PRIMARY KEY (product_id, position)
 );
 
+-- The feature story as text rather than pixels.
+--
+-- The source site tells it in 5-20 full-width JPEGs per product with the copy
+-- set INSIDE the picture. product_image.caption_md transcribes that copy, which
+-- makes it readable, but the picture still carries the same words burnt in, so
+-- the page says everything twice and the half a visitor could search, translate,
+-- resize or have read aloud is the half that is not really there.
+--
+-- A feature row is the block those JPEGs were always trying to be: a heading, a
+-- few lines of body, and the picture with the text cropped off. The crop is a
+-- NEW R2 object under a new key. The original stays exactly where it is, because
+-- /wp-content/uploads/ still 301s to it and the URL contract does not bend for a
+-- redesign.
+--
+-- image_url/alt/width/height as plain columns rather than a FK into `image`:
+-- the same call product_category.hero_image_url made. Every id in `image` is
+-- handed out by the generated products.sql, so a hand-authored row there squats
+-- on a number the next scrape wants back.
+--
+-- layout is a property of the PICTURE, not of the component, which is why it is
+-- data. A wide in-kitchen shot wants the full column; a studio detail wants half
+-- of it beside the words; the four panels cut out of one highlights composite
+-- want to stay four panels. The component cannot know which it was handed.
+CREATE TABLE product_feature (
+  product_id INTEGER NOT NULL REFERENCES product(id) ON DELETE CASCADE,
+  position   INTEGER NOT NULL,
+  layout     TEXT NOT NULL DEFAULT 'split'
+             CHECK (layout IN ('banner','split','card')),
+  title      TEXT,
+  body_md    TEXT,
+  image_url  TEXT,
+  image_alt  TEXT,
+  image_w    INTEGER,
+  image_h    INTEGER,
+  PRIMARY KEY (product_id, position),
+  -- A row with neither is a gap in the page nobody asked for.
+  CHECK (title IS NOT NULL OR image_url IS NOT NULL)
+);
+
+-- The measured drawing, as text.
+--
+-- Every hood ships a dimension PDF and nothing else: 896mm, the 500-600mm
+-- clearance over the hob, the 7 inch duct. A renovator asking whether it fits
+-- the cabinet is asking the single most disqualifying question there is, and
+-- today the answer is four megabytes behind a link, invisible to search and to
+-- anything reading the page aloud.
+--
+-- `value` is TEXT, not a number with a unit column: half of these are ranges
+-- ("500 to 600 mm"), one is a diameter, and none of them is ever arithmetic.
+-- product_facet is the table for figures the site computes with; this one is
+-- the drawing transcribed.
+CREATE TABLE product_dimension (
+  product_id INTEGER NOT NULL REFERENCES product(id) ON DELETE CASCADE,
+  position   INTEGER NOT NULL,
+  section    TEXT NOT NULL DEFAULT 'product'
+             CHECK (section IN ('product','installation')),
+  label      TEXT NOT NULL,
+  value      TEXT NOT NULL,
+  note       TEXT,
+  -- The three columns below are the same figure again, in a form arithmetic can
+  -- be done on. `value` stays the authority for what is PRINTED; these are what
+  -- the fit checker adds to a visitor's counter height.
+  --
+  -- Only the rows the checker needs carry a metric. A row with none is display
+  -- only, and a product with none gets no checker rather than a half-populated
+  -- one — the component is not rendered unless every metric it reads is there.
+  --
+  -- 'duct_above_counter' is stated relative to the counter, not the floor, so
+  -- the arithmetic holds for a kitchen that is not the drawing's 850mm.
+  metric     TEXT CHECK (metric IN (
+               'width','opening','clearance','duct_above_counter')),
+  min_mm     INTEGER,
+  max_mm     INTEGER,
+  PRIMARY KEY (product_id, position),
+  UNIQUE (product_id, metric)
+);
+
+-- Per-product questions. The category FAQ answers "which hood", this answers
+-- "this hood", and the two must not be the same rows: a question about the
+-- V993's duct size has no place on a page listing sixteen models.
+--
+-- Answers carry markdown links, and db-check.mjs asserts every internal one
+-- resolves, the same guard the category copy gets.
+CREATE TABLE product_faq (
+  product_id INTEGER NOT NULL REFERENCES product(id) ON DELETE CASCADE,
+  position   INTEGER NOT NULL,
+  question   TEXT NOT NULL,
+  answer_md  TEXT NOT NULL,
+  PRIMARY KEY (product_id, position)
+);
+
 CREATE TABLE product_download (
   product_id INTEGER NOT NULL REFERENCES product(id) ON DELETE CASCADE,
   position   INTEGER NOT NULL,
@@ -157,10 +248,19 @@ CREATE TABLE product_download (
   PRIMARY KEY (product_id, position)
 );
 
+-- The scrape gives the YouTube id and nothing else. The four columns after it
+-- are hand-filled from the video's own page, and they exist so the embed is not
+-- a hole in the text: an iframe says nothing to a crawler, to an answer engine
+-- or to a reader who will not play it. They are also exactly what VideoObject
+-- needs, which is why duration is stored in seconds and formatted at render.
 CREATE TABLE product_video (
-  product_id INTEGER NOT NULL REFERENCES product(id) ON DELETE CASCADE,
-  position   INTEGER NOT NULL,
-  video_id   TEXT NOT NULL,
+  product_id       INTEGER NOT NULL REFERENCES product(id) ON DELETE CASCADE,
+  position         INTEGER NOT NULL,
+  video_id         TEXT NOT NULL,
+  title            TEXT,
+  summary          TEXT,
+  published_on     TEXT,   -- ISO date
+  duration_seconds INTEGER,
   PRIMARY KEY (product_id, position)
 );
 

@@ -1,3 +1,4 @@
+import type { FitMetrics } from "@/components/FitCheck";
 import { all, get } from "@/lib/db";
 
 export type Facet = { facet: string; value: number; unit: string; label: string };
@@ -9,6 +10,29 @@ export type ProductImage = {
   height: number | null;
   role: string;
   caption_md: string | null;
+};
+export type Feature = {
+  layout: "banner" | "split" | "card";
+  title: string | null;
+  body_md: string | null;
+  image_url: string | null;
+  image_alt: string | null;
+  image_w: number | null;
+  image_h: number | null;
+};
+export type Dimension = {
+  section: "product" | "installation";
+  label: string;
+  value: string;
+  note: string | null;
+};
+export type ProductFaq = { question: string; answer_md: string };
+export type Video = {
+  video_id: string;
+  title: string | null;
+  summary: string | null;
+  published_on: string | null;
+  duration_seconds: number | null;
 };
 export type Download = { label: string; url: string; kind: string };
 export type RelatedProduct = {
@@ -92,11 +116,58 @@ export function getDownloads(productId: number): Download[] {
   );
 }
 
-export function getVideos(productId: number): string[] {
-  return all<{ video_id: string }>(
-    `SELECT video_id FROM product_video WHERE product_id = ? ORDER BY position`,
+/**
+ * The drawing, split by what it answers: `product` is the box, `installation`
+ * is everything about the hole it goes in. Two sections rather than two tables
+ * — same call product_spec made, and the section is a heading, not a taxonomy.
+ */
+export function getDimensions(productId: number): Dimension[] {
+  return all<Dimension>(
+    `SELECT section, label, value, note FROM product_dimension
+      WHERE product_id = ? ORDER BY position`,
     productId
-  ).map((r) => r.video_id);
+  );
+}
+
+/**
+ * The subset of the drawing the fit checker does arithmetic on. Returns
+ * undefined unless every metric it needs is present, so a half-transcribed
+ * product renders no checker rather than a checker that quietly guesses.
+ */
+export function getFitMetrics(productId: number): FitMetrics | undefined {
+  const rows = all<{ metric: string; min_mm: number | null; max_mm: number | null }>(
+    `SELECT metric, min_mm, max_mm FROM product_dimension
+      WHERE product_id = ? AND metric IS NOT NULL`,
+    productId
+  );
+  const by = new Map(rows.map((r) => [r.metric, r]));
+  const width = by.get("width");
+  const opening = by.get("opening");
+  const clearance = by.get("clearance");
+  const duct = by.get("duct_above_counter");
+  if (!width?.min_mm || !opening?.min_mm) return undefined;
+  if (!clearance?.min_mm || !clearance.max_mm || !duct?.min_mm || !duct.max_mm) return undefined;
+  return {
+    width: width.min_mm,
+    opening: opening.min_mm,
+    clearance: { min: clearance.min_mm, max: clearance.max_mm },
+    duct: { min: duct.min_mm, max: duct.max_mm },
+  };
+}
+
+export function getProductFaqs(productId: number): ProductFaq[] {
+  return all<ProductFaq>(
+    `SELECT question, answer_md FROM product_faq WHERE product_id = ? ORDER BY position`,
+    productId
+  );
+}
+
+export function getVideos(productId: number): Video[] {
+  return all<Video>(
+    `SELECT video_id, title, summary, published_on, duration_seconds
+       FROM product_video WHERE product_id = ? ORDER BY position`,
+    productId
+  );
 }
 
 export function getRelated(productId: number): RelatedProduct[] {
@@ -107,6 +178,19 @@ export function getRelated(productId: number): RelatedProduct[] {
        LEFT JOIN image i ON i.id = p.hero_image_id
       WHERE r.product_id = ? AND p.is_published = 1
       ORDER BY r.position`,
+    productId
+  );
+}
+
+/**
+ * The written feature story, where one has been authored. Empty for a product
+ * still running on the legacy image stack, which is what the page falls back
+ * to — see data/sql/product-features.sql.
+ */
+export function getFeatures(productId: number): Feature[] {
+  return all<Feature>(
+    `SELECT layout, title, body_md, image_url, image_alt, image_w, image_h
+       FROM product_feature WHERE product_id = ? ORDER BY position`,
     productId
   );
 }

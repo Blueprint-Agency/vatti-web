@@ -39,6 +39,12 @@
   --font-display: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
   --font-readout: var(--font-geist-mono), ui-monospace, monospace;
 
+  /* The sticky header's own height: 24px line + 2 x 14px padding + the 1px
+     rule. Anything that sticks UNDER the header (the product page's section
+     rail) offsets by this, and every scroll target clears both. A measured
+     constant rather than a JS read — the header does not change height. */
+  --header-h: 53px;
+
   /* semantic z-index — never arbitrary values */
   --z-dropdown: 10;
   --z-sticky: 20;

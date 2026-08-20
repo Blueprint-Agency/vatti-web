@@ -48,3 +48,28 @@ export const EXCLUSIONS = [
 
 export const PAID_SERVICE =
   "If a product fails outside the warranty period, VATTI after-sales outlets will still provide a warm, thoughtful and timely paid service as per policy.";
+
+/**
+ * What a given appliance is covered for, in the two clauses a product page has
+ * room for. Derived from PERIODS above rather than typed again, in the sense
+ * that it says the same thing — the mapping is explicit because PERIODS lists
+ * its scope as prose ("Cooker hood, cooker hob, combi oven...") and a product
+ * carries a `kind`, not a sentence.
+ *
+ * NULL for the kinds the agreement does not name. A microwave, dishwasher or
+ * purifier gets no warranty line rather than a guessed one: stating a term the
+ * document does not cover is worse than stating none.
+ */
+export function warrantyFor(kind: string): { headline: string; extra: string | null } | null {
+  switch (kind) {
+    case "range hood":
+      return { headline: "2 year warranty", extra: "10 years on the motor" };
+    case "hob":
+      return { headline: "2 year warranty", extra: "lifetime on the glass top" };
+    case "oven":
+    case "combi-steam oven":
+      return { headline: "2 year warranty", extra: null };
+    default:
+      return null;
+  }
+}

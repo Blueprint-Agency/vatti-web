@@ -210,6 +210,9 @@ check("slug collisions across the root namespace", `
     ...db.prepare("SELECT category_id, question AS ctx, answer_md AS md FROM category_faq").all(),
     ...db.prepare("SELECT category_id, heading AS ctx, body_md AS md FROM category_guide").all(),
     ...db.prepare("SELECT category_id, title AS ctx, body_md AS md FROM category_reason").all(),
+    // Product FAQ answers send readers to the model that IS the right answer
+    // when this one is not, so they carry internal links like the copy above.
+    ...db.prepare("SELECT product_id, question AS ctx, answer_md AS md FROM product_faq").all(),
   ];
   for (const row of rows) {
     for (const m of row.md.matchAll(/\]\((\/[^)\s]*)\)/g)) {
@@ -218,11 +221,11 @@ check("slug collisions across the root namespace", `
     }
   }
   if (broken.length) {
-    failures.push({ name: "category copy linking to a page that does not exist", rows: broken });
-    console.log(`FAIL  category copy linking to a page that does not exist (${broken.length})`);
+    failures.push({ name: "hand-authored copy linking to a page that does not exist", rows: broken });
+    console.log(`FAIL  hand-authored copy linking to a page that does not exist (${broken.length})`);
     for (const b of broken) console.log(`        ${JSON.stringify(b)}`);
   } else {
-    console.log("ok    category copy linking to a page that does not exist");
+    console.log("ok    hand-authored copy linking to a page that does not exist");
   }
 }
 
