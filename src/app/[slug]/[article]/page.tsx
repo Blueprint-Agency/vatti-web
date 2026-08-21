@@ -73,6 +73,7 @@ export default async function Page({ params }: Params) {
     r.notes && flatten(article.body_md).includes(flatten(r.notes)) ? { ...r, notes: null } : r
   );
   const more = getMoreFromSection(article.section, article.path);
+  const { body, cover } = oneCover(article.body_md, article.hero_url);
   const sizes = Object.fromEntries(
     getArticleImageSizes(article.id)
       .filter((s) => s.width && s.height)
@@ -132,7 +133,7 @@ export default async function Page({ params }: Params) {
             )}
           </p>
 
-          {article.hero_url && (
+          {cover && article.hero_url && (
             <Image
               src={article.hero_url}
               alt={article.hero_alt ?? ""}
@@ -147,7 +148,7 @@ export default async function Page({ params }: Params) {
           {recipes.length > 0 && <RecipeSummary recipes={recipes} />}
 
           <div className="mt-6 text-[1.0625rem]">
-            <Markdown md={article.body_md} sizes={sizes} />
+            <Markdown md={body} sizes={sizes} />
           </div>
 
           {recipes.map((recipe) => (
@@ -191,6 +192,39 @@ export default async function Page({ params }: Params) {
  *  are the same character to a reader, and only the wording has to match. */
 const flatten = (s: string) =>
   s.replace(/[‘’]/g, "'").replace(/\s+/g, " ").trim().toLowerCase();
+
+/**
+ * The featured image is also placed in the body on 101 of the 105 articles —
+ * WordPress stores the two independently and its editor pasted the same file in
+ * again, so rendering both prints the cover twice down the whole blog.
+ *
+ * Which copy loses depends on what the body's copy is doing. On 97 it is the
+ * body's opening image, sitting in the intro or just under the first heading:
+ * the cover slot above owns that picture, so the body line goes. On the other
+ * four (is-a-dishwasher-worth-it, what-is-not-dishwasher-safe and two of the
+ * numbered recipe round-ups) the featured image is instead the figure for a
+ * section much further down, one of nine or ten with a picture each — pulling
+ * it would leave that one section bare, so the body keeps it and the cover slot
+ * stands down. Either way the image appears once.
+ *
+ * `hero_url` still feeds the OG tag and the archive card in both cases; this
+ * only decides where the picture is drawn on the page.
+ */
+function oneCover(md: string, hero: string | null): { body: string; cover: boolean } {
+  if (!hero) return { body: md, cover: false };
+
+  const lines = md.split("\n");
+  const first = lines.findIndex((l) => IMAGE_LINE.test(l.trim()));
+  if (first < 0 || !lines[first].includes(hero)) {
+    return { body: md, cover: !md.includes(hero) };
+  }
+
+  lines.splice(first, 1);
+  return { body: lines.join("\n"), cover: true };
+}
+
+/** A standalone image placement, the only form the corpus uses — see markdown.tsx. */
+const IMAGE_LINE = /^!\[[^\]]*\]\([^)\s]+\)$/;
 
 /** Prep/cook/yield/calories, promoted out of the prose to sit under the title. */
 function RecipeSummary({ recipes }: { recipes: Recipe[] }) {
