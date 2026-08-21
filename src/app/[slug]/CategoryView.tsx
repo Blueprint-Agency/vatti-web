@@ -14,6 +14,7 @@ import type { CSSProperties, ReactNode } from "react";
 
 import { CompareSelector } from "@/components/CompareSelector";
 import { CompareTable } from "@/components/CompareTable";
+import { CtaBar } from "@/components/CtaBar";
 import { EnquiryBuilder } from "@/components/EnquiryBuilder";
 import { ModelGrid } from "@/components/ModelGrid";
 import { Reveal } from "@/components/Reveal";
@@ -35,7 +36,7 @@ import type {
   Signature,
 } from "@/lib/queries/category";
 import type { ArticleTeaser, Region } from "@/lib/queries/home";
-import { WHATSAPP } from "@/lib/site";
+import { WHATSAPP, whatsappLink } from "@/lib/site";
 
 /**
  * The category template. These pages outrank the homepage — /kitchen-hood/ and
@@ -890,6 +891,12 @@ export function CategoryView({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPage(faqs)) }}
         />
       )}
+
+      {/* The same bar the product pages carry. These pages outrank the
+          homepage, so a phone arriving from search lands here first and the
+          "how to buy" section is nine screens down. The message names the
+          range, in the questionnaire's own words. */}
+      <CtaBar href={whatsappLink(`Hi VATTI Malaysia. I am looking at your ${noun} range.`)} />
     </>
   );
 }

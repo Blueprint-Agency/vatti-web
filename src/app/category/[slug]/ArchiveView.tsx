@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { CtaBar } from "@/components/CtaBar";
 import { SiteHeader } from "@/components/SiteHeader";
 import type { Archive, ArticleCard } from "@/lib/queries/article";
 import { formatDate } from "@/lib/site";
@@ -132,6 +133,8 @@ export function ArchiveView({
           )}
         </section>
       </main>
+
+      <CtaBar />
     </>
   );
 }

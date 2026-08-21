@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 
 import { SiteHeader } from "@/components/SiteHeader";
 import { getStore, storeSlugs, telHref, type Store } from "@/lib/queries/store";
+import { CtaBar } from "@/components/CtaBar";
 import { WHATSAPP } from "@/lib/site";
 
 /**
@@ -170,6 +171,8 @@ export default async function StorePage({ params }: { params: Promise<{ slug: st
           </div>
         </section>
       </main>
+
+      <CtaBar />
 
       <script
         type="application/ld+json"

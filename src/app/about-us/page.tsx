@@ -12,6 +12,7 @@ import { Reveal } from "@/components/Reveal";
 import { SiteHeader } from "@/components/SiteHeader";
 import { getCategory } from "@/lib/queries/category";
 import { getCategoryCards, getRegions } from "@/lib/queries/home";
+import { CtaBar } from "@/components/CtaBar";
 import { WHATSAPP } from "@/lib/site";
 
 // Title and description kept verbatim from the live page — it earns 218 clicks
@@ -543,6 +544,8 @@ export default function AboutPage() {
           </div>
         </section>
       </main>
+
+      <CtaBar />
     </>
   );
 }

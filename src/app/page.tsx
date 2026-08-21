@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { DealerMap } from "@/components/DealerMap";
+import { CtaBar } from "@/components/CtaBar";
 import { EnquiryBuilder } from "@/components/EnquiryBuilder";
 import { ProductShowcase } from "@/components/ProductShowcase";
 import { Reveal } from "@/components/Reveal";
@@ -948,6 +949,8 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPage(faqs)) }}
       />
+
+      <CtaBar />
     </>
   );
 }

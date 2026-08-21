@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { CompareTable } from "@/components/CompareTable";
+import { CtaBar } from "@/components/CtaBar";
 import { FitCheck } from "@/components/FitCheck";
 import { ProductFeatures } from "@/components/ProductFeatures";
 import { ProductGallery } from "@/components/ProductGallery";
@@ -958,22 +959,7 @@ function ProductView({ product }: { product: Product }) {
 
       {/* Mobile sticky CTA — 64% of traffic. Same prefilled message as the
           desktop hero button: this bar is that button on a phone. */}
-      <div className="fixed inset-x-0 bottom-0 z-[var(--z-sticky)] border-t border-line bg-void/95 px-4 py-3 backdrop-blur-sm lg:hidden">
-        <div className="flex gap-3">
-          <a
-            href={enquireHref}
-            className="flex-1 rounded-sm bg-teal px-4 py-3 text-center font-semibold text-void"
-          >
-            WhatsApp
-          </a>
-          <Link
-            href="/store-locations/"
-            className="flex-1 rounded-sm border border-line-strong px-4 py-3 text-center font-medium text-ink"
-          >
-            Find a dealer
-          </Link>
-        </div>
-      </div>
+      <CtaBar href={enquireHref} />
     </>
   );
 }

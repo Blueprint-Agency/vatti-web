@@ -4,6 +4,7 @@ import Link from "next/link";
 
 import { SiteHeader } from "@/components/SiteHeader";
 import { storesByRegion, telHref } from "@/lib/queries/store";
+import { CtaBar } from "@/components/CtaBar";
 import { WHATSAPP } from "@/lib/site";
 
 // Title and description kept verbatim from the live page — it earns 1,413
@@ -191,6 +192,8 @@ export default function StoreLocationsPage() {
           </div>
         </section>
       </main>
+
+      <CtaBar />
     </>
   );
 }

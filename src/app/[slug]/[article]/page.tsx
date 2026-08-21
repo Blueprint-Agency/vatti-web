@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { CtaBar } from "@/components/CtaBar";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Markdown } from "@/lib/markdown";
 import {
@@ -184,6 +185,8 @@ export default async function Page({ params }: Params) {
           </section>
         )}
       </main>
+
+      <CtaBar />
     </>
   );
 }

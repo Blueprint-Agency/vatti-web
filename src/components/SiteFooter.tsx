@@ -32,7 +32,8 @@ const COLUMNS = [
 
 export function SiteFooter() {
   return (
-    /* pb clears the product page's mobile sticky CTA bar. */
+    /* pb clears the mobile sticky CTA bar, which every template except
+       /vatti-ewarranty/ now carries. See CtaBar. */
     <footer className="border-t border-line bg-void">
       <div className="mx-auto max-w-6xl px-5 pb-28 pt-14 sm:px-8 sm:pt-20 lg:pb-14">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[minmax(0,1.3fr)_repeat(3,minmax(0,1fr))]">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { SiteHeader } from "@/components/SiteHeader";
+import { CtaBar } from "@/components/CtaBar";
 import { WHATSAPP } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -95,6 +96,8 @@ export default function VattiPayPage() {
           </p>
         </section>
       </main>
+
+      <CtaBar />
     </>
   );
 }
