@@ -624,7 +624,7 @@ function ProductView({ product }: { product: Product }) {
             )}
 
             {fit && (
-              <div className="mt-10 max-w-3xl">
+              <div className="mt-10 max-w-5xl">
                 <FitCheck model={product.model_code} metrics={fit} />
               </div>
             )}
