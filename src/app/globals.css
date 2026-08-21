@@ -418,7 +418,7 @@
     }
     /* The name again, on the back. Without it a turned card is a paragraph
        with nothing to attach itself to. Hidden while the faces are stacked,
-       where the front is saying it an inch higher up. */
+       where the front is saying it an inch higher up.
        The gap under it rides on the same rule. Set as a utility on the element
        it would survive the label being hidden, and the stacked card would open
        with three quarters of a line of nothing under the name. */
