@@ -504,58 +504,53 @@ export function CategoryView({
           </section>
         )}
 
-        {/* How to choose one. Blocks with a measured figure lead; the prose
-            blocks follow in a 2x2, which is where ducted and ductless sit side
-            by side without either being framed as the default. */}
-        {guides.length > 0 && (
-          <section aria-labelledby="choose-heading" className="border-y border-line bg-surface">
+        {/* Why this brand. Six claims, each carried by its title and its copy
+            alone. The measured figures that used to close three of these six
+            cells are gone from the page but not from category_reason: the same
+            numbers are printed by the summary band at the top of this page and
+            again in the comparison table, so a third appearance here was the
+            page repeating itself rather than evidencing itself. */}
+        {reasons.length > 0 && (
+          <section aria-labelledby="reasons-heading" className="border-y border-line bg-surface">
             <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
               <h2
-                id="choose-heading"
-                className="max-w-[22ch] text-3xl font-semibold tracking-[-0.03em] sm:text-4xl"
+                id="reasons-heading"
+                className="mx-auto max-w-[24ch] text-center text-3xl font-semibold tracking-[-0.03em] sm:text-4xl"
               >
-                Choosing a {noun} in Malaysia
+                {reasons.length} reasons to buy a VATTI {noun}
               </h2>
 
-              {figures.length > 0 && (
-                <ul className="mt-10 grid gap-5 sm:grid-cols-2">
-                  {figures.map((g, i) => (
-                    // Reveal INSIDE the li, not around it: a <ul> may only
-                    // contain <li>, and Reveal renders a div.
-                    <li key={g.heading}>
-                      <Reveal delay={i * 80} className="h-full">
-                        <div className="h-full rounded-sm border border-line bg-void p-6 sm:p-8">
-                          <p className="flex items-baseline gap-2">
-                            <span className="readout text-4xl font-semibold leading-none text-teal">
-                              {g.figure}
-                            </span>
-                            <span className="readout text-sm text-ink-muted">{g.figure_unit}</span>
-                          </p>
-                          <h3 className="mt-5 text-xl font-semibold tracking-[-0.025em]">
-                            {g.heading}
-                          </h3>
-                          <p className="mt-3 leading-relaxed text-ink-muted">
-                            <Inline text={g.body_md} />
-                          </p>
-                        </div>
-                      </Reveal>
-                    </li>
-                  ))}
-                </ul>
-              )}
-
-              {prose.length > 0 && (
-                <ul className="mt-12 grid gap-x-12 gap-y-10 sm:grid-cols-2">
-                  {prose.map((g) => (
-                    <li key={g.heading} className="border-t border-line pt-6">
-                      <h3 className="text-lg font-semibold tracking-[-0.02em]">{g.heading}</h3>
-                      <p className="mt-3 max-w-[52ch] leading-relaxed text-ink-muted">
-                        <Inline text={g.body_md} />
-                      </p>
-                    </li>
-                  ))}
-                </ul>
-              )}
+              <dl className="mt-12 grid gap-px bg-line sm:grid-cols-2 lg:grid-cols-3">
+                {reasons.map((r) => {
+                  const Icon = r.icon ? REASON_ICONS[r.icon] : undefined;
+                  return (
+                  <div key={r.title} className="reason-cell flex flex-col bg-surface p-6 sm:p-7">
+                    {/* Light weight and ink-muted, deliberately. Teal on this
+                        site means "measured value", and a mark is not one.
+                        It is here to give the eye somewhere to land and to
+                        state the claim a second way — once in the glyph, once
+                        in how it moves. See REASON_MOTION. */}
+                    {Icon && (
+                      <Icon
+                        size={26}
+                        weight="light"
+                        aria-hidden="true"
+                        className={[
+                          "mb-5 shrink-0 text-ink-muted",
+                          r.icon ? REASON_MOTION[r.icon] : undefined,
+                        ]
+                          .filter(Boolean)
+                          .join(" ")}
+                      />
+                    )}
+                    <dt className="font-semibold leading-snug">{r.title}</dt>
+                    <dd className="mt-3 text-[0.9375rem] leading-relaxed text-ink-muted">
+                      <Inline text={r.body_md} />
+                    </dd>
+                  </div>
+                  );
+                })}
+              </dl>
             </div>
           </section>
         )}
@@ -687,53 +682,58 @@ export function CategoryView({
           </section>
         )}
 
-        {/* Why this brand. Six claims, each carried by its title and its copy
-            alone. The measured figures that used to close three of these six
-            cells are gone from the page but not from category_reason: the same
-            numbers are printed by the summary band at the top of this page and
-            again in the comparison table, so a third appearance here was the
-            page repeating itself rather than evidencing itself. */}
-        {reasons.length > 0 && (
-          <section aria-labelledby="reasons-heading" className="border-y border-line bg-surface">
+        {/* How to choose one. Blocks with a measured figure lead; the prose
+            blocks follow in a 2x2, which is where ducted and ductless sit side
+            by side without either being framed as the default. */}
+        {guides.length > 0 && (
+          <section aria-labelledby="choose-heading" className="border-y border-line bg-surface">
             <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
               <h2
-                id="reasons-heading"
-                className="mx-auto max-w-[24ch] text-center text-3xl font-semibold tracking-[-0.03em] sm:text-4xl"
+                id="choose-heading"
+                className="max-w-[22ch] text-3xl font-semibold tracking-[-0.03em] sm:text-4xl"
               >
-                {reasons.length} reasons to buy a VATTI {noun}
+                Choosing a {noun} in Malaysia
               </h2>
 
-              <dl className="mt-12 grid gap-px bg-line sm:grid-cols-2 lg:grid-cols-3">
-                {reasons.map((r) => {
-                  const Icon = r.icon ? REASON_ICONS[r.icon] : undefined;
-                  return (
-                  <div key={r.title} className="reason-cell flex flex-col bg-surface p-6 sm:p-7">
-                    {/* Light weight and ink-muted, deliberately. Teal on this
-                        site means "measured value", and a mark is not one.
-                        It is here to give the eye somewhere to land and to
-                        state the claim a second way — once in the glyph, once
-                        in how it moves. See REASON_MOTION. */}
-                    {Icon && (
-                      <Icon
-                        size={26}
-                        weight="light"
-                        aria-hidden="true"
-                        className={[
-                          "mb-5 shrink-0 text-ink-muted",
-                          r.icon ? REASON_MOTION[r.icon] : undefined,
-                        ]
-                          .filter(Boolean)
-                          .join(" ")}
-                      />
-                    )}
-                    <dt className="font-semibold leading-snug">{r.title}</dt>
-                    <dd className="mt-3 text-[0.9375rem] leading-relaxed text-ink-muted">
-                      <Inline text={r.body_md} />
-                    </dd>
-                  </div>
-                  );
-                })}
-              </dl>
+              {figures.length > 0 && (
+                <ul className="mt-10 grid gap-5 sm:grid-cols-2">
+                  {figures.map((g, i) => (
+                    // Reveal INSIDE the li, not around it: a <ul> may only
+                    // contain <li>, and Reveal renders a div.
+                    <li key={g.heading}>
+                      <Reveal delay={i * 80} className="h-full">
+                        <div className="h-full rounded-sm border border-line bg-void p-6 sm:p-8">
+                          <p className="flex items-baseline gap-2">
+                            <span className="readout text-4xl font-semibold leading-none text-teal">
+                              {g.figure}
+                            </span>
+                            <span className="readout text-sm text-ink-muted">{g.figure_unit}</span>
+                          </p>
+                          <h3 className="mt-5 text-xl font-semibold tracking-[-0.025em]">
+                            {g.heading}
+                          </h3>
+                          <p className="mt-3 leading-relaxed text-ink-muted">
+                            <Inline text={g.body_md} />
+                          </p>
+                        </div>
+                      </Reveal>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              {prose.length > 0 && (
+                <ul className="mt-12 grid gap-x-12 gap-y-10 sm:grid-cols-2">
+                  {prose.map((g) => (
+                    <li key={g.heading} className="border-t border-line pt-6">
+                      <h3 className="text-lg font-semibold tracking-[-0.02em]">{g.heading}</h3>
+                      <p className="mt-3 max-w-[52ch] leading-relaxed text-ink-muted">
+                        <Inline text={g.body_md} />
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           </section>
         )}
