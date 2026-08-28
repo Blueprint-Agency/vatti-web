@@ -211,6 +211,13 @@ export function getCategoryProducts(categoryId: number): CategoryProduct[] {
        FROM product p
        LEFT JOIN image i ON i.id = p.hero_image_id
       WHERE p.category_id = ? AND p.is_published = 1
+        -- One card per colourway group (V917, DWID3): the lowest sort_order
+        -- member fronts the grid, the rest are reachable only through its
+        -- "Finish" switcher (getColourways) — see product.ts. Both URLs stay
+        -- live and indexable; only the catalogue listing dedupes.
+        AND (p.variant_group IS NULL OR p.sort_order = (
+          SELECT MIN(sort_order) FROM product
+           WHERE variant_group = p.variant_group AND is_published = 1))
       ORDER BY p.sort_order`,
     categoryId
   );
