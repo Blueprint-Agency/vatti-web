@@ -1,4 +1,37 @@
 import Link from "next/link";
+import { FacebookLogo } from "@phosphor-icons/react/dist/ssr/FacebookLogo";
+import { InstagramLogo } from "@phosphor-icons/react/dist/ssr/InstagramLogo";
+import { YoutubeLogo } from "@phosphor-icons/react/dist/ssr/YoutubeLogo";
+
+/** Phosphor has no Xiaohongshu/RedNote mark, so this stands in with the same
+ *  rounded-square badge shape as the other filled logo glyphs it sits beside,
+ *  the "R" punched out in the footer's own background color. */
+function RedNoteLogo({ size = 20 }: { size?: number }) {
+  return (
+    <svg viewBox="0 0 256 256" width={size} height={size} aria-hidden="true">
+      <rect x="20" y="20" width="216" height="216" rx="56" fill="currentColor" />
+      <text
+        x="128"
+        y="132"
+        textAnchor="middle"
+        dominantBaseline="central"
+        fontSize="140"
+        fontWeight="700"
+        fontFamily="Arial, Helvetica, sans-serif"
+        style={{ fill: "var(--color-void)" }}
+      >
+        R
+      </text>
+    </svg>
+  );
+}
+
+const SOCIALS = [
+  { label: "Facebook", href: "https://www.facebook.com/vattimalaysia", Icon: FacebookLogo },
+  { label: "Instagram", href: "https://www.instagram.com/vattimalaysia/", Icon: InstagramLogo },
+  { label: "RedNote", href: "https://xhslink.cn/m/1slnUiXf40q", Icon: RedNoteLogo },
+  { label: "YouTube", href: "https://www.youtube.com/@vattimalaysia8049", Icon: YoutubeLogo },
+];
 
 const COLUMNS = [
   {
@@ -57,14 +90,21 @@ export function SiteFooter() {
               </a>
             </p>
             <p className="mt-1 text-sm text-ink-muted">Open daily, 10am - 8pm</p>
-            <p className="mt-4">
-              <a
-                href="https://www.facebook.com/vattimalaysia/"
-                className="text-sm text-ink-muted transition-colors hover:text-ink"
-              >
-                Facebook
-              </a>
-            </p>
+            <ul className="mt-4 flex items-center gap-4">
+              {SOCIALS.map(({ label, href, Icon }) => (
+                <li key={label}>
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    className="block text-ink-muted transition-colors hover:text-teal"
+                  >
+                    <Icon size={20} weight="fill" />
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {COLUMNS.map((col) => (
