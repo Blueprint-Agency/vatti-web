@@ -691,7 +691,7 @@ SELECT id, 3, 'What ducting does the V931 need?',
   FROM product WHERE slug = 'artemis-series-t-type-range-hood-v931';
 INSERT INTO product_faq (product_id, position, question, answer_md)
 SELECT id, 4, 'Is the V931 strong enough for wok cooking?',
-  'It is the gentlest hood in the range: 1,860 m³/h against 420 Pa. That suits a landed kitchen with a short duct and moderate cooking. For daily high-heat wok work, or a high floor on a shared riser, start at the [V937](/triple-intake-series-t-type-cooker-hood-v937/) at 1,050 Pa.'
+  'It is the gentlest hood in the range: 1,860 m³/h against 420 Pa. That suits a landed kitchen with a short duct and moderate cooking. For daily high-heat wok work, or a high floor on a shared riser, start at the V937 at 1,050 Pa.'
   FROM product WHERE slug = 'artemis-series-t-type-range-hood-v931';
 INSERT INTO product_faq (product_id, position, question, answer_md)
 SELECT id, 5, 'How is the V931 cleaned?',
@@ -905,7 +905,7 @@ SELECT id, 2, 'What does the double cavity do?',
   FROM product WHERE slug = 'athena-series-lifting-type-range-hood-v936';
 INSERT INTO product_faq (product_id, position, question, answer_md)
 SELECT id, 3, 'Is 450 Pa enough for a condominium?',
-  'For a short, direct duct run, yes. On a high floor with a long shared riser, static pressure is what decides it and 450 Pa is at the gentle end of this range: the [V937](/triple-intake-series-t-type-cooker-hood-v937/) holds 1,050 Pa in the same T-type shape, and the [V938](/vatti-hidden-series-range-hood-v938/) 1,600 Pa.'
+  'For a short, direct duct run, yes. On a high floor with a long shared riser, static pressure is what decides it and 450 Pa is at the gentle end of this range: the V937 holds 1,050 Pa in the same T-type shape, and the [V938](/vatti-hidden-series-range-hood-v938/) 1,600 Pa.'
   FROM product WHERE slug = 'athena-series-lifting-type-range-hood-v936';
 INSERT INTO product_faq (product_id, position, question, answer_md)
 SELECT id, 4, 'How is the V936 cleaned?',
@@ -1619,7 +1619,7 @@ SELECT id, 2, 'What is the ceramic cavity for?',
   FROM product WHERE slug = 'vatti-built-in-oven-o755p';
 INSERT INTO product_faq (product_id, position, question, answer_md)
 SELECT id, 3, 'How does the O755P differ from the O7549?',
-  'Modes and handling. The O755P has eleven baking modes, a ceramic easy-clean cavity, telescopic runners and a soft-close door; the [O7549](/vatti-built-in-oven-o7549/) has nine modes in the same 75 litre size. Both are 60cm columns.'
+  'Modes and handling. The O755P has eleven baking modes, a ceramic easy-clean cavity, telescopic runners and a soft-close door; the O7549 has nine modes in the same 75 litre size. Both are 60cm columns.'
   FROM product WHERE slug = 'vatti-built-in-oven-o755p';
 INSERT INTO product_faq (product_id, position, question, answer_md)
 SELECT id, 4, 'What warranty does the O755P carry, and where can I buy it?',
@@ -1675,11 +1675,11 @@ SELECT id, 3, 'installation', 'Cabinet column', '60 cm built-in', 'VATTI publish
 
 INSERT INTO product_faq (product_id, position, question, answer_md)
 SELECT id, 1, 'What size cabinet does the O7549 need?',
-  'A standard 60cm built-in column. VATTI publishes no dimension panel for this model; its sibling the [O755P](/vatti-built-in-oven-o755p/) is 595 x 595 x 563 mm, which is the size to plan for, confirmed with your dealer.'
+  'A standard 60cm built-in column. VATTI publishes no dimension panel for this model; its sibling the O755P is 595 x 595 x 563 mm, which is the size to plan for, confirmed with your dealer.'
   FROM product WHERE slug = 'vatti-built-in-oven-o7549';
 INSERT INTO product_faq (product_id, position, question, answer_md)
 SELECT id, 2, 'Which VATTI oven should I choose?',
-  'The O7549 is the plain convection oven: 75 litres, nine modes. The [O755P](/vatti-built-in-oven-o755p/) adds eleven modes, a ceramic cavity, telescopic runners and a soft-close door. The [07559](/vatti-built-in-air-fryer-oven-07559/) adds air-frying, and the [VA05](/built-in-combi-oven-va05/) and [VA06](/vatti-magic-series-combi-oven-va06/) add steam.'
+  'The O7549 is the plain convection oven: 75 litres, nine modes. The O755P adds eleven modes, a ceramic cavity, telescopic runners and a soft-close door. The 07559 adds air-frying, and the [VA05](/built-in-combi-oven-va05/) and [VA06](/vatti-magic-series-combi-oven-va06/) add steam.'
   FROM product WHERE slug = 'vatti-built-in-oven-o7549';
 INSERT INTO product_faq (product_id, position, question, answer_md)
 SELECT id, 3, 'What warranty does the O7549 carry, and where can I buy it?',
@@ -1747,7 +1747,7 @@ SELECT id, 5, 'installation', 'Cabinet column', '60 cm built-in', 'VATTI publish
 
 INSERT INTO product_faq (product_id, position, question, answer_md)
 SELECT id, 1, 'Is the Z4501 a steam oven or a combi?',
-  'A steam oven with a grill. It steams, and it will grill under steam between 100°C and 230°C, but it is not a full baking oven: if you want to bake as well, the [VA03](/built-in-combi-oven-va03/) or [VA05](/built-in-combi-oven-va05/) are the combi ovens.'
+  'A steam oven with a grill. It steams, and it will grill under steam between 100°C and 230°C, but it is not a full baking oven: if you want to bake as well, the VA03 or [VA05](/built-in-combi-oven-va05/) are the combi ovens.'
   FROM product WHERE slug = 'built-in-steam-oven-z4501';
 INSERT INTO product_faq (product_id, position, question, answer_md)
 SELECT id, 2, 'Does it drip?',
@@ -1787,7 +1787,7 @@ SELECT id, 2, 'How long does it take to make steam?',
   FROM product WHERE slug = 'free-standing-combi-oven-va01';
 INSERT INTO product_faq (product_id, position, question, answer_md)
 SELECT id, 3, 'Is 25 litres enough?',
-  'For two to four people, yes: a fish, a tray of buns, a chicken portion. For a family roast or several trays at once, the built-in [VA03](/built-in-combi-oven-va03/) at 50 litres or the [VA05](/built-in-combi-oven-va05/) at 70 is the size to look at.'
+  'For two to four people, yes: a fish, a tray of buns, a chicken portion. For a family roast or several trays at once, the built-in VA03 at 50 litres or the [VA05](/built-in-combi-oven-va05/) at 70 is the size to look at.'
   FROM product WHERE slug = 'free-standing-combi-oven-va01';
 INSERT INTO product_faq (product_id, position, question, answer_md)
 SELECT id, 4, 'What warranty does the VA01 carry, and where can I buy it?',
@@ -1865,7 +1865,7 @@ SELECT id, 2, 'Five zones on a domestic hob: is that useful?',
   FROM product WHERE slug = 'ceramic-cooker-hob-er5902t';
 INSERT INTO product_faq (product_id, position, question, answer_md)
 SELECT id, 3, 'How does it compare with the ER3601T?',
-  'Two more zones and one more dual zone. The [ER3601T](/ceramic-cooker-hob-er3601t/) has three zones for a normal kitchen; this one has five for a large one. The controls, the safety features and the glass are the same.'
+  'Two more zones and one more dual zone. The ER3601T has three zones for a normal kitchen; this one has five for a large one. The controls, the safety features and the glass are the same.'
   FROM product WHERE slug = 'ceramic-cooker-hob-er5902t';
 INSERT INTO product_faq (product_id, position, question, answer_md)
 SELECT id, 4, 'What warranty does it carry, and where can I buy it?',
@@ -1895,7 +1895,7 @@ SELECT id, 1, 'What size cabinet does the VA04 need?',
   FROM product WHERE slug = 'built-in-combi-oven-va04';
 INSERT INTO product_faq (product_id, position, question, answer_md)
 SELECT id, 2, 'Which combi oven should I choose?',
-  'The VA04 is the straightforward 70 litre one: eight functions and steam. The [VA05](/built-in-combi-oven-va05/) adds a food probe and independent top and bottom control; the [VA06](/vatti-magic-series-combi-oven-va06/) adds a colour screen, air-frying and 68 recipes; the [VA03](/built-in-combi-oven-va03/) is 50 litres with fourteen functions and an external water tank.'
+  'The VA04 is the straightforward 70 litre one: eight functions and steam. The [VA05](/built-in-combi-oven-va05/) adds a food probe and independent top and bottom control; the [VA06](/vatti-magic-series-combi-oven-va06/) adds a colour screen, air-frying and 68 recipes; the VA03 is 50 litres with fourteen functions and an external water tank.'
   FROM product WHERE slug = 'built-in-combi-oven-va04';
 INSERT INTO product_faq (product_id, position, question, answer_md)
 SELECT id, 3, 'How is it cleaned?',

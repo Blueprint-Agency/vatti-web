@@ -427,7 +427,7 @@ INSERT INTO category_faq (category_id, position, question, answer_md) VALUES
 
   ((SELECT id FROM product_category WHERE slug = 'kitchen-hood-in-malaysia'), 8,
    'Which VATTI kitchen hood is the quietest?',
-   'The [Triple Intake V937](/triple-intake-series-t-type-cooker-hood-v937/) at 46 dB, with the [Aetheris V929](/vatti-aetheris-series-cooker-hood-v929/) just behind it at 46.5 dB. Both are also among the strongest extractors in the range.'),
+   'The Triple Intake V937 at 46 dB, with the [Aetheris V929](/vatti-aetheris-series-cooker-hood-v929/) just behind it at 46.5 dB. Both are also among the strongest extractors in the range.'),
 
   ((SELECT id FROM product_category WHERE slug = 'kitchen-hood-in-malaysia'), 9,
    'What size kitchen hood do I need?',
@@ -833,11 +833,11 @@ INSERT INTO category_faq (category_id, position, question, answer_md) VALUES
 
   ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 3,
    'Is a combi oven a steam oven?',
-   'It contains one. A combi runs dry convection heat and steam, separately or together, so it does everything a dedicated steam oven does and bakes as well. The [Z4501](/built-in-steam-oven-z4501/) is the steam-only model here if that is all you need.'),
+   'It contains one. A combi runs dry convection heat and steam, separately or together, so it does everything a dedicated steam oven does and bakes as well. The Z4501 is the steam-only model here if that is all you need.'),
 
   ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 4,
    'Is a combi oven an air fryer?',
-   'Not usually, but two here are. The [VA05](/built-in-combi-oven-va05/) and the [VA06](/vatti-magic-series-combi-oven-va06/) both carry an air-fry mode alongside their baking and steam functions, and the [O7559](/vatti-built-in-air-fryer-oven-07559/) ships with its own air fry rack.'),
+   'Not usually, but two here are. The [VA05](/built-in-combi-oven-va05/) and the [VA06](/vatti-magic-series-combi-oven-va06/) both carry an air-fry mode alongside their baking and steam functions, and the O7559 ships with its own air fry rack.'),
 
   ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 5,
    'What is the temperature range of a built-in combi oven?',
