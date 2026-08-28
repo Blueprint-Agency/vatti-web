@@ -680,7 +680,7 @@ export default function HomePage() {
             <dl className="mt-14 grid gap-px bg-line sm:grid-cols-3">
               <div className="bg-surface py-5 sm:pr-6">
                 <dt className="text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-ink-muted">
-                  Phone
+                  VATTI Careline
                 </dt>
                 <dd className="mt-2">
                   <a
@@ -693,13 +693,13 @@ export default function HomePage() {
               </div>
               <div className="bg-surface py-5 sm:px-6">
                 <dt className="text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-ink-muted">
-                  Open
+                  Operating Hours
                 </dt>
                 <dd className="readout mt-2 text-lg">10am - 8pm daily</dd>
               </div>
               <div className="bg-surface py-5 sm:pl-6">
                 <dt className="text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-ink-muted">
-                  Showroom
+                  VATTI Showroom
                 </dt>
                 <dd className="mt-2 leading-relaxed text-ink-muted">
                   Atria Shopping Gallery, Damansara Jaya, Petaling Jaya

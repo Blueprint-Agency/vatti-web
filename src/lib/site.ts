@@ -24,6 +24,10 @@ export function whatsappLink(message: string): string {
 export const CATALOGUE =
   "https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/07/Vatti-Catalogue_260718.pdf";
 
+/** The header wordmark, replacing the "VATTI Malaysia" text lockup. */
+export const LOGO_URL =
+  "https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/vatti-logo-header.webp";
+
 /**
  * How many Google reviews the service has. A dated snapshot of the aggregate
  * the Trustindex widget prints on the live site (read 10 Aug 2026), not a

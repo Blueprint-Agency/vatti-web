@@ -1,17 +1,17 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { CATALOGUE } from "@/lib/site";
+import { CATALOGUE, LOGO_URL } from "@/lib/site";
 
 /**
- * The WordPress primary menu, item for item: Home · Categories ▾ · About Us ·
- * Contact Us · Store Locations · eWarranty · Blog ▾ · Catalog. Visitors arriving
- * from search on a deep page navigate by this menu, so it is part of what the
- * rebuild inherits — not a design decision to re-take.
+ * Primary menu, item for item: Home · Products ▾ · Store Locations ·
+ * About VATTI · Blog ▾ · eWarranty · Contact Us · Catalog. Visitors arriving
+ * from search on a deep page navigate by this menu.
  *
- * The one label change: WordPress writes the water purifier as "Single Tap Water
- * Filter / One Tap Water Purifier", which is a keyword string, not a menu item.
- * Shortened to match the footer. The href is unchanged.
+ * The water purifier label is shortened from WordPress's "Single Tap Water
+ * Filter / One Tap Water Purifier" (a keyword string, not a menu item) to
+ * match the footer. The href is unchanged.
  *
  * Dropdowns are CSS only — hover on pointer devices, `focus-within` for the
  * keyboard, and on mobile the whole menu is a native <details> drawer with the
@@ -31,12 +31,10 @@ const BLOG = [
   { href: "/category/recipe/", label: "Recipe" },
 ];
 
-const PAGES = [
-  { href: "/about-us/", label: "About Us" },
-  { href: "/contact-us/", label: "Contact Us" },
-  { href: "/store-locations/", label: "Store Locations" },
-  { href: "/vatti-ewarranty/", label: "eWarranty" },
-];
+const STORE_LOCATIONS = { href: "/store-locations/", label: "Store Locations" };
+const ABOUT_VATTI = { href: "/about-us/", label: "About VATTI" };
+const EWARRANTY = { href: "/vatti-ewarranty/", label: "eWarranty" };
+const CONTACT_US = { href: "/contact-us/", label: "Contact Us" };
 
 const ITEM = "text-ink-muted transition-colors hover:text-ink";
 
@@ -107,11 +105,15 @@ export function SiteHeader() {
           are all fixed-width, so on a 360px Android — common here — gap-6
           between the last two is what tips the row into overflowing. */}
       <div className="mx-auto flex max-w-6xl items-center gap-3 px-5 py-3.5 sm:gap-6 sm:px-8">
-        <Link
-          href="/"
-          className="font-semibold tracking-[-0.02em] text-ink transition-colors hover:text-teal"
-        >
-          VATTI<span className="text-ink-muted"> Malaysia</span>
+        <Link href="/" className="shrink-0 transition-opacity hover:opacity-80">
+          <Image
+            src={LOGO_URL}
+            alt="VATTI Malaysia"
+            width={1136}
+            height={466}
+            priority
+            className="h-9 w-auto"
+          />
         </Link>
 
         <nav aria-label="Main" className="ml-auto hidden lg:block">
@@ -121,15 +123,28 @@ export function SiteHeader() {
                 Home
               </Link>
             </li>
-            <Dropdown label="Categories" items={CATEGORIES} />
-            {PAGES.map((p) => (
-              <li key={p.href}>
-                <Link href={p.href} className={ITEM}>
-                  {p.label}
-                </Link>
-              </li>
-            ))}
+            <Dropdown label="Products" items={CATEGORIES} />
+            <li>
+              <Link href={STORE_LOCATIONS.href} className={ITEM}>
+                {STORE_LOCATIONS.label}
+              </Link>
+            </li>
+            <li>
+              <Link href={ABOUT_VATTI.href} className={ITEM}>
+                {ABOUT_VATTI.label}
+              </Link>
+            </li>
             <Dropdown label="Blog" items={BLOG} />
+            <li>
+              <Link href={EWARRANTY.href} className={ITEM}>
+                {EWARRANTY.label}
+              </Link>
+            </li>
+            <li>
+              <Link href={CONTACT_US.href} className={ITEM}>
+                {CONTACT_US.label}
+              </Link>
+            </li>
             <li>
               <a href={CATALOGUE} className={ITEM}>
                 Catalog
@@ -160,18 +175,28 @@ export function SiteHeader() {
                   Home
                 </Link>
               </li>
-              <Section label="Categories" items={CATEGORIES} />
-              <Section label="Blog" items={BLOG} />
-              <li className="pt-4 text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-ink-muted">
-                Company
+              <Section label="Products" items={CATEGORIES} />
+              <li>
+                <Link href={STORE_LOCATIONS.href} className="block py-1.5 pl-3 text-ink">
+                  {STORE_LOCATIONS.label}
+                </Link>
               </li>
-              {PAGES.map((p) => (
-                <li key={p.href}>
-                  <Link href={p.href} className="block py-1.5 pl-3 text-ink">
-                    {p.label}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link href={ABOUT_VATTI.href} className="block py-1.5 pl-3 text-ink">
+                  {ABOUT_VATTI.label}
+                </Link>
+              </li>
+              <Section label="Blog" items={BLOG} />
+              <li>
+                <Link href={EWARRANTY.href} className="block py-1.5 pl-3 text-ink">
+                  {EWARRANTY.label}
+                </Link>
+              </li>
+              <li>
+                <Link href={CONTACT_US.href} className="block py-1.5 pl-3 text-ink">
+                  {CONTACT_US.label}
+                </Link>
+              </li>
               <li>
                 <a href={CATALOGUE} className="block py-1.5 pl-3 text-ink">
                   Catalog
