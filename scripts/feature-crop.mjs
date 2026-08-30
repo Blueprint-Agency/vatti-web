@@ -26,8 +26,9 @@ import { fileURLToPath } from "node:url";
 
 import sharp from "sharp";
 
+import { CDN } from "./cdn.mjs";
+
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const CDN = "https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/";
 const cache = join(root, ".cache/crop-src");
 const force = process.argv.includes("--force");
 const names = process.argv.slice(2).filter((a) => !a.startsWith("--"));
@@ -59,7 +60,7 @@ for (const file of manifests) {
 
     const src = join(cache, crop.from.replaceAll("/", "_"));
     if (!existsSync(src)) {
-      const res = await fetch(CDN + crop.from);
+      const res = await fetch(`${CDN}/${crop.from}`);
       if (!res.ok) throw new Error(`${crop.from}: ${res.status}`);
       writeFileSync(src, Buffer.from(await res.arrayBuffer()));
     }
