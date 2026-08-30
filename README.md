@@ -55,14 +55,17 @@ docs/REBUILD-PLAN.md   page inventory, data model, phased build plan, SEO guardr
 
 ## Environment
 
-`.env.local` locally, project environment variables on Vercel. All are gitignored.
+`.env.local` locally, project environment variables on Vercel. All are gitignored; copy
+[`.env.example`](.env.example) to start. `process.env` wins over the file, so CI can pass the same
+names as secrets.
 
 | Variable | Used by | Notes |
 |---|---|---|
-| `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET`, `R2_ENDPOINT`, `R2_PUBLIC_HOST` | `scripts/media-upload.mjs` | Local only. Media is uploaded from a workstation, never at build time. |
+| `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET_NAME` | `pnpm media:upload` | Local only. Media is uploaded from a workstation, never at build time. Credentials only — the public CDN host is code, in `scripts/cdn.mjs`. The S3 endpoint is derived from the account id. |
 | `RESEND_API_KEY` | `/api/ewarranty` | Runtime. Without it the endpoint returns 503 and the form says so rather than losing the registration. |
 | `EWARRANTY_TO` | `/api/ewarranty` | Where registrations land. Comma-separated for more than one inbox. Defaults to `enquiry@vattimalaysia.com`, so it works unset. |
 | `EWARRANTY_FROM` | `/api/ewarranty` | Must be on a domain verified in Resend. Use `onboarding@resend.dev` until `vattimalaysia.com` is verified there. |
+| `MEDIA_MIGRATED` | `pnpm db:check` | Set to `1` once media is repointed at the CDN; turns on the checks that fail if a legacy WordPress URL survives into the DB or an article body. |
 
 ## Deployment
 

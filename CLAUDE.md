@@ -125,7 +125,7 @@ The route in:
 # 1. stage the file at the bucket key it should be served under
 cp shot.webp old-media/2026/08/v929-detail-01.webp
 # 2. upload — idempotent, skips anything already there at the same size
-node scripts/media-upload.mjs
+pnpm media:upload
 # 3. reference https://<CDN_HOST>/2026/08/v929-detail-01.webp
 ```
 
@@ -139,12 +139,18 @@ already allows the CDN host in `images.remotePatterns`, so `next/image` needs no
 - Give a changed picture a **new key**. R2 is served with a long max-age and the image optimizer
   caches by path, so replacing the bytes under an existing key serves the old picture to everyone
   who has already seen the page.
-- The CDN host is written down twice — `CDN_HOST` in `next.config.ts` and the duplicate in
-  `src/lib/site.ts`. Swap both together at cutover.
+- **The public host is code; only the credentials are secrets.** `scripts/cdn.mjs` states it once
+  and `next.config.ts`, the three importers and `build-url-inventory.mjs` all read it from there.
+  It is currently the bucket's **r2.dev dev URL** — rate-limited and not for production. At cutover
+  edit that one file to `cdn.vattimalaysia.com` and re-run the importers so the URLs baked into
+  `data/sql` match. Two literals still predate the rule and must be swapped by hand with it:
+  `CATALOGUE` in `src/lib/site.ts` and `ENQUIRY_BACKDROP` in `src/app/page.tsx`.
 
-**Uploads work.** `scripts/media-upload.mjs` needs `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`,
-`R2_BUCKET`, `R2_ENDPOINT` and `R2_PUBLIC_HOST`, and `.env.local` holds all five. If step 2 fails
-on a missing variable, the keys are in the Cloudflare dashboard under R2 → Manage API tokens.
+**Uploads work.** `pnpm media:upload` needs `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`,
+`R2_SECRET_ACCESS_KEY` and `R2_BUCKET_NAME` — copy `.env.example` to `.env.local` and fill it in
+(the S3 endpoint is derived from the account id, and `process.env` wins over the file so CI can
+pass the same names as secrets). If step 2 fails on a missing variable, the keys are in the
+Cloudflare dashboard under R2 → Manage API tokens.
 
 Upload **before** you push anything that references a new key. The build embeds the CDN URL in
 static HTML, so a deploy that lands ahead of its objects serves a page with a hole in it, and the

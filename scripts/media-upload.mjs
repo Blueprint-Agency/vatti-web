@@ -23,8 +23,10 @@ const SKIP_DIRS = new Set(["elementor"]);
 
 const KEY = required("R2_ACCESS_KEY_ID");
 const SECRET = required("R2_SECRET_ACCESS_KEY");
-const BUCKET = required("R2_BUCKET");
-const HOST = new URL(required("R2_ENDPOINT")).host;
+const BUCKET = required("R2_BUCKET_NAME");
+// The S3 endpoint is a pure function of the account id, so it is derived rather than
+// carried as a second variable that can disagree with the first.
+const HOST = `${required("R2_ACCOUNT_ID")}.r2.cloudflarestorage.com`;
 
 const TYPES = {
   ".webp": "image/webp", ".jpg": "image/jpeg", ".jpeg": "image/jpeg",

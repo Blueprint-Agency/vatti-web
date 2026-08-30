@@ -14,7 +14,7 @@ import { readFileSync, writeFileSync, mkdirSync, openSync, readSync, closeSync }
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { required } from "./env.mjs";
+import { CDN } from "./cdn.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const all = JSON.parse(readFileSync(join(root, "research/articles.json"), "utf8"));
@@ -51,7 +51,6 @@ const SECTION_PRIMARY = { ...catId, uncategorized: catId["buying-guide"] };
 // Unwrap to the origin path first, then the same prefix swap products.sql uses.
 // Neither host may survive into the DB — see CLAUDE.md § Conventions.
 const UPLOADS = "https://vattimalaysia.com/wp-content/uploads/";
-const CDN = required("R2_PUBLIC_HOST").replace(/\/$/, "");
 const toCdn = (url) =>
   url.startsWith(UPLOADS) ? `${CDN}/${url.slice(UPLOADS.length)}` : url;
 

@@ -9,7 +9,7 @@ import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { required } from "./env.mjs";
+import { CDN } from "./cdn.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const products = JSON.parse(readFileSync(join(root, "research/products.json"), "utf8"));
@@ -145,7 +145,6 @@ const isDefect = (slug, url) =>
 // keep the YYYY/MM/file.ext tail, so this is a straight prefix swap. The old
 // path survives in image.legacy_url and in the next.config redirect.
 const UPLOADS = "https://vattimalaysia.com/wp-content/uploads/";
-const CDN = required("R2_PUBLIC_HOST").replace(/\/$/, "");
 const toCdn = (url) =>
   url.startsWith(UPLOADS) ? `${CDN}/${url.slice(UPLOADS.length)}` : url;
 

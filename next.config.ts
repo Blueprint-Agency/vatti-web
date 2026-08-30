@@ -3,12 +3,11 @@ import { DatabaseSync } from "node:sqlite";
 import { existsSync } from "node:fs";
 import { join } from "node:path";
 
-// The one place the media host is written down. Swap for cdn.vattimalaysia.com
-// once the domain's nameservers move to Cloudflare (r2.dev is rate-limited and
-// not for production), then re-run `node scripts/import-products.mjs` so the
-// URLs baked into data/sql match. Deliberately not process.env: .env.local is
-// gitignored, so it would be undefined on Vercel.
-const CDN_HOST = "pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev";
+// The media host, from the one file that states it — scripts/cdn.mjs, which the
+// importers and the URL inventory read too, so a swap cannot land in half the
+// project. Deliberately not process.env: .env.local is gitignored, so it would be
+// undefined on Vercel. Only the R2 *credentials* come from the environment.
+import { CDN_HOST } from "./scripts/cdn.mjs";
 
 const nextConfig: NextConfig = {
   // Legacy URLs all carry a trailing slash. Do not remove this.

@@ -9,6 +9,7 @@
     "db:build": "node scripts/db-build.mjs",
     "db:check": "node scripts/db-check.mjs",
     "urls:check": "node scripts/urls-check.mjs",
+    "media:upload": "node scripts/media-upload.mjs",
     "dev": "node scripts/db-build.mjs && next dev",
     "build": "node scripts/db-build.mjs && next build",
     "start": "next start"

@@ -14,12 +14,12 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
+import { CDN } from "./cdn.mjs";
+
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const ORIGIN = "https://vattimalaysia.com";
 const CONCURRENCY = 8;
 const UPLOADS = "/wp-content/uploads/";
-// Same host as next.config.ts. Kept literal here for the same reason it is there.
-const CDN = "https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev";
 
 const read = (f) => JSON.parse(readFileSync(join(root, f), "utf8"));
 

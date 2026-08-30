@@ -40,7 +40,7 @@ import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { required } from "./env.mjs";
+import { CDN } from "./cdn.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const rest = JSON.parse(readFileSync(join(root, "research/stores-rest.json"), "utf8"));
@@ -122,7 +122,6 @@ for (const { wp } of matched) {
 // with resize params, so unwrap to the origin upload path, then prefix-swap to
 // R2. Neither host may survive into the DB — see CLAUDE.md § Conventions.
 const UPLOADS = "https://vattimalaysia.com/wp-content/uploads/";
-const CDN = required("R2_PUBLIC_HOST").replace(/\/$/, "");
 const toCdn = (url) =>
   url.startsWith(UPLOADS) ? `${CDN}/${url.slice(UPLOADS.length)}` : url;
 
