@@ -137,7 +137,7 @@ function homeFaqs(models: number, dealers: number) {
     },
     {
       q: "What warranty do VATTI appliances carry?",
-      a: "Two years on cooker hoods, cooker hobs, combi ovens, built-in ovens and built-in steam ovens. Ten years on the cooker hood motor across all models, and a lifetime warranty on the cooker hob glass top. Register within 14 days of purchase.",
+      a: "Two years on every appliance we sell, hoods, hobs, ovens, microwaves, dishwashers and water dispensers alike. Ten years on the cooker hood motor across all models, a further three years on a hood's auto-clean components once you register, and a lifetime warranty on the cooker hob glass top. Register within 14 days of purchase.",
     },
     {
       q: "Where can I buy VATTI in Malaysia?",

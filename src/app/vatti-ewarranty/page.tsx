@@ -126,7 +126,7 @@ export default function EWarrantyPage() {
             >
               Warranty period
             </h2>
-            <dl className="mt-8 grid gap-px bg-line sm:grid-cols-3">
+            <dl className="mt-8 grid gap-px bg-line sm:grid-cols-2 lg:grid-cols-4">
               {PERIODS.map((p) => (
                 <div key={p.label} className="bg-surface px-5 py-6 sm:px-7 sm:py-8">
                   <dt className="flex items-baseline gap-1.5">

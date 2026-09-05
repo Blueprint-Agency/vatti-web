@@ -15,15 +15,30 @@
  * to, so it reads as English.
  */
 
-/** The three figures the 4-step WPForms wizard never showed you until the end. */
+/**
+ * The figures the 4-step WPForms wizard never showed you until the end.
+ *
+ * Reconciled against the VATTI Kitchen Solutions Catalog 2026 (p.23) on
+ * 2026-09-05. Two things changed. The catalogue names microwave, water
+ * dispenser and dishwasher in the 2 year clause, which the agreement carried
+ * over from the live page did not, and it prints a 2+3 year term on the cooker
+ * hood's auto-clean components that the site had never stated at all. Both are
+ * benefits the site was under-selling, not new promises.
+ */
 export const PERIODS = [
   {
     value: "2",
     unit: "years",
-    label: "Cooker hood, cooker hob, combi oven, built-in oven and built-in steam oven",
+    label:
+      "Cooker hood, cooker hob, combi oven, built-in oven, built-in steam oven, microwave, water dispenser and dishwasher",
   },
   { value: "10", unit: "years", label: "Cooker hood motor, all models" },
-  { value: "Lifetime", unit: "", label: "Cooker hob glass top" },
+  {
+    value: "2+3",
+    unit: "years",
+    label: "Cooker hood auto-clean components, with eWarranty registration",
+  },
+  { value: "Lifetime", unit: "", label: "Cooker hob tempered glass, against cracking" },
 ];
 
 export const TERMS = [
@@ -56,18 +71,27 @@ export const PAID_SERVICE =
  * its scope as prose ("Cooker hood, cooker hob, combi oven...") and a product
  * carries a `kind`, not a sentence.
  *
- * NULL for the kinds the agreement does not name. A microwave, dishwasher or
- * purifier gets no warranty line rather than a guessed one: stating a term the
- * document does not cover is worse than stating none.
+ * Every kind is now named. Microwave, dishwasher and water purifier returned
+ * NULL here until the 2026 catalogue audit, on the reasoning that stating a
+ * term the document does not cover is worse than stating none. The catalogue
+ * covers them: "Built-in Oven, Combi Oven, Steam Oven, Microwave, Water
+ * Dispenser & Dishwasher — 2 years general warranty" (p.23). So they get the
+ * line, and the reasoning stands for anything the catalogue still omits.
  */
 export function warrantyFor(kind: string): { headline: string; extra: string | null } | null {
   switch (kind) {
     case "range hood":
-      return { headline: "2 year warranty", extra: "10 years on the motor" };
+      return {
+        headline: "2 year warranty",
+        extra: "10 years on the motor, 2+3 on the auto-clean parts",
+      };
     case "hob":
       return { headline: "2 year warranty", extra: "lifetime on the glass top" };
     case "oven":
     case "combi-steam oven":
+    case "microwave":
+    case "dishwasher":
+    case "water purifier":
       return { headline: "2 year warranty", extra: null };
     default:
       return null;
