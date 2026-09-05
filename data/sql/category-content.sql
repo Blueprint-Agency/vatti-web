@@ -357,8 +357,13 @@ INSERT INTO category_guide (category_id, position, heading, body_md, figure, fig
 -- ── kitchen hood: why VATTI ────────────────────────────────────────────────
 -- Three of the six carry a figure, and each of those three is the real
 -- best-in-range value from product_facet: 1,700 Pa (V960), 92% oil capture
--- (nine models), 46 dB (V937). The other three claims have no measured value
+-- (nine models), 46.5 dB (V929). The other three claims have no measured value
 -- behind them and correctly show none.
+--
+-- The noise figure was 46 dB (V937) until the 2026 catalogue audit: the
+-- catalogue prints V937 at 50 dB, not 46, and V937 is retired besides. V929 at
+-- 46.5 dB is now both the quietest published hood and the quietest full stop.
+-- See spec-corrections-2026-09.sql.
 INSERT INTO category_reason (category_id, position, title, body_md, figure, figure_unit, icon) VALUES
   ((SELECT id FROM product_category WHERE slug = 'kitchen-hood-in-malaysia'), 1,
    'Airflow and pressure, not just airflow',
@@ -372,8 +377,8 @@ INSERT INTO category_reason (category_id, position, title, body_md, figure, figu
 
   ((SELECT id FROM product_category WHERE slug = 'kitchen-hood-in-malaysia'), 3,
    'Quiet for the air they move',
-   'Measured noise across the range runs from 46 dB to 54 dB. That comes from aerodynamic duct design and motor insulation, not from a smaller fan: the quietest hood here is also one of the strongest.',
-   '46', 'dB', 'noise'),
+   'Measured noise across the range runs from 46.5 dB to 54 dB. That comes from aerodynamic duct design and motor insulation, not from a smaller fan: the quietest hood here is also one of the strongest.',
+   '46.5', 'dB', 'noise'),
 
   ((SELECT id FROM product_category WHERE slug = 'kitchen-hood-in-malaysia'), 4,
    'Brushless motors',
@@ -427,7 +432,7 @@ INSERT INTO category_faq (category_id, position, question, answer_md) VALUES
 
   ((SELECT id FROM product_category WHERE slug = 'kitchen-hood-in-malaysia'), 8,
    'Which VATTI kitchen hood is the quietest?',
-   'The Triple Intake V937 at 46 dB, with the [Aetheris V929](/vatti-aetheris-series-cooker-hood-v929/) just behind it at 46.5 dB. Both are also among the strongest extractors in the range.'),
+   'The [Aetheris V929](/vatti-aetheris-series-cooker-hood-v929/) at 46.5 dB, and it is among the strongest extractors in the range at 3,125 m³/h. Next quietest are the [Stellar V960](/vatti-stellar-series-cooker-hood-v960/) and the [Hidden V938](/vatti-hidden-series-range-hood-v938/) at 48 dB, both of which pull harder still.'),
 
   ((SELECT id FROM product_category WHERE slug = 'kitchen-hood-in-malaysia'), 9,
    'What size kitchen hood do I need?',
@@ -439,8 +444,8 @@ INSERT INTO category_faq (category_id, position, question, answer_md) VALUES
 
 -- ── kitchen hood: the "Best for" row ───────────────────────────────────────
 -- One line per model for the comparison table. Written against the measured
--- figures, not around them: the V937 is named the quietest because at 46 dB it
--- is, and the two Slims are sent to condos because 1,950-2,050 m³/h with a
+-- figures, not around them: the V929 is named the quietest because at 46.5 dB
+-- it is, and the two Slims are sent to condos because 1,950-2,050 m³/h with a
 -- short duct is what they are for. Editorial, and the one row in that table a
 -- buyer cannot work out from the numbers themselves.
 UPDATE product SET best_for = CASE slug
@@ -450,7 +455,7 @@ UPDATE product SET best_for = CASE slug
   WHEN 'vatti-magic-series-cooker-hood-v919'         THEN 'High-heat cooking, every day'
   WHEN 'vatti-smart-oxygen-range-hood-v998'          THEN 'Smart controls, modern kitchens'
   WHEN 'vatti-range-hood-v997'                       THEN 'Intensive cooking, auto suction'
-  WHEN 'triple-intake-series-t-type-cooker-hood-v937' THEN 'The quietest strong extractor'
+  WHEN 'triple-intake-series-t-type-cooker-hood-v937' THEN 'Even pull across a wide hob'
   WHEN 'athena-series-lifting-type-range-hood-v993'  THEN 'Everyday family cooking'
   WHEN 'athena-series-lifting-type-range-hood-v999'  THEN 'Everyday cooking, hand sensor'
   WHEN 'athena-series-lifting-type-range-hood-v936'  THEN 'Short ducts, moderate cooking'
@@ -1039,7 +1044,8 @@ UPDATE product SET best_for = 'Large families, oily cookware'
 -- ── purifier: the measured figures ─────────────────────────────────────────
 -- The readout under the signature copy carries one figure otherwise — the flow
 -- rate products.sql already reads off the spec sheet. These two come off the
--- same sheet: bullet 5, 'Hot Water Temperature range 45°C to 100°C', and
+-- same sheet: bullet 5, 'Hot water temperature selection 45°C, 85°C or 100°C'
+-- (100°C being the top of the three settings), and
 -- bullet 1, '4 Temperature mode'. source_position records which.
 --
 -- Positions 1 and 2, not 0 and 1: flow is already at 0 in products.sql, and

@@ -277,7 +277,7 @@ Considering these factors ensures that your kitchen hood is the right fit for yo
 - Extraction Power: Choose a range hood with good cubic metres per hour (m³/h) extraction power to match the size of your kitchen. Aim for a rate that is at least 10 times the volume of your kitchen to remove cooking odours and smoke effectively.
 
 - Noise Level: Consider the noise level of the kitchen hood to ensure a pleasant cooking experience. Look for hoods with lower decibel (dB) ratings, typically between 50-60 dB, to minimise disruptions, especially in open-plan kitchens or when entertaining guests.
-Consider [VATTI kitchen hoods](/kitchen-hood/) for their impressive features. With high extraction power of up to 2500m³/h and a low noise level of 52dB, they effectively remove odours and smoke while maintaining a peaceful cooking environment. Experience exceptional performance and tranquillity with VATTI kitchen hoods.
+Consider [VATTI kitchen hoods](/kitchen-hood/) for their impressive features. With high extraction power of up to 2500m³/h and a low noise level of 50dB, they effectively remove odours and smoke while maintaining a peaceful cooking environment. Experience exceptional performance and tranquillity with VATTI kitchen hoods.
 
 ### Factor 3: Ducted or Ductless Range Hoods
 
@@ -7020,7 +7020,7 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 ## Transform Your Kitchen with a Quiet and Powerful Athena Series Lifting Type Range Hood V999
 
-- **Quiet Yet Powerful:** With 1000Pa static pressure and an advanced inverter motor, this hood delivers an impressive 2500m³/h suction power while keeping noise at just 52dB, quieter than a normal conversation!
+- **Quiet Yet Powerful:** With 1000Pa static pressure and an advanced inverter motor, this hood delivers an impressive 2500m³/h suction power while keeping noise at just 50dB, quieter than a normal conversation!
 
 - **Durable and Easy to Maintain:** The water-proof motor separates water and oil, keeping the working temperature low, extending the hood’s lifespan, and maintaining a quieter kitchen environment.
 

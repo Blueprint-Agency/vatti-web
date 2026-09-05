@@ -15,7 +15,7 @@
 -- answers the two questions the H1 does not: what "lifting type" means, and
 -- whether the thing fits.
 UPDATE product SET intro_md =
-  'A lifting type hood: the air inlet drops toward the hob when it runs, so it catches smoke about 350mm above the pot instead of 580mm away like a T-type. It moves 2,500 m³/h against 850 Pa of static pressure, which is the figure that decides whether a high-floor condo duct run actually clears, and holds 53 dB doing it. 896mm wide, for a standard hob run.'
+  'A lifting type hood: the air inlet drops toward the hob when it runs, so it catches smoke about 350mm above the pot instead of 580mm away like a T-type. It moves 2,500 m³/h against 850 Pa of static pressure, which is the figure that decides whether a high-floor condo duct run actually clears, and holds 50 dB doing it. 896mm wide, for a standard hob run.'
   WHERE slug = 'athena-series-lifting-type-range-hood-v993';
 
 -- Dimensions, transcribed from VATTI-Cooker-Hood-V993-Dimension.pdf (page 1,
@@ -182,7 +182,7 @@ SELECT id, 8, 'How much is the V929 and where can I buy it?',
 -- so it appears in the copy and not in the readout strip.
 
 UPDATE product SET intro_md =
-  'A side hood: the canopy is a dome that gathers smoke into a chamber instead of a flat T-shape plate that lets it roll off the edges, and nothing hangs at head height over the hob. 2,500 m³/h against up to 1,000 Pa, at 52 dB, with a steam and hot-water clean cycle that ends by spinning the motor dry. 895mm wide, hung 400 to 500mm over the hob.'
+  'A side hood: the canopy is a dome that gathers smoke into a chamber instead of a flat T-shape plate that lets it roll off the edges, and nothing hangs at head height over the hob. 2,500 m³/h against up to 1,000 Pa, at 50 dB, with a steam and hot-water clean cycle that ends by spinning the motor dry. 895mm wide, hung 400 to 500mm over the hob.'
   WHERE slug = 'athena-series-lifting-type-range-hood-v999';
 
 INSERT INTO product_dimension (product_id, position, section, label, value, note, metric, min_mm, max_mm)
@@ -229,7 +229,7 @@ SELECT id, 4, 'What is a side hood, and is it better than a T-shape?',
   FROM product WHERE slug = 'athena-series-lifting-type-range-hood-v999';
 INSERT INTO product_faq (product_id, position, question, answer_md)
 SELECT id, 5, 'Is 2,500 m³/h enough for wok cooking?',
-  'For most kitchens, yes: 2,500 m³/h against up to 1,000 Pa of static pressure, at 52 dB. If the duct run is long or has several bends, which is the usual case on a high floor, the [V929](/vatti-aetheris-series-cooker-hood-v929/) pushes 1,300 Pa and is the safer choice.'
+  'For most kitchens, yes: 2,500 m³/h against up to 1,000 Pa of static pressure, at 50 dB. If the duct run is long or has several bends, which is the usual case on a high floor, the [V929](/vatti-aetheris-series-cooker-hood-v929/) pushes 1,300 Pa and is the safer choice.'
   FROM product WHERE slug = 'athena-series-lifting-type-range-hood-v999';
 INSERT INTO product_faq (product_id, position, question, answer_md)
 SELECT id, 6, 'How is the V999 cleaned?',
@@ -327,7 +327,7 @@ SELECT id, 8, 'How much is the V998 and where can I buy it?',
 -- size from the SPECIFICATION panel that shipped as V937-8.
 
 UPDATE product SET intro_md =
-  'A T-type hood with three intake cavities instead of one, a wide one between two narrow ones, so the low-pressure zone covers the whole hob rather than the middle of it. 2,500 m³/h against 1,050 Pa at 46 dB, and it reads the duct it is fitted to and sets its pressure to match. The main oil filter comes out in one piece for the sink. 896mm wide, hung 650 to 700mm over the hob.'
+  'A T-type hood with three intake cavities instead of one, a wide one between two narrow ones, so the low-pressure zone covers the whole hob rather than the middle of it. 2,500 m³/h against 1,050 Pa at 50 dB, and it reads the duct it is fitted to and sets its pressure to match. The main oil filter comes out in one piece for the sink. 896mm wide, hung 650 to 700mm over the hob.'
   WHERE slug = 'triple-intake-series-t-type-cooker-hood-v937';
 
 INSERT INTO product_dimension (product_id, position, section, label, value, note, metric, min_mm, max_mm)
@@ -413,7 +413,7 @@ UPDATE product_video SET
 -- and the cleaning poster (V938-PG13).
 
 UPDATE product SET intro_md =
-  'The hood for the kitchen that does not want one: the body sits inside the cabinet run at 325mm deep and only the front edge shows. Behind it is the hardest-pulling pair VATTI sells, 3,650 m³/h against 1,600 Pa, held at 47 dB by a 3.2 kg BLDC inverter motor. It reads the duct and sets its own extraction, it purifies on standby, and the wash cycle runs steam and hot water together.'
+  'The hood for the kitchen that does not want one: the body sits inside the cabinet run at 325mm deep and only the front edge shows. Behind it is the hardest-pulling pair VATTI sells, 3,650 m³/h against 1,600 Pa, held at 48 dB by a 3.2 kg BLDC inverter motor. It reads the duct and sets its own extraction, it purifies on standby, and the wash cycle runs steam and hot water together.'
   WHERE slug = 'vatti-hidden-series-range-hood-v938';
 
 INSERT INTO product_dimension (product_id, position, section, label, value, note, metric, min_mm, max_mm)
@@ -448,7 +448,7 @@ SELECT id, 3, 'What ducting does the V938 need?',
   FROM product WHERE slug = 'vatti-hidden-series-range-hood-v938';
 INSERT INTO product_faq (product_id, position, question, answer_md)
 SELECT id, 4, 'Is the V938 the strongest hood VATTI Malaysia sells?',
-  'Yes, on both numbers that matter: 3,650 m³/h of airflow and 1,600 Pa of static pressure, at 47 dB. The next strongest is the [V929](/vatti-aetheris-series-cooker-hood-v929/) at 3,125 m³/h and 1,300 Pa.'
+  'Yes, on both numbers that matter: 3,650 m³/h of airflow and 1,600 Pa of static pressure, at 48 dB. The next strongest is the [V929](/vatti-aetheris-series-cooker-hood-v929/) at 3,125 m³/h and 1,300 Pa.'
   FROM product WHERE slug = 'vatti-hidden-series-range-hood-v938';
 INSERT INTO product_faq (product_id, position, question, answer_md)
 SELECT id, 5, 'How is the V938 cleaned?',

@@ -267,7 +267,7 @@ SELECT id, 3, 'split', 'A wide angle over the whole hob',
 
 INSERT INTO product_feature (product_id, position, layout, title, body_md, image_url, image_alt, image_w, image_h)
 SELECT id, 4, 'split', 'Inverter DC motor',
-  'An inverter motor rather than a fixed-speed one: 2,500 m³/h of airflow against up to 1,000 Pa of static pressure, and 52 dB while it does it.',
+  'An inverter motor rather than a fixed-speed one: 2,500 m³/h of airflow against up to 1,000 Pa of static pressure, and 50 dB while it does it.',
   'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/v999-dc-motor.webp',
   'The V999 inverter DC motor turning', 349, 202
   FROM product WHERE slug = 'athena-series-lifting-type-range-hood-v999';
@@ -493,7 +493,7 @@ SELECT id, 5, 'split', 'The whole filter comes out',
 
 INSERT INTO product_feature (product_id, position, layout, title, body_md, image_url, image_alt, image_w, image_h)
 SELECT id, 6, 'split', 'Quiet in three places at once',
-  '46 dB, which VATTI reaches by treating noise where it is made rather than muffling it afterwards.
+  '50 dB, which VATTI reaches by treating noise where it is made rather than muffling it afterwards.
 
 - A frequency-conversion chip and ball bearings, for mechanical noise
 - A patented V-shaped housing, for aerodynamic noise
