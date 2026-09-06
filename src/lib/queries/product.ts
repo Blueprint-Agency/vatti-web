@@ -205,3 +205,20 @@ export function getColourways(productId: number): { slug: string; colour_variant
     productId
   );
 }
+
+/**
+ * Colourways that live on THIS page rather than on one of their own (V997's
+ * three finishes, C836G's two). The other half of the pair above — see
+ * product_colourway in schema.sql for which case is which. A product has rows
+ * in one of the two or neither, never both.
+ */
+export function getColourSwatches(
+  productId: number
+): { name: string; url: string; alt: string | null }[] {
+  return all<{ name: string; url: string; alt: string | null }>(
+    `SELECT c.name, i.url, i.alt
+       FROM product_colourway c JOIN image i ON i.id = c.image_id
+      WHERE c.product_id = ? ORDER BY c.position`,
+    productId
+  );
+}

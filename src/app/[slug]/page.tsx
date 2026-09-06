@@ -31,6 +31,7 @@ import {
 import { getArticlesByPath, getRegions } from "@/lib/queries/home";
 import {
   getColourways,
+  getColourSwatches,
   getDimensions,
   getDownloads,
   getFacets,
@@ -345,6 +346,7 @@ function ProductView({ product }: { product: Product }) {
   const faqs = getProductFaqs(product.id);
   const related = getRelated(product.id);
   const colourways = getColourways(product.id);
+  const swatches = getColourSwatches(product.id);
   const warranty = warrantyFor(product.kind);
   const reviews = getReviews(8);
   const regions = getRegions();
@@ -472,6 +474,33 @@ function ProductView({ product }: { product: Product }) {
                         >
                           {c.colour_variant}
                         </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* The same question as the block above, answered without a second
+                  URL: these finishes live on this page. A product has one or the
+                  other, never both — see product_colourway in schema.sql. */}
+              {swatches.length > 1 && (
+                <div className="mt-8">
+                  <h2 className="text-sm font-semibold text-ink-muted">Finish</h2>
+                  <ul className="mt-3 flex flex-wrap gap-2">
+                    {swatches.map((c) => (
+                      <li
+                        key={c.name}
+                        className="flex items-center gap-2.5 rounded-sm border border-line py-1.5 pl-1.5 pr-3.5"
+                      >
+                        <Image
+                          src={c.url}
+                          alt={c.alt || `${product.name} in ${c.name}`}
+                          width={64}
+                          height={64}
+                          sizes="32px"
+                          className="h-8 w-8 rounded-sm object-contain"
+                        />
+                        <span className="text-sm text-ink-muted">{c.name}</span>
                       </li>
                     ))}
                   </ul>

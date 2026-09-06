@@ -147,6 +147,32 @@ CREATE TABLE product_image (
   PRIMARY KEY (product_id, position)
 );
 
+-- The colours ONE page offers, as a swatch row.
+--
+-- The second way to say "this model comes in more than one finish", and
+-- deliberately not a replacement for the first. `product.variant_group` gives a
+-- colourway its own product row and its own URL, which V917 needs (two legacy
+-- URLs, both of which must keep resolving) and DWID3 shipped with. This table
+-- is for the other case: one page, several finishes, no second URL.
+--
+-- Which to reach for is a traffic question, not a modelling one. A colourway
+-- earns a URL when it already has one, or when its page would say something the
+-- parent's does not. V997's three finishes and C836G's two say exactly what the
+-- parent says, so splitting them would put near-identical specs, features and
+-- FAQ on three URLs and divide the search traffic /vatti-range-hood-v997/
+-- already earns. Swatches keep it whole.
+--
+-- image_id is the front shot of that finish, which is what the swatch shows and
+-- what the gallery scrolls to. It is an image the product already carries.
+CREATE TABLE product_colourway (
+  product_id INTEGER NOT NULL REFERENCES product(id) ON DELETE CASCADE,
+  position   INTEGER NOT NULL,
+  name       TEXT NOT NULL,
+  image_id   INTEGER NOT NULL REFERENCES image(id),
+  PRIMARY KEY (product_id, position),
+  UNIQUE (product_id, name)
+);
+
 -- The feature story as text rather than pixels.
 --
 -- The source site tells it in 5-20 full-width JPEGs per product with the copy
