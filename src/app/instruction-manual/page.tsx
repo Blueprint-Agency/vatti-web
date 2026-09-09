@@ -45,20 +45,15 @@ export default function InstructionManualPage() {
                 <p className="readout mt-5 text-sm text-ink-muted">{m.model}</p>
                 <h2 className="mt-1 text-xl font-semibold tracking-[-0.02em]">{m.title}</h2>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-muted">{m.summary}</p>
-                <div className="mt-6 flex flex-wrap items-center gap-3">
-                  <a
-                    href={m.pdf}
-                    target="_blank"
-                    rel="noopener"
-                    className="rounded-sm bg-teal px-5 py-2.5 font-semibold text-void transition-opacity hover:opacity-90"
-                  >
-                    Open manual
-                  </a>
+                {/* The button opens the manual's own page, not the PDF: that page
+                    is where the PDF, the warranty link and the WhatsApp line sit
+                    together, and it is the same page the printed QR code lands on. */}
+                <div className="mt-6">
                   <Link
                     href={`/instruction-manual/${m.slug}/`}
-                    className="text-sm text-ink-muted transition-colors hover:text-teal"
+                    className="inline-block rounded-sm bg-teal px-5 py-2.5 font-semibold text-void transition-opacity hover:opacity-90"
                   >
-                    Manual page
+                    Open manual
                   </Link>
                 </div>
               </li>
