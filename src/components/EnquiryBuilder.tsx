@@ -1,80 +1,24 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 
 import type { CategoryCard, Region } from "@/lib/queries/home";
-import { whatsappLink } from "@/lib/site";
+
+import { buildQuestions, useEnquiry } from "./enquiry";
 
 /**
- * Composes a WhatsApp message out of a short questionnaire.
- *
- * Deliberately not a form. src/lib/site.ts records the owner's decision that
- * this site has no forms, and this does not break it: nothing is submitted,
- * nothing is stored, there is no endpoint. The answers only ever become text in
- * a wa.me link, and the visitor still presses send inside WhatsApp. That is why
- * the message is shown in full rather than hidden behind the button — the
- * visitor can see exactly what they are about to send before anything happens.
- *
- * Every question is optional. A half-answered questionnaire still produces a
- * sensible message, and the button never blocks.
+ * Every question on one screen, the message beside them. The category pages
+ * use this; the front page asks the same questions one at a time in
+ * EnquiryFunnel. What the questions are and how they become a message lives
+ * in ./enquiry.
  */
-
-type Question = {
-  id: string;
-  /** The visitor-facing question. */
-  legend: string;
-  /** How the answer is introduced in the message. */
-  label: string;
-  options: string[];
-  multiple?: boolean;
-};
-
-/**
- * Fixed questions. The two data-driven ones are built in the component, and
- * one of these is dropped on the pages it does not apply to — see `hobWidth`.
- */
-const BASE: Question[] = [
-  {
-    id: "project",
-    legend: "What is the project?",
-    label: "Project",
-    options: ["Renovating", "New build", "Replacing a unit", "Still researching"],
-  },
-  {
-    id: "cooking",
-    legend: "How do you cook?",
-    // The two definite answers first, the hedge last: "a mix of both" only
-    // means anything once you have read the two things it sits between.
-    label: "Cooking",
-    options: ["Wok on high heat, most days", "Mostly light cooking", "A mix of both"],
-  },
-  {
-    id: "kitchen",
-    legend: "What is the kitchen like?",
-    label: "Kitchen",
-    options: ["Condo or apartment", "Landed house", "Open plan", "Wet and dry"],
-  },
-  {
-    id: "hob",
-    legend: "How much hob space is there?",
-    label: "Hob space",
-    options: ["Under 700mm", "700 to 800mm", "800 to 900mm", "Over 900mm", "Not measured yet"],
-  },
-  {
-    id: "timing",
-    legend: "When do you need it?",
-    label: "Timing",
-    options: ["This month", "In one to three months", "Later than that", "Just planning"],
-  },
-];
-
 export function EnquiryBuilder({
   categories,
   regions,
   category,
   hobWidth = true,
 }: {
-  /** The whole catalogue, for the front page. Omitted on a category page. */
+  /** The whole catalogue, when no category is given. */
   categories?: CategoryCard[];
   regions: Region[];
   /**
@@ -85,8 +29,7 @@ export function EnquiryBuilder({
   category?: string;
   /**
    * Ask how much hob space there is. True everywhere it is a real question:
-   * the front page, where the visitor has not said what they are after yet,
-   * and the hood and hob pages, where the width of the cooking surface is the
+   * the hood and hob pages, where the width of the cooking surface is the
    * measurement that rules models out — a hood narrower than the hob leaks
    * smoke at the edges however hard it pulls.
    *
@@ -97,81 +40,14 @@ export function EnquiryBuilder({
    */
   hobWidth?: boolean;
 }) {
-  // Category and region wording comes from the database so the message uses the
-  // same names as the catalogue and the dealer list.
-  const questions = useMemo<Question[]>(
-    () => [
-      ...(category
-        ? []
-        : [
-            {
-              id: "looking",
-              legend: "What are you looking for?",
-              label: "Looking at",
-              options: (categories ?? []).map((c) => c.name),
-              multiple: true,
-            },
-          ]),
-      ...BASE.filter((q) => q.id !== "hob" || hobWidth),
-      {
-        id: "area",
-        legend: "Where are you?",
-        label: "Area",
-        options: regions.map((r) => r.region),
-      },
-    ],
+  const questions = useMemo(
+    () => buildQuestions({ categories, regions, category, hobWidth }),
     [categories, category, regions, hobWidth]
   );
-
-  const [answers, setAnswers] = useState<Record<string, string[]>>({});
-  const [name, setName] = useState("");
-
-  function toggle(question: Question, option: string) {
-    setAnswers((prev) => {
-      const current = prev[question.id] ?? [];
-      if (!question.multiple) {
-        // Tapping the chosen option again clears it: every question is optional
-        // and there is no other way back to "no answer".
-        return { ...prev, [question.id]: current[0] === option ? [] : [option] };
-      }
-      return {
-        ...prev,
-        [question.id]: current.includes(option)
-          ? current.filter((v) => v !== option)
-          : [...current, option],
-      };
-    });
-  }
-
-  const answered = questions.filter((q) => (answers[q.id] ?? []).length > 0).length;
-
-  const message = useMemo(() => {
-    const looking = answers.looking ?? [];
-    // A colon list rather than "looking at kitchen hood and cooker hob": the
-    // category names are singular in the database, and pluralising them in code
-    // would be a rule waiting to be broken by the next category added.
-    const lines: string[] = [
-      category
-        ? `Hi VATTI Malaysia. I am looking at your ${category.toLowerCase()} range.`
-        : looking.length > 0
-          ? `Hi VATTI Malaysia. I am shopping for: ${looking.join(", ")}.`
-          : "Hi VATTI Malaysia. I would like some help choosing kitchen appliances.",
-    ];
-
-    const details = questions
-      .filter((q) => q.id !== "looking")
-      .map((q) => {
-        const value = answers[q.id] ?? [];
-        return value.length > 0 ? `${q.label}: ${list(value)}` : null;
-      })
-      .filter((line): line is string => line !== null);
-
-    if (details.length > 0) lines.push("", ...details);
-    if (name.trim()) lines.push("", `Thanks, ${name.trim()}`);
-    return lines.join("\n");
-  }, [answers, category, name, questions]);
-
-  const href = whatsappLink(message);
+  const { answers, name, setName, toggle, answered, message, href } = useEnquiry(
+    questions,
+    category
+  );
 
   return (
     <div className="grid gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-14">
@@ -262,10 +138,4 @@ export function EnquiryBuilder({
       </div>
     </div>
   );
-}
-
-/** "a, b and c" — the message should read like a person wrote it. */
-function list(items: string[]): string {
-  if (items.length <= 1) return items[0] ?? "";
-  return `${items.slice(0, -1).join(", ")} and ${items[items.length - 1]}`;
 }

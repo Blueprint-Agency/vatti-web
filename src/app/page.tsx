@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import { DealerMap } from "@/components/DealerMap";
 import { CtaBar } from "@/components/CtaBar";
-import { EnquiryBuilder } from "@/components/EnquiryBuilder";
+import { EnquiryFunnel } from "@/components/EnquiryFunnel";
 import { ProductShowcase } from "@/components/ProductShowcase";
 import { Reveal } from "@/components/Reveal";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -624,23 +624,25 @@ export default function HomePage() {
           {/* The kitchen the questions are about, half-strength behind them.
               Decorative, so the whole stack is hidden from the tree.
 
-              A band at the picture's own aspect, not the section's. Eight
-              questions make this section around 1700px tall, and object-cover
-              over that box scales a 16:9 frame past 2x — you get a blurred
-              worktop and a bowl, and the hood, the hob and the oven that are
-              the whole reason to run the photograph are off the edge. Pinned to
-              16:9 it lands at roughly 1:1 on a desktop and the frame survives.
-              Portrait gets 4:5, because 16:9 across a phone is a strip of
-              cabinet: the taller box crops to the middle of the frame, which is
-              the hood over the hob, and that is the half worth showing small.
+              A band at the picture's own aspect, not the section's. The funnel
+              asks one question at a time, so the section is around 1100px tall
+              on a desktop and taller on a phone once the message stacks under
+              the card, and object-cover over that box would scale a 16:9 frame
+              well past 1x — you get a blurred worktop and a bowl, and the hood,
+              the hob and the oven that are the whole reason to run the
+              photograph are off the edge. Pinned to 16:9 it lands at roughly
+              1:1 on a desktop and the frame survives. Portrait gets 4:5,
+              because 16:9 across a phone is a strip of cabinet: the taller box
+              crops to the middle of the frame, which is the hood over the hob,
+              and that is the half worth showing small.
 
-              Ramped like the hero, and for the same reason: the questions and
-              their hairline chips sit straight on this ground with nothing
-              opaque under them, so the left carries a knock-down the right does
-              not — the summary card is opaque and the space beside the heading
-              is empty, which is where the picture gets to be a picture. On a
-              phone the copy crosses the full width, so there an even one is
-              honest.
+              Ramped like the hero, and for the same reason: the heading, its
+              helper line and the step rail sit straight on this ground with
+              nothing opaque under them, so the left carries a knock-down the
+              right does not — the question card and the message card are
+              opaque and stop at max-w-3xl, and the space beside them is empty,
+              which is where the picture gets to be a picture. On a phone the
+              copy crosses the full width, so there an even one is honest.
 
               The foot dissolves back into surface well before the contact grid:
               those three cells are opaque bg-surface against a bg-line parent,
@@ -668,13 +670,15 @@ export default function HomePage() {
                 Get a quote for your kitchen
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-ink-muted">
-                Answer what you can. We will point you at the right model and the dealer who stocks
-                it, usually the same day.
+                Seven quick questions, all optional. We will point you at the right model and the
+                dealer who stocks it, usually the same day.
               </p>
             </div>
 
             <div className="mt-10">
-              <EnquiryBuilder categories={categories} regions={regions} />
+              {/* One question at a time on this page. The category pages keep
+                  EnquiryBuilder, which shows them all at once. */}
+              <EnquiryFunnel categories={categories} regions={regions} />
             </div>
 
             <dl className="mt-14 grid gap-px bg-line sm:grid-cols-3">
