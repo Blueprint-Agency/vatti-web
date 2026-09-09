@@ -59,6 +59,7 @@ const COLUMNS = [
       { label: "Buying Guide", href: "/category/buying-guide/" },
       { label: "Tips & Tricks", href: "/category/tips-tricks/" },
       { label: "Recipe", href: "/category/recipe/" },
+      { label: "Instruction Manual", href: "/instruction-manual/" },
     ],
   },
 ];

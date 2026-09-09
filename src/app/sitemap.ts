@@ -36,6 +36,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry("/vatti-ewarranty/"),
     entry("/vatti-pay/"),
     entry("/store-locations/"),
+    // /instruction-manual/<model>/ is deliberately absent: those are noindex
+    // QR-code landing pages. See src/lib/manuals.ts.
+    entry("/instruction-manual/"),
     ...productSlugs().map((slug) => entry(`/${slug}/`)),
     ...categorySlugs().map((slug) => entry(`/${slug}/`)),
     ...articleDates().map((a) => entry(`/${a.path}/`, a.last_modified)),
