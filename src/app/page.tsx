@@ -639,8 +639,8 @@ export default function HomePage() {
               Ramped like the hero, and for the same reason: the heading, its
               helper line and the step rail sit straight on this ground with
               nothing opaque under them, so the left carries a knock-down the
-              right does not — the question card and the message card are
-              opaque and stop at max-w-3xl, and the space beside them is empty,
+              right does not — the question card and the message card beside
+              it are both opaque, and the space beside the heading is empty,
               which is where the picture gets to be a picture. On a phone the
               copy crosses the full width, so there an even one is honest.
 
