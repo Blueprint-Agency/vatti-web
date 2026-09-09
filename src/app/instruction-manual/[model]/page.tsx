@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ArrowLeft } from "@phosphor-icons/react/dist/ssr/ArrowLeft";
 import { FilePdf } from "@phosphor-icons/react/dist/ssr/FilePdf";
 
 import { SiteHeader } from "@/components/SiteHeader";
@@ -49,7 +50,16 @@ export default async function ManualPage({ params }: { params: Promise<Params> }
       <main id="main">
         <section className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
           <div className="max-w-2xl">
-            <p className="readout text-sm text-ink-muted">Instruction manual</p>
+            {/* The way back for a visitor who arrived by QR code and has no
+                history to return to. The footer link is too far down a phone. */}
+            <Link
+              href="/instruction-manual/"
+              className="inline-flex items-center gap-1.5 text-sm text-ink-muted transition-colors hover:text-teal"
+            >
+              <ArrowLeft size={16} aria-hidden="true" />
+              Back to all manuals
+            </Link>
+            <p className="readout mt-8 text-sm text-ink-muted">Instruction manual</p>
             <h1 className="mt-3 text-balance text-[clamp(2.25rem,1.2rem+4vw,4.5rem)] font-semibold leading-[1.02] tracking-[-0.04em]">
               {manual.title}
             </h1>
@@ -96,14 +106,6 @@ export default async function ManualPage({ params }: { params: Promise<Params> }
                   </Link>
                 </li>
               )}
-              <li>
-                <Link
-                  href="/instruction-manual/"
-                  className="text-teal transition-opacity hover:opacity-80"
-                >
-                  All manuals →
-                </Link>
-              </li>
             </ul>
           </div>
         </section>
