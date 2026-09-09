@@ -557,7 +557,7 @@ Attachments are capped at 5 files and 4 MB total, which is Vercel's 4.5 MB reque
 minus the JSON.
 
 `/api/enquiry` is **not built**. The owner's decision that the site carries no enquiry form
-(`src/lib/site.ts`) removed the thing it was for; EnquiryBuilder composes a WhatsApp message
+(`src/lib/site.ts`) removed the thing it was for; EnquiryFunnel composes a WhatsApp message
 instead and submits nothing.
 
 **Phase 5 — SEO parity**

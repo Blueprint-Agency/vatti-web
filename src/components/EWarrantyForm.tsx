@@ -664,7 +664,7 @@ export function EWarrantyForm({
   );
 }
 
-/** Shared input skin. Matches the name field in EnquiryBuilder. */
+/** Shared input skin. Matches the name field in EnquiryFunnel. */
 const INPUT =
   "mt-3 w-full rounded-sm border border-line-strong bg-void px-3.5 py-2.5 text-ink placeholder:text-ink-muted focus-visible:border-teal";
 

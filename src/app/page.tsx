@@ -676,8 +676,6 @@ export default function HomePage() {
             </div>
 
             <div className="mt-10">
-              {/* One question at a time on this page. The category pages keep
-                  EnquiryBuilder, which shows them all at once. */}
               <EnquiryFunnel categories={categories} regions={regions} />
             </div>
 

@@ -15,7 +15,7 @@ import type { CSSProperties, ReactNode } from "react";
 import { CompareSelector } from "@/components/CompareSelector";
 import { CompareTable } from "@/components/CompareTable";
 import { CtaBar } from "@/components/CtaBar";
-import { EnquiryBuilder } from "@/components/EnquiryBuilder";
+import { EnquiryFunnel } from "@/components/EnquiryFunnel";
 import { ModelGrid } from "@/components/ModelGrid";
 import { Reveal } from "@/components/Reveal";
 import { ReviewWall } from "@/components/ReviewWall";
@@ -564,7 +564,7 @@ export function CategoryView({
           <section
             aria-labelledby="finder-heading"
             // No overflow-hidden here, however much the absolute backdrop below
-            // looks like it wants one. The readout panel inside EnquiryBuilder
+            // looks like it wants one. The message card inside EnquiryFunnel
             // is lg:sticky, and an ancestor that hides overflow becomes its
             // scroll container — the panel would then stick to a box that never
             // scrolls and sit dead while the questions move past it. Nothing
@@ -614,8 +614,8 @@ export function CategoryView({
               <div className="mt-10">
                 {/* Hob width is a real question on the two pages where the
                     cooking surface decides the model, and noise on the oven
-                    page. See EnquiryBuilder. */}
-                <EnquiryBuilder
+                    page. See EnquiryFunnel. */}
+                <EnquiryFunnel
                   regions={regions}
                   category={category.name}
                   hobWidth={

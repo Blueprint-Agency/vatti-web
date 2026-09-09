@@ -7,31 +7,56 @@ import type { CategoryCard, Region } from "@/lib/queries/home";
 import { buildQuestions, useEnquiry } from "./enquiry";
 
 /**
- * The same questionnaire as EnquiryBuilder, asked one question at a time.
+ * The questionnaire, asked one question at a time.
  *
- * Front page only. A visitor arriving cold is answering seven things about a
- * kitchen they may not have planned yet, and a wall of chips makes that look
- * like a form. One card, one question, a Next button and a rail that shows
- * how far there is to go reads as a conversation instead, and the message
- * writing itself underneath is the proof that the answers are going somewhere.
+ * A visitor is answering up to seven things about a kitchen they may not have
+ * planned yet, and a wall of chips makes that look like a form. One card, one
+ * question, a Next button and a rail that shows how far there is to go reads
+ * as a conversation instead, and the message writing itself beside the card
+ * is the proof that the answers are going somewhere.
  *
- * Nothing else changes. Every question is still optional (Next reads "Skip"
- * on an unanswered card rather than refusing), the rail jumps to any step, and
- * the WhatsApp button is live from the first card because the opening line
- * stands on its own. See ./enquiry for why this is not a form.
+ * Every question is optional (Next reads "Skip" on an unanswered card rather
+ * than refusing), the rail jumps to any step, and the WhatsApp button is live
+ * from the first card because the opening line stands on its own. See
+ * ./enquiry for why this is not a form.
  */
 export function EnquiryFunnel({
   categories,
   regions,
+  category,
+  hobWidth = true,
 }: {
-  categories: CategoryCard[];
+  /** The whole catalogue, for the front page. Omitted on a category page. */
+  categories?: CategoryCard[];
   regions: Region[];
+  /**
+   * One category name, when this sits on that category's own page. It answers
+   * "what are you looking for?" on the visitor's behalf, so that question is
+   * dropped rather than asked about a page they are already standing on.
+   */
+  category?: string;
+  /**
+   * Ask how much hob space there is. True everywhere it is a real question:
+   * the front page, where the visitor has not said what they are after yet,
+   * and the hood and hob pages, where the width of the cooking surface is the
+   * measurement that rules models out — a hood narrower than the hob leaks
+   * smoke at the edges however hard it pulls.
+   *
+   * False on the oven page. Nothing about an oven follows from the hob it
+   * happens to sit under, and a questionnaire that asks anyway reads as a form
+   * built for a different product and reused, which is the impression this
+   * whole section exists to avoid.
+   */
+  hobWidth?: boolean;
 }) {
   const questions = useMemo(
-    () => buildQuestions({ categories, regions, hobWidth: true }),
-    [categories, regions]
+    () => buildQuestions({ categories, regions, category, hobWidth }),
+    [categories, category, regions, hobWidth]
   );
-  const { answers, name, setName, toggle, answered, message, href } = useEnquiry(questions);
+  const { answers, name, setName, toggle, answered, message, href } = useEnquiry(
+    questions,
+    category
+  );
 
   // The name is the last card. It is the only step that is not a question, so
   // it is counted here and nowhere in ./enquiry.

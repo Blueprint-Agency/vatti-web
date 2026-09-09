@@ -6,16 +6,15 @@ import type { CategoryCard, Region } from "@/lib/queries/home";
 import { whatsappLink } from "@/lib/site";
 
 /**
- * The questionnaire behind the WhatsApp message, shared by the two layouts
- * that ask it: EnquiryBuilder (every question on one screen, category pages)
- * and EnquiryFunnel (one question at a time, the front page).
+ * The questionnaire behind the WhatsApp message. EnquiryFunnel asks it one
+ * question at a time on the front page and on every category page.
  *
  * Deliberately not a form. src/lib/site.ts records the owner's decision that
  * this site has no forms, and this does not break it: nothing is submitted,
  * nothing is stored, there is no endpoint. The answers only ever become text in
  * a wa.me link, and the visitor still presses send inside WhatsApp. That is why
- * both layouts show the message in full rather than hiding it behind the button
- * — the visitor can see exactly what they are about to send before anything
+ * the message is shown in full rather than hidden behind the button — the
+ * visitor can see exactly what they are about to send before anything
  * happens.
  *
  * Every question is optional. A half-answered questionnaire still produces a
@@ -30,7 +29,7 @@ export type Question = {
   label: string;
   /** One or two words for a step rail. */
   short: string;
-  /** Why we ask. Shown under the question in the stepped layout only. */
+  /** Why we ask. Shown under the question. */
   hint: string;
   options: string[];
   multiple?: boolean;
