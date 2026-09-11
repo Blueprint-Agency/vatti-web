@@ -9,9 +9,10 @@ import { DatabaseSync } from "node:sqlite";
 import path from "node:path";
 import sharp from "sharp";
 
+import { CDN } from "./cdn.mjs";
+
 const ROOT = "C:/Users/danie/vatti-web";
 const SRC = "C:/Users/danie/Downloads/vatti product images/Vatti Product Image";
-const CDN = "https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/";
 const SQL_OUT = path.join(ROOT, "data/sql/new-products-2026-08.sql");
 
 const db = new DatabaseSync(path.join(ROOT, ".data/vatti.db"), { readOnly: true });
@@ -107,7 +108,7 @@ for (const def of NEW_PRODUCTS) {
   const rows = [];
   for (const img of images) {
     const id = nextImageId.n++;
-    const url = CDN + img.key;
+    const url = `${CDN}/${img.key}`;
     const alt = `${def.name}, ${ALT_LABEL[img.suffix] ?? "detail view"}`;
     imageLines.push(
       `INSERT INTO image (id, url, legacy_url, alt, width, height) VALUES (${id}, ${q(url)}, NULL, ${q(alt)}, ${img.width}, ${img.height});`

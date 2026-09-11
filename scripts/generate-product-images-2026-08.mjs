@@ -11,10 +11,11 @@ import { DatabaseSync } from "node:sqlite";
 import path from "node:path";
 import sharp from "sharp";
 
+import { CDN } from "./cdn.mjs";
+
 const ROOT = "C:/Users/danie/vatti-web";
 const SRC = "C:/Users/danie/Downloads/vatti product images/Vatti Product Image";
 const OUT_DIR = path.join(ROOT, "old-media/2026/08");
-const CDN = "https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/";
 const SQL_OUT = path.join(ROOT, "data/sql/product-images-2026-08.sql");
 
 mkdirSync(OUT_DIR, { recursive: true });
@@ -202,7 +203,7 @@ async function processTarget(folder, slug, name) {
   let position = 900;
   for (const img of images) {
     const id = nextImageId++;
-    const url = CDN + img.key;
+    const url = `${CDN}/${img.key}`;
     const alt = `${name}, ${ALT_LABEL[img.suffix] ?? "detail view"}`;
     imageLines.push(
       `INSERT INTO image (id, url, legacy_url, alt, width, height) VALUES (${id}, ${q(url)}, NULL, ${q(alt)}, ${img.width}, ${img.height});`

@@ -8,6 +8,7 @@ import { EnquiryFunnel } from "@/components/EnquiryFunnel";
 import { ProductShowcase } from "@/components/ProductShowcase";
 import { Reveal } from "@/components/Reveal";
 import { SiteHeader } from "@/components/SiteHeader";
+import { cdn } from "@/lib/cdn";
 import {
   getArticleTeasers,
   getArticlesByPath,
@@ -103,8 +104,7 @@ const HERO_IMAGE = "/hero-v929-panel.webp";
  * Give this a NEW key whenever the picture changes — R2 is served with a long
  * max-age and the optimizer caches by path.
  */
-const ENQUIRY_BACKDROP =
-  "https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/home-enquiry-kitchen-backdrop.jpg";
+const ENQUIRY_BACKDROP = cdn("2026/08/home-enquiry-kitchen-backdrop.jpg");
 
 /** Editorial, from the source homepage — there is no sales data in the DB. */
 const BESTSELLER_SLUGS = [

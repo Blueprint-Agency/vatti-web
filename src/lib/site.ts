@@ -1,3 +1,5 @@
+import { cdn } from "@/lib/cdn";
+
 /** The sales line. Every *sales* path on this site ends here — there is no cart
  *  and no checkout, and by the owner's decision no enquiry form either.
  *
@@ -19,14 +21,11 @@ export function whatsappLink(message: string): string {
 
 /** The "Catalog" menu item. WordPress links the raw /wp-content/ path; that
  *  path 301s to R2 via next.config.ts, but Vercel's firewall currently denies
- *  /wp-content/* before the redirect runs, so link the CDN object directly.
- *  Host is duplicated from next.config.ts CDN_HOST — swap both at cutover. */
-export const CATALOGUE =
-  "https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/07/Vatti-Catalogue_260718.pdf";
+ *  /wp-content/* before the redirect runs, so link the CDN object directly. */
+export const CATALOGUE = cdn("2026/07/Vatti-Catalogue_260718.pdf");
 
 /** The header wordmark, replacing the "VATTI Malaysia" text lockup. */
-export const LOGO_URL =
-  "https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/vatti-logo-header.webp";
+export const LOGO_URL = cdn("2026/08/vatti-logo-header.webp");
 
 /**
  * How many Google reviews the service has. A dated snapshot of the aggregate

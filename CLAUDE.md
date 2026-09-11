@@ -140,11 +140,17 @@ already allows the CDN host in `images.remotePatterns`, so `next/image` needs no
   caches by path, so replacing the bytes under an existing key serves the old picture to everyone
   who has already seen the page.
 - **The public host is code; only the credentials are secrets.** `scripts/cdn.mjs` states it once
-  and `next.config.ts`, the three importers and `build-url-inventory.mjs` all read it from there.
+  and **every other file reads it from there** — `next.config.ts` and the scripts import it
+  directly; app code goes through `src/lib/cdn.ts`, which re-exports it and adds `cdn(key)`.
+  `grep -r pub-d0b729 .` must return exactly one hit, in `scripts/cdn.mjs`. If it ever returns two,
+  the cutover has a bug waiting in it.
   It is currently the bucket's **r2.dev dev URL** — rate-limited and not for production. At cutover
   edit that one file to `cdn.vattimalaysia.com` and re-run the importers so the URLs baked into
-  `data/sql` match. Two literals still predate the rule and must be swapped by hand with it:
-  `CATALOGUE` in `src/lib/site.ts` and `ENQUIRY_BACKDROP` in `src/app/page.tsx`.
+  `data/sql` match. Nothing else needs touching.
+- **Never write the CDN host into a component.** Page and product imagery is data: its URLs live in
+  `data/sql` and are read from the DB. The few URLs that are genuinely code — the catalogue PDF and
+  header wordmark in `src/lib/site.ts`, a manual in `src/lib/manuals.ts`, the one decorative
+  backdrop in `src/app/page.tsx` — call `cdn("2026/08/some-key.webp")` and name only the bucket key.
 
 **Uploads work.** `pnpm media:upload` needs `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`,
 `R2_SECRET_ACCESS_KEY` and `R2_BUCKET_NAME` — copy `.env.example` to `.env.local` and fill it in

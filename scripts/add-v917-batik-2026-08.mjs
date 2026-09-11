@@ -7,9 +7,10 @@ import { DatabaseSync } from "node:sqlite";
 import path from "node:path";
 import sharp from "sharp";
 
+import { CDN } from "./cdn.mjs";
+
 const ROOT = "C:/Users/danie/vatti-web";
 const SRC = "C:/Users/danie/Downloads/vatti product images/Vatti Product Image/Cooker Hood/V917/Batik";
-const CDN = "https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/";
 const SLUG = "vatti-cooker-hood-v917-batik";
 const NAME = "VATTI Cooker Hood V917 (Batik)";
 const SQL_OUT = path.join(ROOT, "data/sql/v917-batik-2026-08.sql");
@@ -48,7 +49,7 @@ for (const it of items) {
   await sharp(path.join(SRC, it.file)).webp({ quality: 90, effort: 6 }).toFile(dest);
   const meta = await sharp(dest).metadata();
   const id = nextImageId++;
-  const url = CDN + key;
+  const url = `${CDN}/${key}`;
   const alt = `${NAME}, ${ALT_LABEL[it.suffix] ?? "detail view"}`;
   imageLines.push(`INSERT INTO image (id, url, legacy_url, alt, width, height) VALUES (${id}, ${q(url)}, NULL, ${q(alt)}, ${meta.width}, ${meta.height});`);
   if (it.role === "hero") heroId = id;

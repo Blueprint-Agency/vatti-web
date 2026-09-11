@@ -8,10 +8,11 @@
  * hood with a phone is the reader, not a search engine.
  *
  * The PDF is on R2 like every other file on this site. To add a manual: stage the
- * PDF under old-media/ at its bucket key, `pnpm media:upload`, then add a row here.
- * Nothing else changes. Host is duplicated from CATALOGUE in site.ts — swap both
- * at cutover.
+ * PDF under old-media/ at its bucket key, `pnpm media:upload`, then add a row here
+ * naming that key. Nothing else changes.
  */
+import { cdn } from "@/lib/cdn";
+
 export type Manual = {
   /** URL segment under /instruction-manual/. Lower case model code. */
   slug: string;
@@ -30,7 +31,7 @@ export const MANUALS: Manual[] = [
     model: "V959",
     title: "VATTI Cooker Hood V959",
     summary: "Installation, operation, cleaning and troubleshooting for the V959 cooker hood.",
-    pdf: "https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/09/vatti-v959-instruction-manual.pdf",
+    pdf: cdn("2026/09/vatti-v959-instruction-manual.pdf"),
     product: "vatti-cooker-hood-v959",
   },
 ];
