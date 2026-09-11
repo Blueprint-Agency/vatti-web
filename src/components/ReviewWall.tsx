@@ -1,10 +1,38 @@
 "use client";
 
-import Image from "next/image";
 import { useRef, useState } from "react";
 
 import type { Review } from "@/lib/queries/category";
 import { GOOGLE_REVIEWS } from "@/lib/site";
+
+/**
+ * Google's G, inline.
+ *
+ * It was a 1KB file in public/ fetched through the image optimizer at two sizes
+ * on the busiest template on the site. A brand glyph this small is cheaper as
+ * markup than as a request, and inlining it is what let public/ empty out — it
+ * is the one asset here that belongs neither in the DB nor on the CDN.
+ *
+ * The blue is Google's own #4285F4 and is not a theme token: it is their mark,
+ * and recolouring it to suit our palette would be wrong in both themes.
+ *
+ * `label` is the accessible name and differs per call site — the panel says
+ * whose rating this is, a card says where the review was posted.
+ */
+function GoogleMark({ size, label }: { size: number; label: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      role="img"
+      aria-label={label}
+      fill="#4285F4"
+    >
+      <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z" />
+    </svg>
+  );
+}
 
 /**
  * The Google reviews, in the shape the live site's Trustindex widget renders
@@ -56,13 +84,9 @@ export function ReviewWall({ reviews, heading }: { reviews: Review[]; heading: s
               Based on <span className="readout font-semibold text-ink">{GOOGLE_REVIEWS}</span>{" "}
               reviews
             </p>
-            <Image
-              src="/google-mark.svg"
-              alt="Google"
-              width={28}
-              height={28}
-              className="mx-auto mt-4"
-            />
+            <div className="mt-4 flex justify-center">
+              <GoogleMark size={28} label="Google" />
+            </div>
           </div>
 
           {/* min-w-0 is load-bearing. A grid track sized `auto` takes its base
@@ -129,7 +153,7 @@ function ReviewCard({ review }: { review: Review }) {
           <p className="truncate font-semibold leading-tight">{review.author}</p>
           <p className="mt-1 text-xs text-ink-muted">{ago(review.posted_at)}</p>
         </figcaption>
-        <Image src="/google-mark.svg" alt={`Posted on ${review.source}`} width={18} height={18} />
+        <GoogleMark size={18} label={`Posted on ${review.source}`} />
       </div>
 
       <Stars count={review.rating} className="mt-4" label={`${review.rating} out of 5`} />
