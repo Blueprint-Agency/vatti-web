@@ -47,10 +47,17 @@ const GROUND_BOOT = `try{var g=localStorage.getItem("vatti-theme");if(g==="light
  * prefix — the tag is client side, so the value is public by definition, and a
  * container id is not a secret.
  *
- * @next/third-parties, not a hand-rolled <script>: it places the loader
- * correctly, keeps the <noscript> iframe in sync with the id, and exposes
- * sendGTMEvent() for any page that later needs to push to the dataLayer. It is
- * versioned with Next itself and pinned to the 15.x line to match.
+ * @next/third-parties, not a hand-rolled <script>: it seeds the dataLayer and
+ * loads gtm.js through next/script, so the loader is placed and preloaded the
+ * way Next wants rather than blocking the head, and it exposes sendGTMEvent()
+ * for any page that later needs to push to the dataLayer. It is versioned with
+ * Next itself and pinned to the 15.x line to match.
+ *
+ * What it does NOT emit is the <noscript> iframe half of Google's snippet, so
+ * that is written out below by hand, from the same id. It only matters to a
+ * visitor with JavaScript off — GA4 cannot run for them at all, and only
+ * image-pixel tags fire — but it is one element and it is what the container
+ * was issued with, so the install is the whole install rather than most of it.
  */
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 const gtmEnabled = isLiveSite && !!GTM_ID;
@@ -121,6 +128,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       {gtmEnabled && <GoogleTagManager gtmId={GTM_ID!} />}
       <body className="min-h-dvh bg-void text-ink antialiased">
         <script dangerouslySetInnerHTML={{ __html: GROUND_BOOT }} />
+        {gtmEnabled && (
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+              title="Google Tag Manager"
+            />
+          </noscript>
+        )}
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[var(--z-toast)] focus:rounded-sm focus:bg-teal focus:px-4 focus:py-2 focus:font-semibold focus:text-void"
