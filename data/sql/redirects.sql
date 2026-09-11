@@ -5,7 +5,7 @@
 -- /wp-content/uploads/** is NOT in here: next.config.ts 301s that whole prefix to
 -- the R2 CDN before routing, so a row here would never fire.
 --
--- 177 redirects, from an inventory of 483 URLs probed on 2026-08-08.
+-- 177 redirects, from an inventory of 483 URLs probed on 2026-09-11.
 
 DELETE FROM redirect;
 

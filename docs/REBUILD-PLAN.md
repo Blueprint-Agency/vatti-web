@@ -546,7 +546,8 @@ verified by hand.*
 
 **Phase 3 — Core templates**
 Product detail, category, article/recipe, blog archive, homepage, dealer directory and detail, four
-static pages. *Done when: all ~238 URLs build and `pnpm links:check` finds no broken internal link.*
+static pages. *Done when: all ~238 URLs build and `pnpm db:check` finds no internal link to a path
+that does not build.*
 
 **Phase 4 — Forms** *(done)*
 `/api/ewarranty` → Resend. The wizard reproduces every field of the WPForms original, the
@@ -587,13 +588,32 @@ sitemap, then watch Search Console coverage and rankings daily for two weeks.
 ## 8. Verification
 
 ```bash
-pnpm db:check        # FK integrity, orphans, duplicate slugs, redirect loops, self-references
+pnpm db:check        # FK integrity, orphans, duplicate slugs, redirect loops, self-references,
+                     #   and any hand-authored link pointing at a path that does not build
 pnpm build           # must emit ~238 static routes
-pnpm links:check     # crawls built output; fails on any 404 or broken internal link
+pnpm start -p 3900   # the gate below needs a running site, not a source tree
+pnpm urls:check http://localhost:3900
 ```
 
-Plus a migration-specific script that reads the **live** legacy sitemap and asserts every URL
-resolves 200 or 301 against a preview deployment. That script is the launch gate.
+`urls:check` **is** the launch gate this section used to describe as still-to-be-written. It
+replays every URL in `research/url-inventory.json` — 483 paths merged from Search Console, the
+four live sitemaps, the WP REST API and the committed scrape — against a running site, follows
+each redirect to its destination, and exits non-zero if any path fails to end at a 200. Paths
+under `/wp-content/uploads/` are additionally checked against the R2 CDN over the network. It
+sorts failures worst-first by organic clicks.
+
+Refresh the inventory against the live site immediately before cutover, then regenerate the
+redirects from it, so the gate is testing today's WordPress rather than a months-old snapshot:
+
+```bash
+node scripts/build-url-inventory.mjs   # ~600 network probes against vattimalaysia.com
+node scripts/import-redirects.mjs      # inventory -> data/sql/redirects.sql
+pnpm db:check
+```
+
+Last refreshed 2026-09-11: 483 URLs, no additions, removals or status changes since the 2026-08-08
+run. Ten `/wp-content/uploads/` assets that were missing from R2 have since been uploaded and now
+return 200.
 
 Post-launch, Search Console is the real check: coverage errors should stay flat and the top-20 pages
 should hold position. Both are directly observable through the connected GSC property.

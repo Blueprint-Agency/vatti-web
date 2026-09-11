@@ -74,8 +74,22 @@ pnpm db:build     # data/sql/*.sql -> .data/vatti.db (idempotent, drops and recr
 pnpm db:check     # FK + orphan + duplicate-slug + redirect-loop assertions; run before commit
 pnpm dev
 pnpm build
-pnpm links:check  # crawls the built output, fails on any 404 or broken internal link
+pnpm urls:check <base-url>   # the launch gate — see below
 ```
+
+`urls:check` replays every URL in `research/url-inventory.json` against a running site and fails
+if any of them does not end at a 200. Run it against a real server, not the source tree:
+
+```bash
+pnpm build && pnpm start -p 3900     # or a preview deployment URL
+pnpm urls:check http://localhost:3900
+```
+
+There is no `links:check`. An earlier draft of this file and of `docs/REBUILD-PLAN.md` promised
+one that "crawls the built output"; it was never written, and `urls:check` is the stronger test —
+it checks the URLs the *old* site actually served, which is the thing the contract is about.
+Internal links are covered separately: `db:check` asserts that no hand-authored markdown links to
+a path that does not build.
 
 ## Conventions
 
@@ -181,7 +195,10 @@ product shot. There is no image record left in that file.
 ## Gotchas inherited from the source site
 
 - `vatti-built-in-air-fryer-oven-07559` — the slug uses digit `0`, not letter `O`. It is wrong, and
-  it is the live URL. Keep it; add the correct spelling as a 301 source.
+  it was the live URL. **The product was retired in `retired-products-2026-08.sql`**, so both the
+  digit-`0` slug and the letter-`O` spelling now 301 to `/combi-and-steam-oven-in-malaysia/`
+  rather than one resolving to a product page. The contract still holds — neither 404s — but do
+  not go looking for the product page this entry used to describe.
 - V917 Carbon Grey and V917 White are the same product with byte-identical specs. Modelled as one
   product with two colourways via `variant_group`, but **both legacy URLs must still resolve**.
 - 10 posts under `/tips-tricks/` are categorised as Buying Guide in WordPress. The URL wins; the

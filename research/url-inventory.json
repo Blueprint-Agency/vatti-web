@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-08",
+  "generated": "2026-09-11",
   "origin": "https://vattimalaysia.com",
   "gsc_range": {
     "start": "2025-04-01",
@@ -7078,7 +7078,7 @@
       "final_status": 200,
       "final_path": "/wp-content/uploads/2023/08/VA05-1.jpg.webp",
       "content_type": "image/webp",
-      "cdn_status": 404
+      "cdn_status": 200
     },
     {
       "path": "/wp-content/uploads/2023/08/VA05_Dimension-with-name.png",
@@ -7117,7 +7117,7 @@
       "final_status": 200,
       "final_path": "/wp-content/uploads/2023/10/Vatti-3-burner-gas-hob-c830g-product-image-4-1024x1024.webp",
       "content_type": "image/png",
-      "cdn_status": 404
+      "cdn_status": 200
     },
     {
       "path": "/wp-content/uploads/2023/10/Vatti-Flexi-Hob-C22G-Product-Image-1.webp",
@@ -7143,7 +7143,7 @@
       "final_status": 200,
       "final_path": "/wp-content/uploads/2023/11/Built-in-Steam-Oven-Z4501-9-1024x1024.webp",
       "content_type": "image/png",
-      "cdn_status": 404
+      "cdn_status": 200
     },
     {
       "path": "/wp-content/uploads/2023/11/V931-A-1024x675.webp",
@@ -7156,7 +7156,7 @@
       "final_status": 200,
       "final_path": "/wp-content/uploads/2023/11/V931-A-1024x675.webp",
       "content_type": "image/jpeg",
-      "cdn_status": 404
+      "cdn_status": 200
     },
     {
       "path": "/wp-content/uploads/2023/11/VA05-with-shadow-300x296.webp",
@@ -7169,7 +7169,7 @@
       "final_status": 200,
       "final_path": "/wp-content/uploads/2023/11/VA05-with-shadow-300x296.webp",
       "content_type": "image/png",
-      "cdn_status": 404
+      "cdn_status": 200
     },
     {
       "path": "/wp-content/uploads/2024/01/Induction-vs-Ceramic.webp",
@@ -7182,7 +7182,7 @@
       "final_status": 200,
       "final_path": "/wp-content/uploads/2024/01/Induction-vs-Ceramic.webp",
       "content_type": "image/webp",
-      "cdn_status": 404
+      "cdn_status": 200
     },
     {
       "path": "/wp-content/uploads/2024/02/C822G-instruction-manual.pdf",
@@ -7221,7 +7221,7 @@
       "final_status": 200,
       "final_path": "/wp-content/uploads/2024/03/Magic-Stove-06_large-1024x998.webp",
       "content_type": "image/png",
-      "cdn_status": 404
+      "cdn_status": 200
     },
     {
       "path": "/wp-content/uploads/2024/03/Megic-Series-Combi-Oven-VA06-Instruction-Manual.pdf",
@@ -7247,7 +7247,7 @@
       "final_status": 200,
       "final_path": "/wp-content/uploads/2024/03/Megic-Series-Combi-Oven-VA06_product-image-3-600x450.webp?crop=1",
       "content_type": "image/png",
-      "cdn_status": 404
+      "cdn_status": 200
     },
     {
       "path": "/wp-content/uploads/2024/03/V919-Instruction-Manual.pdf",
@@ -7377,7 +7377,7 @@
       "final_status": 200,
       "final_path": "/wp-content/uploads/2024/07/VATTI-C821G-Cooker-Hob-updated-300x168.webp",
       "content_type": "image/jpeg",
-      "cdn_status": 404
+      "cdn_status": 200
     },
     {
       "path": "/wp-content/uploads/2024/08/ER3601T-Instructioin-Manual.pdf",
@@ -7520,7 +7520,7 @@
       "final_status": 200,
       "final_path": "/wp-content/uploads/2025/12/Vatti-cooker-hob-C836G-A-750x563.webp",
       "content_type": "image/jpeg",
-      "cdn_status": 404
+      "cdn_status": 200
     },
     {
       "path": "/wp-content/uploads/2025/12/Vatti-e-Brochure.pdf",
