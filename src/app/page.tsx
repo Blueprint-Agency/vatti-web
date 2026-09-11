@@ -8,7 +8,9 @@ import { EnquiryFunnel } from "@/components/EnquiryFunnel";
 import { ProductShowcase } from "@/components/ProductShowcase";
 import { Reveal } from "@/components/Reveal";
 import { SiteHeader } from "@/components/SiteHeader";
+import { SOCIALS } from "@/components/SiteFooter";
 import { cdn } from "@/lib/cdn";
+import { LOGO_URL } from "@/lib/site";
 import {
   getArticleTeasers,
   getArticlesByPath,
@@ -81,10 +83,11 @@ const GUIDE_PATHS = [
 /**
  * The hood in the hero bento, and the render that shows it.
  *
- * Supplied by the client rather than taken from the CDN, which is why it sits
- * in public/. The V929 images in the media library are all either bare units on
- * white or gallery slides with marketing copy burnt into the pixels; this one
- * is a clean in-kitchen shot. It is square, and the tile crops it to landscape
+ * Supplied by the client rather than scraped from the old site, which is why it
+ * has a 2026/09 key of its own rather than a WordPress one. The V929 images in
+ * the media library are all either bare units on white or gallery slides with
+ * marketing copy burnt into the pixels; this one is a clean in-kitchen shot. It
+ * is square, and the tile crops it to landscape
  * from the centre — the hood body and its lit panel sit in the middle band, so
  * the crop takes ceiling and worktop and leaves the product intact.
  *
@@ -170,8 +173,10 @@ function homeFaqs(models: number, dealers: number) {
  * The brand entity, structured. Nothing on this site declared an Organization
  * before, so the queries that ask what VATTI *is* had only prose to work from.
  *
- * No `logo` key: there is no logo asset on this site yet and a URL that 404s is
- * worse than an absent property. Add it when the mark lands on R2.
+ * `logo` and `sameAs` are read from the two places that already state them —
+ * LOGO_URL in src/lib/site.ts and the SOCIALS list the footer renders — rather
+ * than typed again here, so a new social account or a re-cut wordmark cannot
+ * appear on the page and be missing from the markup.
  */
 const ORGANIZATION = {
   "@context": "https://schema.org",
@@ -205,7 +210,8 @@ const ORGANIZATION = {
     contactType: "sales",
     areaServed: "MY",
   },
-  sameAs: ["https://www.facebook.com/vattimalaysia/"],
+  logo: LOGO_URL,
+  sameAs: SOCIALS.map((s) => s.href),
 };
 
 /** Read at module scope because `metadata` is an object, not a function, and
