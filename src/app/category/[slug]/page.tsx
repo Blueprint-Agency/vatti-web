@@ -9,6 +9,9 @@ import { ArchiveView } from "./ArchiveView";
  * Page 1 of the four live blog archives. `/category/<slug>/page/N/` is the
  * sibling route; both are indexed, so neither URL shape may drift.
  */
+// Exhaustive from the blog archives. See [slug]/page.tsx.
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return archives().map((a) => ({ slug: a.slug }));
 }

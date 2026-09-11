@@ -66,6 +66,15 @@ import { CategoryView } from "./CategoryView";
  * Static segments (/about-us/, /store-locations/, /category/…) win over this
  * route on their own, so they need no special case.
  */
+/**
+ * This route owns the root namespace, so it is the one that decides what a
+ * typo'd vattimalaysia.com/anything does. The list below is exhaustive — it is
+ * read from the database that also built the pages — so anything absent from it
+ * is genuinely not a page here, and Next should say so from the static shell
+ * rather than boot a serverless render just to reach the notFound() below.
+ */
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return [...productSlugs(), ...categorySlugs()].map((slug) => ({ slug }));
 }

@@ -31,6 +31,10 @@ import { formatDate } from "@/lib/site";
  * Articles are NOT resolved in the root route: they live one level down, so the
  * root resolver keeps its two lookups and this route never sees a product slug.
  */
+// Exhaustive from the article table; an unknown pair is a 404 off the static
+// shell rather than a serverless render that ends in notFound(). See [slug]/page.tsx.
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return articlePaths().map((a) => ({ slug: a.section, article: a.slug }));
 }

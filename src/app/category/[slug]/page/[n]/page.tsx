@@ -12,6 +12,11 @@ import { ArchiveView } from "../../ArchiveView";
  * bare /category/<slug>/ and is deliberately not generated here — two URLs for
  * the same 8 articles would be duplicate content.
  */
+// Exhaustive: every archive's real page 2..n. This one matters more than the
+// others — pagination is where crawlers invent URLs (/page/99/, /page/0/), and
+// closing it turns each guess into a static 404 instead of a render.
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return archives().flatMap((a) =>
     Array.from({ length: a.pages - 1 }, (_, i) => ({ slug: a.slug, n: String(i + 2) }))

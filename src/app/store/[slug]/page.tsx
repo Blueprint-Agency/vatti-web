@@ -15,6 +15,9 @@ import { WHATSAPP } from "@/lib/site";
  * it has no legacy page to preserve). The legacy pages are empty stubs with no
  * address in the markup and appear in no sitemap, so everything below is net new.
  */
+// Exhaustive from the store table. See [slug]/page.tsx.
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return storeSlugs().map((slug) => ({ slug }));
 }
