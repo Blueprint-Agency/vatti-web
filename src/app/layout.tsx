@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
 
 import { SiteFooter } from "@/components/SiteFooter";
+import { cdn } from "@/lib/cdn";
 import { SITE_ORIGIN, isLiveSite } from "@/lib/deployment";
 import "./globals.css";
 
@@ -62,6 +63,39 @@ export const metadata: Metadata = {
   },
   description:
     "Built-in kitchen appliances engineered for high-heat Asian cooking. Available through 76 authorised dealers across Malaysia.",
+
+  /**
+   * Share-card defaults for every page that does not state its own. Product and
+   * article pages override title, description and image with their own; the
+   * static pages, the blog archives and the home page inherit all of this.
+   *
+   * It lives here rather than being pasted into nine files because the parts
+   * that vary per page — the title and the description — are the two Next
+   * already fills in from each page's own `title` and `description`. What is
+   * left is genuinely site-wide.
+   *
+   * No `url` key on purpose: og:url must be the page's own, and a value here
+   * would put the home page's URL on all of them. `alternates.canonical` on
+   * each page is the address of record.
+   *
+   * The image is a 1200x630 crop of the V929 hero — the ratio Facebook,
+   * WhatsApp and LinkedIn all render without cropping, which matters on a site
+   * whose every conversion path ends in a WhatsApp message.
+   */
+  openGraph: {
+    type: "website",
+    siteName: "VATTI Malaysia",
+    locale: "en_MY",
+    images: [
+      {
+        url: cdn("2026/09/vatti-og-default.webp"),
+        width: 1200,
+        height: 630,
+        alt: "VATTI cooker hood with a lit control panel, installed in a kitchen",
+      },
+    ],
+  },
+  twitter: { card: "summary_large_image" },
 
   // Search Console ownership. The meta-tag method is worth having even though
   // the domain is also verifiable by DNS TXT, because it travels with the
