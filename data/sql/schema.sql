@@ -554,6 +554,45 @@ CREATE TABLE store (
 CREATE INDEX store_region_idx ON store(region_slug, name);
 
 -- ---------------------------------------------------------------------------
+-- The retail partner wall on the homepage.
+--
+-- A third list of trade names, after `store` (76 shopfronts) and
+-- `warranty_dealer` (79 dropdown entries). It does not line up with either, and
+-- for the same reason they do not line up with each other: this one is whoever
+-- the client put on the carousel, which is a marketing decision, not a record of
+-- who sells the appliances. Do not join these three on name. See the note above
+-- warranty_dealer.
+--
+-- It is a table and not a TypeScript array because appointing or dropping a
+-- partner is a content change, and content changes on this site are SQL edits.
+-- It was src/lib/partners.ts until 2026-09.
+--
+-- image_url/w/h as plain columns rather than a FK into `image`: the same call
+-- product_category.hero_image_url and product_feature made. Every id in `image`
+-- is handed out by the generated products.sql.
+--
+-- No alt column. A logo's alt text is the company's name and nothing else, and a
+-- second copy of it is only somewhere for the two to disagree.
+--
+-- The intrinsic sizes are the file's own, and next/image needs them — these are
+-- remote URLs, so there is no static import to measure. Every mark is dark
+-- artwork on an opaque white plate, which is why the wall renders on white in
+-- both themes.
+--
+-- sort_order is the order the live site's carousel ran in. It carries no
+-- ranking, and alphabetising a wall of logos helps nobody — you cannot scan it
+-- by first letter. The component deals the rows out alternately; how they are
+-- split across the two rails is presentation and lives there.
+CREATE TABLE partner (
+  id         INTEGER PRIMARY KEY,
+  name       TEXT NOT NULL UNIQUE,
+  image_url  TEXT NOT NULL,
+  image_w    INTEGER NOT NULL,
+  image_h    INTEGER NOT NULL,
+  sort_order INTEGER NOT NULL DEFAULT 0
+);
+
+-- ---------------------------------------------------------------------------
 -- eWarranty registration.
 --
 -- The dropdowns behind /vatti-ewarranty/, extracted from the live WPForms

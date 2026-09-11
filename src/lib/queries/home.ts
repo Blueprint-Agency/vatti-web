@@ -41,6 +41,10 @@ export type ArticleTeaser = {
 
 export type Region = { slug: string; region: string; count: number };
 
+/** One mark on the partner wall. The intrinsic size is the file's own — these
+ *  are remote URLs, so next/image has no static import to measure. */
+export type Partner = { name: string; url: string; width: number; height: number };
+
 /**
  * The five categories, each fronted by its lowest-sorted published product.
  * That product's hero shot is the category's face on the homepage — the
@@ -137,5 +141,19 @@ export function getRegions(): Region[] {
        FROM store
       GROUP BY region_slug
       ORDER BY count DESC`
+  );
+}
+
+/**
+ * The retail partner wall, in the order the live site's carousel ran in.
+ *
+ * No alt column to read: a logo's alt text is the company's name, so the
+ * component passes `name` to both.
+ */
+export function getPartners(): Partner[] {
+  return all<Partner>(
+    `SELECT name, image_url AS url, image_w AS width, image_h AS height
+       FROM partner
+      ORDER BY sort_order`
   );
 }

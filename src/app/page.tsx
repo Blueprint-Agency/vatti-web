@@ -14,10 +14,11 @@ import {
   getArticlesByPath,
   getBestsellers,
   getCategoryCards,
+  getPartners,
   getProductCard,
   getRegions,
 } from "@/lib/queries/home";
-import { PARTNER_ROWS } from "@/lib/partners";
+import type { Partner } from "@/lib/queries/home";
 
 /**
  * The three award marks, keyed out of the Elementor section backgrounds on the
@@ -105,6 +106,26 @@ const HERO_IMAGE = "/hero-v929-panel.webp";
  * max-age and the optimizer caches by path.
  */
 const ENQUIRY_BACKDROP = cdn("2026/08/home-enquiry-kitchen-backdrop.jpg");
+
+/**
+ * The two rails of the partner slider. Row one runs left, row two runs right.
+ *
+ * Dealt alternately rather than cut in half. The source strips were laid out in
+ * batches, and the batches group by shape — strip five is four square tiles in a
+ * row — so halving the list put every wordmark in the top rail and a line of
+ * coloured boxes in the bottom one. Dealing them mixes wide and square through
+ * both rails, which is what stops the second row reading as a different object
+ * from the first.
+ *
+ * The odd count leaves the rails at 15 and 14, so they cover slightly different
+ * distances on the one shared duration and never settle into lockstep.
+ *
+ * This is presentation, which is why it stayed here when the list itself became
+ * a table. Nothing about which partners exist is decided in this file.
+ */
+function dealRails(partners: Partner[]): Partner[][] {
+  return [partners.filter((_, i) => i % 2 === 0), partners.filter((_, i) => i % 2 === 1)];
+}
 
 /** Editorial, from the source homepage — there is no sales data in the DB. */
 const BESTSELLER_SLUGS = [
@@ -224,6 +245,7 @@ export default function HomePage() {
   const guides = getArticlesByPath(GUIDE_PATHS);
   const recipes = getArticleTeasers("recipe", 3);
   const regions = getRegions();
+  const partnerRows = dealRails(getPartners());
 
   const totalModels = categories.reduce((n, c) => n + c.model_count, 0);
   const dealers = regions.reduce((n, r) => n + r.count, 0);
@@ -871,7 +893,7 @@ export default function HomePage() {
                 Vertical padding only: the rails have to reach the plate edges so
                 logos leave under the mask fade rather than at a margin. */}
             <div className="mt-10 flex flex-col gap-6 overflow-hidden rounded-sm bg-white py-8 sm:gap-8 sm:py-10">
-              {PARTNER_ROWS.map((row, i) => (
+              {partnerRows.map((row, i) => (
                 <div key={i} className="partner-rail">
                   <ul
                     className={`partner-track flex w-max ${i % 2 ? "partner-track-reverse" : ""}`}
@@ -897,7 +919,7 @@ export default function HomePage() {
                               Sin Jin Da closes up into a smudge. Wide marks are
                               unaffected — the slot clamps them, not the cap. */}
                           <Image
-                            src={p.src}
+                            src={p.url}
                             alt={p.name}
                             width={p.width}
                             height={p.height}
