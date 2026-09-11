@@ -156,11 +156,13 @@ already allows the CDN host in `images.remotePatterns`, so `next/image` needs no
 - **The public host is code; only the credentials are secrets.** `scripts/cdn.mjs` states it once
   and **every other file reads it from there** — `next.config.ts` and the scripts import it
   directly; app code goes through `src/lib/cdn.ts`, which re-exports it and adds `cdn(key)`.
-  `grep -r pub-d0b729 .` must return exactly one hit, in `scripts/cdn.mjs`. If it ever returns two,
-  the cutover has a bug waiting in it.
-  It is currently the bucket's **r2.dev dev URL** — rate-limited and not for production. At cutover
-  edit that one file to `cdn.vattimalaysia.com` and re-run the importers so the URLs baked into
-  `data/sql` match. Nothing else needs touching.
+  `grep -rl "r2\.dev" data src scripts` must return nothing. If it ever returns a file, a host has
+  been written down a second time and the next swap will miss it.
+  **The cutover is done** (2026-09-11): the host is `cdn.vattimalaysia.com`, the bucket's custom
+  domain, and the rate-limited `r2.dev` URL is out of the project entirely. Every URL in `data/sql`
+  was rewritten from that one line — the three importers regenerate theirs, and the hand-authored
+  files took a literal host swap. If the host ever changes again, that is the same job: edit
+  `scripts/cdn.mjs`, re-run the importers, swap the literal in the hand-authored SQL.
 - **Never write the CDN host into a component.** Page and product imagery is data: its URLs live in
   `data/sql` and are read from the DB. The few URLs that are genuinely code — the catalogue PDF and
   header wordmark in `src/lib/site.ts`, a manual in `src/lib/manuals.ts`, the one decorative

@@ -897,7 +897,7 @@ UPDATE product SET intro_md =
 
 INSERT INTO product_faq (product_id, position, question, answer_md)
 SELECT id, 1, 'What are the V936''s dimensions?',
-  'VATTI has not published an installation drawing for this model, so rather than guess we have left the figures off the page. The [instruction manual](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/03/V936-instruction-manual.pdf) carries the mounting detail, and any authorised dealer can measure the run with you before quoting.'
+  'VATTI has not published an installation drawing for this model, so rather than guess we have left the figures off the page. The [instruction manual](https://cdn.vattimalaysia.com/2023/03/V936-instruction-manual.pdf) carries the mounting detail, and any authorised dealer can measure the run with you before quoting.'
   FROM product WHERE slug = 'athena-series-lifting-type-range-hood-v936';
 INSERT INTO product_faq (product_id, position, question, answer_md)
 SELECT id, 2, 'What does the double cavity do?',

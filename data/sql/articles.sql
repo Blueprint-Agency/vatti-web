@@ -5,210 +5,210 @@ INSERT INTO blog_category (id, slug, name, sort_order) VALUES (1, 'buying-guide'
 INSERT INTO blog_category (id, slug, name, sort_order) VALUES (2, 'tips-tricks', 'Tips & Tricks', 1);
 INSERT INTO blog_category (id, slug, name, sort_order) VALUES (3, 'recipe', 'Recipe', 2);
 
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/10/kitchen-hood-buying-guide.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/10/kitchen-hood-buying-guide.webp', 'kitchen hood buying guide', 1920, 1080);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/10/Chimney-kitchen-hood.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/10/Chimney-kitchen-hood.webp', 'Chimney kitchen hood', 402, 538);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/10/Vatti-kitchen-hood.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/10/Vatti-kitchen-hood.webp', 'Vatti kitchen hood', 1200, 900);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/10/Island-kitchen-hood.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/10/Island-kitchen-hood.webp', 'Island kitchen hood', 1200, 900);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/10/Sliding-kitchen-hood.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/10/Sliding-kitchen-hood.webp', 'Sliding kitchen hood', 1200, 893);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/10/Kitchen-hood-size.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/10/Kitchen-hood-size.webp', 'Kitchen hood size', 481, 607);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/10/Vatti-kitchen-hood-2.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/10/Vatti-kitchen-hood-2.webp', 'Vatti kitchen hood', 309, 476);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/10/kitchen-hood-ventilation-or-recirculation.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/10/kitchen-hood-ventilation-or-recirculation.webp', 'kitchen hood ventilation or recirculation', 1200, 900);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/10/Kitchen-hood-filters.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/10/Kitchen-hood-filters.webp', 'Kitchen hood filters', 519, 247);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/10/Kitchen-hood_Auto-cleaning-features.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/10/Kitchen-hood_Auto-cleaning-features.webp', 'Kitchen hood auto cleaning features', 866, 505);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/10/Vatti-kitchen-hood-3.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/10/Vatti-kitchen-hood-3.webp', 'Vatti kitchen hood', 268, 363);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/11/photo-3.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/11/photo-3.webp', 'Combi Oven Function', 800, 800);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/11/photo-1.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/11/photo-1.webp', 'Combi Oven Function', 1148, 1141);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/11/VA05-1-1.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/11/VA05-1-1.webp', 'Combi Oven Function', 800, 800);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/11/photo-2.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/11/photo-2.webp', 'Combi Oven Function', 783, 989);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/10/Cream-Puff.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/10/Cream-Puff.webp', 'Cream Puff With Custard Filing Recipe', 1080, 607);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/10/C821G-vs-C720S-Cooker-Hob.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/10/C821G-vs-C720S-Cooker-Hob.webp', 'Vatti Gas Hob', 1200, 317);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/10/VATTI-C821G-Cooker-Hob.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/10/VATTI-C821G-Cooker-Hob.webp', 'Vatti C821G Gas Hob', 8688, 5792);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/10/VATTI-C720S-Cooker-Hob.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/10/VATTI-C720S-Cooker-Hob.webp', 'VATTI C720S Gas Hob', 6000, 4248);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/11/Built-in-Oven-Size-6.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/11/Built-in-Oven-Size-6.webp', 'Built-in Oven Size', 1200, 900);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/04/Built-in-air-fryer-oven-07559-product-photo.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/04/Built-in-air-fryer-oven-07559-product-photo.webp', 'VATTI Built-In Air Fryer Oven O7559', 2048, 1973);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/11/Untitled-design-34.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/11/Untitled-design-34.webp', 'Vatti Combi Oven', 1200, 655);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/11/Built-in-Oven-Size-3.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/11/Built-in-Oven-Size-3.webp', 'Double oven', 1200, 900);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/11/Built-in-Oven-Size-4-4130275104-e1699793760332.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/11/Built-in-Oven-Size-4-4130275104-e1699793760332.webp', 'Built-Under Ovens', 1200, 772);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/11/step12_spicy-enoki-mushroom.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/11/step12_spicy-enoki-mushroom.webp', 'spicy enoki mushroom ingredient', 1170, 694);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/12/1-1.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/12/1-1.webp', 'spicy enoki mushroom ingredient', 1170, 694);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/11/step4_spicy-enoki-mushroom.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/11/step4_spicy-enoki-mushroom.webp', 'spicy enoki mushroom ingredient', 1557, 751);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/11/2-1.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/11/2-1.webp', 'spicy enoki mushroom ingredient', 2000, 1294);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/11/step9_spicy-enoki-mushroom.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/11/step9_spicy-enoki-mushroom.webp', 'spicy enoki mushroom ingredient', 1560, 742);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Kitchen-Hygiene-and-Cooking-Safety.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Kitchen-Hygiene-and-Cooking-Safety.webp', 'Kitchen Hygiene', 4460, 2982);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Vatti-Tru-Auto-Clean-2.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Vatti-Tru-Auto-Clean-2.webp', 'Vatti Tru Auto Clean', 790, 762);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/1.-Avocado-and-Tomato-Breakfast-Taco.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/1.-Avocado-and-Tomato-Breakfast-Taco.webp', 'Avocado and Tomato Breakfast Tacos', 2867, 1913);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/2.-Blueberry-and-Almond-Butter-Smoothie-Bowl.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/2.-Blueberry-and-Almond-Butter-Smoothie-Bowl.webp', 'Blueberry and Almond Butter Smoothie Bowl', 2867, 1891);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/3.-Chickpea-and-Spinach-Breakfast-Burrito.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/3.-Chickpea-and-Spinach-Breakfast-Burrito.webp', 'Chickpea and Spinach Breakfast Burrito', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/4.-Peanut-Butter-and-Banana-Overnight-Oats.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/4.-Peanut-Butter-and-Banana-Overnight-Oats.webp', 'Peanut Butter and Banana Overnight Oats', 2867, 1889);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/5.-Sweet-Potato-and-Black-Bean-Breakfast-Hash.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/5.-Sweet-Potato-and-Black-Bean-Breakfast-Hash.webp', 'Sweet Potato and Black Bean Breakfast Hash', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Spicy-Arrabbiata-Sauce.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Spicy-Arrabbiata-Sauce.webp', 'Classic Tomato Sauce', 2867, 1913);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Classic-Tomato-Sauce.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Classic-Tomato-Sauce.webp', 'Classic Tomato Sauce', 2457, 1566);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Creamy-Tomato-Sauce.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Creamy-Tomato-Sauce.webp', 'Creamy Tomato Sauce', 2457, 1567);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Spaghetti-Sauce.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Spaghetti-Sauce.webp', 'Spaghetti Sauce', 2457, 1566);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Marinara-Sauce.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Marinara-Sauce.webp', 'Marinara Sauce', 2457, 1771);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Carbonara-Sauce.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Carbonara-Sauce.webp', 'Carbonara Sauce', 2457, 1573);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Tomato-and-Spinach-Orzo-Pilaf.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Tomato-and-Spinach-Orzo-Pilaf.webp', 'Creamy Chicken and Mushroom Risotto', 2867, 1898);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Creamy-Chicken-and-Mushroom-Risotto.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Creamy-Chicken-and-Mushroom-Risotto.webp', 'Creamy Chicken and Mushroom Risotto', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Vegetable-Paella.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Vegetable-Paella.webp', 'Vegetable Paella', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Shrimp-and-Sausage-Jambalaya.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Shrimp-and-Sausage-Jambalaya.webp', 'Shrimp and Sausage Jambalaya', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Teriyaki-Chicken-and-Vegetable-Rice-Bowl.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Teriyaki-Chicken-and-Vegetable-Rice-Bowl.webp', 'Teriyaki Chicken and Vegetable Rice Bowl', 2867, 1913);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Vegetable-Biryani.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Vegetable-Biryani.webp', 'Vegetable Biryani', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Lemon-Rice.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Lemon-Rice.webp', 'Lemon Rice', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Tomato-Rice.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Tomato-Rice.webp', 'Tomato Rice', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Coconut-Milk-Pulao.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Coconut-Milk-Pulao.webp', 'Coconut Milk Pulao', 2867, 1913);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Tamarind-Rice.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Tamarind-Rice.webp', 'Tamarind Rice', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Rice-Wine-Ginger-Pork-Bao-Buns.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Rice-Wine-Ginger-Pork-Bao-Buns.webp', 'Teriyaki Chicken Stir-Fry', 2867, 2150);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Teriyaki-Chicken-Stir-Fry.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Teriyaki-Chicken-Stir-Fry.webp', 'Teriyaki Chicken Stir-Fry', 2867, 1912);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Sake-Glazed-Salmon.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Sake-Glazed-Salmon.webp', 'Sake Glazed Salmon', 2867, 1912);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Shaoxing-Wine-Chicken-Rice.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Shaoxing-Wine-Chicken-Rice.webp', 'Shaoxing Wine Chicken Rice', 2867, 2150);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Rice-Wine-Mushroom-Sauce-Pasta.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Rice-Wine-Mushroom-Sauce-Pasta.webp', 'Rice Wine Mushroom Sauce Pasta', 2867, 1912);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/One-Pot-Chicken-and-Rice.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/One-Pot-Chicken-and-Rice.webp', 'One-Pot Chicken and Rice', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Creamy-Mushroom-Risotto.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Creamy-Mushroom-Risotto.webp', 'Creamy Mushroom Risotto', 2867, 1913);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Sweet-and-Savory-Pineapple-Fried-Rice.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Sweet-and-Savory-Pineapple-Fried-Rice.webp', 'Sweet and Savory Pineapple Fried Rice', 2867, 1912);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Chocolate-Lava-Cake.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Chocolate-Lava-Cake.webp', 'Chocolate Lava Cake', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Overnight-Oats.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Overnight-Oats.webp', 'Overnight Oats', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Tropical-Paradise-Smoothie-Bowl.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Tropical-Paradise-Smoothie-Bowl.webp', 'Tropical Paradise Smoothie Bowl', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Berry-Blast-Acai-Bowl.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Berry-Blast-Acai-Bowl.webp', 'Berry Blast Acai Bowl', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Green-Goddess-Avocado-Bowl.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Green-Goddess-Avocado-Bowl.webp', 'Green Goddess Avocado Bowl', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Peanut-Butter-Banana-Protein-Bowl.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Peanut-Butter-Banana-Protein-Bowl.webp', 'Peanut Butter Banana Protein Bowl', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Chocolate-Cherry-Almond-Bowl.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Chocolate-Cherry-Almond-Bowl.webp', 'Chocolate Cherry Almond Bowl', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Green-Goddess-Detox-Smoothie.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Green-Goddess-Detox-Smoothie.webp', 'Green Goddess Detox Smoothie', 2867, 1912);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Berry-Blast-Protein-Smoothie.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Berry-Blast-Protein-Smoothie.webp', 'Berry Blast Protein Smoothie', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Tropical-Turmeric-Smoothie.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Tropical-Turmeric-Smoothie.webp', 'Tropical Turmeric Smoothie', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Spinach-and-Banana-Power-Smoothie.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Spinach-and-Banana-Power-Smoothie.webp', 'Spinach and Banana Power Smoothie', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Citrus-Zinger-Immune-Boosting-Smoothie.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Citrus-Zinger-Immune-Boosting-Smoothie.webp', 'Citrus Zinger Immune-Boosting Smoothie', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Miso-Ramen-with-Vegetables.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Miso-Ramen-with-Vegetables.webp', 'Miso Ramen with Vegetables', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Tom-Yum-Soup-with-Shrimp.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Tom-Yum-Soup-with-Shrimp.webp', 'Tom Yum Soup with Shrimp', 2867, 1912);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Korean-Kimchi-Jjigae.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Korean-Kimchi-Jjigae.webp', 'Korean Kimchi Jjigae', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Chinese-Hot-and-Sour-Soup.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Chinese-Hot-and-Sour-Soup.webp', 'Chinese Hot and Sour Soup', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Vietnamese-Pho-Bo.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Vietnamese-Pho-Bo.webp', 'Vietnamese Pho Bo', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/02/Keto-Garlic-Parmesan-Chicken.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/02/Keto-Garlic-Parmesan-Chicken.webp', 'Keto-Garlic-Parmesan-Chicken.webp', 1860, 2448);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/02/Keto-Lemon-Herb-Chicken.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/02/Keto-Lemon-Herb-Chicken.webp', 'Keto Lemon Herb Chicken', 2448, 1632);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/02/Keto-Creamy-Mushroom-Chicken.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/02/Keto-Creamy-Mushroom-Chicken.webp', 'Keto Creamy Mushroom Chicken', 2448, 1624);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/02/Keto-Pesto-Stuffed-Chicken.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/02/Keto-Pesto-Stuffed-Chicken.webp', 'Keto Pesto Stuffed Chicken', 2448, 1632);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/02/Keto-Buffalo-Chicken-Lettuce-Wraps.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/02/Keto-Buffalo-Chicken-Lettuce-Wraps.webp', 'Keto Buffalo Chicken Lettuce Wraps', 2448, 1592);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Induction-Cooker-vs-Gas-Stove.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Induction-Cooker-vs-Gas-Stove.webp', 'Induction Cooker vs Gas Stove', 533, 300);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Convection-Oven-vs-Infrared-Oven.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Convection-Oven-vs-Infrared-Oven.webp', 'Convection Oven vs Infrared Oven', 533, 300);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Induction-vs-Ceramic.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Induction-vs-Ceramic.webp', 'Induction vs Ceramic hob', 700, 300);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Convection-Oven-vs-Air-Fryer.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Convection-Oven-vs-Air-Fryer.webp', 'Convection Oven vs Air Fryer', 789, 327);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Ceramic-vs-Glass-Stove-Top.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Ceramic-vs-Glass-Stove-Top.webp', 'Ceramic vs Glass Stove Top', 700, 300);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/Infrared-Stove-vs-Gas-Stove.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/Infrared-Stove-vs-Gas-Stove.webp', 'Infrared Stove vs Gas Stove', 1200, 326);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/Ceramic-Cooker-vs-Infrared-Cooker.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/Ceramic-Cooker-vs-Infrared-Cooker.webp', 'Ceramic Cooker vs Infrared Cooker', 1200, 313);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/Infrared-Gas-Stove-vs-Normal-Gas-Stove.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/Infrared-Gas-Stove-vs-Normal-Gas-Stove.webp', 'infrared gas stove vs normal gas stove', 1200, 319);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Induction-vs-Electric-Cooker.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Induction-vs-Electric-Cooker.webp', 'induction vs electric cooker', 700, 300);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Convection-Oven-vs-Traditional-Oven.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Convection-Oven-vs-Traditional-Oven.webp', 'Convection Oven', 700, 300);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/How-to-Remove-Cloudiness-from-Glass-Stovetop.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/How-to-Remove-Cloudiness-from-Glass-Stovetop.webp', 'how to remove cloudiness from glass stovetop', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/vineger.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/vineger.webp', 'Vineger', 2457, 1566);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/baking-soda.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/baking-soda.webp', 'baking soda', 2457, 1566);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/Stainless-Steel-Cleaning-Solutions.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/Stainless-Steel-Cleaning-Solutions.webp', 'Stainless Steel Cleaning Solutions', 2867, 1912);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/How-to-Remove-Onion-Smell-from-Wood-Cutting-Boards.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/How-to-Remove-Onion-Smell-from-Wood-Cutting-Boards.webp', 'how to remove onion smell from wood cutting board', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Lemon-and-Salt-Scrub.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Lemon-and-Salt-Scrub.webp', 'Lemon and salt scrub', 2457, 1566);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/how-to-clean-a-burnt-microwave-oven.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/how-to-clean-a-burnt-microwave-oven.webp', 'how to clean a burnt microwave oven', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/how-to-clean-white-spots-on-glass-stove-top.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/how-to-clean-white-spots-on-glass-stove-top.webp', 'how to clean white spots on glass stove top', 2867, 1905);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/how-to-clean-stove-grates.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/how-to-clean-stove-grates.webp', 'how to clean stove grates', 2867, 2475);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/how-to-remove-rust-from-electric-stove.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/how-to-remove-rust-from-electric-stove.webp', 'how to remove rust from electric stove', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/how-to-unstick-food-from-aluminum-foil.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/how-to-unstick-food-from-aluminum-foil.webp', 'how to unstick food from aluminum foil', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/how-to-remove-scratches-on-stove-top.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/how-to-remove-scratches-on-stove-top.webp', 'how to remove scratches on stove top', 2867, 1992);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/how-to-clean-oven-racks.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/how-to-clean-oven-racks.webp', 'how to clean oven racks', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/tofu-scramble.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/tofu-scramble.webp', 'tofu scramble', 2867, 1912);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/Acai-Bowl-Recipes.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/Acai-Bowl-Recipes.webp', 'acai bowl', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/Granola-Recipe.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/Granola-Recipe.webp', 'granola recipe', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/Breakfast-Burritos.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/Breakfast-Burritos.webp', 'Breakfast Burritos', 2867, 1612);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/Scallion-Pancake.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/Scallion-Pancake.webp', 'scallion pancake', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Assembling-Scallion-Pancakes.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Assembling-Scallion-Pancakes.webp', 'Assembling Scallion Pancakes', 2457, 1544);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Pan-Frying-Scallion-Pancakes.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Pan-Frying-Scallion-Pancakes.webp', 'Pan-frying Scallion Pancakes', 2457, 1310);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Scallion-Pancakes-with-chili.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Scallion-Pancakes-with-chili.webp', 'Scallion Pancake with chili', 2457, 1568);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/05/Cheesy-Baked-Potato.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/05/Cheesy-Baked-Potato.webp', 'Cheesy Baked Potato', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/05/Oven-Roasted-Potatoes.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/05/Oven-Roasted-Potatoes.webp', 'Oven Roasted Potatoes', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/05/Baked-Sweet-Potato.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/05/Baked-Sweet-Potato.webp', 'Baked Sweet Potato', 2867, 2150);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/05/Chicken-Lasagna.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/05/Chicken-Lasagna.webp', 'Chicken Lasagna Recipe', 2867, 1910);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Protect-Your-Kitchenware.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Protect-Your-Kitchenware.webp', NULL, 2457, 1562);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Time-Saving-Convenience.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Time-Saving-Convenience.webp', NULL, 2457, 1566);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Itll-Save-You-Water-and-Energy.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Itll-Save-You-Water-and-Energy.webp', NULL, 2457, 1566);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Good-Use-of-Limited-Space.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Good-Use-of-Limited-Space.webp', NULL, 2457, 1566);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Superior-Cleaning-Performance.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Superior-Cleaning-Performance.webp', NULL, 2457, 1566);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Gets-Rid-of-Germs.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Gets-Rid-of-Germs.webp', NULL, 2457, 1567);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/More-Organized-Kitchen.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/More-Organized-Kitchen.webp', 'Kitchen', 2457, 1566);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Environmentally-Friendly.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Environmentally-Friendly.webp', NULL, 2457, 1566);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Protect-Your-Hands.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Protect-Your-Hands.webp', NULL, 2457, 1566);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Reduces-Household-Disputes.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Reduces-Household-Disputes.webp', NULL, 2457, 1566);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/08/Vatti-DWBB7-Dishwasher-photo-3.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/08/Vatti-DWBB7-Dishwasher-photo-3.webp', 'Vatti DWBB7 Dishwasher photo', 3500, 3500);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/08/Vatti-DWBB7-Dishwasher-product-description-14.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/08/Vatti-DWBB7-Dishwasher-product-description-14.webp', 'Vatti DWBB7 Dishwasher product description', 595, 842);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Vatti-dishwasher-function.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Vatti-dishwasher-function.webp', 'VATTI dishwasher function', 693, 453);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/08/Vatti-DWBB7-Dishwasher-product-description-7.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/08/Vatti-DWBB7-Dishwasher-product-description-7.webp', 'Vatti DWBB7 Dishwasher product description', 595, 842);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/08/Vatti-DWBB7-Dishwasher-product-description-10.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/08/Vatti-DWBB7-Dishwasher-product-description-10.webp', 'Vatti DWBB7 Dishwasher product description', 595, 842);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/08/Vatti-DWBB7-Dishwasher-product-description-2.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/08/Vatti-DWBB7-Dishwasher-product-description-2.webp', 'Vatti DWBB7 Dishwasher product description', 595, 842);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/08/Vatti-DWBB7-Dishwasher-product-description-3.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/08/Vatti-DWBB7-Dishwasher-product-description-3.webp', 'Vatti DWBB7 Dishwasher product description', 595, 842);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/08/Vatti-DWBB7-Dishwasher-product-description-4.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/08/Vatti-DWBB7-Dishwasher-product-description-4.webp', 'Vatti DWBB7 Dishwasher product description', 595, 842);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/08/Vatti-DWBB7-Dishwasher-product-description-6.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/08/Vatti-DWBB7-Dishwasher-product-description-6.webp', 'Vatti DWBB7 Dishwasher product description', 595, 842);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/near-the-sink.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/near-the-sink.webp', 'dishwasher', 2457, 1566);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Close-to-the-Cooking-Area.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Close-to-the-Cooking-Area.webp', NULL, 2457, 1566);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Next-to-Storage-Cabinets.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Next-to-Storage-Cabinets.webp', 'dishwasher', 2457, 1566);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/dishwasher-salt.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/dishwasher-salt.webp', 'dishwasher salt', 2457, 1772);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/baking-soda-1.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/baking-soda-1.webp', NULL, 2457, 1566);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/12/what-can-you-wash-in-dishwasher.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/12/what-can-you-wash-in-dishwasher.webp', 'dishwasher', 2457, 1566);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/12/dishwasher-symbol.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/12/dishwasher-symbol.webp', NULL, 2457, 2385);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/02/induction-cooker-problems.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/02/induction-cooker-problems.webp', 'induction cooker problems', 2048, 1092);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/02/gas-hob-igniter-not-working.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/02/gas-hob-igniter-not-working.webp', 'gas hob igniter not working', 2048, 1305);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/02/Silent-Kitchen-Hood.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/02/Silent-Kitchen-Hood.webp', 'Silent Kitchen Hood', 2048, 1306);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/02/cooking-smell.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/02/cooking-smell.webp', 'Cooking Smell', 2048, 1305);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/04/Hood-Png.png', 'https://vattimalaysia.com/wp-content/uploads/2024/04/Hood-Png.png', 'Vatti kitchen hood', 1074, 1152);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/02/replace-range-hood.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/02/replace-range-hood.webp', 'replace range hood', 2048, 1092);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/02/which-is-better-ducted-or-ductless-range-hood.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/02/which-is-better-ducted-or-ductless-range-hood.webp', 'which is better ducted or ductless range hood', 2048, 1307);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/02/how-to-use-charcoal-at-home.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/02/how-to-use-charcoal-at-home.webp', 'how to use charcoal at home', 2048, 964);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/03/range-hood-maintanence.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/03/range-hood-maintanence.webp', 'range hood maintanence', 1600, 1019);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/03/Electric-Stove-Safety-Tips.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/03/Electric-Stove-Safety-Tips.webp', 'Electric Stove Safety Tips', 1600, 1019);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/03/DISHWASHER-SAFETY-SYMBOL.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/03/DISHWASHER-SAFETY-SYMBOL.webp', 'What is Not Dishwasher Safe', 760, 428);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/03/What-is-Not-Dishwasher-Safe.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/03/What-is-Not-Dishwasher-Safe.webp', 'What is Not Dishwasher Safe', 1600, 1021);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/03/Not-dishwasher-safety-symbol.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/03/Not-dishwasher-safety-symbol.webp', 'Not dishwasher safety symbol', 1418, 798);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/01/One-Tap-water-purifier-WDHG01-Product-Image-1.jpg', 'https://vattimalaysia.com/wp-content/uploads/2025/01/One-Tap-water-purifier-WDHG01-Product-Image-1.jpg', 'One Tap water purifier WDHG01 Product Image', 1280, 1280);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/04/How-Water-Filters-Work.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/04/How-Water-Filters-Work.webp', 'How Water Filters Work', 1600, 853);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/04/How-Often-Replace-Water-Filter.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/04/How-Often-Replace-Water-Filter.webp', 'How Often Replace Water Filter', 1600, 1019);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/01/One-Tap-water-purifier-WDHG01-Product-Image-2.jpg', 'https://vattimalaysia.com/wp-content/uploads/2025/01/One-Tap-water-purifier-WDHG01-Product-Image-2.jpg', 'One Tap water purifier WDHG01 Image info', 1280, 1280);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/01/One-Tap-water-purifier-WDHG01-Image-info-5.png', 'https://vattimalaysia.com/wp-content/uploads/2025/01/One-Tap-water-purifier-WDHG01-Image-info-5.png', 'One Tap water purifier WDHG01 Image info', 595, 842);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/01/One-Tap-water-purifier-WDHG01-Image-info-1.png', 'https://vattimalaysia.com/wp-content/uploads/2025/01/One-Tap-water-purifier-WDHG01-Image-info-1.png', 'One Tap water purifier WDHG01 Image info', 595, 842);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/05/Baking-sheet.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/05/Baking-sheet.webp', 'baking sheet', 1600, 957);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/05/is-water-filter-good-for-health.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/05/is-water-filter-good-for-health.webp', 'Is Water Filter Good for Health? Here’s What You Need to Know', 1600, 1021);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/05/Water-Purifier-vs-Water-Filter.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/05/Water-Purifier-vs-Water-Filter.webp', 'Water Purifier vs Water Filter: What’s the Real Difference?', 1600, 1019);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/07/clean-baking-sheets.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/07/clean-baking-sheets.webp', 'clean baking sheets', 1600, 1019);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/08/What-Is-Reverse-Osmosis-Water.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/08/What-Is-Reverse-Osmosis-Water.webp', 'Is Reverse Osmosis Water Worth It?', 800, 600);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/08/Is-Drinking-Filtered-Water-Better-Than-Bottled-Water_.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/08/Is-Drinking-Filtered-Water-Better-Than-Bottled-Water_.webp', 'Is Drinking Filtered Water Better Than Bottled Water?', 800, 600);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/08/What-Are-the-Benefits-of-a-Reverse-Osmosis-Water-Filter.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/08/What-Are-the-Benefits-of-a-Reverse-Osmosis-Water-Filter.webp', 'What Are the Benefits of a Reverse Osmosis Water Filter?', 800, 600);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/10/water-for-plants.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/10/water-for-plants.webp', 'water for plant', 1600, 1019);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/10/water-filter-for-aquarium.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/10/water-filter-for-aquarium.webp', 'water filter for aquarium', 1600, 1153);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/10/Water-Flow.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/10/Water-Flow.webp', 'Water Flow', 1600, 1019);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/10/type-of-water.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/10/type-of-water.webp', 'drinking water bottle', 1600, 945);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/10/drinking-water-bottle.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/10/drinking-water-bottle.webp', 'glass water bottle', 1600, 1019);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/10/glass-water-bottle.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/10/glass-water-bottle.webp', 'type of water', 1600, 1019);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/12/Induction-Cooker-vs-Ceramic-Cooker-3.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/12/Induction-Cooker-vs-Ceramic-Cooker-3.webp', 'Induction Cooker vs Ceramic Cooker', 2048, 1476);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/12/Induction-Cooker-vs-Ceramic-Cooker-1.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/12/Induction-Cooker-vs-Ceramic-Cooker-1.webp', 'Induction Cooker vs Ceramic Cooker', 2048, 1305);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/12/Induction-Cooker-vs-Ceramic-Cooker-2.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/12/Induction-Cooker-vs-Ceramic-Cooker-2.webp', 'Induction Cooker vs Ceramic Cooker', 2048, 1302);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/01/range-hood-making-noise.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/01/range-hood-making-noise.webp', 'range hood making noise', 992, 744);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/01/how-to-clean-kitchen-hood-filter.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/01/how-to-clean-kitchen-hood-filter.webp', 'how to clean kitchen hood filter', 998, 749);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/01/kitchen-hood-without-vent.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/01/kitchen-hood-without-vent.webp', 'kitchen hood without vent', 1088, 736);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/02/oven-symbol-for-baking.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/02/oven-symbol-for-baking.webp', 'oven symbol for baking', 940, 788);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/02/baking-cake-oven-setting.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/02/baking-cake-oven-setting.webp', 'baking cake oven setting', 940, 788);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/02/oven-symbols-and-meanings.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/02/oven-symbols-and-meanings.webp', 'oven symbols and meanings', 940, 788);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/03/how-long-to-preheat-oven.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/03/how-long-to-preheat-oven.webp', 'how long to preheat oven', 940, 788);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/03/leave-dishes-in-the-dishwasher.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/03/leave-dishes-in-the-dishwasher.webp', 'is it ok to leave dishes in the dishwasher overnight', 940, 788);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/03/how-to-clean-dishwashers.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/03/how-to-clean-dishwashers.webp', 'how to clean dishwashers', 940, 788);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/04/Which-Oven-Symbol-for-Pizza-A-Simple.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/04/Which-Oven-Symbol-for-Pizza-A-Simple.webp', 'Which Oven Symbol for Pizza A Simple', 800, 600);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/04/Oven-Symbol-for-Baking-Cookies.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/04/Oven-Symbol-for-Baking-Cookies.webp', 'Oven Symbol for Baking Cookies', 800, 600);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/04/Oven-Symbol-for-Grill.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/04/Oven-Symbol-for-Grill.webp', 'Oven Symbol for Grill', 800, 600);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/05/How-to-Install-a-Chimney-Hood.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/05/How-to-Install-a-Chimney-Hood.webp', 'How to Install a Chimney Hood in Your Malaysian Kitchen', 1536, 1024);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/05/How-to-Measure-the-Suction-Power-of-a-Kitchen-Hood.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/05/How-to-Measure-the-Suction-Power-of-a-Kitchen-Hood.webp', 'How to Measure the Suction Power of a Kitchen Hood', 1536, 1024);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/05/What-Is-a-Chimney-Hood-Everything-Malaysian-Home-Cooks-Need-to-Know.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/05/What-Is-a-Chimney-Hood-Everything-Malaysian-Home-Cooks-Need-to-Know.webp', 'What Is a Chimney Hood?', 1536, 1024);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/06/What-is-BLDC-Cooker-Hood_Pic.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/06/What-is-BLDC-Cooker-Hood_Pic.webp', 'What is BLDC motor', 1600, 840);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/06/wok-cooking-hero.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/06/wok-cooking-hero.webp', 'wok cooking', 1600, 840);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/06/grease-filter-hero.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/06/grease-filter-hero.webp', 'How to Clean Grease Filter', 1600, 840);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/06/t-shape-hood-hero.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/06/t-shape-hood-hero.webp', 'T shape hood', 1600, 840);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/06/hood-size-hero.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/06/hood-size-hero.webp', 'hood size', 1600, 840);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/06/auto-clean-hero.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/06/auto-clean-hero.webp', 'auto clean', 1600, 840);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/05/V938-PG13.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/05/V938-PG13.webp', 'VATTI Kitchen Hood V938 Description', 1152, 2048);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/05/V960-PG12.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/05/V960-PG12.webp', 'VATTI Kitchen Hood V960 Description', 1054, 1492);
-INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/05/V917-Carbon-Grey-Cooker-Hood-description-5.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/05/V917-Carbon-Grey-Cooker-Hood-description-5.webp', 'V997 Cooker Hood Carbon Grey Description', 1080, 1080);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2023/10/kitchen-hood-buying-guide.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/10/kitchen-hood-buying-guide.webp', 'kitchen hood buying guide', 1920, 1080);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2023/10/Chimney-kitchen-hood.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/10/Chimney-kitchen-hood.webp', 'Chimney kitchen hood', 402, 538);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2023/10/Vatti-kitchen-hood.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/10/Vatti-kitchen-hood.webp', 'Vatti kitchen hood', 1200, 900);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2023/10/Island-kitchen-hood.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/10/Island-kitchen-hood.webp', 'Island kitchen hood', 1200, 900);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2023/10/Sliding-kitchen-hood.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/10/Sliding-kitchen-hood.webp', 'Sliding kitchen hood', 1200, 893);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2023/10/Kitchen-hood-size.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/10/Kitchen-hood-size.webp', 'Kitchen hood size', 481, 607);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2023/10/Vatti-kitchen-hood-2.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/10/Vatti-kitchen-hood-2.webp', 'Vatti kitchen hood', 309, 476);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2023/10/kitchen-hood-ventilation-or-recirculation.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/10/kitchen-hood-ventilation-or-recirculation.webp', 'kitchen hood ventilation or recirculation', 1200, 900);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2023/10/Kitchen-hood-filters.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/10/Kitchen-hood-filters.webp', 'Kitchen hood filters', 519, 247);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2023/10/Kitchen-hood_Auto-cleaning-features.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/10/Kitchen-hood_Auto-cleaning-features.webp', 'Kitchen hood auto cleaning features', 866, 505);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2023/10/Vatti-kitchen-hood-3.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/10/Vatti-kitchen-hood-3.webp', 'Vatti kitchen hood', 268, 363);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2023/11/photo-3.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/11/photo-3.webp', 'Combi Oven Function', 800, 800);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2023/11/photo-1.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/11/photo-1.webp', 'Combi Oven Function', 1148, 1141);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2023/11/VA05-1-1.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/11/VA05-1-1.webp', 'Combi Oven Function', 800, 800);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2023/11/photo-2.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/11/photo-2.webp', 'Combi Oven Function', 783, 989);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2023/10/Cream-Puff.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/10/Cream-Puff.webp', 'Cream Puff With Custard Filing Recipe', 1080, 607);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2023/10/C821G-vs-C720S-Cooker-Hob.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/10/C821G-vs-C720S-Cooker-Hob.webp', 'Vatti Gas Hob', 1200, 317);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2023/10/VATTI-C821G-Cooker-Hob.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/10/VATTI-C821G-Cooker-Hob.webp', 'Vatti C821G Gas Hob', 8688, 5792);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2023/10/VATTI-C720S-Cooker-Hob.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/10/VATTI-C720S-Cooker-Hob.webp', 'VATTI C720S Gas Hob', 6000, 4248);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2023/11/Built-in-Oven-Size-6.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/11/Built-in-Oven-Size-6.webp', 'Built-in Oven Size', 1200, 900);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2026/04/Built-in-air-fryer-oven-07559-product-photo.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/04/Built-in-air-fryer-oven-07559-product-photo.webp', 'VATTI Built-In Air Fryer Oven O7559', 2048, 1973);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2023/11/Untitled-design-34.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/11/Untitled-design-34.webp', 'Vatti Combi Oven', 1200, 655);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2023/11/Built-in-Oven-Size-3.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/11/Built-in-Oven-Size-3.webp', 'Double oven', 1200, 900);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2023/11/Built-in-Oven-Size-4-4130275104-e1699793760332.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/11/Built-in-Oven-Size-4-4130275104-e1699793760332.webp', 'Built-Under Ovens', 1200, 772);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2023/11/step12_spicy-enoki-mushroom.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/11/step12_spicy-enoki-mushroom.webp', 'spicy enoki mushroom ingredient', 1170, 694);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2023/12/1-1.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/12/1-1.webp', 'spicy enoki mushroom ingredient', 1170, 694);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2023/11/step4_spicy-enoki-mushroom.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/11/step4_spicy-enoki-mushroom.webp', 'spicy enoki mushroom ingredient', 1557, 751);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2023/11/2-1.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/11/2-1.webp', 'spicy enoki mushroom ingredient', 2000, 1294);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2023/11/step9_spicy-enoki-mushroom.webp', 'https://vattimalaysia.com/wp-content/uploads/2023/11/step9_spicy-enoki-mushroom.webp', 'spicy enoki mushroom ingredient', 1560, 742);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Kitchen-Hygiene-and-Cooking-Safety.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Kitchen-Hygiene-and-Cooking-Safety.webp', 'Kitchen Hygiene', 4460, 2982);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Vatti-Tru-Auto-Clean-2.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Vatti-Tru-Auto-Clean-2.webp', 'Vatti Tru Auto Clean', 790, 762);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/1.-Avocado-and-Tomato-Breakfast-Taco.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/1.-Avocado-and-Tomato-Breakfast-Taco.webp', 'Avocado and Tomato Breakfast Tacos', 2867, 1913);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/2.-Blueberry-and-Almond-Butter-Smoothie-Bowl.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/2.-Blueberry-and-Almond-Butter-Smoothie-Bowl.webp', 'Blueberry and Almond Butter Smoothie Bowl', 2867, 1891);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/3.-Chickpea-and-Spinach-Breakfast-Burrito.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/3.-Chickpea-and-Spinach-Breakfast-Burrito.webp', 'Chickpea and Spinach Breakfast Burrito', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/4.-Peanut-Butter-and-Banana-Overnight-Oats.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/4.-Peanut-Butter-and-Banana-Overnight-Oats.webp', 'Peanut Butter and Banana Overnight Oats', 2867, 1889);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/5.-Sweet-Potato-and-Black-Bean-Breakfast-Hash.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/5.-Sweet-Potato-and-Black-Bean-Breakfast-Hash.webp', 'Sweet Potato and Black Bean Breakfast Hash', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Spicy-Arrabbiata-Sauce.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Spicy-Arrabbiata-Sauce.webp', 'Classic Tomato Sauce', 2867, 1913);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/11/Classic-Tomato-Sauce.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Classic-Tomato-Sauce.webp', 'Classic Tomato Sauce', 2457, 1566);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/11/Creamy-Tomato-Sauce.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Creamy-Tomato-Sauce.webp', 'Creamy Tomato Sauce', 2457, 1567);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/11/Spaghetti-Sauce.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Spaghetti-Sauce.webp', 'Spaghetti Sauce', 2457, 1566);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/11/Marinara-Sauce.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Marinara-Sauce.webp', 'Marinara Sauce', 2457, 1771);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/11/Carbonara-Sauce.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Carbonara-Sauce.webp', 'Carbonara Sauce', 2457, 1573);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Tomato-and-Spinach-Orzo-Pilaf.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Tomato-and-Spinach-Orzo-Pilaf.webp', 'Creamy Chicken and Mushroom Risotto', 2867, 1898);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Creamy-Chicken-and-Mushroom-Risotto.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Creamy-Chicken-and-Mushroom-Risotto.webp', 'Creamy Chicken and Mushroom Risotto', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Vegetable-Paella.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Vegetable-Paella.webp', 'Vegetable Paella', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Shrimp-and-Sausage-Jambalaya.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Shrimp-and-Sausage-Jambalaya.webp', 'Shrimp and Sausage Jambalaya', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Teriyaki-Chicken-and-Vegetable-Rice-Bowl.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Teriyaki-Chicken-and-Vegetable-Rice-Bowl.webp', 'Teriyaki Chicken and Vegetable Rice Bowl', 2867, 1913);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Vegetable-Biryani.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Vegetable-Biryani.webp', 'Vegetable Biryani', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Lemon-Rice.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Lemon-Rice.webp', 'Lemon Rice', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Tomato-Rice.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Tomato-Rice.webp', 'Tomato Rice', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Coconut-Milk-Pulao.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Coconut-Milk-Pulao.webp', 'Coconut Milk Pulao', 2867, 1913);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Tamarind-Rice.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Tamarind-Rice.webp', 'Tamarind Rice', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Rice-Wine-Ginger-Pork-Bao-Buns.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Rice-Wine-Ginger-Pork-Bao-Buns.webp', 'Teriyaki Chicken Stir-Fry', 2867, 2150);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Teriyaki-Chicken-Stir-Fry.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Teriyaki-Chicken-Stir-Fry.webp', 'Teriyaki Chicken Stir-Fry', 2867, 1912);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Sake-Glazed-Salmon.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Sake-Glazed-Salmon.webp', 'Sake Glazed Salmon', 2867, 1912);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Shaoxing-Wine-Chicken-Rice.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Shaoxing-Wine-Chicken-Rice.webp', 'Shaoxing Wine Chicken Rice', 2867, 2150);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Rice-Wine-Mushroom-Sauce-Pasta.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Rice-Wine-Mushroom-Sauce-Pasta.webp', 'Rice Wine Mushroom Sauce Pasta', 2867, 1912);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/One-Pot-Chicken-and-Rice.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/One-Pot-Chicken-and-Rice.webp', 'One-Pot Chicken and Rice', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Creamy-Mushroom-Risotto.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Creamy-Mushroom-Risotto.webp', 'Creamy Mushroom Risotto', 2867, 1913);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Sweet-and-Savory-Pineapple-Fried-Rice.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Sweet-and-Savory-Pineapple-Fried-Rice.webp', 'Sweet and Savory Pineapple Fried Rice', 2867, 1912);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Chocolate-Lava-Cake.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Chocolate-Lava-Cake.webp', 'Chocolate Lava Cake', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Overnight-Oats.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Overnight-Oats.webp', 'Overnight Oats', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Tropical-Paradise-Smoothie-Bowl.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Tropical-Paradise-Smoothie-Bowl.webp', 'Tropical Paradise Smoothie Bowl', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Berry-Blast-Acai-Bowl.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Berry-Blast-Acai-Bowl.webp', 'Berry Blast Acai Bowl', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Green-Goddess-Avocado-Bowl.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Green-Goddess-Avocado-Bowl.webp', 'Green Goddess Avocado Bowl', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Peanut-Butter-Banana-Protein-Bowl.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Peanut-Butter-Banana-Protein-Bowl.webp', 'Peanut Butter Banana Protein Bowl', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Chocolate-Cherry-Almond-Bowl.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Chocolate-Cherry-Almond-Bowl.webp', 'Chocolate Cherry Almond Bowl', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Green-Goddess-Detox-Smoothie.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Green-Goddess-Detox-Smoothie.webp', 'Green Goddess Detox Smoothie', 2867, 1912);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Berry-Blast-Protein-Smoothie.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Berry-Blast-Protein-Smoothie.webp', 'Berry Blast Protein Smoothie', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Tropical-Turmeric-Smoothie.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Tropical-Turmeric-Smoothie.webp', 'Tropical Turmeric Smoothie', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Spinach-and-Banana-Power-Smoothie.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Spinach-and-Banana-Power-Smoothie.webp', 'Spinach and Banana Power Smoothie', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Citrus-Zinger-Immune-Boosting-Smoothie.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Citrus-Zinger-Immune-Boosting-Smoothie.webp', 'Citrus Zinger Immune-Boosting Smoothie', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Miso-Ramen-with-Vegetables.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Miso-Ramen-with-Vegetables.webp', 'Miso Ramen with Vegetables', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Tom-Yum-Soup-with-Shrimp.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Tom-Yum-Soup-with-Shrimp.webp', 'Tom Yum Soup with Shrimp', 2867, 1912);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Korean-Kimchi-Jjigae.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Korean-Kimchi-Jjigae.webp', 'Korean Kimchi Jjigae', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Chinese-Hot-and-Sour-Soup.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Chinese-Hot-and-Sour-Soup.webp', 'Chinese Hot and Sour Soup', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Vietnamese-Pho-Bo.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Vietnamese-Pho-Bo.webp', 'Vietnamese Pho Bo', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/02/Keto-Garlic-Parmesan-Chicken.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/02/Keto-Garlic-Parmesan-Chicken.webp', 'Keto-Garlic-Parmesan-Chicken.webp', 1860, 2448);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/02/Keto-Lemon-Herb-Chicken.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/02/Keto-Lemon-Herb-Chicken.webp', 'Keto Lemon Herb Chicken', 2448, 1632);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/02/Keto-Creamy-Mushroom-Chicken.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/02/Keto-Creamy-Mushroom-Chicken.webp', 'Keto Creamy Mushroom Chicken', 2448, 1624);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/02/Keto-Pesto-Stuffed-Chicken.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/02/Keto-Pesto-Stuffed-Chicken.webp', 'Keto Pesto Stuffed Chicken', 2448, 1632);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/02/Keto-Buffalo-Chicken-Lettuce-Wraps.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/02/Keto-Buffalo-Chicken-Lettuce-Wraps.webp', 'Keto Buffalo Chicken Lettuce Wraps', 2448, 1592);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Induction-Cooker-vs-Gas-Stove.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Induction-Cooker-vs-Gas-Stove.webp', 'Induction Cooker vs Gas Stove', 533, 300);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Convection-Oven-vs-Infrared-Oven.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Convection-Oven-vs-Infrared-Oven.webp', 'Convection Oven vs Infrared Oven', 533, 300);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Induction-vs-Ceramic.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Induction-vs-Ceramic.webp', 'Induction vs Ceramic hob', 700, 300);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Convection-Oven-vs-Air-Fryer.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Convection-Oven-vs-Air-Fryer.webp', 'Convection Oven vs Air Fryer', 789, 327);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Ceramic-vs-Glass-Stove-Top.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Ceramic-vs-Glass-Stove-Top.webp', 'Ceramic vs Glass Stove Top', 700, 300);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/03/Infrared-Stove-vs-Gas-Stove.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/Infrared-Stove-vs-Gas-Stove.webp', 'Infrared Stove vs Gas Stove', 1200, 326);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/03/Ceramic-Cooker-vs-Infrared-Cooker.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/Ceramic-Cooker-vs-Infrared-Cooker.webp', 'Ceramic Cooker vs Infrared Cooker', 1200, 313);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/03/Infrared-Gas-Stove-vs-Normal-Gas-Stove.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/Infrared-Gas-Stove-vs-Normal-Gas-Stove.webp', 'infrared gas stove vs normal gas stove', 1200, 319);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Induction-vs-Electric-Cooker.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Induction-vs-Electric-Cooker.webp', 'induction vs electric cooker', 700, 300);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/01/Convection-Oven-vs-Traditional-Oven.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/01/Convection-Oven-vs-Traditional-Oven.webp', 'Convection Oven', 700, 300);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/03/How-to-Remove-Cloudiness-from-Glass-Stovetop.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/How-to-Remove-Cloudiness-from-Glass-Stovetop.webp', 'how to remove cloudiness from glass stovetop', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/11/vineger.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/vineger.webp', 'Vineger', 2457, 1566);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/11/baking-soda.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/baking-soda.webp', 'baking soda', 2457, 1566);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/03/Stainless-Steel-Cleaning-Solutions.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/Stainless-Steel-Cleaning-Solutions.webp', 'Stainless Steel Cleaning Solutions', 2867, 1912);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/03/How-to-Remove-Onion-Smell-from-Wood-Cutting-Boards.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/How-to-Remove-Onion-Smell-from-Wood-Cutting-Boards.webp', 'how to remove onion smell from wood cutting board', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/11/Lemon-and-Salt-Scrub.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Lemon-and-Salt-Scrub.webp', 'Lemon and salt scrub', 2457, 1566);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/03/how-to-clean-a-burnt-microwave-oven.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/how-to-clean-a-burnt-microwave-oven.webp', 'how to clean a burnt microwave oven', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/03/how-to-clean-white-spots-on-glass-stove-top.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/how-to-clean-white-spots-on-glass-stove-top.webp', 'how to clean white spots on glass stove top', 2867, 1905);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/03/how-to-clean-stove-grates.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/how-to-clean-stove-grates.webp', 'how to clean stove grates', 2867, 2475);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/03/how-to-remove-rust-from-electric-stove.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/how-to-remove-rust-from-electric-stove.webp', 'how to remove rust from electric stove', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/03/how-to-unstick-food-from-aluminum-foil.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/how-to-unstick-food-from-aluminum-foil.webp', 'how to unstick food from aluminum foil', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/03/how-to-remove-scratches-on-stove-top.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/how-to-remove-scratches-on-stove-top.webp', 'how to remove scratches on stove top', 2867, 1992);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/03/how-to-clean-oven-racks.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/how-to-clean-oven-racks.webp', 'how to clean oven racks', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/03/tofu-scramble.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/tofu-scramble.webp', 'tofu scramble', 2867, 1912);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/03/Acai-Bowl-Recipes.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/Acai-Bowl-Recipes.webp', 'acai bowl', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/03/Granola-Recipe.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/Granola-Recipe.webp', 'granola recipe', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/03/Breakfast-Burritos.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/Breakfast-Burritos.webp', 'Breakfast Burritos', 2867, 1612);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/03/Scallion-Pancake.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/03/Scallion-Pancake.webp', 'scallion pancake', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/11/Assembling-Scallion-Pancakes.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Assembling-Scallion-Pancakes.webp', 'Assembling Scallion Pancakes', 2457, 1544);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/11/Pan-Frying-Scallion-Pancakes.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Pan-Frying-Scallion-Pancakes.webp', 'Pan-frying Scallion Pancakes', 2457, 1310);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/11/Scallion-Pancakes-with-chili.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Scallion-Pancakes-with-chili.webp', 'Scallion Pancake with chili', 2457, 1568);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/05/Cheesy-Baked-Potato.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/05/Cheesy-Baked-Potato.webp', 'Cheesy Baked Potato', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/05/Oven-Roasted-Potatoes.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/05/Oven-Roasted-Potatoes.webp', 'Oven Roasted Potatoes', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/05/Baked-Sweet-Potato.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/05/Baked-Sweet-Potato.webp', 'Baked Sweet Potato', 2867, 2150);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/05/Chicken-Lasagna.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/05/Chicken-Lasagna.webp', 'Chicken Lasagna Recipe', 2867, 1910);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/11/Protect-Your-Kitchenware.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Protect-Your-Kitchenware.webp', NULL, 2457, 1562);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/11/Time-Saving-Convenience.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Time-Saving-Convenience.webp', NULL, 2457, 1566);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/11/Itll-Save-You-Water-and-Energy.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Itll-Save-You-Water-and-Energy.webp', NULL, 2457, 1566);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/11/Good-Use-of-Limited-Space.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Good-Use-of-Limited-Space.webp', NULL, 2457, 1566);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/11/Superior-Cleaning-Performance.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Superior-Cleaning-Performance.webp', NULL, 2457, 1566);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/11/Gets-Rid-of-Germs.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Gets-Rid-of-Germs.webp', NULL, 2457, 1567);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/11/More-Organized-Kitchen.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/More-Organized-Kitchen.webp', 'Kitchen', 2457, 1566);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/11/Environmentally-Friendly.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Environmentally-Friendly.webp', NULL, 2457, 1566);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/11/Protect-Your-Hands.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Protect-Your-Hands.webp', NULL, 2457, 1566);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/11/Reduces-Household-Disputes.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Reduces-Household-Disputes.webp', NULL, 2457, 1566);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/08/Vatti-DWBB7-Dishwasher-photo-3.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/08/Vatti-DWBB7-Dishwasher-photo-3.webp', 'Vatti DWBB7 Dishwasher photo', 3500, 3500);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/08/Vatti-DWBB7-Dishwasher-product-description-14.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/08/Vatti-DWBB7-Dishwasher-product-description-14.webp', 'Vatti DWBB7 Dishwasher product description', 595, 842);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/11/Vatti-dishwasher-function.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Vatti-dishwasher-function.webp', 'VATTI dishwasher function', 693, 453);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/08/Vatti-DWBB7-Dishwasher-product-description-7.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/08/Vatti-DWBB7-Dishwasher-product-description-7.webp', 'Vatti DWBB7 Dishwasher product description', 595, 842);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/08/Vatti-DWBB7-Dishwasher-product-description-10.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/08/Vatti-DWBB7-Dishwasher-product-description-10.webp', 'Vatti DWBB7 Dishwasher product description', 595, 842);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/08/Vatti-DWBB7-Dishwasher-product-description-2.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/08/Vatti-DWBB7-Dishwasher-product-description-2.webp', 'Vatti DWBB7 Dishwasher product description', 595, 842);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/08/Vatti-DWBB7-Dishwasher-product-description-3.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/08/Vatti-DWBB7-Dishwasher-product-description-3.webp', 'Vatti DWBB7 Dishwasher product description', 595, 842);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/08/Vatti-DWBB7-Dishwasher-product-description-4.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/08/Vatti-DWBB7-Dishwasher-product-description-4.webp', 'Vatti DWBB7 Dishwasher product description', 595, 842);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/08/Vatti-DWBB7-Dishwasher-product-description-6.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/08/Vatti-DWBB7-Dishwasher-product-description-6.webp', 'Vatti DWBB7 Dishwasher product description', 595, 842);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/11/near-the-sink.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/near-the-sink.webp', 'dishwasher', 2457, 1566);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/11/Close-to-the-Cooking-Area.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Close-to-the-Cooking-Area.webp', NULL, 2457, 1566);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/11/Next-to-Storage-Cabinets.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/Next-to-Storage-Cabinets.webp', 'dishwasher', 2457, 1566);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/11/dishwasher-salt.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/dishwasher-salt.webp', 'dishwasher salt', 2457, 1772);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/11/baking-soda-1.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/11/baking-soda-1.webp', NULL, 2457, 1566);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/12/what-can-you-wash-in-dishwasher.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/12/what-can-you-wash-in-dishwasher.webp', 'dishwasher', 2457, 1566);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/12/dishwasher-symbol.webp', 'https://vattimalaysia.com/wp-content/uploads/2024/12/dishwasher-symbol.webp', NULL, 2457, 2385);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/02/induction-cooker-problems.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/02/induction-cooker-problems.webp', 'induction cooker problems', 2048, 1092);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/02/gas-hob-igniter-not-working.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/02/gas-hob-igniter-not-working.webp', 'gas hob igniter not working', 2048, 1305);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/02/Silent-Kitchen-Hood.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/02/Silent-Kitchen-Hood.webp', 'Silent Kitchen Hood', 2048, 1306);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/02/cooking-smell.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/02/cooking-smell.webp', 'Cooking Smell', 2048, 1305);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2024/04/Hood-Png.png', 'https://vattimalaysia.com/wp-content/uploads/2024/04/Hood-Png.png', 'Vatti kitchen hood', 1074, 1152);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/02/replace-range-hood.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/02/replace-range-hood.webp', 'replace range hood', 2048, 1092);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/02/which-is-better-ducted-or-ductless-range-hood.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/02/which-is-better-ducted-or-ductless-range-hood.webp', 'which is better ducted or ductless range hood', 2048, 1307);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/02/how-to-use-charcoal-at-home.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/02/how-to-use-charcoal-at-home.webp', 'how to use charcoal at home', 2048, 964);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/03/range-hood-maintanence.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/03/range-hood-maintanence.webp', 'range hood maintanence', 1600, 1019);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/03/Electric-Stove-Safety-Tips.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/03/Electric-Stove-Safety-Tips.webp', 'Electric Stove Safety Tips', 1600, 1019);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/03/DISHWASHER-SAFETY-SYMBOL.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/03/DISHWASHER-SAFETY-SYMBOL.webp', 'What is Not Dishwasher Safe', 760, 428);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/03/What-is-Not-Dishwasher-Safe.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/03/What-is-Not-Dishwasher-Safe.webp', 'What is Not Dishwasher Safe', 1600, 1021);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/03/Not-dishwasher-safety-symbol.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/03/Not-dishwasher-safety-symbol.webp', 'Not dishwasher safety symbol', 1418, 798);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/01/One-Tap-water-purifier-WDHG01-Product-Image-1.jpg', 'https://vattimalaysia.com/wp-content/uploads/2025/01/One-Tap-water-purifier-WDHG01-Product-Image-1.jpg', 'One Tap water purifier WDHG01 Product Image', 1280, 1280);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/04/How-Water-Filters-Work.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/04/How-Water-Filters-Work.webp', 'How Water Filters Work', 1600, 853);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/04/How-Often-Replace-Water-Filter.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/04/How-Often-Replace-Water-Filter.webp', 'How Often Replace Water Filter', 1600, 1019);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/01/One-Tap-water-purifier-WDHG01-Product-Image-2.jpg', 'https://vattimalaysia.com/wp-content/uploads/2025/01/One-Tap-water-purifier-WDHG01-Product-Image-2.jpg', 'One Tap water purifier WDHG01 Image info', 1280, 1280);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/01/One-Tap-water-purifier-WDHG01-Image-info-5.png', 'https://vattimalaysia.com/wp-content/uploads/2025/01/One-Tap-water-purifier-WDHG01-Image-info-5.png', 'One Tap water purifier WDHG01 Image info', 595, 842);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/01/One-Tap-water-purifier-WDHG01-Image-info-1.png', 'https://vattimalaysia.com/wp-content/uploads/2025/01/One-Tap-water-purifier-WDHG01-Image-info-1.png', 'One Tap water purifier WDHG01 Image info', 595, 842);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/05/Baking-sheet.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/05/Baking-sheet.webp', 'baking sheet', 1600, 957);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/05/is-water-filter-good-for-health.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/05/is-water-filter-good-for-health.webp', 'Is Water Filter Good for Health? Here’s What You Need to Know', 1600, 1021);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/05/Water-Purifier-vs-Water-Filter.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/05/Water-Purifier-vs-Water-Filter.webp', 'Water Purifier vs Water Filter: What’s the Real Difference?', 1600, 1019);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/07/clean-baking-sheets.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/07/clean-baking-sheets.webp', 'clean baking sheets', 1600, 1019);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/08/What-Is-Reverse-Osmosis-Water.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/08/What-Is-Reverse-Osmosis-Water.webp', 'Is Reverse Osmosis Water Worth It?', 800, 600);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/08/Is-Drinking-Filtered-Water-Better-Than-Bottled-Water_.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/08/Is-Drinking-Filtered-Water-Better-Than-Bottled-Water_.webp', 'Is Drinking Filtered Water Better Than Bottled Water?', 800, 600);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/08/What-Are-the-Benefits-of-a-Reverse-Osmosis-Water-Filter.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/08/What-Are-the-Benefits-of-a-Reverse-Osmosis-Water-Filter.webp', 'What Are the Benefits of a Reverse Osmosis Water Filter?', 800, 600);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/10/water-for-plants.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/10/water-for-plants.webp', 'water for plant', 1600, 1019);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/10/water-filter-for-aquarium.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/10/water-filter-for-aquarium.webp', 'water filter for aquarium', 1600, 1153);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/10/Water-Flow.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/10/Water-Flow.webp', 'Water Flow', 1600, 1019);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/10/type-of-water.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/10/type-of-water.webp', 'drinking water bottle', 1600, 945);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/10/drinking-water-bottle.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/10/drinking-water-bottle.webp', 'glass water bottle', 1600, 1019);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/10/glass-water-bottle.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/10/glass-water-bottle.webp', 'type of water', 1600, 1019);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/12/Induction-Cooker-vs-Ceramic-Cooker-3.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/12/Induction-Cooker-vs-Ceramic-Cooker-3.webp', 'Induction Cooker vs Ceramic Cooker', 2048, 1476);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/12/Induction-Cooker-vs-Ceramic-Cooker-1.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/12/Induction-Cooker-vs-Ceramic-Cooker-1.webp', 'Induction Cooker vs Ceramic Cooker', 2048, 1305);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2025/12/Induction-Cooker-vs-Ceramic-Cooker-2.webp', 'https://vattimalaysia.com/wp-content/uploads/2025/12/Induction-Cooker-vs-Ceramic-Cooker-2.webp', 'Induction Cooker vs Ceramic Cooker', 2048, 1302);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2026/01/range-hood-making-noise.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/01/range-hood-making-noise.webp', 'range hood making noise', 992, 744);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2026/01/how-to-clean-kitchen-hood-filter.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/01/how-to-clean-kitchen-hood-filter.webp', 'how to clean kitchen hood filter', 998, 749);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2026/01/kitchen-hood-without-vent.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/01/kitchen-hood-without-vent.webp', 'kitchen hood without vent', 1088, 736);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2026/02/oven-symbol-for-baking.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/02/oven-symbol-for-baking.webp', 'oven symbol for baking', 940, 788);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2026/02/baking-cake-oven-setting.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/02/baking-cake-oven-setting.webp', 'baking cake oven setting', 940, 788);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2026/02/oven-symbols-and-meanings.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/02/oven-symbols-and-meanings.webp', 'oven symbols and meanings', 940, 788);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2026/03/how-long-to-preheat-oven.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/03/how-long-to-preheat-oven.webp', 'how long to preheat oven', 940, 788);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2026/03/leave-dishes-in-the-dishwasher.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/03/leave-dishes-in-the-dishwasher.webp', 'is it ok to leave dishes in the dishwasher overnight', 940, 788);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2026/03/how-to-clean-dishwashers.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/03/how-to-clean-dishwashers.webp', 'how to clean dishwashers', 940, 788);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2026/04/Which-Oven-Symbol-for-Pizza-A-Simple.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/04/Which-Oven-Symbol-for-Pizza-A-Simple.webp', 'Which Oven Symbol for Pizza A Simple', 800, 600);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2026/04/Oven-Symbol-for-Baking-Cookies.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/04/Oven-Symbol-for-Baking-Cookies.webp', 'Oven Symbol for Baking Cookies', 800, 600);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2026/04/Oven-Symbol-for-Grill.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/04/Oven-Symbol-for-Grill.webp', 'Oven Symbol for Grill', 800, 600);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2026/05/How-to-Install-a-Chimney-Hood.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/05/How-to-Install-a-Chimney-Hood.webp', 'How to Install a Chimney Hood in Your Malaysian Kitchen', 1536, 1024);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2026/05/How-to-Measure-the-Suction-Power-of-a-Kitchen-Hood.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/05/How-to-Measure-the-Suction-Power-of-a-Kitchen-Hood.webp', 'How to Measure the Suction Power of a Kitchen Hood', 1536, 1024);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2026/05/What-Is-a-Chimney-Hood-Everything-Malaysian-Home-Cooks-Need-to-Know.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/05/What-Is-a-Chimney-Hood-Everything-Malaysian-Home-Cooks-Need-to-Know.webp', 'What Is a Chimney Hood?', 1536, 1024);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2026/06/What-is-BLDC-Cooker-Hood_Pic.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/06/What-is-BLDC-Cooker-Hood_Pic.webp', 'What is BLDC motor', 1600, 840);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2026/06/wok-cooking-hero.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/06/wok-cooking-hero.webp', 'wok cooking', 1600, 840);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2026/06/grease-filter-hero.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/06/grease-filter-hero.webp', 'How to Clean Grease Filter', 1600, 840);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2026/06/t-shape-hood-hero.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/06/t-shape-hood-hero.webp', 'T shape hood', 1600, 840);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2026/06/hood-size-hero.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/06/hood-size-hero.webp', 'hood size', 1600, 840);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2026/06/auto-clean-hero.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/06/auto-clean-hero.webp', 'auto clean', 1600, 840);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2026/05/V938-PG13.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/05/V938-PG13.webp', 'VATTI Kitchen Hood V938 Description', 1152, 2048);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2026/05/V960-PG12.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/05/V960-PG12.webp', 'VATTI Kitchen Hood V960 Description', 1054, 1492);
+INSERT OR IGNORE INTO image (url, legacy_url, alt, width, height) VALUES ('https://cdn.vattimalaysia.com/2026/05/V917-Carbon-Grey-Cooker-Hood-description-5.webp', 'https://vattimalaysia.com/wp-content/uploads/2026/05/V917-Carbon-Grey-Cooker-Hood-description-5.webp', 'V997 Cooker Hood Carbon Grey Description', 1080, 1080);
 
-INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (1, 'types-of-range-hoods', 'buying-guide/types-of-range-hoods', 'buying-guide', '3 Types of Range Hoods for Your Kitchen - A Buying Guide (2026)', '3 Types of Range Hoods for Your Kitchen – A Buying Guide (2026)', 'Find the best kitchen hood with our guide! Discover the perfect match for your needs among different types of range hoods.', '![kitchen hood buying guide](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/10/kitchen-hood-buying-guide.webp)
+INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (1, 'types-of-range-hoods', 'buying-guide/types-of-range-hoods', 'buying-guide', '3 Types of Range Hoods for Your Kitchen - A Buying Guide (2026)', '3 Types of Range Hoods for Your Kitchen – A Buying Guide (2026)', 'Find the best kitchen hood with our guide! Discover the perfect match for your needs among different types of range hoods.', '![kitchen hood buying guide](https://cdn.vattimalaysia.com/2023/10/kitchen-hood-buying-guide.webp)
 
 Are you in the process of renovating your kitchen and seeking the perfect finishing touch? Look no further than the kitchen hood, a crucial element that keeps your kitchen free of smoke and odours to improve air quality. A well-chosen cooker hood can make a significant difference. This buying guide will explore the essential factors to consider when choosing a range hood.
 
@@ -229,11 +229,11 @@ A range hood is essential for maintaining a clean, well-ventilated, and pleasant
 
 ### 1. Chimney/Wall-mounted range hood
 
-![Chimney kitchen hood](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/10/Chimney-kitchen-hood.webp)
+![Chimney kitchen hood](https://cdn.vattimalaysia.com/2023/10/Chimney-kitchen-hood.webp)
 
 Chimney hoods are the most common and popular kitchen hoods, and they are installed against a wall above the cooking stove or hob. These popular hoods have a chimney-like structure for effective extraction and ventilation. They come in various designs, including:
 
-![Vatti kitchen hood](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/10/Vatti-kitchen-hood.webp)
+![Vatti kitchen hood](https://cdn.vattimalaysia.com/2023/10/Vatti-kitchen-hood.webp)
 
 *Right:*[*“Artemis Series” T Type Kitchen Hood V931*](/artemis-series-t-type-range-hood-v931/)*, Middle:*[*“Athena Series” Lifting Type Kitchen Hood V999*](/athena-series-lifting-type-range-hood-v999/)*, Left: “ Athena Series” Lifting Type Range Hood V993 .*
 
@@ -245,13 +245,13 @@ Chimney hoods are the most common and popular kitchen hoods, and they are instal
 
 ### 2. Island range hood
 
-![Island kitchen hood](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/10/Island-kitchen-hood.webp)
+![Island kitchen hood](https://cdn.vattimalaysia.com/2023/10/Island-kitchen-hood.webp)
 
 Island kitchen hoods suspended from the ceiling above the kitchen island provide a striking centrepiece while extracting smoke and odours.
 
 ### 3. Sliding range hood
 
-![Sliding kitchen hood](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/10/Sliding-kitchen-hood.webp)
+![Sliding kitchen hood](https://cdn.vattimalaysia.com/2023/10/Sliding-kitchen-hood.webp)
 
 [*Sliding kitchen hood*](https://www.bosch-home.com.my/experience-bosch/kitchen-planning/kitchen-advisor/hoods)*.*
 
@@ -263,7 +263,7 @@ Choosing the right type of range hood depends on your kitchen’s layout, design
 
 ### Factor 1: Range Hood Size
 
-![Kitchen hood size](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/10/Kitchen-hood-size.webp)
+![Kitchen hood size](https://cdn.vattimalaysia.com/2023/10/Kitchen-hood-size.webp)
 
 - Width: Match the kitchen hood’s width to your cooking stove or hob for efficient extraction. Choose a hood equal or slightly wider than the cooking surface to cover the entire area and effectively capture fumes and smoke.
 
@@ -272,7 +272,7 @@ Considering these factors ensures that your kitchen hood is the right fit for yo
 
 ### Factor 2: Extraction power and noise level
 
-![Vatti kitchen hood](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/10/Vatti-kitchen-hood-2.webp)
+![Vatti kitchen hood](https://cdn.vattimalaysia.com/2023/10/Vatti-kitchen-hood-2.webp)
 
 - Extraction Power: Choose a range hood with good cubic metres per hour (m³/h) extraction power to match the size of your kitchen. Aim for a rate that is at least 10 times the volume of your kitchen to remove cooking odours and smoke effectively.
 
@@ -281,7 +281,7 @@ Consider [VATTI kitchen hoods](/kitchen-hood/) for their impressive features. Wi
 
 ### Factor 3: Ducted or Ductless Range Hoods
 
-![kitchen hood ventilation or recirculation](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/10/kitchen-hood-ventilation-or-recirculation.webp)
+![kitchen hood ventilation or recirculation](https://cdn.vattimalaysia.com/2023/10/kitchen-hood-ventilation-or-recirculation.webp)
 
 - Ducted range hood: Ducted range hoods, or ventilation systems, utilize ducting to extract cooking odors and smoke from the kitchen, ensuring optimal air quality. This is the highly recommended option since these systems expel the air outside, creating a fresh and clean environment.
 
@@ -289,7 +289,7 @@ Consider [VATTI kitchen hoods](/kitchen-hood/) for their impressive features. Wi
 
 ### Factor 4: Type of Range Hood Filters
 
-![Kitchen hood filters](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/10/Kitchen-hood-filters.webp)
+![Kitchen hood filters](https://cdn.vattimalaysia.com/2023/10/Kitchen-hood-filters.webp)
 
 [*Types of Kitchen Chimney Filters*](https://simpleghar.com/kitchen-chimney-filter-types/)*.*
 
@@ -314,7 +314,7 @@ Regular maintenance and cleaning are essential to ensure optimal performance and
 
 - Inspect ducting: Ensure the system is clear of obstructions for proper airflow.
 
-![Kitchen hood auto cleaning features](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/10/Kitchen-hood_Auto-cleaning-features.webp)
+![Kitchen hood auto cleaning features](https://cdn.vattimalaysia.com/2023/10/Kitchen-hood_Auto-cleaning-features.webp)
 
 [*VATTI Auto-clean System*](https://www.youtube.com/watch?v=IpTrHkY39OI&t=1s)*.*
 
@@ -322,7 +322,7 @@ However, choosing a [VATTI kitchen hood](/kitchen-hood-in-malaysia/) with auto-c
 
 ### Factor 6: Advanced Features of Kitchen Hood
 
-![Vatti kitchen hood](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/10/Vatti-kitchen-hood-3.webp)
+![Vatti kitchen hood](https://cdn.vattimalaysia.com/2023/10/Vatti-kitchen-hood-3.webp)
 
 - Hand-Sensor: Some kitchen hoods feature hand-sensor technology for convenient control. Wave your hand to adjust fan speed, activate lighting, or power the hood on/off, providing hands-free operation and effortless control.
 
@@ -355,7 +355,7 @@ INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor)
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (1, 7, 'external', 'https://www.youtube.com/watch?v=IpTrHkY39OI&amp;t=1s', NULL, 'VATTI Auto-clean System');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (1, 8, 'product-category', 'https://vattimalaysia.com/kitchen-hood-in-malaysia/', 'kitchen-hood-in-malaysia', 'VATTI kitchen hood');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (1, 9, 'article', 'https://vattimalaysia.com/buying-guide/glass-vs-stainless-gas-hob-which-gas-hob-are-best/', 'buying-guide/glass-vs-stainless-gas-hob-which-gas-hob-are-best', 'Glass Vs Stainless Steel Gas Hob');
-INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (2, 'what-is-a-combi-oven', 'buying-guide/what-is-a-combi-oven', 'buying-guide', 'What is a Combi Oven - Functions & Benefits', 'What is a Combi Oven – Functions & Benefits', 'From roasting to steaming, a Combi Oven does it all! Explore its functions and enjoy versatile cooking, enhancing your dishes effortlessly.', '![Combi Oven Function](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/11/photo-3.webp)
+INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (2, 'what-is-a-combi-oven', 'buying-guide/what-is-a-combi-oven', 'buying-guide', 'What is a Combi Oven - Functions & Benefits', 'What is a Combi Oven – Functions & Benefits', 'From roasting to steaming, a Combi Oven does it all! Explore its functions and enjoy versatile cooking, enhancing your dishes effortlessly.', '![Combi Oven Function](https://cdn.vattimalaysia.com/2023/11/photo-3.webp)
 
 [Combi ovens](/combi-and-steam-oven-in-malaysia/) are versatile and efficient appliances that have gained popularity in cooking. Understanding their function and benefits is vital to maximizing their potential. This guide explores combi ovens’ work, including precise temperature control, enhanced flavours, and nutrient preservation. Join us on this journey to unlock the full potential of combi ovens and take your cooking to the next level.
 
@@ -432,11 +432,11 @@ However, when it comes to the [VATTI Combi oven](/steamer-combi-oven/) , your ki
 
 ## Advance Features of VATTI Combi Oven
 
-![Combi Oven Function](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/11/photo-1.webp)
+![Combi Oven Function](https://cdn.vattimalaysia.com/2023/11/photo-1.webp)
 
 The VATTI large-capacity [combi oven](/combi-and-steam-oven-in-malaysia/) is a powerhouse of advanced features designed to streamline your cooking experience and deliver exceptional results. Let’s explore some of its standout features:
 
-![Combi Oven Function](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/11/VA05-1-1.webp)
+![Combi Oven Function](https://cdn.vattimalaysia.com/2023/11/VA05-1-1.webp)
 
 [*VATTI Combi Oven Function*](https://www.youtube.com/watch?time_continue=2&v=d4kmrCsQv9Y&embeds_referring_euri=https%3A%2F%2Fvattimalaysia.com%2F&embeds_referring_origin=https%3A%2F%2Fvattimalaysia.com&source_ve_path=MjM4NTE&feature=emb_title)*.*
 
@@ -455,7 +455,7 @@ For more details on how the VATTI combi oven can enhance your cooking experience
 
 ## What can you cook in a combi oven?
 
-![Combi Oven Function](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/11/photo-2.webp)
+![Combi Oven Function](https://cdn.vattimalaysia.com/2023/11/photo-2.webp)
 
 Combi ovens offer versatile cooking capabilities for a variety of dishes:
 
@@ -654,13 +654,13 @@ INSERT INTO recipe_step (recipe_id, position, text) VALUES (1, 13, 'Cut the puff
 INSERT INTO recipe_step (recipe_id, position, text) VALUES (1, 14, 'Squeeze the filling onto one-half of the puff.');
 INSERT INTO recipe_step (recipe_id, position, text) VALUES (1, 15, 'Place the other half on top to create a filled puff.');
 INSERT INTO recipe_step (recipe_id, position, text) VALUES (1, 16, 'Enjoy your delicious homemade puffs!');
-INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (4, 'glass-vs-stainless-gas-hob-which-gas-hob-are-best', 'buying-guide/glass-vs-stainless-gas-hob-which-gas-hob-are-best', 'buying-guide', 'Glass vs Stainless Gas Hob: Which Gas hob are Best?', 'Glass vs Stainless Gas Hob: Which Gas hob are Best?', 'Compare between stainless steel and glass gas hobs by assessing their pros and cons. Make the best decision for your kitchen.', '![Vatti Gas Hob](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/10/C821G-vs-C720S-Cooker-Hob.webp)
+INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (4, 'glass-vs-stainless-gas-hob-which-gas-hob-are-best', 'buying-guide/glass-vs-stainless-gas-hob-which-gas-hob-are-best', 'buying-guide', 'Glass vs Stainless Gas Hob: Which Gas hob are Best?', 'Glass vs Stainless Gas Hob: Which Gas hob are Best?', 'Compare between stainless steel and glass gas hobs by assessing their pros and cons. Make the best decision for your kitchen.', '![Vatti Gas Hob](https://cdn.vattimalaysia.com/2023/10/C821G-vs-C720S-Cooker-Hob.webp)
 
 Understanding the differences between glass and stainless-steel [gas hobs](/cooker-hob/) is crucial for choosing the right one for your kitchen. Consider factors like aesthetics, cleaning convenience, and durability before deciding. Take the time to explore these differences and make an informed choice that enhances your kitchen’s functionality and appearance.
 
 ## What is a Glass Gas Hob?
 
-![Vatti C821G Gas Hob](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/10/VATTI-C821G-Cooker-Hob.webp)
+![Vatti C821G Gas Hob](https://cdn.vattimalaysia.com/2023/10/VATTI-C821G-Cooker-Hob.webp)
 
 *Above,**VATTI Cooker Hob “Professional Series” C821G .*
 
@@ -689,7 +689,7 @@ In the next section, we will explore the world of stainless steel gas hobs, thei
 
 ## What is a Stainless-Steel Gas Hobs?
 
-![VATTI C720S Gas Hob](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/10/VATTI-C720S-Cooker-Hob.webp)
+![VATTI C720S Gas Hob](https://cdn.vattimalaysia.com/2023/10/VATTI-C720S-Cooker-Hob.webp)
 
 *Above, VATTI Cooker Hob “Professional Series” C720S.*
 
@@ -745,7 +745,7 @@ INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor)
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (4, 2, 'product', 'https://vattimalaysia.com/professional-series-c720s/', 'professional-series-c720s', 'VATTI Cooker Hob “Professional Series” C720S.');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (4, 3, 'product-category', 'https://vattimalaysia.com/cooker-hob-in-malaysia/', 'cooker-hob-in-malaysia', 'VATTI gas hobs');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (4, 4, 'article', 'https://vattimalaysia.com/buying-guide/types-of-range-hoods/', 'buying-guide/types-of-range-hoods', 'Types of Range Hoods');
-INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (5, 'wall-oven-sizes-how-to-choose-perfect-built-in-oven-size', 'buying-guide/wall-oven-sizes-how-to-choose-perfect-built-in-oven-size', 'buying-guide', 'Wall Oven Sizes: How to Choose Perfect Built-In Oven Size', 'Wall Oven Sizes: How to Choose Perfect Built-In Oven Size', 'Confused about the right built-in oven or wall oven size for your kitchen? Check out our guide to find the perfect size for your cooking needs.', '![Built-in Oven Size](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/11/Built-in-Oven-Size-6.webp)
+INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (5, 'wall-oven-sizes-how-to-choose-perfect-built-in-oven-size', 'buying-guide/wall-oven-sizes-how-to-choose-perfect-built-in-oven-size', 'buying-guide', 'Wall Oven Sizes: How to Choose Perfect Built-In Oven Size', 'Wall Oven Sizes: How to Choose Perfect Built-In Oven Size', 'Confused about the right built-in oven or wall oven size for your kitchen? Check out our guide to find the perfect size for your cooking needs.', '![Built-in Oven Size](https://cdn.vattimalaysia.com/2023/11/Built-in-Oven-Size-6.webp)
 
 Finding the right [built-in oven or wall oven](/combi-and-steam-oven-in-malaysia/) size can be confusing with so many options. Need help determining which built-in oven size will fulfill your cooking requirements? The perfect size is crucial for enhancing your cooking experience and kitchen efficiency.
 
@@ -776,7 +776,7 @@ In the next section, we’ll explore common built-in oven types, discussing thei
 
 Here are some common types of built-in ovens, along with their typical sizes, specifications, and suitable uses:
 
-![VATTI Built-In Air Fryer Oven O7559](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/04/Built-in-air-fryer-oven-07559-product-photo.webp)
+![VATTI Built-In Air Fryer Oven O7559](https://cdn.vattimalaysia.com/2026/04/Built-in-air-fryer-oven-07559-product-photo.webp)
 
 Above, [VATTI Built-In Air Fryer Oven O7559](/vatti-built-in-air-fryer-oven-07559/).
 
@@ -790,7 +790,7 @@ Above, [VATTI Built-In Air Fryer Oven O7559](/vatti-built-in-air-fryer-oven-0755
 
 ## Compact Ovens/Combi Ovens
 
-![Vatti Combi Oven](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/11/Untitled-design-34.webp)
+![Vatti Combi Oven](https://cdn.vattimalaysia.com/2023/11/Untitled-design-34.webp)
 
 *Above, Right:*[*“Built-In Combi Oven” VA03*](/built-in-combi-oven-va03/)*, Left:*[*“Built-In Combi Oven” VA05*](/built-in-combi-oven-va04/)*.*
 
@@ -804,7 +804,7 @@ Above, [VATTI Built-In Air Fryer Oven O7559](/vatti-built-in-air-fryer-oven-0755
 
 ## Double Ovens
 
-![Double oven](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/11/Built-in-Oven-Size-3.webp)
+![Double oven](https://cdn.vattimalaysia.com/2023/11/Built-in-Oven-Size-3.webp)
 
 *Above:*[*GE Profile Smart Slide-in Double Oven*](https://www.thespruce.com/best-double-ovens-4150204#toc-best-electric-range-whirlpool-wge745c0fs-67-cu-ft-double-oven-electric-range-with-true-convection-in-stainless-steel)*.*
 
@@ -818,7 +818,7 @@ Above, [VATTI Built-In Air Fryer Oven O7559](/vatti-built-in-air-fryer-oven-0755
 
 ## Built-Under Ovens
 
-![Built-Under Ovens](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/11/Built-in-Oven-Size-4-4130275104-e1699793760332.webp)
+![Built-Under Ovens](https://cdn.vattimalaysia.com/2023/11/Built-in-Oven-Size-4-4130275104-e1699793760332.webp)
 
 *Above:*[*N50 Built-under Double Oven*](https://chefspick.co.uk/best-built-under-double-ovens/)*.*
 
@@ -888,13 +888,13 @@ Discover the Perfect Kitchen Appliance for Your Spicy Enoki Mushrooms Recipe!
 
 ## Step 1: Ingredients Preparation
 
-![spicy enoki mushroom ingredient](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/12/1-1.webp)
+![spicy enoki mushroom ingredient](https://cdn.vattimalaysia.com/2023/12/1-1.webp)
 
-![spicy enoki mushroom ingredient](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/11/step4_spicy-enoki-mushroom.webp)
+![spicy enoki mushroom ingredient](https://cdn.vattimalaysia.com/2023/11/step4_spicy-enoki-mushroom.webp)
 
-![spicy enoki mushroom ingredient](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/11/2-1.webp)
+![spicy enoki mushroom ingredient](https://cdn.vattimalaysia.com/2023/11/2-1.webp)
 
-![spicy enoki mushroom ingredient](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2023/11/step9_spicy-enoki-mushroom.webp)
+![spicy enoki mushroom ingredient](https://cdn.vattimalaysia.com/2023/11/step9_spicy-enoki-mushroom.webp)
 
 Prepare the ingredients: enoki mushroom (200g), 1/2 cup millet spicy (chopped), 1/2 cup green onion (chopped), 2 cloves garlic (chopped), 2tbsp oyster sauce, 1tbsp light soy sauce, tbsp sesame oil and tbsp sugar
 
@@ -1009,7 +1009,7 @@ INSERT INTO recipe_step (recipe_id, position, text) VALUES (2, 4, 'Use combi ove
 INSERT INTO recipe_step (recipe_id, position, text) VALUES (2, 5, 'Combi oven cook for 15 minutes.');
 INSERT INTO recipe_step (recipe_id, position, text) VALUES (2, 6, 'Once the enoki mushrooms are done cooking, take them out of the combi oven.');
 INSERT INTO recipe_step (recipe_id, position, text) VALUES (2, 7, 'Drizzle the green oil and hot oil over the mushrooms for added flavor and presentation.');
-INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (7, 'kitchen-hygiene-and-cooking-safety-10-tips', 'tips-tricks/kitchen-hygiene-and-cooking-safety-10-tips', 'tips-tricks', 'Kitchen Hygiene and Cooking Safety: 10 Tips', 'Kitchen Hygiene and Cooking Safety: 10 Tips', 'Explore 10 golden rules of kitchen hygiene and safety in our latest blog! Enhance your cooking experience with valuable tips on hygiene and safety.', '![Kitchen Hygiene](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Kitchen-Hygiene-and-Cooking-Safety.webp)
+INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (7, 'kitchen-hygiene-and-cooking-safety-10-tips', 'tips-tricks/kitchen-hygiene-and-cooking-safety-10-tips', 'tips-tricks', 'Kitchen Hygiene and Cooking Safety: 10 Tips', 'Kitchen Hygiene and Cooking Safety: 10 Tips', 'Explore 10 golden rules of kitchen hygiene and safety in our latest blog! Enhance your cooking experience with valuable tips on hygiene and safety.', '![Kitchen Hygiene](https://cdn.vattimalaysia.com/2024/01/Kitchen-Hygiene-and-Cooking-Safety.webp)
 
 Welcome to our blog on Kitchen Hygiene and Cooking Safety! Whether you’re a cooking pro or just starting, keeping your kitchen clean and safe is crucial. Discover the kitchen’s golden safety rule in this blog: a guide for tastier, healthier cooking. Consider these as essential rules for a flavorful and safe kitchen experience.
 
@@ -1055,7 +1055,7 @@ Welcome to our blog on Kitchen Hygiene and Cooking Safety! Whether you’re a co
 
 ## Advantages of Vatti Tru Clean cooker hood
 
-![Vatti Tru Auto Clean](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Vatti-Tru-Auto-Clean-2.webp)
+![Vatti Tru Auto Clean](https://cdn.vattimalaysia.com/2024/01/Vatti-Tru-Auto-Clean-2.webp)
 
 - **Cleans Efficiently, Up to 85% Filtration Rates**
 - Clean vent hood filters play a crucial role in preventing kitchen fires by reducing the accumulation of grease and flammable particles, promoting a safer cooking space.
@@ -1092,7 +1092,7 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 ## 1. Avocado and Tomato Breakfast Tacos
 
-![Avocado and Tomato Breakfast Tacos](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/1.-Avocado-and-Tomato-Breakfast-Taco.webp)
+![Avocado and Tomato Breakfast Tacos](https://cdn.vattimalaysia.com/2024/01/1.-Avocado-and-Tomato-Breakfast-Taco.webp)
 
 Say goodbye to bland breakfasts with these Avocado and Tomato Breakfast Tacos. Packed with vibrant colors and flavors, this dish is a fiesta for your taste buds.
 
@@ -1126,7 +1126,7 @@ Say goodbye to bland breakfasts with these Avocado and Tomato Breakfast Tacos. P
 
 ## 2. Blueberry and Almond Butter Smoothie Bowl
 
-![Blueberry and Almond Butter Smoothie Bowl](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/2.-Blueberry-and-Almond-Butter-Smoothie-Bowl.webp)
+![Blueberry and Almond Butter Smoothie Bowl](https://cdn.vattimalaysia.com/2024/01/2.-Blueberry-and-Almond-Butter-Smoothie-Bowl.webp)
 
 Elevate your breakfast game with a Blueberry and Almond Butter Smoothie Bowl – a luscious blend of flavors and textures that will leave you satisfied and ready to conquer the day.
 
@@ -1158,7 +1158,7 @@ Elevate your breakfast game with a Blueberry and Almond Butter Smoothie Bowl –
 
 ## 3. Chickpea and Spinach Breakfast Burrito
 
-![Chickpea and Spinach Breakfast Burrito](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/3.-Chickpea-and-Spinach-Breakfast-Burrito.webp)
+![Chickpea and Spinach Breakfast Burrito](https://cdn.vattimalaysia.com/2024/01/3.-Chickpea-and-Spinach-Breakfast-Burrito.webp)
 
 Spice up your mornings with a Chickpea and Spinach Breakfast Burrito. This protein-packed option will keep you full and fueled throughout the day.
 
@@ -1192,7 +1192,7 @@ Spice up your mornings with a Chickpea and Spinach Breakfast Burrito. This prote
 
 ## 4. Peanut Butter and Banana Overnight Oats
 
-![Peanut Butter and Banana Overnight Oats](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/4.-Peanut-Butter-and-Banana-Overnight-Oats.webp)
+![Peanut Butter and Banana Overnight Oats](https://cdn.vattimalaysia.com/2024/01/4.-Peanut-Butter-and-Banana-Overnight-Oats.webp)
 
 Prepare your breakfast the night before with these Peanut Butter and Banana Overnight Oats – a quick and delicious option for busy mornings.
 
@@ -1222,7 +1222,7 @@ Prepare your breakfast the night before with these Peanut Butter and Banana Over
 
 ## 5. Sweet Potato and Black Bean Breakfast Hash
 
-![Sweet Potato and Black Bean Breakfast Hash](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/5.-Sweet-Potato-and-Black-Bean-Breakfast-Hash.webp)
+![Sweet Potato and Black Bean Breakfast Hash](https://cdn.vattimalaysia.com/2024/01/5.-Sweet-Potato-and-Black-Bean-Breakfast-Hash.webp)
 
 Indulge in a hearty Sweet Potato and Black Bean Breakfast Hash for a savory and satisfying start to your day.
 
@@ -1275,7 +1275,7 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 ## 1. Classic Tomato Sauce: The Epitome of Pasta Perfection
 
-![Classic Tomato Sauce](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Classic-Tomato-Sauce.webp)
+![Classic Tomato Sauce](https://cdn.vattimalaysia.com/2024/11/Classic-Tomato-Sauce.webp)
 
 This timeless sauce remains a classic for a reason. With its vibrant red hue and rich, tangy flavor, it’s a go-to for pasta lovers everywhere.
 
@@ -1313,7 +1313,7 @@ This timeless sauce remains a classic for a reason. With its vibrant red hue and
 
 ## 2. Creamy Tomato Sauce: A Rich and Decadent Treat
 
-![Creamy Tomato Sauce](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Creamy-Tomato-Sauce.webp)
+![Creamy Tomato Sauce](https://cdn.vattimalaysia.com/2024/11/Creamy-Tomato-Sauce.webp)
 
 This creamy sauce takes the classic tomato sauce to the next level, adding a velvety texture and a touch of indulgence.
 
@@ -1346,7 +1346,7 @@ Continue reading for more delectable pasta sauce recipes!
 
 ## 3. Spaghetti Sauce: A Hearty and Versatile Classic
 
-![Spaghetti Sauce](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Spaghetti-Sauce.webp)
+![Spaghetti Sauce](https://cdn.vattimalaysia.com/2024/11/Spaghetti-Sauce.webp)
 
 This hearty sauce is a perfect pairing for spaghetti and other long pasta shapes. With its rich meaty flavor and chunky vegetables, it’s a satisfying meal in itself.
 
@@ -1388,7 +1388,7 @@ This hearty sauce is a perfect pairing for spaghetti and other long pasta shapes
 
 ## 4. Marinara Sauce: A Versatile Base for Endless Creations
 
-![Marinara Sauce](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Marinara-Sauce.webp)
+![Marinara Sauce](https://cdn.vattimalaysia.com/2024/11/Marinara-Sauce.webp)
 
 This versatile sauce is a staple in Italian cooking, serving as a base for pizzas, pasta dishes, and more.
 
@@ -1428,7 +1428,7 @@ This versatile sauce is a staple in Italian cooking, serving as a base for pizza
 
 ## 5. Carbonara Sauce: A Rich and Creamy Treat
 
-![Carbonara Sauce](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Carbonara-Sauce.webp)
+![Carbonara Sauce](https://cdn.vattimalaysia.com/2024/11/Carbonara-Sauce.webp)
 
 This classic Italian sauce is made with eggs, cheese, and crispy bacon, creating a decadent and flavorful pairing for pasta.
 
@@ -1499,7 +1499,7 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 ## 1. Creamy Chicken and Mushroom Risotto
 
-![Creamy Chicken and Mushroom Risotto](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Creamy-Chicken-and-Mushroom-Risotto.webp)
+![Creamy Chicken and Mushroom Risotto](https://cdn.vattimalaysia.com/2024/01/Creamy-Chicken-and-Mushroom-Risotto.webp)
 
 Indulge in the creamy goodness of our first recipe, the Chicken and Mushroom Risotto. This one-pot wonder combines tender chicken, earthy mushrooms, and Arborio rice for a comforting meal that’s bound to be a family favorite.
 
@@ -1541,7 +1541,7 @@ Continue reading for more one-pot rice meal inspiration!
 
 ## 2. Vegetable Paella
 
-![Vegetable Paella](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Vegetable-Paella.webp)
+![Vegetable Paella](https://cdn.vattimalaysia.com/2024/01/Vegetable-Paella.webp)
 
 For a colourful and hearty option, try our Vegetable Paella – a vibrant one-pot rice dish that’s loaded with a variety of vegetables and infused with aromatic saffron.
 
@@ -1584,7 +1584,7 @@ For a colourful and hearty option, try our Vegetable Paella – a vibrant one-po
 
 ## 3. Shrimp and Sausage Jambalaya
 
-![Shrimp and Sausage Jambalaya](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Shrimp-and-Sausage-Jambalaya.webp)
+![Shrimp and Sausage Jambalaya](https://cdn.vattimalaysia.com/2024/01/Shrimp-and-Sausage-Jambalaya.webp)
 
 Transport your family to the flavors of New Orleans with this Shrimp and Sausage Jambalaya. Packed with a medley of spices, succulent shrimp, and savory sausage, it’s a one-pot wonder that’s both hearty and satisfying.
 
@@ -1629,7 +1629,7 @@ Transport your family to the flavors of New Orleans with this Shrimp and Sausage
 
 ## 4. Teriyaki Chicken and Vegetable Rice Bowl
 
-![Teriyaki Chicken and Vegetable Rice Bowl](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Teriyaki-Chicken-and-Vegetable-Rice-Bowl.webp)
+![Teriyaki Chicken and Vegetable Rice Bowl](https://cdn.vattimalaysia.com/2024/01/Teriyaki-Chicken-and-Vegetable-Rice-Bowl.webp)
 
 For an Asian-inspired twist, try the Teriyaki Chicken and Vegetable Rice Bowl. This quick and delicious one-pot meal features tender chicken, crisp vegetables, and a sweet and savory teriyaki sauce over a bed of fluffy rice.
 
@@ -1668,7 +1668,7 @@ For an Asian-inspired twist, try the Teriyaki Chicken and Vegetable Rice Bowl. T
 
 ## 5. Tomato and Spinach Orzo Pilaf
 
-![Tomato and Spinach Orzo Pilaf](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Tomato-and-Spinach-Orzo-Pilaf.webp)
+![Tomato and Spinach Orzo Pilaf](https://cdn.vattimalaysia.com/2024/01/Tomato-and-Spinach-Orzo-Pilaf.webp)
 
 Bring a touch of Mediterranean flair to your table with this Tomato and Spinach Orzo Pilaf. The combination of orzo pasta, fresh tomatoes, and spinach creates a light and flavorful dish that’s perfect for a family gathering.
 
@@ -1723,7 +1723,7 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 ## 1. Vegetable Biryani
 
-![Vegetable Biryani](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Vegetable-Biryani.webp)
+![Vegetable Biryani](https://cdn.vattimalaysia.com/2024/01/Vegetable-Biryani.webp)
 
 Experience the delightful combination of fragrant basmati rice, mixed vegetables, and aromatic spices in this Vegetable Biryani. A classic South Indian dish, this one-pot wonder is both flavorful and satisfying.
 
@@ -1765,7 +1765,7 @@ Continue reading for more one-pot rice recipes inspiration!
 
 ## 2. Lemon Rice
 
-![Lemon Rice](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Lemon-Rice.webp)
+![Lemon Rice](https://cdn.vattimalaysia.com/2024/01/Lemon-Rice.webp)
 
 Bring a burst of citrusy freshness to your table with Lemon Rice. This quick and easy dish is a staple in South Indian households, offering a zesty twist to plain rice.
 
@@ -1802,7 +1802,7 @@ Bring a burst of citrusy freshness to your table with Lemon Rice. This quick and
 
 ## 3. Tomato Rice (Thakkali Sadam)
 
-![Tomato Rice](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Tomato-Rice.webp)
+![Tomato Rice](https://cdn.vattimalaysia.com/2024/01/Tomato-Rice.webp)
 
 Indulge in the tangy goodness of Tomato Rice, known as Thakkali Sadam in South India. This flavorful dish is a delightful blend of ripe tomatoes, aromatic spices, and perfectly cooked rice.
 
@@ -1845,7 +1845,7 @@ Indulge in the tangy goodness of Tomato Rice, known as Thakkali Sadam in South I
 
 ## 4. Coconut Milk Pulao
 
-![Coconut Milk Pulao](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Coconut-Milk-Pulao.webp)
+![Coconut Milk Pulao](https://cdn.vattimalaysia.com/2024/01/Coconut-Milk-Pulao.webp)
 
 Transport your taste buds to the coastal regions of South India with Coconut Milk Pulao. This rich and creamy one-pot dish combines fragrant rice with coconut milk, creating a symphony of flavours.
 
@@ -1888,7 +1888,7 @@ Transport your taste buds to the coastal regions of South India with Coconut Mil
 
 ## 5. Tamarind Rice (Puliyodarai)
 
-![Tamarind Rice](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Tamarind-Rice.webp)
+![Tamarind Rice](https://cdn.vattimalaysia.com/2024/01/Tamarind-Rice.webp)
 
 Enjoy the unique and tangy flavor of Tamarind Rice, or Puliyodarai, a South Indian favorite. This quick and easy one-pot meal combines the sourness of tamarind with a medley of spices, creating a delightful dish.
 
@@ -1947,7 +1947,7 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 ## 1. Teriyaki Chicken Stir-Fry
 
-![Teriyaki Chicken Stir-Fry](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Teriyaki-Chicken-Stir-Fry.webp)
+![Teriyaki Chicken Stir-Fry](https://cdn.vattimalaysia.com/2024/01/Teriyaki-Chicken-Stir-Fry.webp)
 
 Indulge in the exquisite taste of Teriyaki Chicken Stir-Fry, where succulent chicken meets a medley of colorful vegetables, all bathed in a delicious teriyaki sauce enriched with the subtle sweetness of rice wine.
 
@@ -1984,7 +1984,7 @@ Indulge in the exquisite taste of Teriyaki Chicken Stir-Fry, where succulent chi
 
 ## 2. Sake Glazed Salmon
 
-![Sake Glazed Salmon](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Sake-Glazed-Salmon.webp)
+![Sake Glazed Salmon](https://cdn.vattimalaysia.com/2024/01/Sake-Glazed-Salmon.webp)
 
 Elevate your seafood experience with Sake Glazed Salmon, a delectable dish where the richness of salmon meets the sweet and savoury notes of a sake-infused glaze.
 
@@ -2018,7 +2018,7 @@ Continue reading for more enticing rice wine recipes!
 
 ## 3. Shaoxing Wine Chicken Rice
 
-![Shaoxing Wine Chicken Rice](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Shaoxing-Wine-Chicken-Rice.webp)
+![Shaoxing Wine Chicken Rice](https://cdn.vattimalaysia.com/2024/01/Shaoxing-Wine-Chicken-Rice.webp)
 
 Delight your taste buds with Shaoxing Wine Chicken Rice, a Chinese-inspired comfort dish where tender chicken is infused with the aromatic essence of Shaoxing rice wine.
 
@@ -2053,7 +2053,7 @@ Delight your taste buds with Shaoxing Wine Chicken Rice, a Chinese-inspired comf
 
 ## 4. Rice Wine Mushroom Sauce Pasta
 
-![Rice Wine Mushroom Sauce Pasta](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Rice-Wine-Mushroom-Sauce-Pasta.webp)
+![Rice Wine Mushroom Sauce Pasta](https://cdn.vattimalaysia.com/2024/01/Rice-Wine-Mushroom-Sauce-Pasta.webp)
 
 Give your pasta a unique twist with Rice Wine Mushroom Sauce, a rich and earthy sauce that complements your favorite pasta shape.
 
@@ -2092,7 +2092,7 @@ Give your pasta a unique twist with Rice Wine Mushroom Sauce, a rich and earthy 
 
 ## 5. Rice Wine Ginger Pork Bao Buns
 
-![Rice Wine Ginger Pork Bao Buns](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Rice-Wine-Ginger-Pork-Bao-Buns.webp)
+![Rice Wine Ginger Pork Bao Buns](https://cdn.vattimalaysia.com/2024/01/Rice-Wine-Ginger-Pork-Bao-Buns.webp)
 
 Transport your taste buds to the streets of Taiwan with Rice Wine Ginger Pork Bao Buns, where tender pork is marinated in a flavourful blend of rice wine and ginger.
 
@@ -2141,7 +2141,7 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 ## 1. One-Pot Chicken and Rice
 
-![One-Pot Chicken and Rice](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/One-Pot-Chicken-and-Rice.webp)
+![One-Pot Chicken and Rice](https://cdn.vattimalaysia.com/2024/01/One-Pot-Chicken-and-Rice.webp)
 
 Simplify dinner with our One-Pot Chicken and Rice. Just toss the ingredients into your rice cooker, press a button, and let it work its magic. A flavourful and wholesome meal ready in no time!
 
@@ -2173,7 +2173,7 @@ Continue reading for more convenient rice cooker recipes!
 
 ## 2. Creamy Mushroom Risotto
 
-![Creamy Mushroom Risotto](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Creamy-Mushroom-Risotto.webp)
+![Creamy Mushroom Risotto](https://cdn.vattimalaysia.com/2024/01/Creamy-Mushroom-Risotto.webp)
 
 Indulge in the velvety goodness of our Creamy Mushroom Risotto, made effortlessly in your rice cooker. This classic Italian dish is rich, satisfying, and requires minimal effort.
 
@@ -2205,7 +2205,7 @@ Continue reading for more convenient rice cooker recipes!
 
 ## 3. Sweet and Savory Pineapple Fried Rice
 
-![Sweet and Savory Pineapple Fried Rice](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Sweet-and-Savory-Pineapple-Fried-Rice.webp)
+![Sweet and Savory Pineapple Fried Rice](https://cdn.vattimalaysia.com/2024/01/Sweet-and-Savory-Pineapple-Fried-Rice.webp)
 
 Add a tropical twist to your meals with Sweet and Savory Pineapple Fried Rice. This rice cooker recipe combines the sweetness of pineapple with savoury flavours for a delightful side dish.
 
@@ -2240,7 +2240,7 @@ Add a tropical twist to your meals with Sweet and Savory Pineapple Fried Rice. T
 
 ## 4. Chocolate Lava Cake
 
-![Chocolate Lava Cake](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Chocolate-Lava-Cake.webp)
+![Chocolate Lava Cake](https://cdn.vattimalaysia.com/2024/01/Chocolate-Lava-Cake.webp)
 
 Indulge your sweet tooth with a decadent Chocolate Lava Cake made right in your rice cooker. This easy dessert is a perfect way to satisfy your chocolate cravings.
 
@@ -2275,7 +2275,7 @@ Indulge your sweet tooth with a decadent Chocolate Lava Cake made right in your 
 
 ## 5. Overnight Oats
 
-![Overnight Oats](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Overnight-Oats.webp)
+![Overnight Oats](https://cdn.vattimalaysia.com/2024/01/Overnight-Oats.webp)
 
 Start your day right with Overnight Oats prepared effortlessly in your rice cooker. A nutritious and customizable breakfast that’s ready when you wake up.
 
@@ -2314,7 +2314,7 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 ## 1. Tropical Paradise Smoothie Bowl
 
-![Tropical Paradise Smoothie Bowl](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Tropical-Paradise-Smoothie-Bowl.webp)
+![Tropical Paradise Smoothie Bowl](https://cdn.vattimalaysia.com/2024/01/Tropical-Paradise-Smoothie-Bowl.webp)
 
 Transport yourself to a tropical paradise with this refreshing smoothie bowl. Packed with pineapple, mango, and coconut, it’s a burst of sunshine in every spoonful.
 
@@ -2340,7 +2340,7 @@ Continue reading for more delightful smoothie bowl recipes!
 
 ## 2. Berry Blast Acai Bowl
 
-![Berry Blast Acai Bowl](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Berry-Blast-Acai-Bowl.webp)
+![Berry Blast Acai Bowl](https://cdn.vattimalaysia.com/2024/01/Berry-Blast-Acai-Bowl.webp)
 
 Fuel your day with the antioxidant power of a Berry Blast Acai Bowl. Acai berries, mixed berries, and spinach create a vibrant bowl that’s as nutritious as it is delicious.
 
@@ -2365,7 +2365,7 @@ Fuel your day with the antioxidant power of a Berry Blast Acai Bowl. Acai berrie
 
 ## 3. Green Goddess Avocado Bowl
 
-![Green Goddess Avocado Bowl](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Green-Goddess-Avocado-Bowl.webp)
+![Green Goddess Avocado Bowl](https://cdn.vattimalaysia.com/2024/01/Green-Goddess-Avocado-Bowl.webp)
 
 Indulge in the creamy goodness of a Green Goddess Avocado Bowl. Packed with spinach, avocado, and a hint of lime, it’s a refreshing and nutrient-rich choice.
 
@@ -2392,7 +2392,7 @@ Indulge in the creamy goodness of a Green Goddess Avocado Bowl. Packed with spin
 
 ## 4. Peanut Butter Banana Protein Bowl
 
-![Peanut Butter Banana Protein Bowl](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Peanut-Butter-Banana-Protein-Bowl.webp)
+![Peanut Butter Banana Protein Bowl](https://cdn.vattimalaysia.com/2024/01/Peanut-Butter-Banana-Protein-Bowl.webp)
 
 Kickstart your day with the deliciously satisfying Peanut Butter Banana Protein Bowl. Packed with protein, it’s a perfect post-workout treat or a hearty breakfast option.
 
@@ -2417,7 +2417,7 @@ Kickstart your day with the deliciously satisfying Peanut Butter Banana Protein 
 
 ## 5. Chocolate Cherry Almond Bowl
 
-![Chocolate Cherry Almond Bowl](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Chocolate-Cherry-Almond-Bowl.webp)
+![Chocolate Cherry Almond Bowl](https://cdn.vattimalaysia.com/2024/01/Chocolate-Cherry-Almond-Bowl.webp)
 
 Indulge your sweet tooth with the Chocolate Cherry Almond Bowl. The combination of cherries, almond butter, and a hint of chocolate makes it a dessert-worthy delight.
 
@@ -2456,7 +2456,7 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 ## 1. Green Goddess Detox Smoothie
 
-![Green Goddess Detox Smoothie](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Green-Goddess-Detox-Smoothie.webp)
+![Green Goddess Detox Smoothie](https://cdn.vattimalaysia.com/2024/01/Green-Goddess-Detox-Smoothie.webp)
 
 Kickstart your day with the Avocado and Bacon Egg Cups, a keto-friendly breakfast delight. This protein-packed option combines the richness of avocado with the savory goodness of bacon and eggs, creating a satisfying and nutritious morning treat.
 
@@ -2484,7 +2484,7 @@ Continue reading for more weight-loss-friendly smoothie recipes!
 
 ## 2. Berry Blast Protein Smoothie
 
-![Berry Blast Protein Smoothie](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Berry-Blast-Protein-Smoothie.webp)
+![Berry Blast Protein Smoothie](https://cdn.vattimalaysia.com/2024/01/Berry-Blast-Protein-Smoothie.webp)
 
 Fuel your workouts and support muscle recovery with the Berry Blast Protein Smoothie. Packed with berries and protein-rich ingredients, it’s a tasty and satisfying option for those aiming to shed pounds.
 
@@ -2511,7 +2511,7 @@ Fuel your workouts and support muscle recovery with the Berry Blast Protein Smoo
 
 ## 3. Tropical Turmeric Smoothie
 
-![Tropical Turmeric Smoothie](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Tropical-Turmeric-Smoothie.webp)
+![Tropical Turmeric Smoothie](https://cdn.vattimalaysia.com/2024/01/Tropical-Turmeric-Smoothie.webp)
 
 Boost your metabolism and reduce inflammation with the Tropical Turmeric Smoothie. This vibrant blend of pineapple, mango, and turmeric is not only delicious but also supports your weight loss journey.
 
@@ -2538,7 +2538,7 @@ Boost your metabolism and reduce inflammation with the Tropical Turmeric Smoothi
 
 ## 4. Spinach and Banana Power Smoothie
 
-![Spinach and Banana Power Smoothie](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Spinach-and-Banana-Power-Smoothie.webp)
+![Spinach and Banana Power Smoothie](https://cdn.vattimalaysia.com/2024/01/Spinach-and-Banana-Power-Smoothie.webp)
 
 Get a nutrient boost with the Spinach and Banana Power Smoothie. Packed with vitamins and minerals, this green concoction is a delicious way to support your weight loss efforts.
 
@@ -2565,7 +2565,7 @@ Get a nutrient boost with the Spinach and Banana Power Smoothie. Packed with vit
 
 ## 5. Citrus Zinger Immune-Boosting Smoothie
 
-![Citrus Zinger Immune-Boosting Smoothie](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Citrus-Zinger-Immune-Boosting-Smoothie.webp)
+![Citrus Zinger Immune-Boosting Smoothie](https://cdn.vattimalaysia.com/2024/01/Citrus-Zinger-Immune-Boosting-Smoothie.webp)
 
 Give your immune system a boost with the Citrus Zinger Immune-Boosting Smoothie. Packed with citrus fruits and a hint of ginger, this smoothie is not only refreshing but also aids in weight loss.
 
@@ -2625,7 +2625,7 @@ Find the perfect cooker hob to suit your cooking style.
 
 ## 1. Miso Ramen with Vegetables
 
-![Miso Ramen with Vegetables](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Miso-Ramen-with-Vegetables.webp)
+![Miso Ramen with Vegetables](https://cdn.vattimalaysia.com/2024/01/Miso-Ramen-with-Vegetables.webp)
 
 Begin your Asian soup adventure with Miso Ramen, a soul-warming bowl featuring a savory miso broth, chewy ramen noodles, and a medley of fresh vegetables. This quick and satisfying recipe captures the essence of Japanese comfort food.
 
@@ -2661,7 +2661,7 @@ Continue reading for more soul-warming Asian soup recipes!
 
 ## 2. Tom Yum Soup with Shrimp
 
-![Tom Yum Soup with Shrimp](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Tom-Yum-Soup-with-Shrimp.webp)
+![Tom Yum Soup with Shrimp](https://cdn.vattimalaysia.com/2024/01/Tom-Yum-Soup-with-Shrimp.webp)
 
 Transport your taste buds to Thailand with Tom Yum Soup, a zesty and aromatic broth featuring succulent shrimp, fragrant lemongrass, and a kick of chili heat. This Thai classic is perfect for those craving a flavourful and invigorating soup.
 
@@ -2695,7 +2695,7 @@ Transport your taste buds to Thailand with Tom Yum Soup, a zesty and aromatic br
 
 ## 3. Korean Kimchi Jjigae
 
-![Korean Kimchi Jjigae](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Korean-Kimchi-Jjigae.webp)
+![Korean Kimchi Jjigae](https://cdn.vattimalaysia.com/2024/01/Korean-Kimchi-Jjigae.webp)
 
 Experience the heartiness of Korean cuisine with Kimchi Jjigae, a robust stew featuring fermented kimchi, pork, and tofu. Packed with umami and a touch of spiciness, this Korean classic is a comforting delight.
 
@@ -2730,7 +2730,7 @@ Experience the heartiness of Korean cuisine with Kimchi Jjigae, a robust stew fe
 
 ## 4. Chinese Hot and Sour Soup
 
-![Chinese Hot and Sour Soup](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Chinese-Hot-and-Sour-Soup.webp)
+![Chinese Hot and Sour Soup](https://cdn.vattimalaysia.com/2024/01/Chinese-Hot-and-Sour-Soup.webp)
 
 Delight in the contrasting flavours of Chinese Hot and Sour Soup, a tantalizing blend of spicy and tangy notes. Loaded with tofu, mushrooms, and bamboo shoots, this soup offers a symphony of tastes that will invigorate your senses.
 
@@ -2766,7 +2766,7 @@ Delight in the contrasting flavours of Chinese Hot and Sour Soup, a tantalizing 
 
 ## 5. Vietnamese Pho Bo
 
-![Vietnamese Pho Bo](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Vietnamese-Pho-Bo.webp)
+![Vietnamese Pho Bo](https://cdn.vattimalaysia.com/2024/01/Vietnamese-Pho-Bo.webp)
 
 Conclude your culinary journey with Vietnamese Pho Bo, a fragrant and soul-soothing noodle soup. This iconic dish features aromatic spices, thinly sliced beef, and fresh herbs, creating a harmonious bowl of warmth that’s synonymous with Vietnamese comfort.
 
@@ -2819,7 +2819,7 @@ Discover the Perfect Kitchen Appliance for Your Keto Recipes!
 
 ## 1. Keto Garlic Parmesan Chicken
 
-![Keto-Garlic-Parmesan-Chicken.webp](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/02/Keto-Garlic-Parmesan-Chicken.webp)
+![Keto-Garlic-Parmesan-Chicken.webp](https://cdn.vattimalaysia.com/2024/02/Keto-Garlic-Parmesan-Chicken.webp)
 
 This succulent chicken dish is bursting with flavour and requires minimal effort. To make it, you’ll need:
 
@@ -2849,7 +2849,7 @@ Continue reading for more keto-friendly recipes!
 
 ## 2. Keto Lemon Herb Chicken
 
-![Keto Lemon Herb Chicken](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/02/Keto-Lemon-Herb-Chicken.webp)
+![Keto Lemon Herb Chicken](https://cdn.vattimalaysia.com/2024/02/Keto-Lemon-Herb-Chicken.webp)
 
 This refreshing chicken recipe is perfect for a light and healthy meal. Here’s what you’ll need:
 
@@ -2881,7 +2881,7 @@ This refreshing chicken recipe is perfect for a light and healthy meal. Here’s
 
 ## 3. Keto Creamy Mushroom Chicken
 
-![Keto Creamy Mushroom Chicken](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/02/Keto-Creamy-Mushroom-Chicken.webp)
+![Keto Creamy Mushroom Chicken](https://cdn.vattimalaysia.com/2024/02/Keto-Creamy-Mushroom-Chicken.webp)
 
 This creamy and indulgent chicken dish is sure to satisfy your cravings. Here’s what you’ll need:
 
@@ -2920,7 +2920,7 @@ This creamy and indulgent chicken dish is sure to satisfy your cravings. Here’
 
 ## 4. Keto Pesto Stuffed Chicken
 
-![Keto Pesto Stuffed Chicken](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/02/Keto-Pesto-Stuffed-Chicken.webp)
+![Keto Pesto Stuffed Chicken](https://cdn.vattimalaysia.com/2024/02/Keto-Pesto-Stuffed-Chicken.webp)
 
 This flavourful stuffed chicken recipe is perfect for a special occasion or just a fancy weeknight dinner. Here’s what you’ll need:
 
@@ -2954,7 +2954,7 @@ This flavourful stuffed chicken recipe is perfect for a special occasion or just
 
 These spicy and tangy lettuce wraps are perfect for a quick and sat
 
-![Keto Buffalo Chicken Lettuce Wraps](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/02/Keto-Buffalo-Chicken-Lettuce-Wraps.webp)
+![Keto Buffalo Chicken Lettuce Wraps](https://cdn.vattimalaysia.com/2024/02/Keto-Buffalo-Chicken-Lettuce-Wraps.webp)
 
 isfying meal. Here’s what you’ll need:
 
@@ -3018,7 +3018,7 @@ INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor)
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (17, 1, 'article', 'https://vattimalaysia.com/recipe/acai-bowl-recipes-quick-and-easy/', 'recipe/acai-bowl-recipes-quick-and-easy', 'Acai Bowl Recipes (Quick and Easy)');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (17, 2, 'article', 'https://vattimalaysia.com/recipe/detox-smoothie-recipe-for-weight-loss/', 'recipe/detox-smoothie-recipe-for-weight-loss', '5 Best Weight Loss Smoothie Recipe');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (17, 3, 'home', 'https://vattimalaysia.com/', NULL, 'VATTI appliances');
-INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (18, 'induction-cooker-vs-gas-stove', 'buying-guide/induction-cooker-vs-gas-stove', 'buying-guide', 'Induction Cooker vs Gas Stove in Malaysia: What is the Difference?', 'Induction Cooker vs Gas Stove: What is the Difference?', 'Explore the distinctions between induction cookers and gas stoves in Malaysia to make an informed decision for your kitchen.', '![Induction Cooker vs Gas Stove](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Induction-Cooker-vs-Gas-Stove.webp)
+INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (18, 'induction-cooker-vs-gas-stove', 'buying-guide/induction-cooker-vs-gas-stove', 'buying-guide', 'Induction Cooker vs Gas Stove in Malaysia: What is the Difference?', 'Induction Cooker vs Gas Stove: What is the Difference?', 'Explore the distinctions between induction cookers and gas stoves in Malaysia to make an informed decision for your kitchen.', '![Induction Cooker vs Gas Stove](https://cdn.vattimalaysia.com/2024/01/Induction-Cooker-vs-Gas-Stove.webp)
 
 [ROBAM High-Efficient Smart Induction Hob W2985](https://www.senheng.com.my/robam-high-efficient-smart-induction-hob-w2985.html) (Left),
 [VATTI “Professional Series” C720S](/professional-series-c720s/) (Right)
@@ -3091,7 +3091,7 @@ INSERT INTO article_image (article_id, image_id, position) VALUES (18, (SELECT i
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (18, 0, 'external', 'https://www.senheng.com.my/robam-high-efficient-smart-induction-hob-w2985.html', NULL, 'ROBAM High-Efficient Smart Induction Hob W2985');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (18, 1, 'product', 'https://vattimalaysia.com/professional-series-c720s/', 'professional-series-c720s', 'VATTI “Professional Series” C720S');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (18, 2, 'home', 'https://vattimalaysia.com/', NULL, 'Explore VATTI product');
-INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (19, 'convection-oven-vs-infrared-which-should-you-choose', 'buying-guide/convection-oven-vs-infrared-which-should-you-choose', 'buying-guide', 'Convection Oven vs Infrared: Which Should You Choose?', 'Convection Oven vs Infrared: Which Should You Choose?', 'Discover the pros and cons of convection ovens and infrared cooking methods, helping you decide the ideal appliance for your culinary needs.', '![Convection Oven vs Infrared Oven](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Convection-Oven-vs-Infrared-Oven.webp)
+INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (19, 'convection-oven-vs-infrared-which-should-you-choose', 'buying-guide/convection-oven-vs-infrared-which-should-you-choose', 'buying-guide', 'Convection Oven vs Infrared: Which Should You Choose?', 'Convection Oven vs Infrared: Which Should You Choose?', 'Discover the pros and cons of convection ovens and infrared cooking methods, helping you decide the ideal appliance for your culinary needs.', '![Convection Oven vs Infrared Oven](https://cdn.vattimalaysia.com/2024/01/Convection-Oven-vs-Infrared-Oven.webp)
 
 [FlashXpress G110P Toaster Oven](https://shop.panasonic.com/products/flashxpress-toaster-oven-1300w) (Right)
 
@@ -3168,7 +3168,7 @@ INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor)
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (19, 1, 'product-category', 'https://vattimalaysia.com/combi-and-steam-oven-in-malaysia/', 'combi-and-steam-oven-in-malaysia', 'Check it out here');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (19, 2, 'article', 'https://vattimalaysia.com/buying-guide/induction-cooker-vs-gas-stove-in-malaysia-what-is-the-difference/', 'buying-guide/induction-cooker-vs-gas-stove-in-malaysia-what-is-the-difference', 'Induction Cooker vs Gas Stove in Malaysia: What is the Difference?');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (19, 3, 'article', 'https://vattimalaysia.com/buying-guide/which-is-better-induction-or-ceramic-cooker/', 'buying-guide/which-is-better-induction-or-ceramic-cooker', 'Which is Better Induction or Ceramic Cooker?');
-INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (20, 'which-is-better-induction-or-ceramic-cooker', 'buying-guide/which-is-better-induction-or-ceramic-cooker', 'buying-guide', 'Which is Better Induction or Ceramic Cooker?', 'Which is Better Induction or Ceramic Cooker?', 'Uncover the unique features of induction and ceramic cooker, aiding you in choosing the perfect kitchen companion that suits your preferences.', '![Induction vs Ceramic hob](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Induction-vs-Ceramic.webp)
+INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (20, 'which-is-better-induction-or-ceramic-cooker', 'buying-guide/which-is-better-induction-or-ceramic-cooker', 'buying-guide', 'Which is Better Induction or Ceramic Cooker?', 'Which is Better Induction or Ceramic Cooker?', 'Uncover the unique features of induction and ceramic cooker, aiding you in choosing the perfect kitchen companion that suits your preferences.', '![Induction vs Ceramic hob](https://cdn.vattimalaysia.com/2024/01/Induction-vs-Ceramic.webp)
 
 [Fujioh Induction Hob With 2 Zones](https://www.fujioh.com/my/product/induction-hob-with-2-zones-fh-id5120/) (Left),
 [Rinnai RB-7013E Ceramic Hob](https://www.rinnai.com.my/product/domestic/built-in-electric-hob/rb-7013e-cb/) (Right)
@@ -3255,7 +3255,7 @@ INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor)
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (20, 2, 'product-category', 'https://vattimalaysia.com/cooker-hob-in-malaysia/', 'cooker-hob-in-malaysia', 'Check it out here');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (20, 3, 'article', 'https://vattimalaysia.com/buying-guide/glass-vs-stainless-gas-hob-which-gas-hob-are-best/', 'buying-guide/glass-vs-stainless-gas-hob-which-gas-hob-are-best', 'Glass vs Stainless Gas Hob: Which Gas hob are Best?');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (20, 4, 'article', 'https://vattimalaysia.com/buying-guide/induction-cooker-vs-gas-stove-in-malaysia-what-is-the-difference/', 'buying-guide/induction-cooker-vs-gas-stove-in-malaysia-what-is-the-difference', 'Induction Cooker vs Gas Stove in Malaysia: What is the Difference?');
-INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (21, 'air-fryer-vs-convection-oven', 'buying-guide/air-fryer-vs-convection-oven', 'buying-guide', 'Air Fryer vs Convection Oven: What are the Pros and Cons?', 'Convection Oven vs Air Fryer: What are the Pros and Cons?', 'Discover the pros and cons of Air Fryer vs Convection Oven. Make an informed choice for your kitchen. Learn more about their differences and benefits.', '![Convection Oven vs Air Fryer](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Convection-Oven-vs-Air-Fryer.webp)
+INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (21, 'air-fryer-vs-convection-oven', 'buying-guide/air-fryer-vs-convection-oven', 'buying-guide', 'Air Fryer vs Convection Oven: What are the Pros and Cons?', 'Convection Oven vs Air Fryer: What are the Pros and Cons?', 'Discover the pros and cons of Air Fryer vs Convection Oven. Make an informed choice for your kitchen. Learn more about their differences and benefits.', '![Convection Oven vs Air Fryer](https://cdn.vattimalaysia.com/2024/01/Convection-Oven-vs-Air-Fryer.webp)
 
 Are you tired of making those tough choices in the kitchen? When it comes to cooking appliances, convection ovens and air fryers are two popular choices that can both deliver delicious, crispy results. However, they have different features and applications, so it’s important to understand their strengths and weaknesses to determine which one is the right fit for your cooking needs.
 
@@ -3327,7 +3327,7 @@ Ultimately, choose between a convection oven and an air fryer based on your cook
 INSERT INTO article_category (article_id, category_id, is_primary) VALUES (21, 1, 1);
 INSERT INTO article_image (article_id, image_id, position) VALUES (21, (SELECT id FROM image WHERE legacy_url = 'https://vattimalaysia.com/wp-content/uploads/2024/01/Convection-Oven-vs-Air-Fryer.webp'), 0);
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (21, 0, 'home', 'https://vattimalaysia.com/', NULL, 'Explore VATTI products');
-INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (22, 'is-a-ceramic-cooktop-same-as-a-glass-cooktop', 'buying-guide/is-a-ceramic-cooktop-same-as-a-glass-cooktop', 'buying-guide', 'Is a Ceramic Cooktop Same as a Glass Cooktop?', 'Is a Ceramic Cooktop the Same as a Glass Cooktop?', 'Clarify the distinctions between ceramic and glass cooktop, ensuring you understand the characteristics that set them apart in your culinary space.', '![Ceramic vs Glass Stove Top](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Ceramic-vs-Glass-Stove-Top.webp)
+INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (22, 'is-a-ceramic-cooktop-same-as-a-glass-cooktop', 'buying-guide/is-a-ceramic-cooktop-same-as-a-glass-cooktop', 'buying-guide', 'Is a Ceramic Cooktop Same as a Glass Cooktop?', 'Is a Ceramic Cooktop the Same as a Glass Cooktop?', 'Clarify the distinctions between ceramic and glass cooktop, ensuring you understand the characteristics that set them apart in your culinary space.', '![Ceramic vs Glass Stove Top](https://cdn.vattimalaysia.com/2024/01/Ceramic-vs-Glass-Stove-Top.webp)
 
 [Rinnai RB-7013E Ceramic Hob](https://www.rinnai.com.my/product/domestic/built-in-electric-hob/rb-7013e-cb/) (Left),
 [VATTI Flexi Hob C822G](/vatti-flexi-hob-c822g/) (Right)
@@ -3402,7 +3402,7 @@ INSERT INTO article_image (article_id, image_id, position) VALUES (22, (SELECT i
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (22, 0, 'external', 'https://www.rinnai.com.my/product/domestic/built-in-electric-hob/rb-7013e-cb/', NULL, 'Rinnai RB-7013E Ceramic Hob');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (22, 1, 'product', 'https://vattimalaysia.com/vatti-flexi-hob-c822g/', 'vatti-flexi-hob-c822g', 'VATTI Flexi Hob C822G');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (22, 2, 'home', 'https://vattimalaysia.com/', NULL, 'Explore more VATTI products');
-INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (23, 'is-infrared-gas-stove-good', 'buying-guide/is-infrared-gas-stove-good', 'buying-guide', 'Is Infrared Gas Stove Good? Infrared Burner vs Gas Burner', 'Is Infrared Gas Stove Good? Infrared Burner vs Gas Burner', 'Get guidance on choosing between infrared and gas stoves, focusing on key factors to help you make the right decision for your kitchen.', '![Infrared Stove vs Gas Stove](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/Infrared-Stove-vs-Gas-Stove.webp)
+INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (23, 'is-infrared-gas-stove-good', 'buying-guide/is-infrared-gas-stove-good', 'buying-guide', 'Is Infrared Gas Stove Good? Infrared Burner vs Gas Burner', 'Is Infrared Gas Stove Good? Infrared Burner vs Gas Burner', 'Get guidance on choosing between infrared and gas stoves, focusing on key factors to help you make the right decision for your kitchen.', '![Infrared Stove vs Gas Stove](https://cdn.vattimalaysia.com/2024/03/Infrared-Stove-vs-Gas-Stove.webp)
 
 [Barton Deluxe Propane Gas Range Stove 2](https://www.amazon.com/Barton-Propane-Cooktop-Ignition-Outdoor/dp/B084RM3JGR/ref=asc_df_B084RM3JGR/?tag=&linkCode=df0&hvadid=416728493511&hvpos=&hvnetw=g&hvrand=5160855325457878160&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9031923&hvtargid=pla-896273476686&mcid=65a774b2e98e36d49d576d0b1c59af18&ref=&adgrpid=96812101431&gclid=Cj0KCQjw2PSvBhDjARIsAKc2cgMx3mya5SvnBm1OqUzW_Pf6QVq67t_118SHcGfWUBmb6uYIOwj9QCQaAhR_EALw_wcB&th=1) (Left),
 [VATTI 3 Burner Gas Hob C830G](/vatti-3-burner-gas-hob-c830g/) (Right)
@@ -3477,7 +3477,7 @@ INSERT INTO article_image (article_id, image_id, position) VALUES (23, (SELECT i
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (23, 0, 'external', 'https://www.amazon.com/Barton-Propane-Cooktop-Ignition-Outdoor/dp/B084RM3JGR/ref=asc_df_B084RM3JGR/?tag=&amp;linkCode=df0&amp;hvadid=416728493511&amp;hvpos=&amp;hvnetw=g&amp;hvrand=5160855325457878160&amp;hvpone=&amp;hvptwo=&amp;hvqmt=&amp;hvdev=c&amp;hvdvcmdl=&amp;hvlocint=&amp;hvlocphy=9031923&amp;hvtargid=pla-896273476686&amp;mcid=65a774b2e98e36d49d576d0b1c59af18&amp;ref=&amp;adgrpid=96812101431&amp;gclid=Cj0KCQjw2PSvBhDjARIsAKc2cgMx3mya5SvnBm1OqUzW_Pf6QVq67t_118SHcGfWUBmb6uYIOwj9QCQaAhR_EALw_wcB&amp;th=1', NULL, 'Barton Deluxe Propane Gas Range Stove 2');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (23, 1, 'product', 'https://vattimalaysia.com/vatti-3-burner-gas-hob-c830g/', 'vatti-3-burner-gas-hob-c830g', 'VATTI 3 Burner Gas Hob C830G');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (23, 2, 'home', 'https://vattimalaysia.com/', NULL, 'Explore more VATTI products');
-INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (24, 'ceramic-cooker-vs-infrared-cooker-what-is-the-difference', 'buying-guide/ceramic-cooker-vs-infrared-cooker-what-is-the-difference', 'buying-guide', 'Ceramic Cooker vs Infrared Cooker: What is the Difference?', 'Ceramic Cooker vs Infrared Cooker: What is the Difference?', 'Explore the differences between ceramic and infrared cookers, enabling you to make an informed choice based on your cooking preferences.', '![Ceramic Cooker vs Infrared Cooker](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/Ceramic-Cooker-vs-Infrared-Cooker.webp)
+INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (24, 'ceramic-cooker-vs-infrared-cooker-what-is-the-difference', 'buying-guide/ceramic-cooker-vs-infrared-cooker-what-is-the-difference', 'buying-guide', 'Ceramic Cooker vs Infrared Cooker: What is the Difference?', 'Ceramic Cooker vs Infrared Cooker: What is the Difference?', 'Explore the differences between ceramic and infrared cookers, enabling you to make an informed choice based on your cooking preferences.', '![Ceramic Cooker vs Infrared Cooker](https://cdn.vattimalaysia.com/2024/03/Ceramic-Cooker-vs-Infrared-Cooker.webp)
 
 [Rinnai RB-7013E Ceramic Hob](https://www.rinnai.com.my/product/domestic/built-in-electric-hob/rb-7013e-cb/) (Left),
 [Barton Deluxe Propane Gas Range Stove 2](https://www.amazon.com/Barton-Propane-Cooktop-Ignition-Outdoor/dp/B084RM3JGR/ref=asc_df_B084RM3JGR/?tag=&linkCode=df0&hvadid=416728493511&hvpos=&hvnetw=g&hvrand=5160855325457878160&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9031923&hvtargid=pla-896273476686&mcid=65a774b2e98e36d49d576d0b1c59af18&ref=&adgrpid=96812101431&gclid=Cj0KCQjw2PSvBhDjARIsAKc2cgMx3mya5SvnBm1OqUzW_Pf6QVq67t_118SHcGfWUBmb6uYIOwj9QCQaAhR_EALw_wcB&th=1) (Right)
@@ -3577,7 +3577,7 @@ INSERT INTO article_image (article_id, image_id, position) VALUES (24, (SELECT i
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (24, 0, 'external', 'https://www.rinnai.com.my/product/domestic/built-in-electric-hob/rb-7013e-cb/', NULL, 'Rinnai RB-7013E Ceramic Hob');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (24, 1, 'external', 'https://www.amazon.com/Barton-Propane-Cooktop-Ignition-Outdoor/dp/B084RM3JGR/ref=asc_df_B084RM3JGR/?tag=&amp;linkCode=df0&amp;hvadid=416728493511&amp;hvpos=&amp;hvnetw=g&amp;hvrand=5160855325457878160&amp;hvpone=&amp;hvptwo=&amp;hvqmt=&amp;hvdev=c&amp;hvdvcmdl=&amp;hvlocint=&amp;hvlocphy=9031923&amp;hvtargid=pla-896273476686&amp;mcid=65a774b2e98e36d49d576d0b1c59af18&amp;ref=&amp;adgrpid=96812101431&amp;gclid=Cj0KCQjw2PSvBhDjARIsAKc2cgMx3mya5SvnBm1OqUzW_Pf6QVq67t_118SHcGfWUBmb6uYIOwj9QCQaAhR_EALw_wcB&amp;th=1', NULL, 'Barton Deluxe Propane Gas Range Stove 2');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (24, 2, 'product-category', 'https://vattimalaysia.com/cooker-hob-in-malaysia/', 'cooker-hob-in-malaysia', 'Explore VATTI Cooker Hob Malaysia');
-INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (25, 'is-an-infrared-gas-stove-worth-it', 'buying-guide/is-an-infrared-gas-stove-worth-it', 'buying-guide', 'Is an Infrared Gas Stove Worth It? Pros and Cons Explanied', 'Is an Infrared Gas Stove Worth It? Pros and Cons Explanied', 'Delve into the similarities and differences between normal and infrared gas stoves, aiding you in selecting the optimal gas stove for your kitchen.', '![infrared gas stove vs normal gas stove](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/Infrared-Gas-Stove-vs-Normal-Gas-Stove.webp)
+INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (25, 'is-an-infrared-gas-stove-worth-it', 'buying-guide/is-an-infrared-gas-stove-worth-it', 'buying-guide', 'Is an Infrared Gas Stove Worth It? Pros and Cons Explanied', 'Is an Infrared Gas Stove Worth It? Pros and Cons Explanied', 'Delve into the similarities and differences between normal and infrared gas stoves, aiding you in selecting the optimal gas stove for your kitchen.', '![infrared gas stove vs normal gas stove](https://cdn.vattimalaysia.com/2024/03/Infrared-Gas-Stove-vs-Normal-Gas-Stove.webp)
 
 [Barton Deluxe Propane Gas Range Stove 2](https://www.amazon.com/Barton-Propane-Cooktop-Ignition-Outdoor/dp/B084RM3JGR/ref=asc_df_B084RM3JGR/?tag=&linkCode=df0&hvadid=416728493511&hvpos=&hvnetw=g&hvrand=5160855325457878160&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9031923&hvtargid=pla-896273476686&mcid=65a774b2e98e36d49d576d0b1c59af18&ref=&adgrpid=96812101431&gclid=Cj0KCQjw2PSvBhDjARIsAKc2cgMx3mya5SvnBm1OqUzW_Pf6QVq67t_118SHcGfWUBmb6uYIOwj9QCQaAhR_EALw_wcB&th=1) (Left),
 [“Professional Series” C720S](/professional-series-c720s/) (Right)
@@ -3660,7 +3660,7 @@ INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor)
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (25, 2, 'product-category', 'https://vattimalaysia.com/cooker-hob/', 'cooker-hob', 'Check it out here');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (25, 3, 'article', 'https://vattimalaysia.com/buying-guide/convection-oven-or-regular-oven/', 'buying-guide/convection-oven-or-regular-oven', 'Is It better to Cook in Convection Oven or Regular Oven?');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (25, 4, 'article', 'https://vattimalaysia.com/buying-guide/is-infrared-gas-stove-good/', 'buying-guide/is-infrared-gas-stove-good', 'Is Infrared Gas Stove Good? Infrared Burner vs Gas Burner');
-INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (26, 'difference-between-induction-and-electric-cooker', 'buying-guide/difference-between-induction-and-electric-cooker', 'buying-guide', 'What''s the Difference Between Induction and Electric cooker?', 'What is the Difference Between Induction and Electric Cooker?', 'Compare the difference between induction and electric cooker to determine which one aligns best with your cooking habits.', '![induction vs electric cooker](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Induction-vs-Electric-Cooker.webp)
+INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (26, 'difference-between-induction-and-electric-cooker', 'buying-guide/difference-between-induction-and-electric-cooker', 'buying-guide', 'What''s the Difference Between Induction and Electric cooker?', 'What is the Difference Between Induction and Electric Cooker?', 'Compare the difference between induction and electric cooker to determine which one aligns best with your cooking habits.', '![induction vs electric cooker](https://cdn.vattimalaysia.com/2024/01/Induction-vs-Electric-Cooker.webp)
 
 [ROBAM High-Efficient Smart Induction Hob W2985](https://www.senheng.com.my/robam-high-efficient-smart-induction-hob-w2985.html) (Left),
 [Built-in radiant hob](https://www.electrolux.com.my/appliances/stoves-hobs/ehc7240ba/) (Right)
@@ -3744,7 +3744,7 @@ INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor)
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (26, 2, 'product-category', 'https://vattimalaysia.com/cooker-hob-in-malaysia/', 'cooker-hob-in-malaysia', 'Check it out here');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (26, 3, 'article', 'https://vattimalaysia.com/buying-guide/induction-cooker-vs-gas-stove-in-malaysia-what-is-the-difference/', 'buying-guide/induction-cooker-vs-gas-stove-in-malaysia-what-is-the-difference', 'Induction Cooker vs Gas Stove in Malaysia: What is the Difference?');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (26, 4, 'article', 'https://vattimalaysia.com/buying-guide/ceramic-cooker-vs-infrared-cooker-what-is-the-difference/', 'buying-guide/ceramic-cooker-vs-infrared-cooker-what-is-the-difference', 'Ceramic Cooker vs Infrared Cooker: What is the Difference?');
-INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (27, 'convection-oven-or-regular-oven', 'buying-guide/convection-oven-or-regular-oven', 'buying-guide', 'Is It better to Cook in Convection Oven or Regular Oven?', 'Is It better to Cook in Convection Oven or Regular Oven?', 'Undecided on convection oven or regular oven? This comparison helps you choose the right one for your home kitchen.', '![Convection Oven](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/Convection-Oven-vs-Traditional-Oven.webp)
+INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (27, 'convection-oven-or-regular-oven', 'buying-guide/convection-oven-or-regular-oven', 'buying-guide', 'Is It better to Cook in Convection Oven or Regular Oven?', 'Is It better to Cook in Convection Oven or Regular Oven?', 'Undecided on convection oven or regular oven? This comparison helps you choose the right one for your home kitchen.', '![Convection Oven](https://cdn.vattimalaysia.com/2024/01/Convection-Oven-vs-Traditional-Oven.webp)
 
 Are you tired of waiting for your oven to preheat and your food to cook? Convection ovens might be the answer to your culinary woes. In this blog post, we’ll dive deep into the key differences between a convection oven and a traditional oven to help you make an informed decision for your kitchen.
 
@@ -3818,7 +3818,7 @@ INSERT INTO article_image (article_id, image_id, position) VALUES (27, (SELECT i
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (27, 0, 'home', 'https://vattimalaysia.com/', NULL, 'Explore VATTI products');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (28, 'how-to-remove-cloudiness-from-glass-stovetop', 'tips-tricks/how-to-remove-cloudiness-from-glass-stovetop', 'tips-tricks', 'How to Remove Cloudiness from Glass Stovetop ?', 'How to Remove Cloudiness from Glass Stovetop ?', 'Bid farewell to cloudiness on your glass stovetop with our proven methods. Learn how to remove cloudiness from glass stovetop effortlessly.', 'Are you troubled by cloudiness on your glass stovetop? Wondering how to remove cloudiness from glass stovetop effectively? Keeping your glass stovetop clean is essential for maintaining its pristine appearance and functionality.
 
-![how to remove cloudiness from glass stovetop](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/How-to-Remove-Cloudiness-from-Glass-Stovetop.webp)
+![how to remove cloudiness from glass stovetop](https://cdn.vattimalaysia.com/2024/03/How-to-Remove-Cloudiness-from-Glass-Stovetop.webp)
 
 ## Why does my glass top stove look cloudy?
 
@@ -3843,7 +3843,7 @@ Now that your stovetop is prepared, let’s move on to the actual cleaning proce
 
 ### Method 1: Vinegar and Water Solution:
 
-![Vineger](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/vineger.webp)
+![Vineger](https://cdn.vattimalaysia.com/2024/11/vineger.webp)
 
 Wondering how to remove cloudiness from glass stovetop using natural ingredients? When it comes to tackling mineral deposits and stubborn stains, vinegar emerges as a powerful ally due to its acidic nature. This solution provides a natural and effective way to dissolve cloudiness from your stovetop.
 
@@ -3862,7 +3862,7 @@ Wondering how to remove cloudiness from glass stovetop using natural ingredients
 
 ### Method 2: Baking Soda Paste:
 
-![baking soda](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/baking-soda.webp)
+![baking soda](https://cdn.vattimalaysia.com/2024/11/baking-soda.webp)
 
 Looking for a gentle yet effective solution? Baking soda, known for its gentle abrasive properties, is another effective remedy for lifting tough stains without causing damage to the glass surface of your stovetop.
 
@@ -3920,7 +3920,7 @@ INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor)
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (28, 1, 'product-category', 'https://vattimalaysia.com/cooker-hob-in-malaysia/', 'cooker-hob-in-malaysia', 'Explore VATTI cooker hob');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (29, 'stainless-steel-cleaning-solutions-5-tips', 'tips-tricks/stainless-steel-cleaning-solutions-5-tips', 'tips-tricks', 'Stainless Steel Cleaning Solutions: 5 Tips', 'Stainless Steel Cleaning Solutions: 5 Tips', 'Keep your stainless steel shining with our 5 tips for cleaning stainless steel. Our stainless steel cleaning solution ensures a pristine finish every time.', 'Are you struggling to find the best stainless steel cleaning solution for your kitchen appliances? Keeping your stainless steel items gleaming can be challenging, but with the right techniques, you can easily maintain their shine and durability. In this guide, we’ll explore five effective stainless steel cleaning solutions to help you achieve sparkling results.
 
-![Stainless Steel Cleaning Solutions](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/Stainless-Steel-Cleaning-Solutions.webp)
+![Stainless Steel Cleaning Solutions](https://cdn.vattimalaysia.com/2024/03/Stainless-Steel-Cleaning-Solutions.webp)
 
 ## Understanding the Importance of Proper Stainless Steel Cleaning
 
@@ -4061,7 +4061,7 @@ INSERT INTO article_image (article_id, image_id, position) VALUES (29, (SELECT i
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (29, 0, 'home', 'https://vattimalaysia.com/', NULL, 'Explore VATTI products');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (30, 'how-to-remove-onion-smell-from-wood-cutting-boards', 'tips-tricks/how-to-remove-onion-smell-from-wood-cutting-boards', 'tips-tricks', 'How to Remove Onion Smell from Wood Cutting Boards ?', 'How to Remove Onion Smell from Wood Cutting Boards ?', 'Eliminate onion odors from wood cutting boards using our techniques. Discover how to remove onion smell from wood cutting board effectively.', 'Are you struggling with the lingering smell of onions on your wood cutting board? In this guide, we’ll explore effective methods for how to remove onion smell from wood cutting board, leaving it clean and odour-free.
 
-![how to remove onion smell from wood cutting board](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/How-to-Remove-Onion-Smell-from-Wood-Cutting-Boards.webp)
+![how to remove onion smell from wood cutting board](https://cdn.vattimalaysia.com/2024/03/How-to-Remove-Onion-Smell-from-Wood-Cutting-Boards.webp)
 
 ## Before we get started
 
@@ -4085,7 +4085,7 @@ Eliminating onion odour from wood cutting boards is straightforward with these e
 
 ### Method 1: Baking Soda Paste:
 
-![baking soda](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/baking-soda.webp)
+![baking soda](https://cdn.vattimalaysia.com/2024/11/baking-soda.webp)
 
 - **Ingredients:** Baking soda, water.
 
@@ -4102,7 +4102,7 @@ Eliminating onion odour from wood cutting boards is straightforward with these e
 
 ### Method 2: Lemon and Salt Scrub:
 
-![Lemon and salt scrub](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Lemon-and-Salt-Scrub.webp)
+![Lemon and salt scrub](https://cdn.vattimalaysia.com/2024/11/Lemon-and-Salt-Scrub.webp)
 
 Harness the acidic properties of lemon combined with salt to create a potent solution for combating onion odours on your wood cutting board.
 
@@ -4123,7 +4123,7 @@ Harness the acidic properties of lemon combined with salt to create a potent sol
 
 ### Method 3: Vinegar Soak:
 
-![Vineger](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/vineger.webp)
+![Vineger](https://cdn.vattimalaysia.com/2024/11/vineger.webp)
 
 Harness the odour-neutralizing power of vinegar with this simple soaking method to rid your wood cutting board of onion smells.
 
@@ -4173,7 +4173,7 @@ INSERT INTO article_image (article_id, image_id, position) VALUES (30, (SELECT i
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (30, 0, 'product-category', 'https://vattimalaysia.com/cooker-hob-in-malaysia/', 'cooker-hob-in-malaysia', 'Check it out here');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (31, 'how-to-clean-a-burnt-microwave-oven', 'tips-tricks/how-to-clean-a-burnt-microwave-oven', 'tips-tricks', 'How to Clean a Burnt Microwave Oven ?', 'How to Clean a Burnt Microwave Oven ?', 'Restore your burnt microwave oven with our step-by-step guide. Learn how to clean a burnt microwave oven and banish burnt odors for good.', 'Dealing with a burnt microwave oven can be frustrating but fear not! In this guide, we’ll walk you through how to clean a burnt microwave oven effectively, restoring it to its sparkling clean state.
 
-![how to clean a burnt microwave oven](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/how-to-clean-a-burnt-microwave-oven.webp)
+![how to clean a burnt microwave oven](https://cdn.vattimalaysia.com/2024/03/how-to-clean-a-burnt-microwave-oven.webp)
 
 ## Why is My Microwave Burning Inside?
 
@@ -4262,7 +4262,7 @@ INSERT INTO article_image (article_id, image_id, position) VALUES (31, (SELECT i
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (31, 0, 'product-category', 'https://vattimalaysia.com/combi-and-steam-oven-in-malaysia/', 'combi-and-steam-oven-in-malaysia', 'Explore VATTI Combi Oven');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (32, 'how-to-clean-white-spots-on-glass-stove-tops', 'tips-tricks/how-to-clean-white-spots-on-glass-stove-tops', 'tips-tricks', 'How to Clean White Spots on Glass Stove Tops ?', 'How to Clean White Spots on Glass Stove Tops ?', 'Achieve spotless glass stove tops with our expert tips. Find out how to clean white spots on glass stove top and maintain a flawless appearance.', 'Are you troubled by unsightly white spots on your glass stove top? Discovering how to clean white spots on glass stove top effectively is essential for maintaining its pristine appearance and functionality.
 
-![how to clean white spots on glass stove top](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/how-to-clean-white-spots-on-glass-stove-top.webp)
+![how to clean white spots on glass stove top](https://cdn.vattimalaysia.com/2024/03/how-to-clean-white-spots-on-glass-stove-top.webp)
 
 ## Why is the Glass Top of My Stove Turning White?
 
@@ -4348,7 +4348,7 @@ INSERT INTO article_image (article_id, image_id, position) VALUES (32, (SELECT i
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (32, 0, 'product-category', 'https://vattimalaysia.com/cooker-hob-in-malaysia/', 'cooker-hob-in-malaysia', 'Explore VATTI cooker hob');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (33, 'how-to-clean-stove-grates-a-step-by-step-guide', 'tips-tricks/how-to-clean-stove-grates-a-step-by-step-guide', 'tips-tricks', 'How to Clean Stove Grates: A Step-by-Step Guide', 'How to Clean Stove Grates: A Step-by-Step Guide', 'Discover how to clean stove grates like a pro with our comprehensive guide. Follow our step-by-step instructions for perfect results every time.', 'Wondering how to clean stove grates effectively? Cleaning stove grates is an essential part of kitchen maintenance to ensure your stove functions efficiently and looks its best..
 
-![how to clean stove grates](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/how-to-clean-stove-grates.webp)
+![how to clean stove grates](https://cdn.vattimalaysia.com/2024/03/how-to-clean-stove-grates.webp)
 
 ## Things to Know When Cleaning Stove Grates
 
@@ -4431,7 +4431,7 @@ INSERT INTO article_image (article_id, image_id, position) VALUES (33, (SELECT i
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (33, 0, 'home', 'https://vattimalaysia.com/', NULL, 'Explore VATTI products');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (34, 'how-to-remove-rust-from-electric-stove-step-by-step-guide', 'tips-tricks/how-to-remove-rust-from-electric-stove-step-by-step-guide', 'tips-tricks', 'How to Remove Rust from Electric Stove: Step-by-Step Guide', 'How to Remove Rust from Electric Stove: Step-by-Step Guide', 'Say goodbye to rust on your electric stove with our detailed guide. Learn how to remove rust from electric stove and keep it looking pristine.', 'Are you grappling with rust on your electric stove and wondering how to remove rust from electric stove surfaces effectively? Rust can not only be unsightly but also affect the functionality of your stove, so it’s essential to address it promptly with the right methods.
 
-![how to remove rust from electric stove](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/how-to-remove-rust-from-electric-stove.webp)
+![how to remove rust from electric stove](https://cdn.vattimalaysia.com/2024/03/how-to-remove-rust-from-electric-stove.webp)
 
 ## Why is My Electric Stove Rusting?
 
@@ -4538,7 +4538,7 @@ INSERT INTO article_image (article_id, image_id, position) VALUES (34, (SELECT i
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (34, 0, 'home', 'https://vattimalaysia.com/', NULL, 'Explore VATTI products');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (35, 'how-to-unstick-food-from-aluminum-foil-handy-tips', 'tips-tricks/how-to-unstick-food-from-aluminum-foil-handy-tips', 'tips-tricks', 'How to Unstick Food from Aluminum Foil: Handy Tips', 'How to Unstick Food from Aluminum Foil: Handy Tips', 'Explore how to unstick food from aluminum foil effortlessly with our handy tips. Use simple ways to unstick food from aluminum foil.', 'Dealing with food sticking to aluminium foil can be frustrating, but fret not! In this guide, we’ll explore effective methods on how to unstick food from aluminium foil, making cleanup a breeze.
 
-![how to unstick food from aluminum foil](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/how-to-unstick-food-from-aluminum-foil.webp)
+![how to unstick food from aluminum foil](https://cdn.vattimalaysia.com/2024/03/how-to-unstick-food-from-aluminum-foil.webp)
 
 ## Which Side of Aluminium Foil is Stick Free?
 
@@ -4630,7 +4630,7 @@ INSERT INTO article_image (article_id, image_id, position) VALUES (35, (SELECT i
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (35, 0, 'home', 'https://vattimalaysia.com/', NULL, 'Explore VATTI products');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (36, 'how-to-remove-scratches-on-stove-top', 'tips-tricks/how-to-remove-scratches-on-stove-top', 'tips-tricks', 'How to Remove Scratches From Stove Top: Quick Fixes', 'How to Remove Scratches From Stove Top: Quick Fixes', 'Remove scratches from your stove top using our method. Learn how to remove scratches on stove top and restore its smooth surface.', 'Are you troubled by scratches on your stove top? Discovering how to remove scratches from stove top effectively is crucial for maintaining its appearance and prolonging its lifespan.
 
-![how to remove scratches on stove top](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/how-to-remove-scratches-on-stove-top.webp)
+![how to remove scratches on stove top](https://cdn.vattimalaysia.com/2024/03/how-to-remove-scratches-on-stove-top.webp)
 
 ## What Not to Do on a Glass Top Stove?
 
@@ -4742,7 +4742,7 @@ INSERT INTO article_image (article_id, image_id, position) VALUES (36, (SELECT i
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (36, 0, 'home', 'https://vattimalaysia.com/', NULL, 'Explore VATTI products');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (37, 'how-to-clean-oven-racks-tips-and-tricks', 'tips-tricks/how-to-clean-oven-racks-tips-and-tricks', 'tips-tricks', 'How to Clean Oven Racks Tips and Tricks', 'How to Clean Oven Racks: Tips and Tricks', 'Cleaning oven racks can maintain a hygienic kitchen environment and ensure good cooking results. Discovering how to clean oven racks effectively.', 'Cleaning oven racks is a necessary chore to maintain a hygienic kitchen environment and ensure optimal cooking results. Discovering how to clean oven racks effectively can make this task much more manageable.
 
-![how to clean oven racks](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/how-to-clean-oven-racks.webp)
+![how to clean oven racks](https://cdn.vattimalaysia.com/2024/03/how-to-clean-oven-racks.webp)
 
 ## How Often Should You Clean Oven Racks?
 
@@ -4855,7 +4855,7 @@ INSERT INTO article_image (article_id, image_id, position) VALUES (37, (SELECT i
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (37, 0, 'home', 'https://vattimalaysia.com/', NULL, 'Explore VATTI products');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (38, 'avocado-and-tomato-breakfast-tacos-recipes', 'recipe/avocado-and-tomato-breakfast-tacos-recipes', 'recipe', 'Avocado and Tomato Breakfast Tacos Recipes', 'Avocado and Tomato Breakfast Tacos Recipes', 'Start your day right with our Avocado and Tomato Breakfast Tacos Recipes! They''re packed with nutrients for a satisfying breakfast taco experience.', 'Start your mornings right with these mouthwatering Avocado and Tomato Breakfast Tacos recipes! Not only are they a delicious way to kickstart your day, but they also offer a nutritious boost to fuel your activities
 
-![Avocado and Tomato Breakfast Taco](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/1.-Avocado-and-Tomato-Breakfast-Taco.webp)
+![Avocado and Tomato Breakfast Taco](https://cdn.vattimalaysia.com/2024/01/1.-Avocado-and-Tomato-Breakfast-Taco.webp)
 
 ## Step 1: Ingredients Preparation
 
@@ -4981,7 +4981,7 @@ INSERT INTO recipe_step (recipe_id, position, text) VALUES (3, 7, 'Fold and Serv
 INSERT INTO recipe_step (recipe_id, position, text) VALUES (3, 8, 'Enjoy: Serve the vibrant and nutrient-packed breakfast tacos with extra lime wedges on the side for squeezing, if desired. Enjoy your delicious breakfast!');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (39, 'blueberry-smoothie-bowl-with-almond-butter-recipes', 'recipe/blueberry-smoothie-bowl-with-almond-butter-recipes', 'recipe', 'Blueberry Smoothie Bowl with Almond Butter Recipes', 'Blueberry Smoothie Bowl with Almond Butter Recipes', 'Indulge in a nutritious Blueberry Smoothie Bowl with Almond Butter with our easy recipe! Packed with antioxidants, it''s a delicious start to your day.', 'Start your day on a vibrant note with these tantalizing Blueberry Smoothie Bowl with Almond Butter recipes! Not only are they packed with wholesome ingredients to fuel your day, but they also offer a delightful burst of flavors to satisfy your taste buds.
 
-![Blueberry and Almond Butter Smoothie Bowl](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/2.-Blueberry-and-Almond-Butter-Smoothie-Bowl.webp)
+![Blueberry and Almond Butter Smoothie Bowl](https://cdn.vattimalaysia.com/2024/01/2.-Blueberry-and-Almond-Butter-Smoothie-Bowl.webp)
 
 ## Step 1: Ingredients Preparation
 
@@ -5082,7 +5082,7 @@ INSERT INTO recipe_step (recipe_id, position, text) VALUES (4, 6, 'Finally, driz
 INSERT INTO recipe_step (recipe_id, position, text) VALUES (4, 7, 'Serve immediately and enjoy your delicious blueberry and almond butter smoothie bowl!');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (40, 'chickpea-and-spinach-breakfast-burrito-recipes', 'recipe/chickpea-and-spinach-breakfast-burrito-recipes', 'recipe', 'Chickpea and Spinach Breakfast Burrito Recipes', 'Chickpea and Spinach Breakfast Burrito Recipes', 'Fuel your morning with Chickpea and Spinach Breakfast Burrito Recipes! Packed with protein and greens. The wholesome way to start your day.', 'Looking for a nutritious and satisfying morning meal? These chickpea and spinach breakfast burrito recipes are the perfect way to start your day off right, packed with protein, fiber, and flavor to keep you energized throughout the morning.
 
-![Chickpea and Spinach Breakfast Burrito](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/3.-Chickpea-and-Spinach-Breakfast-Burrito.webp)
+![Chickpea and Spinach Breakfast Burrito](https://cdn.vattimalaysia.com/2024/01/3.-Chickpea-and-Spinach-Breakfast-Burrito.webp)
 
 ## Step 1: Ingredients Preparation
 
@@ -5209,7 +5209,7 @@ INSERT INTO recipe_step (recipe_id, position, text) VALUES (5, 6, 'Roll up the t
 INSERT INTO recipe_step (recipe_id, position, text) VALUES (5, 7, 'Serve immediately and enjoy your Chickpea and Spinach Breakfast Burritos!');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (41, 'peanut-butter-and-banana-overnight-oats-recipes', 'recipe/peanut-butter-and-banana-overnight-oats-recipes', 'recipe', 'Peanut Butter and Banana Overnight Oats Recipes', 'Peanut Butter and Banana Overnight Oats Recipes', 'Simplify mornings with Peanut Butter and Banana Overnight Oats Recipes! Creamy peanut butter meets sweet bananas for a hassle-free breakfast.', 'Looking for a delicious and convenient breakfast option? Dive into the world of peanut butter and banana overnight oats! These recipes offer a perfect blend of creamy texture, nutty flavor, and natural sweetness, making them a delightful morning treat that will keep you satisfied until lunchtime.
 
-![Peanut Butter and Banana Overnight Oats](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/4.-Peanut-Butter-and-Banana-Overnight-Oats.webp)
+![Peanut Butter and Banana Overnight Oats](https://cdn.vattimalaysia.com/2024/01/4.-Peanut-Butter-and-Banana-Overnight-Oats.webp)
 
 ## Step 1: Ingredients Preparation
 
@@ -5322,7 +5322,7 @@ INSERT INTO recipe_step (recipe_id, position, text) VALUES (6, 5, 'If desired, d
 INSERT INTO recipe_step (recipe_id, position, text) VALUES (6, 6, 'Enjoy your Peanut Butter and Banana Overnight Oats straight from the jar or transfer to a bowl for serving.');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (42, 'sweet-potato-breakfast-hash-with-black-bean-recipes', 'recipe/sweet-potato-breakfast-hash-with-black-bean-recipes', 'recipe', 'Sweet Potato Breakfast Hash with Black Bean Recipes', 'Sweet Potato Breakfast Hash with Black Bean Recipes', 'Enjoy a hearty breakfast with Sweet Potato Breakfast Hash with Black Bean! Packed with nutritious ingredients, it''s a delicious start to your day.', 'Rise and shine to the delightful aroma of sweet potato and black bean breakfast hash! This hearty and flavorful dish is a perfect way to kickstart your day, offering a nutritious blend of sweet potatoes, protein-packed black beans, and savory spices to tantalize your taste buds.
 
-![Sweet Potato and Black Bean Breakfast Hash](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/01/5.-Sweet-Potato-and-Black-Bean-Breakfast-Hash.webp)
+![Sweet Potato and Black Bean Breakfast Hash](https://cdn.vattimalaysia.com/2024/01/5.-Sweet-Potato-and-Black-Bean-Breakfast-Hash.webp)
 
 ## Step 1: Ingredients Preparation
 
@@ -5449,7 +5449,7 @@ INSERT INTO recipe_step (recipe_id, position, text) VALUES (7, 5, 'Once the swee
 INSERT INTO recipe_step (recipe_id, position, text) VALUES (7, 6, 'Adjust seasoning if needed and serve hot.');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (43, 'tofu-scramble-best-vegan-recipes', 'recipe/tofu-scramble-best-vegan-recipes', 'recipe', 'Tofu Scramble (Best Vegan Recipes)', 'Tofu Scramble (Best Vegan Recipes)', 'Elevate your breakfast with Tofu Scramble, one of the best vegan recipes out there! Made with tofu and fresh veggies, it''s a flavorful option.', 'Embrace the versatility of tofu with this mouthwatering tofu scramble recipe! Whether you’re a vegan enthusiast or simply looking to add more plant-based meals to your repertoire, this dish offers a delicious alternative to traditional scrambled eggs, making it perfect for breakfast or brunch.
 
-![tofu scramble](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/tofu-scramble.webp)
+![tofu scramble](https://cdn.vattimalaysia.com/2024/03/tofu-scramble.webp)
 
 ## Step 1: Ingredients Preparation
 
@@ -5591,7 +5591,7 @@ INSERT INTO recipe_step (recipe_id, position, text) VALUES (8, 7, 'Taste and adj
 INSERT INTO recipe_step (recipe_id, position, text) VALUES (8, 8, 'Serve hot, garnished with fresh parsley or cilantro if desired.');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (44, 'acai-bowl-recipes-quick-and-easy', 'recipe/acai-bowl-recipes-quick-and-easy', 'recipe', 'Acai Bowl Recipes (Quick and Easy)', 'Acai Bowl Recipes (Quick and Easy)', 'Treat yourself to a refreshing Acai Bowl with our quick and easy recipes! Loaded with antioxidants, it''s a delicious way to fuel your day.', 'Discover the perfect blend of flavor and nutrition with these quick and easy acai bowl recipes! Acai bowls have surged in popularity as a delicious and nutritious breakfast or snack option, packed with antioxidants, vitamins, and fiber to fuel your day.
 
-![acai bowl](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/Acai-Bowl-Recipes.webp)
+![acai bowl](https://cdn.vattimalaysia.com/2024/03/Acai-Bowl-Recipes.webp)
 
 ## Step 1: Ingredients Preparation
 
@@ -5729,7 +5729,7 @@ INSERT INTO recipe_step (recipe_id, position, text) VALUES (9, 5, 'Drizzle with 
 INSERT INTO recipe_step (recipe_id, position, text) VALUES (9, 6, 'Serve immediately and enjoy your refreshing and nutritious acai bowl!');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (45, 'how-to-prepare-granola', 'recipe/how-to-prepare-granola', 'recipe', 'How to Prepare Granola: Easy Steps to Make It Perfect', 'How to Prepare Granola: Easy Steps to Make It Perfect', 'Learn how to prepare granola at home with easy steps. Make a healthy, crunchy, and delicious granola for breakfast or snacks today!', 'Granola is a delicious, healthy, and versatile breakfast or snack option that you can easily make at home. Learning **how to prepare granola** allows you to customize ingredients to suit your taste while ensuring a nutritious start to your day.
 
-![granola recipe](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/Granola-Recipe.webp)
+![granola recipe](https://cdn.vattimalaysia.com/2024/03/Granola-Recipe.webp)
 
 ## Step 1: Ingredients Preparation
 
@@ -5881,7 +5881,7 @@ INSERT INTO recipe_step (recipe_id, position, text) VALUES (10, 6, 'Once cooled,
 INSERT INTO recipe_step (recipe_id, position, text) VALUES (10, 7, 'Transfer the granola to an airtight container for storage.');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (46, 'homemade-breakfast-burritos-recipes-vegan', 'recipe/homemade-breakfast-burritos-recipes-vegan', 'recipe', 'Homemade Breakfast Burritos Recipes (Vegan)', 'Homemade Breakfast Burritos Recipes (Vegan)', 'Dive into tasty breakfast with Homemade Breakfast Burritos Recipes! Filled with wholesome ingredients, they''re perfect for starting your day.', 'Embark on a culinary adventure with these flavorful homemade breakfast burritos recipes, tailored to suit a vegan lifestyle! Whether you’re craving a hearty morning meal or a satisfying on-the-go snack, these vegan breakfast burritos are packed with wholesome ingredients and bold flavors to start your day right.
 
-![Breakfast Burritos](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/Breakfast-Burritos.webp)
+![Breakfast Burritos](https://cdn.vattimalaysia.com/2024/03/Breakfast-Burritos.webp)
 
 ## Step 1: Ingredients Preparation
 
@@ -6040,7 +6040,7 @@ INSERT INTO recipe_step (recipe_id, position, text) VALUES (11, 10, 'Optionally,
 INSERT INTO recipe_step (recipe_id, position, text) VALUES (11, 11, 'If desired, you can wrap the burritos in foil for easy transport or to keep them warm.');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (47, 'scallion-pancake-recipe', 'recipe/scallion-pancake-recipe', 'recipe', 'Best Scallion Pancake Recipe (葱油饼)', 'Best Scallion Pancake Recipe (葱油饼)', 'Master the art of making the Best Scallion Pancake (葱油饼) with our easy recipe! Crispy, and delicious, they''re a must-try for any pancake lover.', 'Indulge in the savory delight of scallion pancakes with this authentic recipe! Scallion pancakes, also known as 葱油饼 (cōng yóu bǐng), are a popular Chinese street food dish loved for their crispy exterior and flavorful layers of scallions, making them a perfect appetizer or snack.
 
-![scallion pancake](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/03/Scallion-Pancake.webp)
+![scallion pancake](https://cdn.vattimalaysia.com/2024/03/Scallion-Pancake.webp)
 
 ## What Are Scallion Pancakes?
 
@@ -6070,7 +6070,7 @@ Achieve perfect Scallion Pancakes by following these tips:
 
 ## Preparing the Filling
 
-![Assembling Scallion Pancakes](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Assembling-Scallion-Pancakes.webp)
+![Assembling Scallion Pancakes](https://cdn.vattimalaysia.com/2024/11/Assembling-Scallion-Pancakes.webp)
 
 - **Assembly Options** : Choose between thick or thin pancakes. For thick pancakes, divide the dough into 6-8 portions; for thin ones, divide into 12-15 portions.
 
@@ -6082,7 +6082,7 @@ Achieve perfect Scallion Pancakes by following these tips:
 
 ## Assembling Scallion Pancakes
 
-![Pan-frying Scallion Pancakes](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Pan-Frying-Scallion-Pancakes.webp)
+![Pan-frying Scallion Pancakes](https://cdn.vattimalaysia.com/2024/11/Pan-Frying-Scallion-Pancakes.webp)
 
 - **Heating the Pan** : Use medium heat and brush the skillet with oil to prevent sticking.
 
@@ -6092,7 +6092,7 @@ Achieve perfect Scallion Pancakes by following these tips:
 
 ## Serving Ideas
 
-![Scallion Pancake with chili](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Scallion-Pancakes-with-chili.webp)
+![Scallion Pancake with chili](https://cdn.vattimalaysia.com/2024/11/Scallion-Pancakes-with-chili.webp)
 
 Scallion Pancakes are versatile and can be enjoyed in various ways:
 
@@ -6189,7 +6189,7 @@ INSERT INTO recipe_step (recipe_id, position, text) VALUES (12, 6, 'Serve warm o
 INSERT INTO recipe_step (recipe_id, position, text) VALUES (12, 7, 'Once all the pancakes are cooked, transfer them to a cutting board and cut into wedges.');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (48, 'cheesy-baked-potato', 'recipe/cheesy-baked-potato', 'recipe', 'Best Cheesy Baked Potato Recipes', 'Cheesy Baked Potato Recipes', 'Savor the delight of our Cheesy Baked Potato. Crispy on the outside, fluffy inside, and topped with gooey cheese. A perfect meal or side dish!', 'Craving a warm and comforting dish? Look no further than this Cheesy Baked Potato recipe. Loaded with gooey cheese and fluffy potato goodness, this dish is sure to satisfy your cravings and leave you feeling cozy all night long.
 
-![Cheesy Baked Potato](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/05/Cheesy-Baked-Potato.webp)
+![Cheesy Baked Potato](https://cdn.vattimalaysia.com/2024/05/Cheesy-Baked-Potato.webp)
 
 ## Before we get started
 
@@ -6276,7 +6276,7 @@ INSERT INTO recipe_step (recipe_id, position, text) VALUES (13, 8, 'Return the s
 INSERT INTO recipe_step (recipe_id, position, text) VALUES (13, 9, 'Serve hot and enjoy your irresistibly cheesy baked potatoes!');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (49, 'oven-roasted-potatoes', 'recipe/oven-roasted-potatoes', 'recipe', 'Easy Oven Roasted Potatoes Recipes', 'Easy Oven Roasted Potatoes Recipes', 'Indulge in the savory delight of oven roasted potatoes. Discover how to achieve crispy perfection with our simple recipe.', 'Looking for a delightful side dish to accompany your main course? Try our oven roasted potatoes recipe! While not quite the same as a cheesy baked potato, these crispy and flavorful spuds are sure to be a hit at your dinner table.
 
-![Oven Roasted Potatoes](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/05/Oven-Roasted-Potatoes.webp)
+![Oven Roasted Potatoes](https://cdn.vattimalaysia.com/2024/05/Oven-Roasted-Potatoes.webp)
 
 ## Step 1: Ingredients Preparation
 
@@ -6352,7 +6352,7 @@ Discover the Perfect Kitchen Appliance for Your Baked Sweet Potato Recipes!
 
 [Check it out here](/combi-and-steam-oven-in-malaysia/)
 
-![Baked Sweet Potato](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/05/Baked-Sweet-Potato.webp)
+![Baked Sweet Potato](https://cdn.vattimalaysia.com/2024/05/Baked-Sweet-Potato.webp)
 
 ## Step 1: Ingredients Preparation
 
@@ -6445,7 +6445,7 @@ INSERT INTO recipe_step (recipe_id, position, text) VALUES (15, 2, 'Mix in melte
 INSERT INTO recipe_step (recipe_id, position, text) VALUES (15, 3, 'Spread mixture into a baking dish and bake for 25-30 minutes until golden brown.');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (51, 'simple-chicken-lasagna-recipe', 'recipe/simple-chicken-lasagna-recipe', 'recipe', 'Simple Chicken Lasagna Recipe: Step-by-step Guide', 'Simple Chicken Lasagna Recipe: Step-by-step Guide', 'Try our simple chicken lasagna recipe! Packed with savory chicken, it''s perfect for any occasion. Impress your guests with this crowd-pleasing dish!', 'Looking for an easy and delicious meal? This **simple chicken lasagna recipe** is a perfect choice for a hearty and satisfying dish. Made with tender chicken, creamy cheese, and rich tomato sauce, it’s a great alternative to traditional beef lasagna.
 
-![Chicken Lasagna Recipe](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/05/Chicken-Lasagna.webp)
+![Chicken Lasagna Recipe](https://cdn.vattimalaysia.com/2024/05/Chicken-Lasagna.webp)
 
 ## Step 1: Ingredients Preparation
 
@@ -6554,13 +6554,13 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 ### 1. Time-Saving Convenience
 
-![](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Time-Saving-Convenience.webp)
+![](https://cdn.vattimalaysia.com/2024/11/Time-Saving-Convenience.webp)
 
 Imagine never having to scrub and wash dishes again tediously. With a dishwasher, you can wave goodbye to countless hours spent hunched over the sink. It handles the entire dishwashing process, freeing up your precious time for more enjoyable activities. No more late nights spent wrestling with piles of dirty dishes, leaving you with more opportunities to relax, pursue your hobbies, or simply spend quality time with loved ones.
 
 ### 2. It''ll Save You Water and Energy
 
-![](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Itll-Save-You-Water-and-Energy.webp)
+![](https://cdn.vattimalaysia.com/2024/11/Itll-Save-You-Water-and-Energy.webp)
 
 Dishwashers are surprisingly efficient, using far less water and energy compared to hand washing. Modern models are equipped with advanced water-saving technologies, ensuring that every drop is utilized optimally. They also operate at lower temperatures than traditional methods, further reducing energy consumption. Not only will you save money on utility bills, but you’ll also contribute to a more sustainable lifestyle.
 
@@ -6568,13 +6568,13 @@ Energy-efficient dishwashers are designed to use minimal electricity, thanks to 
 
 ### 3. Good Use of Limited Space
 
-![](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Good-Use-of-Limited-Space.webp)
+![](https://cdn.vattimalaysia.com/2024/11/Good-Use-of-Limited-Space.webp)
 
 If you’re dealing with limited kitchen space, a dishwasher can be a real game-changer. The [Vatti Dishwasher DWBB7](/vatti-dishwasher-dwbb7/) offers multiple functions, washing, sterilizing, drying, and storing, eliminating the need for unsightly stacks of dishes on your countertops or a bulky dish rack taking up valuable space. With a dishwasher, dirty dishes are discreetly tucked away, helping to maximize your kitchen’s available space and keep it organized and clutter-free. This makes your kitchen not only more functional but also aesthetically pleasing, especially in smaller or more compact spaces.
 
 ### 4. Superior Cleaning Performance
 
-![](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Superior-Cleaning-Performance.webp)
+![](https://cdn.vattimalaysia.com/2024/11/Superior-Cleaning-Performance.webp)
 
 Dishwashers employ a combination of hot water, detergent, and mechanical action to achieve an unparalleled level of cleanliness. They effectively remove stubborn food residue, grease, and bacteria, leaving your dishes sparkling clean and sanitary. No more worries about cross-contamination or lingering odors, as dishwashers ensure a hygienic and thorough cleaning experience.
 
@@ -6582,37 +6582,37 @@ For an even more advanced clean, check out the [**Vatti Dishwasher DWBB7**](/vat
 
 ### 5. Gets Rid of Germs
 
-![](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Gets-Rid-of-Germs.webp)
+![](https://cdn.vattimalaysia.com/2024/11/Gets-Rid-of-Germs.webp)
 
 Dishwashers are germ-killing machines that use high temperatures and powerful detergents to eliminate harmful bacteria and viruses that may linger on dishes. This is particularly important for families with young children or individuals with compromised immune systems. While hand washing often leaves behind germs, especially when done with lukewarm water, dishwashers can heat water up to 150°F, effectively killing bacteria and ensuring your dishes are not only clean but also disinfected, safeguarding your health and well-being.
 
 ### 6. More Organized Kitchen
 
-![Kitchen](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/More-Organized-Kitchen.webp)
+![Kitchen](https://cdn.vattimalaysia.com/2024/11/More-Organized-Kitchen.webp)
 
 A dishwasher acts as a storage area for dirty dishes, keeping your countertops clutter-free. Instead of stacking dirty plates in the sink, you can load them right into the dishwasher, making your kitchen look neater. This not only keeps your space tidy but also helps create a more aesthetic kitchen by reducing visual clutter. With a dishwasher, your kitchen remains more streamlined, giving it a cleaner, more organized look and feel. It also frees up counter space for food preparation or decoration, contributing to a more inviting and functional kitchen environment.
 
 ### 7. Environmentally Friendly
 
-![](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Environmentally-Friendly.webp)
+![](https://cdn.vattimalaysia.com/2024/11/Environmentally-Friendly.webp)
 
 By conserving water and using less energy, dishwashers are a more eco-friendly choice. If you’re conscious about your environmental impact, investing in a high-efficiency dishwasher can help you live a greener lifestyle.
 
 ### 8. Protect Your Hands
 
-![](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Protect-Your-Hands.webp)
+![](https://cdn.vattimalaysia.com/2024/11/Protect-Your-Hands.webp)
 
 If you’ve ever experienced dry, irritated hands from excessive dishwashing, you’ll appreciate the gentle touch of a dishwasher. By eliminating the need for manual scrubbing and rinsing, dishwashers protect your hands from harsh detergents and hot water, keeping them soft and healthy. No more unsightly red knuckles or cracked cuticles, just clean dishes and happy hands!
 
 ### 9. Reduces Household Disputes
 
-![](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Reduces-Household-Disputes.webp)
+![](https://cdn.vattimalaysia.com/2024/11/Reduces-Household-Disputes.webp)
 
 Let’s face it: arguing over who will do the dishes is common in many households. A dishwasher can eliminate this source of friction, keeping the peace and making chore management easier for everyone.
 
 ### 10. Protect Your Kitchenware
 
-![dishwasher](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Protect-Your-Kitchenware.webp)
+![dishwasher](https://cdn.vattimalaysia.com/2024/11/Protect-Your-Kitchenware.webp)
 
 Hand washing dishes can be rough on delicate items like glassware or non-stick pans, leading to scratches or damage over time. Dishwashers are designed to clean items gently but effectively, extending the lifespan of your dishes and cookware.
 
@@ -6638,7 +6638,7 @@ INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor)
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (52, 3, 'home', 'https://vattimalaysia.com/', NULL, 'Explore VATTI dishwasher');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (53, 'is-a-dishwasher-necessary', 'buying-guide/is-a-dishwasher-necessary', 'buying-guide', 'Is a Dishwasher Necessary? Key Benefits Explained with VATTI', 'Is a Dishwasher Necessary? Key Benefits Explained with VATTI', 'Wondering, "Is a dishwasher necessary?" Learn how VATTI dishwashers save time, energy, and provide advanced cleaning.', 'When considering the question, “Are dishwashers worth it?” the answer is a clear yes for many households. Dishwashers offer both convenience and a range of practical benefits that make them a worthwhile investment.
 
-![Vatti DWBB7 Dishwasher photo](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/08/Vatti-DWBB7-Dishwasher-photo-3.webp)
+![Vatti DWBB7 Dishwasher photo](https://cdn.vattimalaysia.com/2024/08/Vatti-DWBB7-Dishwasher-photo-3.webp)
 
 [Vatti Dishwasher DWBB7](/vatti-dishwasher-dwbb7/)
 
@@ -6646,43 +6646,43 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 ### 1. Big Capacity, Big Convenience
 
-![Vatti DWBB7 Dishwasher product description](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/08/Vatti-DWBB7-Dishwasher-product-description-14.webp)
+![Vatti DWBB7 Dishwasher product description](https://cdn.vattimalaysia.com/2024/08/Vatti-DWBB7-Dishwasher-product-description-14.webp)
 
 One of the best things about the VATTI dishwasher is that it can handle up to **17-place capacity**. That’s a lot of dishes in one load! Whether you’re doing a small batch or a big one after a party, you won’t have to run the dishwasher multiple times. Plus, it has **8 different functions** , so you can choose exactly what your dishes need, whether they’re lightly soiled or really messy.
 
 ### 2. Powerful & Efficient Motor
 
-![VATTI dishwasher function](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Vatti-dishwasher-function.webp)
+![VATTI dishwasher function](https://cdn.vattimalaysia.com/2024/11/Vatti-dishwasher-function.webp)
 
 Let’s talk power. The VATTI dishwasher features a **BLDC inverter motor** , which is super efficient and uses **V-Wash technology** for variable speeds and more cleaning power. It’s got a three-layer counter-rotating spray system that makes sure every dish gets cleaned thoroughly. No more scrubbing by hand! Not to mention, it’s **#1 in energy efficiency** , which means it’s gentle on your electricity bill while still packing a punch. And if you only have a few dishes to wash, you can use the **Half Load option** to save even more water and power.
 
 ### 3. Triple Disinfection Technology for Ultimate Cleanliness
 
-![Vatti DWBB7 Dishwasher product description](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/08/Vatti-DWBB7-Dishwasher-product-description-7.webp)
+![Vatti DWBB7 Dishwasher product description](https://cdn.vattimalaysia.com/2024/08/Vatti-DWBB7-Dishwasher-product-description-7.webp)
 
 Health and hygiene are top priorities when it comes to dishwashing. With VATTI’s **Triple Disinfection Technology** , your dishes are sterilized to perfection. It uses UV light to kill over **99.99% of bacteria** , and that’s backed up by **75°C high-temperature washing** . Your plates will be squeaky clean, and germ-free.
 
 ### 4. Hot Air Drying: No More Damp Dishes
 
-![Vatti DWBB7 Dishwasher product description](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/08/Vatti-DWBB7-Dishwasher-product-description-10.webp)
+![Vatti DWBB7 Dishwasher product description](https://cdn.vattimalaysia.com/2024/08/Vatti-DWBB7-Dishwasher-product-description-10.webp)
 
 Health and hygiene are top priorities when it comes to dishwashing. With VATTI’s **Triple Disinfection Technology** , your dishes are sterilized to perfection. It uses UV light to kill over **99.99% of bacteria** , and that’s backed up by **75°C high-temperature washing** . Your plates will be squeaky clean, and germ-free.
 
 ### 5. Keep Your Dishes Fresh for Days
 
-![Vatti DWBB7 Dishwasher product description](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/08/Vatti-DWBB7-Dishwasher-product-description-2.webp)
+![Vatti DWBB7 Dishwasher product description](https://cdn.vattimalaysia.com/2024/08/Vatti-DWBB7-Dishwasher-product-description-2.webp)
 
 Let’s face it: sometimes dishes don’t get put away right away. But with VATTI’s **168 hours of air ventilation** , your dishes will stay fresh in the dishwasher for up to a week! The automatic ventilation keeps bacteria at bay with a **99.99% bacteria removal rate** , so your dishes are always ready when you are. No more worrying about musty smells or germs!
 
 ### 6. User-Friendly Display
 
-![Vatti DWBB7 Dishwasher product description](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/08/Vatti-DWBB7-Dishwasher-product-description-3.webp)
+![Vatti DWBB7 Dishwasher product description](https://cdn.vattimalaysia.com/2024/08/Vatti-DWBB7-Dishwasher-product-description-3.webp)
 
 The VATTI dishwasher features a user-friendly digital display that’s designed with simplicity and convenience in mind. It offers easy-to-read settings and functions that make using the dishwasher a breeze, so you can get your dishes done with minimal effort.
 
 ### 7. Smart Technology for the Win
 
-![Vatti DWBB7 Dishwasher product description](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/08/Vatti-DWBB7-Dishwasher-product-description-4.webp)
+![Vatti DWBB7 Dishwasher product description](https://cdn.vattimalaysia.com/2024/08/Vatti-DWBB7-Dishwasher-product-description-4.webp)
 
 The VATTI dishwasher even thinks for you! Thanks to its **smart intelligent wash** , the VATTI dishwasher automatically assesses the level of dirt on your dishes and selects the appropriate washing mode. This smart technology ensures that each load receives optimal washing performance, saving you both time and water.
 
@@ -6690,7 +6690,7 @@ Check the [VATTI dishwasher FAQ](/dishwasher/) for troubleshooting, user tips, a
 
 ### 8. Easy to Clean and Maintain
 
-![Vatti DWBB7 Dishwasher product description](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/08/Vatti-DWBB7-Dishwasher-product-description-6.webp)
+![Vatti DWBB7 Dishwasher product description](https://cdn.vattimalaysia.com/2024/08/Vatti-DWBB7-Dishwasher-product-description-6.webp)
 
 Nobody wants a dishwasher that’s a pain to clean. Thankfully, VATTI has you covered with its **easy-clean black crystal glass** surface. It resists oil stains and is super simple to wipe down. The all-steel liner dries quickly and is easy to keep hygienic, with an **antibacterial rate of over 91%.** Plus, the **self-cleaning function** means you won’t have to get your hands dirty maintaining it.
 
@@ -6720,13 +6720,13 @@ Here are five key things to keep in mind when deciding where to put your dishwas
 
 ### 1. Near the Sink
 
-![dishwasher](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/near-the-sink.webp)
+![dishwasher](https://cdn.vattimalaysia.com/2024/11/near-the-sink.webp)
 
 It’s best to place your dishwasher close to the sink. This makes it easier to rinse your dishes before loading them, saving you time and effort. Plus, it keeps the flow of washing and loading simple.
 
 ### 2. Close to the Cooking Area
 
-![](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Close-to-the-Cooking-Area.webp)
+![](https://cdn.vattimalaysia.com/2024/11/Close-to-the-Cooking-Area.webp)
 
 Consider placing your dishwasher near the stove or oven. This way, when you’re done cooking, you don’t have to walk far to clean your pots, pans, and utensils. It makes cleaning up after meals much faster.
 
@@ -6736,7 +6736,7 @@ Try not to place your dishwasher in the middle of a busy kitchen walkway. You do
 
 ### 4. Next to Storage Cabinets
 
-![dishwasher](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/Next-to-Storage-Cabinets.webp)
+![dishwasher](https://cdn.vattimalaysia.com/2024/11/Next-to-Storage-Cabinets.webp)
 
 t’s helpful to place your dishwasher near cabinets or drawers where you store clean dishes. This makes it easier to put things away quickly once they’re clean, without having to walk across the kitchen.
 
@@ -6764,7 +6764,7 @@ INSERT INTO article_image (article_id, image_id, position) VALUES (54, (SELECT i
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (54, 0, 'product-category', 'https://vattimalaysia.com/dishwasher-in-malaysia/', 'dishwasher-in-malaysia', 'dishwasher');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (55, 'dishwasher-salt-alternative', 'tips-tricks/dishwasher-salt-alternative', 'tips-tricks', 'What’s a Dishwasher Salt Alternative?', 'What’s a Dishwasher Salt Alternative?', 'Looking for a dishwasher salt alternative? Discover simple solutions to keep your dishwasher running efficiently without traditional salt.', 'If you’ve noticed that your dishwasher doesn’t have a space for salt, you might be wondering how to keep it running smoothly without it. Don’t worry! There are plenty of alternatives to dishwasher salt that can still help prevent limescale buildup and keep your dishes sparkling clean.
 
-![dishwasher salt](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/dishwasher-salt.webp)
+![dishwasher salt](https://cdn.vattimalaysia.com/2024/11/dishwasher-salt.webp)
 
 ### What Does Dishwasher Salt Do?
 
@@ -6785,7 +6785,7 @@ If your dishwasher doesn’t have a salt compartment, here are a few simple alte
 
 ### Is it OK to Put Baking Soda in Your Dishwasher?
 
-![](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/11/baking-soda-1.webp)
+![](https://cdn.vattimalaysia.com/2024/11/baking-soda-1.webp)
 
 **Yes, baking soda can be safely used in your dishwasher!** It’s a natural cleaner that helps with odor control and can also assist in loosening grease and grime from your dishes. Simply sprinkle a small amount on the bottom of your dishwasher and run a short cycle. It can also help freshen up your dishwasher if it’s starting to smell. Just remember, it won’t help with water softening, so it’s best used in combination with other alternatives like a water softener.
 
@@ -6808,11 +6808,11 @@ INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor)
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (55, 2, 'product-category', 'https://vattimalaysia.com/dishwasher-in-malaysia/', 'dishwasher-in-malaysia', 'VATTI dishwashers');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (56, 'what-can-you-wash-in-dishwasher', 'tips-tricks/what-can-you-wash-in-dishwasher', 'tips-tricks', 'What Can You Wash in Dishwasher?', 'What Can You Wash in Dishwasher?', 'Discover what you can wash in a dishwasher safely! Learn about dishwasher-safe symbols, items to clean with ease, and more.', 'Dishwashers are a lifesaver for busy households, but have you ever wondered **what you can wash in a dishwasher ?** From everyday dishes to surprising items, understanding the do’s and don’ts ensures your dishwasher works its magic without damage.
 
-![dishwasher](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/12/what-can-you-wash-in-dishwasher.webp)
+![dishwasher](https://cdn.vattimalaysia.com/2024/12/what-can-you-wash-in-dishwasher.webp)
 
 ### What is the Safe Symbol for Dishwasher?
 
-![](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/12/dishwasher-symbol.webp)
+![](https://cdn.vattimalaysia.com/2024/12/dishwasher-symbol.webp)
 
 To check if an item is dishwasher-safe, look for the **dishwasher-safe symbol** on the product. This symbol typically appears as a plate or glass with water droplets, often accompanied by wavy lines. If an item doesn’t have this symbol, it’s best to err on the side of caution and wash it by hand.
 
@@ -6861,7 +6861,7 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 ## Gas Hob Igniter Not Working? Here’s the Problems and Solutions
 
-![induction cooker problems](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/02/induction-cooker-problems.webp)
+![induction cooker problems](https://cdn.vattimalaysia.com/2025/02/induction-cooker-problems.webp)
 
 **1. Dirty Igniter**
 
@@ -6923,7 +6923,7 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 ## How Often Should You Clean Oven Racks?
 
-![gas hob igniter not working](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/02/gas-hob-igniter-not-working.webp)
+![gas hob igniter not working](https://cdn.vattimalaysia.com/2025/02/gas-hob-igniter-not-working.webp)
 
 **1. Induction Cooker Not Turning On**
 
@@ -6994,7 +6994,7 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 ## Why Choose Silent Kitchen Hood?
 
-![Silent Kitchen Hood](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/02/Silent-Kitchen-Hood.webp)
+![Silent Kitchen Hood](https://cdn.vattimalaysia.com/2025/02/Silent-Kitchen-Hood.webp)
 
 **1. Enjoy Conversations While Cooking**
 
@@ -7057,7 +7057,7 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 ## How to Avoid Cooking Smell in the House Fast
 
-![Cooking Smell](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/02/cooking-smell.webp)
+![Cooking Smell](https://cdn.vattimalaysia.com/2025/02/cooking-smell.webp)
 
 **1. Use a Powerful Range Hood**
 
@@ -7083,7 +7083,7 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 ## Product Spotlight: Vatti Kitchen Hood
 
-![Vatti kitchen hood](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2024/04/Hood-Png.png)
+![Vatti kitchen hood](https://cdn.vattimalaysia.com/2024/04/Hood-Png.png)
 
 [Vatti “Magic Series” V919](/vatti-magic-series-cooker-hood-v919/)
 
@@ -7124,7 +7124,7 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 ## When to Replace Your Range Hood?
 
-![replace range hood](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/02/replace-range-hood.webp)
+![replace range hood](https://cdn.vattimalaysia.com/2025/02/replace-range-hood.webp)
 
 **1. Weak Suction Power**
 
@@ -7181,7 +7181,7 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 ## What Are the Differences Between Ducted and Ductless Range Hoods?
 
-![which is better ducted or ductless range hood](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/02/which-is-better-ducted-or-ductless-range-hood.webp)
+![which is better ducted or ductless range hood](https://cdn.vattimalaysia.com/2025/02/which-is-better-ducted-or-ductless-range-hood.webp)
 
 - **Ducted Range Hood:** Vents air outside through a duct, removing smoke, grease, and odors efficiently.
 
@@ -7226,7 +7226,7 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 ## How to Use Charcoal at Home?
 
-![how to use charcoal at home](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/02/how-to-use-charcoal-at-home.webp)
+![how to use charcoal at home](https://cdn.vattimalaysia.com/2025/02/how-to-use-charcoal-at-home.webp)
 
 **1. Cooking Fuel**
 
@@ -7291,7 +7291,7 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 ## Range Hood Maintenance: 7 Simple Tips
 
-![range hood maintanence](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/03/range-hood-maintanence.webp)
+![range hood maintanence](https://cdn.vattimalaysia.com/2025/03/range-hood-maintanence.webp)
 
 **1.Regular Cleaning:**Cleaning your range hood once a month prevents grease buildup. Over time, grease accumulates on the filters, fan blades, and the exterior, which can affect the hood’s performance. Regular cleaning also helps maintain its aesthetic appeal.
 
@@ -7344,7 +7344,7 @@ INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor)
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (64, 1, 'product-category', 'https://vattimalaysia.com/kitchen-hood-in-malaysia/', 'kitchen-hood-in-malaysia', 'VATTI kitchen hoods');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (65, 'electric-stove-safety-tips', 'tips-tricks/electric-stove-safety-tips', 'tips-tricks', '10 Electric Stove Safety Tips to Avoid Kitchen Accidents', '10 Electric Stove Safety Tips: How to Prevent Kitchen Accidents', 'Discover key electric stove safety tips to prevent accidents and keep your home safe. Follow these simple guidelines for a safer cooking experience.', 'Do you often find yourself worried about accidents when cooking with an electric stove? Electric stove safety tips are crucial for preventing burns, fires, and other kitchen hazards. This article will cover 10 simple yet effective ways to safely use your electric stove, ensuring a secure cooking environment for you and your loved ones.
 
-![Electric Stove Safety Tips](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/03/Electric-Stove-Safety-Tips.webp)
+![Electric Stove Safety Tips](https://cdn.vattimalaysia.com/2025/03/Electric-Stove-Safety-Tips.webp)
 
 ## Why Choose Silent Kitchen Hood?
 
@@ -7411,7 +7411,7 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 ## What is Not Dishwasher Safe?
 
-![What is Not Dishwasher Safe](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/03/What-is-Not-Dishwasher-Safe.webp)
+![What is Not Dishwasher Safe](https://cdn.vattimalaysia.com/2025/03/What-is-Not-Dishwasher-Safe.webp)
 
 While dishwashers offer convenience, not everything should go in them. Here are some common items that are not dishwasher safe:
 
@@ -7434,7 +7434,7 @@ For a full list of dishwasher-safe items, check out [What Can You Wash in Dishwa
 
 ## What is the Not Dishwasher Safe Symbol?
 
-![Not dishwasher safety symbol](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/03/Not-dishwasher-safety-symbol.webp)
+![Not dishwasher safety symbol](https://cdn.vattimalaysia.com/2025/03/Not-dishwasher-safety-symbol.webp)
 
 To determine if an item is not dishwasher safe, look for the manufacturer’s marking. Some common indicators include:
 
@@ -7446,7 +7446,7 @@ To determine if an item is not dishwasher safe, look for the manufacturer’s ma
 
 ## What is the Symbol for Dishwasher Safe on Plastic?
 
-![DISHWASHER SAFETY SYMBOL](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/03/DISHWASHER-SAFETY-SYMBOL.webp)
+![DISHWASHER SAFETY SYMBOL](https://cdn.vattimalaysia.com/2025/03/DISHWASHER-SAFETY-SYMBOL.webp)
 
 For plastic items, a dishwasher safe symbol usually looks like:
 
@@ -7498,7 +7498,7 @@ INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor)
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (66, 2, 'product-category', 'https://vattimalaysia.com/dishwasher-in-malaysia/', 'dishwasher-in-malaysia', 'VATTI Dishwasher');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (67, 'how-water-filters-work', 'buying-guide/how-water-filters-work', 'buying-guide', 'How Water Filters Work: Simple Guide to Safe Drinking Water', 'How Water Filters Work: Simple Guide to Safe Drinking Water', 'Curious about how water filters work? Learn about the different types, how they function, and how to choose the right one for your home.', '**What are Water Filters?** Ever wondered **how water filters work** and why they’re important for your home? This guide breaks it all down so you can make smarter choices for cleaner, safer drinking water.
 
-![One Tap water purifier WDHG01 Product Image](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/01/One-Tap-water-purifier-WDHG01-Product-Image-1.jpg)
+![One Tap water purifier WDHG01 Product Image](https://cdn.vattimalaysia.com/2025/01/One-Tap-water-purifier-WDHG01-Product-Image-1.jpg)
 
 [*VATTI One Tap Water Purifier WDHG01*](/vatti-one-tap-water-purifier-wdhg01-with-v818wd/)
 
@@ -7508,7 +7508,7 @@ Water filters are devices that remove unwanted impurities like chemicals, bacter
 
 ## The 5 Types of Filters – How Do They Work?
 
-![How Water Filters Work](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/04/How-Water-Filters-Work.webp)
+![How Water Filters Work](https://cdn.vattimalaysia.com/2025/04/How-Water-Filters-Work.webp)
 
 Here’s a breakdown of the five most common types of water filters and how they function:
 
@@ -7583,7 +7583,7 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 ## How Do I Know If My Water Filter Needs Changing?
 
-![How Often Replace Water Filter](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/04/How-Often-Replace-Water-Filter.webp)
+![How Often Replace Water Filter](https://cdn.vattimalaysia.com/2025/04/How-Often-Replace-Water-Filter.webp)
 
 Here are some simple signs your filter needs replacing:
 
@@ -7640,7 +7640,7 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 ## Which Filter Is Most Efficient in Removing Bacteria?
 
-![One Tap water purifier WDHG01 Image info](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/01/One-Tap-water-purifier-WDHG01-Image-info-5.png)
+![One Tap water purifier WDHG01 Image info](https://cdn.vattimalaysia.com/2025/01/One-Tap-water-purifier-WDHG01-Image-info-5.png)
 
 The most effective filters for removing bacteria are:
 
@@ -7679,7 +7679,7 @@ Here are effective ways to remove bacteria from your water:
 
 Using a combination of these methods ensures your water is clean and safe.
 
-![One Tap water purifier WDHG01 Image info](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/01/One-Tap-water-purifier-WDHG01-Image-info-1.png)
+![One Tap water purifier WDHG01 Image info](https://cdn.vattimalaysia.com/2025/01/One-Tap-water-purifier-WDHG01-Image-info-1.png)
 
 ## What is the Best Water Filter to Buy?
 
@@ -7716,7 +7716,7 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 ## Baking Sheets Cleaning Method
 
-![baking sheet](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/05/Baking-sheet.webp)
+![baking sheet](https://cdn.vattimalaysia.com/2025/05/Baking-sheet.webp)
 
 **Below stated the method to clean baking sheets:**
 
@@ -7747,7 +7747,7 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 ## Why Do We Need to Drink Water?
 
-![Is Water Filter Good for Health? Here’s What You Need to Know](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/05/is-water-filter-good-for-health.webp)
+![Is Water Filter Good for Health? Here’s What You Need to Know](https://cdn.vattimalaysia.com/2025/05/is-water-filter-good-for-health.webp)
 
 **Water is crucial to overall health and body function. Here’s why:**
 
@@ -7781,7 +7781,7 @@ INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor)
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (71, 1, 'product-category', 'https://vattimalaysia.com/one-tap-purifier-in-malaysia/', 'one-tap-purifier-in-malaysia', 'Explore VATTI products');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (72, 'water-purifier-vs-water-filter', 'tips-tricks/water-purifier-vs-water-filter', 'tips-tricks', 'Water Purifier vs Water Filter: What’s the Real Difference?', 'Water Purifier vs Water Filter: What’s the Real Difference?', 'Confused about water purifier vs water filter? Learn the key differences, how they work, and which one is right for your home.', 'If you’re wondering about the difference between a *water purifier vs water filter* , you’re not alone. Both are used to clean water, but they work differently and serve different purposes.
 
-![Water Purifier vs Water Filter: What’s the Real Difference?](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/05/Water-Purifier-vs-Water-Filter.webp)
+![Water Purifier vs Water Filter: What’s the Real Difference?](https://cdn.vattimalaysia.com/2025/05/Water-Purifier-vs-Water-Filter.webp)
 
 ## What Is a Water Filter?
 
@@ -7849,7 +7849,7 @@ INSERT INTO article_image (article_id, image_id, position) VALUES (72, (SELECT i
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (72, 0, 'product-category', 'https://vattimalaysia.com/one-tap-purifier-in-malaysia/', 'one-tap-purifier-in-malaysia', 'VATTI Single Tap Water Filter / One Tap Water Purifier');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (73, 'clean-baking-sheets-2', 'tips-tricks/clean-baking-sheets-2', 'tips-tricks', 'How to Clean Baking Sheets', 'How to Clean Baking Sheets Without Ruining Them', 'Discover the best way to clean baking sheets without damaging them. Learn why they turn black and how to protect them for long-term use.', 'Keeping your cookware in top shape starts with knowing how to *clean baking sheets* the right way. Dirty sheets not only affect food quality but also shorten the lifespan of your baking gear.
 
-![clean baking sheets](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/07/clean-baking-sheets.webp)
+![clean baking sheets](https://cdn.vattimalaysia.com/2025/07/clean-baking-sheets.webp)
 
 ## Cleaning Method
 
@@ -7898,7 +7898,7 @@ INSERT INTO article_image (article_id, image_id, position) VALUES (73, (SELECT i
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (73, 0, 'product-category', 'https://vattimalaysia.com/combi-and-steam-oven-in-malaysia/', 'combi-and-steam-oven-in-malaysia', 'VATTI Built-in Oven');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (74, 'what-is-reverse-osmosis-water', 'tips-tricks/what-is-reverse-osmosis-water', 'tips-tricks', 'What Is Reverse Osmosis Water and Do You Really Need It?', 'What Is Reverse Osmosis Water and Do You Really Need It?', 'What is reverse osmosis water? Learn how RO works, its pros and cons, and why VATTI One Tap Purifier could be a smarter choice for your home.', 'If you’ve been researching ways to get cleaner drinking water, you’ve probably come across the term reverse osmosis water. But what exactly is it, and do you really need a reverse osmosis water filter at home? Let’s break it down in simple terms so you can make the best choice for your family.
 
-![Is Reverse Osmosis Water Worth It?](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/08/What-Is-Reverse-Osmosis-Water.webp)
+![Is Reverse Osmosis Water Worth It?](https://cdn.vattimalaysia.com/2025/08/What-Is-Reverse-Osmosis-Water.webp)
 
 ## What Is Reverse Osmosis Water?
 
@@ -7952,7 +7952,7 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 ## Drinking Filtered Water: Bottled vs Filtered
 
-![Is Drinking Filtered Water Better Than Bottled Water?](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/08/Is-Drinking-Filtered-Water-Better-Than-Bottled-Water_.webp)
+![Is Drinking Filtered Water Better Than Bottled Water?](https://cdn.vattimalaysia.com/2025/08/Is-Drinking-Filtered-Water-Better-Than-Bottled-Water_.webp)
 
 **Bottled Water Basics**
 
@@ -8006,7 +8006,7 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 ## What Is Reverse Osmosis Water?
 
-![What Are the Benefits of a Reverse Osmosis Water Filter?](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/08/What-Are-the-Benefits-of-a-Reverse-Osmosis-Water-Filter.webp)
+![What Are the Benefits of a Reverse Osmosis Water Filter?](https://cdn.vattimalaysia.com/2025/08/What-Are-the-Benefits-of-a-Reverse-Osmosis-Water-Filter.webp)
 
 Reverse osmosis water is tap water that’s been purified using a special filtration method called reverse osmosis (RO). The system uses a fine membrane that removes even the tiniest contaminants, including:
 
@@ -8071,7 +8071,7 @@ INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor)
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (76, 1, 'product-category', 'https://vattimalaysia.com/one-tap-purifier-in-malaysia/', 'one-tap-purifier-in-malaysia', 'VATTI Single Tap Water Filter – One Tap Water Purifier');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (77, 'water-for-plants', 'tips-tricks/water-for-plants', 'tips-tricks', 'Water for Plants: Best Types to Keep Them Healthy', 'Water for Plants: Best Types to Keep Them Healthy', 'Discover the best water for plants, including distilled and filtered options. Learn which water type suits indoor plants and keeps them thriving.', 'Choosing the right **water for plants** is more important than most people think. The type of water you use can make the difference between thriving greenery and weak, unhealthy leaves.
 
-![water for plant](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/10/water-for-plants.webp)
+![water for plant](https://cdn.vattimalaysia.com/2025/10/water-for-plants.webp)
 
 ## Is Distilled Water Good for Your Plants?
 
@@ -8117,7 +8117,7 @@ INSERT INTO article_image (article_id, image_id, position) VALUES (77, (SELECT i
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (77, 0, 'product-category', 'https://vattimalaysia.com/one-tap-purifier-in-malaysia/', 'one-tap-purifier-in-malaysia', 'VATTI Single Tap Water Filter');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (78, 'water-filter-for-aquarium', 'tips-tricks/water-filter-for-aquarium', 'tips-tricks', 'Water Filter for Aquarium: Guide to Choosing the Best One', 'Water Filter for Aquarium: Guide to Choosing the Best One', 'Find out if you really need a water filter for aquarium care, the best types available, and how to choose the right one for your fish tank.', 'Choosing the right **water filter for aquarium** setups is essential for keeping your fish healthy. Without proper filtration, water quality drops quickly, leading to stress and illness in your tank.
 
-![water filter for aquarium](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/10/water-filter-for-aquarium.webp)
+![water filter for aquarium](https://cdn.vattimalaysia.com/2025/10/water-filter-for-aquarium.webp)
 
 ## What Type of Filter is Best for a Fish Tank?
 
@@ -8153,7 +8153,7 @@ INSERT INTO article_image (article_id, image_id, position) VALUES (78, (SELECT i
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (78, 0, 'product-category', 'https://vattimalaysia.com/one-tap-purifier-in-malaysia/', 'one-tap-purifier-in-malaysia', 'VATTI Single Tap Water Filter');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (79, 'water-flow', 'tips-tricks/water-flow', 'tips-tricks', 'Water Flow: Pressure, Rate & How to Improve', 'Water Flow: Understanding Pressure, Rate, and How to Improve It', 'Learn what affects water flow in your home, the difference between water pressure and flow rate, and how to increase water flow for daily use.', 'The way **water flow** works in your home affects everything from shower strength to how fast you can fill a pot. Understanding water flow helps you spot problems and find simple solutions.
 
-![Water Flow](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/10/Water-Flow.webp)
+![Water Flow](https://cdn.vattimalaysia.com/2025/10/Water-Flow.webp)
 
 ## Water Flow Rate vs Water Pressure
 
@@ -8194,7 +8194,7 @@ INSERT INTO article_image (article_id, image_id, position) VALUES (79, (SELECT i
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (79, 0, 'product-category', 'https://vattimalaysia.com/one-tap-purifier-in-malaysia/', 'one-tap-purifier-in-malaysia', 'VATTI Single Tap Water Filter');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (80, 'drinking-water-bottle', 'tips-tricks/drinking-water-bottle', 'tips-tricks', 'Best Drinking Water Bottle: How to Choose the Right One', 'Best Drinking Water Bottle: How to Choose the Right One', 'Discover which drinking water bottle is best for health and daily use. Learn what to look for when buying bottled water and tips for safe hydration.', 'Choosing the right **drinking water bottle** is important for both your health and convenience. With so many options available, knowing which type suits your lifestyle ensures you stay hydrated in the best way possible.
 
-![drinking water bottle](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/10/type-of-water.webp)
+![drinking water bottle](https://cdn.vattimalaysia.com/2025/10/type-of-water.webp)
 
 ## Which Water Bottle Is Best for Drinking Water?
 
@@ -8222,7 +8222,7 @@ INSERT INTO article_image (article_id, image_id, position) VALUES (80, (SELECT i
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (80, 0, 'product-category', 'https://vattimalaysia.com/one-tap-purifier-in-malaysia/', 'one-tap-purifier-in-malaysia', 'VATTI Single Tap Water Filter');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (81, 'glass-water-bottle', 'tips-tricks/glass-water-bottle', 'tips-tricks', 'Glass Water Bottle: Benefits and Why It’s a Better Choice', 'Glass Water Bottle: Benefits and Why It’s a Better Choice', 'Discover the benefits of using a glass water bottle. Learn if it’s healthier than plastic and why many people prefer glass water bottles for daily use.', 'Switching to a **glass water bottle** has become popular among people who want a healthier and eco-friendly option. A glass water bottle is safe, reusable, and free from harmful chemicals, making it a better choice for daily hydration.
 
-![glass water bottle](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/10/drinking-water-bottle.webp)
+![glass water bottle](https://cdn.vattimalaysia.com/2025/10/drinking-water-bottle.webp)
 
 ## Are Glass Water Bottles Healthier?
 
@@ -8262,7 +8262,7 @@ INSERT INTO article_image (article_id, image_id, position) VALUES (81, (SELECT i
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (81, 0, 'product-category', 'https://vattimalaysia.com/one-tap-purifier-in-malaysia/', 'one-tap-purifier-in-malaysia', 'VATTI Single Tap Water Filter');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (82, 'type-of-water', 'tips-tricks/type-of-water', 'tips-tricks', 'Type of Water: Different Kinds and Their Benefits', 'Type of Water: Different Kinds and Their Benefits', 'Discover the different type of water, including alkaline and mineral water, and learn which drink is best for old age to support better health.', 'Understanding each type of water is important because the water you drink can affect your health. Different types of water have unique qualities and benefits, making it useful to know which one suits your needs best.
 
-![type of water](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/10/glass-water-bottle.webp)
+![type of water](https://cdn.vattimalaysia.com/2025/10/glass-water-bottle.webp)
 
 ## What Are the 6 Types of Water?
 
@@ -8306,7 +8306,7 @@ INSERT INTO article_image (article_id, image_id, position) VALUES (82, (SELECT i
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (82, 0, 'product-category', 'https://vattimalaysia.com/one-tap-purifier-in-malaysia/', 'one-tap-purifier-in-malaysia', 'VATTI Single Tap Water Filter');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (83, 'induction-vs-ceramic-features', 'buying-guide/induction-vs-ceramic-features', 'buying-guide', 'Induction Cooker vs Ceramic Cooker: Key Features to Know', 'Induction Cooker vs Ceramic Cooker: Key Features You Must Know Before Buying', 'Compare an induction cooker vs ceramic cooker and learn the key features that matter when choosing the right cooktop.', 'When comparing an **induction cooker vs ceramic cooker** , the biggest difference lies in how heat is generated. Induction uses magnetic energy while ceramic hobs rely on radiant heating. Both offer sleek designs, yet they perform very differently in daily cooking.
 
-![Induction Cooker vs Ceramic Cooker](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/12/Induction-Cooker-vs-Ceramic-Cooker-3.webp)
+![Induction Cooker vs Ceramic Cooker](https://cdn.vattimalaysia.com/2025/12/Induction-Cooker-vs-Ceramic-Cooker-3.webp)
 
 ## Ceramic Hob vs Induction Hob: Features to Consider
 
@@ -8351,7 +8351,7 @@ INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor)
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (83, 1, 'product-category', 'https://vattimalaysia.com/cooker-hob/', 'cooker-hob', 'Explore VATTI Cooker Hob');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (84, 'induction-vs-ceramic-safety', 'buying-guide/induction-vs-ceramic-safety', 'buying-guide', 'Induction Cooker vs Ceramic Cooker: Safety & Limits', 'Induction Cooker vs Ceramic Cooker: Safety & Limits', 'Learn the safety differences and cooking limitations of an induction cooker vs ceramic cooker, including what you can and can’t cook.', 'When comparing an **induction cooker vs ceramic cooker** , safety and long-term durability are essential considerations. Each hob type works differently, influencing how long they last, what cookware they accept, and how safe they are for family use.
 
-![Induction Cooker vs Ceramic Cooker](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/12/Induction-Cooker-vs-Ceramic-Cooker-1.webp)
+![Induction Cooker vs Ceramic Cooker](https://cdn.vattimalaysia.com/2025/12/Induction-Cooker-vs-Ceramic-Cooker-1.webp)
 
 ## What Cannot Be Cooked on Induction?
 
@@ -8420,7 +8420,7 @@ INSERT INTO article_image (article_id, image_id, position) VALUES (84, (SELECT i
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (84, 0, 'product-category', 'https://vattimalaysia.com/cooker-hob-in-malaysia/', 'cooker-hob-in-malaysia', 'VATTI’s ceramic cooktop');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (85, 'induction-vs-ceramic-guide', 'uncategorized/induction-vs-ceramic-guide', 'uncategorized', 'Induction vs Ceramic Cooker: Which Cooks Better?', 'Induction vs Ceramic Cooker: Which Cooks Better?', 'Explore how an induction cooker vs ceramic cooker differs in cooking experience, usability, and overall kitchen design.', 'When deciding between an induction cooker vs ceramic cooker, understanding the cooking experience and usability can greatly influence your decision. Both offer sleek glass finishes, yet their performance during everyday cooking differs significantly.
 
-![Induction Cooker vs Ceramic Cooker](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2025/12/Induction-Cooker-vs-Ceramic-Cooker-2.webp)
+![Induction Cooker vs Ceramic Cooker](https://cdn.vattimalaysia.com/2025/12/Induction-Cooker-vs-Ceramic-Cooker-2.webp)
 
 ## Ceramic Hob vs Induction Hob: Usability & Design
 
@@ -8489,7 +8489,7 @@ INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor)
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (85, 1, 'product-category', 'https://vattimalaysia.com/cooker-hob/', 'cooker-hob', 'Explore VATTI cooker hob');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (86, 'range-hood-making-noise', 'tips-tricks/range-hood-making-noise', 'tips-tricks', 'Range Hood Making Noise? Causes and Fixes', 'Range Hood Making Noise? Causes, Fixes, and When to Worry', 'Range hood making noise in Malaysian kitchens? Understand the causes, quick fixes, and better ventilation with VATTI.', 'A range hood making noise is a common issue in Malaysian kitchens, especially with frequent frying and high-heat cooking. While some sounds are normal, unusual or persistent noise can signal airflow, moisture, or mechanical problems. This guide explains what different range hood noises mean, how to fix common issues safely, and when to worry, so you can keep your kitchen quiet, efficient, and safe.
 
-![range hood making noise](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/01/range-hood-making-noise.webp)
+![range hood making noise](https://cdn.vattimalaysia.com/2026/01/range-hood-making-noise.webp)
 
 ### Quick Answer: Why Is My Range Hood Making Noise?
 
@@ -8654,7 +8654,7 @@ INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor)
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (86, 1, 'product-category', 'https://vattimalaysia.com/kitchen-hood-in-malaysia/', 'kitchen-hood-in-malaysia', 'VATTI cooker hood Malaysia');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (87, 'how-to-clean-kitchen-hood-filter', 'tips-tricks/how-to-clean-kitchen-hood-filter', 'tips-tricks', 'How to Clean Kitchen Hood Filter (Easy Step-by-Step Guide)', 'How to Clean Kitchen Hood Filter (Easy Step-by-Step Guide)', 'Discover how to clean kitchen hood filter easily and maintain strong suction. Explore VATTI cooker hood Malaysia for cleaner, safer kitchens.', 'In Malaysian kitchens, frequent frying and stir-frying cause grease to build up quickly in kitchen hood filters. While many homeowners clean only the hood surface, the filter is key to strong suction, odor control, and fire safety. In this guide, VATTI explains **how to clean kitchen hood filter** the right way, so your cooker hood stays efficient, durable, and suitable for everyday Malaysian cooking.
 
-![how to clean kitchen hood filter](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/01/how-to-clean-kitchen-hood-filter.webp)
+![how to clean kitchen hood filter](https://cdn.vattimalaysia.com/2026/01/how-to-clean-kitchen-hood-filter.webp)
 
 ### Quick Answer: How to Clean a Kitchen Hood Filter?
 
@@ -8811,7 +8811,7 @@ INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor)
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (87, 1, 'product-category', 'https://vattimalaysia.com/kitchen-hood-in-malaysia/', 'kitchen-hood-in-malaysia', 'VATTI cooker hood Malaysia');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (88, 'kitchen-hood-without-vent', 'tips-tricks/kitchen-hood-without-vent', 'tips-tricks', 'Kitchen Hood Without Vent: Is It Safe, and Worth It?', 'Kitchen Hood Without Vent: Is It Safe, Effective, and Worth It?', 'Kitchen Hood Without Vent: safe, effective, and worth it? Find out how ductless hoods work in Malaysian condos.', 'A **kitchen hood without vent** is a common solution for apartments, condos, and rental homes where outdoor ducting isn’t possible. As concerns about indoor air quality grow, many homeowners wonder whether ductless hoods are safe and effective. This guide explains how they work, their pros and cons, and whether a kitchen hood without vent is worth it for your home.
 
-![kitchen hood without vent](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/01/kitchen-hood-without-vent.webp)
+![kitchen hood without vent](https://cdn.vattimalaysia.com/2026/01/kitchen-hood-without-vent.webp)
 
 ### Quick Answer: What Is a Kitchen Hood Without Vent?
 
@@ -8963,7 +8963,7 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 This guide explains how oven symbols work, which ones are ideal for different cakes, and tips to avoid common mistakes. Even beginner bakers will feel confident following this guide.
 
-![oven symbol for baking](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/02/oven-symbol-for-baking.webp)
+![oven symbol for baking](https://cdn.vattimalaysia.com/2026/02/oven-symbol-for-baking.webp)
 
 ### Quick Answer: Which oven symbol should I use to bake cakes perfectly in my Malaysian kitchen?
 
@@ -9063,7 +9063,7 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 Many Malaysian bakers struggle with oven modes and temperature control, especially in warm kitchens. This guide shows **exactly what to use** , in simple terms, so baking becomes predictable and stress-free.
 
-![baking cake oven setting](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/02/baking-cake-oven-setting.webp)
+![baking cake oven setting](https://cdn.vattimalaysia.com/2026/02/baking-cake-oven-setting.webp)
 
 ### Quick Answer: Best Oven Setting for Baking Cakes
 
@@ -9178,7 +9178,7 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 Understanding symbols helps Malaysian home cooks avoid **underbaked cakes, burnt tops, or soggy pizza bases** . With this guide, you’ll learn every major symbol for **baking, roasting, grilling, slow cooking, and self-cleaning** .
 
-![oven symbols and meanings](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/02/oven-symbols-and-meanings.webp)
+![oven symbols and meanings](https://cdn.vattimalaysia.com/2026/02/oven-symbols-and-meanings.webp)
 
 ### Quick Answer: How do I know which oven symbol to use for different types of cooking?
 
@@ -9313,7 +9313,7 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 Home cooks often wonder: how long will it really take? Do different ovens heat faster? Can I skip preheating? This guide gives **practical, expert-backed answers** to help you bake and roast perfectly every time.
 
-![how long to preheat oven](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/03/how-long-to-preheat-oven.webp)
+![how long to preheat oven](https://cdn.vattimalaysia.com/2026/03/how-long-to-preheat-oven.webp)
 
 ### Quick Answer: What Happens When Dishes Sit Overnight
 
@@ -9401,7 +9401,7 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 This article provides **clear guidance** on leaving dishes in your dishwasher overnight, based on hygiene, appliance care, and practical experience.
 
-![is it ok to leave dishes in the dishwasher overnight](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/03/leave-dishes-in-the-dishwasher.webp)
+![is it ok to leave dishes in the dishwasher overnight](https://cdn.vattimalaysia.com/2026/03/leave-dishes-in-the-dishwasher.webp)
 
 ### Quick Answer: Is It OK to Leave Dishes in the Dishwasher Overnight?
 
@@ -9502,7 +9502,7 @@ Modern high-efficiency built-in dishwashers are designed for easy maintenance, b
 
 Let’s break down exactly how to clean dishwashers the right way.
 
-![how to clean dishwashers](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/03/how-to-clean-dishwashers.webp)
+![how to clean dishwashers](https://cdn.vattimalaysia.com/2026/03/how-to-clean-dishwashers.webp)
 
 ### Quick Answer: Best Oven Setting for Baking Cakes
 
@@ -9638,7 +9638,7 @@ INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor)
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (94, 3, 'product-category', 'https://vattimalaysia.com/dishwasher/', 'dishwasher', 'Explore VATTI Dishwasher');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (95, 'which-oven-symbol-for-pizza', 'tips-tricks/which-oven-symbol-for-pizza', 'tips-tricks', 'Which Oven Symbol for Pizza? Guide to the Perfect Crust', 'Which Oven Symbol for Pizza? Guide to the Perfect Crust', 'Wondering which oven symbol to use for pizza? Learn what the pizza icon means, and tips for a perfect crust every time.', 'There is nothing quite as disappointing as pulling a pizza out of your [built-in oven](/built-in-oven/) only to find the base is still soft and doughy while the cheese on top has already started to brown a little too much. Sound familiar? The good news is that this is almost always a settings problem, not a recipe problem. Knowing which oven symbol to use for pizza makes a significant difference between a soggy base and a crisp, properly cooked crust. In this guide, we walk you through exactly which symbols to look for and how to use them for the best results. And if you want a refresher on [oven symbols and their meanings](/tips-tricks/oven-symbols-and-meanings/) more broadly, we have a dedicated guide for that too.
 
-![Which Oven Symbol for Pizza A Simple](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/04/Which-Oven-Symbol-for-Pizza-A-Simple.webp)
+![Which Oven Symbol for Pizza A Simple](https://cdn.vattimalaysia.com/2026/04/Which-Oven-Symbol-for-Pizza-A-Simple.webp)
 
 ## The Pizza Symbol (Fan + Bottom Heat)
 
@@ -9752,7 +9752,7 @@ INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor)
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (95, 5, 'product-category', 'https://vattimalaysia.com/combi-and-steam-oven-in-malaysia/', 'combi-and-steam-oven-in-malaysia', 'Explore VATTI Ovens');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (96, 'oven-symbol-for-baking-cookies', 'tips-tricks/oven-symbol-for-baking-cookies', 'tips-tricks', 'Oven Symbol for Baking Cookies: What Each Icon Means', 'Oven Symbol for Baking Cookies: What Each Icon Means', 'Not sure which oven symbol for baking cookies? Learn what each icon does and which setting gives you the best results every time', 'If you have ever pulled a tray of cookies out of the oven only to find them burnt on the bottom, pale on top, or just a bit off, there is a good chance it was not the recipe at fault. It might have been the oven symbol you chose. Modern [built-in ovens](/built-in-oven/) come with a range of cooking symbols, and knowing which one to use for baking cookies can make a real difference to your results. Whether you are baking chocolate chip cookies for the kids, butter cookies for a celebration, or traditional kuih for the festive season, this guide will help you match the right oven symbol to the job
 
-![Oven Symbol for Baking Cookies](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/04/Oven-Symbol-for-Baking-Cookies.webp)
+![Oven Symbol for Baking Cookies](https://cdn.vattimalaysia.com/2026/04/Oven-Symbol-for-Baking-Cookies.webp)
 
 ## Why the Right Oven Symbol Matters for Cookies
 
@@ -9866,7 +9866,7 @@ INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor)
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (96, 4, 'product-category', 'https://vattimalaysia.com/combi-and-steam-oven-in-malaysia/', 'combi-and-steam-oven-in-malaysia', 'Explore VATTI Ovens');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (97, 'oven-symbol-for-grill', 'tips-tricks/oven-symbol-for-grill', 'tips-tricks', 'Oven Symbol for Grill: What Each Icon Means', 'Oven Symbol for Grill: What Each Icon Means', 'Confused by the oven symbol for grill on your oven? Learn what each oven grill icon means and when to use it for perfect results every time.', 'Have you ever stood in front of your oven, finger hovering over the dial, and thought to yourself: what on earth does that symbol actually mean? You are not alone. Oven control panels are full of mysterious icons, and the grill symbols can be some of the most confusing ones to decode. Whether you just got a new [built-in oven](/built-in-oven/) or you have been cooking with yours for years, knowing exactly which oven symbol for grill to use makes a real difference in your cooking results. In this guide, we break down each grill symbol, what it does, and when to use it.
 
-![Oven Symbol for Grill](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/04/Oven-Symbol-for-Grill.webp)
+![Oven Symbol for Grill](https://cdn.vattimalaysia.com/2026/04/Oven-Symbol-for-Grill.webp)
 
 ## Why Oven Symbols Can Be So Confusing
 
@@ -9959,7 +9959,7 @@ INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor)
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (97, 3, 'product-category', 'https://vattimalaysia.com/combi-and-steam-oven-in-malaysia/', 'combi-and-steam-oven-in-malaysia', 'Explore VATTI Ovens');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (98, 'how-to-install-chimney-hood', 'tips-tricks/how-to-install-chimney-hood', 'tips-tricks', 'How to Install a Chimney Hood in Your Malaysian Kitchen', 'How to Install a Chimney Hood in Your Malaysian Kitchen', 'Learn how to install a chimney hood safely. A practical guide for Malaysian homes covering planning, ducting, electrical setup, and pro tips.', 'A noisy fan, smoky walls, and that lingering smell of last night’s sambal floating into the living room. Most Malaysian kitchens face the same battle every day, and the right **chimney hood** is what keeps the chaos under control. But even the most powerful hood will underperform if it is **not installed properly** . This guide walks you through exactly **how to install a chimney hood** in a Malaysian home, from planning and tools to wiring, ducting, and final testing. Whether you are renovating a new condo unit or upgrading the kitchen in a landed home, the steps below will help you get it right the first time.
 
-![How to Install a Chimney Hood in Your Malaysian Kitchen](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/05/How-to-Install-a-Chimney-Hood.webp)
+![How to Install a Chimney Hood in Your Malaysian Kitchen](https://cdn.vattimalaysia.com/2026/05/How-to-Install-a-Chimney-Hood.webp)
 
 ### Quick Answer: How to Install a Chimney Hood in Your Malaysian Kitchen?
 
@@ -10107,7 +10107,7 @@ INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor)
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (98, 7, 'external', 'https://web.whatsapp.com/send?phone=60123366082&amp;text=', NULL, 'Message us on WhatsApp');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (99, 'how-to-measure-suction-power', 'tips-tricks/how-to-measure-suction-power', 'tips-tricks', 'How to Measure Suction Power of a Kitchen Hood', 'How to Measure the Suction Power of a Kitchen Hood', 'Learn how to measure kitchen hood suction power using airflow (m³/h) and air pressure (Pa), with formulas and tips for Malaysian kitchens.', 'Walk into any kitchen appliance showroom in Malaysia and you will see hoods marketed with **big, bold suction numbers** : 1500 m³/h, 2500 m³/h, sometimes even higher. They sound impressive, but most shoppers have no idea what these figures actually mean, how they are measured, or whether a bigger number guarantees a better hood. The truth is, **suction power is not a single number** . It is a combination of two technical specs working together. Understanding what they mean and how to measure them is the difference between buying a hood that actually clears your kitchen and one that just sounds powerful on paper. This guide explains exactly how kitchen hood suction power is measured, what numbers you should look for, and how to test your hood’s performance at home.
 
-![How to Measure the Suction Power of a Kitchen Hood](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/05/How-to-Measure-the-Suction-Power-of-a-Kitchen-Hood.webp)
+![How to Measure the Suction Power of a Kitchen Hood](https://cdn.vattimalaysia.com/2026/05/How-to-Measure-the-Suction-Power-of-a-Kitchen-Hood.webp)
 
 ### Quick Answer: How to Measure the Suction Power of a Kitchen Hood?
 
@@ -10212,7 +10212,7 @@ INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor)
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (99, 5, 'external', 'https://web.whatsapp.com/send?phone=60123366082&amp;text=', NULL, 'Message us on WhatsApp');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (100, 'what-is-a-chimney-hood', 'tips-tricks/what-is-a-chimney-hood', 'tips-tricks', 'What Is a Chimney Hood and How Does It Work?', 'What Is a Chimney Hood? Everything Malaysian Home Cooks Need to Know', 'What is a chimney hood? It is a vertical kitchen extractor that pulls smoke and grease out of your kitchen. Here''s how it works.', 'If you have ever stir fried beef with black pepper or deep fried ikan bilis at home, you already know the problem. Cooking in a Malaysian kitchen produces **a lot of smoke, oil, and aroma** . Without proper ventilation, that mess settles on your cabinets, your walls, and eventually your lungs. This is where a **chimney hood** comes in. It is the most popular type of kitchen hood you will find in Malaysian homes, but if you are buying one for the first time, the technical specs and design choices can feel overwhelming. In this guide, we will break down **what a chimney hood actually is** , how it works, the main types you can choose from, and how to pick the right one for your kitchen.
 
-![What Is a Chimney Hood?](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/05/What-Is-a-Chimney-Hood-Everything-Malaysian-Home-Cooks-Need-to-Know.webp)
+![What Is a Chimney Hood?](https://cdn.vattimalaysia.com/2026/05/What-Is-a-Chimney-Hood-Everything-Malaysian-Home-Cooks-Need-to-Know.webp)
 
 ### Quick Answer: How to Measure the Suction Power of a Kitchen Hood?
 
@@ -10330,7 +10330,7 @@ INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor)
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (100, 8, 'external', 'https://web.whatsapp.com/send?phone=60123366082&amp;text=', NULL, 'Message us on WhatsApp');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (101, 'what-is-bldc-motor', 'tips-tricks/what-is-bldc-motor', 'tips-tricks', 'What Is BLDC Motor Cooker Hood? A Simple Guide', 'What Is BLDC Motor Cooker Hood? A Simple Guide', 'Wondering what is BLDC motor cooker hood ? Learn how this quiet, energy-saving motor works and why it makes kitchen hoods better.', 'Shopping for a new kitchen hood and keep seeing the term **BLDC motor** ? In short, a BLDC motor cooker hood is a kitchen hood run by a brushless DC motor. It is quieter, uses less electricity, and lasts longer than the older motors in many traditional hoods. Here is what that means for your kitchen, in plain English.
 
-![What is BLDC motor](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/06/What-is-BLDC-Cooker-Hood_Pic.webp)
+![What is BLDC motor](https://cdn.vattimalaysia.com/2026/06/What-is-BLDC-Cooker-Hood_Pic.webp)
 
 ### Quick Answer: What Is BLDC Motor Cooker Hood?
 
@@ -10404,7 +10404,7 @@ INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor)
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (101, 7, 'product-category', 'https://vattimalaysia.com/cooker-hob-in-malaysia/', 'cooker-hob-in-malaysia', 'Explore VATTI Cooker Hob');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (102, 'wok-cooking-right-wok-setup', 'tips-tricks/wok-cooking-right-wok-setup', 'tips-tricks', 'Wok Cooking: How to Choose the Right Wok & Kitchen Setup', 'Wok Cooking: How to Choose the Right Wok & Kitchen Setup', 'New to wok cooking? Learn how to choose the right wok, stove, and kitchen setup so you can stir-fry like a pro at home.', 'Want to stir-fry at home and get that smoky, restaurant-style flavour? It starts with the right gear. Great wok cooking is not just about skill, it is about pairing the right wok with a stove that brings strong heat and a kitchen that can handle the smoke. Here is how to set yourself up, in plain English.
 
-![wok cooking](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/06/wok-cooking-hero.webp)
+![wok cooking](https://cdn.vattimalaysia.com/2026/06/wok-cooking-hero.webp)
 
 ### Quick Answer: What Do You Need for Wok Cooking at Home?
 
@@ -10465,7 +10465,7 @@ INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor)
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (102, 5, 'product-category', 'https://vattimalaysia.com/cooker-hob-in-malaysia/', 'cooker-hob-in-malaysia', 'Explore VATTI Cooker Hob');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (103, 'how-to-clean-grease-filter', 'tips-tricks/how-to-clean-grease-filter', 'tips-tricks', 'How to Clean Grease Filter: Best Methods Compared', 'How to Clean Grease Filter: The Best Methods Compared', 'Learn how to clean grease filter using the best methods, from baking soda to degreaser, and tackle tough baked-on grease.', 'There is more than one way to clean a grease filter, and the best method depends on how bad the buildup is and what your filter is made of. A light monthly clean is quick, but baked-on grease needs a stronger approach. This guide compares the main methods so you can pick the right one for your kitchen.
 
-![How to Clean Grease Filter](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/06/grease-filter-hero.webp)
+![How to Clean Grease Filter](https://cdn.vattimalaysia.com/2026/06/grease-filter-hero.webp)
 
 ### Quick Answer: What Is the Best Way to Clean a Grease Filter?
 
@@ -10533,7 +10533,7 @@ INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor)
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (103, 5, 'external', 'https://web.whatsapp.com/send?phone=60123366082&amp;text=', NULL, 'Message us on WhatsApp');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (104, 'what-is-t-shape-hood', 'tips-tricks/what-is-t-shape-hood', 'tips-tricks', 'What Is a T-Shape Hood? A Simple Guide for Your Kitchen', 'What Is a T-Shape Hood? A Simple Guide for Your Kitchen', 'Wondering what a T-shape hood is? Learn how this popular range hood design works, its pros and cons, and whether it suits your kitchen.', 'Shopping for a new range hood and keep seeing the term **T-shape hood** ? In short, it is a wall-mounted hood named for its T-like silhouette: a wide base over your hob and a slim chimney rising up the wall. It is one of the most popular hood designs in modern kitchens. Here is what that means and whether it suits yours.
 
-![T shape hood](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/06/t-shape-hood-hero.webp)
+![T shape hood](https://cdn.vattimalaysia.com/2026/06/t-shape-hood-hero.webp)
 
 ### Quick Answer: What Is a T-Shape Hood?
 
@@ -10601,7 +10601,7 @@ INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor)
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (104, 6, 'external', 'https://web.whatsapp.com/send?phone=60123366082&amp;text=', NULL, 'Message us on WhatsApp');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (105, 'what-hood-size-do-i-need', 'tips-tricks/what-hood-size-do-i-need', 'tips-tricks', 'What Hood Size Do I Need? A Simple Sizing Guide', 'What Hood Size Do I Need? A Simple Sizing Guide', 'Not sure what hood size you need? Learn how to match your range hood to your hob, with simple cm sizing rules for Malaysian kitchens.', 'Choosing a range hood and unsure what size to get? The good news is that **hood size** comes down to one main thing: matching your hob. Get it right and smoke and grease are captured cleanly; get it too small and they escape into your kitchen. Here is how to pick the right size, with simple centimetre rules for Malaysian kitchens.
 
-![hood size](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/06/hood-size-hero.webp)
+![hood size](https://cdn.vattimalaysia.com/2026/06/hood-size-hero.webp)
 
 ### Quick Answer: What Hood Size Do I Need?
 
@@ -10667,7 +10667,7 @@ INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor)
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (105, 5, 'product-category', 'https://vattimalaysia.com/kitchen-hood-in-malaysia/', 'kitchen-hood-in-malaysia', 'Explore VATTI Kitchen Hood');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (106, 'what-is-auto-clean', 'tips-tricks/what-is-auto-clean', 'tips-tricks', 'What Is Auto Clean? VATTI Self-Cleaning Hoods Compared', 'What Is Auto Clean? VATTI Self-Cleaning Hoods Compared', 'What is auto clean in a range hood? Learn how VATTI steam, pulse-wave, and heat auto-clean systems work to keep your hood spotless.', 'Tired of scrubbing a greasy range hood? **Auto clean** is the feature that does the dirty work for you. With one tap, the hood cleans its own interior, fan, and motor housing, keeping suction strong and saving you the messiest chore in the kitchen. VATTI offers a few different auto-clean systems, so here is how they work and how to tell them apart.
 
-![auto clean](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/06/auto-clean-hero.webp)
+![auto clean](https://cdn.vattimalaysia.com/2026/06/auto-clean-hero.webp)
 
 ### Quick Answer: What Is Auto Clean?
 
@@ -10683,7 +10683,7 @@ Auto clean solves this by washing the inside of the hood for you at the press of
 
 ## 1. Steam + Hot Water Dual Clean (V938)
 
-![VATTI Kitchen Hood V938 Description](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/05/V938-PG13.webp)
+![VATTI Kitchen Hood V938 Description](https://cdn.vattimalaysia.com/2026/05/V938-PG13.webp)
 
 [*VATTI V938 – Steam + Hot Water Dual Clean (5th-generation system)*](/vatti-hidden-series-range-hood-v938/)
 
@@ -10693,7 +10693,7 @@ VATTI rates this system at a 99.1% full-coverage cleaning rate, a 99.2% deep-cle
 
 ## 2. Pulse-Wave Wash (V960)
 
-![VATTI Kitchen Hood V960 Description](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/05/V960-PG12.webp)
+![VATTI Kitchen Hood V960 Description](https://cdn.vattimalaysia.com/2026/05/V960-PG12.webp)
 
 [*VATTI V960 – Pulse-Wave Wash with One-Tap Wash, High-Pressure Rinse, and Turbo Dry*](/vatti-stellar-series-cooker-hood-v960/)
 
@@ -10703,7 +10703,7 @@ The full auto-wash cycle runs for about 60 minutes with the hood closed, and a s
 
 ## 3. Heat Auto-Clean (V917)
 
-![V997 Cooker Hood Carbon Grey Description](https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/05/V917-Carbon-Grey-Cooker-Hood-description-5.webp)
+![V997 Cooker Hood Carbon Grey Description](https://cdn.vattimalaysia.com/2026/05/V917-Carbon-Grey-Cooker-Hood-description-5.webp)
 
 [*VATTI V917 – Heat Auto-clean with a 17-minute heating process*](/vatti-cooker-hood-v917-carbon-grey/)
 

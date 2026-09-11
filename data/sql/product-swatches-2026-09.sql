@@ -16,12 +16,12 @@
 -- near-identical pages on three URLs and split the traffic /vatti-range-hood-v997/
 -- already earns. See product_colourway in schema.sql.
 
-INSERT INTO image (id, url, legacy_url, alt, width, height) VALUES (9095, 'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/09/vatti-range-hood-v997-ag-grey-front.webp', NULL, 'Range Hood V997 in AG Grey, front view', 1057, 995);
-INSERT INTO image (id, url, legacy_url, alt, width, height) VALUES (9096, 'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/09/vatti-range-hood-v997-ag-grey-quarter-front.webp', NULL, 'Range Hood V997 in AG Grey, angled view', 803, 1016);
-INSERT INTO image (id, url, legacy_url, alt, width, height) VALUES (9097, 'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/09/vatti-range-hood-v997-ag-grey-side.webp', NULL, 'Range Hood V997 in AG Grey, side view', 446, 988);
-INSERT INTO image (id, url, legacy_url, alt, width, height) VALUES (9098, 'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/09/vatti-range-hood-v997-pearl-white-front.webp', NULL, 'Range Hood V997 in Pearl White, front view', 1045, 1006);
-INSERT INTO image (id, url, legacy_url, alt, width, height) VALUES (9099, 'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/09/vatti-range-hood-v997-pearl-white-quarter-front.webp', NULL, 'Range Hood V997 in Pearl White, angled view', 871, 1008);
-INSERT INTO image (id, url, legacy_url, alt, width, height) VALUES (9100, 'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/09/vatti-range-hood-v997-pearl-white-side.webp', NULL, 'Range Hood V997 in Pearl White, side view', 451, 1001);
+INSERT INTO image (id, url, legacy_url, alt, width, height) VALUES (9095, 'https://cdn.vattimalaysia.com/2026/09/vatti-range-hood-v997-ag-grey-front.webp', NULL, 'Range Hood V997 in AG Grey, front view', 1057, 995);
+INSERT INTO image (id, url, legacy_url, alt, width, height) VALUES (9096, 'https://cdn.vattimalaysia.com/2026/09/vatti-range-hood-v997-ag-grey-quarter-front.webp', NULL, 'Range Hood V997 in AG Grey, angled view', 803, 1016);
+INSERT INTO image (id, url, legacy_url, alt, width, height) VALUES (9097, 'https://cdn.vattimalaysia.com/2026/09/vatti-range-hood-v997-ag-grey-side.webp', NULL, 'Range Hood V997 in AG Grey, side view', 446, 988);
+INSERT INTO image (id, url, legacy_url, alt, width, height) VALUES (9098, 'https://cdn.vattimalaysia.com/2026/09/vatti-range-hood-v997-pearl-white-front.webp', NULL, 'Range Hood V997 in Pearl White, front view', 1045, 1006);
+INSERT INTO image (id, url, legacy_url, alt, width, height) VALUES (9099, 'https://cdn.vattimalaysia.com/2026/09/vatti-range-hood-v997-pearl-white-quarter-front.webp', NULL, 'Range Hood V997 in Pearl White, angled view', 871, 1008);
+INSERT INTO image (id, url, legacy_url, alt, width, height) VALUES (9100, 'https://cdn.vattimalaysia.com/2026/09/vatti-range-hood-v997-pearl-white-side.webp', NULL, 'Range Hood V997 in Pearl White, side view', 451, 1001);
 
 INSERT INTO product_image (product_id, image_id, position, role) VALUES (11, 9095, 915, 'gallery');
 INSERT INTO product_image (product_id, image_id, position, role) VALUES (11, 9096, 916, 'gallery');

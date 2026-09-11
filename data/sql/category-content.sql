@@ -85,9 +85,9 @@ UPDATE product_category SET signature_product_id =
 -- it is not doing that any more.
 UPDATE product_category SET
   hero_image_url =
-    'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/kitchen-hood-hero-backdrop.jpg',
+    'https://cdn.vattimalaysia.com/2026/08/kitchen-hood-hero-backdrop.jpg',
   finder_image_url =
-    'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/kitchen-hood-finder-backdrop.jpg'
+    'https://cdn.vattimalaysia.com/2026/08/kitchen-hood-finder-backdrop.jpg'
   WHERE slug = 'kitchen-hood-in-malaysia';
 
 -- The hob leads with its own C861G-in-a-kitchen shot. It carries the whole
@@ -101,9 +101,9 @@ UPDATE product_category SET
 -- exists; it does not need one to be honest.
 UPDATE product_category SET
   hero_image_url =
-    'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/cooker-hob-hero-backdrop.jpg',
+    'https://cdn.vattimalaysia.com/2026/08/cooker-hob-hero-backdrop.jpg',
   finder_image_url =
-    'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/kitchen-hood-finder-backdrop.jpg'
+    'https://cdn.vattimalaysia.com/2026/08/kitchen-hood-finder-backdrop.jpg'
   WHERE slug = 'cooker-hob-in-malaysia';
 
 -- The oven now leads with its own appliance too: a built-in combi set in a
@@ -117,9 +117,9 @@ UPDATE product_category SET
 -- about the appliance, and nothing in the copy beside it names a product.
 UPDATE product_category SET
   hero_image_url =
-    'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/combi-oven-hero-backdrop.jpg',
+    'https://cdn.vattimalaysia.com/2026/08/combi-oven-hero-backdrop.jpg',
   finder_image_url =
-    'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/kitchen-hood-finder-backdrop.jpg'
+    'https://cdn.vattimalaysia.com/2026/08/kitchen-hood-finder-backdrop.jpg'
   WHERE slug = 'combi-and-steam-oven-in-malaysia';
 
 -- The dishwasher leads with its own machine as well: a built-in fronted in
@@ -134,9 +134,9 @@ UPDATE product_category SET
 -- band asks about the visitor's kitchen, not about the appliance.
 UPDATE product_category SET
   hero_image_url =
-    'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/dishwasher-hero-backdrop.jpg',
+    'https://cdn.vattimalaysia.com/2026/08/dishwasher-hero-backdrop.jpg',
   finder_image_url =
-    'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/kitchen-hood-finder-backdrop.jpg'
+    'https://cdn.vattimalaysia.com/2026/08/kitchen-hood-finder-backdrop.jpg'
   WHERE slug = 'dishwasher-in-malaysia';
 
 -- The purifier now leads with its own units: the WDHG01 and the V818WD heater
@@ -153,9 +153,9 @@ UPDATE product_category SET
 -- row is ready the day a second purifier is published.
 UPDATE product_category SET
   hero_image_url =
-    'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/water-purifier-hero-backdrop.jpg',
+    'https://cdn.vattimalaysia.com/2026/08/water-purifier-hero-backdrop.jpg',
   finder_image_url =
-    'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/kitchen-hood-finder-backdrop.jpg'
+    'https://cdn.vattimalaysia.com/2026/08/kitchen-hood-finder-backdrop.jpg'
   WHERE slug = 'one-tap-purifier-in-malaysia';
 
 -- ── the photograph under the signature band ────────────────────────────────
@@ -186,35 +186,35 @@ UPDATE product_category SET
 -- middle for the dishwasher's reason: above the units there is only cabinet.
 UPDATE product_category SET
   signature_image_url =
-    'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/kitchen-hood-signature-scene.webp',
+    'https://cdn.vattimalaysia.com/2026/08/kitchen-hood-signature-scene.webp',
   signature_image_alt =
     'A VATTI V929 cooker hood drawing steam off a steak searing in a pan on a gas hob.',
   signature_image_focus = '38% 38%'
   WHERE slug = 'kitchen-hood-in-malaysia';
 UPDATE product_category SET
   signature_image_url =
-    'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/cooker-hob-signature-scene.jpg',
+    'https://cdn.vattimalaysia.com/2026/08/cooker-hob-signature-scene.jpg',
   signature_image_alt =
     'A VATTI C861G cooker hob set into a marble countertop, its brushed grey glass and lit touch strip between a toaster, a kettle and a chopping board.',
   signature_image_focus = '45% 62%'
   WHERE slug = 'cooker-hob-in-malaysia';
 UPDATE product_category SET
   signature_image_url =
-    'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/combi-oven-signature-scene.jpg',
+    'https://cdn.vattimalaysia.com/2026/08/combi-oven-signature-scene.jpg',
   signature_image_alt =
     'A VATTI built-in combi oven fitted at eye level into a dark walnut cabinet run, its display lit beside a marble backsplash.',
   signature_image_focus = '48% 46%'
   WHERE slug = 'combi-and-steam-oven-in-malaysia';
 UPDATE product_category SET
   signature_image_url =
-    'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/dishwasher-signature-scene.jpg',
+    'https://cdn.vattimalaysia.com/2026/08/dishwasher-signature-scene.jpg',
   signature_image_alt =
     'A VATTI DWBB7 dishwasher built into a grey cabinet run, its door down and its baskets lit, in a kitchen with a marble backsplash.',
   signature_image_focus = '42% 55%'
   WHERE slug = 'dishwasher-in-malaysia';
 UPDATE product_category SET
   signature_image_url =
-    'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/water-purifier-signature-scene.jpg',
+    'https://cdn.vattimalaysia.com/2026/08/water-purifier-signature-scene.jpg',
   signature_image_alt =
     'A VATTI WDHG01 water purifier and its V818WD heater on a marble counter, with the stainless One Tap fitted at the sink beside them.',
   signature_image_focus = '40% 58%'

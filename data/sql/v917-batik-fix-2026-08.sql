@@ -24,17 +24,17 @@ DELETE FROM product_image
    AND role IN ('hero', 'gallery');
 INSERT INTO product_image (product_id, image_id, position, role) VALUES
   ((SELECT id FROM product WHERE slug = 'vatti-cooker-hood-v917-white'),
-   (SELECT id FROM image WHERE url = 'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/vatti-cooker-hood-v917-batik-front.webp'),
+   (SELECT id FROM image WHERE url = 'https://cdn.vattimalaysia.com/2026/08/vatti-cooker-hood-v917-batik-front.webp'),
    900, 'hero'),
   ((SELECT id FROM product WHERE slug = 'vatti-cooker-hood-v917-white'),
-   (SELECT id FROM image WHERE url = 'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/vatti-cooker-hood-v917-batik-quarter-front.webp'),
+   (SELECT id FROM image WHERE url = 'https://cdn.vattimalaysia.com/2026/08/vatti-cooker-hood-v917-batik-quarter-front.webp'),
    901, 'gallery');
 
 UPDATE product SET
   colour_variant = 'Batik White',
   name = 'VATTI Cooker Hood V917 (Batik White)',
   seo_title = 'VATTI Cooker Hood V917 (Batik White)',
-  hero_image_id = (SELECT id FROM image WHERE url = 'https://pub-d0b729df0b8f422289c6f46d17d33f3e.r2.dev/2026/08/vatti-cooker-hood-v917-batik-front.webp')
+  hero_image_id = (SELECT id FROM image WHERE url = 'https://cdn.vattimalaysia.com/2026/08/vatti-cooker-hood-v917-batik-front.webp')
   WHERE slug = 'vatti-cooker-hood-v917-white';
 
 -- White's old hero/gallery, now unreferenced. 173 was already a stray in the
