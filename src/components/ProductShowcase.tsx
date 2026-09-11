@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 
+import { cdn } from "@/lib/cdn";
 import type { Bestseller } from "@/lib/queries/home";
 
 const CYCLE_MS = 6000;
@@ -22,10 +23,10 @@ const CYCLE_MS = 6000;
  * slug to BESTSELLER_SLUGS cannot produce a blank panel.
  */
 const SHOWCASE_IMAGES: Record<string, string> = {
-  V919: "/showcase-v919.webp",
-  C861G: "/showcase-c861g.webp",
-  VA06: "/showcase-va06.webp",
-  VA05: "/showcase-va05.webp",
+  V919: cdn("2026/09/showcase-v919.webp"),
+  C861G: cdn("2026/09/showcase-c861g.webp"),
+  VA06: cdn("2026/09/showcase-va06.webp"),
+  VA05: cdn("2026/09/showcase-va05.webp"),
 };
 
 /**

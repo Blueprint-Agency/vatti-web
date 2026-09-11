@@ -30,9 +30,9 @@ import type { Partner } from "@/lib/queries/home";
  * sizes are the file sizes: next/image needs them, these are not static imports.
  */
 const AWARD_MARKS = [
-  { src: "/award-red-dot.png", alt: "Red Dot Design Award", width: 200, height: 200 },
-  { src: "/award-if.png", alt: "iF Design Award", width: 200, height: 200 },
-  { src: "/award-awe.png", alt: "AWE Award", width: 200, height: 176 },
+  { src: cdn("2026/09/award-red-dot.png"), alt: "Red Dot Design Award", width: 200, height: 200 },
+  { src: cdn("2026/09/award-if.png"), alt: "iF Design Award", width: 200, height: 200 },
+  { src: cdn("2026/09/award-awe.png"), alt: "AWE Award", width: 200, height: 176 },
 ];
 
 const AWARDS = [
@@ -88,13 +88,12 @@ const GUIDE_PATHS = [
  * from the centre — the hood body and its lit panel sit in the middle band, so
  * the crop takes ceiling and worktop and leaves the product intact.
  *
- * Give this a NEW filename whenever the render changes. public/ assets are
- * served under a hash-less URL with a long max-age, and Next's image optimizer
- * caches by path, so replacing the bytes under the same name serves the old
- * picture to anyone who has seen the page (and to the build, locally).
+ * Give this a NEW key whenever the render changes. R2 is served with a long
+ * max-age and Next's image optimizer caches by path, so replacing the bytes
+ * under the same key serves the old picture to anyone who has seen the page.
  */
 const HERO_PRODUCT = "vatti-aetheris-series-cooker-hood-v929";
-const HERO_IMAGE = "/hero-v929-panel.webp";
+const HERO_IMAGE = cdn("2026/09/home-hero-v929-panel.webp");
 
 /**
  * The kitchen behind the questionnaire. On R2 like every other content image,
@@ -267,7 +266,7 @@ export default function HomePage() {
             <div className="sticky top-0 h-[100dvh] overflow-hidden">
               <div className="hero-drift absolute inset-0">
                 <Image
-                  src="/hero-kitchen.png"
+                  src={cdn("2026/09/home-hero-kitchen.webp")}
                   alt="A VATTI cooker hood drawing steam off a wok on a gas hob in an open-plan kitchen."
                   fill
                   priority
