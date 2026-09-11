@@ -64,10 +64,15 @@ names as secrets.
 | `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET_NAME` | `pnpm media:upload` | Local only. Media is uploaded from a workstation, never at build time. Credentials only — the public CDN host is code, in `scripts/cdn.mjs`. The S3 endpoint is derived from the account id. |
 | `RESEND_API_KEY` | `/api/ewarranty` | Runtime. Without it the endpoint returns 503 and the form says so rather than losing the registration. |
 | `EWARRANTY_TO` | `/api/ewarranty` | Where registrations land. Comma-separated for more than one inbox. Defaults to `enquiry@vattimalaysia.com`, so it works unset. |
-| `EWARRANTY_FROM` | `/api/ewarranty` | Must be on a domain verified in Resend. Use `onboarding@resend.dev` until `vattimalaysia.com` is verified there. |
-| `NEXT_PUBLIC_GTM_ID` | `src/app/layout.tsx` | Build-time, and public — a container id is not a secret, hence the `NEXT_PUBLIC_` prefix. `GTM-TWBK2JSG`. Unset, GTM simply does not load. Additionally gated on the deployment serving `vattimalaysia.com` (`src/lib/deployment.ts`), so it stays dark on previews and starts firing by itself at cutover. Every other tag — GA4, Ads, Meta — is added inside the GTM console, not here. |
+| `EWARRANTY_FROM` | `/api/ewarranty` | Must be on a domain verified in Resend. `vattimalaysia.com` is verified, so the default `VATTI eWarranty <ewarranty@vattimalaysia.com>` works unset. |
 | `GOOGLE_SITE_VERIFICATION` | `src/app/layout.tsx` | Build-time. The `content="…"` token only, not the whole `<meta>` tag. Unset, the tag is omitted, which is correct until the property is claimed. |
 | `MEDIA_MIGRATED` | `pnpm db:check` | Set to `1` once media is repointed at the CDN; turns on the checks that fail if a legacy WordPress URL survives into the DB or an article body. |
+
+Two public values are deliberately **not** environment variables, because they ship in the HTML
+anyway and a constant is one less thing to get right in a dashboard: the **GTM container id**
+(`GTM-TWBK2JSG`, in `src/app/layout.tsx`) and the **CDN host** (`scripts/cdn.mjs`). Both are gated
+or read from one place; neither needs setting on Vercel. Every analytics tag after the container —
+GA4, Google Ads, Meta — is added inside the GTM console, not in this repo.
 
 ## Deployment
 

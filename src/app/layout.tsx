@@ -39,13 +39,17 @@ const GROUND_BOOT = `try{var g=localStorage.getItem("vatti-theme");if(g==="light
  * whole reason to load GTM instead of gtag.js directly: the next tag is a change
  * the marketer makes in a web console, not a deploy.
  *
- * Gated on isLiveSite for the same reason robots.ts is: vatti-web-seven.vercel.app
- * is already a production alias, so without this every preview build would ship
- * the real container and pollute the property with staging traffic before
- * cutover. The id is read from the environment rather than baked into git; set
- * NEXT_PUBLIC_GTM_ID in the Vercel project. It must carry the NEXT_PUBLIC_
- * prefix — the tag is client side, so the value is public by definition, and a
- * container id is not a secret.
+ * The id is written here rather than read from the environment. It is not a
+ * secret — it ships in the HTML of every page and anyone can read it out of
+ * the source — so the usual reason to put a value in the environment does not
+ * apply, and a literal is one less thing that has to be right in the Vercel
+ * dashboard for analytics to work. Same reasoning as CDN_HOST in
+ * scripts/cdn.mjs: a public constant is code.
+ *
+ * Still gated on isLiveSite for the same reason robots.ts is:
+ * vatti-web-seven.vercel.app is already a production alias, so without the gate
+ * every preview build would load the real container and fill the property with
+ * staging traffic before cutover.
  *
  * @next/third-parties, not a hand-rolled <script>: it seeds the dataLayer and
  * loads gtm.js through next/script, so the loader is placed and preloaded the
@@ -59,8 +63,8 @@ const GROUND_BOOT = `try{var g=localStorage.getItem("vatti-theme");if(g==="light
  * image-pixel tags fire — but it is one element and it is what the container
  * was issued with, so the install is the whole install rather than most of it.
  */
-const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
-const gtmEnabled = isLiveSite && !!GTM_ID;
+const GTM_ID = "GTM-TWBK2JSG";
+const gtmEnabled = isLiveSite;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_ORIGIN),
@@ -125,7 +129,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       suppressHydrationWarning
       className={`${geist.variable} ${geistMono.variable}`}
     >
-      {gtmEnabled && <GoogleTagManager gtmId={GTM_ID!} />}
+      {gtmEnabled && <GoogleTagManager gtmId={GTM_ID} />}
       <body className="min-h-dvh bg-void text-ink antialiased">
         <script dangerouslySetInnerHTML={{ __html: GROUND_BOOT }} />
         {gtmEnabled && (
