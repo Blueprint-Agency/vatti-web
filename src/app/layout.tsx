@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 import { SiteFooter } from "@/components/SiteFooter";
+import { SITE_ORIGIN, isLiveSite } from "@/lib/deployment";
 import "./globals.css";
 
 // Geist carries display, UI and body. It replaced Archivo, whose case rested on
@@ -30,14 +32,46 @@ const geistMono = Geist_Mono({
 // only inline script on the site; keep it to this one job.
 const GROUND_BOOT = `try{var g=localStorage.getItem("vatti-theme");if(g==="light"||g==="dark")document.documentElement.dataset.theme=g}catch(e){}`;
 
+/**
+ * One container, added in the Google Tag Manager UI — GA4, Google Ads, Meta and
+ * anything else go in as tags there rather than as more code here. That is the
+ * whole reason to load GTM instead of gtag.js directly: the next tag is a change
+ * the marketer makes in a web console, not a deploy.
+ *
+ * Gated on isLiveSite for the same reason robots.ts is: vatti-web-seven.vercel.app
+ * is already a production alias, so without this every preview build would ship
+ * the real container and pollute the property with staging traffic before
+ * cutover. The id is read from the environment rather than baked into git; set
+ * NEXT_PUBLIC_GTM_ID in the Vercel project. It must carry the NEXT_PUBLIC_
+ * prefix — the tag is client side, so the value is public by definition, and a
+ * container id is not a secret.
+ *
+ * @next/third-parties, not a hand-rolled <script>: it places the loader
+ * correctly, keeps the <noscript> iframe in sync with the id, and exposes
+ * sendGTMEvent() for any page that later needs to push to the dataLayer. It is
+ * versioned with Next itself and pinned to the 15.x line to match.
+ */
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
+const gtmEnabled = isLiveSite && !!GTM_ID;
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://vattimalaysia.com"),
+  metadataBase: new URL(SITE_ORIGIN),
   title: {
     default: "VATTI Malaysia | Kitchen Hoods, Hobs & Built-in Ovens",
     template: "%s | VATTI Malaysia",
   },
   description:
     "Built-in kitchen appliances engineered for high-heat Asian cooking. Available through 76 authorised dealers across Malaysia.",
+
+  // Search Console ownership. The meta-tag method is worth having even though
+  // the domain is also verifiable by DNS TXT, because it travels with the
+  // deployment rather than the registrar. Unset => Next omits the tag entirely,
+  // which is the correct state until the property is claimed. Paste the token
+  // from Search Console → Add property → URL prefix → HTML tag into
+  // GOOGLE_SITE_VERIFICATION (the content="…" value only, not the whole tag).
+  verification: process.env.GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+    : undefined,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -50,6 +84,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       suppressHydrationWarning
       className={`${geist.variable} ${geistMono.variable}`}
     >
+      {gtmEnabled && <GoogleTagManager gtmId={GTM_ID!} />}
       <body className="min-h-dvh bg-void text-ink antialiased">
         <script dangerouslySetInnerHTML={{ __html: GROUND_BOOT }} />
         <a

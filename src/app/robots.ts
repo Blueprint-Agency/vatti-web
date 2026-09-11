@@ -1,31 +1,42 @@
 import type { MetadataRoute } from "next";
 
-const HOST = "vattimalaysia.com";
+import { SITE_HOST, isLiveSite } from "@/lib/deployment";
 
 /**
  * Indexing is allowed only on the deployment that actually serves the live
- * domain. Today that is still WordPress and this app sits on
- * vatti-web-seven.vercel.app, so it must stay out of the index — a preview
- * carrying the same 248 pages would compete with the site it is replacing.
+ * domain — see src/lib/deployment.ts, which states that test once for robots
+ * and the analytics tags together. Today the live domain is still WordPress
+ * and this app sits on vatti-web-seven.vercel.app, so it must stay out of the
+ * index: a preview carrying the same 248 pages would compete with the site it
+ * is replacing.
  *
- * `VERCEL_ENV` alone is not enough: `vatti-web-seven.vercel.app` IS this
- * project's production alias, so a push to main already reports "production".
- * `VERCEL_PROJECT_PRODUCTION_URL` is Vercel's shortest production custom
- * domain, falling back to the *.vercel.app one when there is none — it reads
- * `vatti-web-seven.vercel.app` today and flips to `vattimalaysia.com` by
- * itself the moment the domain is attached. Both are available at build time,
- * which is when this file runs. No flag to remember at cutover.
+ * The disallow-everything branch deliberately ships NO sitemap line. Naming a
+ * sitemap while disallowing the whole site is a mixed signal, and Google will
+ * happily fetch and queue the URLs it lists.
+ *
+ * On the live branch: nothing is disallowed by path. Every route on this site
+ * is meant to be crawled, and the handful that must not be indexed
+ * (/instruction-manual/<model>/) carry a `noindex` meta tag instead — which is
+ * the correct tool, because a robots.txt disallow would stop the crawler
+ * reading that very tag. /api/ is listed as a courtesy, not a security
+ * boundary: it holds one POST-only endpoint with nothing to crawl.
  */
-const live =
-  process.env.VERCEL_ENV === "production" &&
-  process.env.VERCEL_PROJECT_PRODUCTION_URL === HOST;
-
 export default function robots(): MetadataRoute.Robots {
-  if (!live) return { rules: { userAgent: "*", disallow: "/" } };
+  if (!isLiveSite) {
+    return { rules: { userAgent: "*", disallow: "/" } };
+  }
 
   return {
-    rules: { userAgent: "*", allow: "/" },
-    sitemap: `https://${HOST}/sitemap.xml`,
-    host: HOST,
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        // POST-only route handler; a GET returns 405. Keeps it out of crawl
+        // budget rather than out of reach.
+        disallow: ["/api/"],
+      },
+    ],
+    sitemap: `https://${SITE_HOST}/sitemap.xml`,
+    host: SITE_HOST,
   };
 }
