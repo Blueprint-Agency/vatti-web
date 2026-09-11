@@ -13,6 +13,12 @@ export type Article = {
   reading_minutes: number | null;
   published_at: string;
   modified_at: string | null;
+  /**
+   * 'Vatti Malaysia' on 75 of the 105 published posts and NULL on the rest —
+   * WordPress never carried a byline for them. The schema falls back to the
+   * organisation, which is what an unsigned company post is.
+   */
+  author: string | null;
   hero_url: string | null;
   hero_alt: string | null;
   hero_width: number | null;
@@ -100,6 +106,7 @@ export function getArticle(path: string): Article | undefined {
   return get<Article>(
     `SELECT a.id, a.slug, a.path, a.section, a.title, a.h1, a.meta_description,
             a.body_md, a.word_count, a.reading_minutes, a.published_at, a.modified_at,
+            a.author,
             i.url AS hero_url, i.alt AS hero_alt,
             i.width AS hero_width, i.height AS hero_height
        FROM article a

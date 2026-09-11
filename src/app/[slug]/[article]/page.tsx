@@ -191,8 +191,129 @@ export default async function Page({ params }: Params) {
       </main>
 
       <CtaBar />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema(article)) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleBreadcrumbSchema(article)) }}
+      />
+      {recipes.map((r) => (
+        <script
+          key={r.id}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(recipeSchema(r, article)) }}
+        />
+      ))}
     </>
   );
+}
+
+const SITE = "https://vattimalaysia.com";
+const PUBLISHER = { "@type": "Organization", name: "VATTI Malaysia", url: `${SITE}/` };
+
+/**
+ * BlogPosting rather than Article: these are dated editorial posts under a blog
+ * archive, which is the narrower and therefore more accurate type.
+ *
+ * `author` is the stored byline where WordPress carried one and the organisation
+ * on the 30 posts where it did not. An unsigned company post is authored by the
+ * company — inventing a person to fill the field would be worse than the
+ * fallback, and omitting author loses the rich result.
+ *
+ * dateModified falls back to datePublished on the 3 posts with no modified_at.
+ * Every published post has a hero image, so `image` is never empty; if that ever
+ * stops being true the field drops rather than emitting null.
+ */
+function articleSchema(article: Article) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: article.title,
+    description: article.meta_description ?? undefined,
+    url: `${SITE}/${article.path}/`,
+    mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE}/${article.path}/` },
+    datePublished: article.published_at,
+    dateModified: article.modified_at ?? article.published_at,
+    author: article.author ? { "@type": "Organization", name: article.author } : PUBLISHER,
+    publisher: PUBLISHER,
+    image: article.hero_url ? [article.hero_url] : undefined,
+    articleSection: getSectionName(article.section),
+    wordCount: article.word_count,
+    inLanguage: "en-MY",
+  };
+}
+
+/** Mirrors the breadcrumb the reader can see at the top of the page. */
+function articleBreadcrumbSchema(article: Article) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: getSectionName(article.section),
+        item: `${SITE}/category/${article.section}/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: article.title,
+        item: `${SITE}/${article.path}/`,
+      },
+    ],
+  };
+}
+
+/**
+ * Only the 16 posts that carry a real single recipe get this — `getRecipes`
+ * returns nothing for the 10 roundups that hold several recipes as prose, so
+ * they emit no Recipe node rather than a wrong one describing only the first.
+ *
+ * Every field is a column that exists. There is no `nutrition` beyond calories
+ * and no rating: recipe reviews are not collected, and `review` is about the
+ * appliances' service, not the cooking.
+ */
+function recipeSchema(recipe: Recipe, article: Article) {
+  // yield_label already carries the whole phrase — '2 servings', not 'servings'
+  // — and yield_qty is the bare number it starts with. Joining them yields
+  // "2 2 servings". The label is the one to print; the number is what the card
+  // shows on its own under "Serves".
+  const yieldText = recipe.yield_label ?? recipe.yield_qty ?? undefined;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Recipe",
+    name: recipe.name,
+    description: recipe.description ?? undefined,
+    url: `${SITE}/${article.path}/`,
+    image: article.hero_url ? [article.hero_url] : undefined,
+    datePublished: article.published_at,
+    author: article.author ? { "@type": "Organization", name: article.author } : PUBLISHER,
+    publisher: PUBLISHER,
+    prepTime: minutesToIso(recipe.prep_minutes),
+    cookTime: minutesToIso(recipe.cook_minutes),
+    totalTime: minutesToIso(recipe.total_minutes),
+    recipeYield: yieldText,
+    recipeCuisine: recipe.cuisine ?? undefined,
+    recipeCategory: recipe.meal_category ?? undefined,
+    nutrition: recipe.calories
+      ? { "@type": "NutritionInformation", calories: recipe.calories }
+      : undefined,
+    recipeIngredient: recipe.ingredients.length ? recipe.ingredients : undefined,
+    recipeInstructions: recipe.steps.length
+      ? recipe.steps.map((text, i) => ({ "@type": "HowToStep", position: i + 1, text }))
+      : undefined,
+  };
+}
+
+/** 25 -> 'PT25M'. NULL stays undefined so the field drops out of the JSON. */
+function minutesToIso(minutes: number | null): string | undefined {
+  return minutes ? `PT${minutes}M` : undefined;
 }
 
 /** Comparison form: the scrape's curly apostrophes and the card's straight ones

@@ -892,6 +892,15 @@ export function CategoryView({
         />
       )}
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(categoryBreadcrumb(category)) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(categoryList(category, products)) }}
+      />
+
       {/* The same bar the product pages carry. These pages outrank the
           homepage, so a phone arriving from search lands here first and the
           "how to buy" section is nine screens down. The message names the
@@ -1008,6 +1017,50 @@ const SUMMARY_COLUMNS: Record<number, string> = {
   3: "grid-cols-1 sm:grid-cols-3",
   4: "grid-cols-2 md:grid-cols-4",
 };
+
+const SITE = "https://vattimalaysia.com";
+
+/**
+ * Home → this category. Two levels is the whole trail: these pages sit at the
+ * root of the URL space, not under a /category/ parent, so inventing a deeper
+ * crumb would describe a hierarchy the site does not have.
+ */
+function categoryBreadcrumb(category: Category) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: category.name,
+        item: `${SITE}/${category.slug}/`,
+      },
+    ],
+  };
+}
+
+/**
+ * The models on the page, in the order they are shown, as URLs rather than
+ * nested Product nodes — each one's own page already carries the full Product
+ * with its specs, and restating a partial copy here only creates a second
+ * description of the same entity for a crawler to reconcile.
+ */
+function categoryList(category: Category, products: CategoryProduct[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: `VATTI ${category.name} models`,
+    numberOfItems: products.length,
+    itemListElement: products.map((p, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: p.name,
+      url: `${SITE}/${p.slug}/`,
+    })),
+  };
+}
 
 function faqPage(faqs: Faq[]) {
   return {

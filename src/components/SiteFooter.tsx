@@ -26,7 +26,11 @@ function RedNoteLogo({ size = 20 }: { size?: number }) {
   );
 }
 
-const SOCIALS = [
+/**
+ * Exported because the home page's Organization schema reads its `sameAs` from
+ * this same list. A brand's accounts are one fact; two copies of it drift.
+ */
+export const SOCIALS = [
   { label: "Facebook", href: "https://www.facebook.com/vattimalaysia", Icon: FacebookLogo },
   { label: "Instagram", href: "https://www.instagram.com/vattimalaysia/", Icon: InstagramLogo },
   { label: "RedNote", href: "https://xhslink.cn/m/1slnUiXf40q", Icon: RedNoteLogo },
