@@ -48,6 +48,7 @@ export default function VattiPayPage() {
             <div className="mt-9 flex flex-wrap gap-3">
               <a
                 href={VATTI_PAY}
+                target="_blank"
                 rel="noopener"
                 className="rounded-sm bg-teal px-6 py-3 font-semibold text-void transition-opacity hover:opacity-90"
               >
@@ -55,6 +56,8 @@ export default function VattiPayPage() {
               </a>
               <a
                 href={WHATSAPP}
+                target="_blank"
+                rel="noopener"
                 className="rounded-sm border border-line-strong px-6 py-3 font-medium text-ink transition-colors hover:border-teal hover:text-teal"
               >
                 Ask about a dealer account

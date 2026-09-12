@@ -194,7 +194,7 @@ function inline(text: string): ReactNode[] {
         );
       } else {
         out.push(
-          <a key={key++} href={href} rel="noopener" className={LINK}>
+          <a key={key++} href={href} target="_blank" rel="noopener" className={LINK}>
             {label}
           </a>
         );

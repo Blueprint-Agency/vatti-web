@@ -76,6 +76,8 @@ export default async function ManualPage({ params }: { params: Promise<Params> }
               </a>
               <a
                 href={ask}
+                target="_blank"
+                rel="noopener"
                 className="rounded-sm border border-line-strong px-6 py-3 font-medium text-ink transition-colors hover:border-teal hover:text-teal"
               >
                 Ask a question

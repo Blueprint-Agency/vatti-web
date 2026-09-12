@@ -128,6 +128,8 @@ export default async function StorePage({ params }: { params: Promise<{ slug: st
                 )}
                 <a
                   href={WHATSAPP}
+                  target="_blank"
+                  rel="noopener"
                   className="rounded-sm border border-line-strong px-6 py-3 font-medium text-ink transition-colors hover:border-teal hover:text-teal"
                 >
                   WhatsApp VATTI

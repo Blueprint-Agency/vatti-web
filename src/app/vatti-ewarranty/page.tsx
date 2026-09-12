@@ -178,7 +178,12 @@ export default function EWarrantyPage() {
 
               <p className="mt-6 text-sm leading-relaxed text-ink-muted">
                 Stuck on any of it?{" "}
-                <a href={WHATSAPP} className="text-teal transition-opacity hover:opacity-80">
+                <a
+                  href={WHATSAPP}
+                  target="_blank"
+                  rel="noopener"
+                  className="text-teal transition-opacity hover:opacity-80"
+                >
                   Message us on WhatsApp
                 </a>{" "}
                 or{" "}

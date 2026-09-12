@@ -330,6 +330,8 @@ export function CategoryView({
                 >
                   <a
                     href={WHATSAPP}
+                    target="_blank"
+                    rel="noopener"
                     className="rounded-sm bg-teal px-6 py-3 font-semibold text-void transition-opacity hover:opacity-90"
                   >
                     WhatsApp us
@@ -808,6 +810,8 @@ export function CategoryView({
                 </p>
                 <a
                   href={WHATSAPP}
+                  target="_blank"
+                  rel="noopener"
                   className="mt-6 inline-block text-teal transition-opacity hover:opacity-80"
                 >
                   012-3366082 →
@@ -859,6 +863,8 @@ export function CategoryView({
               <div className="mt-9 flex flex-wrap gap-3">
                 <a
                   href={WHATSAPP}
+                  target="_blank"
+                  rel="noopener"
                   className="rounded-sm bg-teal px-6 py-3 font-semibold text-void transition-opacity hover:opacity-90"
                 >
                   WhatsApp us

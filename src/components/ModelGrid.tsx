@@ -152,6 +152,8 @@ export function ModelGrid({
             </button>
             <a
               href={WHATSAPP}
+              target="_blank"
+              rel="noopener"
               className="rounded-sm bg-teal px-6 py-3 font-semibold text-void transition-opacity hover:opacity-90"
             >
               Ask us instead

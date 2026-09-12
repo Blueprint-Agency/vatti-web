@@ -524,6 +524,8 @@ function ProductView({ product }: { product: Product }) {
                       <li key={d.url}>
                         <a
                           href={d.url}
+                          target="_blank"
+                          rel="noopener"
                           className="flex items-center gap-2 rounded-sm border border-line px-3.5 py-2 text-sm text-ink transition-colors hover:border-teal hover:text-teal"
                         >
                           {d.label}
@@ -541,6 +543,8 @@ function ProductView({ product }: { product: Product }) {
               <div className="hidden gap-3 pt-10 lg:flex">
                 <a
                   href={enquireHref}
+                  target="_blank"
+                  rel="noopener"
                   className="rounded-sm bg-teal px-6 py-3 font-semibold text-void transition-opacity hover:opacity-90"
                 >
                   Enquire about {product.model_code}
@@ -672,6 +676,8 @@ function ProductView({ product }: { product: Product }) {
               <p className="mt-8 text-sm">
                 <a
                   href={downloads.find((d) => d.kind === "dimensions")!.url}
+                  target="_blank"
+                  rel="noopener"
                   className="text-teal underline decoration-line underline-offset-4"
                 >
                   {/* The download's own label: on most products this file is a
@@ -859,6 +865,8 @@ function ProductView({ product }: { product: Product }) {
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
                   href={enquireHref}
+                  target="_blank"
+                  rel="noopener"
                   className="rounded-sm bg-teal px-6 py-3 font-semibold text-void transition-opacity hover:opacity-90"
                 >
                   WhatsApp us

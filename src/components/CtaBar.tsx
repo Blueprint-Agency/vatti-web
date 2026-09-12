@@ -38,6 +38,8 @@ export function CtaBar({ href = WHATSAPP }: { href?: string }) {
     >
       <a
         href={href}
+        target="_blank"
+        rel="noopener"
         className="flex items-center justify-center gap-2.5 rounded-sm bg-teal px-4 py-3.5 text-center text-[1.0625rem] font-semibold text-void"
       >
         <WhatsappLogo size={22} weight="fill" aria-hidden="true" />

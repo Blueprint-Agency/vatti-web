@@ -146,7 +146,7 @@ export function SiteHeader() {
               </Link>
             </li>
             <li>
-              <a href={CATALOGUE} className={ITEM}>
+              <a href={CATALOGUE} target="_blank" rel="noopener" className={ITEM}>
                 Catalog
               </a>
             </li>
@@ -198,7 +198,12 @@ export function SiteHeader() {
                 </Link>
               </li>
               <li>
-                <a href={CATALOGUE} className="block py-1.5 pl-3 text-ink">
+                <a
+                  href={CATALOGUE}
+                  target="_blank"
+                  rel="noopener"
+                  className="block py-1.5 pl-3 text-ink"
+                >
                   Catalog
                 </a>
               </li>

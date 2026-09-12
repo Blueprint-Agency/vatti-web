@@ -66,7 +66,12 @@ export default function InstructionManualPage() {
             <p className="max-w-[60ch] leading-relaxed text-ink-muted">
               Cannot find your model? Message us with the model code on the rating label and we
               will send the manual to you.{" "}
-              <a href={WHATSAPP} className="text-teal transition-opacity hover:opacity-80">
+              <a
+                href={WHATSAPP}
+                target="_blank"
+                rel="noopener"
+                className="text-teal transition-opacity hover:opacity-80"
+              >
                 WhatsApp 012-3366082 →
               </a>
             </p>

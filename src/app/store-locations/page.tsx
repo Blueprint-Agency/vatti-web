@@ -177,6 +177,8 @@ export default function StoreLocationsPage() {
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
                   href={WHATSAPP}
+                  target="_blank"
+                  rel="noopener"
                   className="rounded-sm bg-teal px-6 py-3 font-semibold text-void transition-opacity hover:opacity-90"
                 >
                   WhatsApp us

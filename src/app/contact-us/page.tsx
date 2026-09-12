@@ -39,6 +39,8 @@ export default function ContactPage() {
               <div className="mt-9 flex flex-wrap gap-3">
                 <a
                   href={WHATSAPP}
+                  target="_blank"
+                  rel="noopener"
                   className="rounded-sm bg-teal px-6 py-3 font-semibold text-void transition-opacity hover:opacity-90"
                 >
                   WhatsApp 012-3366082
@@ -116,6 +118,7 @@ export default function ContactPage() {
                 </Link>
                 <a
                   href={`https://maps.google.com/maps?q=${encodeURIComponent(ADDRESS)}`}
+                  target="_blank"
                   rel="noopener"
                   className="rounded-sm border border-line-strong px-6 py-3 font-medium text-ink transition-colors hover:border-teal hover:text-teal"
                 >
