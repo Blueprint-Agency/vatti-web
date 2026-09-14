@@ -190,8 +190,17 @@ function rewriteBody(md) {
     .replace(/https?:\/\/vattimalaysia\.com\//g, () => {
       bodyPageUrls++;
       return "/";
+    })
+    // After the step above every internal href is site-relative, which is the
+    // form redirects.sql keys on. Fragment or query, if any, rides along.
+    .replace(/\]\((\/[^)#?\s]*)([#?][^)]*)?\)/g, (m, path, tail) => {
+      const to = pastRedirect(path);
+      if (to !== path) bodyRedirects++;
+      return `](${to}${tail || ""})`;
     });
 }
+let bodyRedirects = 0,
+  tableRedirects = 0;
 
 // ── source chrome ──────────────────────────────────────────────────────────
 // Three blocks of WordPress furniture came through the scrape as body text. They
@@ -355,6 +364,28 @@ const joinList = (v) =>
 
 const isInternal = (href) => /^https?:\/\/vattimalaysia\.com\//.test(String(href));
 
+// ── links that land on a redirect ──────────────────────────────────────────
+// The scrape links to the six plain category slugs (/kitchen-hood/, /cooker-hob/,
+// /built-in-oven/, /steamer-combi-oven/, /dishwasher/, /one-tap-purifier/) and
+// to one recipe's stale root permalink. Every one of those is a 301 source in
+// redirects.sql, so the link works, but the click and the link equity go
+// through the redirect before they reach the page that ranks: a third of the
+// article links to the hood category were arriving that way. Resolved here so
+// the committed SQL links straight to the target and a re-run of the importer
+// cannot put the redirect back. Chains are followed; db:check rejects loops.
+const REDIRECT = new Map(
+  [...readFileSync(join(root, "data/sql/redirects.sql"), "utf8").matchAll(
+    /^INSERT INTO redirect \(from_path, to_path, code\) VALUES \('([^']+)', '([^']+)', \d+\);$/gm
+  )].map((m) => [m[1], m[2]])
+);
+function pastRedirect(path) {
+  let p = path;
+  for (let hops = 0; REDIRECT.has(p) && hops < 5; hops++) p = REDIRECT.get(p);
+  // Only site-relative targets are followed: an offsite to_path would turn an
+  // internal <Link> into an <a> at render, and none of the article links hit one.
+  return p.startsWith("/") ? p : path;
+}
+
 // ── unpublished ────────────────────────────────────────────────────────────
 // A true duplicate of clean-baking-sheets, and already a 301 source in
 // redirects.sql — see CLAUDE.md § Gotchas. The row stays so the content is still
@@ -447,12 +478,24 @@ articles.forEach((a, i) => {
   (a.links || []).filter((l) => !isShareLink(l.href)).forEach((l, n) => {
     linkCount++;
     if (!isInternal(l.href)) externalLinks++;
+    // the scrape derives `slug` from the path even for offsite hrefs, where
+    // it comes out as 'https:/www.pinterest.com/pin/create/button'
+    let href = l.href;
+    let slug = isInternal(l.href) ? l.slug : null;
+    if (isInternal(l.href)) {
+      const path = l.href.replace(/^https?:\/\/vattimalaysia\.com/, "");
+      const to = pastRedirect(path);
+      if (to !== path) {
+        tableRedirects++;
+        href = `https://vattimalaysia.com${to}`;
+        // target_slug is the path without its slashes for every internal kind:
+        // 'kitchen-hood-in-malaysia' for a category, 'recipe/x' for an article.
+        slug = to.replace(/^\/|\/$/g, "");
+      }
+    }
     body.push(
       `INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES ` +
-        `(${id}, ${n}, ${q(l.kind)}, ${q(l.href)}, ` +
-        // the scrape derives `slug` from the path even for offsite hrefs, where
-        // it comes out as 'https:/www.pinterest.com/pin/create/button'
-        `${q(isInternal(l.href) ? l.slug : null)}, ${q((l.anchors || [])[0])});`
+        `(${id}, ${n}, ${q(l.kind)}, ${q(href)}, ${q(slug)}, ${q((l.anchors || [])[0])});`
     );
   });
 
@@ -513,6 +556,7 @@ console.log(`jetpack       ${unwrappedJetpack} i0.wp.com URLs unwrapped`);
 console.log(`body urls     ${bodyImageUrls} media -> CDN, ${bodyPageUrls} page links -> site-relative`);
 console.log(`recipes       ${recipeCount} with ${ingredientCount} ingredients, ${stepCount} steps (${droppedBlanks} blank dropped)`);
 console.log(`links         ${linkCount} (${externalLinks} external), share buttons dropped`);
+console.log(`redirects     ${bodyRedirects} body links and ${tableRedirects} link rows pointed past a 301`);
 console.log(`chrome        ${strippedShare} share tails, ${strippedCards} recipe cards stripped`);
 console.log(`recipe notes  ${capturedNotes}/${recipeCount} '### Note' captured before the strip`);
 console.log(`tables        ${restoredTables} restored from research/article-tables.json`);
