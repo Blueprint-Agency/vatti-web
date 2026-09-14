@@ -102,6 +102,9 @@ INSERT INTO redirect (from_path, to_path, code) VALUES ('/is-a-dishwasher-worth-
 INSERT INTO redirect (from_path, to_path, code) VALUES ('/kitchen-hygiene-and-cooking-safety-10-tips/', '/tips-tricks/kitchen-hygiene-and-cooking-safety-10-tips/', 301);
 -- /recipe/oven-roasted-potatoes/ is the only member the live site still serves (/oven-roasted-potatoes/ is 301)
 INSERT INTO redirect (from_path, to_path, code) VALUES ('/oven-roasted-potatoes/', '/recipe/oven-roasted-potatoes/', 301);
+-- Same stale root permalink as the row above, linked from the baked sweet
+-- potato recipe and 404ing until 2026-09-14. The recipe lives under /recipe/.
+INSERT INTO redirect (from_path, to_path, code) VALUES ('/cheesy-baked-potato/', '/recipe/cheesy-baked-potato/', 301);
 -- /recipe/peanut-butter-and-banana-overnight-oats-recipes/ is the only member the live site still serves (/peanut-butter-and-banana-overnight-oats-recipes/ is 404)
 INSERT INTO redirect (from_path, to_path, code) VALUES ('/peanut-butter-and-banana-overnight-oats-recipes/', '/recipe/peanut-butter-and-banana-overnight-oats-recipes/', 301);
 -- /tips-tricks/stainless-steel-cleaning-solutions-5-tips/ is the only member the live site still serves (/stainless-steel-cleaning-solutions-5-tips/ is 404)

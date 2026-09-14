@@ -404,7 +404,7 @@ INSERT INTO category_reason (category_id, position, title, body_md, figure, figu
 INSERT INTO category_faq (category_id, position, question, answer_md) VALUES
   ((SELECT id FROM product_category WHERE slug = 'kitchen-hood-in-malaysia'), 1,
    'Which type of kitchen hood is better?',
-   'Wall-mounted and island hoods are the usual choices for powerful ventilation. The question that changes more, in a Malaysian kitchen, is ducted or ductless: venting outside beats recirculating whenever the building permits it.'),
+   'Wall-mounted and island hoods are the usual choices for powerful ventilation. The question that changes more, in a Malaysian kitchen, is ducted or ductless: venting outside beats recirculating whenever the building permits it. Our [ducted or ductless guide](/buying-guide/which-is-better-ducted-or-ductless-range-hood/) explains when each is the right call.'),
 
   ((SELECT id FROM product_category WHERE slug = 'kitchen-hood-in-malaysia'), 2,
    'What should I look for when buying a kitchen hood?',
@@ -440,7 +440,7 @@ INSERT INTO category_faq (category_id, position, question, answer_md) VALUES
 
   ((SELECT id FROM product_category WHERE slug = 'kitchen-hood-in-malaysia'), 10,
    'How long should a kitchen hood last?',
-   'Ten to fifteen years with proper maintenance. Clean the filters on schedule and run the auto-clean cycle: grease buildup, not wear, is what takes the suction away.');
+   'Ten to fifteen years with proper maintenance. [Clean the filters](/tips-tricks/how-to-clean-kitchen-hood-filter/) on schedule and run the auto-clean cycle: grease buildup, not wear, is what takes the suction away.');
 
 -- ── kitchen hood: the "Best for" row ───────────────────────────────────────
 -- One line per model for the comparison table. Written against the measured
@@ -665,7 +665,7 @@ INSERT INTO category_faq (category_id, position, question, answer_md) VALUES
 
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 5,
    'What should I look for when buying a cooker hob?',
-   'Burner power, the cut-out size, the number of burners, the control type and the safety features. Take them in that order: power and fit rule out most of the range before anything else matters.'),
+   'Burner power, the cut-out size, the number of burners, the control type and the safety features. Take them in that order: power and fit rule out most of the range before anything else matters. If you are still deciding between gas and electric, our [induction or ceramic guide](/buying-guide/which-is-better-induction-or-ceramic-cooker/) covers the electric side.'),
 
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 6,
    'How far does a cooker hob need to be from a window?',
@@ -858,7 +858,7 @@ INSERT INTO category_faq (category_id, position, question, answer_md) VALUES
 
   ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 8,
    'What is the difference between a convection oven and a combi oven?',
-   'A convection oven circulates hot dry air and nothing else. A combi adds steam to that, which is what stops a reheated dish drying out and what makes a roast crisp outside while staying moist inside. Our [combi oven guide](/buying-guide/what-is-a-combi-oven/) goes through it in full.'),
+   'A convection oven circulates hot dry air and nothing else. A combi adds steam to that, which is what stops a reheated dish drying out and what makes a roast crisp outside while staying moist inside. Our [combi oven guide](/buying-guide/what-is-a-combi-oven/) goes through it in full, and [oven symbols and meanings](/tips-tricks/oven-symbols-and-meanings/) explains what each mode icon does.'),
 
   ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 9,
    'Do combi ovens cook faster?',
@@ -866,7 +866,7 @@ INSERT INTO category_faq (category_id, position, question, answer_md) VALUES
 
   ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 10,
    'Do you preheat a combi oven?',
-   'Yes, for anything where the result depends on the temperature at the moment food goes in, which is most baking and all roasting. The auto-cooking menus handle the preheat as part of the programme.');
+   'Yes, for anything where the result depends on the temperature at the moment food goes in, which is most baking and all roasting. The auto-cooking menus handle the preheat as part of the programme. Our guide to [how long to preheat an oven](/tips-tricks/how-long-to-preheat-oven/) gives the times by temperature.');
 
 -- ── combi oven: the "Best for" row ─────────────────────────────────────────
 UPDATE product SET best_for = CASE slug
@@ -1001,7 +1001,7 @@ INSERT INTO category_faq (category_id, position, question, answer_md) VALUES
 
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 4,
    'Is it fine to use a dishwasher every day?',
-   'Yes. Daily use is what these are built for. Keep the filter clean and run a maintenance cycle occasionally and daily use shortens nothing.'),
+   'Yes. Daily use is what these are built for. Keep the filter clean and run a maintenance cycle occasionally and daily use shortens nothing. Loading through the day and running at night is fine too: see [leaving dishes in the dishwasher overnight](/tips-tricks/dishes-in-the-dishwasher-overnight/).'),
 
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 5,
    'Is a dishwasher better than hand washing?',
@@ -1130,7 +1130,7 @@ INSERT INTO category_faq (category_id, position, question, answer_md) VALUES
 
   ((SELECT id FROM product_category WHERE slug = 'one-tap-purifier-in-malaysia'), 2,
    'Does reverse osmosis remove minerals?',
-   'Some, yes. RO is thorough enough that it takes naturally occurring minerals out along with the heavy metals, chlorine and dissolved solids. That is normal for the method, and the water stays perfectly safe to drink.'),
+   'Some, yes. RO is thorough enough that it takes naturally occurring minerals out along with the heavy metals, chlorine and dissolved solids. That is normal for the method, and the water stays perfectly safe to drink. Our guide to [what reverse osmosis water is](/tips-tricks/what-is-reverse-osmosis-water/) covers the trade-offs in full.'),
 
   ((SELECT id FROM product_category WHERE slug = 'one-tap-purifier-in-malaysia'), 3,
    'Can it be installed under the sink?',

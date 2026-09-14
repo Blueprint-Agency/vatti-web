@@ -10,7 +10,7 @@
 // keywords, not a taxonomy) and `faqs` is null on all 107 — the FAQ content the
 // audit found lives on category pages, not here.
 
-import { readFileSync, writeFileSync, mkdirSync, openSync, readSync, closeSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, openSync, readSync, closeSync, readdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -373,10 +373,25 @@ const isInternal = (href) => /^https?:\/\/vattimalaysia\.com\//.test(String(href
 // article links to the hood category were arriving that way. Resolved here so
 // the committed SQL links straight to the target and a re-run of the importer
 // cannot put the redirect back. Chains are followed; db:check rejects loops.
+//
+// Read from every file in data/sql, not only redirects.sql: the correction
+// files that retire a product or merge an article carry their own 301 rows
+// (retired-products-2026-08.sql, refresh-articles-2026-09.sql), and 16 of the
+// scrape's links pointed at products those files had since retired.
+// redirects.sql writes one row per statement; the correction files write one
+// statement with several rows, so the statement is matched first and its
+// tuples second.
 const REDIRECT = new Map(
-  [...readFileSync(join(root, "data/sql/redirects.sql"), "utf8").matchAll(
-    /^INSERT INTO redirect \(from_path, to_path, code\) VALUES \('([^']+)', '([^']+)', \d+\);$/gm
-  )].map((m) => [m[1], m[2]])
+  readdirSync(join(root, "data/sql"))
+    .filter((f) => f.endsWith(".sql"))
+    .sort()
+    .flatMap((f) => [
+      ...readFileSync(join(root, "data/sql", f), "utf8").matchAll(
+        /INSERT INTO redirect \(from_path, to_path, code\) VALUES([\s\S]*?);/g
+      ),
+    ])
+    .flatMap((stmt) => [...stmt[1].matchAll(/\('([^']+)', '([^']+)', \d+\)/g)])
+    .map((m) => [m[1], m[2]])
 );
 function pastRedirect(path) {
   let p = path;
