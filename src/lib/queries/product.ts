@@ -27,12 +27,17 @@ export type Dimension = {
   note: string | null;
 };
 export type ProductFaq = { question: string; answer_md: string };
+/** Either a YouTube id or a hosted file, never both — see product_video in schema.sql. */
 export type Video = {
-  video_id: string;
+  video_id: string | null;
   title: string | null;
   summary: string | null;
   published_on: string | null;
   duration_seconds: number | null;
+  src_url: string | null;
+  poster_url: string | null;
+  width: number | null;
+  height: number | null;
 };
 export type Download = { label: string; url: string; kind: string };
 export type RelatedProduct = {
@@ -164,7 +169,8 @@ export function getProductFaqs(productId: number): ProductFaq[] {
 
 export function getVideos(productId: number): Video[] {
   return all<Video>(
-    `SELECT video_id, title, summary, published_on, duration_seconds
+    `SELECT video_id, title, summary, published_on, duration_seconds,
+            src_url, poster_url, width, height
        FROM product_video WHERE product_id = ? ORDER BY position`,
     productId
   );

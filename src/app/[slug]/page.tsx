@@ -290,13 +290,20 @@ function breadcrumbSchema(product: Product) {
 
 /** Only for a video we hold real metadata on — a bare id is not a VideoObject. */
 function videoSchema(video: Video, product: Product) {
-  return {
+  const common = {
     "@context": "https://schema.org",
     "@type": "VideoObject",
     name: video.title ?? `${product.name} product video`,
     description: video.summary ?? undefined,
     uploadDate: video.published_on ?? undefined,
     duration: video.duration_seconds ? isoDuration(video.duration_seconds) : undefined,
+  };
+  // A hosted file has no embed page; the MP4 itself is the content.
+  if (video.src_url) {
+    return { ...common, thumbnailUrl: [video.poster_url], contentUrl: video.src_url };
+  }
+  return {
+    ...common,
     thumbnailUrl: [`https://i.ytimg.com/vi/${video.video_id}/hqdefault.jpg`],
     embedUrl: `https://www.youtube-nocookie.com/embed/${video.video_id}`,
     contentUrl: `https://www.youtube.com/watch?v=${video.video_id}`,
@@ -757,23 +764,49 @@ function ProductView({ product }: { product: Product }) {
             <div className={`mt-8 grid gap-8 ${videos.length > 1 ? "lg:grid-cols-2" : ""}`}>
               {videos.map((v) => (
                 <figure
-                  key={v.video_id}
+                  key={v.video_id ?? v.src_url}
                   className={
                     videos.length === 1
                       ? "grid gap-6 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] lg:items-center lg:gap-12"
                       : "flex flex-col gap-4"
                   }
                 >
-                  <div className="aspect-video overflow-hidden rounded-sm border border-line bg-surface">
-                    <iframe
-                      src={`https://www.youtube-nocookie.com/embed/${v.video_id}`}
-                      title={v.title ?? `${product.name} product video`}
-                      loading="lazy"
-                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="size-full"
-                    />
-                  </div>
+                  {v.src_url ? (
+                    // A file on the CDN rather than a YouTube embed. The box
+                    // takes the clip's own aspect, and a portrait clip is held
+                    // to a phone's width rather than filling the column at
+                    // twice the height of the text beside it.
+                    <div
+                      className={`overflow-hidden rounded-sm border border-line bg-surface ${
+                        (v.height ?? 0) > (v.width ?? 0) ? "mx-auto w-full max-w-[420px]" : ""
+                      }`}
+                      style={{ aspectRatio: `${v.width ?? 16} / ${v.height ?? 9}` }}
+                    >
+                      <video
+                        src={v.src_url}
+                        poster={v.poster_url ?? undefined}
+                        controls
+                        playsInline
+                        preload="none"
+                        width={v.width ?? undefined}
+                        height={v.height ?? undefined}
+                        className="size-full"
+                      >
+                        {v.title ?? `${product.name} product video`}
+                      </video>
+                    </div>
+                  ) : (
+                    <div className="aspect-video overflow-hidden rounded-sm border border-line bg-surface">
+                      <iframe
+                        src={`https://www.youtube-nocookie.com/embed/${v.video_id}`}
+                        title={v.title ?? `${product.name} product video`}
+                        loading="lazy"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="size-full"
+                      />
+                    </div>
+                  )}
                   {(v.summary || v.published_on) && (
                     <figcaption className="max-w-[52ch] text-[0.9375rem] leading-relaxed text-ink-muted">
                       {v.summary}
@@ -997,7 +1030,7 @@ function ProductView({ product }: { product: Product }) {
         .filter((v) => v.title && v.published_on)
         .map((v) => (
           <script
-            key={v.video_id}
+            key={v.video_id ?? v.src_url}
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema(v, product)) }}
           />

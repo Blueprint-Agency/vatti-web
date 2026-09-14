@@ -4,7 +4,7 @@
 --
 -- The filename is load-bearing. db-build.mjs runs schema/products/articles/
 -- stores first and everything else in plain alphabetical order, and this file
--- references three products that other files create: VH IC09AL (id 43) in
+-- references three products that other files create: VH-IC9-LA (id 43) in
 -- new-products-2026-08.sql and both DWID3 colourways (ids 40, 41) in
 -- product-images-2026-08.sql. "product-o" sorts after "product-i" and after
 -- "new-", which is why it is not called product-dimensions-*: that name loads
@@ -171,10 +171,11 @@ INSERT INTO product_dimension (product_id, position, section, label, value, note
   (20, 8, 'installation', 'Cut-out depth', '350 mm', NULL, NULL, NULL, NULL);
 
 -- ═══ CERAMIC AND INDUCTION HOBS ═════════════════════════════════════════════
--- Catalogue p.21. VH IC09AL is printed as "VH-IC9-LA" there; the slug and the
--- model_code are the live URL and stay as they are. See the audit note.
+-- Catalogue p.21. The product was first entered as "VH IC09AL" from the shoot
+-- folder name; the owner corrected it to VH-IC9-LA on 2026-09-14 (see
+-- rename-vh-ic9-la-2026-09.sql for the 301 from the old slug).
 
--- VH IC09AL (id 43)
+-- VH-IC9-LA (id 43)
 INSERT INTO product_dimension (product_id, position, section, label, value, note, metric, min_mm, max_mm) VALUES
   (43, 1, 'product', 'Width', '750 mm', NULL, 'width', 750, 750),
   (43, 2, 'product', 'Depth', '420 mm', NULL, NULL, NULL, NULL),
@@ -215,20 +216,9 @@ INSERT INTO product_dimension (product_id, position, section, label, value, note
   (37, 11, 'installation', 'Cabinet opening, depth', '370 mm minimum', NULL, NULL, NULL, NULL);
 
 -- ═══ DISHWASHER ════════════════════════════════════════════════════════════
--- DWID3 (ids 40 and 41, AG Grey and White). Catalogue p.22 draws DWBB7 and
--- DWID3 as one outline, and the three figures on it are the three DWBB7
--- already carries, so DWID3 gets the same box. The cabinet opening rows on
--- DWBB7 came from its manual and are NOT copied across: the catalogue prints
--- no niche for either model.
-INSERT INTO product_dimension (product_id, position, section, label, value, note, metric, min_mm, max_mm) VALUES
-  (40, 1, 'product', 'Width', '598 mm', NULL, 'width', 598, 598),
-  (40, 2, 'product', 'Height', '775 mm', '675 mm of door, over a 100 mm plinth', NULL, NULL, NULL),
-  (40, 3, 'product', 'Depth', '570 mm', NULL, NULL, NULL, NULL),
-  (40, 4, 'product', 'Capacity', '20+2 place settings', 'the +2 is the food basket', NULL, NULL, NULL),
-  (41, 1, 'product', 'Width', '598 mm', NULL, 'width', 598, 598),
-  (41, 2, 'product', 'Height', '775 mm', '675 mm of door, over a 100 mm plinth', NULL, NULL, NULL),
-  (41, 3, 'product', 'Depth', '570 mm', NULL, NULL, NULL, NULL),
-  (41, 4, 'product', 'Capacity', '20+2 place settings', 'the +2 is the food basket', NULL, NULL, NULL);
+-- DWID3 (ids 40 and 41) was here as the catalogue's shared DWBB7/DWID3 outline.
+-- Its own installation manual arrived 2026-09-14 and the full set, cabinet
+-- opening included, now lives in product-story-dwid3-2026-09.sql.
 
 -- ═══ CERAMIC ZONE ROWS ══════════════════════════════════════════════════════
 -- The zone breakdown appears twice on a product page: in product_spec (fixed

@@ -3,6 +3,10 @@
 // pattern as the DWID3 addition in generate-product-images-2026-08.mjs:
 // name + gallery only, no specs/features/description.
 //
+// One-shot, already run. The hob was later corrected to VH-IC9-LA by hand in
+// data/sql/new-products-2026-08.sql (plus a 301 in rename-vh-ic9-la-2026-09.sql);
+// do not re-run this over it.
+//
 //   node scripts/add-new-products-2026-08.mjs
 import { mkdirSync, readdirSync, writeFileSync } from "node:fs";
 import { DatabaseSync } from "node:sqlite";

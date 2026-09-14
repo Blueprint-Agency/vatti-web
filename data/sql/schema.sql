@@ -279,15 +279,29 @@ CREATE TABLE product_download (
 -- a hole in the text: an iframe says nothing to a crawler, to an answer engine
 -- or to a reader who will not play it. They are also exactly what VideoObject
 -- needs, which is why duration is stored in seconds and formatted at render.
+--
+-- A video can also be a file on R2 rather than a YouTube id: DWID3's clip
+-- arrived as an MP4 from the brand with no channel to point at, and putting
+-- it on the media host is the same route every other asset takes. Such a row
+-- has src_url and poster_url and no video_id; width and height give the
+-- player its aspect, since a phone-shot clip is portrait. Exactly one of the
+-- two sources is set, and the page renders a <video> for one and an iframe
+-- for the other.
 CREATE TABLE product_video (
   product_id       INTEGER NOT NULL REFERENCES product(id) ON DELETE CASCADE,
   position         INTEGER NOT NULL,
-  video_id         TEXT NOT NULL,
+  video_id         TEXT,   -- YouTube id; NULL for a hosted file
   title            TEXT,
   summary          TEXT,
   published_on     TEXT,   -- ISO date
   duration_seconds INTEGER,
-  PRIMARY KEY (product_id, position)
+  src_url          TEXT,   -- MP4 on the CDN; NULL for YouTube
+  poster_url       TEXT,
+  width            INTEGER,
+  height           INTEGER,
+  PRIMARY KEY (product_id, position),
+  CHECK ((video_id IS NOT NULL) <> (src_url IS NOT NULL)),
+  CHECK (src_url IS NULL OR (poster_url IS NOT NULL AND width IS NOT NULL AND height IS NOT NULL))
 );
 
 CREATE TABLE product_related (

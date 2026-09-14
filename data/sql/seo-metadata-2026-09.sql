@@ -51,15 +51,17 @@ WHERE slug = 'artemis-series-t-type-range-hood-v931';
 
 -- Two finishes of one dishwasher. The descriptions stay close because the
 -- appliances are identical apart from the front; the finish is the only honest
--- differentiator and it is the thing a shopper is choosing between.
+-- differentiator and it is the thing a shopper is choosing between. Rewritten
+-- 2026-09-14 when the page gained its content (product-story-dwid3-2026-09.sql):
+-- the figures are now on the page, so the description can name them.
 UPDATE product SET
-  seo_title = 'VATTI Dishwasher DWID3 (AG Grey)',
-  meta_description = 'The VATTI DWID3 dishwasher in an AG Grey finish. See the gallery inside and out, then enquire through an authorised VATTI dealer in Malaysia.'
+  seo_title = 'VATTI Dishwasher DWID3 (AG Grey) | 20+2 Place Settings, 55,000 Pa',
+  meta_description = 'The VATTI DWID3 built-in dishwasher in AG Grey: 20+2 place settings, a 55,000 Pa variable-pressure pump, 75°C wash, 105°C drying, UVC and 7-day fresh storage. Specs, dimensions and authorised dealers in Malaysia.'
 WHERE slug = 'vatti-dishwasher-dwid3-ag-grey';
 
 UPDATE product SET
-  seo_title = 'VATTI Dishwasher DWID3 (White)',
-  meta_description = 'The VATTI DWID3 dishwasher in a white finish. See the gallery, then enquire through an authorised VATTI dealer in Malaysia for pricing and installation.'
+  seo_title = 'VATTI Dishwasher DWID3 (White) | 20+2 Place Settings, 55,000 Pa',
+  meta_description = 'The VATTI DWID3 built-in dishwasher in White: 20+2 place settings, a 55,000 Pa variable-pressure pump, 75°C wash, 105°C drying, UVC and 7-day fresh storage. Specs, dimensions and authorised dealers in Malaysia.'
 WHERE slug = 'vatti-dishwasher-dwid3-white';
 
 -- The V959 is the one model on the site with a published instruction manual
@@ -74,9 +76,9 @@ WHERE slug = 'vatti-cooker-hood-v959';
 -- this says "cooker hob" and nothing more. Do not write "induction" here until
 -- a product_spec row says so.
 UPDATE product SET
-  seo_title = 'VATTI Cooker Hob VH IC09AL',
-  meta_description = 'The VATTI Cooker Hob VH IC09AL, part of the VATTI built-in kitchen range. See the gallery and find an authorised VATTI dealer in Malaysia to enquire.'
-WHERE slug = 'vatti-cooker-hob-vh-ic09al';
+  seo_title = 'VATTI Cooker Hob VH-IC9-LA',
+  meta_description = 'The VATTI Cooker Hob VH-IC9-LA, part of the VATTI built-in kitchen range. See the gallery and find an authorised VATTI dealer in Malaysia to enquire.'
+WHERE slug = 'vatti-cooker-hob-vh-ic9-la';
 
 -- ── 3. The two V917 colourways shared one description ──────────────────────
 -- Byte-identical meta_description on both rows, which Search Console reports

@@ -1,0 +1,270 @@
+{
+  "product": "vatti-dishwasher-dwid3-ag-grey",
+  "note": "The 2026-09 DWID3 sales kit: 34 landscape panels (1672x941), heading and bullets on one side, render on the other. Sources are the same panels uploaded whole under 2026/09/dwid3-panel-NN.webp, so a box can be re-cut. The bare filter photograph (sales kit p.32) is not in the PNG set and was rendered from the PDF as 2026/09/dwid3-filter.webp; the basket shot is the 2026-09 product render, used whole.",
+  "crops": [
+    {
+      "from": "2026/09/dwid3-panel-09.webp",
+      "to": "2026/09/dwid3-pump-motor.webp",
+      "box": [
+        0,
+        0,
+        0.63,
+        1
+      ],
+      "why": "55000Pa and four bullets on the right"
+    },
+    {
+      "from": "2026/09/dwid3-panel-02.webp",
+      "to": "2026/09/dwid3-dual-square-wash.webp",
+      "box": [
+        0.55,
+        0.03,
+        0.99,
+        0.78
+      ],
+      "why": "heading and Grade A badge left, three-icon strip below"
+    },
+    {
+      "from": "2026/09/dwid3-panel-04.webp",
+      "to": "2026/09/dwid3-spray-arm.webp",
+      "box": [
+        0.03,
+        0.24,
+        0.5,
+        0.57
+      ],
+      "why": "heading above, extension caption below; the Dual-Star label names the part"
+    },
+    {
+      "from": "2026/09/dwid3-panel-08.webp",
+      "to": "2026/09/dwid3-test-glasses.webp",
+      "box": [
+        0.03,
+        0.3,
+        0.49,
+        0.7
+      ],
+      "why": "WINS banner above, verdict below"
+    },
+    {
+      "from": "2026/09/dwid3-panel-11.webp",
+      "to": "2026/09/dwid3-rack-system.webp",
+      "box": [
+        0.47,
+        0.05,
+        0.85,
+        0.78
+      ],
+      "why": "bullets left, numbered callouts right, four-icon strip below"
+    },
+    {
+      "from": "2026/09/vatti-dishwasher-dwid3-ag-grey-quarter-open-basket.webp",
+      "to": "2026/09/dwid3-fruit-basket.webp",
+      "box": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "why": "no text; the render used whole"
+    },
+    {
+      "from": "2026/09/dwid3-panel-13.webp",
+      "to": "2026/09/dwid3-one-pull-rack.webp",
+      "box": [
+        0.575,
+        0.22,
+        0.99,
+        0.79
+      ],
+      "why": "heading and subtitle above, PULL and LIFT labels below"
+    },
+    {
+      "from": "2026/09/dwid3-panel-16.webp",
+      "to": "2026/09/dwid3-75c-wash.webp",
+      "box": [
+        0.55,
+        0.03,
+        1,
+        1
+      ],
+      "why": "step heading and three icons on the left; the 75°C is the artwork"
+    },
+    {
+      "from": "2026/09/dwid3-panel-17.webp",
+      "to": "2026/09/dwid3-hot-air-drying.webp",
+      "box": [
+        0.4,
+        0.03,
+        0.8,
+        0.8
+      ],
+      "why": "bullets left, duct callouts right, strip below"
+    },
+    {
+      "from": "2026/09/dwid3-panel-18.webp",
+      "to": "2026/09/dwid3-uvc.webp",
+      "box": [
+        0.6,
+        0.03,
+        0.81,
+        0.62
+      ],
+      "why": "spectrum chart left, 99.9% tile right, PEACE OF MIND strip and cycle below"
+    },
+    {
+      "from": "2026/09/dwid3-panel-19.webp",
+      "to": "2026/09/dwid3-fresh-air.webp",
+      "box": [
+        0.44,
+        0.03,
+        0.8,
+        0.78
+      ],
+      "why": "bullets left, tiles right, strip below"
+    },
+    {
+      "from": "2026/09/dwid3-panel-21.webp",
+      "to": "2026/09/dwid3-smart-dosing.webp",
+      "box": [
+        0.02,
+        0.32,
+        0.6,
+        0.84
+      ],
+      "why": "heading above, compartment labels below, checklist right"
+    },
+    {
+      "from": "2026/09/dwid3-panel-25.webp",
+      "to": "2026/09/dwid3-fruit-wash.webp",
+      "box": [
+        0.5,
+        0.05,
+        1,
+        1
+      ],
+      "why": "heading and paragraph on the left"
+    },
+    {
+      "from": "2026/09/dwid3-panel-26.webp",
+      "to": "2026/09/dwid3-step-pre-rinse.webp",
+      "box": [
+        0.03,
+        0.57,
+        0.26,
+        0.93
+      ],
+      "why": "first of four tiles, its caption above"
+    },
+    {
+      "from": "2026/09/dwid3-panel-26.webp",
+      "to": "2026/09/dwid3-step-spray.webp",
+      "box": [
+        0.27,
+        0.57,
+        0.5,
+        0.93
+      ],
+      "why": "second tile"
+    },
+    {
+      "from": "2026/09/dwid3-panel-26.webp",
+      "to": "2026/09/dwid3-step-filtration.webp",
+      "box": [
+        0.51,
+        0.57,
+        0.74,
+        0.93
+      ],
+      "why": "third tile"
+    },
+    {
+      "from": "2026/09/dwid3-panel-26.webp",
+      "to": "2026/09/dwid3-step-rinse.webp",
+      "box": [
+        0.75,
+        0.57,
+        0.98,
+        0.93
+      ],
+      "why": "fourth tile"
+    },
+    {
+      "from": "2026/09/dwid3-panel-31.webp",
+      "to": "2026/09/dwid3-dual-pump.webp",
+      "box": [
+        0.47,
+        0.05,
+        1,
+        0.74
+      ],
+      "why": "heading and comparison left; the numbered callouts name the stages"
+    },
+    {
+      "from": "2026/09/dwid3-panel-33.webp",
+      "to": "2026/09/dwid3-drain-seal.webp",
+      "box": [
+        0.38,
+        0.36,
+        0.78,
+        1
+      ],
+      "why": "heading and comparison left, seal inset right"
+    },
+    {
+      "from": "2026/09/dwid3-panel-34.webp",
+      "to": "2026/09/dwid3-touch-screen.webp",
+      "box": [
+        0.46,
+        0.02,
+        1,
+        0.66
+      ],
+      "why": "heading and paragraph left, three icons below"
+    },
+    {
+      "from": "2026/09/dwid3-panel-28.webp",
+      "to": "2026/09/dwid3-toys.webp",
+      "box": [
+        0.535,
+        0.27,
+        0.71,
+        0.8
+      ],
+      "why": "process tiles left, comparison table right, footnote below"
+    },
+    {
+      "from": "2026/09/dwid3-panel-29.webp",
+      "to": "2026/09/dwid3-independent-dry.webp",
+      "box": [
+        0.36,
+        0.28,
+        0.64,
+        0.74
+      ],
+      "why": "numbered cases either side, fifth case below"
+    },
+    {
+      "from": "2026/09/dwid3-panel-30.webp",
+      "to": "2026/09/dwid3-self-clean.webp",
+      "box": [
+        0.45,
+        0.32,
+        0.66,
+        0.9
+      ],
+      "why": "how-it-works left, programme details right"
+    },
+    {
+      "from": "2026/09/vatti-dishwasher-dwid3-ag-grey-quarter-open-basket.webp",
+      "to": "2026/09/dwid3-basket-gift.webp",
+      "box": [
+        0.3,
+        0.45,
+        0.8,
+        0.9
+      ],
+      "why": "the basket on the pulled-out rack, from the product render; the sales-kit tile was 351px wide"
+    }
+  ]
+}
