@@ -97,6 +97,16 @@ export type Faq = { question: string; answer_md: string };
  * already consolidated". Two of them collapse onto one page, which is why six
  * legacy paths map to five categories.
  */
+/** slug -> display name, for the page buttons `Markdown` renders. */
+export function categoryNames(): Record<string, string> {
+  return Object.fromEntries(
+    all<{ slug: string; name: string }>(`SELECT slug, name FROM product_category`).map((r) => [
+      r.slug,
+      r.name,
+    ])
+  );
+}
+
 export function categorySlugs(): string[] {
   return all<{ slug: string }>(
     `SELECT slug FROM product_category ORDER BY sort_order`

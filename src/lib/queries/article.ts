@@ -1,4 +1,5 @@
 import { all, get } from "@/lib/db";
+import type { CalloutArticle } from "@/lib/markdown";
 
 export type Article = {
   id: number;
@@ -185,6 +186,30 @@ export function getArchiveArticles(slug: string, page: number): ArticleCard[] {
     slug,
     PER_PAGE,
     (page - 1) * PER_PAGE
+  );
+}
+
+/**
+ * Every published article by path, for the pointer cards `Markdown` renders
+ * when a body link to a sibling guide stands alone on its line. One query per
+ * page build rather than one per link: 102 rows, and a page may carry several.
+ */
+export function articleCallouts(): Record<string, CalloutArticle> {
+  const rows = all<{
+    path: string;
+    title: string;
+    section: string;
+    reading_minutes: number | null;
+    url: string | null;
+    alt: string | null;
+  }>(
+    `SELECT a.path, a.title, a.section, a.reading_minutes, i.url, i.alt
+       FROM article a
+       LEFT JOIN image i ON i.id = a.featured_image_id
+      WHERE a.is_published = 1`
+  );
+  return Object.fromEntries(
+    rows.map(({ section, ...r }) => [r.path, { ...r, section_name: getSectionName(section) }])
   );
 }
 

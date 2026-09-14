@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { ArrowRight } from "@phosphor-icons/react/dist/ssr/ArrowRight";
+import { WhatsappLogo } from "@phosphor-icons/react/dist/ssr/WhatsappLogo";
 
 /**
  * A renderer for the markdown our own importer writes, not a markdown library.
@@ -24,13 +26,34 @@ import type { ReactNode } from "react";
  * sake of a shorter function would be the wrong trade even though today's
  * corpus is clean.
  */
-export function Markdown({ md, sizes = {} }: { md: string; sizes?: ImageSizes }) {
+export function Markdown({
+  md,
+  sizes = {},
+  callouts,
+}: {
+  md: string;
+  sizes?: ImageSizes;
+  callouts?: Callouts;
+}) {
   const lines = md.split("\n");
   const out: ReactNode[] = [];
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i].trim();
     if (!line) continue;
+
+    // A link standing alone on its line is a pointer, not prose: "Explore
+    // VATTI Kitchen Hood" closing an article, "Enquire With Us" under a Quick
+    // Answer, or a sibling guide behind a 👉 or a **RELATED:** label. 138 of
+    // them across the corpus, and every one was rendering as a bare underlined
+    // sentence. Each becomes the affordance it is: a card for a guide, a
+    // button for a product or category page, the WhatsApp button for the
+    // sales line. The 👉 and the label are dropped; the card says "related".
+    const alone = STANDALONE.exec(line);
+    if (alone) {
+      out.push(<Callout key={i} label={alone[1]} href={alone[2]} callouts={callouts} />);
+      continue;
+    }
 
     const heading = /^(#{2,4}) +(.*)$/.exec(line);
     if (heading) {
@@ -158,10 +181,142 @@ const HEADING: Record<number, string> = {
 };
 
 const ITEM = /^([-*+]|\d+[.)]) +(.*)$/;
-const STRUCTURAL = /^(#{2,4} |[-*+] |\d+[.)] |!\[|\|)/;
+const STANDALONE = /^(?:👉\s*|\*\*RELATED:\*\*\s*)?\[([^\]]+)\]\(([^)\s]+)\)$/;
+const STRUCTURAL = /^(#{2,4} |[-*+] |\d+[.)] |!\[|\||👉\s*\[|\*\*RELATED:\*\*)/;
 
 /** `image.url` -> the dimensions stored for it, for the 221 body placements. */
 export type ImageSizes = Record<string, { width: number; height: number }>;
+
+/* ── callouts ────────────────────────────────────────────────────────────── */
+
+/** What a standalone link can resolve to, keyed by site-relative path. */
+export type CalloutArticle = {
+  path: string;
+  title: string;
+  section_name: string;
+  reading_minutes: number | null;
+  url: string | null;
+  alt: string | null;
+};
+export type Callouts = {
+  /** Published articles by path: 'tips-tricks/what-is-auto-clean'. */
+  articles: Record<string, CalloutArticle>;
+  /** Category and product display names by slug. */
+  pages: Record<string, string>;
+};
+
+const WHATSAPP_HREF = /^https:\/\/(wa\.me|api\.whatsapp\.com)\//;
+
+function Callout({
+  label,
+  href,
+  callouts,
+}: {
+  label: string;
+  href: string;
+  callouts?: Callouts;
+}) {
+  // Labels arrive bolded now and then ("[**range hood maintenance**]").
+  const text = label.replace(/\*\*/g, "").trim();
+
+  if (WHATSAPP_HREF.test(href)) {
+    return (
+      <div className="my-7">
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener"
+          className="inline-flex items-center gap-2.5 rounded-sm bg-teal px-5 py-3 font-semibold text-void transition-opacity hover:opacity-90"
+        >
+          <WhatsappLogo size={20} weight="fill" aria-hidden="true" />
+          {text}
+        </a>
+      </div>
+    );
+  }
+
+  if (href.startsWith("/")) {
+    const path = href.replace(/^\/|\/$/g, "");
+    const article = callouts?.articles[path];
+    if (article) return <ArticleCallout article={article} />;
+
+    // The scrape left a few anchors that are the URL itself
+    // ("[/vatti-dishwasher-dwbb7/](/dishwasher-in-malaysia/)"). The page's own
+    // name reads better than its address.
+    const name = callouts?.pages[path];
+    const shown = /^(https?:\/\/|\/)/.test(text) && name ? `Explore VATTI ${name}` : text;
+    return (
+      <div className="my-7">
+        <Link
+          href={href}
+          className="group inline-flex items-center gap-2 rounded-sm border border-line-strong px-5 py-3 font-medium text-paper-ink transition-colors hover:border-teal hover:text-teal"
+        >
+          {shown}
+          <ArrowRight
+            size={18}
+            aria-hidden="true"
+            className="transition-transform group-hover:translate-x-0.5"
+          />
+        </Link>
+      </div>
+    );
+  }
+
+  // Any other standalone link is a sentence like any other.
+  return <p className="my-5 leading-[var(--leading-prose)]">{inline(`[${label}](${href})`)}</p>;
+}
+
+/**
+ * The pointer to a sibling guide, as a card. Same bones as the MoreCard at the
+ * foot of the article page (paper-line border, paper-surface ground, teal on
+ * hover) laid on its side so it sits inside a column of prose without reading
+ * as a section of its own. The thumbnail is the guide's own hero.
+ */
+function ArticleCallout({ article }: { article: CalloutArticle }) {
+  return (
+    <Link
+      href={`/${article.path}/`}
+      className="group my-8 flex gap-4 rounded-sm border border-paper-line bg-paper-surface p-4 transition-colors hover:border-teal sm:gap-5 sm:p-5"
+    >
+      {article.url && (
+        <div className="relative size-20 shrink-0 overflow-hidden rounded-sm bg-paper sm:size-28">
+          <Image
+            src={article.url}
+            alt={article.alt ?? ""}
+            fill
+            loading="lazy"
+            sizes="112px"
+            className="object-cover"
+          />
+        </div>
+      )}
+      <div className="min-w-0 flex-1 self-center">
+        <p className="readout text-xs text-paper-muted">
+          Related
+          <span aria-hidden="true"> · </span>
+          {article.section_name}
+          {article.reading_minutes && (
+            <>
+              <span aria-hidden="true"> · </span>
+              {article.reading_minutes} min read
+            </>
+          )}
+        </p>
+        <p className="mt-2 font-semibold leading-snug text-paper-ink transition-colors group-hover:text-teal">
+          {article.title}
+        </p>
+        <p className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-teal">
+          Read the guide
+          <ArrowRight
+            size={16}
+            aria-hidden="true"
+            className="transition-transform group-hover:translate-x-0.5"
+          />
+        </p>
+      </div>
+    </Link>
+  );
+}
 
 /* ── inline ──────────────────────────────────────────────────────────────── */
 

@@ -64,6 +64,15 @@ export type Product = {
   category_name: string;
 };
 
+/** slug -> display name for every published product, for `Markdown`'s page buttons. */
+export function productNames(): Record<string, string> {
+  return Object.fromEntries(
+    all<{ slug: string; name: string }>(
+      `SELECT slug, name FROM product WHERE is_published = 1`
+    ).map((r) => [r.slug, r.name])
+  );
+}
+
 export function productSlugs(): string[] {
   return all<{ slug: string }>(
     `SELECT slug FROM product WHERE is_published = 1 ORDER BY sort_order`

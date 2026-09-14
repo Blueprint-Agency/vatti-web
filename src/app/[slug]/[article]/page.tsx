@@ -7,6 +7,7 @@ import { CtaBar } from "@/components/CtaBar";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Markdown } from "@/lib/markdown";
 import {
+  articleCallouts,
   articlePaths,
   getArticle,
   getArticleImageSizes,
@@ -15,6 +16,8 @@ import {
   type Article,
   type ArticleCard,
 } from "@/lib/queries/article";
+import { categoryNames } from "@/lib/queries/category";
+import { productNames } from "@/lib/queries/product";
 import { getRecipes, type Recipe } from "@/lib/queries/recipe";
 import { formatDate } from "@/lib/site";
 
@@ -84,6 +87,12 @@ export default async function Page({ params }: Params) {
       .filter((s) => s.width && s.height)
       .map((s) => [s.url, { width: s.width!, height: s.height! }])
   );
+  // What a standalone body link may point at: a sibling guide (card) or a
+  // product or category page (button). See Markdown's Callout.
+  const callouts = {
+    articles: articleCallouts(),
+    pages: { ...categoryNames(), ...productNames() },
+  };
 
   return (
     <>
@@ -153,7 +162,7 @@ export default async function Page({ params }: Params) {
           {recipes.length > 0 && <RecipeSummary recipes={recipes} />}
 
           <div className="mt-6 text-[1.0625rem]">
-            <Markdown md={body} sizes={sizes} />
+            <Markdown md={body} sizes={sizes} callouts={callouts} />
           </div>
 
           {recipes.map((recipe) => (
