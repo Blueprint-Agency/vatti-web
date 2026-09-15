@@ -323,3 +323,38 @@ UPDATE article SET body_md = replace(body_md,
   'If you cook with a wok every day, look at gas first: explore the [VATTI cooker hob range](/cooker-hob-in-malaysia/) and compare the burners model by model.',
   'The [VATTI cooker hob range](/cooker-hob-in-malaysia/) has induction, ceramic and gas side by side, so you can compare the zones and burners model by model.')
 WHERE path = 'buying-guide/which-is-better-induction-or-ceramic-cooker';
+
+-- ── the client's rulings on the four conflicts, 2026-09-15 ─────────────────
+-- V917 colours: the site's names stand (Carbon Black, Batik White). No change.
+-- V991, V996, V998, C821G: still sold. No change.
+-- C720S burner category: follow the catalogue, 955G.
+-- VA05 and VA06 cabinet opening: follow the catalogue drawing on page 22,
+-- 570 to 600 mm wide, 595 to 600 mm high, 563 mm deep or more. The VA06's
+-- three cut-out rows came from its installation manual (560 x 595 x 550); the
+-- VA05 had no cut-out rows and pointed at the VA06's. Both now carry the
+-- catalogue figures, and the two FAQ answers that quoted the manual's follow.
+
+UPDATE product_spec SET raw_text = 'Brass burner 955G category'
+  WHERE product_id = (SELECT id FROM product WHERE slug = 'professional-series-c720s') AND raw_text = 'Brass burner 995G category';
+
+-- VA06: the manual's three rows become the catalogue's.
+UPDATE product_dimension SET value = '570 to 600 mm', note = 'per the catalogue drawing', min_mm = 570, max_mm = 600
+  WHERE product_id = (SELECT id FROM product WHERE slug = 'vatti-magic-series-combi-oven-va06') AND label = 'Cut-out width';
+UPDATE product_dimension SET value = '595 to 600 mm', note = NULL
+  WHERE product_id = (SELECT id FROM product WHERE slug = 'vatti-magic-series-combi-oven-va06') AND label = 'Cut-out height';
+UPDATE product_dimension SET value = '563 mm minimum', note = 'the drawing states 563 mm or deeper'
+  WHERE product_id = (SELECT id FROM product WHERE slug = 'vatti-magic-series-combi-oven-va06') AND label = 'Cut-out depth';
+UPDATE product_faq SET answer_md =
+  'The oven is 595 x 595 x 563 mm and the cut-out is 570 to 600 mm wide, 595 to 600 mm high and at least 563 mm deep. That is the standard 60cm built-in column, so it goes where a conventional oven goes.'
+  WHERE product_id = (SELECT id FROM product WHERE slug = 'vatti-magic-series-combi-oven-va06') AND question = 'What size cabinet does the VA06 need?';
+
+-- VA05: the "no drawing" row becomes the width row, and height and depth follow.
+UPDATE product_dimension SET label = 'Cut-out width', value = '570 to 600 mm', note = 'per the catalogue drawing, shared with the VA06', metric = 'opening', min_mm = 570, max_mm = 600
+  WHERE product_id = (SELECT id FROM product WHERE slug = 'built-in-combi-oven-va05') AND label = 'Cabinet column';
+INSERT INTO product_dimension (product_id, position, section, label, value, note, metric, min_mm, max_mm)
+SELECT p.id, (SELECT max(position) + 1 FROM product_dimension WHERE product_id = p.id), 'installation', 'Cut-out height', '595 to 600 mm', NULL, NULL, NULL, NULL FROM product p WHERE slug = 'built-in-combi-oven-va05';
+INSERT INTO product_dimension (product_id, position, section, label, value, note, metric, min_mm, max_mm)
+SELECT p.id, (SELECT max(position) + 1 FROM product_dimension WHERE product_id = p.id), 'installation', 'Cut-out depth', '563 mm minimum', 'the drawing states 563 mm or deeper', NULL, NULL, NULL FROM product p WHERE slug = 'built-in-combi-oven-va05';
+UPDATE product_faq SET answer_md =
+  'The oven is 595 x 595 x 563 mm, which is the standard 60cm built-in column. The cut-out is 570 to 600 mm wide, 595 to 600 mm high and at least 563 mm deep, the same opening as the [VA06](/vatti-magic-series-combi-oven-va06/).'
+  WHERE product_id = (SELECT id FROM product WHERE slug = 'built-in-combi-oven-va05') AND question = 'What size cabinet does the VA05 need?';
