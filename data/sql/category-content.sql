@@ -677,7 +677,7 @@ INSERT INTO category_faq (category_id, position, question, answer_md) VALUES
 
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 8,
    'Why does food taste better cooked on a gas hob?',
-   'Because the heat responds immediately. A flame goes from full to low the moment the knob turns, and searing and wok work both depend on that. Our [induction versus gas comparison](/buying-guide/induction-cooker-vs-gas-stove/) sets the two side by side.'),
+   'Because the heat responds immediately. A flame goes from full to low the moment the knob turns, and searing and wok work both depend on that. Our [induction versus gas comparison](/buying-guide/induction-cooker-vs-gas-stove/) sets the two side by side, and our guide to [infrared gas stoves](/buying-guide/is-an-infrared-gas-stove-worth-it/) explains the red-glowing plate burner that puts even more of the heat into a wok.'),
 
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 9,
    'How can I get more out of my cooker hob?',
