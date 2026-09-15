@@ -778,7 +778,7 @@ Here are some common types of built-in ovens, along with their typical sizes, sp
 
 ![VATTI Built-In Air Fryer Oven O7559](https://cdn.vattimalaysia.com/2026/04/Built-in-air-fryer-oven-07559-product-photo.webp)
 
-Above, [VATTI Built-In Air Fryer Oven O7559](/combi-and-steam-oven-in-malaysia/).
+Above, [VATTI Built-In Air Fryer Oven O7559](/vatti-built-in-air-fryer-oven-07559/).
 
 - Dimensions: Width: 56-58 cm, Height: 59-60 cm, Depth: 55-58 cm
 
@@ -860,7 +860,7 @@ INSERT INTO article_image (article_id, image_id, position) VALUES (5, (SELECT id
 INSERT INTO article_image (article_id, image_id, position) VALUES (5, (SELECT id FROM image WHERE legacy_url = 'https://vattimalaysia.com/wp-content/uploads/2023/11/Built-in-Oven-Size-3.webp'), 3);
 INSERT INTO article_image (article_id, image_id, position) VALUES (5, (SELECT id FROM image WHERE legacy_url = 'https://vattimalaysia.com/wp-content/uploads/2023/11/Built-in-Oven-Size-4-4130275104-e1699793760332.webp'), 4);
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (5, 0, 'product-category', 'https://vattimalaysia.com/combi-and-steam-oven-in-malaysia/', 'combi-and-steam-oven-in-malaysia', 'built-in oven or wall oven');
-INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (5, 1, 'product', 'https://vattimalaysia.com/combi-and-steam-oven-in-malaysia/', 'combi-and-steam-oven-in-malaysia', 'VATTI Built-In Air Fryer Oven O7559');
+INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (5, 1, 'product', 'https://vattimalaysia.com/vatti-built-in-air-fryer-oven-07559/', 'vatti-built-in-air-fryer-oven-07559', 'VATTI Built-In Air Fryer Oven O7559');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (5, 2, 'product', 'https://vattimalaysia.com/combi-and-steam-oven-in-malaysia/', 'combi-and-steam-oven-in-malaysia', '“Built-In Combi Oven” VA03');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (5, 3, 'product', 'https://vattimalaysia.com/combi-and-steam-oven-in-malaysia/', 'combi-and-steam-oven-in-malaysia', '“Built-In Combi Oven” VA05');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (5, 4, 'external', 'https://www.thespruce.com/best-double-ovens-4150204#toc-best-electric-range-whirlpool-wge745c0fs-67-cu-ft-double-oven-electric-range-with-true-convection-in-stainless-steel', NULL, 'GE Profile Smart Slide-in Double Oven');
@@ -6570,7 +6570,7 @@ Energy-efficient dishwashers are designed to use minimal electricity, thanks to 
 
 ![](https://cdn.vattimalaysia.com/2024/11/Good-Use-of-Limited-Space.webp)
 
-If you’re dealing with limited kitchen space, a dishwasher can be a real game-changer. The [Vatti Dishwasher DWBB7](/dishwasher-in-malaysia/) offers multiple functions, washing, sterilizing, drying, and storing, eliminating the need for unsightly stacks of dishes on your countertops or a bulky dish rack taking up valuable space. With a dishwasher, dirty dishes are discreetly tucked away, helping to maximize your kitchen’s available space and keep it organized and clutter-free. This makes your kitchen not only more functional but also aesthetically pleasing, especially in smaller or more compact spaces.
+If you’re dealing with limited kitchen space, a dishwasher can be a real game-changer. The [Vatti Dishwasher DWBB7](/vatti-dishwasher-dwbb7/) offers multiple functions, washing, sterilizing, drying, and storing, eliminating the need for unsightly stacks of dishes on your countertops or a bulky dish rack taking up valuable space. With a dishwasher, dirty dishes are discreetly tucked away, helping to maximize your kitchen’s available space and keep it organized and clutter-free. This makes your kitchen not only more functional but also aesthetically pleasing, especially in smaller or more compact spaces.
 
 ### 4. Superior Cleaning Performance
 
@@ -6578,7 +6578,7 @@ If you’re dealing with limited kitchen space, a dishwasher can be a real game-
 
 Dishwashers employ a combination of hot water, detergent, and mechanical action to achieve an unparalleled level of cleanliness. They effectively remove stubborn food residue, grease, and bacteria, leaving your dishes sparkling clean and sanitary. No more worries about cross-contamination or lingering odors, as dishwashers ensure a hygienic and thorough cleaning experience.
 
-For an even more advanced clean, check out the [**Vatti Dishwasher DWBB7**](/dishwasher-in-malaysia/) with its three-layer counter-rotating spray wash system, capable of effectively cleaning every corner of your dishes for a spotless, hygienic result every time.
+For an even more advanced clean, check out the [**Vatti Dishwasher DWBB7**](/vatti-dishwasher-dwbb7/) with its three-layer counter-rotating spray wash system, capable of effectively cleaning every corner of your dishes for a spotless, hygienic result every time.
 
 ### 5. Gets Rid of Germs
 
@@ -6633,14 +6633,14 @@ INSERT INTO article_image (article_id, image_id, position) VALUES (52, (SELECT i
 INSERT INTO article_image (article_id, image_id, position) VALUES (52, (SELECT id FROM image WHERE legacy_url = 'https://vattimalaysia.com/wp-content/uploads/2024/11/Reduces-Household-Disputes.webp'), 8);
 INSERT INTO article_image (article_id, image_id, position) VALUES (52, (SELECT id FROM image WHERE legacy_url = 'https://vattimalaysia.com/wp-content/uploads/2024/11/Protect-Your-Kitchenware.webp'), 9);
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (52, 0, 'external', 'https://www.energy.gov/energysaver/dishwashers', NULL, 'ENERGY STAR-certified model');
-INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (52, 1, 'product', 'https://vattimalaysia.com/dishwasher-in-malaysia/', 'dishwasher-in-malaysia', 'Vatti Dishwasher DWBB7');
+INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (52, 1, 'product', 'https://vattimalaysia.com/vatti-dishwasher-dwbb7/', 'vatti-dishwasher-dwbb7', 'Vatti Dishwasher DWBB7');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (52, 2, 'product-category', 'https://vattimalaysia.com/dishwasher-in-malaysia/', 'dishwasher-in-malaysia', 'VATTI dishwashers');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (52, 3, 'home', 'https://vattimalaysia.com/', NULL, 'Explore VATTI dishwasher');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (53, 'is-a-dishwasher-necessary', 'buying-guide/is-a-dishwasher-necessary', 'buying-guide', 'Is a Dishwasher Necessary? Key Benefits Explained with VATTI', 'Is a Dishwasher Necessary? Key Benefits Explained with VATTI', 'Wondering, "Is a dishwasher necessary?" Learn how VATTI dishwashers save time, energy, and provide advanced cleaning.', 'When considering the question, “Are dishwashers worth it?” the answer is a clear yes for many households. Dishwashers offer both convenience and a range of practical benefits that make them a worthwhile investment.
 
 ![Vatti DWBB7 Dishwasher photo](https://cdn.vattimalaysia.com/2024/08/Vatti-DWBB7-Dishwasher-photo-3.webp)
 
-[Vatti Dishwasher DWBB7](/dishwasher-in-malaysia/)
+[Vatti Dishwasher DWBB7](/vatti-dishwasher-dwbb7/)
 
 ## 8 Key Benefits of Using a VATTI Dishwasher
 
@@ -6709,7 +6709,7 @@ INSERT INTO article_image (article_id, image_id, position) VALUES (53, (SELECT i
 INSERT INTO article_image (article_id, image_id, position) VALUES (53, (SELECT id FROM image WHERE legacy_url = 'https://vattimalaysia.com/wp-content/uploads/2024/08/Vatti-DWBB7-Dishwasher-product-description-3.webp'), 6);
 INSERT INTO article_image (article_id, image_id, position) VALUES (53, (SELECT id FROM image WHERE legacy_url = 'https://vattimalaysia.com/wp-content/uploads/2024/08/Vatti-DWBB7-Dishwasher-product-description-4.webp'), 7);
 INSERT INTO article_image (article_id, image_id, position) VALUES (53, (SELECT id FROM image WHERE legacy_url = 'https://vattimalaysia.com/wp-content/uploads/2024/08/Vatti-DWBB7-Dishwasher-product-description-6.webp'), 8);
-INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (53, 0, 'product', 'https://vattimalaysia.com/dishwasher-in-malaysia/', 'dishwasher-in-malaysia', 'Vatti Dishwasher DWBB7');
+INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (53, 0, 'product', 'https://vattimalaysia.com/vatti-dishwasher-dwbb7/', 'vatti-dishwasher-dwbb7', 'Vatti Dishwasher DWBB7');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (53, 1, 'product-category', 'https://vattimalaysia.com/dishwasher-in-malaysia/', 'dishwasher-in-malaysia', 'VATTI dishwasher FAQ');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (53, 2, 'product-category', 'https://vattimalaysia.com/dishwasher-in-malaysia/', 'dishwasher-in-malaysia', 'VATTI dishwasher');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (54, 'how-to-place-a-dishwasher-in-the-kitchen', 'tips-tricks/how-to-place-a-dishwasher-in-the-kitchen', 'tips-tricks', 'How to Place a Dishwasher in the Kitchen? 5 Placement Tips', 'How to Place a Dishwasher in the Kitchen? 5 Key Placement Tips', 'Learn how to place a dishwasher in the kitchen with these 5 key placement tips for optimal convenience and efficiency.', 'When setting up your kitchen, one of the most important things to think about is where to place your [dishwasher](/dishwasher-in-malaysia/). If you’re wondering how to place a dishwasher in the kitchen, don’t worry! We’ve got you covered with some simple tips to make sure it’s both convenient and efficient.
@@ -6857,7 +6857,7 @@ INSERT INTO article_category (article_id, category_id, is_primary) VALUES (56, 2
 INSERT INTO article_image (article_id, image_id, position) VALUES (56, (SELECT id FROM image WHERE legacy_url = 'https://vattimalaysia.com/wp-content/uploads/2024/12/what-can-you-wash-in-dishwasher.webp'), 0);
 INSERT INTO article_image (article_id, image_id, position) VALUES (56, (SELECT id FROM image WHERE legacy_url = 'https://vattimalaysia.com/wp-content/uploads/2024/12/dishwasher-symbol.webp'), 1);
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (56, 0, 'product-category', 'https://vattimalaysia.com/dishwasher-in-malaysia/', 'dishwasher-in-malaysia', 'dishwasher');
-INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (57, 'induction-cooker-problems', 'buying-guide/induction-cooker-problems', 'buying-guide', 'What is the Common Induction Cooker Problems? Expert Answer', 'What is the Common Induction Cooker Problems? Expert Answer', 'Check out common induction cooker problems like overheating, beeping, and power failures with these quick solutions!', '[Induction cookers](/cooker-hob-in-malaysia/) are a lifesaver in the kitchen, fast, efficient, and easy to clean. But like all appliances, they can run into problems. Don’t worry, though! Here’s a breakdown of the most common induction cooker issues and how to fix them.
+INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (57, 'induction-cooker-problems', 'buying-guide/induction-cooker-problems', 'buying-guide', 'What is the Common Induction Cooker Problems? Expert Answer', 'What is the Common Induction Cooker Problems? Expert Answer', 'Check out common induction cooker problems like overheating, beeping, and power failures with these quick solutions!', '[Induction cookers](/ceramic-cooker-hob-er3601t/) are a lifesaver in the kitchen, fast, efficient, and easy to clean. But like all appliances, they can run into problems. Don’t worry, though! Here’s a breakdown of the most common induction cooker issues and how to fix them.
 
 ## Gas Hob Igniter Not Working? Here’s the Problems and Solutions
 
@@ -6912,12 +6912,12 @@ INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_
 
 ## Final thoughts
 
-Induction cookers make life easier, but like any appliance, they need a little TLC. If you’re tired of dealing with these issues, upgrade to a reliable [VATTI Induction Hob](/cooker-hob-in-malaysia/) and enjoy hassle-free cooking!
+Induction cookers make life easier, but like any appliance, they need a little TLC. If you’re tired of dealing with these issues, upgrade to a reliable [VATTI Induction Hob](/ceramic-cooker-hob-er3601t/) and enjoy hassle-free cooking!
 
 [Explore VATTI products](/cooker-hob-in-malaysia/)', 545, 3, 'Vatti Malaysia', (SELECT id FROM image WHERE legacy_url = 'https://vattimalaysia.com/wp-content/uploads/2025/02/induction-cooker-problems.webp'), '2025-02-05T17:55:39+08:00', '2026-06-10T19:17:13+08:00', 0, 1);
 INSERT INTO article_category (article_id, category_id, is_primary) VALUES (57, 1, 1);
 INSERT INTO article_image (article_id, image_id, position) VALUES (57, (SELECT id FROM image WHERE legacy_url = 'https://vattimalaysia.com/wp-content/uploads/2025/02/induction-cooker-problems.webp'), 0);
-INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (57, 0, 'product', 'https://vattimalaysia.com/cooker-hob-in-malaysia/', 'cooker-hob-in-malaysia', 'Induction cookers');
+INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (57, 0, 'product', 'https://vattimalaysia.com/ceramic-cooker-hob-er3601t/', 'ceramic-cooker-hob-er3601t', 'Induction cookers');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (57, 1, 'product-category', 'https://vattimalaysia.com/cooker-hob-in-malaysia/', 'cooker-hob-in-malaysia', 'Explore VATTI products');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (58, 'gas-hob-igniter-not-working', 'tips-tricks/gas-hob-igniter-not-working', 'tips-tricks', 'Gas Hob Igniter Not Working? Causes and Quick Fixes', 'Gas Hob Igniter Not Working? Causes and Quick Fixes', 'Is your gas hob igniter not working? Find out why and learn easy, practical fixes to get your stove sparking again, no technician needed!', 'Tried lighting your stove, but nothing happens? If your gas hob igniter is not working, don’t panic! This guide will walk you through the common reasons why and how you can fix them easily, no need to call a technician just yet.
 
@@ -8342,12 +8342,12 @@ Induction is normally very fast, so delays usually result from cookware issues r
 
 ## Final thoughts
 
-The induction cooker vs ceramic cooker comparison shows that each has clear strengths depending on your cooking style. For simple, affordable, stylish cooking, a ceramic hob is ideal, exactly what [VATTI’s ceramic cooktop](/cooker-hob-in-malaysia/) range delivers with beautiful design and strong performance.
+The induction cooker vs ceramic cooker comparison shows that each has clear strengths depending on your cooking style. For simple, affordable, stylish cooking, a ceramic hob is ideal, exactly what [VATTI’s ceramic cooktop](/ceramic-cooker-hob-er5902t/) range delivers with beautiful design and strong performance.
 
 [Explore VATTI Cooker Hob](/cooker-hob-in-malaysia/)', 393, 2, 'Vatti Malaysia', (SELECT id FROM image WHERE legacy_url = 'https://vattimalaysia.com/wp-content/uploads/2025/12/Induction-Cooker-vs-Ceramic-Cooker-3.webp'), '2025-12-02T08:56:18+08:00', '2025-12-02T08:56:22+08:00', 0, 1);
 INSERT INTO article_category (article_id, category_id, is_primary) VALUES (83, 1, 1);
 INSERT INTO article_image (article_id, image_id, position) VALUES (83, (SELECT id FROM image WHERE legacy_url = 'https://vattimalaysia.com/wp-content/uploads/2025/12/Induction-Cooker-vs-Ceramic-Cooker-3.webp'), 0);
-INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (83, 0, 'product', 'https://vattimalaysia.com/cooker-hob-in-malaysia/', 'cooker-hob-in-malaysia', 'VATTI’s ceramic cooktop');
+INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (83, 0, 'product', 'https://vattimalaysia.com/ceramic-cooker-hob-er5902t/', 'ceramic-cooker-hob-er5902t', 'VATTI’s ceramic cooktop');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (83, 1, 'product-category', 'https://vattimalaysia.com/cooker-hob-in-malaysia/', 'cooker-hob-in-malaysia', 'Explore VATTI Cooker Hob');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (84, 'induction-vs-ceramic-safety', 'buying-guide/induction-vs-ceramic-safety', 'buying-guide', 'Induction Cooker vs Ceramic Cooker: Safety & Limits', 'Induction Cooker vs Ceramic Cooker: Safety & Limits', 'Learn the safety differences and cooking limitations of an induction cooker vs ceramic cooker, including what you can and can’t cook.', 'When comparing an **induction cooker vs ceramic cooker** , safety and long-term durability are essential considerations. Each hob type works differently, influencing how long they last, what cookware they accept, and how safe they are for family use.
 
@@ -8480,12 +8480,12 @@ This is often a lifestyle choice, and both options work well depending on cookin
 
 ## Final thoughts
 
-Your final choice in the induction cooker vs ceramic cooker debate depends on whether you prioritize speed or comfort. For users who love a stable, glowing surface that complements any kitchen style, the [VATTI ceramic cooktop](/cooker-hob-in-malaysia/) is a perfect match.
+Your final choice in the induction cooker vs ceramic cooker debate depends on whether you prioritize speed or comfort. For users who love a stable, glowing surface that complements any kitchen style, the [VATTI ceramic cooktop](/ceramic-cooker-hob-er5902t/) is a perfect match.
 
 [Explore VATTI cooker hob](/cooker-hob-in-malaysia/)', 331, 2, 'Vatti Malaysia', (SELECT id FROM image WHERE legacy_url = 'https://vattimalaysia.com/wp-content/uploads/2025/12/Induction-Cooker-vs-Ceramic-Cooker-2.webp'), '2025-12-02T08:54:19+08:00', '2025-12-02T08:56:47+08:00', 0, 1);
 INSERT INTO article_category (article_id, category_id, is_primary) VALUES (85, 1, 1);
 INSERT INTO article_image (article_id, image_id, position) VALUES (85, (SELECT id FROM image WHERE legacy_url = 'https://vattimalaysia.com/wp-content/uploads/2025/12/Induction-Cooker-vs-Ceramic-Cooker-2.webp'), 0);
-INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (85, 0, 'product', 'https://vattimalaysia.com/cooker-hob-in-malaysia/', 'cooker-hob-in-malaysia', 'VATTI ceramic cooktop');
+INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (85, 0, 'product', 'https://vattimalaysia.com/ceramic-cooker-hob-er5902t/', 'ceramic-cooker-hob-er5902t', 'VATTI ceramic cooktop');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (85, 1, 'product-category', 'https://vattimalaysia.com/cooker-hob-in-malaysia/', 'cooker-hob-in-malaysia', 'Explore VATTI cooker hob');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (86, 'range-hood-making-noise', 'tips-tricks/range-hood-making-noise', 'tips-tricks', 'Range Hood Making Noise? Causes and Fixes', 'Range Hood Making Noise? Causes, Fixes, and When to Worry', 'Range hood making noise in Malaysian kitchens? Understand the causes, quick fixes, and better ventilation with VATTI.', 'A range hood making noise is a common issue in Malaysian kitchens, especially with frequent frying and high-heat cooking. While some sounds are normal, unusual or persistent noise can signal airflow, moisture, or mechanical problems. This guide explains what different range hood noises mean, how to fix common issues safely, and when to worry, so you can keep your kitchen quiet, efficient, and safe.
 
@@ -9292,7 +9292,7 @@ Knowing what each symbol means is only half the picture. These are the most comm
 
 ## Final thoughts
 
-For Malaysian home cooks who want reliable and enjoyable cooking experiences, consider exploring quality options like the [**VATTI Built‑In Oven O755P**](/combi-and-steam-oven-in-malaysia/) with versatile functions and even heat distribution, ideal for your everyday baking and roasting needs.
+For Malaysian home cooks who want reliable and enjoyable cooking experiences, consider exploring quality options like the [**VATTI Built‑In Oven O755P**](/vatti-built-in-air-fryer-oven-07559/) with versatile functions and even heat distribution, ideal for your everyday baking and roasting needs.
 
 Visit **VATTI Built-In Oven O755P** to see how the right oven can make cooking easier and more enjoyable..
 
@@ -9307,7 +9307,7 @@ INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor)
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (91, 4, 'article', 'https://vattimalaysia.com/tips-tricks/baking-cake-oven-setting/', 'tips-tricks/baking-cake-oven-setting', 'baking cake oven settings');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (91, 5, 'article', 'https://vattimalaysia.com/tips-tricks/which-oven-symbol-for-pizza/', 'tips-tricks/which-oven-symbol-for-pizza', 'which oven symbol to use for pizza');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (91, 6, 'product-category', 'https://vattimalaysia.com/combi-and-steam-oven-in-malaysia/', 'combi-and-steam-oven-in-malaysia', 'Vatti Built-in Oven');
-INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (91, 7, 'product', 'https://vattimalaysia.com/combi-and-steam-oven-in-malaysia/', 'combi-and-steam-oven-in-malaysia', 'VATTI Built‑In Oven O755P');
+INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (91, 7, 'product', 'https://vattimalaysia.com/vatti-built-in-air-fryer-oven-07559/', 'vatti-built-in-air-fryer-oven-07559', 'VATTI Built‑In Oven O755P');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (91, 8, 'product', 'https://vattimalaysia.com/combi-and-steam-oven-in-malaysia/', 'combi-and-steam-oven-in-malaysia', 'VATTI Built-In Oven O755P');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (92, 'how-long-to-preheat-oven', 'tips-tricks/how-long-to-preheat-oven', 'tips-tricks', 'How Long to Preheat Oven: Time, Tips & Temps', 'How Long to Preheat Oven: Time, Tips & Temps', 'Find out how long to preheat your oven for different temperatures, and expert tips to speed up the process for better cooking results.', '“Preheating” means bringing your oven to the target cooking temperature **before you put food inside** . It may seem small, but it’s essential for consistent results, especially for baking.
 
@@ -9623,18 +9623,18 @@ Seals often trap grime unnoticed.
 Dishwashers with removable filters and accessible spray arms, such as modern built-in units, make routine cleaning much easier. Designs focused on user-friendly maintenance help reduce long-term buildup.
 
 For example:
-👉 [/vatti-dishwasher-dwbb7/](/dishwasher-in-malaysia/)
+👉 [/vatti-dishwasher-dwbb7/](/vatti-dishwasher-dwbb7/)
 
 ## Final thoughts
 
-Regular dishwasher cleaning keeps performance strong, prevents odor, and extends the life of your appliance. If you want maintenance to feel even easier, consider a modern option like the [VATTI Dishwasher DWBB7](/dishwasher-in-malaysia/), designed for convenient cleaning and reliable everyday performance.
+Regular dishwasher cleaning keeps performance strong, prevents odor, and extends the life of your appliance. If you want maintenance to feel even easier, consider a modern option like the [VATTI Dishwasher DWBB7](/vatti-dishwasher-dwbb7/), designed for convenient cleaning and reliable everyday performance.
 
 [Explore VATTI Dishwasher](/dishwasher-in-malaysia/)', 501, 3, 'Vatti Malaysia', (SELECT id FROM image WHERE legacy_url = 'https://vattimalaysia.com/wp-content/uploads/2026/03/how-to-clean-dishwashers.webp'), '2026-03-03T21:32:15+08:00', '2026-03-03T22:07:32+08:00', 0, 1);
 INSERT INTO article_category (article_id, category_id, is_primary) VALUES (94, 2, 1);
 INSERT INTO article_image (article_id, image_id, position) VALUES (94, (SELECT id FROM image WHERE legacy_url = 'https://vattimalaysia.com/wp-content/uploads/2026/03/how-to-clean-dishwashers.webp'), 0);
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (94, 0, 'article', 'https://vattimalaysia.com/buying-guide/is-a-dishwasher-necessary/', 'buying-guide/is-a-dishwasher-necessary', 'Is a Dishwasher Necessary? Key Benefits Explained with VATTI');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (94, 1, 'external', 'https://wa.me/60123366082', NULL, 'Enquire With Us');
-INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (94, 2, 'product', 'https://vattimalaysia.com/dishwasher-in-malaysia/', 'dishwasher-in-malaysia', 'https://vattimalaysia.com/vatti-dishwasher-dwbb7/');
+INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (94, 2, 'product', 'https://vattimalaysia.com/vatti-dishwasher-dwbb7/', 'vatti-dishwasher-dwbb7', 'https://vattimalaysia.com/vatti-dishwasher-dwbb7/');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (94, 3, 'product-category', 'https://vattimalaysia.com/dishwasher-in-malaysia/', 'dishwasher-in-malaysia', 'Explore VATTI Dishwasher');
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published) VALUES (95, 'which-oven-symbol-for-pizza', 'tips-tricks/which-oven-symbol-for-pizza', 'tips-tricks', 'Which Oven Symbol for Pizza? Guide to the Perfect Crust', 'Which Oven Symbol for Pizza? Guide to the Perfect Crust', 'Wondering which oven symbol to use for pizza? Learn what the pizza icon means, and tips for a perfect crust every time.', 'There is nothing quite as disappointing as pulling a pizza out of your [built-in oven](/combi-and-steam-oven-in-malaysia/) only to find the base is still soft and doughy while the cheese on top has already started to brown a little too much. Sound familiar? The good news is that this is almost always a settings problem, not a recipe problem. Knowing which oven symbol to use for pizza makes a significant difference between a soggy base and a crisp, properly cooked crust. In this guide, we walk you through exactly which symbols to look for and how to use them for the best results. And if you want a refresher on [oven symbols and their meanings](/tips-tricks/oven-symbols-and-meanings/) more broadly, we have a dedicated guide for that too.
 
@@ -10178,7 +10178,7 @@ These benchmarks are based on real Malaysian cooking habits and kitchen layouts.
 | Heavy daily Asian cooking (deep frying, grilling, daily wok) | 1500 to 2500 | 800 to 1300 |
 | High-rise condo (any cooking style with long shared ducting) | 1200 to 2000 | 1000 to 1300 (prioritise this) |
 
-For example, the [Vatti Triple Intake T-Type V937](/kitchen-hood-in-malaysia/) delivers 2500 m³/h airflow and 1050Pa air pressure, which suits heavy daily Asian cooking. For smaller condo kitchens with lighter use, the [Vatti Slim Series V996](/vatti-slim-series-type-range-hood-v996/) offers balanced suction in a compact form factor. The [Vatti Aetheris V929](/vatti-aetheris-series-cooker-hood-v929/) sits in the middle for average family use with the added benefit of PM2.5 air purification.
+For example, the [Vatti Triple Intake T-Type V937](/triple-intake-series-t-type-cooker-hood-v937/) delivers 2500 m³/h airflow and 1050Pa air pressure, which suits heavy daily Asian cooking. For smaller condo kitchens with lighter use, the [Vatti Slim Series V996](/vatti-slim-series-type-range-hood-v996/) offers balanced suction in a compact form factor. The [Vatti Aetheris V929](/vatti-aetheris-series-cooker-hood-v929/) sits in the middle for average family use with the added benefit of PM2.5 air purification.
 
 ## Other Factors That Affect Real-World Suction Performance
 
@@ -10206,7 +10206,7 @@ INSERT INTO article_category (article_id, category_id, is_primary) VALUES (99, 2
 INSERT INTO article_image (article_id, image_id, position) VALUES (99, (SELECT id FROM image WHERE legacy_url = 'https://vattimalaysia.com/wp-content/uploads/2026/05/How-to-Measure-the-Suction-Power-of-a-Kitchen-Hood.webp'), 0);
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (99, 0, 'external', 'https://wa.me/60123366082', NULL, 'Enquire With Us');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (99, 1, 'product-category', 'https://vattimalaysia.com/kitchen-hood-in-malaysia/', 'kitchen-hood-in-malaysia', 'Vatti’s full kitchen hood lineup');
-INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (99, 2, 'product', 'https://vattimalaysia.com/kitchen-hood-in-malaysia/', 'kitchen-hood-in-malaysia', 'Vatti Triple Intake T-Type V937');
+INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (99, 2, 'product', 'https://vattimalaysia.com/triple-intake-series-t-type-cooker-hood-v937/', 'triple-intake-series-t-type-cooker-hood-v937', 'Vatti Triple Intake T-Type V937');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (99, 3, 'product', 'https://vattimalaysia.com/vatti-slim-series-type-range-hood-v996/', 'vatti-slim-series-type-range-hood-v996', 'Vatti Slim Series V996');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (99, 4, 'product', 'https://vattimalaysia.com/vatti-aetheris-series-cooker-hood-v929/', 'vatti-aetheris-series-cooker-hood-v929', 'Vatti Aetheris V929');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (99, 5, 'external', 'https://web.whatsapp.com/send?phone=60123366082&amp;text=', NULL, 'Message us on WhatsApp');
@@ -10252,7 +10252,7 @@ Not all chimney hoods look the same. While they all share the basic canopy plus 
 - **Lifting chimney hood.** A premium style where the lower canopy lifts upward to expand the smoke capture area, then retracts when not in use. Great for heavy duty Asian cooking with intense wok smoke.
 
 - **Island chimney hood.** Suspended from the ceiling above a kitchen island. Used when the cooktop is not against a wall. Requires careful planning for ducting and ceiling reinforcement.
-Each style has its place. The [Vatti Aetheris V929](/vatti-aetheris-series-cooker-hood-v929/) is a strong example of a modern wall mounted chimney with PM2.5 air purification, while the [Vatti Triple Intake T-Type V937](/kitchen-hood-in-malaysia/) showcases the T-shape design with low noise performance. For tight condo kitchens, the [Vatti Slim Series V996](/vatti-slim-series-type-range-hood-v996/) fits where a full size unit would not, and the [Vatti Athena Lifting V991](/athena-series-lifting-type-range-hood-v991/) is built for households that cook heavily every day.
+Each style has its place. The [Vatti Aetheris V929](/vatti-aetheris-series-cooker-hood-v929/) is a strong example of a modern wall mounted chimney with PM2.5 air purification, while the [Vatti Triple Intake T-Type V937](/triple-intake-series-t-type-cooker-hood-v937/) showcases the T-shape design with low noise performance. For tight condo kitchens, the [Vatti Slim Series V996](/vatti-slim-series-type-range-hood-v996/) fits where a full size unit would not, and the [Vatti Athena Lifting V991](/athena-series-lifting-type-range-hood-v991/) is built for households that cook heavily every day.
 
 ## Ducted vs Recirculating Chimney Hoods
 
@@ -10322,7 +10322,7 @@ INSERT INTO article_image (article_id, image_id, position) VALUES (100, (SELECT 
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (100, 0, 'external', 'https://wa.me/60123366082', NULL, 'Enquire With Us');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (100, 1, 'product-category', 'https://vattimalaysia.com/kitchen-hood-in-malaysia/', 'kitchen-hood-in-malaysia', 'full range of Vatti kitchen hoods');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (100, 2, 'product', 'https://vattimalaysia.com/vatti-aetheris-series-cooker-hood-v929/', 'vatti-aetheris-series-cooker-hood-v929', 'Vatti Aetheris V929');
-INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (100, 3, 'product', 'https://vattimalaysia.com/kitchen-hood-in-malaysia/', 'kitchen-hood-in-malaysia', 'Vatti Triple Intake T-Type V937');
+INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (100, 3, 'product', 'https://vattimalaysia.com/triple-intake-series-t-type-cooker-hood-v937/', 'triple-intake-series-t-type-cooker-hood-v937', 'Vatti Triple Intake T-Type V937');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (100, 4, 'product', 'https://vattimalaysia.com/vatti-slim-series-type-range-hood-v996/', 'vatti-slim-series-type-range-hood-v996', 'Vatti Slim Series V996');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (100, 5, 'product', 'https://vattimalaysia.com/athena-series-lifting-type-range-hood-v991/', 'athena-series-lifting-type-range-hood-v991', 'Vatti Athena Lifting V991');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (100, 6, 'article', 'https://vattimalaysia.com/buying-guide/which-is-better-ducted-or-ductless-range-hood/', 'buying-guide/which-is-better-ducted-or-ductless-range-hood', 'ducted vs ductless range hood guide');
@@ -10557,7 +10557,7 @@ A motor then pulls that air through **grease filters** , which trap oil particle
 
 T-shape hoods are popular for good reason. The **wide capture canopy** handles steam and smoke from a full hob with ease, making them well suited to the heavy frying and wok cooking common in Malaysian kitchens. Their flat, often glass-and-steel surfaces are easy to wipe down, and many modern models add hand-wave sensors, auto-clean cycles, and quiet operation.
 
-Vatti’s T-type range hoods show what the design can do. The [Artemis Series T-Type V931](/artemis-series-t-type-range-hood-v931/) pairs strong airflow with a steam and hot-water auto-clean system and a curved corner to prevent head knocks, while the [Triple Intake Series V937](/kitchen-hood-in-malaysia/) uses a triple-intake design for high suction at a low noise level. Both show how a T-shape hood can be both powerful and elegant.
+Vatti’s T-type range hoods show what the design can do. The [Artemis Series T-Type V931](/artemis-series-t-type-range-hood-v931/) pairs strong airflow with a steam and hot-water auto-clean system and a curved corner to prevent head knocks, while the [Triple Intake Series V937](/triple-intake-series-t-type-cooker-hood-v937/) uses a triple-intake design for high suction at a low noise level. Both show how a T-shape hood can be both powerful and elegant.
 
 ## T-Shape Hood vs Other Hood Types
 
@@ -10595,7 +10595,7 @@ INSERT INTO article_image (article_id, image_id, position) VALUES (104, (SELECT 
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (104, 0, 'external', 'https://wa.me/60123366082', NULL, 'Enquire With Us');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (104, 1, 'article', 'https://vattimalaysia.com/tips-tricks/how-to-measure-suction-power/', 'tips-tricks/how-to-measure-suction-power', 'how to measure suction power');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (104, 2, 'product', 'https://vattimalaysia.com/artemis-series-t-type-range-hood-v931/', 'artemis-series-t-type-range-hood-v931', 'Artemis Series T-Type V931');
-INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (104, 3, 'product', 'https://vattimalaysia.com/kitchen-hood-in-malaysia/', 'kitchen-hood-in-malaysia', 'Triple Intake Series V937');
+INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (104, 3, 'product', 'https://vattimalaysia.com/triple-intake-series-t-type-cooker-hood-v937/', 'triple-intake-series-t-type-cooker-hood-v937', 'Triple Intake Series V937');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (104, 4, 'article', 'https://vattimalaysia.com/buying-guide/types-of-range-hoods/', 'buying-guide/types-of-range-hoods', 'different types of range hoods');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (104, 5, 'product-category', 'https://vattimalaysia.com/kitchen-hood-in-malaysia/', 'kitchen-hood-in-malaysia', 'kitchen hood collection');
 INSERT INTO article_link (article_id, position, kind, href, target_slug, anchor) VALUES (104, 6, 'external', 'https://web.whatsapp.com/send?phone=60123366082&amp;text=', NULL, 'Message us on WhatsApp');

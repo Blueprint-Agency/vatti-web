@@ -197,10 +197,10 @@ product shot. There is no image record left in that file.
 ## Gotchas inherited from the source site
 
 - `vatti-built-in-air-fryer-oven-07559` — the slug uses digit `0`, not letter `O`. It is wrong, and
-  it was the live URL. **The product was retired in `retired-products-2026-08.sql`**, so both the
-  digit-`0` slug and the letter-`O` spelling now 301 to `/combi-and-steam-oven-in-malaysia/`
-  rather than one resolving to a product page. The contract still holds — neither 404s — but do
-  not go looking for the product page this entry used to describe.
+  it is the live URL. Keep it; the letter-`O` spelling is a 301 source pointing at it. It was
+  retired in `retired-products-2026-08.sql` for a month and restored on 2026-09-15 with the V937,
+  the two ceramic hobs and the DWBB7, when the 2026 catalogue turned out to still carry all five;
+  the file's header records which seven stay retired.
 - V917 Carbon Grey and V917 White are the same product with byte-identical specs. Modelled as one
   product with two colourways via `variant_group`, but **both legacy URLs must still resolve**.
 - 10 posts under `/tips-tricks/` are categorised as Buying Guide in WordPress. The URL wins; the
