@@ -1,0 +1,87 @@
+# Content schedule: October to December 2026
+
+Source: `vatti-malaysia-seo-opportunity-workbook_1.html`, compiled 21 August 2026 from Search
+Console (90 days to 21 August, URL-prefix property `https://vattimalaysia.com/`) and Ubersuggest
+(Malaysia, English and Malay), SERP-verified against FOTILE Malaysia as the one direct competitor.
+The workbook is the evidence; this file is the plan lifted out of it with a status column so
+progress lives beside the code. The three months are calendar months: Month 1 is October 2026,
+Month 2 is November and Month 3 is December. Work shipped before 1 October counts as a head start.
+
+Status was scored on 23 September 2026 against `data/sql` and the commits since 23 August.
+Update the column in the same commit as the work, and name the SQL file that carries it.
+
+## The argument in one paragraph
+
+Vatti ranks for 2.4x more keywords than Fotile and has 5.6x more pages, and still gets half the
+traffic: 3,704 Malaysian organic visits a month against 7,123. Fotile's whole figure comes from six
+pages, mostly its category pages. Closing the gap by publishing at Vatti's current 21.9 visits per
+page would take 156 new pages. Lifting yield on pages that already rank takes 23 pieces, 13 of them
+reworks. So the quarter is weighted toward rewrites, and the fastest wins are the three category
+pages where Fotile is directly beatable: dishwasher (Fotile #5, Vatti #8.9), combi oven (#2 against
+#8) and kitchen hood (#8 against #18). The one opening Fotile cannot follow into is Malay-language
+search, whose SERP incumbents run DA 5 to 18.
+
+## Month 1, October: take the three head-to-head pages off Fotile
+
+7 pieces, 2 new and 5 reworks.
+
+| # | Piece | Primary keyword | Type | Status | Evidence |
+|---|---|---|---|---|---|
+| 1 | Dishwasher pillar, rewrite for the generic head term | dishwasher malaysia | Rework | Not started | `category-content.sql` unchanged for this page since the workbook |
+| 2 | Combi and steam oven pillar, rewrite and merge steam terms | combi oven malaysia | Rework | Not started | as above |
+| 3 | Kitchen hood pillar, rewrite and absorb the 18 hood posts | kitchen hood malaysia | Rework | Not started | 25 hood-slugged articles still published; `docs/competitor-gap-kitchen-hood.md` (14 Sep) is the brief for this rewrite |
+| 4 | Hood dapur tanpa tebuk dinding, Malay ductless guide | hood dapur tanpa tebuk dinding | New | Not started | no Malay article in `article` |
+| 5 | Hood dapur, panduan lengkap, Malay hood pillar | hood dapur | New | Not started | as above |
+| 6 | Price and cost sections on all five category pillars | kitchen hood malaysia price | Rework | Not started | no price figure in `category-content.sql` |
+| 7 | Geo-signal fix: hreflang, Malaysia targeting, internal-link routing | technical | Rework | Partly done | www prefix no longer splits the index (`28e5d52`); canonicals on every page; article links pointed past the 301s (`714c930`); no hreflang, and there is nothing to hreflang until item 4 or 5 exists |
+
+## Month 2, November: outrank category pages with real buyer content
+
+8 pieces, 6 new and 2 reworks.
+
+| # | Piece | Primary keyword | Type | Status | Evidence |
+|---|---|---|---|---|---|
+| 8 | Best kitchen hood in Malaysia, 2026 buyer's guide | best kitchen hood malaysia | New | Not started | |
+| 9 | Vatti vs Rubine cooker hood and gas hob | rubine cooker hood malaysia | New | Not started | no article mentions Rubine |
+| 10 | Vatti vs Fotile, Chinese premium kitchen appliances compared | fotile vs vatti | New | Not started | no article mentions Fotile |
+| 11 | Best dishwasher in Malaysia | bosch dishwasher malaysia | New | Not started | |
+| 12 | Best induction hob in Malaysia | best induction hob malaysia | New | Not started | |
+| 13 | Hood dapur terbaik 2026, Malay best-of | hood dapur terbaik | New | Not started | |
+| 14 | Cooker hob pillar, rewrite to pass Fotile's #16 | gas hob malaysia | Rework | Not started | `category-content.sql` unchanged for this page |
+| 15 | Induction vs ceramic hob, merge four posts into one | induction cooker vs ceramic cooker | Rework | Done 14 Sep | `refresh-articles-2026-09.sql`: merged into `which-is-better-induction-or-ceramic-cooker`, the other three unpublished and 301'd |
+
+## Month 3, December: lift yield across the existing estate
+
+8 pieces, 2 new and 6 reworks.
+
+| # | Piece | Primary keyword | Type | Status | Evidence |
+|---|---|---|---|---|---|
+| 16 | Built-in oven pillar, a real money page | built in oven malaysia | New | Not started | `product_category` has five rows and none is a built-in oven |
+| 17 | Complete guide to oven symbols, merge five posts | oven symbols | Rework | Partly done | `oven-symbols-and-meanings` and `oven-symbol-for-baking` rewritten 14 Sep; the pizza, cookies and grill posts still stand as separate pages |
+| 18 | Route the infrared gas stove cluster to the hob pillar | infrared gas stove | Rework | Done 15 Sep | `refresh-infrared-2026-09.sql`: three articles rewritten, one added, all routed to the M822G |
+| 19 | Kitchen hood size and suction power guide, with a Malay variant | kitchen hood ductless | New | Not started | `what-hood-size-do-i-need` and `how-to-measure-suction-power` exist as two older posts; neither is the piece, and there is no Malay variant |
+| 20 | Rework "What is not dishwasher safe" for commercial routing | dishwasher safe symbol | Rework | Not started | not among the ten refreshed on 14 Sep |
+| 21 | Rework "How long to preheat oven" for intent and links | how long to preheat oven | Rework | Done 14 Sep | `refresh-articles-2026-09.sql` |
+| 22 | Backlink push: 30 Malaysian directory, dealer and PR placements | authority | Other | Not started | off-repo work; record placements here when they land |
+| 23 | Recipe archive: prune, noindex or consolidate the 25 posts | housekeeping | Other | Not started | 16 rows in `recipe` plus 23 recipe-titled articles, all published and indexable |
+
+## Done outside the plan
+
+Work since the workbook was compiled that it did not ask for but which serves the same end:
+
+- Ten articles rewritten for the queries they already showed for, 14 September, including the
+  ducted-or-ductless hood post that the workbook lists under "Defend".
+- The kitchen hood competitor gap analysis, 14 September, which is the brief item 3 needs.
+- Structured data for articles, recipes and category lists.
+- A favicon, 18 September, so the brand mark shows beside every result.
+
+## Scorecard
+
+| | Pieces | Done | Partly | Not started |
+|---|---|---|---|---|
+| Month 1, October | 7 | 0 | 1 | 6 |
+| Month 2, November | 8 | 1 | 0 | 7 |
+| Month 3, December | 8 | 2 | 1 | 5 |
+
+Three pieces are already done before the schedule starts, all of them from Months 2 and 3.
+October opens with the three pillar rewrites, which the workbook ranked as the fastest wins.
