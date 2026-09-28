@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     template: "%s | VATTI Malaysia",
   },
   description:
-    "Built-in kitchen appliances engineered for high-heat Asian cooking. Available through 76 authorised dealers across Malaysia.",
+    "Built-in kitchen appliances engineered for high-heat Asian cooking. Available through 75 authorised dealers across Malaysia.",
 
   /**
    * Share-card defaults for every page that does not state its own. Product and

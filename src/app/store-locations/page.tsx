@@ -57,7 +57,7 @@ export default function StoreLocationsPage() {
             </p>
           </div>
 
-          {/* Jump links: 76 entries is a long scroll on the phones that are 64%
+          {/* Jump links: 75 entries is a long scroll on the phones that are 64%
               of this page's traffic. */}
           <nav aria-label="Regions" className="mt-10">
             <ul className="flex flex-wrap gap-2">
@@ -97,7 +97,7 @@ export default function StoreLocationsPage() {
                   className="group flex flex-col gap-3 rounded-sm border border-line bg-surface p-5"
                 >
                   {/* The shopfront photo is how someone recognises the place they
-                      are about to drive to, so it leads the card. All 76 dealers
+                      are about to drive to, so it leads the card. All 75 dealers
                       have one; the guard is for a dealer appointed before their
                       picture arrives. It is decorative here — alt is empty and
                       the link is out of the tab order, because the heading below
