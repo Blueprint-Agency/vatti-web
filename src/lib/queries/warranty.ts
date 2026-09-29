@@ -7,7 +7,7 @@ export type WarrantyType = {
 };
 
 /**
- * The authorised-dealer select. 79 options, ordered here rather than by a
+ * The authorised-dealer select. 80 options, ordered here rather than by a
  * sort_order column — see data/sql/warranty.sql for why the source order was
  * not kept. COLLATE NOCASE because the list mixes `Filken Kulai` with
  * `FILKEN BUKIT INDAH` and a binary sort files those pages apart.

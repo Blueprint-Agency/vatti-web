@@ -22,6 +22,9 @@
 --     a dropdown label does not, and the code is what a service engineer
 --     matches against the plate on the appliance.
 
+-- Added since the extraction:
+--   Filken Puchong, 2026-09-29, with its /store/filken-puchong/ page.
+
 INSERT INTO warranty_dealer (name) VALUES
   ('ADAMAS TRADING (M) SDN. BHD.'),
   ('ALAT DAPUR CHERAS'),
@@ -51,6 +54,7 @@ INSERT INTO warranty_dealer (name) VALUES
   ('FELICITA HOMES DECO'),
   ('FILKEN BUKIT INDAH'),
   ('Filken Kulai'),
+  ('Filken Puchong'),
   ('Flo Plus Home Sdn Bhd'),
   ('GRAND FILKEN SETIA INDAH'),
   ('HENG FOONG SANITARYWARE TRADING'),

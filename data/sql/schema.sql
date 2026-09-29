@@ -571,7 +571,7 @@ CREATE INDEX store_region_idx ON store(region_slug, name);
 -- The retail partner wall on the homepage.
 --
 -- A third list of trade names, after `store` (76 shopfronts) and
--- `warranty_dealer` (79 dropdown entries). It does not line up with either, and
+-- `warranty_dealer` (80 dropdown entries). It does not line up with either, and
 -- for the same reason they do not line up with each other: this one is whoever
 -- the client put on the carousel, which is a marketing decision, not a record of
 -- who sells the appliances. Do not join these three on name. See the note above
@@ -611,8 +611,8 @@ CREATE TABLE partner (
 --
 -- The dropdowns behind /vatti-ewarranty/, extracted from the live WPForms
 -- markup — see data/sql/warranty.sql for the reading and what was cleaned.
--- Deliberately NOT merged into `store`: 79 warranty dealers against 76 shop
--- records, and 15 of the 79 have no match in `store` even after case and
+-- Deliberately NOT merged into `store`: 80 warranty dealers against 76 shop
+-- records, and 15 of the 80 have no match in `store` even after case and
 -- punctuation are normalised away. Some of those are the same business under a
 -- shorter name (`URBANEZ SDN BHD` here, two branches there), some have no
 -- shopfront page at all (`Vatti Flagship Store Atria Mall`, `ELLE ONNI
