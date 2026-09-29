@@ -10,6 +10,15 @@
       "phone": "088-257 811",
       "directionsUrl": "https://share.google/4e9vQWFtWtPFZEUom",
       "image": "2026/08/Emart-Kompleks-Karamunsing.jpeg"
+    },
+    {
+      "slug": "filken-puchong",
+      "name": "Filken Puchong",
+      "regionSlug": "klang-valley-malaysia",
+      "address": "68, Jalan PU 7/3, Bandar Puchong Utama, 47100 Puchong, Selangor",
+      "phone": "012-270 9461",
+      "directionsUrl": "https://maps.app.goo.gl/H9PMgo8K7qDXaWiN6",
+      "image": "2026/09/Filken-Puchong.jpeg"
     }
   ]
 }
