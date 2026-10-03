@@ -1143,6 +1143,11 @@ UPDATE article SET is_published = 0 WHERE path IN ('buying-guide/induction-vs-ce
 INSERT INTO redirect (from_path, to_path, code) VALUES ('/buying-guide/induction-vs-ceramic-features/', '/buying-guide/which-is-better-induction-or-ceramic-cooker/', 301);
 INSERT INTO redirect (from_path, to_path, code) VALUES ('/buying-guide/induction-vs-ceramic-safety/', '/buying-guide/which-is-better-induction-or-ceramic-cooker/', 301);
 INSERT INTO redirect (from_path, to_path, code) VALUES ('/uncategorized/induction-vs-ceramic-guide/', '/buying-guide/which-is-better-induction-or-ceramic-cooker/', 301);
+-- Added 2026-10-03, when urls:check caught it: that post was the only one in
+-- /category/uncategorized/, so unpublishing it emptied the archive and
+-- archiveSections() dropped it, leaving a legacy URL on a 404. The post now
+-- lives in Buying Guide, so the archive follows it there.
+INSERT INTO redirect (from_path, to_path, code) VALUES ('/category/uncategorized/', '/category/buying-guide/', 301);
 
 -- ── the other pasted heading ───────────────────────────────────────────────
 -- how-to-clean-dishwashers opened with the cake article's Quick Answer heading

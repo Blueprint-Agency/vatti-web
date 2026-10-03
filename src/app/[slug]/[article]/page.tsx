@@ -63,6 +63,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       publishedTime: article.published_at,
       modifiedTime: article.modified_at ?? undefined,
       images: article.hero_url ? [{ url: article.hero_url }] : undefined,
+      locale: article.lang.replace("-", "_"),
     },
   };
 }
@@ -80,7 +81,8 @@ export default async function Page({ params }: Params) {
   const recipes = getRecipes(article.id).map((r) =>
     r.notes && flatten(article.body_md).includes(flatten(r.notes)) ? { ...r, notes: null } : r
   );
-  const more = getMoreFromSection(article.section, article.path);
+  const more = getMoreFromSection(article.section, article.path, article.lang);
+  const t = ui(article.lang);
   const { body, cover } = oneCover(article.body_md, article.hero_url);
   const sizes = Object.fromEntries(
     getArticleImageSizes(article.id)
@@ -101,12 +103,12 @@ export default async function Page({ params }: Params) {
       {/* The reading surface. Product and category run on the dark chassis; 900
           words of grease-filter maintenance do not. See DESIGN.md § Direction. */}
       <main id="main" className="bg-paper text-paper-ink">
-        <article className="mx-auto max-w-3xl px-5 py-10 sm:px-8 sm:py-16">
+        <article lang={article.lang} className="mx-auto max-w-3xl px-5 py-10 sm:px-8 sm:py-16">
           <nav aria-label="Breadcrumb" className="text-sm">
             <ol className="flex flex-wrap items-center gap-2 text-paper-muted">
               <li>
                 <Link href="/" className="transition-colors hover:text-paper-ink">
-                  Home
+                  {t.home}
                 </Link>
               </li>
               <li aria-hidden="true">/</li>
@@ -115,25 +117,25 @@ export default async function Page({ params }: Params) {
                   href={`/category/${article.section}/`}
                   className="transition-colors hover:text-paper-ink"
                 >
-                  {getSectionName(article.section)}
+                  {t.section(article.section)}
                 </Link>
               </li>
             </ol>
           </nav>
 
-          <h1 lang={article.lang} className="mt-6 text-balance text-[clamp(1.875rem,1.2rem+2.4vw,3rem)] font-semibold leading-[1.08] tracking-[-0.035em]">
+          <h1 className="mt-6 text-balance text-[clamp(1.875rem,1.2rem+2.4vw,3rem)] font-semibold leading-[1.08] tracking-[-0.035em]">
             {article.h1 ?? article.title}
           </h1>
 
           <p className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-paper-muted">
             <time className="readout" dateTime={article.published_at.slice(0, 10)}>
-              {formatDate(article.published_at)}
+              {formatDate(article.published_at, article.lang)}
             </time>
             {article.reading_minutes && (
               <>
                 <span aria-hidden="true">·</span>
                 <span>
-                  <span className="readout">{article.reading_minutes}</span> min read
+                  <span className="readout">{article.reading_minutes}</span> {t.minRead}
                 </span>
               </>
             )}
@@ -141,7 +143,7 @@ export default async function Page({ params }: Params) {
               <>
                 <span aria-hidden="true">·</span>
                 <a href="#recipe" className="font-medium text-teal underline-offset-[3px] hover:underline">
-                  Jump to recipe
+                  {t.jumpToRecipe}
                 </a>
               </>
             )}
@@ -161,7 +163,7 @@ export default async function Page({ params }: Params) {
 
           {recipes.length > 0 && <RecipeSummary recipes={recipes} />}
 
-          <div lang={article.lang} className="mt-6 text-[1.0625rem]">
+          <div className="mt-6 text-[1.0625rem]">
             <Markdown md={body} sizes={sizes} callouts={callouts} />
           </div>
 
@@ -177,20 +179,24 @@ export default async function Page({ params }: Params) {
           >
             <div className="mx-auto max-w-5xl px-5 py-14 sm:px-8 sm:py-16">
               <div className="flex flex-wrap items-baseline justify-between gap-4">
-                <h2 id="more-heading" className="text-2xl font-semibold tracking-[-0.03em]">
-                  More {getSectionName(article.section)}
+                <h2
+                  id="more-heading"
+                  lang={article.lang}
+                  className="text-2xl font-semibold tracking-[-0.03em]"
+                >
+                  {t.more(t.section(article.section))}
                 </h2>
                 <Link
                   href={`/category/${article.section}/`}
                   className="text-sm font-medium text-teal underline-offset-[3px] hover:underline"
                 >
-                  See all
+                  {t.seeAll}
                 </Link>
               </div>
               <ul className="mt-8 grid gap-5 [grid-template-columns:repeat(auto-fit,minmax(240px,1fr))]">
                 {more.map((m) => (
                   <li key={m.path}>
-                    <MoreCard article={m} />
+                    <MoreCard article={m} lang={article.lang} />
                   </li>
                 ))}
               </ul>
@@ -199,7 +205,7 @@ export default async function Page({ params }: Params) {
         )}
       </main>
 
-      <CtaBar />
+      <CtaBar label={t.cta} lang={t.cta ? article.lang : undefined} />
 
       <script
         type="application/ld+json"
@@ -219,6 +225,39 @@ export default async function Page({ params }: Params) {
     </>
   );
 }
+
+/**
+ * The words the page puts around an article, per article.lang. English is
+ * what every scraped post uses; Malay is for the two hood guides. Section
+ * names come from blog_category for English and from here for Malay, since
+ * the archive pages they link to stay English.
+ */
+const UI = {
+  "en-MY": {
+    home: "Home",
+    section: (section: string) => getSectionName(section),
+    minRead: "min read",
+    jumpToRecipe: "Jump to recipe",
+    more: (name: string) => `More ${name}`,
+    seeAll: "See all",
+    cta: undefined as string | undefined,
+  },
+  "ms-MY": {
+    home: "Utama",
+    section: (section: string) => SECTION_MS[section] ?? getSectionName(section),
+    minRead: "minit bacaan",
+    jumpToRecipe: "Terus ke resipi",
+    more: (name: string) => `Lagi ${name}`,
+    seeAll: "Lihat semua",
+    cta: "Dapatkan bantuan sekarang" as string | undefined,
+  },
+};
+const SECTION_MS: Record<string, string> = {
+  "buying-guide": "Panduan Membeli",
+  "tips-tricks": "Tip & Petua",
+  recipe: "Resipi",
+};
+const ui = (lang: string) => UI[lang as keyof typeof UI] ?? UI["en-MY"];
 
 const SITE = "https://vattimalaysia.com";
 const PUBLISHER = { "@type": "Organization", name: "VATTI Malaysia", url: `${SITE}/` };
@@ -261,11 +300,11 @@ function articleBreadcrumbSchema(article: Article) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
+      { "@type": "ListItem", position: 1, name: ui(article.lang).home, item: `${SITE}/` },
       {
         "@type": "ListItem",
         position: 2,
-        name: getSectionName(article.section),
+        name: ui(article.lang).section(article.section),
         item: `${SITE}/category/${article.section}/`,
       },
       {
@@ -474,10 +513,11 @@ function RecipeCard({ recipe }: { recipe: Recipe }) {
   );
 }
 
-function MoreCard({ article }: { article: ArticleCard }) {
+function MoreCard({ article, lang }: { article: ArticleCard; lang: string }) {
   return (
     <Link
       href={`/${article.path}/`}
+      lang={lang}
       className="group flex h-full flex-col gap-4 rounded-sm border border-paper-line bg-paper p-4 transition-colors hover:border-paper-muted"
     >
       {article.url && (
@@ -496,7 +536,7 @@ function MoreCard({ article }: { article: ArticleCard }) {
         {article.title}
       </p>
       <p className="readout mt-auto text-xs text-paper-muted">
-        {formatDate(article.published_at)}
+        {formatDate(article.published_at, lang)}
       </p>
     </Link>
   );

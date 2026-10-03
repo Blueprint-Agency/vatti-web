@@ -454,7 +454,11 @@ CREATE TABLE article (
   -- guides (refresh-articles-ms-2026-10.sql) are 'ms-MY'. The page sets it as `lang`
   -- on the headline and body and as the schema's inLanguage. The site chrome
   -- around them stays English, which is why <html lang> does not change.
-  lang              TEXT NOT NULL DEFAULT 'en-MY'
+  lang              TEXT NOT NULL DEFAULT 'en-MY',
+  -- Overrides image.alt for this article's hero. The Malay guides reuse their
+  -- English cousins' pictures, whose alt is English; the image row is shared,
+  -- so the Malay alt lives here rather than on it. NULL means use image.alt.
+  featured_image_alt TEXT
 );
 CREATE INDEX article_section_idx ON article(section, published_at DESC);
 

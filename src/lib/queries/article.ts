@@ -110,7 +110,7 @@ export function getArticle(path: string): Article | undefined {
     `SELECT a.id, a.slug, a.path, a.section, a.title, a.h1, a.meta_description,
             a.body_md, a.word_count, a.reading_minutes, a.published_at, a.modified_at,
             a.author, a.lang,
-            i.url AS hero_url, i.alt AS hero_alt,
+            i.url AS hero_url, coalesce(a.featured_image_alt, i.alt) AS hero_alt,
             i.width AS hero_width, i.height AS hero_height
        FROM article a
        LEFT JOIN image i ON i.id = a.featured_image_id
@@ -216,16 +216,25 @@ export function articleCallouts(): Record<string, CalloutArticle> {
 }
 
 /** Sidebar/footer reading list on an article page. Same archive, minus itself. */
-export function getMoreFromSection(section: string, excludePath: string): ArticleCard[] {
+/**
+ * Same-language only. Newest-first would otherwise put the two Malay guides
+ * (3 Oct 2026) at the top of every English buying guide's "More" row.
+ */
+export function getMoreFromSection(
+  section: string,
+  excludePath: string,
+  lang: string
+): ArticleCard[] {
   return all<ArticleCard>(
     `SELECT a.path, a.title, a.meta_description, a.published_at, a.reading_minutes,
             i.url, i.alt
        FROM article a
        LEFT JOIN image i ON i.id = a.featured_image_id
-      WHERE a.is_published = 1 AND a.section = ? AND a.path <> ?
+      WHERE a.is_published = 1 AND a.section = ? AND a.path <> ? AND a.lang = ?
       ORDER BY a.published_at DESC
       LIMIT 3`,
     section,
-    excludePath
+    excludePath,
+    lang
   );
 }

@@ -26,7 +26,16 @@ import { WHATSAPP } from "@/lib/site";
  * about — see `whatsappLink`. A page that knows nothing passes nothing and gets
  * an empty chat, which is still better than no button.
  */
-export function CtaBar({ href = WHATSAPP }: { href?: string }) {
+export function CtaBar({
+  href = WHATSAPP,
+  label = "Let us help you now",
+  lang,
+}: {
+  href?: string;
+  /** Only the Malay articles pass one, with `lang` to match. */
+  label?: string;
+  lang?: string;
+}) {
   return (
     <div
       className="fixed inset-x-0 bottom-0 z-[var(--z-sticky)] border-t border-line bg-void/95 px-4 pt-3 backdrop-blur-sm lg:hidden"
@@ -40,10 +49,11 @@ export function CtaBar({ href = WHATSAPP }: { href?: string }) {
         href={href}
         target="_blank"
         rel="noopener"
+        lang={lang}
         className="flex items-center justify-center gap-2.5 rounded-sm bg-teal px-4 py-3.5 text-center text-[1.0625rem] font-semibold text-void"
       >
         <WhatsappLogo size={22} weight="fill" aria-hidden="true" />
-        Let us help you now
+        {label}
       </a>
     </div>
   );

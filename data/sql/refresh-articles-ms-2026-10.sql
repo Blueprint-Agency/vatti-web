@@ -131,6 +131,10 @@ Untuk panduan dalam Bahasa Inggeris, baca [ducted or ductless range hood](/buyin
 [Lihat hood dapur VATTI](/kitchen-hood-in-malaysia/)
 ', 960, 5, 'Vatti Malaysia', 568, '2026-10-03T12:00:00+08:00', '2026-10-03T12:00:00+08:00', 0, 1, 'ms-MY');
 INSERT INTO article_category (article_id, category_id, is_primary) VALUES (108, (SELECT id FROM blog_category WHERE slug = 'buying-guide'), 1);
+-- Image 568 is shared with the English post, whose alt is English.
+UPDATE article SET featured_image_alt =
+  'Hood dapur nipis di bawah kabinet dinding, dengan penapis jaring logam dan lampu yang menyala.'
+  WHERE id = 108;
 
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published, lang)
 VALUES (109, 'hood-dapur', 'buying-guide/hood-dapur', 'buying-guide',
@@ -223,6 +227,9 @@ Untuk panduan dalam Bahasa Inggeris, baca [3 types of range hoods](/buying-guide
 [Bandingkan hood dapur VATTI](/kitchen-hood-in-malaysia/)
 ', 943, 5, 'Vatti Malaysia', 399, '2026-10-03T12:00:00+08:00', '2026-10-03T12:00:00+08:00', 0, 1, 'ms-MY');
 INSERT INTO article_category (article_id, category_id, is_primary) VALUES (109, (SELECT id FROM blog_category WHERE slug = 'buying-guide'), 1);
+UPDATE article SET featured_image_alt =
+  'Hood dapur VATTI berpanel kaca hitam dengan cerobong, di atas hob kaca dalam dapur berkabinet gelap.'
+  WHERE id = 109;
 
 -- ── pointers from the English cousins ──────────────────────────────────────
 -- So the two pages are reachable from articles that already rank. One line in

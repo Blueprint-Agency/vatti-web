@@ -41,8 +41,8 @@ export const GOOGLE_REVIEWS = 67;
  * the static HTML is identical whichever machine runs the build — `published_at`
  * is stored with a +08:00 offset and a Vercel builder runs in UTC.
  */
-export function formatDate(iso: string): string {
-  return new Date(iso).toLocaleDateString("en-MY", {
+export function formatDate(iso: string, locale = "en-MY"): string {
+  return new Date(iso).toLocaleDateString(locale, {
     day: "numeric",
     month: "long",
     year: "numeric",

@@ -53,7 +53,7 @@ export default function NotFound() {
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-ink-muted">
               The address you followed does not match anything on the site. Nothing is broken on
-              your end — pick up from one of the pages below, or message us and we will point you
+              your end. Pick up from one of the pages below, or message us and we will point you
               at the right one.
             </p>
           </div>
