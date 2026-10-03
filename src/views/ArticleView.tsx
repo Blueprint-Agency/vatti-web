@@ -4,10 +4,15 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { CtaBar } from "@/components/CtaBar";
-import { SiteHeader } from "@/components/SiteHeader";
+import { SiteHeader, type Editions } from "@/components/SiteHeader";
+import { OG_LOCALE, localeFromTag, t as dict, type Dict, type Locale } from "@/i18n";
+import { hreflang } from "@/lib/alternates";
+import { SITE_ORIGIN } from "@/lib/deployment";
 import { Markdown } from "@/lib/markdown";
 import {
   articleCallouts,
+  articleEditions,
+  articleHref,
   articlePaths,
   getArticle,
   getArticleImageSizes,
@@ -19,58 +24,70 @@ import {
 import { categoryNames } from "@/lib/queries/category";
 import { productNames } from "@/lib/queries/product";
 import { getRecipes, type Recipe } from "@/lib/queries/recipe";
+import { archiveHref, homeHref } from "@/lib/routes";
 import { formatDate } from "@/lib/site";
 
 /**
- * The 106 editorial URLs: /buying-guide/…/, /tips-tricks/…/, /recipe/…/ and the
- * single /uncategorized/induction-vs-ceramic-guide/.
+ * An article page, in any edition. The route files are thin: English at
+ * src/app/(en)/[slug]/[article]/page.tsx serves the 106 legacy editorial URLs
+ * (/buying-guide/…/, /tips-tricks/…/, /recipe/…/ and the single
+ * /uncategorized/induction-vs-ceramic-guide/); Malay and Chinese mirror it
+ * under (ms)/ms and (zh)/zh.
  *
  * The outer segment is named `[slug]` because it has to be — it is the same
- * level as app/[slug]/page.tsx (39 products + 5 categories) and Next.js allows
- * only one dynamic name per level. Here it holds the section. Paths come
- * straight off `article.path`, the stored canonical, split on its one slash;
- * nothing is rebuilt from section + slug.
- *
- * Articles are NOT resolved in the root route: they live one level down, so the
- * root resolver keeps its two lookups and this route never sees a product slug.
+ * level as app/(en)/[slug]/page.tsx (products + categories) and Next.js allows
+ * only one dynamic name per level. Here it holds the section's URL segment,
+ * which is localised in Malay ('panduan-membeli'). Paths come straight off
+ * `article.path`, the stored canonical, split on its one slash; nothing is
+ * rebuilt from section + slug.
  */
-// Exhaustive from the article table; an unknown pair is a 404 off the static
-// shell rather than a serverless render that ends in notFound(). See [slug]/page.tsx.
-export const dynamicParams = false;
-
-export function generateStaticParams() {
-  return articlePaths().map((a) => ({ slug: a.section, article: a.slug }));
+export function articleParams(locale: Locale) {
+  return articlePaths(locale).map((a) => ({ slug: a.section, article: a.slug }));
 }
 
-type Params = { params: Promise<{ slug: string; article: string }> };
+/** This piece's URL in every edition it is published in, its own included. */
+function editionsOf(article: Article): Editions {
+  const editions: Editions = Object.fromEntries(
+    articleEditions(article.translation_key).map((e) => [localeFromTag(e.lang), e.href])
+  );
+  editions[localeFromTag(article.lang)] = articleHref(article.lang, article.path);
+  return editions;
+}
 
-export async function generateMetadata({ params }: Params): Promise<Metadata> {
-  const { slug, article: leaf } = await params;
-  const article = getArticle(`${slug}/${leaf}`);
+export function articleMetadata(locale: Locale, segment: string, leaf: string): Metadata {
+  const article = getArticle(locale, `${segment}/${leaf}`);
   if (!article) return {};
+  const href = articleHref(article.lang, article.path);
 
   return {
     // absolute: `title` is the legacy <title> these pages already rank on, and
     // the layout template would append "| VATTI Malaysia" to every one of them.
     title: { absolute: article.title },
     description: article.meta_description ?? undefined,
-    alternates: { canonical: `/${article.path}/` },
+    alternates: { canonical: href, languages: hreflang(editionsOf(article)) },
     openGraph: {
       type: "article",
       title: article.title,
       description: article.meta_description ?? undefined,
-      url: `/${article.path}/`,
+      url: href,
       publishedTime: article.published_at,
       modifiedTime: article.modified_at ?? undefined,
       images: article.hero_url ? [{ url: article.hero_url }] : undefined,
-      locale: article.lang.replace("-", "_"),
+      locale: OG_LOCALE[locale],
     },
   };
 }
 
-export default async function Page({ params }: Params) {
-  const { slug, article: leaf } = await params;
-  const article = getArticle(`${slug}/${leaf}`);
+export function ArticlePage({
+  locale,
+  segment,
+  leaf,
+}: {
+  locale: Locale;
+  segment: string;
+  leaf: string;
+}) {
+  const article = getArticle(locale, `${segment}/${leaf}`);
   if (!article) notFound();
 
   // The recipe card's '### Note' is stored on every recipe that had one, but on
@@ -81,8 +98,12 @@ export default async function Page({ params }: Params) {
   const recipes = getRecipes(article.id).map((r) =>
     r.notes && flatten(article.body_md).includes(flatten(r.notes)) ? { ...r, notes: null } : r
   );
-  const more = getMoreFromSection(article.section, article.path, article.lang);
-  const t = ui(article.lang);
+  const more = getMoreFromSection(article.section, article.id, article.lang);
+  const d = dict(locale);
+  const t = labels(d, getSectionName(article.section, locale));
+  const sectionHref = archiveHref(locale, article.section);
+  const href = articleHref(article.lang, article.path);
+  const editions = editionsOf(article);
   const { body, cover } = oneCover(article.body_md, article.hero_url);
   const sizes = Object.fromEntries(
     getArticleImageSizes(article.id)
@@ -94,11 +115,17 @@ export default async function Page({ params }: Params) {
   const callouts = {
     articles: articleCallouts(),
     pages: { ...categoryNames(), ...productNames() },
+    labels: {
+      related: d.article.related,
+      minRead: d.article.minRead,
+      readTheGuide: d.article.readTheGuide,
+      explore: d.article.explore,
+    },
   };
 
   return (
     <>
-      <SiteHeader />
+      <SiteHeader locale={locale} editions={editions} />
 
       {/* The reading surface. Product and category run on the dark chassis; 900
           words of grease-filter maintenance do not. See DESIGN.md § Direction. */}
@@ -107,17 +134,17 @@ export default async function Page({ params }: Params) {
           <nav aria-label="Breadcrumb" className="text-sm">
             <ol className="flex flex-wrap items-center gap-2 text-paper-muted">
               <li>
-                <Link href="/" className="transition-colors hover:text-paper-ink">
+                <Link href={homeHref(locale)} className="transition-colors hover:text-paper-ink">
                   {t.home}
                 </Link>
               </li>
               <li aria-hidden="true">/</li>
               <li>
                 <Link
-                  href={`/category/${article.section}/`}
+                  href={sectionHref}
                   className="transition-colors hover:text-paper-ink"
                 >
-                  {t.section(article.section)}
+                  {t.section}
                 </Link>
               </li>
             </ol>
@@ -161,14 +188,14 @@ export default async function Page({ params }: Params) {
             />
           )}
 
-          {recipes.length > 0 && <RecipeSummary recipes={recipes} />}
+          {recipes.length > 0 && <RecipeSummary recipes={recipes} labels={d.article.recipe} />}
 
           <div className="mt-6 text-[1.0625rem]">
             <Markdown md={body} sizes={sizes} callouts={callouts} />
           </div>
 
           {recipes.map((recipe) => (
-            <RecipeCard key={recipe.id} recipe={recipe} />
+            <RecipeCard key={recipe.id} recipe={recipe} labels={d.article.recipe} />
           ))}
         </article>
 
@@ -184,10 +211,10 @@ export default async function Page({ params }: Params) {
                   lang={article.lang}
                   className="text-2xl font-semibold tracking-[-0.03em]"
                 >
-                  {t.more(t.section(article.section))}
+                  {t.more(t.section)}
                 </h2>
                 <Link
-                  href={`/category/${article.section}/`}
+                  href={sectionHref}
                   className="text-sm font-medium text-teal underline-offset-[3px] hover:underline"
                 >
                   {t.seeAll}
@@ -205,61 +232,43 @@ export default async function Page({ params }: Params) {
         )}
       </main>
 
-      <CtaBar label={t.cta} lang={t.cta ? article.lang : undefined} />
+      <CtaBar label={t.cta} lang={locale === "en" ? undefined : article.lang} />
 
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema(article)) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema(article, href, t.section)) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleBreadcrumbSchema(article)) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleBreadcrumbSchema(article, href, t, homeHref(locale), sectionHref)),
+        }}
       />
       {recipes.map((r) => (
         <script
           key={r.id}
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(recipeSchema(r, article)) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(recipeSchema(r, article, href)) }}
         />
       ))}
     </>
   );
 }
 
-/**
- * The words the page puts around an article, per article.lang. English is
- * what every scraped post uses; Malay is for the two hood guides. Section
- * names come from blog_category for English and from here for Malay, since
- * the archive pages they link to stay English.
- */
-const UI = {
-  "en-MY": {
-    home: "Home",
-    section: (section: string) => getSectionName(section),
-    minRead: "min read",
-    jumpToRecipe: "Jump to recipe",
-    more: (name: string) => `More ${name}`,
-    seeAll: "See all",
-    cta: undefined as string | undefined,
-  },
-  "ms-MY": {
-    home: "Utama",
-    section: (section: string) => SECTION_MS[section] ?? getSectionName(section),
-    minRead: "minit bacaan",
-    jumpToRecipe: "Terus ke resipi",
-    more: (name: string) => `Lagi ${name}`,
-    seeAll: "Lihat semua",
-    cta: "Dapatkan bantuan sekarang" as string | undefined,
-  },
-};
-const SECTION_MS: Record<string, string> = {
-  "buying-guide": "Panduan Membeli",
-  "tips-tricks": "Tip & Petua",
-  recipe: "Resipi",
-};
-const ui = (lang: string) => UI[lang as keyof typeof UI] ?? UI["en-MY"];
+/** The words the page puts around an article, from the edition's dictionary. */
+function labels(d: Dict, section: string) {
+  return {
+    home: d.nav.home,
+    section,
+    minRead: d.article.minRead,
+    jumpToRecipe: d.article.jumpToRecipe,
+    more: d.article.more,
+    seeAll: d.article.seeAll,
+    cta: d.cta.help,
+  };
+}
 
-const SITE = "https://vattimalaysia.com";
+const SITE = SITE_ORIGIN;
 const PUBLISHER = { "@type": "Organization", name: "VATTI Malaysia", url: `${SITE}/` };
 
 /**
@@ -275,43 +284,49 @@ const PUBLISHER = { "@type": "Organization", name: "VATTI Malaysia", url: `${SIT
  * Every published post has a hero image, so `image` is never empty; if that ever
  * stops being true the field drops rather than emitting null.
  */
-function articleSchema(article: Article) {
+function articleSchema(article: Article, href: string, sectionName: string) {
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: article.title,
     description: article.meta_description ?? undefined,
-    url: `${SITE}/${article.path}/`,
-    mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE}/${article.path}/` },
+    url: `${SITE}${href}`,
+    mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE}${href}` },
     datePublished: article.published_at,
     dateModified: article.modified_at ?? article.published_at,
     author: article.author ? { "@type": "Organization", name: article.author } : PUBLISHER,
     publisher: PUBLISHER,
     image: article.hero_url ? [article.hero_url] : undefined,
-    articleSection: getSectionName(article.section),
+    articleSection: sectionName,
     wordCount: article.word_count,
     inLanguage: article.lang,
   };
 }
 
 /** Mirrors the breadcrumb the reader can see at the top of the page. */
-function articleBreadcrumbSchema(article: Article) {
+function articleBreadcrumbSchema(
+  article: Article,
+  href: string,
+  t: ReturnType<typeof labels>,
+  homePath: string,
+  sectionPath: string
+) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: ui(article.lang).home, item: `${SITE}/` },
+      { "@type": "ListItem", position: 1, name: t.home, item: `${SITE}${homePath}` },
       {
         "@type": "ListItem",
         position: 2,
-        name: ui(article.lang).section(article.section),
-        item: `${SITE}/category/${article.section}/`,
+        name: t.section,
+        item: `${SITE}${sectionPath}`,
       },
       {
         "@type": "ListItem",
         position: 3,
         name: article.title,
-        item: `${SITE}/${article.path}/`,
+        item: `${SITE}${href}`,
       },
     ],
   };
@@ -326,7 +341,7 @@ function articleBreadcrumbSchema(article: Article) {
  * and no rating: recipe reviews are not collected, and `review` is about the
  * appliances' service, not the cooking.
  */
-function recipeSchema(recipe: Recipe, article: Article) {
+function recipeSchema(recipe: Recipe, article: Article, href: string) {
   // yield_label already carries the whole phrase — '2 servings', not 'servings'
   // — and yield_qty is the bare number it starts with. Joining them yields
   // "2 2 servings". The label is the one to print; the number is what the card
@@ -338,7 +353,8 @@ function recipeSchema(recipe: Recipe, article: Article) {
     "@type": "Recipe",
     name: recipe.name,
     description: recipe.description ?? undefined,
-    url: `${SITE}/${article.path}/`,
+    url: `${SITE}${href}`,
+    inLanguage: article.lang,
     image: article.hero_url ? [article.hero_url] : undefined,
     datePublished: article.published_at,
     author: article.author ? { "@type": "Organization", name: article.author } : PUBLISHER,
@@ -403,14 +419,16 @@ function oneCover(md: string, hero: string | null): { body: string; cover: boole
 const IMAGE_LINE = /^!\[[^\]]*\]\([^)\s]+\)$/;
 
 /** Prep/cook/yield/calories, promoted out of the prose to sit under the title. */
-function RecipeSummary({ recipes }: { recipes: Recipe[] }) {
+type RecipeLabels = Dict["article"]["recipe"];
+
+function RecipeSummary({ recipes, labels }: { recipes: Recipe[]; labels: RecipeLabels }) {
   const facts = recipes.flatMap((r) =>
     [
-      r.prep_minutes && { label: "Prep", value: String(r.prep_minutes), unit: "min" },
-      r.cook_minutes && { label: "Cook", value: String(r.cook_minutes), unit: "min" },
-      r.total_minutes && { label: "Total", value: String(r.total_minutes), unit: "min" },
-      r.yield_qty && { label: "Serves", value: r.yield_qty, unit: "" },
-      r.calories && { label: "Energy", value: r.calories.replace(/\s*kcal$/i, ""), unit: "kcal" },
+      r.prep_minutes && { label: labels.prep, value: String(r.prep_minutes), unit: labels.min },
+      r.cook_minutes && { label: labels.cook, value: String(r.cook_minutes), unit: labels.min },
+      r.total_minutes && { label: labels.total, value: String(r.total_minutes), unit: labels.min },
+      r.yield_qty && { label: labels.serves, value: r.yield_qty, unit: "" },
+      r.calories && { label: labels.energy, value: r.calories.replace(/\s*kcal$/i, ""), unit: "kcal" },
     ].filter((f): f is { label: string; value: string; unit: string } => Boolean(f))
   );
   if (facts.length === 0) return null;
@@ -437,7 +455,7 @@ function RecipeSummary({ recipes }: { recipes: Recipe[] }) {
  * which is the whole point of storing them separately. The WordPress recipe-card
  * copy of the same content is stripped out of the body — see lib/markdown.tsx.
  */
-function RecipeCard({ recipe }: { recipe: Recipe }) {
+function RecipeCard({ recipe, labels }: { recipe: Recipe; labels: RecipeLabels }) {
   if (recipe.ingredients.length === 0 && recipe.steps.length === 0) return null;
 
   return (
@@ -464,7 +482,7 @@ function RecipeCard({ recipe }: { recipe: Recipe }) {
         {recipe.ingredients.length > 0 && (
           <div>
             <h3 className="text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-paper-muted">
-              Ingredients
+              {labels.ingredients}
             </h3>
             <ul className="mt-4 flex flex-col gap-2.5">
               {recipe.ingredients.map((text, i) => (
@@ -483,7 +501,7 @@ function RecipeCard({ recipe }: { recipe: Recipe }) {
         {recipe.steps.length > 0 && (
           <div>
             <h3 className="text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-paper-muted">
-              Method
+              {labels.method}
             </h3>
             <ol className="mt-4 flex flex-col gap-4">
               {recipe.steps.map((text, i) => (
@@ -504,7 +522,7 @@ function RecipeCard({ recipe }: { recipe: Recipe }) {
       {recipe.notes && (
         <div className="mt-8 border-t border-paper-line pt-6">
           <h3 className="text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-paper-muted">
-            Note
+            {labels.note}
           </h3>
           <p className="mt-3 max-w-[62ch] leading-relaxed">{recipe.notes}</p>
         </div>
@@ -516,7 +534,7 @@ function RecipeCard({ recipe }: { recipe: Recipe }) {
 function MoreCard({ article, lang }: { article: ArticleCard; lang: string }) {
   return (
     <Link
-      href={`/${article.path}/`}
+      href={article.href}
       lang={lang}
       className="group flex h-full flex-col gap-4 rounded-sm border border-paper-line bg-paper p-4 transition-colors hover:border-paper-muted"
     >

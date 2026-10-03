@@ -100,14 +100,15 @@ export function getProductCard(slug: string): Bestseller | undefined {
  * comparison plus a water filter piece, which reads as a thin catalogue rather
  * than the 25 guides that are actually there.
  */
-export function getArticlesByPath(paths: string[]): ArticleTeaser[] {
+export function getArticlesByPath(paths: string[], lang = "en-MY"): ArticleTeaser[] {
   const holes = paths.map(() => "?").join(",");
   const rows = all<ArticleTeaser>(
     `SELECT a.path, a.title, a.reading_minutes, i.url, i.alt
        FROM article a
        LEFT JOIN image i ON i.id = a.featured_image_id
-      WHERE a.path IN (${holes}) AND a.is_published = 1`,
-    ...paths
+      WHERE a.path IN (${holes}) AND a.is_published = 1 AND a.lang = ?`,
+    ...paths,
+    lang
   );
   return paths.flatMap((p) => rows.filter((r) => r.path === p));
 }
@@ -116,15 +117,16 @@ export function getArticlesByPath(paths: string[]): ArticleTeaser[] {
  * Newest articles in one section. The homepage links out to 105 posts that
  * currently have no route in from the front page at all.
  */
-export function getArticleTeasers(section: string, limit: number): ArticleTeaser[] {
+export function getArticleTeasers(section: string, limit: number, lang = "en-MY"): ArticleTeaser[] {
   return all<ArticleTeaser>(
     `SELECT a.path, a.title, a.reading_minutes, i.url, i.alt
        FROM article a
        LEFT JOIN image i ON i.id = a.featured_image_id
-      WHERE a.section = ? AND a.is_published = 1
+      WHERE a.section = ? AND a.is_published = 1 AND a.lang = ?
       ORDER BY a.published_at DESC
       LIMIT ?`,
     section,
+    lang,
     limit
   );
 }

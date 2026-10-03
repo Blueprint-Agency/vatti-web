@@ -191,7 +191,9 @@ export type ImageSizes = Record<string, { width: number; height: number }>;
 
 /** What a standalone link can resolve to, keyed by site-relative path. */
 export type CalloutArticle = {
+  /** URL without surrounding slashes, prefix included: 'ms/panduan-membeli/x'. */
   path: string;
+  lang: string;
   title: string;
   section_name: string;
   reading_minutes: number | null;
@@ -203,6 +205,13 @@ export type Callouts = {
   articles: Record<string, CalloutArticle>;
   /** Category and product display names by slug. */
   pages: Record<string, string>;
+  /** The page's own words for the card and button chrome (src/i18n). */
+  labels: {
+    related: string;
+    minRead: string;
+    readTheGuide: string;
+    explore: (name: string) => string;
+  };
 };
 
 const WHATSAPP_HREF = /^https:\/\/(wa\.me|api\.whatsapp\.com)\//;
@@ -238,13 +247,14 @@ function Callout({
   if (href.startsWith("/")) {
     const path = href.replace(/^\/|\/$/g, "");
     const article = callouts?.articles[path];
-    if (article) return <ArticleCallout article={article} />;
+    if (article) return <ArticleCallout article={article} labels={callouts!.labels} />;
 
     // The scrape left a few anchors that are the URL itself
     // ("[/vatti-dishwasher-dwbb7/](/dishwasher-in-malaysia/)"). The page's own
     // name reads better than its address.
     const name = callouts?.pages[path];
-    const shown = /^(https?:\/\/|\/)/.test(text) && name ? `Explore VATTI ${name}` : text;
+    const shown =
+      /^(https?:\/\/|\/)/.test(text) && name && callouts ? callouts.labels.explore(name) : text;
     return (
       <div className="my-7">
         <Link
@@ -272,10 +282,17 @@ function Callout({
  * hover) laid on its side so it sits inside a column of prose without reading
  * as a section of its own. The thumbnail is the guide's own hero.
  */
-function ArticleCallout({ article }: { article: CalloutArticle }) {
+function ArticleCallout({
+  article,
+  labels,
+}: {
+  article: CalloutArticle;
+  labels: Callouts["labels"];
+}) {
   return (
     <Link
       href={`/${article.path}/`}
+      lang={article.lang}
       className="group my-8 flex gap-4 rounded-sm border border-paper-line bg-paper-surface p-4 transition-colors hover:border-teal sm:gap-5 sm:p-5"
     >
       {article.url && (
@@ -292,13 +309,13 @@ function ArticleCallout({ article }: { article: CalloutArticle }) {
       )}
       <div className="min-w-0 flex-1 self-center">
         <p className="readout text-xs text-paper-muted">
-          Related
+          {labels.related}
           <span aria-hidden="true"> · </span>
           {article.section_name}
           {article.reading_minutes && (
             <>
               <span aria-hidden="true"> · </span>
-              {article.reading_minutes} min read
+              {article.reading_minutes} {labels.minRead}
             </>
           )}
         </p>
@@ -306,7 +323,7 @@ function ArticleCallout({ article }: { article: CalloutArticle }) {
           {article.title}
         </p>
         <p className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-teal">
-          Read the guide
+          {labels.readTheGuide}
           <ArrowRight
             size={16}
             aria-hidden="true"

@@ -3,6 +3,9 @@ import { FacebookLogo } from "@phosphor-icons/react/dist/ssr/FacebookLogo";
 import { InstagramLogo } from "@phosphor-icons/react/dist/ssr/InstagramLogo";
 import { YoutubeLogo } from "@phosphor-icons/react/dist/ssr/YoutubeLogo";
 
+import { t, type Locale } from "@/i18n";
+import { archiveHref, categoryHref, sectionLabel, staticHref } from "@/lib/routes";
+
 /** Phosphor has no Xiaohongshu/RedNote mark, so this stands in with the same
  *  rounded-square badge shape as the other filled logo glyphs it sits beside,
  *  the "R" punched out in the footer's own background color. */
@@ -37,38 +40,52 @@ export const SOCIALS = [
   { label: "YouTube", href: "https://www.youtube.com/@vattimalaysia8049", Icon: YoutubeLogo },
 ];
 
-const COLUMNS = [
-  {
-    heading: "Products",
-    links: [
-      { label: "Kitchen Hood", href: "/kitchen-hood-in-malaysia/" },
-      { label: "Cooker Hob", href: "/cooker-hob-in-malaysia/" },
-      { label: "Combi & Steam Oven", href: "/combi-and-steam-oven-in-malaysia/" },
-      { label: "Dishwasher", href: "/dishwasher-in-malaysia/" },
-      { label: "One Tap Water Purifier", href: "/one-tap-purifier-in-malaysia/" },
-    ],
-  },
-  {
-    heading: "Company",
-    links: [
-      { label: "About us", href: "/about-us/" },
-      { label: "Contact us", href: "/contact-us/" },
-      { label: "Store locations", href: "/store-locations/" },
-      { label: "eWarranty", href: "/vatti-ewarranty/" },
-    ],
-  },
-  {
-    heading: "Guides",
-    links: [
-      { label: "Buying Guide", href: "/category/buying-guide/" },
-      { label: "Tips & Tricks", href: "/category/tips-tricks/" },
-      { label: "Recipe", href: "/category/recipe/" },
-      { label: "Instruction Manual", href: "/instruction-manual/" },
-    ],
-  },
+const CATEGORY_SLUGS = [
+  "kitchen-hood-in-malaysia",
+  "cooker-hob-in-malaysia",
+  "combi-and-steam-oven-in-malaysia",
+  "dishwasher-in-malaysia",
+  "one-tap-purifier-in-malaysia",
 ];
 
-export function SiteFooter() {
+/** The three link columns, in the visitor's language, linking to their edition where it exists. */
+function columns(locale: Locale) {
+  const f = t(locale).footer;
+  return [
+    {
+      id: "products",
+      heading: f.products,
+      links: CATEGORY_SLUGS.map((slug) => ({
+        label: f.categories[slug],
+        href: categoryHref(locale, slug),
+      })),
+    },
+    {
+      id: "company",
+      heading: f.company,
+      links: [
+        { label: f.aboutUs, href: staticHref(locale, "about-us") },
+        { label: f.contactUs, href: staticHref(locale, "contact-us") },
+        { label: f.storeLocations, href: staticHref(locale, "store-locations") },
+        { label: f.ewarranty, href: staticHref(locale, "vatti-ewarranty") },
+      ],
+    },
+    {
+      id: "guides",
+      heading: f.guides,
+      links: [
+        ...["buying-guide", "tips-tricks", "recipe"].map((section) => ({
+          label: sectionLabel(locale, section),
+          href: archiveHref(locale, section),
+        })),
+        { label: f.instructionManual, href: staticHref(locale, "instruction-manual") },
+      ],
+    },
+  ];
+}
+
+export function SiteFooter({ locale = "en" }: { locale?: Locale } = {}) {
+  const f = t(locale).footer;
   return (
     /* pb clears the mobile sticky CTA bar, which every template except
        /vatti-ewarranty/ now carries. See CtaBar. */
@@ -94,7 +111,7 @@ export function SiteFooter() {
                 012-3366082
               </a>
             </p>
-            <p className="mt-1 text-sm text-ink-muted">Open daily, 10am - 8pm</p>
+            <p className="mt-1 text-sm text-ink-muted">{f.hours}</p>
             <ul className="mt-4 flex items-center gap-4">
               {SOCIALS.map(({ label, href, Icon }) => (
                 <li key={label}>
@@ -112,10 +129,10 @@ export function SiteFooter() {
             </ul>
           </div>
 
-          {COLUMNS.map((col) => (
-            <nav key={col.heading} aria-labelledby={`footer-${col.heading}`}>
+          {columns(locale).map((col) => (
+            <nav key={col.id} aria-labelledby={`footer-${col.id}`}>
               <h2
-                id={`footer-${col.heading}`}
+                id={`footer-${col.id}`}
                 className="text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-ink-muted"
               >
                 {col.heading}
@@ -134,8 +151,7 @@ export function SiteFooter() {
         </div>
 
         <p className="mt-14 border-t border-line pt-6 text-sm text-ink-muted">
-          © {new Date().getFullYear()} VATTI Malaysia. Kitchen hoods, hobs, built-in ovens,
-          dishwashers and water purifiers.
+          {f.tagline(new Date().getFullYear())}
         </p>
       </div>
     </footer>

@@ -422,13 +422,18 @@ CREATE TABLE blog_category (
 
 CREATE TABLE article (
   id                INTEGER PRIMARY KEY,
-  slug              TEXT NOT NULL UNIQUE,
+  -- Unique per language, not globally: a Chinese article keeps its English slug
+  -- (CLAUDE.md § Languages), so the pair is the identity. See the UNIQUEs below.
+  slug              TEXT NOT NULL,
   -- The canonical path, stored rather than derived. Several articles are also
   -- indexed at a ROOT path (/how-to-clean-white-spots-on-glass-stove-tops/ earns
   -- 976 clicks, the sectioned twin 398), so "one URL per article" is false on
   -- this site. This column is the one that resolves 200; every other variant is
   -- a row in `redirect`. No leading slash, no trailing slash.
-  path              TEXT NOT NULL UNIQUE,   -- 'tips-tricks/what-is-auto-clean'
+  -- Language-free: the /ms/ or /zh/ prefix is added from `lang` when the URL
+  -- is built. A Malay path carries the Malay section slug
+  -- ('panduan-membeli/hood-dapur'); see section_i18n.
+  path              TEXT NOT NULL,          -- 'tips-tricks/what-is-auto-clean'
   -- The URL prefix, and it is authoritative — see article_category for the 10
   -- posts WordPress files under a different category than their URL says.
   -- 'uncategorized' is one live legacy URL, not an editorial section.
@@ -450,17 +455,36 @@ CREATE TABLE article (
   -- flag so Phase 5 can find them; the rebuild emits schema for all of them.
   schema_disabled   INTEGER NOT NULL DEFAULT 0,
   is_published      INTEGER NOT NULL DEFAULT 1,
-  -- BCP 47 tag of the body. Every scraped post is English; the Malay hood
-  -- guides (refresh-articles-ms-2026-10.sql) are 'ms-MY'. The page sets it as `lang`
-  -- on the headline and body and as the schema's inLanguage. The site chrome
-  -- around them stays English, which is why <html lang> does not change.
-  lang              TEXT NOT NULL DEFAULT 'en-MY',
+  -- The edition this row belongs to: en-MY, ms-MY or zh-MY (src/i18n/config.ts
+  -- TAG). Decides the URL prefix, <html lang>, hreflang and inLanguage.
+  lang              TEXT NOT NULL DEFAULT 'en-MY' CHECK (lang IN ('en-MY','ms-MY','zh-MY')),
+  -- Groups the editions of one piece, for hreflang and the language switcher.
+  -- NULL on an article with no translation yet; the English path's leaf is the
+  -- convention for the key ('hood-dapur' is the exception, born Malay).
+  translation_key   TEXT,
   -- Overrides image.alt for this article's hero. The Malay guides reuse their
   -- English cousins' pictures, whose alt is English; the image row is shared,
   -- so the Malay alt lives here rather than on it. NULL means use image.alt.
-  featured_image_alt TEXT
+  featured_image_alt TEXT,
+  UNIQUE (lang, slug),
+  UNIQUE (lang, path),
+  -- One edition per language per piece.
+  UNIQUE (translation_key, lang)
 );
 CREATE INDEX article_section_idx ON article(section, published_at DESC);
+
+-- What a blog section is called, and its URL segment, in Malay and Chinese.
+-- English needs no rows: its segment is the section id and its name is
+-- blog_category.name. Chinese keeps the English segment (CLAUDE.md § Languages)
+-- and only translates the name.
+CREATE TABLE section_i18n (
+  section TEXT NOT NULL,   -- article.section
+  lang    TEXT NOT NULL CHECK (lang IN ('ms-MY','zh-MY')),
+  slug    TEXT NOT NULL,   -- URL segment: 'panduan-membeli'
+  name    TEXT NOT NULL,   -- 'Panduan Membeli'
+  PRIMARY KEY (section, lang),
+  UNIQUE (lang, slug)
+);
 
 -- Many-to-many, because the URL section and the editorial category disagree on
 -- 10 posts. is_primary always follows the URL — see CLAUDE.md, the URL wins.

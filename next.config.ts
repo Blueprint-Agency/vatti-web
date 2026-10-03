@@ -17,6 +17,11 @@ const nextConfig: NextConfig = {
   // root, which breaks output file tracing.
   outputFileTracingRoot: import.meta.dirname,
 
+  // Each edition (en, ms, zh) has its own root layout so <html lang> is right,
+  // which leaves no single layout for an unmatched URL's 404. This flag lets
+  // src/app/global-not-found.tsx draw it. See src/components/RootDocument.tsx.
+  experimental: { globalNotFound: true },
+
   // Do NOT set output: 'export' — it disables route handlers, and the two form
   // endpoints need them. Every page here is statically generated regardless.
 

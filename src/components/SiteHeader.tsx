@@ -2,7 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { LOCALES, NATIVE_NAME, TAG, t, type Locale } from "@/i18n";
+import { archiveHref, categoryHref, homeHref, sectionLabel, staticHref } from "@/lib/routes";
 import { CATALOGUE, LOGO_URL } from "@/lib/site";
+
+import type { Editions } from "@/lib/alternates";
+export type { Editions };
 
 /**
  * Primary menu, item for item: Home · Products ▾ · Store Locations ·
@@ -17,24 +22,17 @@ import { CATALOGUE, LOGO_URL } from "@/lib/site";
  * keyboard, and on mobile the whole menu is a native <details> drawer with the
  * groups flattened into headed sections. No client component, no JS bundle.
  */
-const CATEGORIES = [
-  { href: "/kitchen-hood-in-malaysia/", label: "Kitchen Hood" },
-  { href: "/cooker-hob-in-malaysia/", label: "Cooker Hob" },
-  { href: "/combi-and-steam-oven-in-malaysia/", label: "Combi Oven" },
-  { href: "/dishwasher-in-malaysia/", label: "Dishwasher" },
-  { href: "/one-tap-purifier-in-malaysia/", label: "One Tap Water Purifier" },
+const CATEGORY_SLUGS = [
+  "kitchen-hood-in-malaysia",
+  "cooker-hob-in-malaysia",
+  "combi-and-steam-oven-in-malaysia",
+  "dishwasher-in-malaysia",
+  "one-tap-purifier-in-malaysia",
 ];
 
-const BLOG = [
-  { href: "/category/buying-guide/", label: "Buying Guide" },
-  { href: "/category/tips-tricks/", label: "Tips & Tricks" },
-  { href: "/category/recipe/", label: "Recipe" },
-];
+const BLOG_SECTIONS = ["buying-guide", "tips-tricks", "recipe"];
 
-const STORE_LOCATIONS = { href: "/store-locations/", label: "Store Locations" };
-const ABOUT_VATTI = { href: "/about-us/", label: "About VATTI" };
-const EWARRANTY = { href: "/vatti-ewarranty/", label: "eWarranty" };
-const CONTACT_US = { href: "/contact-us/", label: "Contact Us" };
+type Item = { href: string; label: string };
 
 const ITEM = "text-ink-muted transition-colors hover:text-ink";
 
@@ -50,7 +48,7 @@ function Chevron() {
   );
 }
 
-function Dropdown({ label, items }: { label: string; items: typeof CATEGORIES }) {
+function Dropdown({ label, items }: { label: string; items: Item[] }) {
   return (
     <li className="group relative">
       {/* Not a <button>: nothing to press — the panel opens on hover and on
@@ -81,7 +79,7 @@ function Dropdown({ label, items }: { label: string; items: typeof CATEGORIES })
   );
 }
 
-function Section({ label, items }: { label: string; items: typeof CATEGORIES }) {
+function Section({ label, items }: { label: string; items: Item[] }) {
   return (
     <>
       <li className="pt-4 text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-ink-muted first:pt-0">
@@ -98,17 +96,84 @@ function Section({ label, items }: { label: string; items: typeof CATEGORIES }) 
   );
 }
 
-export function SiteHeader() {
+/**
+ * The editions this page exists in, each named in its own language. Plain links
+ * with hrefLang, no script: changing language is a navigation to another root
+ * layout anyway. Renders nothing on a page with a single edition.
+ */
+function LanguageSwitch({
+  locale,
+  editions,
+  className = "",
+}: {
+  locale: Locale;
+  editions?: Editions;
+  className?: string;
+}) {
+  const shown = LOCALES.filter((l) => editions?.[l]);
+  if (shown.length < 2) return null;
+  return (
+    <nav aria-label={t(locale).nav.language} className={className}>
+      <ul className="flex items-center gap-1 text-xs">
+        {shown.map((l) => (
+          <li key={l}>
+            {l === locale ? (
+              <span
+                lang={TAG[l]}
+                aria-current="true"
+                className="block rounded-sm border border-line-strong px-2 py-1 text-ink"
+              >
+                {NATIVE_NAME[l]}
+              </span>
+            ) : (
+              <a
+                href={editions![l]}
+                hrefLang={TAG[l]}
+                lang={TAG[l]}
+                className="block rounded-sm border border-transparent px-2 py-1 text-ink-muted transition-colors hover:text-ink"
+              >
+                {NATIVE_NAME[l]}
+              </a>
+            )}
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}
+
+export function SiteHeader({
+  locale = "en",
+  editions,
+}: {
+  locale?: Locale;
+  editions?: Editions;
+} = {}) {
+  const nav = t(locale).nav;
+  const CATEGORIES = CATEGORY_SLUGS.map((slug) => ({
+    href: categoryHref(locale, slug),
+    label: nav.categories[slug],
+  }));
+  const BLOG = BLOG_SECTIONS.map((section) => ({
+    href: archiveHref(locale, section),
+    label: sectionLabel(locale, section),
+  }));
+  const STORE_LOCATIONS = { href: staticHref(locale, "store-locations"), label: nav.storeLocations };
+  const ABOUT_VATTI = { href: staticHref(locale, "about-us"), label: nav.aboutVatti };
+  const EWARRANTY = { href: staticHref(locale, "vatti-ewarranty"), label: nav.ewarranty };
+  const CONTACT_US = { href: staticHref(locale, "contact-us"), label: nav.contactUs };
+  const home = homeHref(locale);
+
   return (
     <header className="sticky top-0 z-[var(--z-sticky)] border-b border-line bg-void/92 backdrop-blur-sm">
       {/* gap-3 below sm: the wordmark, the ground selector and the menu button
           are all fixed-width, so on a 360px Android — common here — gap-6
           between the last two is what tips the row into overflowing. */}
       <div className="mx-auto flex max-w-6xl items-center gap-3 px-5 py-3.5 sm:gap-6 sm:px-8">
-        <Link href="/" className="shrink-0 transition-opacity hover:opacity-80">
+        <Link href={home} className="shrink-0 transition-opacity hover:opacity-80">
           <Image
             src={LOGO_URL}
-            alt="VATTI Malaysia"
+            alt={nav.logoAlt}
             width={1136}
             height={466}
             priority
@@ -119,11 +184,11 @@ export function SiteHeader() {
         <nav aria-label="Main" className="ml-auto hidden lg:block">
           <ul className="flex items-center gap-6 text-sm">
             <li>
-              <Link href="/" className={ITEM}>
-                Home
+              <Link href={home} className={ITEM}>
+                {nav.home}
               </Link>
             </li>
-            <Dropdown label="Products" items={CATEGORIES} />
+            <Dropdown label={nav.products} items={CATEGORIES} />
             <li>
               <Link href={STORE_LOCATIONS.href} className={ITEM}>
                 {STORE_LOCATIONS.label}
@@ -134,7 +199,7 @@ export function SiteHeader() {
                 {ABOUT_VATTI.label}
               </Link>
             </li>
-            <Dropdown label="Blog" items={BLOG} />
+            <Dropdown label={nav.blog} items={BLOG} />
             <li>
               <Link href={EWARRANTY.href} className={ITEM}>
                 {EWARRANTY.label}
@@ -147,7 +212,7 @@ export function SiteHeader() {
             </li>
             <li>
               <a href={CATALOGUE} target="_blank" rel="noopener" className={ITEM}>
-                Catalog
+                {nav.catalog}
               </a>
             </li>
           </ul>
@@ -156,11 +221,13 @@ export function SiteHeader() {
         {/* Between the nav and the menu button in the DOM, which puts it on the
             right on both layouts: on desktop the nav already carries ml-auto,
             on mobile the nav is gone and the switch takes it. */}
-        <ThemeToggle className="ml-auto lg:ml-0" />
+        <LanguageSwitch locale={locale} editions={editions} className="ml-auto lg:ml-0" />
+
+        <ThemeToggle className={editions && Object.keys(editions).length > 1 ? "" : "ml-auto lg:ml-0"} />
 
         <details className="group lg:hidden">
           <summary className="flex cursor-pointer list-none items-center gap-2 rounded-sm border border-line-strong px-3.5 py-2 text-sm font-medium text-ink [&::-webkit-details-marker]:hidden">
-            Menu
+            {nav.menu}
             <Chevron />
           </summary>
           {/* The sticky <header> is a positioned ancestor, so top-full is its
@@ -171,11 +238,11 @@ export function SiteHeader() {
           >
             <ul className="mx-auto max-w-6xl">
               <li>
-                <Link href="/" className="block py-1.5 text-ink">
-                  Home
+                <Link href={home} className="block py-1.5 text-ink">
+                  {nav.home}
                 </Link>
               </li>
-              <Section label="Products" items={CATEGORIES} />
+              <Section label={nav.products} items={CATEGORIES} />
               <li>
                 <Link href={STORE_LOCATIONS.href} className="block py-1.5 pl-3 text-ink">
                   {STORE_LOCATIONS.label}
@@ -186,7 +253,7 @@ export function SiteHeader() {
                   {ABOUT_VATTI.label}
                 </Link>
               </li>
-              <Section label="Blog" items={BLOG} />
+              <Section label={nav.blog} items={BLOG} />
               <li>
                 <Link href={EWARRANTY.href} className="block py-1.5 pl-3 text-ink">
                   {EWARRANTY.label}
@@ -204,7 +271,7 @@ export function SiteHeader() {
                   rel="noopener"
                   className="block py-1.5 pl-3 text-ink"
                 >
-                  Catalog
+                  {nav.catalog}
                 </a>
               </li>
             </ul>

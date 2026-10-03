@@ -104,15 +104,35 @@ check("category content for a category with no products", `
      AND ((SELECT count(*) FROM category_guide g WHERE g.category_id = c.id) > 0
        OR (SELECT count(*) FROM category_faq f WHERE f.category_id = c.id) > 0)`);
 
-check("duplicate article slugs", `
-  SELECT slug, count(*) n FROM article GROUP BY slug HAVING n > 1`);
+// Per edition: a Chinese article keeps its English slug and path, so the pair
+// (lang, slug) is the identity. The schema's UNIQUEs enforce it too; this names
+// the offender when a rebuild fails on them.
+check("duplicate article slugs within an edition", `
+  SELECT lang, slug, count(*) n FROM article GROUP BY lang, slug HAVING n > 1`);
 
-check("duplicate article paths", `
-  SELECT path, count(*) n FROM article GROUP BY path HAVING n > 1`);
+check("duplicate article paths within an edition", `
+  SELECT lang, path, count(*) n FROM article GROUP BY lang, path HAVING n > 1`);
 
-// path is the URL that must resolve 200; section is what the route matches on.
+// path is the URL that must resolve 200 (with the /ms/ or /zh/ prefix added
+// from lang); its first segment is the section's segment in that edition:
+// the section id in English, section_i18n.slug in Malay and Chinese.
 check("article path not under its section", `
-  SELECT slug, section, path FROM article WHERE path <> section || '/' || slug`);
+  SELECT a.lang, a.slug, a.section, a.path FROM article a
+    LEFT JOIN section_i18n si ON si.section = a.section AND si.lang = a.lang
+   WHERE a.path <> (CASE WHEN a.lang = 'en-MY' THEN a.section ELSE si.slug END) || '/' || a.slug
+      OR (a.lang <> 'en-MY' AND si.slug IS NULL)`);
+
+check("non-English article in a section with no translated name", `
+  SELECT a.lang, a.path FROM article a
+    LEFT JOIN section_i18n si ON si.section = a.section AND si.lang = a.lang
+   WHERE a.lang <> 'en-MY' AND si.section IS NULL`);
+
+// The editions of one piece are one piece: same section, so the archive, the
+// breadcrumb and hreflang all agree on where it lives.
+check("translation set split across sections", `
+  SELECT translation_key, count(DISTINCT section) n FROM article
+   WHERE translation_key IS NOT NULL
+   GROUP BY translation_key HAVING n > 1`);
 
 check("articles with no primary category", `
   SELECT a.slug FROM article a
@@ -196,14 +216,31 @@ check("slug collisions across the root namespace", `
 // a 404 inside an FAQ answer is invisible until somebody clicks it. Checked
 // here rather than by the crawler because the crawler needs a built site.
 {
+  // Every path that builds, without surrounding slashes, in every edition.
+  const prefixOf = { "en-MY": "", "ms-MY": "ms/", "zh-MY": "zh/" };
   const paths = new Set([
     ...db.prepare("SELECT slug FROM product WHERE is_published = 1").all().map((r) => r.slug),
     ...db.prepare("SELECT slug FROM product_category").all().map((r) => r.slug),
-    ...db.prepare("SELECT path FROM article WHERE is_published = 1").all().map((r) => r.path),
+    ...db
+      .prepare("SELECT lang, path FROM article WHERE is_published = 1")
+      .all()
+      .map((r) => prefixOf[r.lang] + r.path),
     ...db.prepare("SELECT path FROM store").all().map((r) => r.path),
-    ...db.prepare("SELECT from_path FROM redirect").all().map((r) => r.from_path),
+    // from_path is stored with both slashes ('/oven/'); strip them like the
+    // links below. Until 2026-10-03 this line added '/oven/' as-is, so no
+    // link ever matched a redirect and the branch was dead.
+    ...db.prepare("SELECT from_path FROM redirect").all().map((r) => r.from_path.replace(/^\/|\/$/g, "")),
+    // Blog archives (page 1), English and translated.
+    ...db.prepare("SELECT slug FROM blog_category").all().map((r) => `category/${r.slug}`),
+    ...db
+      .prepare(
+        `SELECT DISTINCT si.lang, si.slug FROM section_i18n si
+           JOIN article a ON a.section = si.section AND a.lang = si.lang AND a.is_published = 1`
+      )
+      .all()
+      .map((r) => `${prefixOf[r.lang]}category/${r.slug}`),
     // Static routes, which have no table.
-    "about-us", "contact-us", "store-locations", "vatti-ewarranty", "vatti-pay",
+    "about-us", "contact-us", "store-locations", "vatti-ewarranty", "vatti-pay", "instruction-manual",
   ]);
   const broken = [];
   const rows = [
@@ -213,6 +250,11 @@ check("slug collisions across the root namespace", `
     // Product FAQ answers send readers to the model that IS the right answer
     // when this one is not, so they carry internal links like the copy above.
     ...db.prepare("SELECT product_id, question AS ctx, answer_md AS md FROM product_faq").all(),
+    // Translated articles are written by hand rather than imported, so they
+    // have no article_link rows; their bodies are checked here instead.
+    ...db
+      .prepare("SELECT lang || ' ' || path AS ctx, body_md AS md FROM article WHERE lang <> 'en-MY'")
+      .all(),
   ];
   for (const row of rows) {
     for (const m of row.md.matchAll(/\]\((\/[^)\s]*)\)/g)) {

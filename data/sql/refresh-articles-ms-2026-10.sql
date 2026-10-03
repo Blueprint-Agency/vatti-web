@@ -8,9 +8,13 @@
 -- blogs (Mitra10, Tokopedia, Shopee Indonesia). Indonesian pages ranking for a
 -- Malaysian query is what a thin field looks like.
 --
--- These are new pieces in Malay, not translations of the English posts, so
--- there is no hreflang pairing to declare: hreflang joins equivalent pages, and
--- neither of these has one. Each links its nearest English cousin at the end.
+-- Born in Malay. Their English and Chinese editions are written to the same
+-- outline and share the translation_key, so the three form an hreflang set.
+-- Each also links its nearest existing English cousin at the end.
+--
+-- Moved under /ms/ the same day they shipped (multilingual rollout, Phase 1):
+-- /buying-guide/hood-dapur/ -> /ms/panduan-membeli/hood-dapur/, and likewise
+-- for the ductless guide. Both old paths 301 (bottom of this file).
 --
 -- Written in Malaysian Malay, not Indonesian: dapur gas, not kompor; penyedut,
 -- not penghisap; kuali, not wajan. Model figures are product_facet and the
@@ -24,13 +28,13 @@
 -- the English cousins' pictures (568, 399), already on R2. word_count and
 -- reading_minutes are measured off body_md (200 words a minute, rounded up).
 --
--- Named refresh-articles-ms so it sorts after refresh-articles-2026-09.sql:
--- the cross-links at the bottom edit English bodies that file rewrites, and
--- an edit made before it would be overwritten. (articles.sql is pinned first
--- in db-build.mjs ORDER, so the inserts are safe either way.)
+-- Named refresh-articles-ms so it sorts after refresh-articles-2026-09.sql.
+-- It used to append "Also in Malay" lines to three English bodies that file
+-- rewrites; hreflang and the language switcher replaced those, but the name
+-- stays so nothing about load order changes.
 
-INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published, lang)
-VALUES (108, 'hood-dapur-tanpa-tebuk-dinding', 'buying-guide/hood-dapur-tanpa-tebuk-dinding', 'buying-guide',
+INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published, lang, translation_key)
+VALUES (108, 'hood-dapur-tanpa-tebuk-dinding', 'panduan-membeli/hood-dapur-tanpa-tebuk-dinding', 'buying-guide',
 'Hood Dapur Tanpa Tebuk Dinding: Berbaloi atau Tidak?',
 'Hood Dapur Tanpa Tebuk Dinding: Berbaloi atau Tidak?',
 'Hood dapur tanpa tebuk dinding sesuai untuk kondo dan rumah sewa. Ketahui cara ia berfungsi, hadnya untuk masakan kuali, dan hood VATTI yang boleh dipasang begini.',
@@ -126,18 +130,18 @@ Hood kitar semula, tanpa ragu. Ia menangkap minyak sebelum melekat di kabinet da
 
 Hood dapur tanpa tebuk dinding bukan pengganti penuh untuk hood bersaluran, tetapi ia penyelesaian yang praktikal untuk dapur yang tidak boleh ditebuk. Jaga penapis karbonnya, dan pilih hood yang menangkap minyak dengan baik dan tidak bising. Jika anda tidak pasti sama ada dapur anda boleh disalurkan, hantar gambar dapur anda kepada kami di WhatsApp.
 
-Untuk panduan dalam Bahasa Inggeris, baca [ducted or ductless range hood](/buying-guide/which-is-better-ducted-or-ductless-range-hood/) dan [kitchen hood without vent](/tips-tricks/kitchen-hood-without-vent/). Panduan lengkap memilih hood ada di [hood dapur: panduan lengkap](/buying-guide/hood-dapur/).
+Untuk panduan dalam Bahasa Inggeris, baca [ducted or ductless range hood](/buying-guide/which-is-better-ducted-or-ductless-range-hood/) dan [kitchen hood without vent](/tips-tricks/kitchen-hood-without-vent/). Panduan lengkap memilih hood ada di [hood dapur: panduan lengkap](/ms/panduan-membeli/hood-dapur/).
 
 [Lihat hood dapur VATTI](/kitchen-hood-in-malaysia/)
-', 960, 5, 'Vatti Malaysia', 568, '2026-10-03T12:00:00+08:00', '2026-10-03T12:00:00+08:00', 0, 1, 'ms-MY');
+', 960, 5, 'Vatti Malaysia', 568, '2026-10-03T12:00:00+08:00', '2026-10-03T12:00:00+08:00', 0, 1, 'ms-MY', 'hood-dapur-tanpa-tebuk-dinding');
 INSERT INTO article_category (article_id, category_id, is_primary) VALUES (108, (SELECT id FROM blog_category WHERE slug = 'buying-guide'), 1);
 -- Image 568 is shared with the English post, whose alt is English.
 UPDATE article SET featured_image_alt =
   'Hood dapur nipis di bawah kabinet dinding, dengan penapis jaring logam dan lampu yang menyala.'
   WHERE id = 108;
 
-INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published, lang)
-VALUES (109, 'hood-dapur', 'buying-guide/hood-dapur', 'buying-guide',
+INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published, lang, translation_key)
+VALUES (109, 'hood-dapur', 'panduan-membeli/hood-dapur', 'buying-guide',
 'Hood Dapur: Panduan Lengkap Memilih Hood untuk Dapur Malaysia',
 'Hood Dapur: Panduan Lengkap Memilih Hood untuk Dapur Malaysia',
 'Cara memilih hood dapur untuk masakan Malaysia: jenis hood, aliran udara, tekanan statik, tahap bunyi, bersaluran atau tanpa tebuk dinding, dan cara menjaganya.',
@@ -186,7 +190,7 @@ Hood yang terlalu bising akan dimatikan terlalu awal, dan asap yang tinggal akan
 
 Hood bersaluran menolak asap ke luar rumah dan membuang asap, bau, haba serta kelembapan. Hood tanpa tebuk dinding (kitar semula) menapis udara dan mengembalikannya ke dapur. Ia menangkap minyak dan mengurangkan bau, tetapi haba dan wap kekal.
 
-Pilih bersaluran jika bangunan membenarkannya. Jika tidak, 13 model VATTI boleh berfungsi dalam kedua-dua mod. Baca [hood dapur tanpa tebuk dinding](/buying-guide/hood-dapur-tanpa-tebuk-dinding/) untuk penjelasan penuh.
+Pilih bersaluran jika bangunan membenarkannya. Jika tidak, 13 model VATTI boleh berfungsi dalam kedua-dua mod. Baca [hood dapur tanpa tebuk dinding](/ms/panduan-membeli/hood-dapur-tanpa-tebuk-dinding/) untuk penjelasan penuh.
 
 ## Tapisan minyak dan pembersihan
 
@@ -225,34 +229,14 @@ Hood dapur yang betul untuk rumah Malaysia bukan sekadar yang paling kuat di ata
 Untuk panduan dalam Bahasa Inggeris, baca [3 types of range hoods](/buying-guide/types-of-range-hoods/).
 
 [Bandingkan hood dapur VATTI](/kitchen-hood-in-malaysia/)
-', 943, 5, 'Vatti Malaysia', 399, '2026-10-03T12:00:00+08:00', '2026-10-03T12:00:00+08:00', 0, 1, 'ms-MY');
+', 943, 5, 'Vatti Malaysia', 399, '2026-10-03T12:00:00+08:00', '2026-10-03T12:00:00+08:00', 0, 1, 'ms-MY', 'hood-dapur');
 INSERT INTO article_category (article_id, category_id, is_primary) VALUES (109, (SELECT id FROM blog_category WHERE slug = 'buying-guide'), 1);
 UPDATE article SET featured_image_alt =
   'Hood dapur VATTI berpanel kaca hitam dengan cerobong, di atas hob kaca dalam dapur berkabinet gelap.'
   WHERE id = 109;
 
--- ── pointers from the English cousins ──────────────────────────────────────
--- So the two pages are reachable from articles that already rank. One line in
--- English above each closing CTA, which stays the last line because a
--- standalone link renders as a button. replace() is a no-op if the CTA wording
--- ever changes; db-check would not notice, so look here if the pointer goes.
-UPDATE article SET body_md = replace(body_md,
-  '[Explore VATTI Kitchen Hood](/kitchen-hood-in-malaysia/)',
-  'Also in Malay: [hood dapur tanpa tebuk dinding](/buying-guide/hood-dapur-tanpa-tebuk-dinding/).
-
-[Explore VATTI Kitchen Hood](/kitchen-hood-in-malaysia/)')
-WHERE path = 'tips-tricks/kitchen-hood-without-vent';
-
-UPDATE article SET body_md = replace(body_md,
-  '[Explore VATTI Kitchen Hood Malaysia](/kitchen-hood-in-malaysia/)',
-  'Also in Malay: [hood dapur tanpa tebuk dinding](/buying-guide/hood-dapur-tanpa-tebuk-dinding/).
-
-[Explore VATTI Kitchen Hood Malaysia](/kitchen-hood-in-malaysia/)')
-WHERE path = 'buying-guide/which-is-better-ducted-or-ductless-range-hood';
-
-UPDATE article SET body_md = replace(body_md,
-  '[Discover more kitchen hood](/kitchen-hood-in-malaysia/)',
-  'Also in Malay: [hood dapur, panduan lengkap](/buying-guide/hood-dapur/).
-
-[Discover more kitchen hood](/kitchen-hood-in-malaysia/)')
-WHERE path = 'buying-guide/types-of-range-hoods';
+-- ── the move under /ms/ ─────────────────────────────────────────────────────
+-- Shipped at the unprefixed paths on 2026-10-03 and moved the same day.
+INSERT INTO redirect (from_path, to_path, code) VALUES
+  ('/buying-guide/hood-dapur/', '/ms/panduan-membeli/hood-dapur/', 301),
+  ('/buying-guide/hood-dapur-tanpa-tebuk-dinding/', '/ms/panduan-membeli/hood-dapur-tanpa-tebuk-dinding/', 301);

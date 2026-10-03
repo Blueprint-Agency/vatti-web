@@ -3,15 +3,29 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
 
 import { SiteFooter } from "@/components/SiteFooter";
+import { OG_LOCALE, TAG, t, type Locale } from "@/i18n";
 import { cdn } from "@/lib/cdn";
 import { SITE_ORIGIN, isLiveSite } from "@/lib/deployment";
-import "./globals.css";
+
+/**
+ * The <html> document every page is drawn in, shared by the three root layouts:
+ * src/app/(en)/layout.tsx, (ms)/ms/layout.tsx and (zh)/zh/layout.tsx.
+ *
+ * Three root layouts rather than one because <html lang> belongs on <html>, and
+ * a root layout cannot see the URL to choose it. Each edition's layout passes
+ * its own locale; everything else about the document is this one component, so
+ * the three cannot drift. Moving between editions crosses root layouts, which
+ * Next makes a full page load; for a language switch that is fine.
+ */
 
 // Geist carries display, UI and body. It replaced Archivo, whose case rested on
 // a width axis this site never once used; what matters here instead is that the
 // mono below is the same design. The readouts sit beside sans labels everywhere
 // on the site, and drawn on one skeleton they read as one system rather than
 // two families agreeing to share a page.
+//
+// Latin subset only. Chinese falls through to the CJK system fonts named in
+// globals.css under :lang(zh); shipping a CJK webfont would cost megabytes.
 const geist = Geist({
   subsets: ["latin"],
   display: "swap",
@@ -66,70 +80,60 @@ const GROUND_BOOT = `try{var g=localStorage.getItem("vatti-theme");if(g==="light
 const GTM_ID = "GTM-TWBK2JSG";
 const gtmEnabled = isLiveSite;
 
-export const metadata: Metadata = {
-  metadataBase: new URL(SITE_ORIGIN),
-  title: {
-    default: "VATTI Malaysia | Kitchen Hoods, Hobs & Built-in Ovens",
-    template: "%s | VATTI Malaysia",
-  },
-  description:
-    "Built-in kitchen appliances engineered for high-heat Asian cooking. Available through 75 authorised dealers across Malaysia.",
+/** Each root layout exports `metadata = rootMetadata(locale)`. */
+export function rootMetadata(locale: Locale): Metadata {
+  const d = t(locale).doc;
+  return {
+    metadataBase: new URL(SITE_ORIGIN),
+    title: { default: d.titleDefault, template: d.titleTemplate },
+    description: d.description,
 
-  /**
-   * Share-card defaults for every page that does not state its own. Product and
-   * article pages override title, description and image with their own; the
-   * static pages, the blog archives and the home page inherit all of this.
-   *
-   * It lives here rather than being pasted into nine files because the parts
-   * that vary per page — the title and the description — are the two Next
-   * already fills in from each page's own `title` and `description`. What is
-   * left is genuinely site-wide.
-   *
-   * No `url` key on purpose: og:url must be the page's own, and a value here
-   * would put the home page's URL on all of them. `alternates.canonical` on
-   * each page is the address of record.
-   *
-   * The image is a 1200x630 crop of the V929 hero — the ratio Facebook,
-   * WhatsApp and LinkedIn all render without cropping, which matters on a site
-   * whose every conversion path ends in a WhatsApp message.
-   */
-  openGraph: {
-    type: "website",
-    siteName: "VATTI Malaysia",
-    locale: "en_MY",
-    images: [
-      {
-        url: cdn("2026/09/vatti-og-default.webp"),
-        width: 1200,
-        height: 630,
-        alt: "VATTI cooker hood with a lit control panel, installed in a kitchen",
-      },
-    ],
-  },
-  twitter: { card: "summary_large_image" },
+    /**
+     * Share-card defaults for every page that does not state its own. Product and
+     * article pages override title, description and image with their own; the
+     * static pages, the blog archives and the home page inherit all of this.
+     *
+     * No `url` key on purpose: og:url must be the page's own, and a value here
+     * would put the home page's URL on all of them. `alternates.canonical` on
+     * each page is the address of record.
+     *
+     * The image is a 1200x630 crop of the V929 hero — the ratio Facebook,
+     * WhatsApp and LinkedIn all render without cropping, which matters on a site
+     * whose every conversion path ends in a WhatsApp message.
+     */
+    openGraph: {
+      type: "website",
+      siteName: "VATTI Malaysia",
+      locale: OG_LOCALE[locale],
+      images: [
+        { url: cdn("2026/09/vatti-og-default.webp"), width: 1200, height: 630, alt: d.ogImageAlt },
+      ],
+    },
+    twitter: { card: "summary_large_image" },
 
-  // Search Console ownership. The meta-tag method is worth having even though
-  // the domain is also verifiable by DNS TXT, because it travels with the
-  // deployment rather than the registrar.
-  //
-  // The token is in code, not only in the environment: it is printed in every
-  // page's HTML, so it is no secret, and the env-only version shipped with the
-  // variable never set on Vercel, which is how the agency's account sat as
-  // siteUnverifiedUser. Claimed 2026-10-03 for https://vattimalaysia.com/ (URL
-  // prefix, HTML tag). GOOGLE_SITE_VERIFICATION still overrides it. Do not
-  // remove the tag once verified: Google re-checks, and the account drops back
-  // to unverified when the tag disappears.
-  verification: {
-    google: process.env.GOOGLE_SITE_VERIFICATION || "gmTGGmarVz1xW4GfC6zQbq5jSa_GjwOHsv-vHHQXXc8",
-  },
-};
+    // Search Console ownership. The meta-tag method is worth having even though
+    // the domain is also verifiable by DNS TXT, because it travels with the
+    // deployment rather than the registrar.
+    //
+    // The token is in code, not only in the environment: it is printed in every
+    // page's HTML, so it is no secret, and the env-only version shipped with the
+    // variable never set on Vercel, which is how the agency's account sat as
+    // siteUnverifiedUser. Claimed 2026-10-03 for https://vattimalaysia.com/ (URL
+    // prefix, HTML tag). GOOGLE_SITE_VERIFICATION still overrides it. Do not
+    // remove the tag once verified: Google re-checks, and the account drops back
+    // to unverified when the tag disappears. Every edition carries it.
+    verification: {
+      google: process.env.GOOGLE_SITE_VERIFICATION || "gmTGGmarVz1xW4GfC6zQbq5jSa_GjwOHsv-vHHQXXc8",
+    },
+  };
+}
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export function RootDocument({ locale, children }: { locale: Locale; children: React.ReactNode }) {
   return (
     // suppressHydrationWarning: the boot script below rewrites data-theme on
     // this element before React sees it. It is scoped to this one tag.
     <html
-      lang="en-MY"
+      lang={TAG[locale]}
       data-theme="dark"
       suppressHydrationWarning
       className={`${geist.variable} ${geistMono.variable}`}
@@ -152,10 +156,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[var(--z-toast)] focus:rounded-sm focus:bg-teal focus:px-4 focus:py-2 focus:font-semibold focus:text-void"
         >
-          Skip to content
+          {t(locale).doc.skipToContent}
         </a>
         {children}
-        <SiteFooter />
+        <SiteFooter locale={locale} />
       </body>
     </html>
   );

@@ -75,6 +75,7 @@ pnpm db:check     # FK + orphan + duplicate-slug + redirect-loop assertions; run
 pnpm dev
 pnpm build
 pnpm urls:check <base-url>   # the launch gate — see below
+pnpm i18n:check <base-url>   # the language gate — see § Languages
 ```
 
 `urls:check` replays every URL in `research/url-inventory.json` against a running site and fails
@@ -83,6 +84,7 @@ if any of them does not end at a 200. Run it against a real server, not the sour
 ```bash
 pnpm build && pnpm start -p 3900     # or a preview deployment URL
 pnpm urls:check http://localhost:3900
+pnpm i18n:check http://localhost:3900
 ```
 
 There is no `links:check`. An earlier draft of this file and of `docs/REBUILD-PLAN.md` promised
@@ -90,6 +92,59 @@ one that "crawls the built output"; it was never written, and `urls:check` is th
 it checks the URLs the *old* site actually served, which is the thing the contract is about.
 Internal links are covered separately: `db:check` asserts that no hand-authored markdown links to
 a path that does not build.
+
+## Languages
+
+The site has three editions: English, Malay and Simplified Chinese. The plan and its rollout
+are in `docs/i18n.md`.
+
+- **URLs.**
+  - English keeps the bare URLs; the URL contract is untouched.
+  - Malay lives under `/ms/`, with **Malay slugs** for categories, articles and blog sections
+    (`/ms/panduan-membeli/hood-dapur/`).
+  - Chinese lives under `/zh/` and keeps the English slugs, because Chinese slugs
+    percent-encode into unreadable links when shared.
+  - Products, stores and static pages keep their English slug in every edition.
+  - Folder names never translate (`/ms/category/…`).
+- **Routing.**
+  - Three root layouts: `src/app/(en)/`, `(ms)/ms/`, `(zh)/zh/`. They exist because
+    `<html lang>` lives in the root layout and a root layout cannot see the URL. They share
+    `RootDocument`.
+  - The static `ms`/`zh` segment outranks the English `[slug]`. A dynamic `[locale]` cannot
+    work here: Next refuses two dynamic names at one level, even across route groups.
+  - Route files are thin wrappers. The pages are in `src/views/` and take a `locale`.
+  - An unmatched URL gets `src/app/global-not-found.tsx`, which needs
+    `experimental.globalNotFound`.
+- **Words.**
+  - Chrome strings live in `src/i18n/{en,ms,zh}.ts`. The other two files are typed against
+    `en.ts`, so a missing key fails `tsc`.
+  - English values are the original strings verbatim: moving a string into the dictionary
+    must not change an English page.
+  - Content lives in `data/sql` with a `lang` column (`en-MY`, `ms-MY`, `zh-MY`).
+- **Articles.**
+  - `article.path` is language-free; the prefix comes from `lang`.
+  - Slugs and paths are unique **per language**.
+  - `translation_key` groups the editions of one piece, for hreflang and the switcher.
+  - Blog section names and Malay segments are in `section_i18n`, and only there.
+- **Links.**
+  - Menu links go through `src/lib/routes.ts`: the edition's own page if it exists, else
+    English. A translated menu never links to a 404 mid-rollout.
+  - When you add a hand-written page in an edition, add the edition to the list there in the
+    same change.
+- **hreflang.**
+  - Built only from editions that exist (`src/lib/alternates.ts`), so a page never declares
+    a translation that 404s. The page head and the sitemap use the same function.
+  - `pnpm i18n:check` asserts that every sitemap URL is 200, that `<html lang>` matches the
+    edition, and that hreflang is reciprocal. It gates a push alongside `urls:check`.
+- **Translation is keyword-led, not literal.** Each translated page targets the term people
+  actually search in that language (Ubersuggest, Malaysia, `ms`/`zh`); where nothing
+  measures, it uses the term ranking competitors use. Record the choice in the keyword map
+  before writing.
+- **Not translated, on purpose.**
+  - Google reviews (customer quotes).
+  - Dealer, partner and warranty-dealer names, and addresses.
+  - Model codes and series names.
+  - `product_image.caption_md`, which renders nowhere.
 
 ## Conventions
 
