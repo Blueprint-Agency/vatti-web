@@ -80,6 +80,20 @@ UPDATE product_category SET
     'Two dishwashers sized for a large household, at 17 and 20 place settings. Both wash at 75°C to lift cooking oil, sterilise with UVC, and keep a finished load dry for up to seven days in a humid kitchen.'
   WHERE slug = 'dishwasher-in-malaysia';
 
+-- ── the oven page's meta description and hero intro ────────────────────────
+-- Content schedule Q4, item 2; docs/competitor-gap-combi-oven.md. The old
+-- description ("master steam, bake and roast in one built-in oven") is a line
+-- every page in the SERP could print, and the old intro ("a variety of combi
+-- ovens and steam ovens") described a range that has since lost its steam-only
+-- oven. Both now lead on steam set for local cooking. The intro says "home
+-- kitchen" because three of the top ten results are restaurant combi ovens.
+UPDATE product_category SET
+  meta_description =
+    'VATTI combi and steam ovens in Malaysia: 70L built-in ovens that steam, bake and air fry in one cavity, with steam rice, porridge and three steam levels.',
+  intro_md =
+    'Built-in ovens for a home kitchen that steams as often as it bakes. Three full-size ovens that air fry, two of them combis with three steam levels and modes for rice and porridge, and a 25L built-in microwave.'
+  WHERE slug = 'combi-and-steam-oven-in-malaysia';
+
 -- ── the model each category leads with ─────────────────────────────────────
 -- Editorial. V929 is the hood the live site fronts; the other four match the
 -- models the homepage promotes, so a visitor arriving from either page meets
@@ -737,17 +751,17 @@ UPDATE product SET best_for = CASE slug
 -- ═══════════════════════════════════════════════════════════════════════════
 -- COMBI AND STEAM OVEN
 -- ═══════════════════════════════════════════════════════════════════════════
--- Ten models, so this page renders every section the hood and hob pages do.
+-- Four published models since the 2026-08 retirements: O7559, VA05, VA06 and
+-- the M626 microwave. This page was written for ten, and six of them (VA01,
+-- VA03, VA04, Z4501, O755P, O7549) are retired in retired-products-2026-08.sql.
+-- The copy below was rewritten for the four on 2026-10-03; if the range
+-- changes again, check every model code named in it.
 --
--- No series taxonomy, on purpose. The live page filters on three terms
--- (built-in-air-fry-oven, built-in-microwave, built-in-combi-ovens) that cover
--- five of our ten models between them, and the five left over are two plain
--- built-in ovens, a free-standing combi and a steam oven — none of which any
--- of the three terms describes. Filing them would mean inventing terms rather
--- than adopting them. buildFilters already anticipates exactly this: with no
--- taxonomy it bands the primary measurement instead, and capacity is a better
--- browse axis for an oven than a series name anyway. The thirds land on 50L
--- and 70L, which are both real capacities off real spec sheets.
+-- No series taxonomy, on purpose. The live page filtered on three terms
+-- (built-in-air-fry-oven, built-in-microwave, built-in-combi-ovens) that did
+-- not cover the range it had then. buildFilters bands the primary measurement
+-- instead, and capacity is a better browse axis for an oven than a series name
+-- anyway.
 
 -- ── combi oven: cooking functions, as a measured facet ─────────────────────
 -- Same reasoning as the hob's burner count. Capacity is the only figure these
@@ -761,6 +775,8 @@ UPDATE product SET best_for = CASE slug
 -- not 9, because "Steam function" on its sheet carries no number and we do not
 -- get to invent one for it. VA01 and M626 print no count at all and are absent
 -- rather than estimated; the table shows them a dash, which is the honest cell.
+-- The rows for retired models are harmless (unpublished products render
+-- nowhere) and kept so a restored model comes back with its count.
 INSERT INTO product_facet (product_id, facet, value, unit, label, position, source_position)
 SELECT p.id, 'functions', m.value, '', 'Cooking functions', 1, m.source
   FROM product p
@@ -781,82 +797,92 @@ UPDATE product SET intro_md =
   WHERE slug = 'vatti-magic-series-combi-oven-va06' AND intro_md IS NULL;
 
 -- ── combi oven: how to choose ──────────────────────────────────────────────
+-- Rewritten 2026-10-03 for the four models on sale (content schedule Q4, item
+-- 2; brief in docs/competitor-gap-combi-oven.md). The earlier copy was written
+-- for ten and went on naming five retired ones: the VA01 as the freestanding
+-- option, the Z4501 as the steam-only model, the VA03 and the O755P for
+-- features only they had. The range is now the O7559 air-fryer oven, the VA05
+-- and VA06 combis and the M626 microwave.
+--
+-- Led by steam set to what a Malaysian kitchen steams: rice, fish, porridge,
+-- dough. No page in the top ten frames a combi that way, and the VA05 and VA06
+-- spec rows carry every mode it names. No price, energy or installation copy,
+-- by the client's decision (2026-10-03).
 INSERT INTO category_guide (category_id, position, heading, body_md, figure, figure_unit) VALUES
   ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 1,
-   'Size it to the household, not to the kitchen',
-   'Capacity here runs from 25L to 75L. Twenty-five litres suits a condo kitchen that mostly reheats; 70 to 75 litres is what a family baking and roasting for a full table needs. In practice the cabinet aperture decides it before the cooking does, so measure the opening first and choose inside what will fit.',
-   '25-75', 'L'),
+   'Steam is what a Malaysian kitchen asks of an oven',
+   'Most ovens are built around baking. Most home cooking here is steamed: rice, fish, buns, kuih, and yesterday''s dishes brought back without drying out. The VA05 and the VA06 steam at three levels, low, mid and high, and both have a steam rice mode. The VA06 adds a multi-dish steam mode and three stew modes, for porridge, meat and soup.',
+   '3', 'steam levels'),
 
   ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 2,
-   'Count the functions you will actually use',
-   'The published counts on this page run from 8 to 12. More is not automatically better: a second baking mode you never select is worth less than the steam stage that reheats rice without drying it out. Work out the three you would use in a week and buy for those.',
-   '8-12', 'functions'),
-
-  ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 3,
    'Convection, steam, or both at once',
-   'Convection circulates hot air for a crisp, evenly browned result. Steam holds moisture in, so food stays tender and keeps more of what is in it. A combi runs either, or the two together, which is what lets one cavity roast a chicken on Sunday and steam a fish on Monday.',
+   'Convection circulates hot air for a crisp, evenly browned result. Steam holds moisture in, so food stays tender. A combi runs either, or the two together: the VA06 steam-grills and steam-bakes, and the VA05 has two combination functions. That is what lets one cavity roast a chicken on Sunday and steam a fish on Monday.',
    NULL, NULL),
 
+  ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 3,
+   'Three full-size ovens and a microwave',
+   'The three ovens are 70 litres (the VA05 and VA06) and 75 litres (the O7559), room for a family''s roast and its sides together. The M626 is a 25L built-in microwave with a grill, for reheating and quick cooking rather than baking. There is no compact oven in the range, so measure the cabinet opening before choosing rather than after.',
+   '70-75', 'L'),
+
   ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 4,
-   'Built in, or standing free',
-   'Most of this range is built in and drops into a cabinet run at eye level, which is where an oven is easiest to load and safest to unload. The VA01 stands free on a countertop instead: the answer for a kitchen with no cabinetry to give up, and for a rented one.',
+   'An air fryer that is already in the wall',
+   'All three ovens air fry, using the fan and the element the oven already has to crisp food with little or no oil. The O7559 comes with its own air fry rack, the VA05 has an air-fryer function and the VA06 two air-fryer modes. If the household eats fried food and would rather it were not deep fried, that is one appliance off the counter.',
    NULL, NULL),
 
   ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 5,
-   'The air fryer question',
-   'The VA05 and the VA06 add an air-fry mode, using the fan and the element the oven already has to crisp food with little or no oil. If the household eats fried food and would rather it were not deep fried, it earns the step up. If not, it is a mode that will sit unused.',
-   NULL, NULL),
+   'Count the functions you will actually use',
+   'The ovens here print 9 to 12 cooking functions. More is not automatically better: a second baking mode you never select is worth less than the steam setting that reheats rice without drying it out. Work out the three you would use in a week and choose for those. The VA05 and VA06 also carry 68 auto-cooking menus for the days you would rather not decide.',
+   '9-12', 'functions'),
 
   ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 6,
-   'What it will ask of you',
-   'The steam side needs water in the tank to work, and it needs descaling every three to six months to keep working. Built-in units want a professional to fit them into the cabinetry. Looked after, expect eight to ten years.',
+   'What a steam oven asks of you',
+   'The steam side runs from a water tank, 1.3 litres on the VA06, so filling it is part of using it, and the steam system wants descaling on the schedule the manual gives, more often where the water is hard. In return the VA05 and VA06 clean themselves: a steam-clean cycle loosens what is on the walls, and a heat-dry cycle leaves the cavity dry rather than wet.',
    NULL, NULL);
 
 -- ── combi oven: why VATTI ──────────────────────────────────────────────────
--- Two of the six carry a figure and both are off the spec sheets: 68 menus on
--- the VA03, VA05 and VA06, and the A+ rating printed on all three built-in
--- ovens. figure is TEXT, which is what lets 'A+' sit in the same column as 68.
+-- Six, for the three-across grid, each naming the models it is true of.
+-- Figures from product_spec: three steam grades, 68 menus, three glass layers.
+-- The A+ reason went: only the O7559 still carries the rating it claimed for
+-- "all three built-in ovens".
 INSERT INTO category_reason (category_id, position, title, body_md, figure, figure_unit, icon) VALUES
   ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 1,
    'Convection and steam in one cavity',
-   'Hot air for a crisp exterior, controlled steam for a moist interior, and the two together where a dish needs both. That is one appliance, one opening in the cabinet run and one thing to clean, doing the work of two.',
+   'Hot air for a crisp exterior, controlled steam for a moist interior, and the two together where a dish needs both. On the VA05 and VA06 that is one appliance, one opening in the cabinet run and one thing to clean, doing the work of an oven and a steamer.',
    NULL, NULL, 'heat'),
 
   ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 2,
-   'Steam that is measured, not guessed',
-   'Humidity control sets how much moisture is in the cavity rather than injecting steam and hoping. The VA03 runs three grades of it, and dual temperature control holds the top and the bottom of the oven apart while it does.',
-   NULL, NULL, 'water'),
+   'Steam you set, not steam you hope for',
+   'Three steam levels on the VA05 and three grades of humidity on the VA06, so a delicate fish and a tray of buns get different amounts of it. Dual temperature control on both holds the top and the bottom of the oven apart while it does.',
+   '3', 'steam levels', 'water'),
 
   ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 3,
-   'Auto-clean, then a dry cycle',
-   'Intelligent auto-clean on the combi models, followed by spraying steam and drying so the cavity is not left wet. The VA03 lines its interior in blue ceramic coating, which grease does not key into in the first place.',
-   NULL, NULL, 'clean'),
+   'Rice, porridge and yogurt as well',
+   'Both combis steam rice, prove dough, make yogurt, keep food warm and defrost. The VA06 adds porridge, meat and soup stew modes and a dehydrate setting. Jobs that usually take a rice cooker, a slow cooker and a steamer, from one cavity.',
+   NULL, NULL, 'controls'),
 
   ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 4,
    'Sixty-eight menus you are free to ignore',
-   'The VA03, VA05 and VA06 carry 68 auto-cooking menus, plus multi-stage programmes that change temperature and steam partway through a cook. Use them, or set it yourself. Both are on the same panel.',
+   'The VA05 and VA06 carry 68 auto-cooking menus, and the VA05 adds multi-stage steam programmes that change partway through a cook. Use them, or set it yourself. Both are on the same panel.',
    '68', 'menus', 'smart'),
 
   ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 5,
-   'A door you can stand next to',
-   'Three and four layer glazed doors, with low-E glass on the O755P, keep the outside cool enough to open with a child in the kitchen. Soft-close hinges on the same model, and every door on this page comes off for cleaning without tools.',
-   NULL, NULL, 'safety'),
+   'Steam-cleans, then dries itself',
+   'Two auto-clean functions on the VA05 and VA06: steam to loosen what is on the walls, then heat to dry the cavity so it is not left wet. The O7559 has an enamel cavity that wipes clean, and the M626 has an auto-clean function of its own.',
+   NULL, NULL, 'clean'),
 
   ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 6,
-   'Rated A+ where it is rated at all',
-   'All three built-in ovens carry an A+ energy rating. An oven that reaches temperature quickly and then holds it spends less time drawing full power than a cheaper one still struggling to get there.',
-   'A+', NULL, 'power');
+   'A door you can stand next to',
+   'Triple-layer glazed doors on all three ovens keep the outside cool enough to open with a child in the kitchen. The O7559''s door comes off for cleaning without tools.',
+   '3', 'glass layers', 'safety');
 
 -- ── combi oven: FAQ ────────────────────────────────────────────────────────
--- All ten from the live page, which already emits FAQPage schema — so unlike
--- the hob these answers may be defending an existing rich result, and the
--- wording stays close. One correction: the live answer to the air fryer
--- question names the VA05 alone, and the VA06 spec sheet carries two air-fryer
--- modes of its own.
+-- The ten from the live page, which already emits FAQPage schema, so the
+-- wording stays close. Changed on 2026-10-03: 1 names the dishes, 3 no longer
+-- points at the retired Z4501, 7 gives the VA06's tank size.
 INSERT INTO category_faq (category_id, position, question, answer_md) VALUES
   ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 1,
    'When would you use a combi oven?',
-   'Whenever you would use an oven, and in place of a steamer as well. It bakes, roasts, grills and steams, which covers most of what a kitchen asks of an oven in a week.'),
+   'Whenever you would use an oven, and in place of a steamer as well. It bakes, roasts, grills and steams, which covers most of what a kitchen asks of an oven in a week, from a roast chicken to steamed fish and rice.'),
 
   ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 2,
    'What is the life expectancy of a built-in combi oven?',
@@ -864,7 +890,7 @@ INSERT INTO category_faq (category_id, position, question, answer_md) VALUES
 
   ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 3,
    'Is a combi oven a steam oven?',
-   'It contains one. A combi runs dry convection heat and steam, separately or together, so it does everything a dedicated steam oven does and bakes as well. The Z4501 is the steam-only model here if that is all you need.'),
+   'It contains one. A combi runs dry convection heat and steam, separately or together, so it does everything a dedicated steam oven does and bakes as well. The [VA05](/built-in-combi-oven-va05/) and the [VA06](/vatti-magic-series-combi-oven-va06/) are both combis; VATTI''s current range has no steam-only oven.'),
 
   ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 4,
    'Is a combi oven an air fryer?',
@@ -880,7 +906,7 @@ INSERT INTO category_faq (category_id, position, question, answer_md) VALUES
 
   ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 7,
    'Does a combi oven need water?',
-   'Yes, for the steam side. These models carry their own tank rather than needing a plumbed supply, so filling it is part of using the steam function.'),
+   'Yes, for the steam side. These models carry their own tank rather than needing a plumbed supply, 1.3 litres on the VA06, so filling it is part of using the steam function.'),
 
   ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 8,
    'What is the difference between a convection oven and a combi oven?',
