@@ -22,7 +22,11 @@ import { ReviewWall } from "@/components/ReviewWall";
 import { SignatureBand } from "@/components/SignatureBand";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SoundLevelMark } from "@/components/SoundLevelMark";
+import { TAG, t, type Locale } from "@/i18n";
+import type { Editions } from "@/lib/alternates";
+import { SITE_ORIGIN } from "@/lib/deployment";
 import { Inline } from "@/lib/markdown";
+import { homeHref, staticHref } from "@/lib/routes";
 import type {
   Category,
   CategoryProduct,
@@ -62,7 +66,10 @@ import { warrantyLine } from "@/lib/warranty-terms";
  * reviews and the FAQ, and no chrome around a range of one.
  */
 export function CategoryView({
+  locale = "en",
   category,
+  editions,
+  guideHref,
   products,
   filters,
   summary,
@@ -75,7 +82,11 @@ export function CategoryView({
   regions,
   guideArticle,
 }: {
-  category: Category;
+  locale?: Locale;
+  category: Category & { path?: string };
+  editions?: Editions;
+  /** The guide's URL in this edition. */
+  guideHref?: string;
   products: CategoryProduct[];
   filters: FilterGroup[];
   summary: Extreme[];
@@ -88,8 +99,12 @@ export function CategoryView({
   regions: Region[];
   guideArticle?: ArticleTeaser;
 }) {
+  const d = t(locale);
+  const c = d.category;
+  // 'kitchen hood' inside a sentence; Chinese has no case to lower.
   const noun = category.name.toLowerCase();
-  const warranty = warrantyLine(category.slug);
+  const warranty = warrantyLine(category.slug, locale);
+  const path = category.path ?? `/${category.slug}/`;
   const figures = guides.filter((g) => g.figure);
   const prose = guides.filter((g) => !g.figure);
   const scene = category.hero_product_image_url;
@@ -116,7 +131,7 @@ export function CategoryView({
 
   return (
     <>
-      <SiteHeader />
+      <SiteHeader locale={locale} editions={editions} />
 
       <main id="main">
         {/* Hero. Split where there is a photograph of the category installed,
@@ -236,8 +251,8 @@ export function CategoryView({
             <nav aria-label="Breadcrumb" className="mb-8 text-sm">
               <ol className="flex flex-wrap items-center gap-2 text-ink-muted">
                 <li>
-                  <Link href="/" className="transition-colors hover:text-ink">
-                    Home
+                  <Link href={homeHref(locale)} className="transition-colors hover:text-ink">
+                    {d.nav.home}
                   </Link>
                 </li>
                 <li aria-hidden="true">/</li>
@@ -310,7 +325,7 @@ export function CategoryView({
                         }`
                   }
                 >
-                  {category.h1 ?? `${category.name} in Malaysia`}
+                  {category.h1 ?? c.h1Fallback(category.name)}
                 </h1>
 
                 {category.intro_md && (
@@ -336,7 +351,7 @@ export function CategoryView({
                     rel="noopener"
                     className="rounded-sm bg-teal px-6 py-3 font-semibold text-void transition-opacity hover:opacity-90"
                   >
-                    WhatsApp us
+                    {c.whatsappUs}
                   </a>
                   {/* Only where there is a range to see. One model does not
                       need an anchor down to a grid holding it. */}
@@ -345,7 +360,7 @@ export function CategoryView({
                       href="#models"
                       className="rounded-sm border border-line-strong px-6 py-3 font-medium text-ink transition-colors hover:border-teal hover:text-teal"
                     >
-                      See all {products.length} models
+                      {c.seeAll(products.length)}
                     </a>
                   )}
                 </div>
@@ -397,7 +412,7 @@ export function CategoryView({
             once already. This section holds one dl and nothing sticky. */}
         {summary.length > 0 && (
           <section
-            aria-label={`${category.name} range summary`}
+            aria-label={c.summaryLabel(category.name)}
             className="readout-band overflow-hidden border-y border-line bg-surface"
           >
             {/* Columns follow the cell count. Hoods fill all four; a category
@@ -417,14 +432,14 @@ export function CategoryView({
             >
               <div className="bg-surface px-5 py-6 sm:px-7 sm:py-8">
                 <dt className="text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-ink-muted">
-                  Models
+                  {c.models}
                 </dt>
                 <dd className="mt-2">
                   <span className="readout text-3xl font-semibold leading-none text-teal sm:text-4xl">
                     {products.length}
                   </span>
                 </dd>
-                <dd className="mt-3 text-xs text-ink-muted">in the current range</dd>
+                <dd className="mt-3 text-xs text-ink-muted">{c.inRange}</dd>
               </div>
               {summary.map((s) => (
                 <div key={s.facet} className="bg-surface px-5 py-6 sm:px-7 sm:py-8">
@@ -433,7 +448,7 @@ export function CategoryView({
                   </dt>
                   <dd className="mt-2 flex items-baseline gap-1.5">
                     <span className="readout text-3xl font-semibold leading-none text-teal sm:text-4xl">
-                      {fmt(s.value)}
+                      {fmt(s.value, locale)}
                     </span>
                     <span className="readout text-sm text-ink-muted">{s.unit}</span>
                   </dd>
@@ -456,6 +471,7 @@ export function CategoryView({
         {signature && products.length !== 2 && (
           <SignatureBand
             signature={signature}
+            cta={c.seeModel(signature.model_code)}
             scene={
               category.signature_image_url
                 ? {
@@ -471,10 +487,10 @@ export function CategoryView({
             // sell", now said about the single machine it is said of.
             heading={
               products.length === 1
-                ? `The ${signature.model_code} is the ${noun} we sell`
+                ? c.signatureOnly(signature.model_code, noun)
                 : signature.series
-                  ? `The ${signature.series} is where the range starts`
-                  : `The ${signature.model_code} is where the range starts`
+                  ? c.signatureSeries(signature.series)
+                  : c.signatureModel(signature.model_code)
             }
           />
         )}
@@ -494,16 +510,16 @@ export function CategoryView({
               id="models-heading"
               className="max-w-[20ch] text-3xl font-semibold tracking-[-0.03em] sm:text-4xl"
             >
-              Every {noun} we sell
+              {c.everyModel(noun)}
             </h2>
             <p className="mt-4 max-w-[56ch] leading-relaxed text-ink-muted">
               {filters.length > 0
-                ? "Filter by what the kitchen has to do. The figures on each card are the measured ones, taken from the same spec sheet the product page prints."
-                : "The figures on each card are the measured ones, taken from the same spec sheet the product page prints."}
+                ? c.gridIntroFiltered
+                : c.gridIntro}
             </p>
 
             <div className="mt-10">
-              <ModelGrid products={products} groups={filters} noun={noun} />
+              <ModelGrid locale={locale} products={products} groups={filters} noun={noun} />
             </div>
           </section>
         )}
@@ -521,7 +537,7 @@ export function CategoryView({
                 id="reasons-heading"
                 className="mx-auto max-w-[24ch] text-center text-3xl font-semibold tracking-[-0.03em] sm:text-4xl"
               >
-                {reasons.length} reasons to buy a VATTI {noun}
+                {c.reasons(reasons.length, noun)}
               </h2>
 
               <dl className="mt-12 grid gap-px bg-line sm:grid-cols-2 lg:grid-cols-3">
@@ -607,12 +623,9 @@ export function CategoryView({
                   id="finder-heading"
                   className="text-3xl font-semibold tracking-[-0.03em] sm:text-4xl"
                 >
-                  Tell us about your kitchen
+                  {c.finderHeading}
                 </h2>
-                <p className="mt-4 text-lg leading-relaxed text-ink-muted">
-                  Answer what you can. The message writes itself as you go, and we will come back
-                  with the model that fits and the dealer who stocks it.
-                </p>
+                <p className="mt-4 text-lg leading-relaxed text-ink-muted">{c.finderIntro}</p>
               </div>
 
               <div className="mt-10">
@@ -620,6 +633,7 @@ export function CategoryView({
                     cooking surface decides the model, and noise on the oven
                     page. See EnquiryFunnel. */}
                 <EnquiryFunnel
+                  locale={locale}
                   regions={regions}
                   category={category.name}
                   hobWidth={
@@ -647,16 +661,14 @@ export function CategoryView({
               className="max-w-[20ch] text-3xl font-semibold tracking-[-0.03em] sm:text-4xl"
             >
               {category.h1?.toLowerCase().startsWith("compare")
-                ? "Model by model"
-                : `Compare VATTI ${category.name} Models`}
+                ? c.compareFallback
+                : c.compareHeading(category.name)}
             </h2>
-            <p className="mt-4 max-w-[58ch] leading-relaxed text-ink-muted">
-              Every figure here is the measured one from the model&rsquo;s own spec sheet. A dash
-              means it does not publish that measurement, not that it scores zero.
-            </p>
+            <p className="mt-4 max-w-[58ch] leading-relaxed text-ink-muted">{c.compareNote}</p>
 
             <div className="mt-10">
               <CompareSelector
+                locale={locale}
                 products={products}
                 columns={columns}
                 initial={openingThree(products, signature?.slug)}
@@ -671,7 +683,7 @@ export function CategoryView({
                 reader who wants everything at once. */}
             <details className="group mt-12 border-t border-line">
               <summary className="disclosure flex cursor-pointer list-none items-center justify-between gap-6 py-5 font-medium">
-                All {products.length} models, side by side
+                {c.allSideBySide(products.length)}
                 <span
                   aria-hidden="true"
                   className="shrink-0 text-lg leading-none text-teal transition-transform duration-300 ease-[var(--ease-out-quart)] group-open:rotate-45"
@@ -680,7 +692,7 @@ export function CategoryView({
                 </span>
               </summary>
               <div className="pb-4">
-                <CompareTable products={products} columns={columns} />
+                <CompareTable locale={locale} products={products} columns={columns} />
               </div>
             </details>
           </section>
@@ -696,7 +708,7 @@ export function CategoryView({
                 id="choose-heading"
                 className="max-w-[22ch] text-3xl font-semibold tracking-[-0.03em] sm:text-4xl"
               >
-                Choosing a {noun} in Malaysia
+                {c.choosing(noun)}
               </h2>
 
               {figures.length > 0 && (
@@ -745,10 +757,7 @@ export function CategoryView({
         {/* The service, in the words of people who have needed it. Appliances
             are bought on whether somebody turns up when they break, and every
             one of these reviews is about exactly that. */}
-        <ReviewWall
-          reviews={reviews}
-          heading={`${category.name} trusted by 10,000+ Malaysians`}
-        />
+        <ReviewWall locale={locale} reviews={reviews} heading={c.trusted(category.name)} />
 
         {/* The long-form guide, for the reader who wants the whole argument
             rather than the six blocks above. */}
@@ -771,18 +780,15 @@ export function CategoryView({
                 <h2 id="guide-heading" className="text-2xl font-semibold tracking-[-0.03em] sm:text-3xl">
                   {guideArticle.title}
                 </h2>
-                <p className="mt-4 max-w-[52ch] leading-relaxed text-ink-muted">
-                  The long version: how the types differ, which of the numbers actually decide it,
-                  and which one suits the kitchen you already have.
-                </p>
+                <p className="mt-4 max-w-[52ch] leading-relaxed text-ink-muted">{c.guideBlurb}</p>
                 <Link
-                  href={`/${guideArticle.path}/`}
+                  href={guideHref ?? `/${guideArticle.path}/`}
                   className="mt-6 inline-block text-teal transition-opacity hover:opacity-80"
                 >
-                  Read the guide
+                  {d.article.readTheGuide}
                   {guideArticle.reading_minutes && (
                     <span className="readout ml-2 text-xs text-ink-muted">
-                      {guideArticle.reading_minutes} min
+                      {guideArticle.reading_minutes} {c.min}
                     </span>
                   )}
                 </Link>
@@ -805,11 +811,9 @@ export function CategoryView({
                   id="faq-heading"
                   className="text-3xl font-semibold tracking-[-0.03em] sm:text-4xl"
                 >
-                  Questions we get asked
+                  {c.faqHeading}
                 </h2>
-                <p className="mt-5 max-w-[42ch] leading-relaxed text-ink-muted">
-                  If yours is not here, send it. We answer on WhatsApp, usually the same day.
-                </p>
+                <p className="mt-5 max-w-[42ch] leading-relaxed text-ink-muted">{c.faqIntro}</p>
                 <a
                   href={WHATSAPP}
                   target="_blank"
@@ -853,15 +857,12 @@ export function CategoryView({
                 id="category-cta"
                 className="text-3xl font-semibold tracking-[-0.03em] sm:text-4xl"
               >
-                Not sure which {noun} fits?
+                {c.notSure(noun)}
               </h2>
               {/* Deliberately not written for hoods. This band renders on all
                   five category pages, and ducting questions on the dishwasher
                   page would read as a template someone forgot to fill in. */}
-              <p className="mt-4 max-w-[58ch] leading-relaxed text-ink-muted">
-                Send us the kitchen: what you cook, how the space is laid out, and what has to fit
-                where. We will narrow it to one model and the nearest dealer who stocks it.
-              </p>
+              <p className="mt-4 max-w-[58ch] leading-relaxed text-ink-muted">{c.ctaBody}</p>
               <div className="mt-9 flex flex-wrap gap-3">
                 <a
                   href={WHATSAPP}
@@ -869,25 +870,28 @@ export function CategoryView({
                   rel="noopener"
                   className="rounded-sm bg-teal px-6 py-3 font-semibold text-void transition-opacity hover:opacity-90"
                 >
-                  WhatsApp us
+                  {c.whatsappUs}
                 </a>
                 <Link
-                  href="/store-locations/"
+                  href={staticHref(locale, "store-locations")}
                   className="rounded-sm border border-line-strong px-6 py-3 font-medium text-ink transition-colors hover:border-teal hover:text-teal"
                 >
-                  Find a dealer
+                  {c.findDealer}
                 </Link>
               </div>
               {warranty && (
                 <p className="mt-8 flex items-start gap-2.5 text-sm leading-relaxed text-ink">
                   <ShieldCheck aria-hidden size={18} weight="light" className="mt-px shrink-0 text-teal" />
-                  <span>VATTI warranty: {warranty}.</span>
+                  <span>{c.warranty(warranty)}</span>
                 </p>
               )}
               <p className={`${warranty ? "mt-3" : "mt-8"} text-sm text-ink-muted`}>
-                Already bought one?{" "}
-                <Link href="/vatti-ewarranty/" className="text-teal transition-opacity hover:opacity-80">
-                  Register it for warranty
+                {c.alreadyBought}{" "}
+                <Link
+                  href={staticHref(locale, "vatti-ewarranty")}
+                  className="text-teal transition-opacity hover:opacity-80"
+                >
+                  {c.register}
                 </Link>
                 .
               </p>
@@ -908,18 +912,26 @@ export function CategoryView({
 
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(categoryBreadcrumb(category)) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(categoryBreadcrumb(category, path, d.nav.home, homeHref(locale))),
+        }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(categoryList(category, products)) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(categoryList(c.listName(category.name), products)),
+        }}
       />
 
       {/* The same bar the product pages carry. These pages outrank the
           homepage, so a phone arriving from search lands here first and the
           "how to buy" section is nine screens down. The message names the
           range, in the questionnaire's own words. */}
-      <CtaBar href={whatsappLink(`Hi VATTI Malaysia. I am looking at your ${noun} range.`)} />
+      <CtaBar
+        href={whatsappLink(c.ctaMessage(noun))}
+        label={d.cta.help}
+        lang={locale === "en" ? undefined : TAG[locale]}
+      />
     </>
   );
 }
@@ -1032,24 +1044,25 @@ const SUMMARY_COLUMNS: Record<number, string> = {
   4: "grid-cols-2 md:grid-cols-4",
 };
 
-const SITE = "https://vattimalaysia.com";
+
+const SITE = SITE_ORIGIN;
 
 /**
  * Home → this category. Two levels is the whole trail: these pages sit at the
  * root of the URL space, not under a /category/ parent, so inventing a deeper
  * crumb would describe a hierarchy the site does not have.
  */
-function categoryBreadcrumb(category: Category) {
+function categoryBreadcrumb(category: Category, path: string, home: string, homePath: string) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
+      { "@type": "ListItem", position: 1, name: home, item: `${SITE}${homePath}` },
       {
         "@type": "ListItem",
         position: 2,
         name: category.name,
-        item: `${SITE}/${category.slug}/`,
+        item: `${SITE}${path}`,
       },
     ],
   };
@@ -1061,17 +1074,17 @@ function categoryBreadcrumb(category: Category) {
  * with its specs, and restating a partial copy here only creates a second
  * description of the same entity for a crawler to reconcile.
  */
-function categoryList(category: Category, products: CategoryProduct[]) {
+function categoryList(name: string, products: CategoryProduct[]) {
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: `VATTI ${category.name} models`,
+    name,
     numberOfItems: products.length,
     itemListElement: products.map((p, i) => ({
       "@type": "ListItem",
       position: i + 1,
       name: p.name,
-      url: `${SITE}/${p.slug}/`,
+      url: `${SITE}${p.href}`,
     })),
   };
 }
@@ -1093,6 +1106,6 @@ function plain(md: string): string {
   return md.replace(/\[([^\]]*)\]\([^)\s]+\)/g, "$1").replace(/\*\*?([^*]+)\*\*?/g, "$1");
 }
 
-function fmt(n: number): string {
-  return Number.isInteger(n) ? n.toLocaleString("en-MY") : String(n);
+function fmt(n: number, locale: Locale = "en"): string {
+  return Number.isInteger(n) ? n.toLocaleString(TAG[locale]) : String(n);
 }

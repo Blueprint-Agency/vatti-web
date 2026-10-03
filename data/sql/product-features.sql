@@ -145,7 +145,7 @@ SELECT id, 2, 'split', 'Glass, not a filter mesh',
 
 INSERT INTO product_feature (product_id, position, layout, title, body_md, image_url, image_alt, image_w, image_h)
 SELECT id, 3, 'split', 'BLDC motor, 3,125 m³/h at 1,300 Pa',
-  'The highest static pressure in the VATTI range. Airflow is the figure a showroom quotes; pressure is the one that decides whether a long shared duct on a high floor actually clears.',
+  'Among the highest static pressures in the VATTI range, behind only the V938 and V960. Airflow is the figure a showroom quotes; pressure is the one that decides whether a long shared duct on a high floor actually clears.',
   'https://cdn.vattimalaysia.com/2026/08/v929-bldc-motor.webp',
   'Cutaway of the V929 BLDC motor and its impeller', 1080, 751
   FROM product WHERE slug = 'vatti-aetheris-series-cooker-hood-v929';

@@ -226,6 +226,11 @@ check("slug collisions across the root namespace", `
       .all()
       .map((r) => prefixOf[r.lang] + r.path),
     ...db.prepare("SELECT path FROM store").all().map((r) => r.path),
+    // Translated category pages.
+    ...db
+      .prepare("SELECT lang, slug FROM product_category_i18n")
+      .all()
+      .map((r) => prefixOf[r.lang] + r.slug),
     // from_path is stored with both slashes ('/oven/'); strip them like the
     // links below. Until 2026-10-03 this line added '/oven/' as-is, so no
     // link ever matched a redirect and the branch was dead.

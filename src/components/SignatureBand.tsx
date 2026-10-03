@@ -44,12 +44,15 @@ export function SignatureBand({
   signature,
   scene,
   heading,
+  cta,
 }: {
   signature: Signature;
   scene?: { src: string; alt: string; focus: string | null };
   heading: string;
+  /** The button label, in the page's language: "See the V929". */
+  cta: string;
 }) {
-  if (!scene) return <SignaturePlate signature={signature} heading={heading} />;
+  if (!scene) return <SignaturePlate signature={signature} heading={heading} cta={cta} />;
 
   return (
     // The scroll track. No overflow clip here — that would stop the frame
@@ -176,10 +179,10 @@ export function SignatureBand({
               press free to run without the two overwriting each other. */}
             <div style={rise(5)} className="signature-rise mt-9">
               <Link
-                href={`/${signature.slug}/`}
+                href={signature.href}
                 className="inline-flex items-center gap-2 rounded-sm bg-teal px-6 py-3 font-semibold text-void transition-transform duration-200 ease-[var(--ease-out-quart)] hover:opacity-90 active:translate-y-px"
               >
-                See the {signature.model_code}
+                {cta}
                 <span aria-hidden="true">→</span>
               </Link>
             </div>
@@ -196,7 +199,15 @@ export function SignatureBand({
  * not --paper — these are opaque studio plates and a themed surface behind one
  * puts the product in a visible box.
  */
-function SignaturePlate({ signature, heading }: { signature: Signature; heading: string }) {
+function SignaturePlate({
+  signature,
+  heading,
+  cta,
+}: {
+  signature: Signature;
+  heading: string;
+  cta: string;
+}) {
   return (
     <section
       aria-labelledby="signature-heading"
@@ -260,10 +271,10 @@ function SignaturePlate({ signature, heading }: { signature: Signature; heading:
           )}
 
           <Link
-            href={`/${signature.slug}/`}
+            href={signature.href}
             className="mt-9 inline-flex items-center gap-2 rounded-sm bg-teal px-6 py-3 font-semibold text-void transition-transform duration-200 ease-[var(--ease-out-quart)] hover:opacity-90 active:translate-y-px"
           >
-            See the {signature.model_code}
+            {cta}
             <span aria-hidden="true">→</span>
           </Link>
         </div>

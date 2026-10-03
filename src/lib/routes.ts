@@ -1,5 +1,6 @@
 import { prefix, type Locale } from "@/i18n/config";
 import { archives, sectionInfo, type Archive } from "@/lib/queries/article";
+import { localCategoryPath } from "@/lib/queries/category";
 
 /**
  * Where a menu link goes in each edition.
@@ -33,9 +34,9 @@ export function staticHref(locale: Locale, page: string): string {
   return STATIC[page]?.includes(locale) ? `${prefix(locale)}/${page}/` : `/${page}/`;
 }
 
-/** Category pages are English-only until the category translations land (Phase 2). */
-export function categoryHref(_locale: Locale, enSlug: string): string {
-  return `/${enSlug}/`;
+/** The category in this edition once it is translated (product_category_i18n), else English. */
+export function categoryHref(locale: Locale, enSlug: string): string {
+  return localCategoryPath(locale, enSlug);
 }
 
 const archiveCache = new Map<Locale, Archive[]>();

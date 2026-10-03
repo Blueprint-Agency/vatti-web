@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 
+import { TAG, t, type Locale } from "@/i18n";
 import type { CategoryProduct, Column } from "@/lib/queries/category";
 
 /**
@@ -18,13 +19,16 @@ import type { CategoryProduct, Column } from "@/lib/queries/category";
  * asks them not to.
  */
 export function CompareTable({
+  locale = "en",
   products,
   columns,
 }: {
+  locale?: Locale;
   products: CategoryProduct[];
   columns: Column[];
 }) {
   const [sort, setSort] = useState<{ facet: string; dir: "asc" | "desc" } | null>(null);
+  const x = t(locale).compare;
 
   /**
    * The top value per column, but only where holding it means something.
@@ -77,12 +81,12 @@ export function CompareTable({
     <div className="rail -mx-5 overflow-x-auto px-5 pb-3 sm:mx-0 sm:px-0">
       <table className="w-full min-w-[42rem] border-collapse text-left">
         <caption className="sr-only">
-          {`Every model, with its measured ${columns.map((c) => c.label.toLowerCase()).join(", ")}. Column headers sort the table.`}
+          {x.caption(columns.map((c) => c.label))}
         </caption>
         <thead>
           <tr className="border-b border-line-strong">
             <th scope="col" className="py-3 pr-6 text-sm font-semibold">
-              Model
+              {x.model}
             </th>
             {columns.map((c) => {
               const on = sort?.facet === c.facet;
@@ -108,7 +112,7 @@ export function CompareTable({
                       {on ? (sort.dir === "asc" ? "↑" : "↓") : "↕"}
                     </span>
                     <span className="sr-only">
-                      {on ? `, sorted ${sort.dir === "asc" ? "ascending" : "descending"}` : ", sort"}
+                      {on ? x.sorted(sort.dir === "asc") : x.sort}
                     </span>
                   </button>
                 </th>
@@ -120,7 +124,7 @@ export function CompareTable({
           {rows.map((p) => (
             <tr key={p.slug} className="border-b border-line last:border-0">
               <th scope="row" className="py-3 pr-6 font-normal">
-                <Link href={`/${p.slug}/`} className="group block">
+                <Link href={p.href} className="group block">
                   <span className="readout block text-xs text-teal">{p.model_code}</span>
                   <span className="mt-0.5 block text-sm leading-snug transition-colors group-hover:text-teal">
                     {p.name}
@@ -136,11 +140,11 @@ export function CompareTable({
                       <span
                         className={`readout text-sm ${top ? "font-semibold text-teal" : "text-ink"}`}
                       >
-                        {fmt(f.value)}
+                        {fmt(f.value, TAG[locale])}
                         {/* The best value in the column, named rather than
                             colour-coded: teal alone is not information if you
                             cannot see it. */}
-                        {top && <span className="sr-only"> (best in range)</span>}
+                        {top && <span className="sr-only">{x.bestInRange}</span>}
                       </span>
                     ) : (
                       <>
@@ -150,7 +154,7 @@ export function CompareTable({
                         <span aria-hidden="true" className="text-sm text-ink-muted">
                           &ndash;
                         </span>
-                        <span className="sr-only">not published</span>
+                        <span className="sr-only">{x.notPublished}</span>
                       </>
                     )}
                   </td>
@@ -164,6 +168,6 @@ export function CompareTable({
   );
 }
 
-function fmt(n: number): string {
-  return Number.isInteger(n) ? n.toLocaleString("en-MY") : String(n);
+function fmt(n: number, tag: string): string {
+  return Number.isInteger(n) ? n.toLocaleString(tag) : String(n);
 }

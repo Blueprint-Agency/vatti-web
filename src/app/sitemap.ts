@@ -4,7 +4,8 @@ import { LOCALES, localeFromTag } from "@/i18n/config";
 import { hreflang, type Editions } from "@/lib/alternates";
 import { SITE_ORIGIN } from "@/lib/deployment";
 import { archives, articleDates } from "@/lib/queries/article";
-import { categorySlugs } from "@/lib/queries/category";
+import { all as rows } from "@/lib/db";
+import { categoryEditions } from "@/lib/queries/category";
 import { productSlugs } from "@/lib/queries/product";
 import { redirectPaths } from "@/lib/queries/redirect";
 import { storeSlugs } from "@/lib/queries/store";
@@ -84,7 +85,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // QR-code landing pages. See src/lib/manuals.ts.
     entry("/instruction-manual/"),
     ...productSlugs().map((slug) => entry(`/${slug}/`)),
-    ...categorySlugs().map((slug) => entry(`/${slug}/`)),
+    // Every edition of every category, each carrying its hreflang set.
+    ...rows<{ id: number }>(`SELECT id FROM product_category ORDER BY sort_order`).flatMap(({ id }) => {
+      const editions = categoryEditions(id);
+      return Object.values(editions).map((path) => entry(path!, undefined, editions));
+    }),
     ...articles.map((a) =>
       entry(a.href, a.last_modified, a.translation_key ? sets.get(a.translation_key) : undefined)
     ),

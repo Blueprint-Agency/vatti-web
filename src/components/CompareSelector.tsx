@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 
+import { TAG, t, type Locale } from "@/i18n";
 import type { CategoryProduct, Column } from "@/lib/queries/category";
 
 /**
@@ -23,10 +24,12 @@ import type { CategoryProduct, Column } from "@/lib/queries/category";
  * all. The leader in each row is the only thing coloured.
  */
 export function CompareSelector({
+  locale = "en",
   products,
   columns,
   initial,
 }: {
+  locale?: Locale;
   products: CategoryProduct[];
   /** The measured rows, in the order the products list them. */
   columns: Column[];
@@ -34,6 +37,7 @@ export function CompareSelector({
   initial: string[];
 }) {
   const [count, setCount] = useState(Math.min(3, initial.length));
+  const x = t(locale).compare;
   const [picked, setPicked] = useState<string[]>(initial);
 
   const chosen = picked
@@ -66,22 +70,22 @@ export function CompareSelector({
       facet: c.facet,
       value: (p: CategoryProduct) => {
         const f = p.facets.find((x) => x.facet === c.facet);
-        return f ? fmt(f.value) : null;
+        return f ? fmt(f.value, TAG[locale]) : null;
       },
     })),
-    { label: "Auto-clean", value: (p: CategoryProduct) => p.auto_clean },
-    { label: "Best for", value: (p: CategoryProduct) => p.best_for },
+    { label: x.autoClean, value: (p: CategoryProduct) => p.auto_clean },
+    { label: x.bestFor, value: (p: CategoryProduct) => p.best_for },
   ].filter((row) => chosen.some((p) => row.value(p)));
 
   return (
     <div>
       <div className="flex flex-wrap items-center justify-between gap-4 pb-8">
-        <p className="text-sm text-ink-muted">Pick the models you are weighing against each other.</p>
+        <p className="text-sm text-ink-muted">{x.pick}</p>
         {/* Two or three. Four columns of specification is where a comparison
             stops being readable on a laptop, and on a phone even three scroll. */}
         <div
           role="group"
-          aria-label="How many models to compare"
+          aria-label={x.howMany}
           className="flex rounded-sm border border-line p-1"
         >
           {[2, 3].map((n) => (
@@ -96,7 +100,7 @@ export function CompareSelector({
                   : "text-ink-muted hover:text-ink"
               }`}
             >
-              {n} models
+              {x.nModels(n)}
             </button>
           ))}
         </div>
@@ -128,7 +132,7 @@ export function CompareSelector({
               </div>
 
               <label className="sr-only" htmlFor={`compare-${i}`}>
-                Model in column {i + 1}
+                {x.column(i + 1)}
               </label>
               <div className="relative mt-3">
                 <select
@@ -185,7 +189,7 @@ export function CompareSelector({
                         <span aria-hidden="true" className="text-ink-muted">
                           &ndash;
                         </span>
-                        <span className="sr-only">not published</span>
+                        <span className="sr-only">{x.notPublished}</span>
                       </>
                     ) : measured ? (
                       <>
@@ -197,7 +201,7 @@ export function CompareSelector({
                           {value}
                         </span>
                         <span className="readout text-xs text-ink-muted">{row.unit}</span>
-                        {leads && <span className="sr-only">best of the models shown</span>}
+                        {leads && <span className="sr-only">{x.bestShown}</span>}
                       </>
                     ) : (
                       <span className="text-sm leading-snug text-ink">{value}</span>
@@ -212,10 +216,10 @@ export function CompareSelector({
           {chosen.map((product, i) => (
             <div key={i} className="rounded-b-sm bg-surface p-3 sm:p-4">
               <Link
-                href={`/${product.slug}/`}
+                href={product.href}
                 className="block rounded-sm bg-teal px-4 py-3 text-center text-sm font-semibold text-void transition-opacity hover:opacity-90"
               >
-                View {product.model_code}
+                {x.view(product.model_code)}
               </Link>
             </div>
           ))}
@@ -243,6 +247,6 @@ type Row = {
   value: (p: CategoryProduct) => string | null;
 };
 
-function fmt(n: number): string {
-  return Number.isInteger(n) ? n.toLocaleString("en-MY") : String(n);
+function fmt(n: number, tag: string): string {
+  return Number.isInteger(n) ? n.toLocaleString(tag) : String(n);
 }

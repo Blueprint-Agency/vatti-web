@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 
+import { listJoin, t, type Dict, type Locale } from "@/i18n";
 import type { CategoryCard, Region } from "@/lib/queries/home";
 import { whatsappLink } from "@/lib/site";
 
@@ -36,65 +37,31 @@ export type Question = {
 };
 
 /**
- * Fixed questions. The two data-driven ones are built in `buildQuestions`, and
- * one of these is dropped on the pages it does not apply to — see `hobWidth`.
+ * Fixed questions, in the order they are asked. Their words are in src/i18n
+ * (funnel.questions); one of them is dropped on the pages it does not apply
+ * to — see `hobWidth`. Option texts are copied into the WhatsApp message as
+ * the visitor picked them, so the message arrives in the visitor's language.
  */
-const BASE: Question[] = [
-  {
-    id: "project",
-    legend: "What is the project?",
-    label: "Project",
-    short: "Project",
-    hint: "A replacement has to fit the hole that is already there. A new build can start from the model.",
-    options: ["Renovating", "New build", "Replacing a unit", "Still researching"],
-  },
-  {
-    id: "cooking",
-    legend: "How do you cook?",
-    // The two definite answers first, the hedge last: "a mix of both" only
-    // means anything once you have read the two things it sits between.
-    label: "Cooking",
-    short: "Cooking",
-    hint: "Wok smoke asks more of a hood than a pot of soup does.",
-    options: ["Wok on high heat, most days", "Mostly light cooking", "A mix of both"],
-  },
-  {
-    id: "kitchen",
-    legend: "What is the kitchen like?",
-    label: "Kitchen",
-    short: "Kitchen",
-    hint: "Condo ducting and open-plan layouts each rule a few models out.",
-    options: ["Condo or apartment", "Landed house", "Open plan", "Wet and dry"],
-  },
-  {
-    id: "hob",
-    legend: "How much hob space is there?",
-    label: "Hob space",
-    short: "Hob space",
-    hint: "Roughly is fine. A hood should be at least as wide as the hob under it.",
-    options: ["Under 700mm", "700 to 800mm", "800 to 900mm", "Over 900mm", "Not measured yet"],
-  },
-  {
-    id: "timing",
-    legend: "When do you need it?",
-    label: "Timing",
-    short: "Timing",
-    hint: "So the dealer knows whether to hold stock for you.",
-    options: ["This month", "In one to three months", "Later than that", "Just planning"],
-  },
-];
+const BASE_IDS = ["project", "cooking", "kitchen", "hob", "timing"] as const;
+
+function question(locale: Locale, id: keyof Dict["funnel"]["questions"]): Question {
+  return { id, ...t(locale).funnel.questions[id] };
+}
 
 export function buildQuestions({
+  locale = "en",
   categories,
   regions,
   category,
   hobWidth,
 }: {
+  locale?: Locale;
   categories?: CategoryCard[];
   regions: Region[];
   category?: string;
   hobWidth: boolean;
 }): Question[] {
+  const regionNames = t(locale).regions;
   // Category and region wording comes from the database so the message uses the
   // same names as the catalogue and the dealer list.
   return [
@@ -102,29 +69,22 @@ export function buildQuestions({
       ? []
       : [
           {
-            id: "looking",
-            legend: "What are you looking for?",
-            label: "Looking at",
-            short: "Looking for",
-            hint: "Pick everything on the list. One is fine.",
+            ...question(locale, "looking"),
             options: (categories ?? []).map((c) => c.name),
             multiple: true,
           },
         ]),
-    ...BASE.filter((q) => q.id !== "hob" || hobWidth),
+    ...BASE_IDS.filter((id) => id !== "hob" || hobWidth).map((id) => question(locale, id)),
     {
-      id: "area",
-      legend: "Where are you?",
-      label: "Area",
-      short: "Area",
-      hint: "We point you at the dealer nearest you.",
-      options: regions.map((r) => r.region),
+      ...question(locale, "area"),
+      options: regions.map((r) => regionNames[r.slug] ?? r.region),
     },
   ];
 }
 
 /** Answers, name and the message they compose. */
-export function useEnquiry(questions: Question[], category?: string) {
+export function useEnquiry(questions: Question[], category?: string, locale: Locale = "en") {
+  const f = t(locale).funnel;
   const [answers, setAnswers] = useState<Record<string, string[]>>({});
   const [name, setName] = useState("");
 
@@ -154,30 +114,24 @@ export function useEnquiry(questions: Question[], category?: string) {
     // would be a rule waiting to be broken by the next category added.
     const lines: string[] = [
       category
-        ? `Hi VATTI Malaysia. I am looking at your ${category.toLowerCase()} range.`
+        ? f.helloCategory(category.toLowerCase())
         : looking.length > 0
-          ? `Hi VATTI Malaysia. I am shopping for: ${looking.join(", ")}.`
-          : "Hi VATTI Malaysia. I would like some help choosing kitchen appliances.",
+          ? f.helloShopping(looking.join(locale === "zh" ? "、" : ", "))
+          : f.helloGeneral,
     ];
 
     const details = questions
       .filter((q) => q.id !== "looking")
       .map((q) => {
         const value = answers[q.id] ?? [];
-        return value.length > 0 ? `${q.label}: ${list(value)}` : null;
+        return value.length > 0 ? `${q.label}${locale === "zh" ? "：" : ": "}${listJoin(locale, value)}` : null;
       })
       .filter((line): line is string => line !== null);
 
     if (details.length > 0) lines.push("", ...details);
-    if (name.trim()) lines.push("", `Thanks, ${name.trim()}`);
+    if (name.trim()) lines.push("", f.thanks(name.trim()));
     return lines.join("\n");
-  }, [answers, category, name, questions]);
+  }, [answers, category, name, questions, locale, f]);
 
   return { answers, name, setName, toggle, answered, message, href: whatsappLink(message) };
-}
-
-/** "a, b and c" — the message should read like a person wrote it. */
-function list(items: string[]): string {
-  if (items.length <= 1) return items[0] ?? "";
-  return `${items.slice(0, -1).join(", ")} and ${items[items.length - 1]}`;
 }

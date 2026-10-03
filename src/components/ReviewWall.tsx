@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 
+import { t, type Dict, type Locale } from "@/i18n";
 import type { Review } from "@/lib/queries/category";
 import { GOOGLE_REVIEWS } from "@/lib/site";
 
@@ -49,8 +50,17 @@ function GoogleMark({ size, label }: { size: number; label: string }) {
  * markup on your own site is against Google's structured data guidelines, and
  * the penalty for getting that wrong is worse than the rich result is worth.
  */
-export function ReviewWall({ reviews, heading }: { reviews: Review[]; heading: string }) {
+export function ReviewWall({
+  locale = "en",
+  reviews,
+  heading,
+}: {
+  locale?: Locale;
+  reviews: Review[];
+  heading: string;
+}) {
   const rail = useRef<HTMLUListElement>(null);
+  const w = t(locale).reviews;
 
   /** One card plus its gap, so a press moves by exactly one card. */
   function push(direction: 1 | -1) {
@@ -78,11 +88,11 @@ export function ReviewWall({ reviews, heading }: { reviews: Review[]; heading: s
               average and it is the word the live site prints, so it is theirs
               rather than ours to justify. */}
           <div className="text-center">
-            <p className="text-2xl font-semibold uppercase tracking-[0.06em]">Excellent</p>
-            <Stars count={5} className="mt-3 justify-center text-2xl" label="Rated 5 out of 5" />
+            <p className="text-2xl font-semibold uppercase tracking-[0.06em]">{w.excellent}</p>
+            <Stars count={5} className="mt-3 justify-center text-2xl" label={w.rated} />
             <p className="mt-3 text-sm text-ink-muted">
-              Based on <span className="readout font-semibold text-ink">{GOOGLE_REVIEWS}</span>{" "}
-              reviews
+              {w.basedOn} <span className="readout font-semibold text-ink">{GOOGLE_REVIEWS}</span>{" "}
+              {w.reviewsWord}
             </p>
             <div className="mt-4 flex justify-center">
               <GoogleMark size={28} label="Google" />
@@ -113,7 +123,7 @@ export function ReviewWall({ reviews, heading }: { reviews: Review[]; heading: s
                   key={`${review.author}-${review.posted_at}`}
                   className="w-[17rem] shrink-0 snap-start sm:w-[19rem]"
                 >
-                  <ReviewCard review={review} />
+                  <ReviewCard review={review} w={w} />
                 </li>
               ))}
             </ul>
@@ -127,7 +137,7 @@ export function ReviewWall({ reviews, heading }: { reviews: Review[]; heading: s
                   className="flex size-10 items-center justify-center rounded-full border border-line-strong text-ink transition-colors hover:border-teal hover:text-teal"
                 >
                   <span aria-hidden="true">{d === -1 ? "←" : "→"}</span>
-                  <span className="sr-only">{d === -1 ? "Previous" : "Next"} reviews</span>
+                  <span className="sr-only">{d === -1 ? w.prev : w.next}</span>
                 </button>
               ))}
             </div>
@@ -141,7 +151,7 @@ export function ReviewWall({ reviews, heading }: { reviews: Review[]; heading: s
 /** Long reviews collapse. Two of the ten run past 350 characters. */
 const CLAMP = 190;
 
-function ReviewCard({ review }: { review: Review }) {
+function ReviewCard({ review, w }: { review: Review; w: Dict["reviews"] }) {
   const [open, setOpen] = useState(false);
   const long = review.body.length > CLAMP;
 
@@ -151,14 +161,15 @@ function ReviewCard({ review }: { review: Review }) {
         <Avatar name={review.author} />
         <figcaption className="min-w-0 flex-1">
           <p className="truncate font-semibold leading-tight">{review.author}</p>
-          <p className="mt-1 text-xs text-ink-muted">{ago(review.posted_at)}</p>
+          <p className="mt-1 text-xs text-ink-muted">{ago(review.posted_at, w)}</p>
         </figcaption>
-        <GoogleMark size={18} label={`Posted on ${review.source}`} />
+        <GoogleMark size={18} label={w.postedOn(review.source)} />
       </div>
 
-      <Stars count={review.rating} className="mt-4" label={`${review.rating} out of 5`} />
+      <Stars count={review.rating} className="mt-4" label={w.outOf(review.rating)} />
 
-      <blockquote className="mt-3 whitespace-pre-line text-sm leading-relaxed text-ink">
+      {/* Customer quotes, kept verbatim in English on every edition. */}
+      <blockquote lang="en-MY" className="mt-3 whitespace-pre-line text-sm leading-relaxed text-ink">
         {open || !long ? review.body : `${review.body.slice(0, CLAMP).trimEnd()}…`}
       </blockquote>
 
@@ -168,7 +179,7 @@ function ReviewCard({ review }: { review: Review }) {
           onClick={() => setOpen((v) => !v)}
           className="mt-3 self-start text-sm text-teal transition-opacity hover:opacity-80"
         >
-          {open ? "Show less" : "Read more"}
+          {open ? w.showLess : w.readMore}
         </button>
       )}
     </figure>
@@ -227,11 +238,11 @@ function Stars({
  * stamps build time and the browser corrects it on hydration. The two agree to
  * within a month for anything older than a month, which every one of these is.
  */
-function ago(iso: string): string {
+function ago(iso: string, w: Dict["reviews"]): string {
   const days = Math.floor((Date.now() - new Date(iso).getTime()) / 86_400_000);
-  if (days < 30) return days <= 1 ? "today" : `${days} days ago`;
+  if (days < 30) return days <= 1 ? w.today : w.days(days);
   const months = Math.floor(days / 30);
-  if (months < 12) return months === 1 ? "a month ago" : `${months} months ago`;
+  if (months < 12) return months === 1 ? w.month : w.months(months);
   const years = Math.floor(days / 365);
-  return years === 1 ? "a year ago" : `${years} years ago`;
+  return years === 1 ? w.year : w.years(years);
 }

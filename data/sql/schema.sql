@@ -357,7 +357,9 @@ CREATE TABLE category_guide (
   body_md     TEXT NOT NULL,
   figure      TEXT,   -- TEXT, not REAL: '650-800' and 'up to 1,700' both exist
   figure_unit TEXT,
-  PRIMARY KEY (category_id, position)
+  -- en-MY rows are the originals; ms-MY and zh-MY rows are their editions.
+  lang        TEXT NOT NULL DEFAULT 'en-MY' CHECK (lang IN ('en-MY','ms-MY','zh-MY')),
+  PRIMARY KEY (category_id, lang, position)
 );
 
 -- "Why buy this category from VATTI". figure is the measured backing for the
@@ -378,7 +380,9 @@ CREATE TABLE category_reason (
   icon        TEXT CHECK (icon IN (
                 'airflow','filtration','noise','motor','clean','controls',
                 'power','safety','water','smart','heat')),
-  PRIMARY KEY (category_id, position)
+  -- en-MY rows are the originals; ms-MY and zh-MY rows are their editions.
+  lang        TEXT NOT NULL DEFAULT 'en-MY' CHECK (lang IN ('en-MY','ms-MY','zh-MY')),
+  PRIMARY KEY (category_id, lang, position)
 );
 
 -- Rendered as <details> and emitted as FAQPage JSON-LD. answer_md is inline
@@ -388,7 +392,9 @@ CREATE TABLE category_faq (
   position    INTEGER NOT NULL,
   question    TEXT NOT NULL,
   answer_md   TEXT NOT NULL,
-  PRIMARY KEY (category_id, position)
+  -- en-MY rows are the originals; ms-MY and zh-MY rows are their editions.
+  lang        TEXT NOT NULL DEFAULT 'en-MY' CHECK (lang IN ('en-MY','ms-MY','zh-MY')),
+  PRIMARY KEY (category_id, lang, position)
 );
 
 -- Google reviews, carried over verbatim from the Trustindex widget the live
@@ -477,6 +483,66 @@ CREATE INDEX article_section_idx ON article(section, published_at DESC);
 -- English needs no rows: its segment is the section id and its name is
 -- blog_category.name. Chinese keeps the English segment (CLAUDE.md § Languages)
 -- and only translates the name.
+-- A category in Malay or Chinese. English stays on product_category; a row
+-- here is what makes /ms/<slug>/ or /zh/<slug>/ exist. Malay slugs are
+-- localised and keyword-led ('hood-dapur'); Chinese keeps the English slug.
+-- Each field's keyword is recorded in keyword_map.
+CREATE TABLE product_category_i18n (
+  category_id         INTEGER NOT NULL REFERENCES product_category(id),
+  lang                TEXT NOT NULL CHECK (lang IN ('ms-MY','zh-MY')),
+  slug                TEXT NOT NULL,
+  name                TEXT NOT NULL,   -- 'Hood Dapur': breadcrumb, headings, menus
+  h1                  TEXT NOT NULL,
+  seo_title           TEXT NOT NULL,
+  meta_description    TEXT NOT NULL,
+  intro_md            TEXT NOT NULL,
+  signature_image_alt TEXT,
+  PRIMARY KEY (category_id, lang),
+  UNIQUE (lang, slug)
+);
+
+-- A product's words in Malay or Chinese. Model codes, series names and every
+-- figure stay on product and product_facet: they are the same in any language.
+-- NULL fields fall back to English, which is how a product's category card can
+-- be translated (name, best_for) before its page is (Phase 3).
+CREATE TABLE product_i18n (
+  product_id       INTEGER NOT NULL REFERENCES product(id),
+  lang             TEXT NOT NULL CHECK (lang IN ('ms-MY','zh-MY')),
+  name             TEXT NOT NULL,
+  best_for         TEXT,
+  intro_md         TEXT,
+  seo_title        TEXT,
+  meta_description TEXT,
+  PRIMARY KEY (product_id, lang)
+);
+
+-- A spec bullet in Malay or Chinese, keyed on the English row's position so
+-- product_facet.source_position keeps pointing at the same bullet.
+CREATE TABLE product_spec_i18n (
+  product_id INTEGER NOT NULL REFERENCES product(id),
+  position   INTEGER NOT NULL,
+  lang       TEXT NOT NULL CHECK (lang IN ('ms-MY','zh-MY')),
+  raw_text   TEXT NOT NULL,
+  PRIMARY KEY (product_id, position, lang)
+);
+
+-- Which search term each translated page targets, and why. The brief: target
+-- the variant people actually search in that language; where nothing measures
+-- (most Chinese terms in Malaysia), use the term ranking competitors use.
+-- Every translated title, H1, meta description and Malay slug follows its row.
+CREATE TABLE keyword_map (
+  page      TEXT NOT NULL,   -- 'home' | 'category:<en slug>' | 'article:<translation_key>'
+  lang      TEXT NOT NULL CHECK (lang IN ('ms-MY','zh-MY')),
+  keyword   TEXT NOT NULL,
+  secondary TEXT,            -- carried in the copy, not led with
+  volume    INTEGER,         -- monthly; NULL when the tool returns no figure
+  basis     TEXT NOT NULL CHECK (basis IN ('volume','competitor')),
+  source    TEXT NOT NULL,   -- tool, location, language
+  pulled_on TEXT NOT NULL,
+  note      TEXT,
+  PRIMARY KEY (page, lang)
+);
+
 CREATE TABLE section_i18n (
   section TEXT NOT NULL,   -- article.section
   lang    TEXT NOT NULL CHECK (lang IN ('ms-MY','zh-MY')),

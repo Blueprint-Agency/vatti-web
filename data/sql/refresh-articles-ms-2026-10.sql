@@ -8,9 +8,12 @@
 -- blogs (Mitra10, Tokopedia, Shopee Indonesia). Indonesian pages ranking for a
 -- Malaysian query is what a thin field looks like.
 --
--- Born in Malay. Their English and Chinese editions are written to the same
--- outline and share the translation_key, so the three form an hreflang set.
--- Each also links its nearest existing English cousin at the end.
+-- Born in Malay. Rather than new English articles competing with the three
+-- English hood guides that already rank, each is paired with the closest of
+-- them (decided 2026-10-03): the ductless guide with
+-- which-is-better-ducted-or-ductless-range-hood, the pillar with
+-- types-of-range-hoods. The English leaf is the translation_key; the Chinese
+-- editions are written to the Malay outlines under the same keys.
 --
 -- Moved under /ms/ the same day they shipped (multilingual rollout, Phase 1):
 -- /buying-guide/hood-dapur/ -> /ms/panduan-membeli/hood-dapur/, and likewise
@@ -132,8 +135,8 @@ Hood dapur tanpa tebuk dinding bukan pengganti penuh untuk hood bersaluran, teta
 
 Untuk panduan dalam Bahasa Inggeris, baca [ducted or ductless range hood](/buying-guide/which-is-better-ducted-or-ductless-range-hood/) dan [kitchen hood without vent](/tips-tricks/kitchen-hood-without-vent/). Panduan lengkap memilih hood ada di [hood dapur: panduan lengkap](/ms/panduan-membeli/hood-dapur/).
 
-[Lihat hood dapur VATTI](/kitchen-hood-in-malaysia/)
-', 960, 5, 'Vatti Malaysia', 568, '2026-10-03T12:00:00+08:00', '2026-10-03T12:00:00+08:00', 0, 1, 'ms-MY', 'hood-dapur-tanpa-tebuk-dinding');
+[Lihat hood dapur VATTI](/ms/hood-dapur/)
+', 960, 5, 'Vatti Malaysia', 568, '2026-10-03T12:00:00+08:00', '2026-10-03T12:00:00+08:00', 0, 1, 'ms-MY', 'which-is-better-ducted-or-ductless-range-hood');
 INSERT INTO article_category (article_id, category_id, is_primary) VALUES (108, (SELECT id FROM blog_category WHERE slug = 'buying-guide'), 1);
 -- Image 568 is shared with the English post, whose alt is English.
 UPDATE article SET featured_image_alt =
@@ -228,8 +231,8 @@ Hood dapur yang betul untuk rumah Malaysia bukan sekadar yang paling kuat di ata
 
 Untuk panduan dalam Bahasa Inggeris, baca [3 types of range hoods](/buying-guide/types-of-range-hoods/).
 
-[Bandingkan hood dapur VATTI](/kitchen-hood-in-malaysia/)
-', 943, 5, 'Vatti Malaysia', 399, '2026-10-03T12:00:00+08:00', '2026-10-03T12:00:00+08:00', 0, 1, 'ms-MY', 'hood-dapur');
+[Bandingkan hood dapur VATTI](/ms/hood-dapur/)
+', 943, 5, 'Vatti Malaysia', 399, '2026-10-03T12:00:00+08:00', '2026-10-03T12:00:00+08:00', 0, 1, 'ms-MY', 'types-of-range-hoods');
 INSERT INTO article_category (article_id, category_id, is_primary) VALUES (109, (SELECT id FROM blog_category WHERE slug = 'buying-guide'), 1);
 UPDATE article SET featured_image_alt =
   'Hood dapur VATTI berpanel kaca hitam dengan cerobong, di atas hob kaca dalam dapur berkabinet gelap.'
@@ -240,3 +243,8 @@ UPDATE article SET featured_image_alt =
 INSERT INTO redirect (from_path, to_path, code) VALUES
   ('/buying-guide/hood-dapur/', '/ms/panduan-membeli/hood-dapur/', 301),
   ('/buying-guide/hood-dapur-tanpa-tebuk-dinding/', '/ms/panduan-membeli/hood-dapur-tanpa-tebuk-dinding/', 301);
+
+-- ── the English editions of the two sets ─────────────────────────────────────
+UPDATE article SET translation_key = slug
+ WHERE lang = 'en-MY' AND path IN ('buying-guide/which-is-better-ducted-or-ductless-range-hood',
+                                   'buying-guide/types-of-range-hoods');

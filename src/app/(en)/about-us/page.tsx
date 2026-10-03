@@ -115,8 +115,8 @@ const CERTIFICATIONS = [
 
 export default function AboutPage() {
   const categories = getCategoryCards();
-  const banner = getCategory(BANNER_CATEGORY);
-  const story = getCategory(STORY_CATEGORY);
+  const banner = getCategory("en", BANNER_CATEGORY);
+  const story = getCategory("en", STORY_CATEGORY);
 
   const models = categories.reduce((n, c) => n + c.model_count, 0);
   const regions = getRegions();

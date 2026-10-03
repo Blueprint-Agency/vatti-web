@@ -1,5 +1,14 @@
+import { TAG, prefix, t, type Locale } from "@/i18n";
 import { all, get } from "@/lib/db";
 import type { Facet } from "@/lib/queries/product";
+
+/**
+ * Every function here that produces words takes the edition. English reads the
+ * base tables exactly as before; Malay and Chinese overlay product_category_i18n
+ * and product_i18n, read guides, reasons and FAQs by `lang`, and translate the
+ * generated labels (facets, chips, superlatives) through src/i18n. Figures,
+ * model codes and series names are the same in every edition.
+ */
 
 export type Category = {
   id: number;
@@ -31,6 +40,8 @@ export type Category = {
 
 export type CategoryProduct = {
   slug: string;
+  /** Where the card links: the product page in this edition, or English until it exists. */
+  href: string;
   name: string;
   model_code: string;
   secondary_model: string | null;
@@ -59,6 +70,7 @@ export type Collection = { slug: string; name: string };
 
 export type Signature = {
   slug: string;
+  href: string;
   name: string;
   model_code: string;
   series: string | null;
@@ -113,6 +125,48 @@ export function categorySlugs(): string[] {
   ).map((r) => r.slug);
 }
 
+/** One edition's category URL segments: the English slugs, or the translated rows. */
+export function categoryParams(locale: Locale): string[] {
+  if (locale === "en") return categorySlugs();
+  return all<{ slug: string }>(
+    `SELECT i.slug FROM product_category_i18n i
+       JOIN product_category c ON c.id = i.category_id
+      WHERE i.lang = ? ORDER BY c.sort_order`,
+    TAG[locale]
+  ).map((r) => r.slug);
+}
+
+/** A category's URL in every edition it exists in, keyed by locale. */
+export function categoryEditions(categoryId: number): Partial<Record<Locale, string>> {
+  const en = get<{ slug: string }>(`SELECT slug FROM product_category WHERE id = ?`, categoryId);
+  const out: Partial<Record<Locale, string>> = en ? { en: `/${en.slug}/` } : {};
+  for (const row of all<{ lang: string; slug: string }>(
+    `SELECT lang, slug FROM product_category_i18n WHERE category_id = ?`,
+    categoryId
+  )) {
+    const locale = row.lang === "ms-MY" ? "ms" : "zh";
+    out[locale] = `${prefix(locale)}/${row.slug}/`;
+  }
+  return out;
+}
+
+/** Category URL by its English slug, in an edition; English when not translated yet. */
+export function localCategoryPath(locale: Locale, enSlug: string): string {
+  if (locale === "en") return `/${enSlug}/`;
+  const row = get<{ slug: string }>(
+    `SELECT i.slug FROM product_category_i18n i JOIN product_category c ON c.id = i.category_id
+      WHERE c.slug = ? AND i.lang = ?`,
+    enSlug,
+    TAG[locale]
+  );
+  return row ? `${prefix(locale)}/${row.slug}/` : `/${enSlug}/`;
+}
+
+/** A product's URL in an edition. Product pages are English-only until Phase 3. */
+export function localProductPath(_locale: Locale, slug: string): string {
+  return `/${slug}/`;
+}
+
 /**
  * The five category hero backdrops, for a page that needs a kitchen behind its
  * heading but does not belong to one category.
@@ -130,15 +184,37 @@ export function categoryBackdrops(): string[] {
   ).map((r) => r.url);
 }
 
-export function getCategory(slug: string): Category | undefined {
-  return get<Category>(
-    `SELECT id, slug, name, h1, seo_title, meta_description, intro_md, signature_product_id,
-            hero_image_url, finder_image_url,
-            hero_product_image_url, hero_product_image_alt, hero_product_image_focus,
-            signature_image_url, signature_image_alt, signature_image_focus
-       FROM product_category WHERE slug = ?`,
+/**
+ * By the URL segment of the edition. A translated category keeps its English
+ * `slug` field as identity (it is what the dictionaries and the guide map are
+ * keyed on) and gains `path`, its URL in this edition.
+ */
+export function getCategory(locale: Locale, slug: string): (Category & { path: string }) | undefined {
+  if (locale === "en") {
+    const row = get<Category>(
+      `SELECT id, slug, name, h1, seo_title, meta_description, intro_md, signature_product_id,
+              hero_image_url, finder_image_url,
+              hero_product_image_url, hero_product_image_alt, hero_product_image_focus,
+              signature_image_url, signature_image_alt, signature_image_focus
+         FROM product_category WHERE slug = ?`,
+      slug
+    );
+    return row && { ...row, path: `/${row.slug}/` };
+  }
+  const row = get<Category & { local_slug: string }>(
+    `SELECT c.id, c.slug, i.slug AS local_slug, i.name, i.h1, i.seo_title, i.meta_description,
+            i.intro_md, c.signature_product_id, c.hero_image_url, c.finder_image_url,
+            c.hero_product_image_url, c.hero_product_image_alt, c.hero_product_image_focus,
+            c.signature_image_url, coalesce(i.signature_image_alt, c.signature_image_alt) AS signature_image_alt,
+            c.signature_image_focus
+       FROM product_category_i18n i JOIN product_category c ON c.id = i.category_id
+      WHERE i.lang = ? AND i.slug = ?`,
+    TAG[locale],
     slug
   );
+  if (!row) return undefined;
+  const { local_slug, ...category } = row;
+  return { ...category, path: `${prefix(locale)}/${local_slug}/` };
 }
 
 /**
@@ -202,24 +278,18 @@ const BETTER: Record<string, "high" | "low"> = {
   functions: "high",
 };
 
-/**
- * How the summary band names a facet's best value, where "Peak <label>" is
- * wrong. Everything not listed here gets that default, which suits any
- * measurement; the exceptions are the facets that are not measurements. Noise
- * is best at the bottom, and a burner count is counted rather than measured.
- */
-const SUPERLATIVE: Record<string, string> = {
-  noise: "Quietest",
-  burners: "Most burners",
-  functions: "Most functions",
-};
+// How the summary band names a facet's best value ("Quietest", "Peak airflow")
+// lives in src/i18n under filters.superlative and filters.peak: the default suits
+// any measurement; the exceptions are noise (best at the bottom) and the counts.
 
-export function getCategoryProducts(categoryId: number): CategoryProduct[] {
-  const rows = all<Omit<CategoryProduct, "facets" | "filters" | "auto_clean"> & { id: number }>(
-    `SELECT p.id, p.slug, p.name, p.model_code, p.secondary_model, p.series,
-            p.colour_variant, p.best_for, i.url, i.alt
+export function getCategoryProducts(categoryId: number, locale: Locale = "en"): CategoryProduct[] {
+  const d = t(locale);
+  const rows = all<Omit<CategoryProduct, "facets" | "filters" | "auto_clean" | "href"> & { id: number }>(
+    `SELECT p.id, p.slug, coalesce(pi.name, p.name) AS name, p.model_code, p.secondary_model,
+            p.series, p.colour_variant, coalesce(pi.best_for, p.best_for) AS best_for, i.url, i.alt
        FROM product p
        LEFT JOIN image i ON i.id = p.hero_image_id
+       LEFT JOIN product_i18n pi ON pi.product_id = p.id AND pi.lang = ?
       WHERE p.category_id = ? AND p.is_published = 1
         -- One card per colourway group (V917, DWID3): the lowest sort_order
         -- member fronts the grid, the rest are reachable only through its
@@ -229,6 +299,7 @@ export function getCategoryProducts(categoryId: number): CategoryProduct[] {
           SELECT MIN(sort_order) FROM product
            WHERE variant_group = p.variant_group AND is_published = 1))
       ORDER BY p.sort_order`,
+    TAG[locale],
     categoryId
   );
   if (rows.length === 0) return [];
@@ -262,7 +333,9 @@ export function getCategoryProducts(categoryId: number): CategoryProduct[] {
   );
 
   return rows.map(({ id, ...r }) => {
-    const mine = facets.filter((f) => f.product_id === id);
+    const mine = facets
+      .filter((f) => f.product_id === id)
+      .map((f) => ({ ...f, label: d.facets[f.label] ?? f.label }));
     const text = specs
       .filter((s) => s.product_id === id)
       .map((s) => s.raw_text)
@@ -272,16 +345,18 @@ export function getCategoryProducts(categoryId: number): CategoryProduct[] {
     // the four models that have it, so it earns the suffix; on the rest the
     // oil-capture figure is the useful second half, and it comes from the
     // measured facet rather than from the sentence it was extracted out of.
-    const cycle = CLEAN_CYCLES.find((c) => c.test.test(text))?.label ?? null;
+    const found = CLEAN_CYCLES.find((c) => c.test.test(text))?.label;
+    const cycle = found ? (d.filters.cycles[found] ?? found) : null;
     const capture = mine.find((f) => f.facet === "filtration");
     const suffix = /pm ?2\.5/i.test(text)
       ? " + PM2.5"
       : capture
-        ? ` (${fmt(capture.value)}% oil)`
+        ? d.filters.oil(fmt(capture.value, locale))
         : "";
 
     return {
       ...r,
+      href: localProductPath(locale, r.slug),
       auto_clean: cycle && `${cycle}${suffix}`,
       facets: mine,
       filters: [
@@ -329,21 +404,23 @@ export type FilterGroup = {
  */
 export function buildFilters(
   products: CategoryProduct[],
-  collections: Collection[]
+  collections: Collection[],
+  locale: Locale = "en"
 ): FilterGroup[] {
+  const f = t(locale).filters;
   const groups: FilterGroup[] = [];
 
   if (collections.length > 1) {
     const options = collections
       .map((c) => ({
         id: `series:${c.slug}`,
-        label: c.name,
+        label: f.collections[c.slug] ?? c.name,
         count: products.filter((p) => p.filters.includes(`series:${c.slug}`)).length,
       }))
       // A term with nothing in it is a tab that empties the grid.
       .filter((o) => o.count > 0);
     if (options.length > 1) {
-      groups.push({ key: "series", label: "Series", all: true, options });
+      groups.push({ key: "series", label: f.series, all: true, options });
     }
   }
 
@@ -382,9 +459,13 @@ export function buildFilters(
     // two chips selecting the same models is worse than no chips.
     if (low < high) {
       const bands = [
-        { id: `${facet}:0`, label: `Up to ${fmt(low)}`, in: (v: number) => v <= low },
-        { id: `${facet}:1`, label: `${fmt(low)} to ${fmt(high)}`, in: (v: number) => v > low && v <= high },
-        { id: `${facet}:2`, label: `Over ${fmt(high)}`, in: (v: number) => v > high },
+        { id: `${facet}:0`, label: f.upTo(fmt(low, locale)), in: (v: number) => v <= low },
+        {
+          id: `${facet}:1`,
+          label: f.between(fmt(low, locale), fmt(high, locale)),
+          in: (v: number) => v > low && v <= high,
+        },
+        { id: `${facet}:2`, label: f.over(fmt(high, locale)), in: (v: number) => v > high },
       ];
       for (const p of products) {
         const value = p.facets.find((f) => f.facet === facet)?.value;
@@ -402,22 +483,22 @@ export function buildFilters(
         // (three ovens at 75 L). A chip that selects nothing is a dead control.
         .filter((o) => o.count > 0);
       if (options.length > 1) {
-        groups.push({ key: facet, label: `${label} (${unit})`, options });
+        groups.push({ key: facet, label: f.facetGroup(label, unit), options });
       }
     }
   }
 
-  const features = FEATURE_TAGS.map((t) => ({
-    id: `tag:${t.tag}`,
-    label: t.label,
-    count: products.filter((p) => p.filters.includes(`tag:${t.tag}`)).length,
+  const features = FEATURE_TAGS.map((tag) => ({
+    id: `tag:${tag.tag}`,
+    label: f.tags[tag.tag] ?? tag.label,
+    count: products.filter((p) => p.filters.includes(`tag:${tag.tag}`)).length,
   }))
     // Nothing and everything are both non-filters.
     .filter((o) => o.count > 0 && o.count < products.length);
 
   // One chip is not a filter, it is a fact about a single model. The hobs have
   // exactly one tagged feature between eleven products and get no group at all.
-  if (features.length > 1) groups.push({ key: "feature", label: "Features", options: features });
+  if (features.length > 1) groups.push({ key: "feature", label: f.features, options: features });
 
   return groups;
 }
@@ -429,7 +510,8 @@ export type Extreme = { facet: string; label: string; value: number; unit: strin
  * best value the category reaches on each of its first three measurements.
  * "Best" is the high end everywhere except noise, where it is the low one.
  */
-export function getRangeSummary(products: CategoryProduct[]): Extreme[] {
+export function getRangeSummary(products: CategoryProduct[], locale: Locale = "en"): Extreme[] {
+  const f = t(locale).filters;
   const seen = new Set<string>();
   const order: string[] = [];
   for (const p of products) {
@@ -457,7 +539,7 @@ export function getRangeSummary(products: CategoryProduct[]): Extreme[] {
       );
       return {
         facet,
-        label: SUPERLATIVE[facet] ?? `Peak ${best.f.label.toLowerCase()}`,
+        label: f.superlative[facet] ?? f.peak(best.f.label),
         value: best.f.value,
         unit: best.f.unit,
         model: best.model,
@@ -493,12 +575,16 @@ export function getCompareColumns(products: CategoryProduct[]): Column[] {
 }
 
 /** The model the category leads with, with enough detail to sell it alone. */
-export function getSignature(productId: number): Signature | undefined {
-  const row = get<Omit<Signature, "facets" | "highlights">>(
-    `SELECT p.slug, p.name, p.model_code, p.series, p.intro_md, i.url, i.alt
+export function getSignature(productId: number, locale: Locale = "en"): Signature | undefined {
+  const d = t(locale);
+  const row = get<Omit<Signature, "facets" | "highlights" | "href">>(
+    `SELECT p.slug, coalesce(pi.name, p.name) AS name, p.model_code, p.series,
+            coalesce(pi.intro_md, p.intro_md) AS intro_md, i.url, i.alt
        FROM product p
        LEFT JOIN image i ON i.id = p.hero_image_id
+       LEFT JOIN product_i18n pi ON pi.product_id = p.id AND pi.lang = ?
       WHERE p.id = ? AND p.is_published = 1`,
+    TAG[locale],
     productId
   );
   if (!row) return undefined;
@@ -506,42 +592,48 @@ export function getSignature(productId: number): Signature | undefined {
   const facets = all<Facet>(
     `SELECT facet, value, unit, label FROM product_facet WHERE product_id = ? ORDER BY position`,
     productId
-  );
+  ).map((f) => ({ ...f, label: d.facets[f.label] ?? f.label }));
   // The bullets the readout has not already said, and only the unkeyed ones —
   // every keyed bullet on these products is a measurement the strip carries.
   const highlights = all<{ raw_text: string }>(
-    `SELECT raw_text FROM product_spec
-      WHERE product_id = ? AND spec_key IS NULL
-        AND position NOT IN (SELECT source_position FROM product_facet WHERE product_id = ?)
-      ORDER BY position`,
+    `SELECT coalesce(si.raw_text, s.raw_text) AS raw_text FROM product_spec s
+       LEFT JOIN product_spec_i18n si
+         ON si.product_id = s.product_id AND si.position = s.position AND si.lang = ?
+      WHERE s.product_id = ? AND s.spec_key IS NULL
+        AND s.position NOT IN (SELECT source_position FROM product_facet WHERE product_id = ?)
+      ORDER BY s.position`,
+    TAG[locale],
     productId,
     productId
   ).map((r) => r.raw_text);
 
-  return { ...row, facets, highlights };
+  return { ...row, href: localProductPath(locale, row.slug), facets, highlights };
 }
 
-export function getGuides(categoryId: number): Guide[] {
+export function getGuides(categoryId: number, locale: Locale = "en"): Guide[] {
   return all<Guide>(
     `SELECT heading, body_md, figure, figure_unit FROM category_guide
-      WHERE category_id = ? ORDER BY position`,
-    categoryId
+      WHERE category_id = ? AND lang = ? ORDER BY position`,
+    categoryId,
+    TAG[locale]
   );
 }
 
-export function getReasons(categoryId: number): Reason[] {
+export function getReasons(categoryId: number, locale: Locale = "en"): Reason[] {
   return all<Reason>(
     `SELECT title, body_md, figure, figure_unit, icon FROM category_reason
-      WHERE category_id = ? ORDER BY position`,
-    categoryId
+      WHERE category_id = ? AND lang = ? ORDER BY position`,
+    categoryId,
+    TAG[locale]
   );
 }
 
-export function getFaqs(categoryId: number): Faq[] {
+export function getFaqs(categoryId: number, locale: Locale = "en"): Faq[] {
   return all<Faq>(
     `SELECT question, answer_md FROM category_faq
-      WHERE category_id = ? ORDER BY position`,
-    categoryId
+      WHERE category_id = ? AND lang = ? ORDER BY position`,
+    categoryId,
+    TAG[locale]
   );
 }
 
@@ -561,6 +653,6 @@ export function getReviews(limit: number): Review[] {
   );
 }
 
-function fmt(n: number): string {
-  return Number.isInteger(n) ? n.toLocaleString("en-MY") : String(n);
+function fmt(n: number, locale: Locale = "en"): string {
+  return Number.isInteger(n) ? n.toLocaleString(TAG[locale]) : String(n);
 }

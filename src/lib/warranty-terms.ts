@@ -1,3 +1,5 @@
+import { listJoin, t, type Locale } from "@/i18n";
+
 /**
  * The warranty agreement, carried over from the live page.
  *
@@ -41,6 +43,7 @@ export const PERIODS = [
     unit: "years",
     label:
       "Cooker hood, cooker hob, combi oven, built-in oven, built-in steam oven, microwave, water dispenser and dishwasher",
+    id: "appliance",
     on: "the appliance",
     categories: [
       "kitchen-hood-in-malaysia",
@@ -53,6 +56,7 @@ export const PERIODS = [
     value: "10",
     unit: "years",
     label: "Cooker hood motor, all models",
+    id: "motor",
     on: "the motor",
     categories: ["kitchen-hood-in-malaysia"],
   },
@@ -60,6 +64,7 @@ export const PERIODS = [
     value: "2+3",
     unit: "years",
     label: "Cooker hood auto-clean components, with eWarranty registration",
+    id: "autoclean",
     on: "the auto-clean components once registered",
     categories: ["kitchen-hood-in-malaysia"],
   },
@@ -67,18 +72,25 @@ export const PERIODS = [
     value: "Lifetime",
     unit: "",
     label: "Cooker hob tempered glass, against cracking",
+    id: "glass",
     on: "the tempered glass against cracking",
     categories: ["cooker-hob-in-malaysia"],
   },
 ];
 
-/** "2 years on the appliance, 10 years on the motor and ..." for one category, or null. */
-export function warrantyLine(categorySlug: string): string | null {
-  const parts = PERIODS.filter((p) => p.categories.includes(categorySlug)).map((p) =>
-    p.unit ? `${p.value} ${p.unit} on ${p.on}` : `${p.value.toLowerCase()} cover on ${p.on}`,
-  );
+/**
+ * "2 years on the appliance, 10 years on the motor and ..." for one category,
+ * in the edition's words, or null. `on` above is the English phrase; the
+ * dictionaries carry each edition's under the period's `id`.
+ */
+export function warrantyLine(categorySlug: string, locale: Locale = "en"): string | null {
+  const w = t(locale).warranty;
+  const parts = PERIODS.filter((p) => p.categories.includes(categorySlug)).map((p) => {
+    const on = w.on[p.id] ?? p.on;
+    return p.unit ? w.term(p.value, on) : w.lifetime(on);
+  });
   if (parts.length === 0) return null;
-  return parts.length === 1 ? parts[0] : `${parts.slice(0, -1).join(", ")} and ${parts.at(-1)}`;
+  return listJoin(locale, parts);
 }
 
 export const TERMS = [

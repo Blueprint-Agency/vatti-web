@@ -110,7 +110,7 @@ UPDATE product_video SET
 -- so 3125 is the one used here. The discrepancy is the manufacturer's.
 
 UPDATE product SET intro_md =
-  'The loudest hood in the range on paper and the quietest in the kitchen: 3,125 m³/h against 1,300 Pa of static pressure, the highest pressure VATTI sells, at 46.5 dB. Glass instead of a filter mesh, so oil runs into a cup rather than setting into metal. A PM2.5 sensor decides when it has finished, and a wave of the hand starts it. 896mm wide, hung 300mm over the hob.'
+  'Among the most powerful hoods in the range and the quietest in the kitchen: 3,125 m³/h against 1,300 Pa of static pressure at 46.5 dB, the lowest noise figure in the hood range. Glass instead of a filter mesh, so oil runs into a cup rather than setting into metal. A PM2.5 sensor decides when it has finished, and a wave of the hand starts it. 896mm wide, hung 300mm over the hob.'
   WHERE slug = 'vatti-aetheris-series-cooker-hood-v929';
 
 -- Product size from the specification panel; the rest from the drawing.
@@ -156,7 +156,7 @@ SELECT id, 3, 'What ducting does the V929 need?',
   FROM product WHERE slug = 'vatti-aetheris-series-cooker-hood-v929';
 INSERT INTO product_faq (product_id, position, question, answer_md)
 SELECT id, 4, 'Is the V929 strong enough for a high-floor condominium?',
-  'It is the strongest VATTI sells for exactly that case: 3,125 m³/h at 1,300 Pa of static pressure. Airflow moves air in an open kitchen; static pressure is what pushes it down a long shared duct with bends in it, and 1,300 Pa is half as much again as most of the range.'
+  'For most, yes: 3,125 m³/h at 1,300 Pa of static pressure. Airflow moves air in an open kitchen; static pressure is what pushes it down a long shared duct with bends in it, and 1,300 Pa is half as much again as most of the range. For the longest or most bent runs, the [V938](/vatti-hidden-series-range-hood-v938/) at 1,600 Pa and the [V960](/vatti-stellar-series-cooker-hood-v960/) at 1,700 Pa push harder still.'
   FROM product WHERE slug = 'vatti-aetheris-series-cooker-hood-v929';
 INSERT INTO product_faq (product_id, position, question, answer_md)
 SELECT id, 5, 'Does the V929 have a filter to clean?',

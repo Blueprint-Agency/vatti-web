@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 
+import { t, type Locale } from "@/i18n";
 import type { CategoryCard, Region } from "@/lib/queries/home";
 
 import { buildQuestions, useEnquiry } from "./enquiry";
@@ -21,11 +22,13 @@ import { buildQuestions, useEnquiry } from "./enquiry";
  * ./enquiry for why this is not a form.
  */
 export function EnquiryFunnel({
+  locale = "en",
   categories,
   regions,
   category,
   hobWidth = true,
 }: {
+  locale?: Locale;
   /** The whole catalogue, for the front page. Omitted on a category page. */
   categories?: CategoryCard[];
   regions: Region[];
@@ -50,13 +53,15 @@ export function EnquiryFunnel({
   hobWidth?: boolean;
 }) {
   const questions = useMemo(
-    () => buildQuestions({ categories, regions, category, hobWidth }),
-    [categories, category, regions, hobWidth]
+    () => buildQuestions({ locale, categories, regions, category, hobWidth }),
+    [locale, categories, category, regions, hobWidth]
   );
   const { answers, name, setName, toggle, answered, message, href } = useEnquiry(
     questions,
-    category
+    category,
+    locale
   );
+  const f = t(locale).funnel;
 
   // The name is the last card. It is the only step that is not a question, so
   // it is counted here and nowhere in ./enquiry.
@@ -94,7 +99,7 @@ export function EnquiryFunnel({
           jumping ahead loses nothing, and jumping back is how an answer gets
           changed. */}
         <ol className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
-          {[...questions.map((q) => q.short), "Name"].map((label, i) => {
+          {[...questions.map((q) => q.short), f.nameStep].map((label, i) => {
             const current = i === step;
             const done = isDone(i);
             return (
@@ -137,7 +142,7 @@ export function EnquiryFunnel({
             motion the showcase panels use. */}
           <div key={step} className="animate-panel p-5 sm:p-8">
             <p className="readout text-xs text-ink-muted">
-              Step {step + 1} of {steps}
+              {f.step(step + 1, steps)}
             </p>
 
             {question ? (
@@ -149,7 +154,7 @@ export function EnquiryFunnel({
                 </legend>
                 <p className="mt-2 max-w-[48ch] text-ink-muted">
                   {question.hint}
-                  {question.multiple && " Choose any."}
+                  {question.multiple && f.chooseAny}
                 </p>
 
                 <div className="mt-6 grid gap-2">
@@ -204,11 +209,9 @@ export function EnquiryFunnel({
                   id="funnel-name-heading"
                   className={headingClass}
                 >
-                  Your name
+                  {f.yourName}
                 </h3>
-                <p className="mt-2 max-w-[48ch] text-ink-muted">
-                  Optional. It just makes the reply friendlier.
-                </p>
+                <p className="mt-2 max-w-[48ch] text-ink-muted">{f.nameHint}</p>
                 <input
                   type="text"
                   aria-labelledby="funnel-name-heading"
@@ -216,7 +219,7 @@ export function EnquiryFunnel({
                   onChange={(e) => setName(e.target.value)}
                   autoComplete="given-name"
                   className="mt-6 w-full max-w-sm rounded-sm border border-line-strong bg-void px-3.5 py-2.5 text-ink placeholder:text-ink-muted focus-visible:border-teal"
-                  placeholder="Aisyah"
+                  placeholder={f.namePlaceholder}
                 />
               </div>
             )}
@@ -228,13 +231,11 @@ export function EnquiryFunnel({
                 disabled={step === 0}
                 className="rounded-sm border border-line-strong px-4 py-2.5 text-sm font-medium text-ink transition-colors hover:border-teal hover:text-teal disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-line-strong disabled:hover:text-ink"
               >
-                Back
+                {f.back}
               </button>
 
               {last ? (
-                <p className="text-right text-sm text-ink-muted">
-                  That is everything. Your message is ready to send.
-                </p>
+                <p className="text-right text-sm text-ink-muted">{f.ready}</p>
               ) : (
                 <button
                   type="button"
@@ -245,7 +246,7 @@ export function EnquiryFunnel({
                       : "border border-line-strong text-ink hover:border-teal hover:text-teal"
                   }`}
                 >
-                  {doneHere ? "Next" : "Skip"}
+                  {doneHere ? f.next : f.skip}
                 </button>
               )}
             </div>
@@ -260,10 +261,10 @@ export function EnquiryFunnel({
       <div className="rounded-sm border border-line bg-void p-5 sm:p-6 lg:sticky lg:top-24 lg:self-start">
         <div className="flex items-baseline justify-between gap-4 border-b border-line pb-4">
           <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-ink-muted">
-            Your message
+            {f.yourMessage}
           </p>
           <p className="readout shrink-0 text-xs text-ink-muted">
-            {answered}/{questions.length} answered
+            {f.answered(answered, questions.length)}
           </p>
         </div>
 
@@ -277,11 +278,9 @@ export function EnquiryFunnel({
           rel="noopener"
           className="mt-6 block rounded-sm bg-teal px-6 py-3 text-center font-semibold text-void transition-opacity hover:opacity-90"
         >
-          Open WhatsApp
+          {f.open}
         </a>
-        <p className="mt-3 text-center text-sm text-ink-muted">
-          Opens a chat with this text ready. You still press send.
-        </p>
+        <p className="mt-3 text-center text-sm text-ink-muted">{f.opensHint}</p>
       </div>
     </div>
   );

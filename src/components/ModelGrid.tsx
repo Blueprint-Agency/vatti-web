@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 
+import { TAG, t, type Locale } from "@/i18n";
 import type { CategoryProduct, FilterGroup } from "@/lib/queries/category";
 import { WHATSAPP } from "@/lib/site";
 
@@ -22,16 +23,19 @@ import { WHATSAPP } from "@/lib/site";
  * describe, and it is the only combination that keeps a count honest.
  */
 export function ModelGrid({
+  locale = "en",
   products,
   groups,
   noun,
 }: {
+  locale?: Locale;
   products: CategoryProduct[];
   groups: FilterGroup[];
   /** Singular, lower case: 'kitchen hood'. Used in the empty state. */
   noun: string;
 }) {
   const [active, setActive] = useState<string[]>([]);
+  const g = t(locale).grid;
 
   const shown = useMemo(() => {
     if (active.length === 0) return products;
@@ -76,7 +80,7 @@ export function ModelGrid({
                         : "border-teal bg-teal text-void"
                     }`}
                   >
-                    All
+                    {g.all}
                     <span
                       className={`readout text-xs ${
                         group.options.some((o) => active.includes(o.id))
@@ -121,8 +125,8 @@ export function ModelGrid({
       <div className="flex flex-wrap items-center justify-between gap-4 py-5">
         <p className="readout text-sm text-ink-muted" aria-live="polite">
           {shown.length === products.length
-            ? `${products.length} ${products.length === 1 ? "model" : "models"}`
-            : `${shown.length} of ${products.length} models`}
+            ? g.count(products.length)
+            : g.shown(shown.length, products.length)}
         </p>
         {active.length > 0 && (
           <button
@@ -130,25 +134,22 @@ export function ModelGrid({
             onClick={() => setActive([])}
             className="text-sm text-teal transition-opacity hover:opacity-80"
           >
-            Clear filters
+            {g.clear}
           </button>
         )}
       </div>
 
       {shown.length === 0 ? (
         <div className="border-t border-line py-16 text-center">
-          <p className="text-lg">No {noun} carries all of those at once.</p>
-          <p className="mx-auto mt-3 max-w-[46ch] text-ink-muted">
-            Drop one of the filters, or tell us what the kitchen has to do and we will say which
-            model gets closest.
-          </p>
+          <p className="text-lg">{g.none(noun)}</p>
+          <p className="mx-auto mt-3 max-w-[46ch] text-ink-muted">{g.noneHelp}</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <button
               type="button"
               onClick={() => setActive([])}
               className="rounded-sm border border-line-strong px-6 py-3 font-medium text-ink transition-colors hover:border-teal hover:text-teal"
             >
-              Clear filters
+              {g.clear}
             </button>
             <a
               href={WHATSAPP}
@@ -156,7 +157,7 @@ export function ModelGrid({
               rel="noopener"
               className="rounded-sm bg-teal px-6 py-3 font-semibold text-void transition-opacity hover:opacity-90"
             >
-              Ask us instead
+              {g.askUs}
             </a>
           </div>
         </div>
@@ -195,7 +196,7 @@ export function ModelGrid({
               style={{ animationDelay: `${Math.min(i, 8) * 40}ms` }}
             >
               <Link
-                href={`/${p.slug}/`}
+                href={p.href}
                 className="group flex h-full flex-col gap-4 rounded-sm border border-line bg-surface p-4 transition-colors hover:border-line-strong"
               >
                 {p.url && (
@@ -247,7 +248,7 @@ export function ModelGrid({
                           {f.label}
                         </dt>
                         <dd className="readout text-sm text-ink">
-                          {fmt(f.value)}
+                          {fmt(f.value, TAG[locale])}
                           <span className="text-ink-muted"> {f.unit}</span>
                         </dd>
                       </div>
@@ -263,6 +264,6 @@ export function ModelGrid({
   );
 }
 
-function fmt(n: number): string {
-  return Number.isInteger(n) ? n.toLocaleString("en-MY") : String(n);
+function fmt(n: number, tag: string): string {
+  return Number.isInteger(n) ? n.toLocaleString(tag) : String(n);
 }
