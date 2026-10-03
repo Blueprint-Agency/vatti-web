@@ -65,7 +65,7 @@ names as secrets.
 | `RESEND_API_KEY` | `/api/ewarranty` | Runtime. Without it the endpoint returns 503 and the form says so rather than losing the registration. |
 | `EWARRANTY_TO` | `/api/ewarranty` | Where registrations land. Comma-separated for more than one inbox. Defaults to `enquiry@vattimalaysia.com`, so it works unset. |
 | `EWARRANTY_FROM` | `/api/ewarranty` | Must be on a domain verified in Resend. `vattimalaysia.com` is verified, so the default `VATTI eWarranty <ewarranty@vattimalaysia.com>` works unset. |
-| `GOOGLE_SITE_VERIFICATION` | `src/app/layout.tsx` | Build-time. The `content="…"` token only, not the whole `<meta>` tag. Unset, the tag is omitted, which is correct until the property is claimed. |
+| `GOOGLE_SITE_VERIFICATION` | `src/app/layout.tsx` | Optional override. The token for `https://vattimalaysia.com/` is already in the layout (claimed 2026-10-03); set this only to swap it. The `content="…"` value only, not the whole `<meta>` tag. |
 | `MEDIA_MIGRATED` | `pnpm db:check` | Set to `1` once media is repointed at the CDN; turns on the checks that fail if a legacy WordPress URL survives into the DB or an article body. |
 
 Two public values are deliberately **not** environment variables, because they ship in the HTML

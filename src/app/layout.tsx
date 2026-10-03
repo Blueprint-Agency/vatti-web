@@ -110,13 +110,18 @@ export const metadata: Metadata = {
 
   // Search Console ownership. The meta-tag method is worth having even though
   // the domain is also verifiable by DNS TXT, because it travels with the
-  // deployment rather than the registrar. Unset => Next omits the tag entirely,
-  // which is the correct state until the property is claimed. Paste the token
-  // from Search Console → Add property → URL prefix → HTML tag into
-  // GOOGLE_SITE_VERIFICATION (the content="…" value only, not the whole tag).
-  verification: process.env.GOOGLE_SITE_VERIFICATION
-    ? { google: process.env.GOOGLE_SITE_VERIFICATION }
-    : undefined,
+  // deployment rather than the registrar.
+  //
+  // The token is in code, not only in the environment: it is printed in every
+  // page's HTML, so it is no secret, and the env-only version shipped with the
+  // variable never set on Vercel, which is how the agency's account sat as
+  // siteUnverifiedUser. Claimed 2026-10-03 for https://vattimalaysia.com/ (URL
+  // prefix, HTML tag). GOOGLE_SITE_VERIFICATION still overrides it. Do not
+  // remove the tag once verified: Google re-checks, and the account drops back
+  // to unverified when the tag disappears.
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION || "gmTGGmarVz1xW4GfC6zQbq5jSa_GjwOHsv-vHHQXXc8",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
