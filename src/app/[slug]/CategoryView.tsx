@@ -37,6 +37,7 @@ import type {
 } from "@/lib/queries/category";
 import type { ArticleTeaser, Region } from "@/lib/queries/home";
 import { WHATSAPP, whatsappLink } from "@/lib/site";
+import { warrantyLine } from "@/lib/warranty-terms";
 
 /**
  * The category template. These pages outrank the homepage — /kitchen-hood/ and
@@ -88,6 +89,7 @@ export function CategoryView({
   guideArticle?: ArticleTeaser;
 }) {
   const noun = category.name.toLowerCase();
+  const warranty = warrantyLine(category.slug);
   const figures = guides.filter((g) => g.figure);
   const prose = guides.filter((g) => !g.figure);
   const scene = category.hero_product_image_url;
@@ -876,7 +878,13 @@ export function CategoryView({
                   Find a dealer
                 </Link>
               </div>
-              <p className="mt-8 text-sm text-ink-muted">
+              {warranty && (
+                <p className="mt-8 flex items-start gap-2.5 text-sm leading-relaxed text-ink">
+                  <ShieldCheck aria-hidden size={18} weight="light" className="mt-px shrink-0 text-teal" />
+                  <span>VATTI warranty: {warranty}.</span>
+                </p>
+              )}
+              <p className={`${warranty ? "mt-3" : "mt-8"} text-sm text-ink-muted`}>
                 Already bought one?{" "}
                 <Link href="/vatti-ewarranty/" className="text-teal transition-opacity hover:opacity-80">
                   Register it for warranty

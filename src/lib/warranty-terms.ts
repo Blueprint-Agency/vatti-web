@@ -25,21 +25,61 @@
  * hood's auto-clean components that the site had never stated at all. Both are
  * benefits the site was under-selling, not new promises.
  */
+/**
+ * `categories` and `on` exist for the closing band of each category page,
+ * which states the terms that apply to that range in one line (content
+ * schedule Q4, item 3). Electrolux ranks first for "kitchen hood malaysia"
+ * stating 2 years; we hold 10 on the motor and said so only on product pages.
+ *
+ * The water purifier page is in no list on purpose. The 2 year clause names
+ * the "water dispenser", which is the V818WD heater, not the purifier unit,
+ * and a category page is not the place to stretch a warranty clause.
+ */
 export const PERIODS = [
   {
     value: "2",
     unit: "years",
     label:
       "Cooker hood, cooker hob, combi oven, built-in oven, built-in steam oven, microwave, water dispenser and dishwasher",
+    on: "the appliance",
+    categories: [
+      "kitchen-hood-in-malaysia",
+      "cooker-hob-in-malaysia",
+      "combi-and-steam-oven-in-malaysia",
+      "dishwasher-in-malaysia",
+    ],
   },
-  { value: "10", unit: "years", label: "Cooker hood motor, all models" },
+  {
+    value: "10",
+    unit: "years",
+    label: "Cooker hood motor, all models",
+    on: "the motor",
+    categories: ["kitchen-hood-in-malaysia"],
+  },
   {
     value: "2+3",
     unit: "years",
     label: "Cooker hood auto-clean components, with eWarranty registration",
+    on: "the auto-clean components once registered",
+    categories: ["kitchen-hood-in-malaysia"],
   },
-  { value: "Lifetime", unit: "", label: "Cooker hob tempered glass, against cracking" },
+  {
+    value: "Lifetime",
+    unit: "",
+    label: "Cooker hob tempered glass, against cracking",
+    on: "the tempered glass against cracking",
+    categories: ["cooker-hob-in-malaysia"],
+  },
 ];
+
+/** "2 years on the appliance, 10 years on the motor and ..." for one category, or null. */
+export function warrantyLine(categorySlug: string): string | null {
+  const parts = PERIODS.filter((p) => p.categories.includes(categorySlug)).map((p) =>
+    p.unit ? `${p.value} ${p.unit} on ${p.on}` : `${p.value.toLowerCase()} cover on ${p.on}`,
+  );
+  if (parts.length === 0) return null;
+  return parts.length === 1 ? parts[0] : `${parts.slice(0, -1).join(", ")} and ${parts.at(-1)}`;
+}
 
 export const TERMS = [
   "Warranty is effective only for the original buyer, and VATTI products must be purchased from an authorised dealer.",

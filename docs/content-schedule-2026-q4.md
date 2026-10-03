@@ -29,10 +29,10 @@ search, whose SERP incumbents run DA 5 to 18.
 |---|---|---|---|---|---|
 | 1 | Dishwasher pillar, rewrite for the generic head term | dishwasher malaysia | Rework | Not started | `category-content.sql` unchanged for this page since the workbook |
 | 2 | Combi and steam oven pillar, rewrite and merge steam terms | combi oven malaysia | Rework | Not started | as above |
-| 3 | Kitchen hood pillar, rewrite and absorb the 18 hood posts | kitchen hood malaysia | Rework | Not started | 25 hood-slugged articles still published; `docs/competitor-gap-kitchen-hood.md` (14 Sep) is the brief for this rewrite |
+| 3 | Kitchen hood pillar, rewrite and absorb the 18 hood posts | kitchen hood malaysia | Rework | Partly done | Brief: `docs/competitor-gap-kitchen-hood.md`. Done 3 Oct: decision 1, warranty line in the closing band (`warrantyLine` in `src/lib/warranty-terms.ts`, on every category it applies to); decision 3, article links repointed (`714c930`); decision 4, meta description led by measured pressure and noise (`category-content.sql`). Closed by the client on 3 Oct: no installation mention (decision 2) and no price bands (decision 5), so neither is built. Open: "absorb the hood posts" conflicts with the brief's finding that the article cluster is the site's generic asset; 25 hood-slugged articles still published |
 | 4 | Hood dapur tanpa tebuk dinding, Malay ductless guide | hood dapur tanpa tebuk dinding | New | Not started | no Malay article in `article` |
 | 5 | Hood dapur, panduan lengkap, Malay hood pillar | hood dapur | New | Not started | as above |
-| 6 | Price and cost sections on all five category pillars | kitchen hood malaysia price | Rework | Not started | no price figure in `category-content.sql` |
+| 6 | Price and cost sections on all five category pillars | kitchen hood malaysia price | Rework | Dropped 3 Oct | The client will not publish price bands. No price figure goes on any page; do not re-propose |
 | 7 | Geo-signal fix: hreflang, Malaysia targeting, internal-link routing | technical | Rework | Partly done | www prefix no longer splits the index (`28e5d52`); canonicals on every page; article links pointed past the 301s (`714c930`); no hreflang, and there is nothing to hreflang until item 4 or 5 exists |
 
 ## Month 2, November: outrank category pages with real buyer content
@@ -77,11 +77,11 @@ Work since the workbook was compiled that it did not ask for but which serves th
 
 ## Scorecard
 
-| | Pieces | Done | Partly | Not started |
-|---|---|---|---|---|
-| Month 1, October | 7 | 0 | 1 | 6 |
-| Month 2, November | 8 | 1 | 0 | 7 |
-| Month 3, December | 8 | 2 | 1 | 5 |
+| | Pieces | Done | Partly | Not started | Dropped |
+|---|---|---|---|---|---|
+| Month 1, October | 7 | 0 | 2 | 4 | 1 |
+| Month 2, November | 8 | 1 | 0 | 7 | 0 |
+| Month 3, December | 8 | 2 | 1 | 5 | 0 |
 
 Three pieces are already done before the schedule starts, all of them from Months 2 and 3.
 October opens with the three pillar rewrites, which the workbook ranked as the fastest wins.

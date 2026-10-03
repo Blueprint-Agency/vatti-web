@@ -196,3 +196,14 @@ to 9. Informational pages win at this authority level; the commercial category p
   Ask the client to make it part of dealer onboarding.
 - The article cluster is the site's actual generic asset. Every hood article should link to the
   canonical category page with a hood anchor, not to `/kitchen-hood/`.
+
+## Client answers (2026-10-03)
+
+- Price band per series: **no.** Decision 5 (the cost FAQ) is not built, and content schedule
+  item 6 (price sections on all five pillars) is dropped.
+- Installation arrangement: **not to be mentioned.** Decision 2 is not built.
+- Instalment plans: not asked separately; with no prices published there is nothing to attach a
+  plan to.
+
+Decisions 1, 3 and 4 shipped: the warranty line in the closing band, the article links (earlier,
+`714c930`) and the meta description.

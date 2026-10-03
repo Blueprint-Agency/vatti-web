@@ -54,6 +54,19 @@ UPDATE product_category SET h1 = 'Advanced Dishwashers for Hygienic & Effortless
 UPDATE product_category SET h1 = 'Single Tap Water Purifier & Instant Hot Water Dispenser'
   WHERE slug = 'one-tap-purifier-in-malaysia';
 
+-- ── the hood page's meta description ───────────────────────────────────────
+-- Content schedule Q4, item 3; decision 4 of docs/competitor-gap-kitchen-hood.md.
+-- The scraped description ("powerful suction for wok cooking, quiet operation")
+-- is a sentence Electrolux or Fujioh could print. This one leads with what none
+-- of the top ten publishes: measured pressure and noise for every model. All 16
+-- published hoods carry pressure, noise and airflow rows in product_facet, so
+-- "measured" is true of the whole range. The 10-year motor term is PERIODS in
+-- src/lib/warranty-terms.ts. seo_title is left alone: it carries the brand
+-- rankings. Overridden here because products.sql is generated.
+UPDATE product_category SET meta_description =
+  'VATTI kitchen hoods in Malaysia, compared on measured suction pressure, noise and airflow. Match one to your wok cooking and duct run. 10-year motor warranty.'
+  WHERE slug = 'kitchen-hood-in-malaysia';
+
 -- ── the model each category leads with ─────────────────────────────────────
 -- Editorial. V929 is the hood the live site fronts; the other four match the
 -- models the homepage promotes, so a visitor arriving from either page meets
