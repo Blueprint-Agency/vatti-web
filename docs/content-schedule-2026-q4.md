@@ -30,10 +30,10 @@ search, whose SERP incumbents run DA 5 to 18.
 | 1 | Dishwasher pillar, rewrite for the generic head term | dishwasher malaysia | Rework | Done 3 Oct | Brief: `docs/competitor-gap-dishwasher.md`. Guides, reasons, FAQ, meta description and hero intro rewritten for the two-model range in `category-content.sql`, led by capacity (17 and 20 place settings). Unsupported running-cost claims removed. Fotile's category page is not in the top 23 (Ubersuggest, 19 Sep), so this was not a head-to-head |
 | 2 | Combi and steam oven pillar, rewrite and merge steam terms | combi oven malaysia | Rework | Done 3 Oct | Brief: `docs/competitor-gap-combi-oven.md`. The copy named five retired models as on sale (VA01, Z4501, VA03, O755P and the A+ claim); guides, reasons, FAQs 1, 3 and 7, meta and intro rewritten for the four on sale, led by steam set for local cooking, in `category-content.sql`. Page at 17 for the head term (Ubersuggest, 9 Sep) |
 | 3 | Kitchen hood pillar, rewrite and absorb the 18 hood posts | kitchen hood malaysia | Rework | Partly done | Brief: `docs/competitor-gap-kitchen-hood.md`. Done 3 Oct: decision 1, warranty line in the closing band (`warrantyLine` in `src/lib/warranty-terms.ts`, on every category it applies to); decision 3, article links repointed (`714c930`); decision 4, meta description led by measured pressure and noise (`category-content.sql`). Closed by the client on 3 Oct: no installation mention (decision 2) and no price bands (decision 5), so neither is built. Open: "absorb the hood posts" conflicts with the brief's finding that the article cluster is the site's generic asset; 25 hood-slugged articles still published |
-| 4 | Hood dapur tanpa tebuk dinding, Malay ductless guide | hood dapur tanpa tebuk dinding | New | Not started | no Malay article in `article` |
-| 5 | Hood dapur, panduan lengkap, Malay hood pillar | hood dapur | New | Not started | as above |
+| 4 | Hood dapur tanpa tebuk dinding, Malay ductless guide | hood dapur tanpa tebuk dinding | New | Done 3 Oct | `buying-guide/hood-dapur-tanpa-tebuk-dinding` in `refresh-articles-ms-2026-10.sql`. Names the 13 hood models whose spec reads "ducted or recycled". Page one for the term was social posts and Indonesian shops, no brand guide (Firecrawl, KL, 3 Oct) |
+| 5 | Hood dapur, panduan lengkap, Malay hood pillar | hood dapur | New | Done 3 Oct | `buying-guide/hood-dapur`, same file. Types, airflow, static pressure and noise from `product_facet`, the 10-year motor warranty. 720/month (Ubersuggest, ms, 3 Oct) |
 | 6 | Price and cost sections on all five category pillars | kitchen hood malaysia price | Rework | Dropped 3 Oct | The client will not publish price bands. No price figure goes on any page; do not re-propose |
-| 7 | Geo-signal fix: hreflang, Malaysia targeting, internal-link routing | technical | Rework | Partly done | www prefix no longer splits the index (`28e5d52`); canonicals on every page; article links pointed past the 301s (`714c930`); no hreflang, and there is nothing to hreflang until item 4 or 5 exists |
+| 7 | Geo-signal fix: hreflang, Malaysia targeting, internal-link routing | technical | Rework | Partly done | www prefix no longer splits the index (`28e5d52`); canonicals on every page; article links pointed past the 301s (`714c930`); Malay pages carry `lang="ms-MY"` and `inLanguage` from a new `article.lang` column (3 Oct). Still no hreflang, correctly: items 4 and 5 are new pieces, not translations, and hreflang only pairs equivalent pages |
 
 ## Month 2, November: outrank category pages with real buyer content
 
@@ -79,7 +79,7 @@ Work since the workbook was compiled that it did not ask for but which serves th
 
 | | Pieces | Done | Partly | Not started | Dropped |
 |---|---|---|---|---|---|
-| Month 1, October | 7 | 2 | 2 | 2 | 1 |
+| Month 1, October | 7 | 4 | 2 | 0 | 1 |
 | Month 2, November | 8 | 1 | 0 | 7 | 0 |
 | Month 3, December | 8 | 2 | 1 | 5 | 0 |
 

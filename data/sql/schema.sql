@@ -449,7 +449,12 @@ CREATE TABLE article (
   -- author, because the author only ever existed inside that JSON-LD. Kept as a
   -- flag so Phase 5 can find them; the rebuild emits schema for all of them.
   schema_disabled   INTEGER NOT NULL DEFAULT 0,
-  is_published      INTEGER NOT NULL DEFAULT 1
+  is_published      INTEGER NOT NULL DEFAULT 1,
+  -- BCP 47 tag of the body. Every scraped post is English; the Malay hood
+  -- guides (refresh-articles-ms-2026-10.sql) are 'ms-MY'. The page sets it as `lang`
+  -- on the headline and body and as the schema's inLanguage. The site chrome
+  -- around them stays English, which is why <html lang> does not change.
+  lang              TEXT NOT NULL DEFAULT 'en-MY'
 );
 CREATE INDEX article_section_idx ON article(section, published_at DESC);
 

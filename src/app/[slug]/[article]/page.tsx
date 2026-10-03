@@ -121,7 +121,7 @@ export default async function Page({ params }: Params) {
             </ol>
           </nav>
 
-          <h1 className="mt-6 text-balance text-[clamp(1.875rem,1.2rem+2.4vw,3rem)] font-semibold leading-[1.08] tracking-[-0.035em]">
+          <h1 lang={article.lang} className="mt-6 text-balance text-[clamp(1.875rem,1.2rem+2.4vw,3rem)] font-semibold leading-[1.08] tracking-[-0.035em]">
             {article.h1 ?? article.title}
           </h1>
 
@@ -161,7 +161,7 @@ export default async function Page({ params }: Params) {
 
           {recipes.length > 0 && <RecipeSummary recipes={recipes} />}
 
-          <div className="mt-6 text-[1.0625rem]">
+          <div lang={article.lang} className="mt-6 text-[1.0625rem]">
             <Markdown md={body} sizes={sizes} callouts={callouts} />
           </div>
 
@@ -251,7 +251,7 @@ function articleSchema(article: Article) {
     image: article.hero_url ? [article.hero_url] : undefined,
     articleSection: getSectionName(article.section),
     wordCount: article.word_count,
-    inLanguage: "en-MY",
+    inLanguage: article.lang,
   };
 }
 

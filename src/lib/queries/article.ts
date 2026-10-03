@@ -20,6 +20,8 @@ export type Article = {
    * organisation, which is what an unsigned company post is.
    */
   author: string | null;
+  /** 'en-MY', or 'ms-MY' for the Malay guides. */
+  lang: string;
   hero_url: string | null;
   hero_alt: string | null;
   hero_width: number | null;
@@ -107,7 +109,7 @@ export function getArticle(path: string): Article | undefined {
   return get<Article>(
     `SELECT a.id, a.slug, a.path, a.section, a.title, a.h1, a.meta_description,
             a.body_md, a.word_count, a.reading_minutes, a.published_at, a.modified_at,
-            a.author,
+            a.author, a.lang,
             i.url AS hero_url, i.alt AS hero_alt,
             i.width AS hero_width, i.height AS hero_height
        FROM article a
