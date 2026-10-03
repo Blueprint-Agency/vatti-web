@@ -67,6 +67,19 @@ UPDATE product_category SET meta_description =
   'VATTI kitchen hoods in Malaysia, compared on measured suction pressure, noise and airflow. Match one to your wok cooking and duct run. 10-year motor warranty.'
   WHERE slug = 'kitchen-hood-in-malaysia';
 
+-- ── the dishwasher page's meta description and hero intro ──────────────────
+-- Content schedule Q4, item 1; docs/competitor-gap-dishwasher.md. Both led on
+-- "multi-program wash" and "quiet operation", the second with no dB figure to
+-- back it. Both now lead on capacity, the gap no page in the top ten matches,
+-- then the wok and the humid kitchen. seo_title and h1 stay: they already
+-- carry "dishwasher" and "Malaysia".
+UPDATE product_category SET
+  meta_description =
+    'VATTI dishwashers in Malaysia for 17 and 20 place settings: a 75°C wash for oily cookware, UVC sterilisation and up to seven days of fresh storage.',
+  intro_md =
+    'Two dishwashers sized for a large household, at 17 and 20 place settings. Both wash at 75°C to lift cooking oil, sterilise with UVC, and keep a finished load dry for up to seven days in a humid kitchen.'
+  WHERE slug = 'dishwasher-in-malaysia';
+
 -- ── the model each category leads with ─────────────────────────────────────
 -- Editorial. V929 is the hood the live site fronts; the other four match the
 -- models the homepage promotes, so a visitor arriving from either page meets
@@ -900,22 +913,16 @@ UPDATE product SET best_for = CASE slug
 -- ═══════════════════════════════════════════════════════════════════════════
 -- DISHWASHER
 -- ═══════════════════════════════════════════════════════════════════════════
--- One published model, and that is the whole shape of this page.
+-- Two published models since the DWID3 shipped (2026-09): DWBB7, and DWID3 in
+-- two colourways that the grid collapses to one card by variant_group.
 --
--- Four sections of the template do not render here and none of it is a styling
--- decision: the model grid needs a second model before it is a grid rather
--- than a card, the questionnaire and the comparison table both need more than
--- two to have anything to narrow or to compare, and the range summary needs
--- two products carrying the same measurement before "best in range" means
--- anything. All four gates are counts, so all four open by themselves the day
--- a second dishwasher is published — the copy below needs no revisiting for
--- that, only the "Best for" row needs a second line.
---
--- What does render: the full-screen hero, the signature band carrying the
--- DWBB7 on its own, how to choose, six reasons, the reviews, the buying guide
--- and the FAQ. The band is the product section on this page, which is why it
--- is the one gate that is not a floor — it is suppressed at exactly two
--- models, where the grid underneath would say the same thing twice.
+-- This header used to say "one published model" and the copy below was
+-- written to match. The template's gates are counts, so the grid opened by
+-- itself when the DWID3 landed; the copy did not, and went on calling the
+-- DWBB7 the only machine until the 2026-10-03 rewrite. The questionnaire and
+-- the comparison table still need more than two models, and the signature
+-- band is suppressed at exactly two, where the grid would say the same thing
+-- twice. A third dishwasher reopens all three: check the copy then too.
 
 -- ── dishwasher: the measured figures ───────────────────────────────────────
 -- So the one card in the grid carries numbers rather than a blank where the
@@ -929,116 +936,132 @@ SELECT p.id, m.facet, m.value, m.unit, m.label, m.position, m.source
  WHERE p.slug = 'vatti-dishwasher-dwbb7';
 
 -- ── dishwasher: how to choose ──────────────────────────────────────────────
+-- Rewritten 2026-10-03 for the two-model range (content schedule Q4, item 1;
+-- brief in docs/competitor-gap-dishwasher.md). The page was written when the
+-- DWBB7 was the only dishwasher and said so ("One machine, seventeen
+-- settings"); the DWID3 has shipped since.
+--
+-- Written for the buyer the brief names: a large household that cooks with
+-- oil every day. Capacity leads because it is the one thing no competitor in
+-- the top ten matches (none above 15 settings). Every figure is from
+-- product_spec or the DWID3 story in product-story-dwid3-2026-09.sql.
+--
+-- Three things are deliberately absent, by the client's decision (2026-10-03):
+-- no price, no energy, water or noise figure per cycle, and no installation
+-- arrangement. The old copy's "costs less to run than it looks" went with
+-- them: it is the claim the forum threads in this SERP exist to test, and
+-- there is no figure to back it.
 INSERT INTO category_guide (category_id, position, heading, body_md, figure, figure_unit) VALUES
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 1,
-   'One machine, seventeen settings',
-   'A place setting is roughly the dishes one person uses in a meal, so seventeen covers a large family and a table of guests without running it twice. Half load washes the top basket or the bottom one alone, which is what you want on the days it is not worth filling both.',
-   '17', 'place settings'),
+   'Size it by the meal, not by the kitchen',
+   'A place setting is roughly what one person uses at a meal. Both VATTI dishwashers are big machines: 17 settings on the DWBB7, 20 plus a fruit and vegetable basket on the DWID3. VATTI counts a full DWID3 load at 130 pieces, among them eighteen rice bowls, nine noodle bowls and 36 pairs of chopsticks. That is a household of four or more, or a family that cooks for guests, washed once a day. For one or two people a compact machine is the better fit, and VATTI does not make one.',
+   '17-20', 'place settings'),
 
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 2,
-   'Heat is what cuts through wok grease',
-   'The wash runs at 75°C and the drying air at 110°C. That is the part hand washing cannot match, and it is not about effort: water hot enough to lift cooking oil off a plate is water too hot to put your hands into.',
-   '75-110', '°C'),
+   'Heat is what cuts through wok oil',
+   'Both machines wash at 75°C. Water that hot lifts cooking oil off a plate instead of moving it around, and it is too hot for hands, which is the part hand washing cannot match however long you scrub. The DWBB7 then dries with 110°C air and the DWID3 with 105°C, so plates come out without towel marks.',
+   '75', '°C'),
 
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 3,
-   'Built in, freestanding or countertop',
-   'A built-in machine goes into the cabinet run and gives the best capacity and the tidiest finish, which is what to plan for in a kitchen being built or renovated. Freestanding goes anywhere with a water point and a socket. Countertop suits a condo with neither.',
-   NULL, NULL),
+   'Dry between washes, in a humid kitchen',
+   'A dishwasher left shut and damp is where the smell comes from, and a Malaysian kitchen gives it every chance. After the cycle both machines keep air moving through themselves for up to 168 hours. The DWID3 changes its air every three hours and runs its UVC lamp as it does, so a clean load left inside stays fresh for up to seven days with the door shut.',
+   '7', 'days'),
 
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 4,
-   'What triple disinfection actually is',
-   'Three stages, not a brand name: the 75°C wash, the 110°C hot-air dry, and a UVC lamp whose light breaks down what survives the first two. The machine then ventilates itself for up to 168 hours after the cycle, so it sits dry between washes rather than shut and damp.',
+   'Pots, not only plates',
+   'Asian cooking dirties pots as much as plates, so look at the lower rack before the programme list. The DWID3''s lower tines fold flat to take up to four pots at once, and one pull on its handle drops the rack to clear a pot up to 30 cm tall. The DWBB7 has an oil-intensive programme and one for big objects.',
    NULL, NULL),
 
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 5,
-   'It costs less to run than it looks',
-   'A full cycle uses less water than washing the same load under a running tap. Run it full rather than half empty, use the lighter programme for everyday plates, and scrape instead of pre-rinsing. Pre-rinsing is where most of the water people think they are saving actually goes.',
+   'Built in or freestanding',
+   'A built-in machine goes into the cabinet run and gives the tidiest finish, which makes it the one to plan for in a kitchen being built or renovated. The DWID3 is fully integrated and 60 cm wide, made for a 600 x 780 x 580 mm cabinet opening, so measure the opening before you choose rather than after. A freestanding machine goes anywhere with a water point, a drain and a socket.',
    NULL, NULL),
 
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 6,
-   'Where it goes, and who fits it',
-   'It needs a water point, a drain and a socket, and it needs the cabinet aperture measured before you buy rather than after. Have the dealer who supplies it install it: a dishwasher plumbed badly is a leak under a cabinet that nobody finds for a week.',
+   'Run it full, and scrape instead of rinsing',
+   'A dishwasher earns its place on full loads. Scrape plates into the bin rather than rinsing them under the tap first: pre-rinsing is where the water people think they are saving actually goes. On the days a full load is not worth waiting for, both machines run a half load in the top or the bottom basket alone. The DWID3 also doses its own detergent, from a reservoir that lasts about two weeks.',
    NULL, NULL);
 
 -- ── dishwasher: why VATTI ──────────────────────────────────────────────────
--- The live page makes four claims; this makes six, because the grid runs three
--- across and four leaves a hole in it. The two added are the motor and the
--- display, both off the spec sheet rather than invented to fill the row.
+-- Six, for the three-across grid. Each says which machine it is true of where
+-- the two differ; a reason that reads as true of both and is not is the kind
+-- of claim the comparison further down the product pages would contradict.
 INSERT INTO category_reason (category_id, position, title, body_md, figure, figure_unit, icon) VALUES
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 1,
-   'Washes at 75°C, dries at 110°C',
-   'Hot enough to lift cooking oil off a plate, and then hot enough to dry it without a towel mark. The hot-air dry runs independently too, so you can dry a load without washing it again.',
-   '110', '°C', 'heat'),
+   'Room for twenty',
+   'The DWID3 takes 20 place settings plus a fruit and vegetable basket in a 150 L tub, and the DWBB7 takes 17. A large family''s day, or a dinner with guests, in one run.',
+   '20', 'place settings', 'clean'),
 
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 2,
-   'Disinfection in three stages',
-   'The high-temperature wash, the hot-air dry, and a UVC lamp behind them both. Three stages rather than one, because the first two do not reach everything on their own.',
-   NULL, NULL, 'safety'),
+   'Washes at 75°C, dries at up to 110°C',
+   'Hot enough to lift cooking oil off a plate, then hot enough to dry it without a towel mark. Both machines also dry on their own, so a hand-washed load or a batch of bottles dries without a second wash.',
+   '75', '°C', 'heat'),
 
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 3,
-   'Eight programmes and a half load',
-   'Eight wash cycles, from a heavy programme for cookware down to a quick rinse, each setting its own water temperature, spray pressure and duration. Half load runs the top or the bottom basket alone.',
-   '8', 'programmes', 'clean'),
+   'Sterilised, then kept that way',
+   'A high-temperature wash, a hot-air dry and a UVC lamp behind them both, which VATTI rates at up to 99.9% on the DWID3. Then up to 168 hours of ventilation, so a finished load waits dry rather than damp.',
+   '168', 'hours', 'safety'),
 
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 4,
-   'A week of ventilation after the cycle',
-   'The machine keeps circulating air through itself for up to 168 hours once the wash has finished. A dishwasher left shut and damp is where the smell comes from, and this is the answer to it.',
-   '168', 'hours', 'water'),
+   'A brushless motor, and 55,000 Pa',
+   'Both machines run on a BLDC motor, which holds spray pressure at lower speed. The DWID3 uses it to drive a variable-pressure pump at up to 55,000 Pa through two telescopic spray arms that reach the corners of the tub, not only the circle in the middle.',
+   '55,000', 'Pa', 'motor'),
 
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 5,
-   'A brushless motor',
-   'A BLDC motor holds spray pressure at lower speed, draws less power for the same wash, and stays quiet as it ages. It is the part of a dishwasher that runs for every minute of every cycle.',
-   NULL, NULL, 'motor'),
+   'Programmes for fruit, toys and bottles',
+   'Beyond the everyday cycles, both machines have programmes for fruit and vegetables, children''s toys and feeding bottles, and a self-clean cycle for the machine itself. The DWBB7 has eight in all; the DWID3 has six main programmes and four more in the app.',
+   NULL, NULL, 'water'),
 
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 6,
-   'A panel that tells you where it is',
-   'A digital display for the programme, the time left and the state of the machine, rather than a row of indicator lights you have to learn to read.',
+   'The DWID3 looks after itself',
+   'Detergent dosed to the soil level from a two-week reservoir, a drain that seals itself when it finishes, two pumps that leave no water standing in the sump, and a 23 inch touch panel with the same controls in the VATTI app.',
    NULL, NULL, 'smart');
 
 -- ── dishwasher: FAQ ────────────────────────────────────────────────────────
--- Ten, drawn from both accordions on the live page. That page emits no FAQPage
--- schema today, so this is new structured data rather than a defence of an
--- existing rich result.
+-- Ten. The first answers the question three of the top ten results for
+-- "dishwasher malaysia" exist to ask, which no brand category page answers.
+-- The three running-cost questions of the earlier set are gone (see above);
+-- pots, bacteria and fruit replace them, all answerable from the spec rows.
 INSERT INTO category_faq (category_id, position, question, answer_md) VALUES
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 1,
-   'Do dishwashers clean oily wok dishes?',
-   'Yes, and better than hand washing does. High-temperature water, dishwasher detergent and an intensive programme break down cooking oil far more effectively than warm tap water and a sponge. The 75°C rinse sanitises while it does it.'),
+   'Is a dishwasher worth it in a Malaysian home?',
+   'For a household of four or more that cooks with oil most days, yes. It washes at 75°C, which hands cannot, so it gets oily plates cleaner and sanitises them as it goes, and it gives back the time spent at the sink after every meal. For one or two people who often eat out, it is harder to justify. The long answer is in [is a dishwasher worth it](/buying-guide/is-a-dishwasher-worth-it/).'),
 
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 2,
-   'Built-in or freestanding for a Malaysian kitchen?',
-   'Built-in if the kitchen is being built or renovated: it integrates into the cabinetry and gives the best capacity for the space. Freestanding if the kitchen already exists and has nowhere to lose a cabinet, since it only needs a water point and a socket.'),
+   'How many place settings do I need?',
+   'Roughly one per person per meal, with room left for the pots. Both VATTI machines are sized for a large household: 17 place settings on the DWBB7 and 20 on the DWID3, which VATTI counts as 130 pieces in a full load. For most large families that is one run a day.'),
 
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 3,
-   'How much does a dishwasher cost to run?',
-   'Less than most people expect. A modern machine uses less water per cycle than the same load washed under a running tap. Run full loads, use the lighter programme for everyday plates, and scrape rather than pre-rinse.'),
+   'Do dishwashers clean oily wok dishes?',
+   'Yes, and better than hand washing does. Water at 75°C, dishwasher detergent and an intensive programme break down cooking oil far more effectively than warm tap water and a sponge. Scrape off the solids first; there is no need to rinse.'),
 
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 4,
-   'Is it fine to use a dishwasher every day?',
-   'Yes. Daily use is what these are built for. Keep the filter clean and run a maintenance cycle occasionally and daily use shortens nothing. Loading through the day and running at night is fine too: see [leaving dishes in the dishwasher overnight](/tips-tricks/dishes-in-the-dishwasher-overnight/).'),
+   'Can a dishwasher wash pots and pans?',
+   'Most of them. Stainless steel pots and pans go on the lower rack, and on the DWID3 the tines fold flat for up to four pots and the rack drops to clear one 30 cm tall. Cast iron, wooden handles and any pan whose maker says hand wash should stay out: see [what is not dishwasher safe](/tips-tricks/what-is-not-dishwasher-safe/).'),
 
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 5,
-   'Is a dishwasher better than hand washing?',
-   'For hygiene, clearly: it washes hotter than hands can stand and sanitises as it goes. For water, usually, provided you run it full. For time, always.'),
+   'Built-in or freestanding for a Malaysian kitchen?',
+   'Built-in if the kitchen is being built or renovated: it integrates into the cabinetry and gives the best capacity for the space. Freestanding if the kitchen already exists and has nowhere to lose a cabinet, since it only needs a water point, a drain and a socket.'),
 
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 6,
-   'What is a good lifespan for a dishwasher?',
-   'Ten to fifteen years, depending on how hard it is used and how well the filter is kept. Our [dishwasher buying guide](/buying-guide/is-a-dishwasher-necessary/) covers what to look at before buying one.'),
+   'Does a dishwasher kill bacteria?',
+   'The heat does most of it: a 75°C wash, then a dry at 105°C on the DWID3 and 110°C on the DWBB7. Both add a UVC lamp after the wash, which breaks down the DNA of bacteria so they cannot reproduce; VATTI rates the DWID3''s at up to 99.9%. It is physical sterilisation, with no chemical left on the plates.'),
 
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 7,
-   'What is UVC ultraviolet disinfection?',
-   'A lamp emitting ultraviolet light in the UVC band, which disrupts the DNA of bacteria and viruses so they cannot reproduce. It is the third stage behind the hot wash and the hot dry, and it works on what heat alone leaves behind.'),
+   'Will a clean load smell if I leave it in the machine?',
+   'Not in these. After the cycle both machines keep air moving through themselves for up to 168 hours, and the DWID3 runs its UVC lamp on a timer, so a load left inside stays dry and fresh for up to seven days. Dirty dishes waiting for a night run are a different question: see [leaving dishes in the dishwasher overnight](/tips-tricks/dishes-in-the-dishwasher-overnight/).'),
 
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 8,
-   'Do dishwashers use a lot of electricity?',
-   'Less than heating the same volume of water at the tap for hand washing. The bulk of a cycle''s energy goes into heating water, which is exactly what you would be doing by hand anyway.'),
+   'Is it fine to use a dishwasher every day?',
+   'Yes. Daily use is what these are built for. Keep the filter clean and run the self-clean cycle every month or two and daily use shortens nothing. The DWID3 rinses its own filter as it drains, and its app reminds you when the self-clean is due.'),
 
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 9,
-   'Do dishwashers actually save water?',
-   'Yes, when run full. A cycle uses a fixed and fairly small volume; a tap left running does not. A half-empty machine is where the saving disappears.'),
+   'Can a dishwasher wash fruit and vegetables?',
+   'These two can. Both have a fruit programme. The DWID3''s runs for 26 minutes in soft water with a basket supplied for it, and VATTI measures it removing 95% of pesticide residue. Grapes and berries get a gentle rolling wash rather than a blast.'),
 
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 10,
-   'Do dishwashers clean, or only sanitise?',
-   'Both, and in that order. Detergent and the spray arms remove the food, then the high temperature and the UVC stage sanitise what is left.');
+   'What is a good lifespan for a dishwasher?',
+   'Ten to fifteen years, depending on how hard it is used and how well the filter is kept. Our [dishwasher buying guide](/buying-guide/is-a-dishwasher-necessary/) covers what to look at before buying one.');
 
 -- ── dishwasher: the "Best for" row ─────────────────────────────────────────
 -- One line, because there is one model. It reads in the comparison table,
