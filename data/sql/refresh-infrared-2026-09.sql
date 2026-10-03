@@ -142,7 +142,7 @@ An infrared gas stove is worth it if you cook the way most Malaysian kitchens do
 
 [Explore VATTI cooker hob](/cooker-hob-in-malaysia/)
 '
-WHERE path = 'buying-guide/is-an-infrared-gas-stove-worth-it';
+WHERE path = 'buying-guide/is-an-infrared-gas-stove-worth-it' AND lang = 'en-MY';
 
 UPDATE article SET
   title = 'Infrared Burner vs Gas Burner: Which Cooks Better?', h1 = 'Infrared Burner vs Gas Burner: Which Cooks Better?', meta_description = 'The infrared plate and the open-flame ring compared burner by burner: heat, speed, wok cooking, pans, cleaning and cost, so you know which to put the wok on.',
@@ -252,7 +252,7 @@ An infrared burner is good at the things a wok needs and an open burner is good 
 
 [Explore VATTI cooker hob](/cooker-hob-in-malaysia/)
 '
-WHERE path = 'buying-guide/is-infrared-gas-stove-good';
+WHERE path = 'buying-guide/is-infrared-gas-stove-good' AND lang = 'en-MY';
 
 UPDATE article SET
   title = 'Ceramic Cooker vs Infrared Cooker: What Is the Difference?', h1 = 'Ceramic Cooker vs Infrared Cooker: What Is the Difference?', meta_description = 'Ceramic and infrared cookers both heat through glass. How each makes heat, which is faster, which costs less to run, and why infrared means two different things in Malaysia.',
@@ -344,7 +344,7 @@ Ceramic and electric infrared cookers are two versions of one idea, a glowing el
 
 [Explore VATTI cooker hob](/cooker-hob-in-malaysia/)
 '
-WHERE path = 'buying-guide/ceramic-cooker-vs-infrared-cooker-what-is-the-difference';
+WHERE path = 'buying-guide/ceramic-cooker-vs-infrared-cooker-what-is-the-difference' AND lang = 'en-MY';
 
 -- The new article. id 107 follows the scrape's 106; the importer never
 -- reissues ids, so a regeneration cannot collide with it.
@@ -457,7 +457,7 @@ INSERT INTO article_category (article_id, category_id, is_primary) VALUES (107, 
 UPDATE article SET body_md = replace(body_md,
   '## What is a/buying-guide/induction-cooker-vs-gas-stove-in-malaysia-what-is-the-difference/n Infrared Oven?',
   '## What is an Infrared Oven?')
-WHERE path = 'buying-guide/convection-oven-vs-infrared-which-should-you-choose';
+WHERE path = 'buying-guide/convection-oven-vs-infrared-which-should-you-choose' AND lang = 'en-MY';
 
 -- The M822G's series and search title still carried the scrape's spelling
 -- after the display name was corrected on 2026-09-15.

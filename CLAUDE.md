@@ -126,6 +126,12 @@ are in `docs/i18n.md`.
   - Slugs and paths are unique **per language**.
   - `translation_key` groups the editions of one piece, for hreflang and the switcher.
   - Blog section names and Malay segments are in `section_i18n`, and only there.
+  - **Every `UPDATE article ... WHERE path/slug = ...` must add `AND lang = 'en-MY'`** (or
+    the edition it means). A Chinese article shares its English path, so an unscoped update
+    rewrites both. It happened once: a September refresh overwrote the Chinese ducted guide.
+    `db-check` fails when a translation carries its English edition's title or body.
+  - Files that insert translations sort after the files that create what they reference
+    (`translation-*.sql`, not `i18n-*.sql`, for anything touching products).
 - **Links.**
   - Menu links go through `src/lib/routes.ts`: the edition's own page if it exists, else
     English. A translated menu never links to a 404 mid-rollout.

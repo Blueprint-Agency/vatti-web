@@ -352,6 +352,112 @@ export const ms: Dict = {
     opensHint: "Membuka sembang dengan teks ini sedia. Anda masih perlu tekan hantar.",
   },
 
+  // Home: keyword peralatan dapur (880/month, keyword_map). No installation
+  // arrangement, per the client's 3 Oct decision, so "installed" is dropped from
+  // the dealer lines and "a quote" becomes a recommendation (no prices).
+  home: {
+    metaTitle: "Peralatan Dapur Terbina Dalam di Malaysia | VATTI",
+    metaDescription: (dealers: number) =>
+      `VATTI Malaysia membekalkan peralatan dapur: hood dapur, dapur gas, ketuhar kombi dan mesin basuh pinggan melalui ${dealers} pengedar sah di seluruh negara. Sejak 1992.`,
+    eyebrow: "Sejak 1992",
+    h1: "VATTI Malaysia, peralatan dapur moden untuk rumah Malaysia",
+    heroText: (models: number, dealers: number) =>
+      `Hood dapur, dapur gas, ketuhar, mesin basuh pinggan dan penapis air. ${models} model, diservis melalui ${dealers} pengedar sah di seluruh negara.`,
+    browse: "Lihat rangkaian",
+    findDealer: "Cari pengedar",
+    heroImageAlt: "Hood dapur VATTI menyedut wap dari kuali di atas dapur gas dalam dapur konsep terbuka.",
+    heroProductAlt: (model: string) =>
+      `Hood dapur VATTI ${model} di dapur bersepadu, dengan panel kawalannya menyala.`,
+    builtHeading: "Dibina untuk cara rakyat Malaysia memasak",
+    builtBody:
+      "Api besar dan minyak yang banyak memberi tekanan kepada dapur. Hood, dapur gas dan ketuhar ini direka untuk keadaan itu sejak awal, bukan diubah suai kemudian.",
+    builtSince: "Membina peralatan dapur premium sejak 1992.",
+    modelsAcross: (n: number) => `model dalam ${n} kategori`,
+    dealersAcross: (n: number) => `pengedar sah di ${n} wilayah`,
+    soldLocally: "Dijual dan diservis secara tempatan, dari Lembah Klang hingga Sabah dan Sarawak.",
+    findDealerArrow: "Cari pengedar →",
+    rangeHeading: "Rangkaian peralatan dapur kami di Malaysia",
+    modelCount: (n: number) => `${n} model`,
+    aboutHeading: "Tentang VATTI: pengeluar peralatan dapur sejak 1992",
+    aboutLink: "Tentang VATTI Malaysia →",
+    about1:
+      "VATTI membina peralatan dapur sejak 1992 dari pangkalannya di Zhongshan, Guangdong, dan tersenarai di Bursa Saham Shenzhen dengan kod 002035. Kumpulan ini memegang 838 paten sah setakat 2018, antara yang tertinggi dalam industrinya, dan produknya memenangi Red Dot Design Award, iF Design Award dan AWE Award.",
+    about2: (models: number, categories: number, dealers: number) =>
+      `Di Malaysia, VATTI (M) Sdn Bhd ialah pengedar nasional yang dilantik. Kami membekalkan ${models} model dalam ${categories} kategori melalui ${dealers} pengedar sah, dari Lembah Klang hingga Sabah dan Sarawak, dengan bilik pameran utama di Atria Shopping Gallery, Petaling Jaya.`,
+    about3:
+      "Setiap unit yang dijual melalui rangkaian itu diperakui ST dan SIRIM, dilindungi waranti VATTI Malaysia, dan diservis dengan alat ganti rasmi.",
+    awards: [
+      {
+        name: "Red Dot Design Award",
+        year: "2017",
+        body: "Anugerah reka bentuk antarabangsa dari Jerman oleh Red Dot GmbH & Co. KG, dimenangi untuk reka bentuk produk.",
+      },
+      {
+        name: "iF Design Award",
+        year: "sejak 1954",
+        body: "Antara tanda reka bentuk tertua di dunia, dan berulang kali dimenangi oleh reka bentuk produk VATTI.",
+      },
+      {
+        name: "AWE Award",
+        year: "China",
+        body: "Dianugerahkan oleh Persatuan Perkakas Elektrik Isi Rumah China selepas ujian pasaran dan pengguna.",
+      },
+    ],
+    bestsellersHeading: "Hood, dapur gas dan ketuhar VATTI terlaris",
+    allCategories: "Semua kategori →",
+    quoteHeading: "Dapatkan cadangan untuk dapur anda",
+    quoteBody:
+      "Tujuh soalan ringkas, semuanya pilihan. Kami akan cadangkan model yang sesuai dan pengedar yang menjualnya, biasanya pada hari yang sama.",
+    careline: "Talian VATTI",
+    hours: "Waktu Operasi",
+    hoursValue: "10 pagi - 8 malam setiap hari",
+    showroom: "Bilik Pameran VATTI",
+    showroomAddress: "Atria Shopping Gallery, Damansara Jaya, Petaling Jaya",
+    readingHeading: "Panduan membeli peralatan dapur",
+    beforeBuy: "Sebelum membeli",
+    allGuides: "Semua panduan membeli",
+    onceInstalled: "Selepas dipasang",
+    allRecipes: "Semua resipi",
+    min: "min",
+    dealersHeading: "Di mana membeli VATTI di Malaysia",
+    dealersBody:
+      "Setiap model dijual dan diservis melalui pengedar sah. Cari bilik pameran terdekat, lihat produknya berfungsi, dan beli daripada pihak yang boleh datang semula untuk servis.",
+    partnersHeading: "Rakan Kongsi Kami",
+    partnersBody:
+      "Peruncit dapur, bilik mandi dan elektrik yang menjual VATTI dan terus menyokongnya selepas jualan.",
+    faqHeading: "Soalan Lazim VATTI Malaysia",
+    faqs: (models: number, dealers: number) => [
+      {
+        q: "Adakah VATTI jenama yang bagus?",
+        a: `VATTI mengeluarkan peralatan dapur sejak 1992 dan tersenarai di Bursa Saham Shenzhen. Produknya memenangi anugerah Red Dot, iF Design dan AWE, dan kumpulan ini memegang 838 paten sah. Di Malaysia, rangkaiannya dijual melalui ${dealers} pengedar sah yang menyervis apa yang mereka jual.`,
+      },
+      {
+        q: "VATTI berasal dari mana?",
+        a: "VATTI beribu pejabat di Zhongshan, Guangdong, China, dan mengeluarkan peralatan dapur di sana sejak 1992. VATTI (M) Sdn Bhd ialah pengedar nasional yang dilantik untuk Malaysia.",
+      },
+      {
+        q: "Apa yang dijual oleh VATTI Malaysia?",
+        a: `Hood dapur, dapur gas, ketuhar kombi dan stim, mesin basuh pinggan serta penapis air One Tap. Kesemuanya ${models} model.`,
+      },
+      {
+        q: "Apakah waranti peralatan VATTI?",
+        a: "Dua tahun untuk setiap peralatan yang kami jual, termasuk hood, dapur gas, ketuhar, ketuhar gelombang mikro, mesin basuh pinggan dan dispenser air. Sepuluh tahun untuk motor hood dapur bagi semua model, tiga tahun tambahan untuk komponen cuci automatik hood selepas pendaftaran, dan waranti seumur hayat untuk permukaan kaca dapur gas. Daftar dalam tempoh 14 hari selepas pembelian.",
+      },
+      {
+        q: "Di mana boleh membeli VATTI di Malaysia?",
+        a: `Melalui ${dealers} pengedar sah di Lembah Klang, wilayah Utara, Selatan dan Pantai Timur serta Sabah dan Sarawak, dan di bilik pameran utama di Atria Shopping Gallery, Petaling Jaya. Membeli di luar rangkaian ini bermakna tiada waranti, tiada alat ganti rasmi dan tiada servis.`,
+      },
+    ],
+  },
+
+  showcase: {
+    alt: (model: string, category: string) => `${category} VATTI ${model} di dapur bersepadu.`,
+    prev: "Model sebelumnya",
+    next: "Model seterusnya",
+    promoted: "Model pilihan",
+    view: (model: string) => `Lihat ${model} →`,
+  },
+
   notFound: {
     title: "Halaman tidak dijumpai",
     code: "Ralat 404",

@@ -318,11 +318,11 @@ SELECT p.id, (SELECT max(position) + 1 FROM product_spec WHERE product_id = p.id
 UPDATE article SET body_md = replace(body_md,
   'And if wok cooking is the heart of your kitchen, consider neither. A gas hob with a high-output burner still does that job best, and the [VATTI cooker hobs](/cooker-hob-in-malaysia/) are built around it, with glass tops that clean like a ceramic hob.',
   'VATTI sells both kinds. The [VH-IC9-LA](/vatti-cooker-hob-vh-ic9-la/) pairs a 2,300 W induction zone with a 2,200 W ceramic zone on one glass top, so you can try each side of this comparison in one hob. The [ER3601T](/ceramic-cooker-hob-er3601t/) and the five-zone [ER5902T](/ceramic-cooker-hob-er5902t/) are ceramic throughout. And if wok cooking is the heart of your kitchen, a gas hob with a high-output burner still does that job best; the [VATTI gas hobs](/cooker-hob-in-malaysia/) are built around it, with glass tops that clean like a ceramic hob.')
-WHERE path = 'buying-guide/which-is-better-induction-or-ceramic-cooker';
+WHERE path = 'buying-guide/which-is-better-induction-or-ceramic-cooker' AND lang = 'en-MY';
 UPDATE article SET body_md = replace(body_md,
   'If you cook with a wok every day, look at gas first: explore the [VATTI cooker hob range](/cooker-hob-in-malaysia/) and compare the burners model by model.',
   'The [VATTI cooker hob range](/cooker-hob-in-malaysia/) has induction, ceramic and gas side by side, so you can compare the zones and burners model by model.')
-WHERE path = 'buying-guide/which-is-better-induction-or-ceramic-cooker';
+WHERE path = 'buying-guide/which-is-better-induction-or-ceramic-cooker' AND lang = 'en-MY';
 
 -- ── the client's rulings on the four conflicts, 2026-09-15 ─────────────────
 -- V917 colours: the site's names stand (Carbon Black, Batik White). No change.

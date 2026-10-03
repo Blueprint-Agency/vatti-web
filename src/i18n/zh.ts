@@ -343,6 +343,105 @@ export const zh: Dict = {
     opensHint: "会打开一个已写好这段文字的对话，您仍需自己按发送。",
   },
 
+  // Home: keyword 厨房电器 (competitor-based; keyword_map). No installation
+  // arrangement and no prices, per the client's 3 Oct decisions.
+  home: {
+    metaTitle: "马来西亚厨房电器 | VATTI 华帝",
+    metaDescription: (dealers: number) =>
+      `VATTI 华帝马来西亚提供抽油烟机、煤气炉、蒸烤箱、嵌入式烤箱与洗碗机等厨房电器，全马 ${dealers} 家授权经销商有售。自 1992 年起专注厨房电器。`,
+    eyebrow: "始于 1992",
+    h1: "VATTI 华帝马来西亚，为马来西亚家庭打造的现代厨房电器",
+    heroText: (models: number, dealers: number) =>
+      `抽油烟机、煤气炉、烤箱、洗碗机与净水器。共 ${models} 款型号，由全国 ${dealers} 家授权经销商提供售后服务。`,
+    browse: "浏览产品",
+    findDealer: "寻找经销商",
+    heroImageAlt: "开放式厨房里，VATTI 华帝抽油烟机正吸走煤气炉上炒锅冒出的蒸汽。",
+    heroProductAlt: (model: string) => `安装在整体厨房中的 VATTI 华帝 ${model} 抽油烟机，控制面板亮起。`,
+    builtHeading: "为马来西亚人的烹饪方式而生",
+    builtBody: "猛火和重油对厨房是很大的考验。这些抽油烟机、煤气炉和烤箱从一开始就为此设计，而不是事后改装。",
+    builtSince: "自 1992 年起打造高端厨房电器。",
+    modelsAcross: (n: number) => `款型号，分属 ${n} 个类别`,
+    dealersAcross: (n: number) => `家授权经销商，遍布 ${n} 个地区`,
+    soldLocally: "从巴生谷到沙巴和砂拉越，都在本地销售与提供服务。",
+    findDealerArrow: "寻找经销商 →",
+    rangeHeading: "我们在马来西亚的厨房电器系列",
+    modelCount: (n: number) => `${n} 款`,
+    aboutHeading: "关于 VATTI 华帝：自 1992 年起的厨房电器制造商",
+    aboutLink: "关于 VATTI 华帝马来西亚 →",
+    about1:
+      "VATTI 华帝自 1992 年起在广东中山制造厨房电器，在深圳证券交易所上市，股票代码 002035。截至 2018 年，集团拥有 838 项有效专利，在行业中名列前茅，产品曾获红点设计奖、iF 设计奖和 AWE 艾普兰奖。",
+    about2: (models: number, categories: number, dealers: number) =>
+      `在马来西亚，VATTI (M) Sdn Bhd 是官方委任的全国总代理。我们通过 ${dealers} 家授权经销商供应 ${categories} 个类别共 ${models} 款型号，从巴生谷到沙巴和砂拉越，旗舰展厅位于八打灵再也的 Atria Shopping Gallery。`,
+    about3: "通过这个网络售出的每一台机器都获得 ST 和 SIRIM 认证，享有 VATTI 华帝马来西亚的保修，并使用原厂零件维修。",
+    awards: [
+      {
+        name: "Red Dot Design Award",
+        year: "2017",
+        body: "由德国 Red Dot GmbH & Co. KG 颁发的国际设计大奖，以产品设计获奖。",
+      },
+      {
+        name: "iF Design Award",
+        year: "始于 1954",
+        body: "全球历史最悠久的设计奖项之一，VATTI 华帝的产品设计多次获奖。",
+      },
+      {
+        name: "AWE Award",
+        year: "中国",
+        body: "由中国家用电器协会在市场与用户测试后颁发。",
+      },
+    ],
+    bestsellersHeading: "VATTI 华帝热销抽油烟机、煤气炉与烤箱",
+    allCategories: "所有类别 →",
+    quoteHeading: "为您的厨房获取推荐",
+    quoteBody: "七个简单问题，全部可选。我们会为您推荐合适的型号和有货的经销商，通常当天回复。",
+    careline: "VATTI 华帝客服热线",
+    hours: "营业时间",
+    hoursValue: "每日上午 10 点至晚上 8 点",
+    showroom: "VATTI 华帝展厅",
+    showroomAddress: "Atria Shopping Gallery, Damansara Jaya, Petaling Jaya",
+    readingHeading: "厨房电器选购指南",
+    beforeBuy: "购买之前",
+    allGuides: "所有选购指南",
+    onceInstalled: "用起来之后",
+    allRecipes: "所有食谱",
+    min: "分钟",
+    dealersHeading: "在马来西亚哪里买 VATTI 华帝",
+    dealersBody: "每一款型号都通过授权经销商销售与提供服务。找到最近的展厅，亲眼看看它运作，再向能回头为您服务的经销商购买。",
+    partnersHeading: "合作伙伴",
+    partnersBody: "销售 VATTI 华帝并在售后继续支持的厨房、卫浴与电器零售商。",
+    faqHeading: "VATTI 华帝马来西亚常见问题",
+    faqs: (models: number, dealers: number) => [
+      {
+        q: "VATTI 华帝是好品牌吗？",
+        a: `VATTI 华帝自 1992 年起制造厨房电器，在深圳证券交易所上市。产品曾获红点、iF 设计和 AWE 艾普兰奖，集团拥有 838 项有效专利。在马来西亚，产品通过 ${dealers} 家授权经销商销售，并由他们提供售后服务。`,
+      },
+      {
+        q: "VATTI 华帝是哪里的品牌？",
+        a: "VATTI 华帝总部位于中国广东中山，自 1992 年起在当地制造厨房电器。VATTI (M) Sdn Bhd 是官方委任的马来西亚全国总代理。",
+      },
+      {
+        q: "VATTI 华帝马来西亚卖什么？",
+        a: `抽油烟机、煤气炉、蒸烤箱、洗碗机和 One Tap 净水器，共 ${models} 款型号。`,
+      },
+      {
+        q: "VATTI 华帝电器的保修是多久？",
+        a: "我们出售的每一台电器都保修两年，包括抽油烟机、煤气炉、烤箱、微波炉、洗碗机和饮水机。所有型号的抽油烟机电机保修十年，登记后抽油烟机自动清洗组件再加三年保修，煤气炉玻璃面板终身保修。请在购买后 14 天内登记。",
+      },
+      {
+        q: "在马来西亚哪里可以买到 VATTI 华帝？",
+        a: `通过分布在巴生谷、北马、南马、东海岸以及沙巴和砂拉越的 ${dealers} 家授权经销商，以及位于八打灵再也 Atria Shopping Gallery 的旗舰展厅。在这个网络以外购买，就没有保修、没有原厂零件，也没有售后服务。`,
+      },
+    ],
+  },
+
+  showcase: {
+    alt: (model: string, category: string) => `安装在整体厨房中的 VATTI 华帝 ${model} ${category}。`,
+    prev: "上一款",
+    next: "下一款",
+    promoted: "推荐型号",
+    view: (model: string) => `查看 ${model} →`,
+  },
+
   notFound: {
     title: "找不到页面",
     code: "错误 404",

@@ -9,7 +9,7 @@ import { categoryEditions } from "@/lib/queries/category";
 import { productSlugs } from "@/lib/queries/product";
 import { redirectPaths } from "@/lib/queries/redirect";
 import { storeSlugs } from "@/lib/queries/store";
-import { archivePageHref } from "@/lib/routes";
+import { archivePageHref, homeHref } from "@/lib/routes";
 
 /**
  * Read from the database at build time, exactly like the routes themselves, so
@@ -49,6 +49,8 @@ function entry(path: string, lastModified?: string | null, editions?: Editions) 
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const homeEditions: Editions = Object.fromEntries(LOCALES.map((l) => [l, homeHref(l)]));
+
   // Articles, grouped into their translation sets.
   const articles = articleDates();
   const sets = new Map<string, Editions>();
@@ -75,7 +77,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
 
   const all: MetadataRoute.Sitemap = [
-    entry("/"),
+    // The home page in every edition, as one hreflang set.
+    ...LOCALES.map((l) => entry(homeHref(l), undefined, homeEditions)),
     entry("/about-us/"),
     entry("/contact-us/"),
     entry("/vatti-ewarranty/"),

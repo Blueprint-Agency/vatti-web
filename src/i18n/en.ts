@@ -363,6 +363,111 @@ export const en = {
     opensHint: "Opens a chat with this text ready. You still press send.",
   },
 
+  /** The home page. Counts are interpolated from the database. */
+  home: {
+    metaTitle: "Kitchen Appliances Supplier in Malaysia | VATTI",
+    metaDescription: (dealers: number) =>
+      `VATTI Malaysia supplies cooker hoods, cooker hobs, combi ovens, built-in ovens and dishwashers through ${dealers} authorised dealers nationwide. Building kitchen appliances since 1992.`,
+    eyebrow: "Since 1992",
+    h1: "VATTI Malaysia, modern kitchen appliances built for Malaysian homes",
+    heroText: (models: number, dealers: number) =>
+      `Hoods, hobs, ovens, dishwashers and purifiers. ${models} models, serviced through ${dealers} authorised dealers nationwide.`,
+    browse: "Browse the range",
+    findDealer: "Find a dealer",
+    heroImageAlt: "A VATTI cooker hood drawing steam off a wok on a gas hob in an open-plan kitchen.",
+    heroProductAlt: (model: string) =>
+      `A VATTI ${model} cooker hood mounted in a fitted kitchen, its control panel lit.`,
+    builtHeading: "Built for how Malaysians cook",
+    builtBody:
+      "High heat and heavy oil are hard on a kitchen. These are hoods, hobs and ovens designed around that, not adapted to it afterwards.",
+    builtSince: "Building premium kitchen appliances since 1992.",
+    modelsAcross: (n: number) => `models across ${n} categories`,
+    dealersAcross: (n: number) => `authorised dealers across ${n} regions`,
+    soldLocally: "Sold, installed and serviced locally, from the Klang Valley to Sabah and Sarawak.",
+    findDealerArrow: "Find a dealer →",
+    rangeHeading: "Our kitchen appliance range in Malaysia",
+    modelCount: (n: number) => `${n} ${n === 1 ? "model" : "models"}`,
+    aboutHeading: "About VATTI: a kitchen appliance manufacturer since 1992",
+    aboutLink: "About VATTI Malaysia →",
+    about1:
+      "VATTI has built kitchen appliances since 1992 from its base in Zhongshan, Guangdong, and is publicly listed on the Shenzhen Stock Exchange under ticker 002035. The group held 838 valid patents as of 2018, among the highest counts in its industry, and its products have taken the Red Dot Design Award, the iF Design Award and the AWE Award.",
+    about2: (models: number, categories: number, dealers: number) =>
+      `In Malaysia, VATTI (M) Sdn Bhd is the appointed national distributor. We supply ${models} models across ${categories} categories through ${dealers} authorised dealers, from the Klang Valley to Sabah and Sarawak, with a flagship showroom at Atria Shopping Gallery in Petaling Jaya.`,
+    about3:
+      "Every unit sold through that network is ST and SIRIM certified, covered by the VATTI Malaysia warranty, and serviced with official spare parts.",
+    awards: [
+      {
+        name: "Red Dot Design Award",
+        year: "2017",
+        body: "German international design prize awarded by Red Dot GmbH & Co. KG, won for product design.",
+      },
+      {
+        name: "iF Design Award",
+        year: "since 1954",
+        body: "One of the longest-running design marks in the world, and a recurring one for VATTI product design.",
+      },
+      {
+        name: "AWE Award",
+        year: "China",
+        body: "Presented by the China Household Electrical Appliances Association after market and customer testing.",
+      },
+    ],
+    bestsellersHeading: "Best-selling VATTI hoods, hobs and ovens",
+    allCategories: "All categories →",
+    quoteHeading: "Get a quote for your kitchen",
+    quoteBody:
+      "Seven quick questions, all optional. We will point you at the right model and the dealer who stocks it, usually the same day.",
+    careline: "VATTI Careline",
+    hours: "Operating Hours",
+    hoursValue: "10am - 8pm daily",
+    showroom: "VATTI Showroom",
+    showroomAddress: "Atria Shopping Gallery, Damansara Jaya, Petaling Jaya",
+    readingHeading: "Kitchen appliance buying guides",
+    beforeBuy: "Before you buy",
+    allGuides: "All buying guides",
+    onceInstalled: "Once it is installed",
+    allRecipes: "All recipes",
+    min: "min",
+    dealersHeading: "Where to buy VATTI in Malaysia",
+    dealersBody:
+      "Every model is sold, installed and serviced through an authorised dealer. Find the nearest showroom, see it running, and buy from someone who can come back and service it.",
+    partnersHeading: "Our Partners",
+    partnersBody:
+      "The kitchen, bath and electrical retailers who stock VATTI and stand behind it after the sale.",
+    faqHeading: "VATTI Malaysia FAQ",
+    faqs: (models: number, dealers: number) => [
+      {
+        q: "Is VATTI a good brand?",
+        a: `VATTI has manufactured kitchen appliances since 1992 and is listed on the Shenzhen Stock Exchange. Its products have won the Red Dot, iF Design and AWE awards, and the group holds 838 valid patents. In Malaysia the range is sold through ${dealers} authorised dealers who install and service what they sell.`,
+      },
+      {
+        q: "Where is VATTI from?",
+        a: "VATTI is headquartered in Zhongshan, Guangdong, China, and has manufactured kitchen appliances there since 1992. VATTI (M) Sdn Bhd is the appointed national distributor for Malaysia.",
+      },
+      {
+        q: "What does VATTI Malaysia sell?",
+        a: `Kitchen hoods, cooker hobs, combi and steam ovens, dishwashers and one tap water purifiers. ${models} models in total.`,
+      },
+      {
+        q: "What warranty do VATTI appliances carry?",
+        a: "Two years on every appliance we sell, hoods, hobs, ovens, microwaves, dishwashers and water dispensers alike. Ten years on the cooker hood motor across all models, a further three years on a hood's auto-clean components once you register, and a lifetime warranty on the cooker hob glass top. Register within 14 days of purchase.",
+      },
+      {
+        q: "Where can I buy VATTI in Malaysia?",
+        a: `Through ${dealers} authorised dealers across the Klang Valley, Northern, Southern and East Coast regions plus Sabah and Sarawak, and at the flagship showroom in Atria Shopping Gallery, Petaling Jaya. Buying outside this network means no warranty, no official spare parts and no service.`,
+      },
+    ],
+  },
+
+  showcase: {
+    alt: (model: string, category: string) =>
+      `A VATTI ${model} ${category.toLowerCase()} installed in a fitted kitchen.`,
+    prev: "Previous model",
+    next: "Next model",
+    promoted: "Promoted models",
+    view: (model: string) => `View the ${model} →`,
+  },
+
   notFound: {
     title: "Page not found",
     code: "Error 404",

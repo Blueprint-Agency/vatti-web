@@ -162,7 +162,7 @@ Learn the four core symbols, conventional, fan, grill and bottom heat, and you c
 
 [Explore combi oven and steam oven](/combi-and-steam-oven-in-malaysia/)
 '
-WHERE path = 'tips-tricks/oven-symbols-and-meanings';
+WHERE path = 'tips-tricks/oven-symbols-and-meanings' AND lang = 'en-MY';
 
 UPDATE article SET
   title = 'Induction or Ceramic Cooker: Which Is Better?',
@@ -299,7 +299,7 @@ Induction is the better hob for speed, efficiency, safety and cleaning. Ceramic 
 
 [Explore VATTI cooker hob](/cooker-hob-in-malaysia/)
 '
-WHERE path = 'buying-guide/which-is-better-induction-or-ceramic-cooker';
+WHERE path = 'buying-guide/which-is-better-induction-or-ceramic-cooker' AND lang = 'en-MY';
 
 UPDATE article SET
   title = 'What Is RO Water? Reverse Osmosis Explained',
@@ -406,7 +406,7 @@ RO water is tap water with the dissolved solids, metals and microbes taken out. 
 
 [Explore the VATTI One Tap water purifier](/one-tap-purifier-in-malaysia/)
 '
-WHERE path = 'tips-tricks/what-is-reverse-osmosis-water';
+WHERE path = 'tips-tricks/what-is-reverse-osmosis-water' AND lang = 'en-MY';
 
 UPDATE article SET
   title = 'Ducted or Ductless Range Hood: Which Is Better in Malaysia?',
@@ -504,7 +504,7 @@ The choice between ducted and ductless is really the choice between removing the
 
 [Explore VATTI Kitchen Hood Malaysia](/kitchen-hood-in-malaysia/)
 '
-WHERE path = 'buying-guide/which-is-better-ducted-or-ductless-range-hood';
+WHERE path = 'buying-guide/which-is-better-ducted-or-ductless-range-hood' AND lang = 'en-MY';
 
 UPDATE article SET
   title = 'How to Remove Scratches From a Glass Stove Top',
@@ -632,7 +632,7 @@ Polish the light scratches out with baking soda or a cooktop compound, blend the
 
 [Explore VATTI cooker hob](/cooker-hob-in-malaysia/)
 '
-WHERE path = 'tips-tricks/how-to-remove-scratches-on-stove-top';
+WHERE path = 'tips-tricks/how-to-remove-scratches-on-stove-top' AND lang = 'en-MY';
 
 UPDATE article SET
   title = 'How to Clean a Kitchen Hood Filter: Mesh, Baffle and Carbon',
@@ -741,7 +741,7 @@ A clean filter is what keeps a hood pulling at the airflow it was sold with. Was
 
 [Explore VATTI Kitchen Hood](/kitchen-hood-in-malaysia/)
 '
-WHERE path = 'tips-tricks/how-to-clean-kitchen-hood-filter';
+WHERE path = 'tips-tricks/how-to-clean-kitchen-hood-filter' AND lang = 'en-MY';
 
 UPDATE article SET
   title = 'How Long to Preheat an Oven: 10 to 15 Minutes for Most Baking',
@@ -862,7 +862,7 @@ Ten to fifteen minutes is the honest answer for everyday baking, and a few minut
 
 [Explore VATTI Built-in Oven](/combi-and-steam-oven-in-malaysia/)
 '
-WHERE path = 'tips-tricks/how-long-to-preheat-oven';
+WHERE path = 'tips-tricks/how-long-to-preheat-oven' AND lang = 'en-MY';
 
 UPDATE article SET
   title = 'Is It OK to Leave Dishes in the Dishwasher Overnight?',
@@ -954,7 +954,7 @@ Leaving dishes in the dishwasher overnight is fine when you do it on purpose: sc
 
 [Explore VATTI Dishwasher](/dishwasher-in-malaysia/)
 '
-WHERE path = 'tips-tricks/dishes-in-the-dishwasher-overnight';
+WHERE path = 'tips-tricks/dishes-in-the-dishwasher-overnight' AND lang = 'en-MY';
 
 UPDATE article SET
   title = 'Oven Symbol for Baking Cakes: Which Icon to Use',
@@ -1049,7 +1049,7 @@ Two lines, middle rack, door closed: that is the oven symbol for baking a cake. 
 
 [Explore VATTI Built-in Oven](/combi-and-steam-oven-in-malaysia/)
 '
-WHERE path = 'tips-tricks/oven-symbol-for-baking';
+WHERE path = 'tips-tricks/oven-symbol-for-baking' AND lang = 'en-MY';
 
 UPDATE article SET
   title = 'Best Oven Setting for Baking Cakes: Mode, Temperature and Rack',
@@ -1136,10 +1136,10 @@ Conventional mode, 160 to 180°C, middle rack, door shut: those four settings fi
 
 [Explore VATTI Built-in Oven](/combi-and-steam-oven-in-malaysia/)
 '
-WHERE path = 'tips-tricks/baking-cake-oven-setting';
+WHERE path = 'tips-tricks/baking-cake-oven-setting' AND lang = 'en-MY';
 
 -- ── merge: induction versus ceramic ───────────────────────────────────────
-UPDATE article SET is_published = 0 WHERE path IN ('buying-guide/induction-vs-ceramic-features', 'buying-guide/induction-vs-ceramic-safety', 'uncategorized/induction-vs-ceramic-guide');
+UPDATE article SET is_published = 0 WHERE path IN ('buying-guide/induction-vs-ceramic-features', 'buying-guide/induction-vs-ceramic-safety', 'uncategorized/induction-vs-ceramic-guide') AND lang = 'en-MY';
 INSERT INTO redirect (from_path, to_path, code) VALUES ('/buying-guide/induction-vs-ceramic-features/', '/buying-guide/which-is-better-induction-or-ceramic-cooker/', 301);
 INSERT INTO redirect (from_path, to_path, code) VALUES ('/buying-guide/induction-vs-ceramic-safety/', '/buying-guide/which-is-better-induction-or-ceramic-cooker/', 301);
 INSERT INTO redirect (from_path, to_path, code) VALUES ('/uncategorized/induction-vs-ceramic-guide/', '/buying-guide/which-is-better-induction-or-ceramic-cooker/', 301);
@@ -1156,4 +1156,4 @@ INSERT INTO redirect (from_path, to_path, code) VALUES ('/category/uncategorized
 UPDATE article SET body_md = replace(body_md,
   '### Quick Answer: Best Oven Setting for Baking Cakes',
   '### Quick Answer: How do you clean a dishwasher?')
-WHERE path = 'tips-tricks/how-to-clean-dishwashers';
+WHERE path = 'tips-tricks/how-to-clean-dishwashers' AND lang = 'en-MY';

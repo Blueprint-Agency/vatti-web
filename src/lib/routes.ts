@@ -13,8 +13,8 @@ import { localCategoryPath } from "@/lib/queries/category";
  * the same change that adds the route file.
  */
 
-/** Editions that have a home page. English always; the rest join in Phase 2. */
-const HOME: readonly Locale[] = ["en"];
+/** Editions that have a home page: all three since Phase 2 (3 Oct 2026). */
+const HOME: readonly Locale[] = ["en", "ms", "zh"];
 
 /** Hand-written pages, by their English path segment, and the editions they exist in. */
 const STATIC: Record<string, readonly Locale[]> = {

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 
 import { cdn } from "@/lib/cdn";
+import { t, type Locale } from "@/i18n";
 import type { Bestseller } from "@/lib/queries/home";
 
 const CYCLE_MS = 6000;
@@ -42,7 +43,14 @@ const SHOWCASE_IMAGES: Record<string, string> = {
  * under prefers-reduced-motion. WCAG 2.2.2 wants a way to pause anything that
  * moves on its own, and hover alone does not give keyboard users one.
  */
-export function ProductShowcase({ products }: { products: Bestseller[] }) {
+export function ProductShowcase({
+  locale = "en",
+  products,
+}: {
+  locale?: Locale;
+  products: Bestseller[];
+}) {
+  const sc = t(locale).showcase;
   const baseId = useId();
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -145,7 +153,7 @@ export function ProductShowcase({ products }: { products: Bestseller[] }) {
                     src={src}
                     alt={
                       inContext
-                        ? `A VATTI ${product.model_code} ${product.category.toLowerCase()} installed in a fitted kitchen.`
+                        ? sc.alt(product.model_code, product.category)
                         : (product.alt ?? product.name)
                     }
                     fill
@@ -171,7 +179,7 @@ export function ProductShowcase({ products }: { products: Bestseller[] }) {
               className="rounded-sm border border-line-strong px-3 py-1.5 text-ink transition-colors hover:border-teal hover:text-teal"
             >
               <span aria-hidden>←</span>
-              <span className="sr-only">Previous model</span>
+              <span className="sr-only">{sc.prev}</span>
             </button>
             <button
               type="button"
@@ -179,7 +187,7 @@ export function ProductShowcase({ products }: { products: Bestseller[] }) {
               className="rounded-sm border border-line-strong px-3 py-1.5 text-ink transition-colors hover:border-teal hover:text-teal"
             >
               <span aria-hidden>→</span>
-              <span className="sr-only">Next model</span>
+              <span className="sr-only">{sc.next}</span>
             </button>
           </div>
         </div>
@@ -188,7 +196,7 @@ export function ProductShowcase({ products }: { products: Bestseller[] }) {
       <div
         role="tablist"
         aria-orientation="vertical"
-        aria-label="Promoted models"
+        aria-label={sc.promoted}
         // Top-aligned, not centred: against a square panel the list was
         // floating in the middle of it. Sharing a top edge with the picture
         // gives the two columns something to line up on.
@@ -256,10 +264,10 @@ export function ProductShowcase({ products }: { products: Bestseller[] }) {
         })}
 
         <Link
-          href={`/${current.slug}/`}
+          href={current.href}
           className="mt-6 inline-block text-teal transition-opacity hover:opacity-80"
         >
-          View the {current.model_code} →
+          {sc.view(current.model_code)}
         </Link>
       </div>
     </div>

@@ -129,6 +129,16 @@ check("non-English article in a section with no translated name", `
 
 // The editions of one piece are one piece: same section, so the archive, the
 // breadcrumb and hreflang all agree on where it lives.
+// Paths and slugs are unique per language, so an UPDATE keyed on path alone
+// rewrites every edition at that path. It happened on 2026-10-03: a September
+// English refresh overwrote the Chinese ducted-or-ductless guide, title and
+// body. Every UPDATE of an English article must say AND lang = 'en-MY'; this
+// catches the one that does not.
+check("translated article carrying its English edition's title or body", `
+  SELECT t.lang, t.path FROM article t
+    JOIN article e ON e.translation_key = t.translation_key AND e.lang = 'en-MY'
+   WHERE t.lang <> 'en-MY' AND (t.title = e.title OR t.body_md = e.body_md)`);
+
 check("translation set split across sections", `
   SELECT translation_key, count(DISTINCT section) n FROM article
    WHERE translation_key IS NOT NULL

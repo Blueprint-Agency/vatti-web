@@ -1,4 +1,6 @@
+import { TAG, type Locale } from "@/i18n";
 import { all } from "@/lib/db";
+import { localCategoryPath, localProductPath } from "@/lib/queries/category";
 
 /**
  * The homepage sells a kitchen, not a spec sheet. Nothing here returns a
@@ -11,6 +13,8 @@ import { all } from "@/lib/db";
 /** A category as the homepage shows it: a picture, a sentence, and a count. */
 export type CategoryCard = {
   slug: string;
+  /** The category page in the edition asked for, or English until translated. */
+  href: string;
   name: string;
   /** The category page's own intro. One sentence, written for buyers. */
   intro: string | null;
@@ -21,6 +25,7 @@ export type CategoryCard = {
 
 export type Bestseller = {
   slug: string;
+  href: string;
   name: string;
   model_code: string;
   series: string | null;
@@ -52,12 +57,13 @@ export type Partner = { name: string; url: string; width: number; height: number
  * sort_order keeps the choice stable across rebuilds rather than letting
  * SQLite hand back an arbitrary group member.
  */
-export function getCategoryCards(): CategoryCard[] {
-  return all<CategoryCard>(
-    `SELECT c.slug, c.name, c.intro_md AS intro,
+export function getCategoryCards(locale: Locale = "en"): CategoryCard[] {
+  return all<Omit<CategoryCard, "href">>(
+    `SELECT c.slug, coalesce(ci.name, c.name) AS name, coalesce(ci.intro_md, c.intro_md) AS intro,
             count(p.id) AS model_count,
             i.url, i.alt
        FROM product_category c
+       LEFT JOIN product_category_i18n ci ON ci.category_id = c.id AND ci.lang = ?
        LEFT JOIN product p ON p.category_id = c.id AND p.is_published = 1
        LEFT JOIN image i ON i.id = (
               SELECT f.hero_image_id
@@ -67,31 +73,39 @@ export function getCategoryCards(): CategoryCard[] {
                ORDER BY f.sort_order, f.id
                LIMIT 1)
       GROUP BY c.id
-      ORDER BY c.sort_order`
-  );
+      ORDER BY c.sort_order`,
+    TAG[locale]
+  ).map((c) => ({ ...c, href: localCategoryPath(locale, c.slug) }));
 }
 
 /**
  * The four models the source homepage promotes. Editorial, not derived — there
  * is no sales data in the DB and inventing a "popular" sort would be a lie.
  */
-export function getBestsellers(slugs: string[]): Bestseller[] {
+export function getBestsellers(slugs: string[], locale: Locale = "en"): Bestseller[] {
   const holes = slugs.map(() => "?").join(",");
-  const rows = all<Bestseller>(
-    `SELECT p.slug, p.name, p.model_code, p.series, c.name AS category, i.url, i.alt
+  const rows = all<Omit<Bestseller, "href">>(
+    `SELECT p.slug, coalesce(pi.name, p.name) AS name, p.model_code, p.series,
+            coalesce(ci.name, c.name) AS category, i.url, i.alt
        FROM product p
        JOIN product_category c ON c.id = p.category_id
+       LEFT JOIN product_category_i18n ci ON ci.category_id = c.id AND ci.lang = ?
+       LEFT JOIN product_i18n pi ON pi.product_id = p.id AND pi.lang = ?
        LEFT JOIN image i ON i.id = p.hero_image_id
       WHERE p.slug IN (${holes}) AND p.is_published = 1`,
+    TAG[locale],
+    TAG[locale],
     ...slugs
   );
   // Keep the caller's order — the source homepage's, not the DB's.
-  return slugs.flatMap((slug) => rows.filter((r) => r.slug === slug));
+  return slugs.flatMap((slug) =>
+    rows.filter((r) => r.slug === slug).map((r) => ({ ...r, href: localProductPath(locale, r.slug) }))
+  );
 }
 
 /** One product by slug. The hero tile names the model it shows. */
-export function getProductCard(slug: string): Bestseller | undefined {
-  return getBestsellers([slug])[0];
+export function getProductCard(slug: string, locale: Locale = "en"): Bestseller | undefined {
+  return getBestsellers([slug], locale)[0];
 }
 
 /**

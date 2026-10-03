@@ -1,8 +1,8 @@
 import { HomePage, homeMetadata } from "@/views/HomeView";
 
 /** The home page in this edition. The page itself is src/views/HomeView. */
-export const metadata = homeMetadata("en");
+export const metadata = homeMetadata("zh");
 
 export default function Page() {
-  return <HomePage locale="en" />;
+  return <HomePage locale="zh" />;
 }
