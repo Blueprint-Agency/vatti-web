@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { LOCALES, NATIVE_NAME, TAG, t, type Locale } from "@/i18n";
+import { LOCALES, NATIVE_NAME, SHORT_NAME, TAG, t, type Locale } from "@/i18n";
 import { archiveHref, categoryHref, homeHref, sectionLabel, staticHref } from "@/lib/routes";
 import { CATALOGUE, LOGO_URL } from "@/lib/site";
 
@@ -34,7 +34,7 @@ const BLOG_SECTIONS = ["buying-guide", "tips-tricks", "recipe"];
 
 type Item = { href: string; label: string };
 
-const ITEM = "text-ink-muted transition-colors hover:text-ink";
+const ITEM = "whitespace-nowrap text-ink-muted transition-colors hover:text-ink";
 
 function Chevron() {
   return (
@@ -100,6 +100,10 @@ function Section({ label, items }: { label: string; items: Item[] }) {
  * The editions this page exists in, each named in its own language. Plain links
  * with hrefLang, no script: changing language is a navigation to another root
  * layout anyway. Renders nothing on a page with a single edition.
+ *
+ * Closed, it is a globe and a short code. Three full names in the row pushed
+ * the desktop menu past the header width and wrapped every two-word label. A
+ * <details> rather than a hover panel, so a tap opens it on a phone too.
  */
 function LanguageSwitch({
   locale,
@@ -112,33 +116,50 @@ function LanguageSwitch({
 }) {
   const shown = LOCALES.filter((l) => editions?.[l]);
   if (shown.length < 2) return null;
+  const label = t(locale).nav.language;
   return (
-    <nav aria-label={t(locale).nav.language} className={className}>
-      <ul className="flex items-center gap-1 text-xs">
-        {shown.map((l) => (
-          <li key={l}>
-            {l === locale ? (
-              <span
-                lang={TAG[l]}
-                aria-current="true"
-                className="block rounded-sm border border-line-strong px-2 py-1 text-ink"
-              >
-                {NATIVE_NAME[l]}
-              </span>
-            ) : (
-              <a
-                href={editions![l]}
-                hrefLang={TAG[l]}
-                lang={TAG[l]}
-                className="block rounded-sm border border-transparent px-2 py-1 text-ink-muted transition-colors hover:text-ink"
-              >
-                {NATIVE_NAME[l]}
-              </a>
-            )}
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <details className={`relative ${className}`}>
+      <summary
+        aria-label={`${label}: ${NATIVE_NAME[locale]}`}
+        className="flex cursor-pointer list-none items-center gap-1.5 whitespace-nowrap rounded-sm border border-line-strong px-2.5 py-1.5 text-xs text-ink [&::-webkit-details-marker]:hidden"
+      >
+        <svg
+          viewBox="0 0 16 16"
+          aria-hidden="true"
+          className="hidden h-3.5 w-3.5 fill-none stroke-current stroke-[1.25] opacity-70 sm:block"
+        >
+          <circle cx="8" cy="8" r="6.5" />
+          <path d="M1.5 8h13M8 1.5c1.8 1.8 2.6 4 2.6 6.5S9.8 12.7 8 14.5M8 1.5C6.2 3.3 5.4 5.5 5.4 8s.8 4.7 2.6 6.5" />
+        </svg>
+        <span lang={TAG[locale]}>{SHORT_NAME[locale]}</span>
+        <Chevron />
+      </summary>
+      <nav
+        aria-label={label}
+        className="absolute right-0 top-full z-[var(--z-dropdown)] mt-2 w-max rounded-sm border border-line bg-surface py-1.5 shadow-lg"
+      >
+        <ul className="text-sm">
+          {shown.map((l) => (
+            <li key={l}>
+              {l === locale ? (
+                <span lang={TAG[l]} aria-current="true" className="block px-4 py-2 text-ink">
+                  {NATIVE_NAME[l]}
+                </span>
+              ) : (
+                <a
+                  href={editions![l]}
+                  hrefLang={TAG[l]}
+                  lang={TAG[l]}
+                  className="block px-4 py-2 text-ink-muted transition-colors hover:bg-raised hover:text-ink"
+                >
+                  {NATIVE_NAME[l]}
+                </a>
+              )}
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </details>
   );
 }
 
@@ -169,7 +190,7 @@ export function SiteHeader({
       {/* gap-3 below sm: the wordmark, the ground selector and the menu button
           are all fixed-width, so on a 360px Android — common here — gap-6
           between the last two is what tips the row into overflowing. */}
-      <div className="mx-auto flex max-w-6xl items-center gap-3 px-5 py-3.5 sm:gap-6 sm:px-8">
+      <div className="mx-auto flex max-w-6xl items-center gap-3 px-5 py-3.5 sm:gap-5 sm:px-8 xl:gap-6">
         <Link href={home} className="shrink-0 transition-opacity hover:opacity-80">
           <Image
             src={LOGO_URL}
@@ -182,7 +203,7 @@ export function SiteHeader({
         </Link>
 
         <nav aria-label="Main" className="ml-auto hidden lg:block">
-          <ul className="flex items-center gap-6 text-sm">
+          <ul className="flex items-center gap-5 text-sm xl:gap-6">
             <li>
               <Link href={home} className={ITEM}>
                 {nav.home}
@@ -226,7 +247,7 @@ export function SiteHeader({
         <ThemeToggle className={editions && Object.keys(editions).length > 1 ? "" : "ml-auto lg:ml-0"} />
 
         <details className="group lg:hidden">
-          <summary className="flex cursor-pointer list-none items-center gap-2 rounded-sm border border-line-strong px-3.5 py-2 text-sm font-medium text-ink [&::-webkit-details-marker]:hidden">
+          <summary className="flex cursor-pointer list-none items-center gap-2 whitespace-nowrap rounded-sm border border-line-strong px-3.5 py-2 text-sm font-medium text-ink [&::-webkit-details-marker]:hidden">
             {nav.menu}
             <Chevron />
           </summary>

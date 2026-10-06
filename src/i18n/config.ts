@@ -22,6 +22,9 @@ export const NATIVE_NAME: Record<Locale, string> = {
   zh: "中文",
 };
 
+/** The switcher's closed state, which has to fit beside a full menu. */
+export const SHORT_NAME: Record<Locale, string> = { en: "EN", ms: "BM", zh: "中文" };
+
 /** '' for English, '/ms' or '/zh' otherwise. Paths are built as `${prefix(l)}/x/`. */
 export function prefix(locale: Locale): string {
   return locale === "en" ? "" : `/${locale}`;
