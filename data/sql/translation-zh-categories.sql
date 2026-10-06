@@ -275,7 +275,7 @@ INSERT INTO category_faq (category_id, lang, position, question, answer_md) VALU
 INSERT INTO category_guide (category_id, lang, position, heading, body_md, figure, figure_unit) VALUES
   ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 'zh-MY', 1,
    '马来西亚厨房要的是会蒸的烤箱',
-   '大多数烤箱是围绕烘焙设计的，而这里的家常菜大多是蒸出来的：米饭、鱼、包子、各式糕点，还有隔夜菜回蒸也不变干。VA05 和 VA06 都有低、中、高三档蒸汽，也都有蒸饭模式。VA06 另有多菜同蒸模式和三种炖煮模式：煮粥、炖肉、煲汤。',
+   '大多数烤箱是围绕烘焙设计的，而这里的家常菜大多是蒸出来的：米饭、鱼、包子、各式糕点，还有隔夜菜回蒸也不变干。VA05 和 VA06 都有低、中、高三档蒸汽，也都有蒸饭模式。VA06 另有三种炖煮模式：煮粥、炖肉、煲汤。',
    '3', '档蒸汽'),
   ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 'zh-MY', 2,
    '热风、蒸汽，或两者同时',
@@ -664,7 +664,6 @@ INSERT INTO product_spec_i18n (product_id, position, lang, raw_text) VALUES
 -- VA06
 INSERT INTO product_spec_i18n (product_id, position, lang, raw_text) VALUES
   ((SELECT id FROM product WHERE slug = 'vatti-magic-series-combi-oven-va06'),  2, 'zh-MY', '3 种蒸汽模式'),
-  ((SELECT id FROM product WHERE slug = 'vatti-magic-series-combi-oven-va06'),  3, 'zh-MY', '多菜同蒸模式'),
   ((SELECT id FROM product WHERE slug = 'vatti-magic-series-combi-oven-va06'),  4, 'zh-MY', '2 种空气炸模式'),
   ((SELECT id FROM product WHERE slug = 'vatti-magic-series-combi-oven-va06'),  5, 'zh-MY', '3 种炖煮模式（粥、肉、汤）'),
   ((SELECT id FROM product WHERE slug = 'vatti-magic-series-combi-oven-va06'),  6, 'zh-MY', '不滴水'),

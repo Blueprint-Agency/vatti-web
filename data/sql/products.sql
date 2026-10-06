@@ -1230,7 +1230,6 @@ INSERT INTO product (id, slug, category_id, kind, model_code, secondary_model, n
 INSERT INTO product_spec (product_id, position, spec_key, spec_value, raw_text) VALUES (35, 0, NULL, NULL, '70L net capacity');
 INSERT INTO product_spec (product_id, position, spec_key, spec_value, raw_text) VALUES (35, 1, NULL, NULL, '8 Baking modes');
 INSERT INTO product_spec (product_id, position, spec_key, spec_value, raw_text) VALUES (35, 2, NULL, NULL, '3 Steaming modes');
-INSERT INTO product_spec (product_id, position, spec_key, spec_value, raw_text) VALUES (35, 3, NULL, NULL, 'Multi dishes steam mode');
 INSERT INTO product_spec (product_id, position, spec_key, spec_value, raw_text) VALUES (35, 4, NULL, NULL, '2 Air-fryer mode');
 INSERT INTO product_spec (product_id, position, spec_key, spec_value, raw_text) VALUES (35, 5, NULL, NULL, '3 stew mode ( porridge, meat, soup )');
 INSERT INTO product_spec (product_id, position, spec_key, spec_value, raw_text) VALUES (35, 6, NULL, NULL, 'No water dripping');

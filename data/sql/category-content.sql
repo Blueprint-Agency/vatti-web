@@ -811,7 +811,7 @@ UPDATE product SET intro_md =
 INSERT INTO category_guide (category_id, position, heading, body_md, figure, figure_unit) VALUES
   ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 1,
    'Steam is what a Malaysian kitchen asks of an oven',
-   'Most ovens are built around baking. Most home cooking here is steamed: rice, fish, buns, kuih, and yesterday''s dishes brought back without drying out. The VA05 and the VA06 steam at three levels, low, mid and high, and both have a steam rice mode. The VA06 adds a multi-dish steam mode and three stew modes, for porridge, meat and soup.',
+   'Most ovens are built around baking. Most home cooking here is steamed: rice, fish, buns, kuih, and yesterday''s dishes brought back without drying out. The VA05 and the VA06 steam at three levels, low, mid and high, and both have a steam rice mode. The VA06 adds three stew modes, for porridge, meat and soup.',
    '3', 'steam levels'),
 
   ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 2,

@@ -251,7 +251,7 @@ INSERT INTO category_faq (category_id, lang, position, question, answer_md) VALU
 INSERT INTO category_guide (category_id, lang, position, heading, body_md, figure, figure_unit) VALUES
   ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 'ms-MY', 1,
    'Stim ialah apa yang dapur Malaysia mahukan daripada ketuhar',
-   'Kebanyakan ketuhar dibina untuk membakar. Kebanyakan masakan rumah di sini pula dikukus: nasi, ikan, pau, kuih, dan lauk semalam yang dipanaskan semula tanpa menjadi kering. VA05 dan VA06 mengukus pada tiga tahap, rendah, sederhana dan tinggi, dan kedua-duanya mempunyai mod nasi stim. VA06 menambah mod stim pelbagai hidangan dan tiga mod rebusan, untuk bubur, daging dan sup.',
+   'Kebanyakan ketuhar dibina untuk membakar. Kebanyakan masakan rumah di sini pula dikukus: nasi, ikan, pau, kuih, dan lauk semalam yang dipanaskan semula tanpa menjadi kering. VA05 dan VA06 mengukus pada tiga tahap, rendah, sederhana dan tinggi, dan kedua-duanya mempunyai mod nasi stim. VA06 menambah tiga mod rebusan, untuk bubur, daging dan sup.',
    '3', 'tahap stim'),
   ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 'ms-MY', 2,
    'Perolakan, stim, atau kedua-duanya serentak',
@@ -628,7 +628,6 @@ INSERT INTO product_spec_i18n (product_id, position, lang, raw_text) VALUES
   ((SELECT id FROM product WHERE slug = 'vatti-magic-series-cooker-hob-c861g'), 13, 'ms-MY', 'Penyalaan elektrik'),
   -- Magic VA06
   ((SELECT id FROM product WHERE slug = 'vatti-magic-series-combi-oven-va06'), 2, 'ms-MY', '3 mod stim'),
-  ((SELECT id FROM product WHERE slug = 'vatti-magic-series-combi-oven-va06'), 3, 'ms-MY', 'Mod stim pelbagai hidangan'),
   ((SELECT id FROM product WHERE slug = 'vatti-magic-series-combi-oven-va06'), 4, 'ms-MY', '2 mod penggoreng udara'),
   ((SELECT id FROM product WHERE slug = 'vatti-magic-series-combi-oven-va06'), 5, 'ms-MY', '3 mod rebusan (bubur, daging, sup)'),
   ((SELECT id FROM product WHERE slug = 'vatti-magic-series-combi-oven-va06'), 6, 'ms-MY', 'Tiada titisan air'),
