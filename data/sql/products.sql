@@ -1148,7 +1148,6 @@ INSERT INTO product_spec (product_id, position, spec_key, spec_value, raw_text) 
 INSERT INTO product_spec (product_id, position, spec_key, spec_value, raw_text) VALUES (31, 1, NULL, NULL, 'Oven + Steam function');
 INSERT INTO product_spec (product_id, position, spec_key, spec_value, raw_text) VALUES (31, 2, NULL, NULL, 'Defrost & Pre-heat Function');
 INSERT INTO product_spec (product_id, position, spec_key, spec_value, raw_text) VALUES (31, 3, NULL, NULL, 'Fermentation');
-INSERT INTO product_spec (product_id, position, spec_key, spec_value, raw_text) VALUES (31, 4, NULL, NULL, 'Dehydration');
 INSERT INTO product_spec (product_id, position, spec_key, spec_value, raw_text) VALUES (31, 5, NULL, NULL, 'Disinfection & Auto clean');
 INSERT INTO product_spec (product_id, position, spec_key, spec_value, raw_text) VALUES (31, 6, NULL, NULL, 'Alarm sensor function');
 INSERT INTO product_spec (product_id, position, spec_key, spec_value, raw_text) VALUES (31, 7, NULL, NULL, 'Water not dripping');
@@ -1240,7 +1239,7 @@ INSERT INTO product_spec (product_id, position, spec_key, spec_value, raw_text) 
 INSERT INTO product_spec (product_id, position, spec_key, spec_value, raw_text) VALUES (35, 9, NULL, NULL, 'Steam grill & steam bake ( combination functions )');
 INSERT INTO product_spec (product_id, position, spec_key, spec_value, raw_text) VALUES (35, 10, NULL, NULL, 'Triple-layer tempered glass');
 INSERT INTO product_spec (product_id, position, spec_key, spec_value, raw_text) VALUES (35, 11, NULL, NULL, 'Intelligent auto-clean');
-INSERT INTO product_spec (product_id, position, spec_key, spec_value, raw_text) VALUES (35, 12, NULL, NULL, 'Airfry, dehydrate, fermentation');
+INSERT INTO product_spec (product_id, position, spec_key, spec_value, raw_text) VALUES (35, 12, NULL, NULL, 'Airfry, fermentation');
 INSERT INTO product_spec (product_id, position, spec_key, spec_value, raw_text) VALUES (35, 13, NULL, NULL, 'Keep warm, defrost');
 INSERT INTO product_spec (product_id, position, spec_key, spec_value, raw_text) VALUES (35, 14, NULL, NULL, 'Steam rice, yogurt making');
 INSERT INTO product_spec (product_id, position, spec_key, spec_value, raw_text) VALUES (35, 15, NULL, NULL, '68 auto-cooking menus');

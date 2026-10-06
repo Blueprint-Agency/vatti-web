@@ -2446,8 +2446,8 @@ SELECT id, 2, 'split', 'Steam and grill together',
   FROM product WHERE slug = 'free-standing-combi-oven-va01';
 
 INSERT INTO product_feature (product_id, position, layout, title, body_md, image_url, image_alt, image_w, image_h)
-SELECT id, 3, 'split', 'One machine, six other jobs',
-  'Fermentation, yogurt, keep warm, dehydration, defrost and disinfection, each on the intelligent menu with the temperature and time already worked out.',
+SELECT id, 3, 'split', 'One machine, five other jobs',
+  'Fermentation, yogurt, keep warm, defrost and disinfection, each on the intelligent menu with the temperature and time already worked out.',
   'https://cdn.vattimalaysia.com/2026/08/va01-functions.webp',
   'The VA01 functions, each with the dish it produces', 720, 512
   FROM product WHERE slug = 'free-standing-combi-oven-va01';

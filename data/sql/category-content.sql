@@ -857,7 +857,7 @@ INSERT INTO category_reason (category_id, position, title, body_md, figure, figu
 
   ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 3,
    'Rice, porridge and yogurt as well',
-   'Both combis steam rice, prove dough, make yogurt, keep food warm and defrost. The VA06 adds porridge, meat and soup stew modes and a dehydrate setting. Jobs that usually take a rice cooker, a slow cooker and a steamer, from one cavity.',
+   'Both combis steam rice, prove dough, make yogurt, keep food warm and defrost. The VA06 adds porridge, meat and soup stew modes. Jobs that usually take a rice cooker, a slow cooker and a steamer, from one cavity.',
    NULL, NULL, 'controls'),
 
   ((SELECT id FROM product_category WHERE slug = 'combi-and-steam-oven-in-malaysia'), 4,

@@ -1765,7 +1765,7 @@ SELECT id, 4, 'What warranty does the Z4501 carry, and where can I buy it?',
 -- free-standing-combi-oven-va01 ---------------------------------------------
 
 UPDATE product SET intro_md =
-  'The combi oven that needs no cabinet: 25 litres standing on the counter, steaming and grilling together between 100°C and 230°C, with a 1,200 W element that makes steam in about thirty seconds. Fermentation, yogurt, keep warm, dehydration, defrost and disinfection are all on the menu.'
+  'The combi oven that needs no cabinet: 25 litres standing on the counter, steaming and grilling together between 100°C and 230°C, with a 1,200 W element that makes steam in about thirty seconds. Fermentation, yogurt, keep warm, defrost and disinfection are all on the menu.'
   WHERE slug = 'free-standing-combi-oven-va01';
 
 INSERT INTO product_dimension (product_id, position, section, label, value, note)
