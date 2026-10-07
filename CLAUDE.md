@@ -239,11 +239,15 @@ Upload **before** you push anything that references a new key. The build embeds 
 static HTML, so a deploy that lands ahead of its objects serves a page with a hole in it, and the
 optimizer caches the 404.
 
-**`public/` is empty, and it stays that way.** The 39 files that predated this rule are migrated
+**`public/` holds no images, and it stays that way.** The 39 files that predated this rule are migrated
 (2026-09). The 29 partner marks became `partner` rows; the home page's nine — the hero kitchen,
 the V929 panel, three award marks and four showcase renders — went to `2026/09/` behind `cdn()`;
 `google-mark.svg` was inlined as markup in `ReviewWall.tsx`, since a 1KB brand glyph is cheaper as
 a path element than as a request.
+
+The one file in `public/` is `google7ca2ed86e296bbc8.html`, the Search Console ownership token
+(2026-10-07). It must be served at the site root, byte for byte, which is what `public/` is for.
+Do not delete it: Search Console re-checks it, and the property loses verification without it.
 
 So there is no longer a "quicker" precedent to point at. A new content image goes to R2, and its
 URL goes in `data/sql` unless the picture genuinely belongs to a hand-authored template, in which
