@@ -67,7 +67,7 @@ where no brand, Fotile included, has Chinese pages.
 |---|---|---|---|---|---|---|
 | N1 | Hood dapur tanpa tebuk dinding, ductless hood guide | ductless kitchen hood malaysia (existing article) | hood dapur tanpa tebuk dinding (210) | map first | Done 3 Oct | `/ms/panduan-membeli/hood-dapur-tanpa-tebuk-dinding/` in `refresh-articles-ms-2026-10.sql`; zh edition in `i18n-zh-guides.sql`. The English edition is the existing ducted-or-ductless article, not a new page (client decision 3 Oct, no cannibalisation), so this piece adds 2 URLs, not 3 |
 | N2 | Hood dapur, panduan lengkap, hood pillar guide | existing English hood article | hood dapur (720) | 抽油烟机 (390) | Done 3 Oct | `/ms/panduan-membeli/hood-dapur/`, same files and same pairing as N1. 2 URLs |
-| N3 | Best kitchen hood in Malaysia, 2026 buyer's guide | best kitchen hood malaysia (170, SD 10) | hood dapur terbaik (90) | map first | Not started | Fotile ranks #2 with a category page, not an article. Absorbs old #13, the Malay best-of |
+| N3 | Best kitchen hood in Malaysia, 2026 buyer's guide | best kitchen hood malaysia (170, SD 10); best cooker hood malaysia (170) | cooker hood terbaik (110); hood dapur terbaik | 抽油烟机推荐 (competitor) | Done 7 Oct | `/buying-guide/best-kitchen-hood-malaysia/`, `/ms/panduan-membeli/hood-dapur-terbaik/`, `/zh/buying-guide/best-kitchen-hood-malaysia/` (`piece-n3-best-kitchen-hood.sql`, `translation-n3-*`). One VATTI pick per kitchen, from measured figures; no other brand named. GSC (sc-domain, 7 Jul to 5 Oct): the site ranked for no "best ... hood" query, so it competes with nothing. `hood dapur terbaik` returned no figure on 7 Oct; the schedule's 90 was an earlier pull |
 | N4 | Vatti vs Fotile, Chinese premium kitchen appliances compared | fotile vs vatti; fotile malaysia (1,900) | map first | 方太 vs 华帝, map first | Not started | No article mentions Fotile. Both are Chinese brands, so the Chinese edition reaches buyers who already know both names |
 | N5 | Best gas hob in Malaysia | gas stove malaysia (480, SD 14) | dapur gas terbaik (590, SD 18); jenama dapur gas terbaik (110) | 煤气炉, map first | Not started | New 7 Oct. The Malay term carries the volume. `best gas hob malaysia` measures nothing in English; `gas stove malaysia` covers portable stoves too, so the piece says built-in early. Links up to the cooker hob pillar |
 
@@ -141,12 +141,11 @@ New pieces, counted in URLs. Target 15 a month.
 
 | | Pieces | URLs planned | URLs live | Done | Partly | Not started |
 |---|---|---|---|---|---|---|
-| Month 1, October | 5 | 13 | 4 | 2 | 0 | 3 |
+| Month 1, October | 5 | 13 | 7 | 3 | 0 | 2 |
 | Month 2, November | 5 | 15 | 0 | 0 | 0 | 5 |
 | Month 3, December | 5 | 15 | 0 | 0 | 0 | 5 |
-| Quarter | 15 | 43 | 4 | 2 | 0 | 13 |
+| Quarter | 15 | 43 | 7 | 3 | 0 | 12 |
 
 Improvements: 14 rows, 6 done, 2 partly done, 5 not started, 1 dropped.
 
-October has 9 new URLs left (N3, N4 and N5 in three languages) and three and a half weeks to ship
-them, after a week spent on the language infrastructure.
+October has 6 new URLs left (N4 and N5 in three languages).

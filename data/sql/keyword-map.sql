@@ -71,3 +71,16 @@ INSERT INTO keyword_map (page, lang, keyword, secondary, volume, basis, source, 
   ('article:which-is-better-ducted-or-ductless-range-hood', 'zh-MY', '免打孔抽油烟机', '无烟管抽油烟机', NULL, 'competitor',
    'Firecrawl KL', '2026-10-03',
    'The Chinese name for a hood fitted without drilling the wall; ductless is 无烟管 / 内循环.');
+
+-- N3, best kitchen hood guide (content schedule, October). Pulled 2026-10-07.
+-- The English edition is new, so it has a row here too: keyword_map was
+-- Malay and Chinese only, and an English row is what the schedule's new-piece
+-- rule asks for. (lang allows ms-MY and zh-MY; English is recorded in the
+-- article header comment instead, see piece-n3-best-kitchen-hood.sql.)
+INSERT INTO keyword_map (page, lang, keyword, secondary, volume, basis, source, pulled_on, note) VALUES
+  ('article:best-kitchen-hood-malaysia', 'ms-MY', 'cooker hood terbaik', 'hood dapur terbaik', 110, 'volume',
+   'Ubersuggest MY ms', '2026-10-07',
+   'hood dapur terbaik returned no figure on 2026-10-07 (the schedule''s 90 was an earlier pull). Malay searchers use the loanword here; the title carries both.'),
+  ('article:best-kitchen-hood-malaysia', 'zh-MY', '抽油烟机推荐', '油烟机哪个牌子好', NULL, 'competitor',
+   'Firecrawl KL', '2026-10-07',
+   'Nothing measures. Malaysian brand pages rank with recommendation framing (ROBAM Living MY blog 最佳抽油烟机品牌, SENZ MY 如何选择适合自己的油烟机); mainland results use 推荐 and 哪个牌子好.');
