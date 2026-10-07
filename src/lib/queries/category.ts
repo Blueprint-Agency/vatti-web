@@ -184,6 +184,29 @@ export function categoryBackdrops(): string[] {
   ).map((r) => r.url);
 }
 
+export type MenuImage = { url: string; width: number; height: number };
+
+/**
+ * One product shot per category, for the mobile menu's product cards: the
+ * cut-out of the model the category leads with (`signature_product_id`), so
+ * changing the lead model changes the menu with it and there is no second
+ * picture to keep. Keyed on the English slug, which is what the header's
+ * category list and the nav dictionary are keyed on. Same in every edition.
+ *
+ * A category whose lead model has no hero image is simply absent; the card
+ * renders without a picture rather than with a hole.
+ */
+export function categoryMenuImages(): Record<string, MenuImage> {
+  const rows = all<MenuImage & { slug: string }>(
+    `SELECT c.slug, i.url, i.width, i.height
+       FROM product_category c
+       JOIN product p ON p.id = c.signature_product_id AND p.is_published = 1
+       JOIN image i ON i.id = p.hero_image_id
+      WHERE i.width IS NOT NULL AND i.height IS NOT NULL`
+  );
+  return Object.fromEntries(rows.map(({ slug, ...img }) => [slug, img]));
+}
+
 /**
  * By the URL segment of the edition. A translated category keeps its English
  * `slug` field as identity (it is what the dictionaries and the guide map are

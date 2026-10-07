@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { LOCALES, NATIVE_NAME, SHORT_NAME, TAG, t, type Locale } from "@/i18n";
+import { categoryMenuImages, type MenuImage } from "@/lib/queries/category";
 import { archiveHref, categoryHref, homeHref, sectionLabel, staticHref } from "@/lib/routes";
 import { CATALOGUE, LOGO_URL } from "@/lib/site";
 
@@ -20,7 +21,8 @@ export type { Editions };
  *
  * Dropdowns are CSS only — hover on pointer devices, `focus-within` for the
  * keyboard, and on mobile the whole menu is a native <details> drawer with the
- * groups flattened into headed sections. No client component, no JS bundle.
+ * groups flattened into headed sections, products as picture cards. No client
+ * component, no JS bundle.
  */
 const CATEGORY_SLUGS = [
   "kitchen-hood-in-malaysia",
@@ -76,6 +78,67 @@ function Dropdown({ label, items }: { label: string; items: Item[] }) {
         ))}
       </ul>
     </li>
+  );
+}
+
+/**
+ * The mobile drawer's product group: one card per category, the label on the
+ * left and the category's lead model on the right, so a visitor picks by the
+ * shape of the appliance before reading the word. The picture is decorative
+ * (alt=""): the label is the link's name, and repeating it as alt would read
+ * every category twice to a screen reader.
+ */
+function ProductCards({
+  label,
+  items,
+  images,
+}: {
+  label: string;
+  items: (Item & { slug: string })[];
+  images: Record<string, MenuImage>;
+}) {
+  return (
+    <>
+      <li className="pt-4 text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-ink-muted first:pt-0">
+        {label}
+      </li>
+      <li>
+        <ul className="grid gap-2 pt-2">
+          {items.map((i) => {
+            const img = images[i.slug];
+            return (
+              <li key={i.href}>
+                <Link
+                  href={i.href}
+                  className="flex h-[4.5rem] items-center gap-3 overflow-hidden rounded-md border border-line bg-linear-to-r from-surface to-raised pl-4 pr-3 text-ink transition-colors active:border-line-strong"
+                >
+                  <span className="min-w-0 flex-1 text-[0.9375rem] font-medium leading-tight">
+                    {i.label}
+                  </span>
+                  {img && (
+                    <Image
+                      src={img.url}
+                      alt=""
+                      width={img.width}
+                      height={img.height}
+                      sizes="112px"
+                      className="h-16 w-28 shrink-0 object-contain object-right"
+                    />
+                  )}
+                  <svg
+                    viewBox="0 0 6 10"
+                    aria-hidden="true"
+                    className="h-2.5 w-1.5 shrink-0 fill-none stroke-current stroke-[1.5] opacity-60"
+                  >
+                    <path d="M1 1l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </li>
+    </>
   );
 }
 
@@ -172,9 +235,16 @@ export function SiteHeader({
 } = {}) {
   const nav = t(locale).nav;
   const CATEGORIES = CATEGORY_SLUGS.map((slug) => ({
+    slug,
     href: categoryHref(locale, slug),
     label: nav.categories[slug],
   }));
+  // The one component that reads a query itself rather than taking props: the
+  // header is drawn by some fifteen pages and views, and threading five
+  // pictures through every one of them buys nothing. Safe because every route
+  // here, the not-found pages included, is prerendered at build, where the
+  // database exists (src/lib/db.ts).
+  const menuImages = categoryMenuImages();
   const BLOG = BLOG_SECTIONS.map((section) => ({
     href: archiveHref(locale, section),
     label: sectionLabel(locale, section),
@@ -263,25 +333,25 @@ export function SiteHeader({
                   {nav.home}
                 </Link>
               </li>
-              <Section label={nav.products} items={CATEGORIES} />
-              <li>
-                <Link href={STORE_LOCATIONS.href} className="block py-1.5 pl-3 text-ink">
+              <ProductCards label={nav.products} items={CATEGORIES} images={menuImages} />
+              <li className="pt-3">
+                <Link href={STORE_LOCATIONS.href} className="block py-1.5 text-ink">
                   {STORE_LOCATIONS.label}
                 </Link>
               </li>
               <li>
-                <Link href={ABOUT_VATTI.href} className="block py-1.5 pl-3 text-ink">
+                <Link href={ABOUT_VATTI.href} className="block py-1.5 text-ink">
                   {ABOUT_VATTI.label}
                 </Link>
               </li>
               <Section label={nav.blog} items={BLOG} />
               <li>
-                <Link href={EWARRANTY.href} className="block py-1.5 pl-3 text-ink">
+                <Link href={EWARRANTY.href} className="block py-1.5 text-ink">
                   {EWARRANTY.label}
                 </Link>
               </li>
               <li>
-                <Link href={CONTACT_US.href} className="block py-1.5 pl-3 text-ink">
+                <Link href={CONTACT_US.href} className="block py-1.5 text-ink">
                   {CONTACT_US.label}
                 </Link>
               </li>
@@ -290,7 +360,7 @@ export function SiteHeader({
                   href={CATALOGUE}
                   target="_blank"
                   rel="noopener"
-                  className="block py-1.5 pl-3 text-ink"
+                  className="block py-1.5 text-ink"
                 >
                   {nav.catalog}
                 </a>
