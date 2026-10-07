@@ -40,29 +40,46 @@ VALUES (114, 'best-kitchen-hood-malaysia', 'buying-guide/best-kitchen-hood-malay
 
 ### 高楼公寓、烟管长：V960 或 V938
 
+[![VATTI V960 抽油烟机](https://cdn.vattimalaysia.com/2026/08/vatti-stellar-series-cooker-hood-v960-front.webp)](/vatti-stellar-series-cooker-hood-v960/)
+[![VATTI V938 抽油烟机](https://cdn.vattimalaysia.com/2026/08/vatti-hidden-series-range-hood-v938-front.webp)](/vatti-hidden-series-range-hood-v938/)
+
 住在高楼，问题出在烟管，而不是抽油烟机本身。[V960](/vatti-stellar-series-cooker-hood-v960/) 的静压是整个系列最高的，达 1,700 Pa，风量 3,690 m³/h，噪音 48 dB。[V938](/vatti-hidden-series-range-hood-v938/) 紧随其后，静压 1,600 Pa，风量 3,650 m³/h。晚餐时段整条烟管上的住户都在煮饭，这两款依然吸力不减。
 
 ### 开放式厨房：V929
+
+[![VATTI V929 抽油烟机](https://cdn.vattimalaysia.com/2026/08/vatti-aetheris-series-cooker-hood-v929-front.webp)](/vatti-aetheris-series-cooker-hood-v929/)
 
 开放式的家，抽油烟机的声音在客厅也听得到。[V929](/vatti-aetheris-series-cooker-hood-v929/) 是系列中最安静的一款，只有 46.5 dB，同时仍有 3,125 m³/h 风量和 1,300 Pa 静压，安静不等于没力。内置 PM2.5 感应器判断空气何时变干净，挥一挥手就能启动。
 
 ### 不想看到抽油烟机：V938
 
+[![VATTI V938 抽油烟机](https://cdn.vattimalaysia.com/2026/08/vatti-hidden-series-range-hood-v938-front.webp)](/vatti-hidden-series-range-hood-v938/)
+
 如果希望橱柜线条一气呵成，[V938](/vatti-hidden-series-range-hood-v938/) 可以藏在吊柜里。机身深 325 mm，从厨房只看得到前面板；运转时面板下降 105 mm，打开吸烟口。
 
 ### 天天猛火爆炒：V959
+
+[![VATTI V959 抽油烟机](https://cdn.vattimalaysia.com/2026/08/vatti-cooker-hood-v959-front.webp)](/vatti-cooker-hood-v959/)
 
 几乎每天都用炒锅猛火煮食，油脂就是长期的大敌。[V959](/vatti-cooker-hood-v959/) 的油脂分离率高达 95%，是系列中最高的，风量 2,825 m³/h，静压 1,100 Pa。
 
 ### 煤气炉较宽：V937
 
+[![VATTI V937 抽油烟机](https://cdn.vattimalaysia.com/2023/11/VATTI_V937_front_NEW.webp)](/triple-intake-series-t-type-cooker-hood-v937/)
+
 只从中间吸烟的抽油烟机，外侧炉头的油烟容易跑掉。[V937](/triple-intake-series-t-type-cooker-hood-v937/) 有三个吸烟口，整个煤气炉的吸力更平均：风量 2,500 m³/h，静压 1,050 Pa。
 
 ### 排屋、烟管短：Athena V993 或 V999
 
+[![VATTI V993 抽油烟机](https://cdn.vattimalaysia.com/2026/08/athena-series-lifting-type-range-hood-v993-front.webp)](/athena-series-lifting-type-range-hood-v993/)
+[![VATTI V999 抽油烟机](https://cdn.vattimalaysia.com/2026/08/athena-series-lifting-type-range-hood-v999-front.webp)](/athena-series-lifting-type-range-hood-v999/)
+
 烟管短而直，静压就没那么重要，在锅边把油烟吸走才是关键。Athena 升降式抽油烟机的吸烟腔会降向煤气炉，离锅具约 350 mm，T 型机约为 580 mm。[V993](/athena-series-lifting-type-range-hood-v993/) 和 [V999](/athena-series-lifting-type-range-hood-v999/) 的风量都是 2,500 m³/h；V999 多了手势感应。
 
 ### 小厨房：V995 或 V996
+
+[![VATTI V995 抽油烟机](https://cdn.vattimalaysia.com/2026/08/slim-series-type-range-hood-v995-front.webp)](/slim-series-type-range-hood-v995/)
+[![VATTI V996 抽油烟机](https://cdn.vattimalaysia.com/2026/08/vatti-slim-series-type-range-hood-v996-front.webp)](/vatti-slim-series-type-range-hood-v996/)
 
 抽油烟机要装在吊柜下方，纤薄机身最省空间。[V995](/slim-series-type-range-hood-v995/) 风量 2,050 m³/h，噪音 52 dB，也可以不接排烟管使用；[V996](/vatti-slim-series-type-range-hood-v996/) 用热熔自动清洗，不用加水。
 

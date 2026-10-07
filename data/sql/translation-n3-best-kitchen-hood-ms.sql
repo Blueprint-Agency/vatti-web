@@ -41,29 +41,46 @@ Masakan Malaysia memang mencabar sesebuah hood. Menumis, memasak sambal dan meng
 
 ### Untuk kondo tingkat tinggi dengan saluran panjang: V960 atau V938
 
+[![Hood dapur VATTI V960](https://cdn.vattimalaysia.com/2026/08/vatti-stellar-series-cooker-hood-v960-front.webp)](/vatti-stellar-series-cooker-hood-v960/)
+[![Hood dapur VATTI V938](https://cdn.vattimalaysia.com/2026/08/vatti-hidden-series-range-hood-v938-front.webp)](/vatti-hidden-series-range-hood-v938/)
+
 Di tingkat tinggi, masalahnya ialah saluran, bukan hood. [V960](/vatti-stellar-series-cooker-hood-v960/) mempunyai tekanan statik tertinggi dalam rangkaian, 1,700 Pa, dengan aliran udara 3,690 m³/h pada 48 dB. [V938](/vatti-hidden-series-range-hood-v938/) hampir menyamainya dengan 1,600 Pa dan 3,650 m³/h. Kedua-duanya terus menyedut pada waktu makan malam, ketika setiap unit pada saluran yang sama sedang memasak.
 
 ### Untuk dapur terbuka: V929
+
+[![Hood dapur VATTI V929](https://cdn.vattimalaysia.com/2026/08/vatti-aetheris-series-cooker-hood-v929-front.webp)](/vatti-aetheris-series-cooker-hood-v929/)
 
 Di rumah dengan dapur terbuka, bunyi hood kedengaran sampai ke ruang tamu. [V929](/vatti-aetheris-series-cooker-hood-v929/) ialah yang paling senyap dalam rangkaian, 46.5 dB, tetapi masih menyedut 3,125 m³/h pada 1,300 Pa, jadi senyap tidak bermaksud lemah. Sensor PM2.5 menentukan bila udara sudah bersih, dan lambaian tangan sudah cukup untuk menghidupkannya.
 
 ### Untuk dapur tanpa hood yang kelihatan: V938
 
+[![Hood dapur VATTI V938](https://cdn.vattimalaysia.com/2026/08/vatti-hidden-series-range-hood-v938-front.webp)](/vatti-hidden-series-range-hood-v938/)
+
 Jika anda mahu kabinet kelihatan bersambung tanpa gangguan, [V938](/vatti-hidden-series-range-hood-v938/) duduk di dalam kabinet dinding. Badannya sedalam 325 mm, dan dari ruang dapur anda hanya nampak panel hadapan, yang turun 105 mm untuk membuka bukaan sedutan apabila ia berjalan.
 
 ### Untuk menggoreng setiap hari: V959
+
+[![Hood dapur VATTI V959](https://cdn.vattimalaysia.com/2026/08/vatti-cooker-hood-v959-front.webp)](/vatti-cooker-hood-v959/)
 
 Jika kuali di atas api besar hampir setiap hari, minyak ialah musuh jangka panjang. [V959](/vatti-cooker-hood-v959/) menapis 95% minyak, angka tertinggi dalam rangkaian, dengan 2,825 m³/h pada 1,100 Pa.
 
 ### Untuk dapur gas yang lebar: V937
 
+[![Hood dapur VATTI V937](https://cdn.vattimalaysia.com/2023/11/VATTI_V937_front_NEW.webp)](/triple-intake-series-t-type-cooker-hood-v937/)
+
 Asap dari tungku di hujung terlepas daripada hood yang hanya menyedut di tengah. [V937](/triple-intake-series-t-type-cooker-hood-v937/) menyedut melalui tiga bukaan untuk sedutan yang sekata di seluruh permukaan dapur gas: 2,500 m³/h pada 1,050 Pa.
 
 ### Untuk rumah teres dengan saluran pendek: Athena V993 atau V999
 
+[![Hood dapur VATTI V993](https://cdn.vattimalaysia.com/2026/08/athena-series-lifting-type-range-hood-v993-front.webp)](/athena-series-lifting-type-range-hood-v993/)
+[![Hood dapur VATTI V999](https://cdn.vattimalaysia.com/2026/08/athena-series-lifting-type-range-hood-v999-front.webp)](/athena-series-lifting-type-range-hood-v999/)
+
 Dengan saluran yang pendek dan terus, tekanan kurang penting dan penyedutan dekat kuali lebih penting. Pada hood jenis angkat siri Athena, bukaan sedutan turun ke arah dapur gas, kira-kira 350 mm di atas periuk berbanding lebih kurang 580 mm untuk hood jenis T. [V993](/athena-series-lifting-type-range-hood-v993/) dan [V999](/athena-series-lifting-type-range-hood-v999/) sama-sama menyedut 2,500 m³/h; V999 menambah sensor tangan.
 
 ### Untuk dapur kecil: V995 atau V996
+
+[![Hood dapur VATTI V995](https://cdn.vattimalaysia.com/2026/08/slim-series-type-range-hood-v995-front.webp)](/slim-series-type-range-hood-v995/)
+[![Hood dapur VATTI V996](https://cdn.vattimalaysia.com/2026/08/vatti-slim-series-type-range-hood-v996-front.webp)](/vatti-slim-series-type-range-hood-v996/)
 
 Jika hood perlu muat di bawah kabinet dinding, profil nipis menjimatkan ruang. [V995](/slim-series-type-range-hood-v995/) menyedut 2,050 m³/h pada 52 dB dan boleh berfungsi tanpa saluran; [V996](/vatti-slim-series-type-range-hood-v996/) membersihkan dirinya dengan haba, tanpa cawan air untuk diisi.
 

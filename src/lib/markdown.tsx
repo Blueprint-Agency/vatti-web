@@ -67,6 +67,55 @@ export function Markdown({
       continue;
     }
 
+    // A picture wrapped in a link is a product shot pointing at its page:
+    // "[![VATTI V960 cooker hood](https://cdn…/v960-front.webp)](/vatti-…-v960/)".
+    // A buying guide names a model and the reader wants to see it, but a
+    // cut-out on white at full column width is a poster, not a reference. So
+    // it renders as a small card, and consecutive lines share one row: the
+    // "V960 or V938" picks sit side by side.
+    if (PRODUCT_SHOT.test(line)) {
+      const shots: RegExpExecArray[] = [];
+      let j = i;
+      for (; j < lines.length; j++) {
+        const m = PRODUCT_SHOT.exec(lines[j].trim());
+        if (!m) break;
+        shots.push(m);
+      }
+      out.push(
+        <div
+          key={i}
+          className={`my-7 grid gap-4 ${shots.length > 1 ? "grid-cols-2" : "max-w-[16rem] grid-cols-1"}`}
+        >
+          {shots.map(([, alt, src, href]) => {
+            const box = sizes[src] ?? { width: 1000, height: 1000 };
+            const name = callouts?.pages[href.replace(/^\/|\/$/g, "")] ?? alt;
+            return (
+              <Link
+                key={src}
+                href={href}
+                className="group flex flex-col rounded-sm border border-paper-line bg-paper-surface p-2 transition-colors hover:border-teal"
+              >
+                <Image
+                  src={src}
+                  alt={alt}
+                  width={box.width}
+                  height={box.height}
+                  loading="lazy"
+                  sizes="(max-width: 768px) 45vw, 256px"
+                  className="h-40 w-full rounded-sm bg-white object-contain p-3 sm:h-48"
+                />
+                <span className="mt-2 mb-1 text-center text-sm font-semibold group-hover:text-teal">
+                  {name}
+                </span>
+              </Link>
+            );
+          })}
+        </div>
+      );
+      i = j - 1;
+      continue;
+    }
+
     const image = /^!\[([^\]]*)\]\(([^)\s]+)\)$/.exec(line);
     if (image) {
       // Real dimensions come from `image.width`/`height`, which the importer
@@ -182,7 +231,8 @@ const HEADING: Record<number, string> = {
 
 const ITEM = /^([-*+]|\d+[.)]) +(.*)$/;
 const STANDALONE = /^(?:👉\s*|\*\*RELATED:\*\*\s*)?\[([^\]]+)\]\(([^)\s]+)\)$/;
-const STRUCTURAL = /^(#{2,4} |[-*+] |\d+[.)] |!\[|\||👉\s*\[|\*\*RELATED:\*\*)/;
+const STRUCTURAL = /^(#{2,4} |[-*+] |\d+[.)] |!\[|\[!\[|\||👉\s*\[|\*\*RELATED:\*\*)/;
+const PRODUCT_SHOT = /^\[!\[([^\]]*)\]\(([^)\s]+)\)\]\((\/[^)\s]*)\)$/;
 
 /** `image.url` -> the dimensions stored for it, for the 221 body placements. */
 export type ImageSizes = Record<string, { width: number; height: number }>;

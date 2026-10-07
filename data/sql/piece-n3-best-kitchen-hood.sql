@@ -51,29 +51,46 @@ Malaysian cooking is hard on a hood. Stir-frying, sambal and deep-frying put out
 
 ### For a high-floor condo with a long duct: V960 or V938
 
+[![VATTI V960 cooker hood](https://cdn.vattimalaysia.com/2026/08/vatti-stellar-series-cooker-hood-v960-front.webp)](/vatti-stellar-series-cooker-hood-v960/)
+[![VATTI V938 cooker hood](https://cdn.vattimalaysia.com/2026/08/vatti-hidden-series-range-hood-v938-front.webp)](/vatti-hidden-series-range-hood-v938/)
+
 On a high floor the duct is the problem, not the hood. The [V960](/vatti-stellar-series-cooker-hood-v960/) has the highest static pressure in the range, 1,700 Pa, with 3,690 m³/h of airflow at 48 dB. The [V938](/vatti-hidden-series-range-hood-v938/) is close behind at 1,600 Pa and 3,650 m³/h. Either keeps pulling at dinner time, when every unit on the riser is cooking at once.
 
 ### For an open kitchen: V929
+
+[![VATTI V929 cooker hood](https://cdn.vattimalaysia.com/2026/08/vatti-aetheris-series-cooker-hood-v929-front.webp)](/vatti-aetheris-series-cooker-hood-v929/)
 
 In an open-plan home the hood is heard from the living room. The [V929](/vatti-aetheris-series-cooker-hood-v929/) is the quietest in the range at 46.5 dB, and still moves 3,125 m³/h against 1,300 Pa, so quiet does not mean weak. A PM2.5 sensor decides when the air is clear, and a wave of the hand starts it.
 
 ### For a kitchen with no visible hood: V938
 
+[![VATTI V938 cooker hood](https://cdn.vattimalaysia.com/2026/08/vatti-hidden-series-range-hood-v938-front.webp)](/vatti-hidden-series-range-hood-v938/)
+
 If the cabinetry should run unbroken, the [V938](/vatti-hidden-series-range-hood-v938/) sits inside the wall cabinet. Its body is 325 mm deep, and from the room you see only the front panel, which drops 105 mm to open the intake when it runs.
 
 ### For daily heavy frying: V959
+
+[![VATTI V959 cooker hood](https://cdn.vattimalaysia.com/2026/08/vatti-cooker-hood-v959-front.webp)](/vatti-cooker-hood-v959/)
 
 If the wok is on high heat most days, oil is the long-term enemy. The [V959](/vatti-cooker-hood-v959/) captures 95% of the oil, the highest figure in the range, with 2,825 m³/h at 1,100 Pa.
 
 ### For a wide hob: V937
 
+[![VATTI V937 cooker hood](https://cdn.vattimalaysia.com/2023/11/VATTI_V937_front_NEW.webp)](/triple-intake-series-t-type-cooker-hood-v937/)
+
 Smoke from the outer burners escapes a hood that only pulls from the middle. The [V937](/triple-intake-series-t-type-cooker-hood-v937/) draws through three intakes for an even pull across the whole hob: 2,500 m³/h at 1,050 Pa.
 
 ### For a landed house with a short duct: Athena V993 or V999
 
+[![VATTI V993 cooker hood](https://cdn.vattimalaysia.com/2026/08/athena-series-lifting-type-range-hood-v993-front.webp)](/athena-series-lifting-type-range-hood-v993/)
+[![VATTI V999 cooker hood](https://cdn.vattimalaysia.com/2026/08/athena-series-lifting-type-range-hood-v999-front.webp)](/athena-series-lifting-type-range-hood-v999/)
+
 With a short, direct duct, pressure matters less and capture at the pan matters more. On the Athena lifting-type hoods the intake drops toward the hob, about 350 mm above the pot against roughly 580 mm for a T-type hood. The [V993](/athena-series-lifting-type-range-hood-v993/) and [V999](/athena-series-lifting-type-range-hood-v999/) both move 2,500 m³/h; the V999 adds a hand sensor.
 
 ### For a small kitchen: V995 or V996
+
+[![VATTI V995 cooker hood](https://cdn.vattimalaysia.com/2026/08/slim-series-type-range-hood-v995-front.webp)](/slim-series-type-range-hood-v995/)
+[![VATTI V996 cooker hood](https://cdn.vattimalaysia.com/2026/08/vatti-slim-series-type-range-hood-v996-front.webp)](/vatti-slim-series-type-range-hood-v996/)
 
 Where the hood has to fit under a wall cabinet, the slim profiles save the space. The [V995](/slim-series-type-range-hood-v995/) moves 2,050 m³/h at 52 dB and can run without a duct; the [V996](/vatti-slim-series-type-range-hood-v996/) cleans itself with heat, with no water cup to fill.
 
