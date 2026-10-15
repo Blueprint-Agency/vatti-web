@@ -28,7 +28,7 @@
 // pages are empty stubs with no address to break the tie. Slug is never used to
 // match, since the two files disagree on it 61 times.
 //
-// The eWarranty form's 80 hardcoded dealer options are a third list that was
+// The eWarranty form's 81 hardcoded dealer options are a third list that was
 // never scraped, so nothing here flags which stores appear in it.
 //
 //   research/stores-local.json  dealers appointed since the scrape. Not in

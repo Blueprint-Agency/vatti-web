@@ -24,8 +24,11 @@
 
 -- Added since the extraction:
 --   Filken Puchong, 2026-09-29, with its /store/filken-puchong/ page.
+--   91 ELECTRICAL TRADING SDN BHD (Miri), 2026-10-15, with its
+--   /store/91-electrical-trading-miri/ page.
 
 INSERT INTO warranty_dealer (name) VALUES
+  ('91 ELECTRICAL TRADING SDN BHD'),
   ('ADAMAS TRADING (M) SDN. BHD.'),
   ('ALAT DAPUR CHERAS'),
   ('ALAT DAPUR SEMENYIH'),
