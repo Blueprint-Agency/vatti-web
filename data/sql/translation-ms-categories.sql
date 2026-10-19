@@ -195,7 +195,7 @@ INSERT INTO category_reason (category_id, lang, position, title, body_md, figure
    '6', 'kW', 'power'),
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 'ms-MY', 2,
    'Api berbilang gelang, haba di seluruh dasar kuali',
-   'Gelang api dalam dan luar menyebarkan haba ke seluruh dasar kuali dan bukan hanya satu titik di tengah. C836G menerbitkan kecekapan tenaga 73% hasil reka bentuk itu, dan ia satu-satunya dapur dalam julat ini yang menyatakan angka tersebut.',
+   'Gelang api dalam dan luar menyebarkan haba ke seluruh dasar kuali dan bukan hanya satu titik di tengah. C836G menerbitkan kecekapan tenaga 73% hasil reka bentuk itu, angka tertinggi dalam julat ini, berbanding 63% hingga 65% pada C821G, C822G, C823G dan C861G.',
    '73', '%', 'heat'),
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 'ms-MY', 3,
    'Keselamatan sebagai standard, bukan tambahan',

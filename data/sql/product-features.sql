@@ -2110,7 +2110,7 @@ SELECT id, 7, 'banner', NULL, NULL,
 
 INSERT INTO product_feature (product_id, position, layout, title, body_md, image_url, image_alt, image_w, image_h)
 SELECT id, 1, 'split', 'Rotational polythermal force',
-  'Two flame rings doing different work: an inner double-layer flame for concentrated heat under the base, and an outer ring that turns the heat around the sides of the pan. 4.5 kW on each burner, at Grade 1 energy efficiency.',
+  'Two flame rings doing different work: an inner double-layer flame for concentrated heat under the base, and an outer ring that turns the heat around the sides of the pan. 4.8 kW on each burner, at Grade 1 energy efficiency.',
   'https://cdn.vattimalaysia.com/2026/08/c821g-hero.webp',
   'The C821G burner lit, its inner and outer flame rings marked', 720, 486
   FROM product WHERE slug = 'professional-series-c821g';

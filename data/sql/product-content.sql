@@ -1520,7 +1520,7 @@ SELECT id, 4, 'What warranty does the C720S carry, and where can I buy it?',
 -- professional-series-c821g -------------------------------------------------
 
 UPDATE product SET intro_md =
-  'Two 4.5 kW burners at Grade 1 energy efficiency, each with an inner double-layer flame for concentrated heat and an outer ring that turns it around the pan. Air is taken in on three levels so it burns clean, the safety valve closes on an accidental shutdown, and the same hob sits on the counter or drops into it. 750 x 420 mm, into a 650 x 320 mm opening.'
+  'Two 4.8 kW burners at Grade 1 energy efficiency, each with an inner double-layer flame for concentrated heat and an outer ring that turns it around the pan. Air is taken in on three levels so it burns clean, the safety valve closes on an accidental shutdown, and the same hob sits on the counter or drops into it. 750 x 420 mm, into a 650 x 320 mm opening.'
   WHERE slug = 'professional-series-c821g';
 
 INSERT INTO product_dimension (product_id, position, section, label, value, note, metric, min_mm, max_mm)
@@ -1530,7 +1530,9 @@ SELECT id, 2, 'product', 'Depth', '420 mm', NULL FROM product WHERE slug = 'prof
 INSERT INTO product_dimension (product_id, position, section, label, value, note)
 SELECT id, 3, 'product', 'Height', '149 mm', NULL FROM product WHERE slug = 'professional-series-c821g';
 INSERT INTO product_dimension (product_id, position, section, label, value, note)
-SELECT id, 4, 'product', 'Power', '4.5 kW', 'each burner, left and right' FROM product WHERE slug = 'professional-series-c821g';
+-- 4.8 kW per the spec sheet (product_spec "4.8KW (left & right)" and the facet).
+-- The drawing prints 4.5 kW; the owner ruled on 2026-10-19 that the spec sheet wins.
+SELECT id, 4, 'product', 'Power', '4.8 kW', 'each burner, left and right' FROM product WHERE slug = 'professional-series-c821g';
 INSERT INTO product_dimension (product_id, position, section, label, value, note)
 SELECT id, 5, 'product', 'Thermal efficiency', '65%', 'Grade 1' FROM product WHERE slug = 'professional-series-c821g';
 INSERT INTO product_dimension (product_id, position, section, label, value, note)
@@ -1552,7 +1554,7 @@ SELECT id, 2, 'Can it sit on the counter instead of being built in?',
   'Yes. The same unit works as a table-top hob or a built-in one, so it suits a kitchen where cutting the counter is not an option.'
   FROM product WHERE slug = 'professional-series-c821g';
 INSERT INTO product_faq (product_id, position, question, answer_md)
-SELECT id, 3, 'Is 4.5 kW per burner enough?',
+SELECT id, 3, 'Is 4.8 kW per burner enough?',
   'For everyday cooking, comfortably, and at 65% thermal efficiency it wastes less of that gas than most. For daily high-heat wok work the [C836G](/vatti-flexi-hob-c836g/) reaches 5.5 kW and the [C830G](/vatti-3-burner-gas-hob-c830g/) 6 kW across three burners.'
   FROM product WHERE slug = 'professional-series-c821g';
 INSERT INTO product_faq (product_id, position, question, answer_md)

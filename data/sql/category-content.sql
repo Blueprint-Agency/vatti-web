@@ -656,7 +656,7 @@ INSERT INTO category_reason (category_id, position, title, body_md, figure, figu
 
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 2,
    'Multi-ring flames, less wasted gas',
-   'An inner and an outer ring spread heat across the whole base of a wok instead of a spot in the middle. The C836G publishes 73% energy efficiency on the back of that design, and it is the only hob in the range that quotes the figure at all.',
+   'An inner and an outer ring spread heat across the whole base of a wok instead of a spot in the middle. The C836G publishes 73% energy efficiency on the back of that design, the highest figure in the range, against 63% to 65% on the C821G, C822G, C823G and C861G.',
    '73', '%', 'heat'),
 
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 3,

@@ -218,7 +218,7 @@ INSERT INTO category_reason (category_id, lang, position, title, body_md, figure
    '6', 'kW', 'power'),
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 'zh-MY', 2,
    '多环火焰，热力更集中',
-   '内外两圈火焰把热力铺满整个锅底，而不是集中在中间一点。C836G 凭这一设计公布 73% 的热效率，也是全系列唯一公布这项数字的煤气炉。',
+   '内外两圈火焰把热力铺满整个锅底，而不是集中在中间一点。C836G 凭这一设计公布 73% 的热效率，是全系列最高，C821G、C822G、C823G 和 C861G 则为 63% 至 65%。',
    '73', '%', 'heat'),
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 'zh-MY', 3,
    '安全是标配，不是升级',
