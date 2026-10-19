@@ -8,7 +8,10 @@ progress lives beside the code. The three months are calendar months: Month 1 is
 Month 2 is November and Month 3 is December. Work shipped before 1 October counts as a head start.
 
 Status was scored on 23 September 2026 against `data/sql` and the commits since 23 August.
-Re-planned on 7 October 2026 for the cadence below. Update the column in the same commit as the
+Re-planned on 7 October 2026 for the cadence below. On 19 October N4 (Vatti vs Fotile) was replaced
+by a kitchen exhaust fan guide, and improvement 6 (the dropped price sections) by an RO water rework.
+The same day the owner ruled out rival comparisons altogether: N6 and N13 were replaced, and N7 lost
+its brand keywords. **No piece names another brand.** Update the column in the same commit as the
 work, and name the SQL file that carries it.
 
 ## The cadence
@@ -61,25 +64,25 @@ where no brand, Fotile included, has Chinese pages.
 
 ## New pieces: 15 URLs a month
 
-### Month 1, October: the hood cluster and the two brand head-to-heads
+### Month 1, October: the hood cluster and the gas hob
 
 | # | Piece | EN keyword | MS keyword | ZH keyword | Status | Evidence |
 |---|---|---|---|---|---|---|
 | N1 | Hood dapur tanpa tebuk dinding, ductless hood guide | ductless kitchen hood malaysia (existing article) | hood dapur tanpa tebuk dinding (210) | map first | Done 3 Oct | `/ms/panduan-membeli/hood-dapur-tanpa-tebuk-dinding/` in `refresh-articles-ms-2026-10.sql`; zh edition in `i18n-zh-guides.sql`. The English edition is the existing ducted-or-ductless article, not a new page (client decision 3 Oct, no cannibalisation), so this piece adds 2 URLs, not 3 |
 | N2 | Hood dapur, panduan lengkap, hood pillar guide | existing English hood article | hood dapur (720) | 抽油烟机 (390) | Done 3 Oct | `/ms/panduan-membeli/hood-dapur/`, same files and same pairing as N1. 2 URLs |
 | N3 | Best kitchen hood in Malaysia, 2026 buyer's guide | best kitchen hood malaysia (170, SD 10); best cooker hood malaysia (170) | cooker hood terbaik (110); hood dapur terbaik | 抽油烟机推荐 (competitor) | Done 7 Oct | `/buying-guide/best-kitchen-hood-malaysia/`, `/ms/panduan-membeli/hood-dapur-terbaik/`, `/zh/buying-guide/best-kitchen-hood-malaysia/` (`piece-n3-best-kitchen-hood.sql`, `translation-n3-*`). One VATTI pick per kitchen, from measured figures; no other brand named. GSC (sc-domain, 7 Jul to 5 Oct): the site ranked for no "best ... hood" query, so it competes with nothing. `hood dapur terbaik` returned no figure on 7 Oct; the schedule's 90 was an earlier pull |
-| N4 | Vatti vs Fotile, Chinese premium kitchen appliances compared | fotile vs vatti; fotile malaysia (1,900) | map first | 方太 vs 华帝, map first | Not started | No article mentions Fotile. Both are Chinese brands, so the Chinese edition reaches buyers who already know both names |
-| N5 | Best gas hob in Malaysia | gas stove malaysia (480, SD 14) | dapur gas terbaik (590, SD 18); jenama dapur gas terbaik (110) | 煤气炉, map first | Not started | New 7 Oct. The Malay term carries the volume. `best gas hob malaysia` measures nothing in English; `gas stove malaysia` covers portable stoves too, so the piece says built-in early. Links up to the cooker hob pillar |
+| N4 | Kitchen exhaust fan or cooker hood | kitchen exhaust fan (1,900, SD 11) | exhaust fan dapur (110, SD 20) | 厨房抽风机 (competitor) | Done 19 Oct | Replaced Vatti vs Fotile on 19 Oct at the owner's request: no other brand is named. `/buying-guide/kitchen-exhaust-fan-vs-cooker-hood/`, `/ms/panduan-membeli/exhaust-fan-dapur/`, `/zh/buying-guide/kitchen-exhaust-fan-vs-cooker-hood/` (`piece-n4-kitchen-exhaust-fan.sql`, `translation-n4-*`). The highest volume for its difficulty left in the hood cluster, and GSC shows no exhaust fan query for the site. Risk: page one is fan sellers and marketplaces, with one retailer's hood page at 3; no page explains the difference |
+| N5 | Best gas hob in Malaysia | gas stove malaysia (480, SD 14); built in gas stove (170, SD 18) | dapur gas terbaik (590, SD 18); jenama dapur gas terbaik (110) | 煤气炉推荐 (competitor) | Done 19 Oct | `/buying-guide/best-gas-hob-malaysia/`, `/ms/panduan-membeli/dapur-gas-terbaik/`, `/zh/buying-guide/best-gas-hob-malaysia/` (`piece-n5-best-gas-hob.sql`, `translation-n5-*`). One VATTI pick per kitchen, from facets and the drawings' efficiency and cut-out figures. Leaves `gas hob malaysia` and 煤气炉 to the category pages, which hold them (zh category at 4.7 for 煤气炉). Item 14, the hob pillar rewrite, is still open and N5 links up to it |
 
 October lands at **13 new URLs**, not 15, because N1 and N2 pair with English articles that already
 existed.
 
-### Month 2, November: competitor and best-of buyers
+### Month 2, November: best-of buyers and the kitchen layout
 
 | # | Piece | EN keyword | MS keyword | ZH keyword | Status | Evidence |
 |---|---|---|---|---|---|---|
-| N6 | Vatti vs Rubine cooker hood and gas hob | rubine gas stove malaysia (590, SD 10); rubine cooker hood malaysia (390, SD 13) | map first | map first | Not started | The highest-demand rival brand in the category. No article mentions Rubine |
-| N7 | Best dishwasher in Malaysia | bosch dishwasher malaysia (210, SD 11); lg dishwasher malaysia (70) | mesin basuh pinggan, map first | 洗碗机, map first | Not started | Led by capacity like the dishwasher pillar (17 and 20 place settings). Must not compete with the pillar for `dishwasher malaysia` |
+| N6 | Wet kitchen and dry kitchen: which appliance goes where | wet kitchen design (720, SD 13); wet kitchen (590, SD 16); dry kitchen design (480, SD 12); wet and dry kitchen (320, SD 13) | dapur basah (390, SD 20); design dapur basah (170); dapur kering (110) | 干湿厨房, map first | Not started | New 19 Oct, replacing Vatti vs Rubine (rival comparisons ruled out). The Malaysian two-kitchen layout decides which hood, hob and dishwasher go in which room, and no existing article covers it. Layout-led, not renovation: no installation or cost copy. Links to the hood, hob and dishwasher pillars and to N3, N4 and N5. Check the SERP first: `design dapur` results lean on image galleries |
+| N7 | Best dishwasher in Malaysia | built in dishwasher (210, SD 16); best dishwasher malaysia (110, SD 44) | mesin basuh pinggan, map first | 洗碗机, map first | Not started | Led by capacity like the dishwasher pillar (17 and 20 place settings). Must not compete with the pillar for `dishwasher malaysia`. Brand keywords (bosch, lg) dropped 19 Oct; no other brand is named |
 | N8 | Best induction hob in Malaysia | best induction hob malaysia (210, SD 11); best induction cooker malaysia (170, SD 16) | map first | map first | Not started | `induction cooker malaysia` measures 590. The existing induction-vs-gas and induction-vs-ceramic articles are comparisons, not a best-of |
 | N9 | Steam oven in Malaysia: what it does for local cooking | steam oven malaysia (210, SD 10) | ketuhar stim, map first | 蒸烤箱 | Not started | New 7 Oct. No article on steam ovens exists. Guide format linking up to the combi oven pillar, which targets `combi oven malaysia`; check the pillar's ranking before and after to catch cannibalisation |
 | N10 | Steamed fish, Cantonese and Malay styles, in a steam oven | steamed fish recipe (880, SD 38); steamed fish recipe cantonese (390); thai steamed fish recipe (210) | resepi ikan stim limau (720, SD 17); resepi ikan stim (390, SD 15); resepi ikan stim halia chinese style (390) | 蒸鱼, map first | Not started | New 7 Oct, replacing a water dispenser guide (140). Ships beside N9 and links to it and to the combi oven pillar. The Malay edition leads with the lime style, which carries the volume; the Chinese edition is everyday Malaysian Chinese home cooking, unmeasured by Ubersuggest |
@@ -90,7 +93,7 @@ existed.
 |---|---|---|---|---|---|---|
 | N11 | Built-in oven pillar, a real money page | built in oven (720); built in oven malaysia (170) | ketuhar terbina dalam, map first | 嵌入式烤箱, map first | Not started | A category page, not an article: `product_category` has five rows and none is a built-in oven. Fotile's /oven/ earns 204 visits a month. `wall-oven-sizes-how-to-choose-perfect-built-in-oven-size` and the oven-symbol posts become its spokes |
 | N12 | Best water purifier in Malaysia | best water purifier malaysia (720, SD 20) | penapis air terbaik, map first | 净水器, map first | Not started | The workbook downgraded the purifier head term (Cuckoo, Coway, SK Magic, LG, Panasonic at DA 32 to 92). This is the buyer's-guide long tail, not the head term, and it is the riskiest piece on the list |
-| N13 | Vatti vs LG and Coway water purifier | lg water purifier malaysia (390, SD 9) | map first | coway 净水器 (140) | Not started | New 7 Oct from workbook rows. The purifier category is searched by brand |
+| N13 | Hot water dispenser: instant hot water at the kitchen tap | hot water dispenser (1,000, SD 19); water dispenser malaysia (880, SD 16) | dispenser air panas, map first | 热水机, map first | Not started | New 19 Oct, replacing Vatti vs LG and Coway (rival comparisons ruled out). The V818WD heats water in three seconds to 45, 85 or 100°C at the One Tap. `cold and hot water dispenser` measures 1,900 but VATTI has no chilled setting, so the piece does not target it. Links up to the purifier pillar and N12 |
 | N14 | Chinese steamed egg, smooth every time, in a steam oven | chinese steamed egg recipe (1,000, SD 24); steamed egg recipe (1,000, SD 45) | map first | 蒸蛋, map first | Not started | New 7 Oct, replacing a Rinnai, Bosch and Elba hob comparison (80 combined). The best volume for its difficulty in the steam cluster. A precise-temperature steam setting is the whole trick to a smooth egg, which is the product argument. Links to N9 and the combi oven pillar |
 | N15 | Air fryer salmon, in a built-in air fryer oven | salmon air fryer recipes (480, SD 7) | map first; resepi ayam air fryer (260) and resepi air fryer (260) show Malay air fryer demand, but not for salmon | map first | Not started | New 7 Oct, replacing a built-in air fryer oven guide (70). SD 7 is the lowest difficulty on the whole schedule. Links to `vatti-built-in-air-fryer-oven-07559` and N11. `air fryer recipes` (49,500, SD 52) is recipe-site territory and is not the target |
 
@@ -107,7 +110,7 @@ Not counted in the 15. Months are kept from the original plan.
 | 1 | Dishwasher pillar, rewrite for the generic head term | dishwasher malaysia | Oct | Done 3 Oct | Brief: `docs/competitor-gap-dishwasher.md`. Guides, reasons, FAQ, meta description and hero intro rewritten for the two-model range in `category-content.sql`, led by capacity (17 and 20 place settings). Unsupported running-cost claims removed. Fotile's category page is not in the top 23 (Ubersuggest, 19 Sep), so this was not a head-to-head |
 | 2 | Combi and steam oven pillar, rewrite and merge steam terms | combi oven malaysia | Oct | Done 3 Oct | Brief: `docs/competitor-gap-combi-oven.md`. The copy named five retired models as on sale (VA01, Z4501, VA03, O755P and the A+ claim); guides, reasons, FAQs 1, 3 and 7, meta and intro rewritten for the four on sale, led by steam set for local cooking, in `category-content.sql`. Page at 17 for the head term (Ubersuggest, 9 Sep) |
 | 3 | Kitchen hood pillar, rewrite and absorb the 18 hood posts | kitchen hood malaysia | Oct | Partly done | Brief: `docs/competitor-gap-kitchen-hood.md`. Done 3 Oct: decision 1, warranty line in the closing band (`warrantyLine` in `src/lib/warranty-terms.ts`, on every category it applies to); decision 3, article links repointed (`714c930`); decision 4, meta description led by measured pressure and noise (`category-content.sql`). Closed by the client on 3 Oct: no installation mention (decision 2) and no price bands (decision 5), so neither is built. Open: "absorb the hood posts" conflicts with the brief's finding that the article cluster is the site's generic asset; 25 hood-slugged articles still published |
-| 6 | Price and cost sections on all five category pillars | kitchen hood malaysia price | Oct | Dropped 3 Oct | The client will not publish price bands. No price figure goes on any page; do not re-propose |
+| 6 | RO water: rework for the head term, merge the thin duplicate | ro water | Oct | Done 19 Oct | Replaced the price sections, dropped 3 Oct (the client will not publish price bands; do not re-propose). GSC (21 Jul to 19 Oct): `what-is-reverse-osmosis-water` at 5.6 for `ro water` and 5.1 for `reverse osmosis water`, 8 clicks from 1,006 impressions. Ubersuggest: 2,400 each, SD 11 and 23; `mineral water vs ro water` 260, SD 8. `refresh-ro-water-2026-10.sql`: retitled, RO vs mineral and vs distilled added, filter prices and cost per day removed; `/buying-guide/reverse-osmosis-water/` (a pasted hood intro, and wrong that the VATTI unit is not RO) unpublished and 301'd; the cost figure and an installation line cut from `drinking-filtered-water` |
 | 7 | Geo-signal fix: hreflang, Malaysia targeting, internal-link routing | technical | Oct | Done 3 Oct | www prefix no longer splits the index (`28e5d52`); canonicals on every page; article links pointed past the 301s (`714c930`); `<html lang>` per edition and reciprocal hreflang built from the editions that exist (`src/lib/alternates.ts`), gated by `pnpm i18n:check` |
 | 14 | Cooker hob pillar, rewrite to pass Fotile's #16 | gas hob malaysia | Nov | Not started | `category-content.sql` unchanged for this page. Do it before or with N5 and N14, which link up to it |
 | 15 | Induction vs ceramic hob, merge four posts into one | induction cooker vs ceramic cooker | Nov | Done 14 Sep | `refresh-articles-2026-09.sql`: merged into `which-is-better-induction-or-ceramic-cooker`, the other three unpublished and 301'd |
@@ -119,7 +122,7 @@ Not counted in the 15. Months are kept from the original plan.
 | 22 | Backlink push: 30 Malaysian directory, dealer and PR placements | authority | Dec | Not started | off-repo work; record placements here when they land |
 | 23 | Recipe archive: prune, noindex or consolidate the 25 posts | housekeeping | Dec | Not started | 16 rows in `recipe` plus 23 recipe-titled articles, all published and indexable |
 
-Old #4 and #5 are N1 and N2. Old #8 to #13 are N3, N4, N6, N7, N8 and N3's Malay edition. Old #16
+Old #4 and #5 are N1 and N2. Old #8 to #13 are N3, N4, N6, N7, N8 and N3's Malay edition; N4 and N6 were replaced on 19 October. Old #16
 is N11.
 
 ## Done outside the plan
@@ -141,11 +144,15 @@ New pieces, counted in URLs. Target 15 a month.
 
 | | Pieces | URLs planned | URLs live | Done | Partly | Not started |
 |---|---|---|---|---|---|---|
-| Month 1, October | 5 | 13 | 7 | 3 | 0 | 2 |
+| Month 1, October | 5 | 13 | 13 | 5 | 0 | 0 |
 | Month 2, November | 5 | 15 | 0 | 0 | 0 | 5 |
 | Month 3, December | 5 | 15 | 0 | 0 | 0 | 5 |
-| Quarter | 15 | 43 | 7 | 3 | 0 | 12 |
+| Quarter | 15 | 43 | 13 | 5 | 0 | 10 |
 
-Improvements: 14 rows, 6 done, 2 partly done, 5 not started, 1 dropped.
+Improvements: 14 rows, 7 done, 2 partly done, 5 not started.
 
-October has 6 new URLs left (N4 and N5 in three languages).
+October's new pieces are all live. Its one open improvement is item 3's "absorb the hood posts",
+which waits on a decision, not on writing.
+
+Every rival comparison is off the schedule (owner, 19 October). N4, N6 and N13 were replaced with
+non-brand pieces, and N7 targets non-brand terms.
