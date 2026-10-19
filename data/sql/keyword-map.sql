@@ -84,3 +84,24 @@ INSERT INTO keyword_map (page, lang, keyword, secondary, volume, basis, source, 
   ('article:best-kitchen-hood-malaysia', 'zh-MY', '抽油烟机推荐', '油烟机哪个牌子好', NULL, 'competitor',
    'Firecrawl KL', '2026-10-07',
    'Nothing measures. Malaysian brand pages rank with recommendation framing (ROBAM Living MY blog 最佳抽油烟机品牌, SENZ MY 如何选择适合自己的油烟机); mainland results use 推荐 and 哪个牌子好.');
+
+-- N4, kitchen exhaust fan or cooker hood (content schedule, October; replaced
+-- Vatti vs Fotile on 2026-10-19). English target recorded in the article
+-- header, see piece-n4-kitchen-exhaust-fan.sql.
+INSERT INTO keyword_map (page, lang, keyword, secondary, volume, basis, source, pulled_on, note) VALUES
+  ('article:kitchen-exhaust-fan-vs-cooker-hood', 'ms-MY', 'exhaust fan dapur', 'hood dapur', 110, 'volume',
+   'Ubersuggest MY ms', '2026-10-19',
+   'SD 20. The formal kipas ekzos dapur returns nothing: Malay searchers type the English loanword, as with cooker hood. The body says kipas ekzos once.'),
+  ('article:kitchen-exhaust-fan-vs-cooker-hood', 'zh-MY', '厨房抽风机', '排风扇', NULL, 'competitor',
+   'Firecrawl KL', '2026-10-19',
+   'Nothing measures. Malaysian marketplace listings for wall and window fans are titled 抽风机 (Shopee MY); 排风扇 is the mainland term.');
+
+-- N5, best gas hob (content schedule, October). English target recorded in the
+-- article header, see piece-n5-best-gas-hob.sql.
+INSERT INTO keyword_map (page, lang, keyword, secondary, volume, basis, source, pulled_on, note) VALUES
+  ('article:best-gas-hob-malaysia', 'ms-MY', 'dapur gas terbaik', 'jenama dapur gas terbaik', 590, 'volume',
+   'Ubersuggest MY ms', '2026-10-19',
+   'SD 18; the secondary measures 110, SD 10. The Malay category page holds dapur gas, so this page leads on the choice. dapur gas tanam (140) marks it as built-in.'),
+  ('article:best-gas-hob-malaysia', 'zh-MY', '煤气炉推荐', '煤气炉哪个牌子好', NULL, 'competitor',
+   'Search Console sc-domain; Firecrawl KL', '2026-10-19',
+   'The Chinese category page ranks 4.7 for 煤气炉 (377 impressions, 21 Jul to 19 Oct), so this page takes the 推荐 framing N3 used beside 抽油烟机. 嵌入式煤气炉 in the title marks it as built-in.');
