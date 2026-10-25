@@ -5,12 +5,34 @@ import { CaretLeft } from "@phosphor-icons/react/dist/ssr/CaretLeft";
 import { CaretRight } from "@phosphor-icons/react/dist/ssr/CaretRight";
 import { X } from "@phosphor-icons/react/dist/ssr/X";
 import Image from "next/image";
-import { useCallback, useEffect, useRef, useState } from "react";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+  type Dispatch,
+  type SetStateAction,
+} from "react";
 
 import type { ProductImage } from "@/lib/queries/product";
 
+/**
+ * Which gallery image is showing, shared with the finish swatches in the other
+ * column. A context rather than a module-level store so it starts over on every
+ * product page instead of carrying the last product's index across navigation.
+ */
+const Selection = createContext<[number, Dispatch<SetStateAction<number>>] | null>(null);
+
+export function GallerySelection({ children }: { children: React.ReactNode }) {
+  const state = useState(0);
+  return <Selection.Provider value={state}>{children}</Selection.Provider>;
+}
+
 export function ProductGallery({ images, name }: { images: ProductImage[]; name: string }) {
-  const [active, setActive] = useState(0);
+  const local = useState(0);
+  const [active, setActive] = useContext(Selection) ?? local;
   const [open, setOpen] = useState(false);
   const dialog = useRef<HTMLDialogElement>(null);
   const current = images[active];
@@ -137,6 +159,53 @@ export function ProductGallery({ images, name }: { images: ProductImage[]; name:
         )}
       </dialog>
     </div>
+  );
+}
+
+export type Swatch = { name: string; url: string; index: number };
+
+/**
+ * The finishes one page offers. Each swatch shows its finish's front shot in
+ * the gallery. The gallery holds every finish's shots grouped by finish, front
+ * first, so the finish on show is the last swatch at or before the active image,
+ * and browsing the thumbnails keeps the right swatch lit.
+ */
+export function ColourSwatches({ swatches }: { swatches: Swatch[] }) {
+  const local = useState(0);
+  const [active, setActive] = useContext(Selection) ?? local;
+  const current = swatches.filter((s) => s.index <= active).at(-1);
+
+  return (
+    <ul className="mt-3 flex flex-wrap gap-2">
+      {swatches.map((c) => {
+        const on = c === current;
+        return (
+          <li key={c.name}>
+            <button
+              type="button"
+              onClick={() => setActive(c.index)}
+              aria-pressed={on}
+              className={`flex items-center gap-2.5 rounded-sm border py-1.5 pl-1.5 pr-3.5 text-sm transition-colors ${
+                on
+                  ? "border-teal text-teal"
+                  : "border-line text-ink-muted hover:border-line-strong hover:text-ink"
+              }`}
+            >
+              {/* The button's text already names the finish. */}
+              <Image
+                src={c.url}
+                alt=""
+                width={64}
+                height={64}
+                sizes="32px"
+                className="h-8 w-8 rounded-sm object-contain"
+              />
+              {c.name}
+            </button>
+          </li>
+        );
+      })}
+    </ul>
   );
 }
 

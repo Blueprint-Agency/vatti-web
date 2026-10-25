@@ -7,7 +7,7 @@ import { CompareTable } from "@/components/CompareTable";
 import { CtaBar } from "@/components/CtaBar";
 import { FitCheck } from "@/components/FitCheck";
 import { ProductFeatures } from "@/components/ProductFeatures";
-import { ProductGallery } from "@/components/ProductGallery";
+import { ColourSwatches, GallerySelection, ProductGallery } from "@/components/ProductGallery";
 import { ProductNav, type NavSection } from "@/components/ProductNav";
 import { ReadoutStrip } from "@/components/ReadoutStrip";
 import { ReviewWall } from "@/components/ReviewWall";
@@ -278,7 +278,13 @@ function ProductView({ product }: { product: Product }) {
   const faqs = getProductFaqs(product.id);
   const related = getRelated(product.id);
   const colourways = getColourways(product.id);
-  const swatches = getColourSwatches(product.id);
+  const shown = gallery.length ? gallery : all;
+  // A swatch whose shot is not in the gallery has nothing to switch to, so it
+  // is left off rather than rendered as a button that does nothing.
+  const swatches = getColourSwatches(product.id)
+    .map((c) => ({ name: c.name, url: c.url, index: shown.findIndex((i) => i.url === c.url) }))
+    .filter((c) => c.index >= 0)
+    .sort((a, b) => a.index - b.index);
   const warranty = warrantyFor(product.kind);
   const reviews = getReviews(8);
   const regions = getRegions();
@@ -350,137 +356,122 @@ function ProductView({ product }: { product: Product }) {
             </ol>
           </nav>
 
-          <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-16">
-            <ProductGallery images={gallery.length ? gallery : all} name={product.name} />
+          <GallerySelection>
+            <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-16">
+              <ProductGallery images={shown} name={product.name} />
 
-            <div className="flex flex-col">
-              {/* No series eyebrow: the legacy H1 already opens with the series
-                  name ("Athena Series Lifting Type Range Hood V993"), and we
-                  keep that text verbatim for SEO. Repeating it above is noise. */}
-              <h1 className="text-balance text-[clamp(1.875rem,1.2rem+2.6vw,3.25rem)] font-semibold leading-[1.05] tracking-[-0.035em]">
-                {product.name}
-              </h1>
+              <div className="flex flex-col">
+                {/* No series eyebrow: the legacy H1 already opens with the series
+                    name ("Athena Series Lifting Type Range Hood V993"), and we
+                    keep that text verbatim for SEO. Repeating it above is noise. */}
+                <h1 className="text-balance text-[clamp(1.875rem,1.2rem+2.6vw,3.25rem)] font-semibold leading-[1.05] tracking-[-0.035em]">
+                  {product.name}
+                </h1>
 
-              <p className="readout mt-3 text-lg text-ink-muted">
-                {product.model_code}
-                {product.secondary_model && ` + ${product.secondary_model}`}
-              </p>
-
-              {product.intro_md && (
-                <p className="mt-6 max-w-[62ch] text-[1.0625rem] leading-relaxed text-ink-muted">
-                  {product.intro_md}
+                <p className="readout mt-3 text-lg text-ink-muted">
+                  {product.model_code}
+                  {product.secondary_model && ` + ${product.secondary_model}`}
                 </p>
-              )}
 
-              {/* The warranty belongs beside the model, not on a page a visitor
-                  has to go looking for. It is the answer to "will anyone service
-                  this in five years", which PRODUCT.md names as the fear this
-                  whole site is selling against. */}
-              {warranty && (
-                <p className="mt-6 flex flex-wrap items-baseline gap-x-3 gap-y-1 text-sm">
-                  <span className="readout text-teal">{warranty.headline}</span>
-                  {warranty.extra && <span className="text-ink-muted">{warranty.extra}</span>}
-                  <Link
-                    href="/vatti-ewarranty/"
-                    className="text-ink-muted underline decoration-line underline-offset-4 transition-colors hover:text-teal"
+                {product.intro_md && (
+                  <p className="mt-6 max-w-[62ch] text-[1.0625rem] leading-relaxed text-ink-muted">
+                    {product.intro_md}
+                  </p>
+                )}
+
+                {/* The warranty belongs beside the model, not on a page a visitor
+                    has to go looking for. It is the answer to "will anyone service
+                    this in five years", which PRODUCT.md names as the fear this
+                    whole site is selling against. */}
+                {warranty && (
+                  <p className="mt-6 flex flex-wrap items-baseline gap-x-3 gap-y-1 text-sm">
+                    <span className="readout text-teal">{warranty.headline}</span>
+                    {warranty.extra && <span className="text-ink-muted">{warranty.extra}</span>}
+                    <Link
+                      href="/vatti-ewarranty/"
+                      className="text-ink-muted underline decoration-line underline-offset-4 transition-colors hover:text-teal"
+                    >
+                      Register it
+                    </Link>
+                  </p>
+                )}
+
+                {colourways.length > 1 && (
+                  <div className="mt-8">
+                    <h2 className="text-sm font-semibold text-ink-muted">Finish</h2>
+                    <ul className="mt-3 flex flex-wrap gap-2">
+                      {colourways.map((c) => (
+                        <li key={c.slug}>
+                          <Link
+                            href={`/${c.slug}/`}
+                            aria-current={c.slug === product.slug ? "page" : undefined}
+                            className={`block rounded-sm border px-3.5 py-2 text-sm transition-colors ${
+                              c.slug === product.slug
+                                ? "border-teal text-teal"
+                                : "border-line text-ink-muted hover:border-line-strong hover:text-ink"
+                            }`}
+                          >
+                            {c.colour_variant}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* The same question as the block above, answered without a second
+                    URL: these finishes live on this page. A product has one or the
+                    other, never both — see product_colourway in schema.sql. */}
+                {swatches.length > 1 && (
+                  <div className="mt-8">
+                    <h2 className="text-sm font-semibold text-ink-muted">Finish</h2>
+                    <ColourSwatches swatches={swatches} />
+                  </div>
+                )}
+
+                {downloads.length > 0 && (
+                  <div className="mt-8">
+                    <h2 className="text-sm font-semibold text-ink-muted">Documents</h2>
+                    <ul className="mt-3 flex flex-wrap gap-2">
+                      {downloads.map((d) => (
+                        <li key={d.url}>
+                          <a
+                            href={d.url}
+                            target="_blank"
+                            rel="noopener"
+                            className="flex items-center gap-2 rounded-sm border border-line px-3.5 py-2 text-sm text-ink transition-colors hover:border-teal hover:text-teal"
+                          >
+                            {d.label}
+                            <span className="readout text-xs text-ink-muted">PDF</span>
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Desktop CTA; mobile gets the sticky bar instead. Deliberately
+                    NOT mt-auto — the right column is shorter than the gallery, so
+                    pushing these to the bottom opened a dead gap. */}
+                <div className="hidden gap-3 pt-10 lg:flex">
+                  <a
+                    href={enquireHref}
+                    target="_blank"
+                    rel="noopener"
+                    className="rounded-sm bg-teal px-6 py-3 font-semibold text-void transition-opacity hover:opacity-90"
                   >
-                    Register it
+                    Enquire about {product.model_code}
+                  </a>
+                  <Link
+                    href="/store-locations/"
+                    className="rounded-sm border border-line-strong px-6 py-3 font-medium text-ink transition-colors hover:border-teal hover:text-teal"
+                  >
+                    Find a dealer
                   </Link>
-                </p>
-              )}
-
-              {colourways.length > 1 && (
-                <div className="mt-8">
-                  <h2 className="text-sm font-semibold text-ink-muted">Finish</h2>
-                  <ul className="mt-3 flex flex-wrap gap-2">
-                    {colourways.map((c) => (
-                      <li key={c.slug}>
-                        <Link
-                          href={`/${c.slug}/`}
-                          aria-current={c.slug === product.slug ? "page" : undefined}
-                          className={`block rounded-sm border px-3.5 py-2 text-sm transition-colors ${
-                            c.slug === product.slug
-                              ? "border-teal text-teal"
-                              : "border-line text-ink-muted hover:border-line-strong hover:text-ink"
-                          }`}
-                        >
-                          {c.colour_variant}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
                 </div>
-              )}
-
-              {/* The same question as the block above, answered without a second
-                  URL: these finishes live on this page. A product has one or the
-                  other, never both — see product_colourway in schema.sql. */}
-              {swatches.length > 1 && (
-                <div className="mt-8">
-                  <h2 className="text-sm font-semibold text-ink-muted">Finish</h2>
-                  <ul className="mt-3 flex flex-wrap gap-2">
-                    {swatches.map((c) => (
-                      <li
-                        key={c.name}
-                        className="flex items-center gap-2.5 rounded-sm border border-line py-1.5 pl-1.5 pr-3.5"
-                      >
-                        <Image
-                          src={c.url}
-                          alt={c.alt || `${product.name} in ${c.name}`}
-                          width={64}
-                          height={64}
-                          sizes="32px"
-                          className="h-8 w-8 rounded-sm object-contain"
-                        />
-                        <span className="text-sm text-ink-muted">{c.name}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
-              {downloads.length > 0 && (
-                <div className="mt-8">
-                  <h2 className="text-sm font-semibold text-ink-muted">Documents</h2>
-                  <ul className="mt-3 flex flex-wrap gap-2">
-                    {downloads.map((d) => (
-                      <li key={d.url}>
-                        <a
-                          href={d.url}
-                          target="_blank"
-                          rel="noopener"
-                          className="flex items-center gap-2 rounded-sm border border-line px-3.5 py-2 text-sm text-ink transition-colors hover:border-teal hover:text-teal"
-                        >
-                          {d.label}
-                          <span className="readout text-xs text-ink-muted">PDF</span>
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
-              {/* Desktop CTA; mobile gets the sticky bar instead. Deliberately
-                  NOT mt-auto — the right column is shorter than the gallery, so
-                  pushing these to the bottom opened a dead gap. */}
-              <div className="hidden gap-3 pt-10 lg:flex">
-                <a
-                  href={enquireHref}
-                  target="_blank"
-                  rel="noopener"
-                  className="rounded-sm bg-teal px-6 py-3 font-semibold text-void transition-opacity hover:opacity-90"
-                >
-                  Enquire about {product.model_code}
-                </a>
-                <Link
-                  href="/store-locations/"
-                  className="rounded-sm border border-line-strong px-6 py-3 font-medium text-ink transition-colors hover:border-teal hover:text-teal"
-                >
-                  Find a dealer
-                </Link>
               </div>
             </div>
-          </div>
+          </GallerySelection>
         </div>
 
         <ReadoutStrip facets={facets} />
