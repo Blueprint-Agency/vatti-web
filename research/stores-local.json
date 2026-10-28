@@ -37,6 +37,15 @@
       "phone": "011-6263 8088",
       "directionsUrl": "https://www.google.com/maps/search/?api=1&query=Harmoni+Bath+%26+Kitchen%2C+30+Wangsa+Biz+Avenue%2C+53300+Setapak%2C+Kuala+Lumpur",
       "image": "2026/10/Harmoni-Bath-Kitchen-Setapak.jpeg"
+    },
+    {
+      "slug": "kbo-kuche-bath-outlet-ss2",
+      "name": "KBO Kuche Bath Outlet (SS2)",
+      "regionSlug": "klang-valley-malaysia",
+      "address": "No. 74, Jalan SS2/3, 47300 Petaling Jaya, Selangor",
+      "phone": "011-3910 1314",
+      "directionsUrl": "https://maps.app.goo.gl/x4w4Ek9KyxXvjhWK7",
+      "image": "2026/10/KBO-Kuche-Bath-Outlet-SS2.jpeg"
     }
   ]
 }
