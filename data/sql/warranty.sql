@@ -26,6 +26,15 @@
 --   Filken Puchong, 2026-09-29, with its /store/filken-puchong/ page.
 --   91 ELECTRICAL TRADING SDN BHD (Miri), 2026-10-15, with its
 --   /store/91-electrical-trading-miri/ page.
+--   KBO Kuche Bath Outlet (SS2), 2026-10-29, with its
+--   /store/kbo-kuche-bath-outlet-ss2/ page.
+--
+-- Renamed since the extraction, to match their store pages:
+--   Kbo Megastore Sdn Bhd (Kuchai Lama) -> KBO Kuche Bath Outlet (Kuchai Lama)
+--   KBO MEGASTORE SDN BHD (JINJANG)     -> KBO Kuche Bath Outlet (Kepong)
+--   2026-10-29. KBO Uptown and Mum Kitch Bukit Jalil stay on this list though
+--   their store pages are gone: a past buyer still registers against the shop
+--   they bought from.
 
 INSERT INTO warranty_dealer (name) VALUES
   ('91 ELECTRICAL TRADING SDN BHD'),
@@ -69,8 +78,9 @@ INSERT INTO warranty_dealer (name) VALUES
   ('JF HOME APPLIANCES SDN BHD'),
   ('JW SANITARY HOME SDN BHD'),
   ('Kah Hoe Enterprise'),
-  ('KBO MEGASTORE SDN BHD (JINJANG)'),
-  ('Kbo Megastore Sdn Bhd (Kuchai Lama)'),
+  ('KBO Kuche Bath Outlet (Kepong)'),
+  ('KBO Kuche Bath Outlet (Kuchai Lama)'),
+  ('KBO Kuche Bath Outlet (SS2)'),
   ('KBO MEGASTORE SDN BHD (SEMENYIH)'),
   ('KBO MEGASTORE SDN BHD (UPTOWN)'),
   ('KBO TOTAL HOME DIY SDN BHD'),
