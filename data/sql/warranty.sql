@@ -34,9 +34,35 @@
 --   Home Style Marketing Sdn Bhd, VIVA NUEVA SDN BHD. Each is named as its
 --   store page names it.
 --
--- From 2026-11-04 db:check fails if a store page has no option here. A new
--- dealer page and its option go in the same change; see the alias map in
--- scripts/db-check.mjs for stores whose option is worded differently.
+-- ONE OPTION PER DEALER, NOT PER BRANCH (client, 2026-11-04). The branch
+-- options were merged that day, 88 to 55:
+--   ALAT DAPUR              <- Cheras, Puncak Alam, Semenyih, Shah Alam
+--   BRIGHT SCOTT ELECTRICAL SDN BHD <- (Prima Square), Sandakan
+--   DARSON ELECTRONICS SDN BHD <- ( EMART ), DARSON XTRA (MUAR)
+--   DE BATHLABZ SDN BHD     <- (Batu Tiga)
+--   EASTONE GALLERY SDN BHD <- & Marketing, Tunjung
+--   EMART                   <- (Nusa Bestari), (Plentong)
+--   ESH ELECTRICAL SDN BHD  <- EkoCheras, Metro Prima, The Starling, Petaling Jaya
+--   FILKEN                  <- Bukit Indah, Kulai, Puchong, Grand Filken Setia Indah
+--   HOMEWORKS SDN BHD       <- (Southern)
+--   KBO Kuche Bath Outlet   <- Kepong, Kuchai Lama, SS2, Megastore Semenyih,
+--                              Megastore Uptown, KBO Total Home DIY
+--   MUM KITCH               <- (Bandar Sunway), (Bukit Jalil)
+--   Nikko Kitchen & Design  <- (Melaka), (Muar)
+--   PERFECT ELECTRICAL      <- Setia Alam, USJ Taipan
+--   SK HARDWARE SDN BHD     <- (Kuching), (Bintulu)
+--   TANRADIO.COM ELECTRICAL SDN BHD <- Johor Jaya, Batu Pahat, Kulai, Seri Alam,
+--                              Tun Aminah
+--   VINTAGE BATH & KITCHEN  <- Kota Kinabalu, Tawau, TAI & TAI -TAWAU (the
+--                              Tawau shop's company; its store page is Vintage)
+-- Kept apart on purpose, as different companies or names: Emart Kompleks
+-- Karamunsing (Sabah, not the Johor EMART), SK LIFESTYLES (MIRI).
+--
+-- db:check fails if a store page has no option here. A store page matches the
+-- option its name starts with, so a new branch of a listed dealer needs no
+-- edit; a new dealer gets one option, without a branch name. Branches whose
+-- page name does not start with the option are paired in WARRANTY_ALIAS in
+-- scripts/db-check.mjs.
 --
 -- Renamed since the extraction, to match their store pages:
 --   Kbo Megastore Sdn Bhd (Kuchai Lama) -> KBO Kuche Bath Outlet (Kuchai Lama)
@@ -48,88 +74,55 @@
 INSERT INTO warranty_dealer (name) VALUES
   ('91 ELECTRICAL TRADING SDN BHD'),
   ('ADAMAS TRADING (M) SDN. BHD.'),
-  ('ALAT DAPUR CHERAS'),
-  ('ALAT DAPUR Puncak Alam'),
-  ('ALAT DAPUR SEMENYIH'),
-  ('ALAT DAPUR Shah Alam'),
+  ('ALAT DAPUR'),
   ('BAN HIN BEE SDN BHD ( KITCHENTECH)'),
   ('BENOVA MARKETING SDN BHD'),
-  ('BRIGHT SCOTT ELECTRICAL SDN BHD (PRIMA SQUARE)'),
-  ('Bright Scott Electrical Sdn Bhd Sandakan'),
+  ('BRIGHT SCOTT ELECTRICAL SDN BHD'),
   ('CASA SANITARY SDN.BHD.'),
-  ('DARSON ELECTRONICS SDN BHD ( EMART )'),
-  ('DARSON XTRA (MUAR)'),
-  ('DE BATHLABZ (BATU TIGA) SDN BHD'),
+  ('DARSON ELECTRONICS SDN BHD'),
   ('DE BATHLABZ SDN BHD'),
   ('DE HOMEBIZ SDN BHD'),
-  ('E.S.H ELECTRICAL SDN. BHD. (EkoCheras)'),
-  ('E.S.H ELECTRICAL SDN. BHD. (Metro Prima)'),
-  ('E.S.H ELECTRICAL SDN. BHD. (The Starling)'),
-  ('EASTONE GALLERY & MARKETING'),
   ('EASTONE GALLERY SDN BHD'),
-  ('Eastone Gallery Sdn Bhd – Tunjung'),
   ('ELLE ONNI TRADING'),
-  ('EMART (NUSA BESTARI)'),
-  ('EMART (PLENTONG)'),
+  ('EMART'),
   ('Emart Kompleks Karamunsing'),
   ('ESH ELECTRICAL SDN BHD'),
-  ('ESH ELECTRICAL SDN BHD (Petaling Jaya)'),
   ('EUROTAN ENTERPRISE SDN BHD'),
   ('FELICITA HOMES DECO'),
-  ('FILKEN BUKIT INDAH'),
-  ('Filken Kulai'),
-  ('Filken Puchong'),
+  ('FILKEN'),
   ('Flo Plus Home Sdn Bhd'),
-  ('GRAND FILKEN SETIA INDAH'),
   ('Harmoni Bath & Kitchen'),
   ('HENG FOONG SANITARYWARE TRADING'),
   ('HK HOME ELECTRICAL SDN.BHD.'),
   ('HOME CARE KITCHEN SUPPLY SDN BHD'),
   ('Home Style Marketing Sdn Bhd'),
-  ('HOMEWORKS (SOUTHERN) SDN. BHD.'),
   ('HOMEWORKS SDN BHD'),
   ('IN CERAMICS SDN.BHD'),
   ('JF HOME APPLIANCES SDN BHD'),
   ('JW SANITARY HOME SDN BHD'),
   ('Kah Hoe Enterprise'),
-  ('KBO Kuche Bath Outlet (Kepong)'),
-  ('KBO Kuche Bath Outlet (Kuchai Lama)'),
-  ('KBO Kuche Bath Outlet (SS2)'),
-  ('KBO MEGASTORE SDN BHD (SEMENYIH)'),
-  ('KBO MEGASTORE SDN BHD (UPTOWN)'),
-  ('KBO TOTAL HOME DIY SDN BHD'),
+  ('KBO Kuche Bath Outlet'),
   ('Kitchenwise Sdn Bhd'),
   ('LIVING PORTAL (M) SDN BHD'),
   ('LTL Global'),
   ('MANDI B.P. SDN BHD'),
   ('MULTI SKILL KITCHEN DESIGN SDN BHD'),
-  ('MUM KITCH (BANDAR SUNWAY)'),
-  ('MUM KITCH (BUKIT JALIL)'),
-  ('Nikko Kitchen & Design (Melaka)'),
-  ('Nikko Kitchen & Design (Muar)'),
+  ('MUM KITCH'),
+  ('Nikko Kitchen & Design'),
   ('NOVO BATH HOME SDN BHD'),
   ('P&Y LIGHTING SDN BHD'),
-  ('PERFECT ELECTRICAL SETIA ALAM'),
-  ('PERFECT ELECTRICAL USJ TAIPAN'),
+  ('PERFECT ELECTRICAL'),
   ('SIN JIN DA HARDWARE SDN.BHD.'),
-  ('SK HARDWARE -(KUCHING) SDN BHD'),
-  ('SK HARDWARE SDN BHD ( BINTULU)'),
+  ('SK HARDWARE SDN BHD'),
   ('SK LIFESTYLES (MIRI) SDN.BHD'),
   ('STANDARD KITCHEN SDN.BHD.'),
   ('TAHOL MARKETING'),
-  ('TAI & TAI -TAWAU SDN.BHD.'),
-  ('TANRADIO (JOHOR JAYA)'),
-  ('TANRADIO.COM (Batu Pahat)'),
-  ('TANRADIO.COM (KULAI)'),
-  ('TANRADIO.COM (SERI ALAM)'),
-  ('TANRADIO.COM (TUN AMINAH)'),
   ('TANRADIO.COM ELECTRICAL SDN BHD'),
   ('THYE HIN TRADING (M) SDN BHD'),
   ('UNION MOTORS & ELECTRICAL SUPPLIES SDN. BHD.'),
   ('URBANEZ SDN BHD'),
   ('Vatti Flagship Store Atria Mall'),
-  ('VINTAGE BATH & KITCHEN KOTA KINABALU'),
-  ('Vintage Bath & Kitchen Tawau'),
+  ('VINTAGE BATH & KITCHEN'),
   ('VIVA NUEVA SDN BHD'),
   ('WORLD BATH & KITCHEN SDN BHD'),
   ('WPC IDEAS ENTERPRISE'),

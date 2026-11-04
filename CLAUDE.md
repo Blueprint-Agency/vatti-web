@@ -31,21 +31,24 @@ the email is the record. `/api/enquiry` was planned and is not built: every othe
 ends in WhatsApp by the owner's decision. See `src/lib/site.ts`.
 
 The eWarranty form is therefore the only form on the site. Its two big selects are data, not code:
-`warranty_dealer` (88 authorised dealers) and `warranty_model` (41 codes under 8 appliance types).
+`warranty_dealer` (55 authorised dealers) and `warranty_model` (41 codes under 8 appliance types).
 Appointing a dealer is a SQL edit in `data/sql/warranty.sql`. That list is deliberately **not** the
-same table as `store` (88 against 79, and they do not line up row for row). Do not "unify" them; a
-fuzzy name match silently drops dealers off a warranty form.
+same table as `store` (55 dealers against 79 branch pages). Do not "unify" them.
 
-**Every store page must have an eWarranty option.** When you add a dealer to
-`research/stores-local.json`, add its option to `data/sql/warranty.sql` in the same commit, named
-as the store page names it. `db:check` fails otherwise ("store pages missing from the eWarranty
-dealer list"). If the client's existing option already covers the store under other wording, map
-the store slug in `WARRANTY_ALIAS` in `scripts/db-check.mjs` instead. The reverse is not required:
-a warranty dealer with no store page stays on the form for past buyers.
+**One option per dealer, not per branch** (client decision, 2026-11-04). FILKEN, not Filken
+Puchong. Never add a branch name to an option and never split one by location; the branch options
+were merged on that date, 88 to 55, and the header of `warranty.sql` lists what went where.
 
-**One option per dealer, not per branch** (client decision, 2026-11-04). Where one option covers
-several branches (EUROTAN, UNION MOTORS, URBANEZ), keep it single; do not split it by location. A
-split was made and reverted the same day.
+**Every store page must have an eWarranty option.** `db:check` fails otherwise ("store pages
+missing from the eWarranty dealer list"). A store page matches the option its name starts with
+(case, punctuation and "Sdn Bhd" ignored), so:
+- **a new branch of a listed dealer** needs no warranty edit; it already points at the dealer's
+  option. If its page name does not start with that option (TANRADIO (JOHOR JAYA) against
+  TANRADIO.COM ELECTRICAL SDN BHD), pair its slug in `WARRANTY_ALIAS` in `scripts/db-check.mjs`;
+- **a new dealer** gets one option in `data/sql/warranty.sql`, without a branch name, in the same
+  commit as its store page.
+
+The reverse is not required: a warranty dealer with no store page stays on the form for past buyers.
 
 `RESEND_API_KEY`, `EWARRANTY_TO` and `EWARRANTY_FROM` configure delivery — see README § Environment.
 Without the key the endpoint returns 503 and the form tells the visitor, rather than swallowing a

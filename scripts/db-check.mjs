@@ -217,13 +217,18 @@ check("near-duplicate warranty dealers", `
 // Every dealer with a store page must be choosable on the eWarranty form: a
 // buyer who walks out of a listed shop and cannot find it in the dropdown either
 // gives up or picks a wrong one. The two lists stay separate tables (CLAUDE.md §
-// Stack), so this is the only thing keeping them in step. Matched on the name
-// with case, punctuation and "Sdn Bhd" ignored; where the warranty option is
-// worded differently from the store page, the pairing is named below by store
-// slug. Adding a dealer page means adding its option to data/sql/warranty.sql in
-// the same change, or an alias here if the client's option already covers it.
-// The reverse is NOT checked: a warranty dealer with no store page (a closed
-// branch, KBO Uptown) stays on the form for past buyers.
+// Stack), so this is the only thing keeping them in step.
+//
+// The list has ONE option per dealer, not per branch (client, 2026-11-04): a
+// buyer from Filken Puchong picks FILKEN. So a store page matches an option when
+// its name, with case, punctuation and "Sdn Bhd" ignored, starts with the
+// option's name. A new branch of a listed dealer therefore needs no edit at all.
+// A new dealer needs its option added to data/sql/warranty.sql in the same
+// change. Where a branch's page is named so that it does not start with its
+// dealer's option, the pairing is named below by store slug.
+//
+// The reverse is NOT checked: a warranty dealer with no store page stays on the
+// form for past buyers.
 {
   const WARRANTY_ALIAS = {
     "ltl-global-kota-bayuemas": "LTL Global",
@@ -231,15 +236,25 @@ check("near-duplicate warranty dealers", `
     "klang-valley-urbanez-sdn-bhd-kota-damansara": "URBANEZ SDN BHD",
     "klang-valley-xam-max-kitchen": "XAM-MAX ENTERPRISE SDN BHD",
     "southern-region-thye-hin-trading": "THYE HIN TRADING (M) SDN BHD",
+    "southern-region-darson-xtra-muar": "DARSON ELECTRONICS SDN BHD",
+    "southern-region-grand-filken-setia-indah": "FILKEN",
+    "klang-valley-kbo-total-home-diy-sdn-bhd": "KBO Kuche Bath Outlet",
+    "southern-region-tanradio-johor-jaya": "TANRADIO.COM ELECTRICAL SDN BHD",
+    "tanradio-com-batu-pahat": "TANRADIO.COM ELECTRICAL SDN BHD",
+    "southern-region-tanradio-com-kulai": "TANRADIO.COM ELECTRICAL SDN BHD",
+    "southern-region-tanradio-com-seri-alam": "TANRADIO.COM ELECTRICAL SDN BHD",
+    "southern-region-tanradio-com-tun-aminah": "TANRADIO.COM ELECTRICAL SDN BHD",
   };
   const norm = (s) => s.toLowerCase().replace(/sdn\.?\s*bhd\.?/g, "").replace(/[^a-z0-9]/g, "");
   const dealers = db.prepare("SELECT name FROM warranty_dealer").all().map((r) => r.name);
-  const byNorm = new Set(dealers.map(norm));
+  const prefixes = dealers.map(norm);
   const missing = db
     .prepare("SELECT slug, name FROM store ORDER BY name COLLATE NOCASE")
     .all()
     .filter((s) =>
-      s.slug in WARRANTY_ALIAS ? !dealers.includes(WARRANTY_ALIAS[s.slug]) : !byNorm.has(norm(s.name))
+      s.slug in WARRANTY_ALIAS
+        ? !dealers.includes(WARRANTY_ALIAS[s.slug])
+        : !prefixes.some((p) => norm(s.name).startsWith(p))
     )
     .map((s) => ({ slug: s.slug, name: s.name }));
   if (missing.length) {
