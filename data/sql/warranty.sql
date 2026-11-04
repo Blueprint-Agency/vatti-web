@@ -28,6 +28,15 @@
 --   /store/91-electrical-trading-miri/ page.
 --   KBO Kuche Bath Outlet (SS2), 2026-10-29, with its
 --   /store/kbo-kuche-bath-outlet-ss2/ page.
+--   2026-11-04, reconciled against the store pages: ALAT DAPUR Puncak Alam
+--   (new that day), and five dealers that had a store page but no option here:
+--   DARSON XTRA (MUAR), Emart Kompleks Karamunsing, Harmoni Bath & Kitchen,
+--   Home Style Marketing Sdn Bhd, VIVA NUEVA SDN BHD. Each is named as its
+--   store page names it.
+--
+-- From 2026-11-04 db:check fails if a store page has no option here. A new
+-- dealer page and its option go in the same change; see the alias map in
+-- scripts/db-check.mjs for stores whose option is worded differently.
 --
 -- Renamed since the extraction, to match their store pages:
 --   Kbo Megastore Sdn Bhd (Kuchai Lama) -> KBO Kuche Bath Outlet (Kuchai Lama)
@@ -40,6 +49,7 @@ INSERT INTO warranty_dealer (name) VALUES
   ('91 ELECTRICAL TRADING SDN BHD'),
   ('ADAMAS TRADING (M) SDN. BHD.'),
   ('ALAT DAPUR CHERAS'),
+  ('ALAT DAPUR Puncak Alam'),
   ('ALAT DAPUR SEMENYIH'),
   ('ALAT DAPUR Shah Alam'),
   ('BAN HIN BEE SDN BHD ( KITCHENTECH)'),
@@ -48,6 +58,7 @@ INSERT INTO warranty_dealer (name) VALUES
   ('Bright Scott Electrical Sdn Bhd Sandakan'),
   ('CASA SANITARY SDN.BHD.'),
   ('DARSON ELECTRONICS SDN BHD ( EMART )'),
+  ('DARSON XTRA (MUAR)'),
   ('DE BATHLABZ (BATU TIGA) SDN BHD'),
   ('DE BATHLABZ SDN BHD'),
   ('DE HOMEBIZ SDN BHD'),
@@ -60,6 +71,7 @@ INSERT INTO warranty_dealer (name) VALUES
   ('ELLE ONNI TRADING'),
   ('EMART (NUSA BESTARI)'),
   ('EMART (PLENTONG)'),
+  ('Emart Kompleks Karamunsing'),
   ('ESH ELECTRICAL SDN BHD'),
   ('ESH ELECTRICAL SDN BHD (Petaling Jaya)'),
   ('EUROTAN ENTERPRISE SDN BHD'),
@@ -69,9 +81,11 @@ INSERT INTO warranty_dealer (name) VALUES
   ('Filken Puchong'),
   ('Flo Plus Home Sdn Bhd'),
   ('GRAND FILKEN SETIA INDAH'),
+  ('Harmoni Bath & Kitchen'),
   ('HENG FOONG SANITARYWARE TRADING'),
   ('HK HOME ELECTRICAL SDN.BHD.'),
   ('HOME CARE KITCHEN SUPPLY SDN BHD'),
+  ('Home Style Marketing Sdn Bhd'),
   ('HOMEWORKS (SOUTHERN) SDN. BHD.'),
   ('HOMEWORKS SDN BHD'),
   ('IN CERAMICS SDN.BHD'),
@@ -116,6 +130,7 @@ INSERT INTO warranty_dealer (name) VALUES
   ('Vatti Flagship Store Atria Mall'),
   ('VINTAGE BATH & KITCHEN KOTA KINABALU'),
   ('Vintage Bath & Kitchen Tawau'),
+  ('VIVA NUEVA SDN BHD'),
   ('WORLD BATH & KITCHEN SDN BHD'),
   ('WPC IDEAS ENTERPRISE'),
   ('XAM-MAX ENTERPRISE SDN BHD');

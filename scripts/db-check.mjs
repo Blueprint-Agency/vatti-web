@@ -214,6 +214,43 @@ check("near-duplicate warranty dealers", `
     AND replace(replace(lower(a.name), '.', ''), ' ', '')
       = replace(replace(lower(b.name), '.', ''), ' ', '')`);
 
+// Every dealer with a store page must be choosable on the eWarranty form: a
+// buyer who walks out of a listed shop and cannot find it in the dropdown either
+// gives up or picks a wrong one. The two lists stay separate tables (CLAUDE.md §
+// Stack), so this is the only thing keeping them in step. Matched on the name
+// with case, punctuation and "Sdn Bhd" ignored; where the warranty option is
+// worded differently from the store page, the pairing is named below by store
+// slug. Adding a dealer page means adding its option to data/sql/warranty.sql in
+// the same change, or an alias here if the client's option already covers it.
+// The reverse is NOT checked: a warranty dealer with no store page (a closed
+// branch, KBO Uptown) stays on the form for past buyers.
+{
+  const WARRANTY_ALIAS = {
+    "ltl-global-kota-bayuemas": "LTL Global",
+    "klang-valley-urbanez-sdn-bhd-klang": "URBANEZ SDN BHD",
+    "klang-valley-urbanez-sdn-bhd-kota-damansara": "URBANEZ SDN BHD",
+    "klang-valley-xam-max-kitchen": "XAM-MAX ENTERPRISE SDN BHD",
+    "southern-region-thye-hin-trading": "THYE HIN TRADING (M) SDN BHD",
+  };
+  const norm = (s) => s.toLowerCase().replace(/sdn\.?\s*bhd\.?/g, "").replace(/[^a-z0-9]/g, "");
+  const dealers = db.prepare("SELECT name FROM warranty_dealer").all().map((r) => r.name);
+  const byNorm = new Set(dealers.map(norm));
+  const missing = db
+    .prepare("SELECT slug, name FROM store ORDER BY name COLLATE NOCASE")
+    .all()
+    .filter((s) =>
+      s.slug in WARRANTY_ALIAS ? !dealers.includes(WARRANTY_ALIAS[s.slug]) : !byNorm.has(norm(s.name))
+    )
+    .map((s) => ({ slug: s.slug, name: s.name }));
+  if (missing.length) {
+    failures.push({ name: "store pages missing from the eWarranty dealer list", rows: missing });
+    console.log(`FAIL  store pages missing from the eWarranty dealer list (${missing.length})`);
+    for (const r of missing) console.log(`        ${JSON.stringify(r)}`);
+  } else {
+    console.log("ok    store pages missing from the eWarranty dealer list");
+  }
+}
+
 // Products and categories share one root [slug] route segment, so a collision
 // is a page that silently shadows another. Stores are NOT in this namespace.
 check("slug collisions across the root namespace", `
