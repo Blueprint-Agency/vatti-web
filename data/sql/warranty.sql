@@ -34,11 +34,6 @@
 --   Home Style Marketing Sdn Bhd, VIVA NUEVA SDN BHD. Each is named as its
 --   store page names it.
 --
---   Split per branch, 2026-11-04, so a registration names the shop that sold
---   the unit: EUROTAN ENTERPRISE (Jalan Ipoh / Sri Damansara), UNION MOTORS &
---   ELECTRICAL (56 & 58 / 62 Jalan Sultan Ismail), URBANEZ (Klang / Kota
---   Damansara). Each single option was replaced by its two branches.
---
 -- From 2026-11-04 db:check fails if a store page has no option here. A new
 -- dealer page and its option go in the same change; see the alias map in
 -- scripts/db-check.mjs for stores whose option is worded differently.
@@ -79,8 +74,7 @@ INSERT INTO warranty_dealer (name) VALUES
   ('Emart Kompleks Karamunsing'),
   ('ESH ELECTRICAL SDN BHD'),
   ('ESH ELECTRICAL SDN BHD (Petaling Jaya)'),
-  ('EUROTAN ENTERPRISE SDN BHD (Jalan Ipoh)'),
-  ('EUROTAN ENTERPRISE SDN BHD (Sri Damansara)'),
+  ('EUROTAN ENTERPRISE SDN BHD'),
   ('FELICITA HOMES DECO'),
   ('FILKEN BUKIT INDAH'),
   ('Filken Kulai'),
@@ -131,10 +125,8 @@ INSERT INTO warranty_dealer (name) VALUES
   ('TANRADIO.COM (TUN AMINAH)'),
   ('TANRADIO.COM ELECTRICAL SDN BHD'),
   ('THYE HIN TRADING (M) SDN BHD'),
-  ('UNION MOTORS & ELECTRICAL SUPPLIES SDN. BHD. (56 & 58 Jalan Sultan Ismail)'),
-  ('UNION MOTORS & ELECTRICAL SUPPLIES SDN. BHD. (62 Jalan Sultan Ismail)'),
-  ('URBANEZ SDN BHD (KLANG)'),
-  ('URBANEZ SDN BHD (KOTA DAMANSARA)'),
+  ('UNION MOTORS & ELECTRICAL SUPPLIES SDN. BHD.'),
+  ('URBANEZ SDN BHD'),
   ('Vatti Flagship Store Atria Mall'),
   ('VINTAGE BATH & KITCHEN KOTA KINABALU'),
   ('Vintage Bath & Kitchen Tawau'),

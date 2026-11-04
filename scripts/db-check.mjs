@@ -227,15 +227,10 @@ check("near-duplicate warranty dealers", `
 {
   const WARRANTY_ALIAS = {
     "ltl-global-kota-bayuemas": "LTL Global",
+    "klang-valley-urbanez-sdn-bhd-klang": "URBANEZ SDN BHD",
+    "klang-valley-urbanez-sdn-bhd-kota-damansara": "URBANEZ SDN BHD",
     "klang-valley-xam-max-kitchen": "XAM-MAX ENTERPRISE SDN BHD",
     "southern-region-thye-hin-trading": "THYE HIN TRADING (M) SDN BHD",
-    // Two branches whose store pages carry one name: the option says which.
-    "klang-valley-eurotan-enterprise-sdn-bhd": "EUROTAN ENTERPRISE SDN BHD (Jalan Ipoh)",
-    "klang-valley-eurotan-enterprise-sdn-bhd-2": "EUROTAN ENTERPRISE SDN BHD (Sri Damansara)",
-    "east-coast-union-motors-amp-electrical-supplies-sdn-bhd":
-      "UNION MOTORS & ELECTRICAL SUPPLIES SDN. BHD. (56 & 58 Jalan Sultan Ismail)",
-    "east-coast-union-motors-amp-electrical-supplies-sdn-bhd-2":
-      "UNION MOTORS & ELECTRICAL SUPPLIES SDN. BHD. (62 Jalan Sultan Ismail)",
   };
   const norm = (s) => s.toLowerCase().replace(/sdn\.?\s*bhd\.?/g, "").replace(/[^a-z0-9]/g, "");
   const dealers = db.prepare("SELECT name FROM warranty_dealer").all().map((r) => r.name);
