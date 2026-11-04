@@ -31,9 +31,9 @@ the email is the record. `/api/enquiry` was planned and is not built: every othe
 ends in WhatsApp by the owner's decision. See `src/lib/site.ts`.
 
 The eWarranty form is therefore the only form on the site. Its two big selects are data, not code:
-`warranty_dealer` (88 authorised dealers) and `warranty_model` (41 codes under 8 appliance types).
+`warranty_dealer` (91 authorised dealers) and `warranty_model` (41 codes under 8 appliance types).
 Appointing a dealer is a SQL edit in `data/sql/warranty.sql`. That list is deliberately **not** the
-same table as `store` (88 against 79, and they do not line up row for row). Do not "unify" them; a
+same table as `store` (91 against 79, and they do not line up row for row). Do not "unify" them; a
 fuzzy name match silently drops dealers off a warranty form.
 
 **Every store page must have an eWarranty option.** When you add a dealer to
