@@ -43,6 +43,10 @@ dealer list"). If the client's existing option already covers the store under ot
 the store slug in `WARRANTY_ALIAS` in `scripts/db-check.mjs` instead. The reverse is not required:
 a warranty dealer with no store page stays on the form for past buyers.
 
+**One option per dealer, not per branch** (client decision, 2026-11-04). Where one option covers
+several branches (EUROTAN, UNION MOTORS, URBANEZ), keep it single; do not split it by location. A
+split was made and reverted the same day.
+
 `RESEND_API_KEY`, `EWARRANTY_TO` and `EWARRANTY_FROM` configure delivery — see README § Environment.
 Without the key the endpoint returns 503 and the form tells the visitor, rather than swallowing a
 registration.
