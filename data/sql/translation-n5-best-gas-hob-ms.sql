@@ -33,7 +33,7 @@ Baca tiga perkara dahulu: **kuasa api** (kW), **kecekapan haba** (%) dan **ciri 
 
 Masakan Malaysia banyak menuntut daripada dapur gas. Kuali memerlukan api yang kuat dan tertumpu untuk menumis dengan betul, kari atau sup tulang pula memerlukan api kecil yang stabil selama sejam, dan kedua-duanya selalu berlaku pada malam yang sama. Lima perkara menentukan sama ada dapur gas mampu bertahan.
 
-**Kuasa api (kW).** Berapa banyak haba yang dihasilkan tungku pada api penuh. Rangkaian dapur gas VATTI bermula dari 3.8 kW hingga 6.0 kW. Untuk wok hei, cari 4.5 kW atau lebih pada tungku utama.
+**Kuasa api (kW).** Berapa banyak haba yang dihasilkan tungku pada api penuh. Rangkaian dapur gas VATTI bermula dari 4.5 kW hingga 6.0 kW pada tungku utama. Untuk menumis dengan kuali setiap hari, lebih tinggi lebih baik.
 
 **Kecekapan haba (%).** Berapa banyak haba gas yang masuk ke kuali, bukan ke udara di sekelilingnya. Tungku yang lebih cekap memanaskan kuali lebih cepat pada api yang sama. VATTI mencatat 73% pada C836G, 65% pada C821G dan C861G, dan 63% pada C822G dan C823G.
 
@@ -100,7 +100,7 @@ Dapur gas baharu perlu muat pada lubang yang ditinggalkan dapur lama pada kabine
 | C823G | 2 | 4.8 | 63% | Kaca tempered | Masakan harian, potongan fleksibel |
 | C861G | 2 | 4.8 | 65% | Kaca tempered | Mudah dibersihkan, kawalan sentuh |
 | C835G | 2 | 4.5 | Tidak diterbitkan | Kaca tempered | Keselamatan, lapan tahap api |
-| M822G | 2 | 3.8 | Tidak diterbitkan | Kaca tempered | Tungku plat inframerah |
+| M822G | 2 | 4.5, serta 3.8 inframerah | Tidak diterbitkan | Kaca tempered | Tungku plat inframerah |
 
 ## Padankan dengan hood yang betul
 

@@ -41,6 +41,14 @@ UPDATE product_category SET h1 = 'Powerful Kitchen Hood in Malaysia for Smoke-Fr
 UPDATE product_category SET h1 = 'Built-in Gas Hob in Malaysia, Made for Wok Cooking'
   WHERE slug = 'cooker-hob-in-malaysia';
 
+-- The importer takes the first kW figure on a spec sheet as the `power` facet.
+-- Every hob lists its strongest burner first except the M822G, whose sheet
+-- reads "3.8kW (Left) ... | 4.5kW (Right)": the 3.8 is the infrared plate.
+-- The facet means the main burner everywhere it is used (the comparison table,
+-- the burner-range copy), so it is 4.5. Fixed 2026-11-05.
+UPDATE product_facet SET value = 4.5
+  WHERE facet = 'power' AND product_id = (SELECT id FROM product WHERE slug = 'vatti-oylimpic-hob-m822g');
+
 -- The remaining three, same story and same source: each is the hero heading
 -- the live page opens with, verbatim.
 --
@@ -78,15 +86,16 @@ UPDATE product_category SET meta_description =
 -- brand category pages titled "gas hob"; the old title, H1 and meta led on
 -- "cooker hob", a term that measures 30. So the head now leads on built-in gas
 -- hob, keeps VATTI in the title for the brand queries that do click, and
--- states the measured 3.8 to 6 kW range. `gas stove malaysia` is left to the
+-- states the measured 4.5 to 6 kW range (strongest burner per model; see the
+-- M822G facet fix below). `gas stove malaysia` is left to the
 -- N5 guide. The Malay and Chinese heads are untouched: they lead on dapur gas
 -- and 煤气炉 already, and the Chinese page ranks 4.0 for 煤气炉.
 UPDATE product_category SET
   seo_title = 'Gas Hob Malaysia | VATTI Built-in Gas, Ceramic & Induction Hobs',
   meta_description =
-    'VATTI built-in gas hobs in Malaysia, 3.8 to 6 kW on the main burner, plus ceramic and induction hobs. Compare burner power, cut-out size and safety.',
+    'VATTI built-in gas hobs in Malaysia, 4.5 to 6 kW on the main burner, plus ceramic and induction hobs. Compare burner power, cut-out size and safety.',
   intro_md =
-    'Built-in gas hobs for a kitchen that cooks with a wok, from 3.8 to 6 kW on the main burner, with a flame-failure safety device on every one. For a kitchen that wants no flame, two ceramic hobs and one that pairs induction with ceramic.'
+    'Built-in gas hobs for a kitchen that cooks with a wok, from 4.5 to 6 kW on the main burner, with a flame-failure safety device on every one. For a kitchen that wants no flame, two ceramic hobs and one that pairs induction with ceramic.'
   WHERE slug = 'cooker-hob-in-malaysia';
 
 -- ── the dishwasher page's meta description and hero intro ──────────────────
@@ -318,7 +327,7 @@ UPDATE product SET intro_md =
   'A hob is usually a choice between a flame strong enough for a wok and a top that is quick to wipe down afterwards. The C861G lifts its burners clear of the glass, so the surface underneath cleans in one pass.'
   WHERE slug = 'vatti-magic-series-cooker-hob-c861g' AND intro_md IS NULL;
 UPDATE product SET intro_md =
-  'Most kitchens end up filtering the water in one place and heating it in another: a filter at the sink, a kettle on the counter and a jug in the fridge door. The WDHG01 does all three at one tap, from cold to 100°C, with 45°C in between for making up formula.'
+  'Most kitchens end up filtering the water in one place and heating it in another: a filter at the sink and a kettle on the counter. The WDHG01 does both at one tap, from room temperature to 100°C, with 45°C and 85°C in between.'
   WHERE slug = 'vatti-one-tap-water-purifier-wdhg01-with-v818wd' AND intro_md IS NULL;
 
 -- The DWBB7 is the one product whose intro is OVERWRITTEN rather than filled
@@ -637,8 +646,8 @@ SELECT p.id, 'burners', m.value, '', 'Burners', m.position, m.source
 INSERT INTO category_guide (category_id, position, heading, body_md, figure, figure_unit) VALUES
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 1,
    'Burner power is where to start',
-   'Malaysian cooking is high-heat cooking, and the burner rating decides whether a wok gets there at all. The gas hobs on this page run from 3.8 kW to 6 kW on their main burners. From 4.8 kW upward there is enough heat to hold wok hei through a full stir-fry; below that suits a household that mostly boils and simmers. Our [best gas hob guide](/buying-guide/best-gas-hob-malaysia/) picks one for each kind of kitchen.',
-   '3.8-6', 'kW'),
+   'Malaysian cooking is high-heat cooking, and the burner rating decides whether a wok gets there at all. The gas hobs on this page run from 4.5 kW to 6 kW on their main burners. From 4.8 kW upward there is enough heat to hold wok hei through a full stir-fry; below that suits a household that mostly boils and simmers. Our [best gas hob guide](/buying-guide/best-gas-hob-malaysia/) picks one for each kind of kitchen.',
+   '4.5-6', 'kW'),
 
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 2,
    'Measure the cut-out, not the hob',
@@ -752,8 +761,9 @@ INSERT INTO category_faq (category_id, position, question, answer_md) VALUES
 -- ── cooker hob: the "Best for" row ─────────────────────────────────────────
 -- One line per model for the comparison table, written against the measured
 -- figures and the spec bullets. The M822G is NOT called the hottest in the
--- range: its "up to 1000°C" bullet is about the burner head, and its measured
--- facet is 3.8 kW, the lowest here. Naming it hottest beside its own figure
+-- range: its "up to 1000°C" bullet is about the burner head, and its main
+-- burner is 4.5 kW, level lowest here with the C835G (the facet read 3.8, its
+-- infrared plate, until 2026-11-05). Naming it hottest beside its own figure
 -- would be the page arguing with itself.
 UPDATE product SET best_for = CASE slug
   WHEN 'vatti-3-burner-gas-hob-c830g'         THEN 'Three burners, family cooking'
@@ -1001,8 +1011,8 @@ SELECT p.id, m.facet, m.value, m.unit, m.label, m.position, m.source
 -- there is no figure to back it.
 INSERT INTO category_guide (category_id, position, heading, body_md, figure, figure_unit) VALUES
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 1,
-   'Size it by the meal, not by the kitchen',
-   'A place setting is roughly what one person uses at a meal. Both VATTI dishwashers are big machines: 17 settings on the DWBB7, 20 plus a fruit and vegetable basket on the DWID3. VATTI counts a full DWID3 load at 130 pieces, among them eighteen rice bowls, nine noodle bowls and 36 pairs of chopsticks. That is a household of four or more, or a family that cooks for guests, washed once a day. For one or two people a compact machine is the better fit, and VATTI does not make one.',
+   'Dishwasher size: go by the meal, not the kitchen',
+   'A place setting is roughly what one person uses at a meal. Both VATTI dishwashers are big machines: 17 settings on the DWBB7, 20 plus a fruit and vegetable basket on the DWID3. VATTI counts a full DWID3 load at 130 pieces, among them eighteen rice bowls, nine noodle bowls and 36 pairs of chopsticks. That is a household of four or more, or a family that cooks for guests, washed once a day. For one or two people a compact machine is the better fit, and VATTI does not make one. On the outside, both are full-size 60 cm machines at 598 x 775 x 570 mm. A slimline 45 cm machine fits a narrower gap but holds fewer settings.',
    '17-20', 'place settings'),
 
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 2,
@@ -1022,7 +1032,7 @@ INSERT INTO category_guide (category_id, position, heading, body_md, figure, fig
 
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 5,
    'Built in or freestanding',
-   'A built-in machine goes into the cabinet run and gives the tidiest finish, which makes it the one to plan for in a kitchen being built or renovated. The DWID3 is fully integrated and 60 cm wide, made for a 600 x 780 x 580 mm cabinet opening, so measure the opening before you choose rather than after. A freestanding machine goes anywhere with a water point, a drain and a socket.',
+   'A built-in machine goes into the cabinet run and gives the tidiest finish, which makes it the one to plan for in a kitchen being built or renovated. The DWID3 is fully integrated. Both machines are 60 cm wide and made for a 600 x 780 x 580 mm cabinet opening, so measure the opening before you choose rather than after. A freestanding machine goes anywhere with a water point, a drain and a socket.',
    NULL, NULL),
 
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 6,
@@ -1109,7 +1119,13 @@ INSERT INTO category_faq (category_id, position, question, answer_md) VALUES
 
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 10,
    'What is a good lifespan for a dishwasher?',
-   'Ten to fifteen years, depending on how hard it is used and how well the filter is kept. Our [dishwasher buying guide](/buying-guide/is-a-dishwasher-necessary/) covers what to look at before buying one.');
+   'Ten to fifteen years, depending on how hard it is used and how well the filter is kept. Our [dishwasher buying guide](/buying-guide/is-a-dishwasher-necessary/) covers what to look at before buying one.'),
+
+  -- Added 2026-11-05 for `dishwasher size` (210, SD 22), improvement 24, in
+  -- place of the dropped N7. Figures are product_dimension.
+  ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 11,
+   'What size is a dishwasher?',
+   'A full-size dishwasher is 60 cm wide, and a slimline one 45 cm. Both VATTI machines are full size: 598 mm wide, 775 mm high and 570 mm deep, made for a 600 x 780 x 580 mm cabinet opening. The DWBB7 takes 17 place settings and the DWID3 20, so go by how many people eat at home, then check the space.');
 
 -- ── dishwasher: the "Best for" row ─────────────────────────────────────────
 -- One line, because there is one model. It reads in the comparison table,
@@ -1146,7 +1162,7 @@ SELECT p.id, m.facet, m.value, m.unit, m.label, m.position, m.source
 INSERT INTO category_guide (category_id, position, heading, body_md, figure, figure_unit) VALUES
   ((SELECT id FROM product_category WHERE slug = 'one-tap-purifier-in-malaysia'), 1,
    'Four temperatures out of one tap',
-   'Cold for drinking, ambient, 45°C, and 100°C for tea, coffee and instant noodles. The 45°C setting is not a rounding of "warm": it is the temperature baby formula is made at, which is the reason a household with an infant buys one of these.',
+   '100°C for tea and instant noodles, 85°C for coffee, 45°C for milk drinks, and filtered water at room temperature, which are the labels VATTI gives the four modes. There is no chilled setting. For a baby''s formula, use the water temperature printed on the tin.',
    '45-100', '°C'),
 
   ((SELECT id FROM product_category WHERE slug = 'one-tap-purifier-in-malaysia'), 2,
@@ -1170,8 +1186,8 @@ INSERT INTO category_guide (category_id, position, heading, body_md, figure, fig
    NULL, NULL),
 
   ((SELECT id FROM product_category WHERE slug = 'one-tap-purifier-in-malaysia'), 6,
-   'Filters are the running cost',
-   'The unit tracks filter life and tells you when one is due rather than leaving it to memory, which matters because a filter past its life is a purifier that has quietly stopped purifying. Budget for replacements, and have the dealer do the first change while you watch.',
+   'It tells you when a filter is due',
+   'The unit tracks filter life and tells you when one is due rather than leaving it to memory, which matters because a filter past its life is a purifier that has quietly stopped purifying. The filters are designed to be changed by hand, with no tools.',
    NULL, NULL);
 
 -- ── purifier: why VATTI ────────────────────────────────────────────────────
@@ -1188,12 +1204,12 @@ INSERT INTO category_reason (category_id, position, title, body_md, figure, figu
 
   ((SELECT id FROM product_category WHERE slug = 'one-tap-purifier-in-malaysia'), 3,
    'Four temperatures, one fixture',
-   'Cold, ambient, 45°C and 100°C, selected at the tap. One fitting replaces the dispenser, the kettle and the jug in the fridge door.',
+   'Room temperature, 45°C, 85°C and 100°C, selected at the tap. One fitting replaces the dispenser and the kettle.',
    '4', 'modes', 'water'),
 
   ((SELECT id FROM product_category WHERE slug = 'one-tap-purifier-in-malaysia'), 4,
    'Stainless steel where the water is',
-   'The tap and the tank are both SUS 304 stainless rather than plastic. In a system that holds water at 100°C, that is what keeps the water tasting of nothing at all.',
+   'The tap and the tank are both SUS 304 stainless rather than plastic. With water running through at up to 100°C, that is what keeps it tasting of nothing at all.',
    NULL, NULL, 'safety'),
 
   ((SELECT id FROM product_category WHERE slug = 'one-tap-purifier-in-malaysia'), 5,
@@ -1210,7 +1226,7 @@ INSERT INTO category_reason (category_id, position, title, body_md, figure, figu
 INSERT INTO category_faq (category_id, position, question, answer_md) VALUES
   ((SELECT id FROM product_category WHERE slug = 'one-tap-purifier-in-malaysia'), 1,
    'Is a single-tap purifier better than a water dispenser?',
-   'For most homes, yes. It filters and delivers at four temperatures from one fixture at the sink, with no bottles to refill, no floor space given up, and no waiting for water to heat or chill.'),
+   'For most homes, yes. It filters and delivers at four temperatures from one fixture at the sink, with no bottles to refill, no floor space given up, and no waiting for water to heat. It has no chilled setting.'),
 
   ((SELECT id FROM product_category WHERE slug = 'one-tap-purifier-in-malaysia'), 2,
    'Does reverse osmosis remove minerals?',

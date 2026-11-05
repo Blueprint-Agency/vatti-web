@@ -1470,13 +1470,13 @@ SELECT id, 11, 'banner', NULL, NULL,
   FROM product WHERE slug = 'vatti-one-tap-water-purifier-wdhg01-with-v818wd';
 
 INSERT INTO product_feature (product_id, position, layout, title, body_md, image_url, image_alt, image_w, image_h)
-SELECT id, 12, 'split', 'What it costs to keep running',
-  'Two consumables, and both prices are the manufacturer''s:
+SELECT id, 12, 'split', 'Two filters to replace',
+  'Two consumables, both lifted out by hand:
 
-- Four-layer carbon filter, every 12 months, RM189
-- RO membrane, every 24 months, RM499
+- The four-layer carbon filter
+- The RO membrane
 
-Which is roughly RM24 a month for the water a household drinks.',
+The display reminds you when each one is due. Ask your dealer for replacements.',
   'https://cdn.vattimalaysia.com/2026/08/wdhg01-consumables.webp',
   'The two replaceable filters standing on top of the purifier', 595, 556
   FROM product WHERE slug = 'vatti-one-tap-water-purifier-wdhg01-with-v818wd';

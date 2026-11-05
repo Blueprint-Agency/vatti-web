@@ -65,7 +65,7 @@ INSERT INTO product_category_i18n
    'penapis-air', 'Penapis Air',
    'Penapis Air Satu Paip dan Dispenser Air Panas Segera',
    'Penapis Air & Dispenser Air Panas Satu Paip | VATTI Malaysia',
-   'Penapis air satu paip VATTI di Malaysia: penapisan membran RO pelbagai peringkat dan dispenser air panas pada empat suhu, dari sejuk hingga 100°C, di sinki.',
+   'Penapis air satu paip VATTI di Malaysia: penapisan membran RO pelbagai peringkat dan dispenser air panas pada empat suhu, dari suhu bilik hingga 100°C, di sinki.',
    'Nikmati air minuman yang bersih dan selamat dengan satu sentuhan. Sistem penapis air satu paip kami menggabungkan penapisan membran RO, penulenan pelbagai peringkat dan kawalan suhu yang tepat untuk kemudahan setiap hari.',
    'Penapis air VATTI WDHG01 dan pemanas V818WD di atas kaunter marmar, dengan paip One Tap keluli tahan karat dipasang di sinki bersebelahan.');
 
@@ -167,8 +167,8 @@ INSERT INTO category_faq (category_id, lang, position, question, answer_md) VALU
 INSERT INTO category_guide (category_id, lang, position, heading, body_md, figure, figure_unit) VALUES
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 'ms-MY', 1,
    'Mulakan dengan kuasa tungku',
-   'Masakan Malaysia ialah masakan berapi tinggi, dan kadar kuasa tungku menentukan sama ada kuali dapat mencapai haba itu. Dapur gas di halaman ini mempunyai tungku utama dari 3.8 kW hingga 6 kW. Dari 4.8 kW ke atas, haba cukup untuk mengekalkan wok hei sepanjang satu tumisan penuh; di bawahnya sesuai untuk isi rumah yang kebanyakannya merebus dan mereneh. Panduan [dapur gas terbaik](/ms/panduan-membeli/dapur-gas-terbaik/) kami memilih satu untuk setiap jenis dapur.',
-   '3.8-6', 'kW'),
+   'Masakan Malaysia ialah masakan berapi tinggi, dan kadar kuasa tungku menentukan sama ada kuali dapat mencapai haba itu. Dapur gas di halaman ini mempunyai tungku utama dari 4.5 kW hingga 6 kW. Dari 4.8 kW ke atas, haba cukup untuk mengekalkan wok hei sepanjang satu tumisan penuh; di bawahnya sesuai untuk isi rumah yang kebanyakannya merebus dan mereneh. Panduan [dapur gas terbaik](/ms/panduan-membeli/dapur-gas-terbaik/) kami memilih satu untuk setiap jenis dapur.',
+   '4.5-6', 'kW'),
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 'ms-MY', 2,
    'Ukur lubang potongan, bukan dapurnya',
    'Dapur gas dibeli untuk dimuatkan ke dalam lubang yang sudah ada, jadi bukaan pada kaunter menyingkirkan lebih banyak model berbanding mana-mana spesifikasi. Kedua-dua dapur Flexi menerima bukaan selebar 650 hingga 710 mm dan sedalam 350 hingga 400 mm, dan itulah yang membolehkannya dimuatkan ke kaunter yang dipotong untuk jenama lain.',
@@ -339,8 +339,8 @@ INSERT INTO category_faq (category_id, lang, position, question, answer_md) VALU
 -- actually goes" (a water claim); the advice to scrape rather than rinse stays.
 INSERT INTO category_guide (category_id, lang, position, heading, body_md, figure, figure_unit) VALUES
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 'ms-MY', 1,
-   'Ikut saiz hidangan, bukan saiz dapur',
-   'Satu tetapan tempat ialah kira-kira apa yang digunakan oleh seorang untuk satu hidangan. Kedua-dua mesin basuh pinggan VATTI ialah mesin besar: 17 tetapan pada DWBB7, 20 serta bakul buah dan sayur pada DWID3. VATTI mengira satu muatan penuh DWID3 sebanyak 130 keping, termasuk lapan belas mangkuk nasi, sembilan mangkuk mi dan 36 pasang penyepit. Itu untuk isi rumah empat orang atau lebih, atau keluarga yang sering menerima tetamu, dibasuh sekali sehari. Untuk seorang atau dua orang, mesin padat lebih sesuai, dan VATTI tidak membuatnya.',
+   'Saiz mesin basuh pinggan: ikut hidangan, bukan saiz dapur',
+   'Satu tetapan tempat ialah kira-kira apa yang digunakan oleh seorang untuk satu hidangan. Kedua-dua mesin basuh pinggan VATTI ialah mesin besar: 17 tetapan pada DWBB7, 20 serta bakul buah dan sayur pada DWID3. VATTI mengira satu muatan penuh DWID3 sebanyak 130 keping, termasuk lapan belas mangkuk nasi, sembilan mangkuk mi dan 36 pasang penyepit. Itu untuk isi rumah empat orang atau lebih, atau keluarga yang sering menerima tetamu, dibasuh sekali sehari. Untuk seorang atau dua orang, mesin padat lebih sesuai, dan VATTI tidak membuatnya. Dari luar, kedua-duanya mesin saiz penuh 60 cm, berukuran 598 x 775 x 570 mm. Mesin langsing 45 cm muat di ruang yang lebih sempit tetapi memuatkan lebih sedikit tetapan.',
    '17-20', 'tetapan tempat'),
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 'ms-MY', 2,
    'Haba yang menanggalkan minyak kuali',
@@ -356,7 +356,7 @@ INSERT INTO category_guide (category_id, lang, position, heading, body_md, figur
    NULL, NULL),
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 'ms-MY', 5,
    'Terbina dalam atau berdiri sendiri',
-   'Mesin terbina dalam dipasang dalam deretan kabinet dan memberi kemasan paling kemas, jadi itulah yang perlu dirancang untuk dapur yang sedang dibina atau diubah suai. DWID3 bersepadu sepenuhnya dan selebar 60 cm, dibuat untuk bukaan kabinet 600 x 780 x 580 mm, jadi ukur bukaan sebelum memilih, bukan selepasnya. Mesin berdiri sendiri boleh diletakkan di mana-mana yang ada sumber air, saluran pembuangan dan soket.',
+   'Mesin terbina dalam dipasang dalam deretan kabinet dan memberi kemasan paling kemas, jadi itulah yang perlu dirancang untuk dapur yang sedang dibina atau diubah suai. DWID3 bersepadu sepenuhnya. Kedua-dua mesin selebar 60 cm dan dibuat untuk bukaan kabinet 600 x 780 x 580 mm, jadi ukur bukaan sebelum memilih, bukan selepasnya. Mesin berdiri sendiri boleh diletakkan di mana-mana yang ada sumber air, saluran pembuangan dan soket.',
    NULL, NULL),
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 'ms-MY', 6,
    'Jalankan dengan muatan penuh, dan kikis tanpa membilas',
@@ -419,7 +419,11 @@ INSERT INTO category_faq (category_id, lang, position, question, answer_md) VALU
    'Kedua-dua mesin ini boleh. Kedua-duanya mempunyai program buah. Program DWID3 berjalan selama 26 minit dalam air lembut dengan bakul khas yang disertakan, dan VATTI mengukurnya menyingkirkan 95% sisa racun perosak. Anggur dan beri mendapat basuhan bergolek yang lembut, bukan semburan kuat.'),
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 'ms-MY', 10,
    'Berapa lama jangka hayat mesin basuh pinggan yang baik?',
-   'Sepuluh hingga lima belas tahun, bergantung pada kekerapan penggunaan dan sejauh mana penapis dijaga. [Panduan membeli mesin basuh pinggan](/buying-guide/is-a-dishwasher-necessary/) kami menerangkan perkara yang perlu dilihat sebelum membelinya.');
+   'Sepuluh hingga lima belas tahun, bergantung pada kekerapan penggunaan dan sejauh mana penapis dijaga. [Panduan membeli mesin basuh pinggan](/buying-guide/is-a-dishwasher-necessary/) kami menerangkan perkara yang perlu dilihat sebelum membelinya.'),
+  -- Added 2026-11-05 with the English FAQ 11 (improvement 24).
+  ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 'ms-MY', 11,
+   'Berapa saiz mesin basuh pinggan?',
+   'Mesin basuh pinggan saiz penuh selebar 60 cm, dan yang langsing 45 cm. Kedua-dua mesin VATTI bersaiz penuh: lebar 598 mm, tinggi 775 mm dan dalam 570 mm, dibuat untuk bukaan kabinet 600 x 780 x 580 mm. DWBB7 memuatkan 17 tetapan tempat dan DWID3 20, jadi ikut berapa ramai yang makan di rumah, kemudian semak ruangnya.');
 
 -- ── penapis air ────────────────────────────────────────────────────────────
 -- Guide 6 is retitled from "Filters are the running cost" and drops "budget
@@ -430,7 +434,7 @@ INSERT INTO category_faq (category_id, lang, position, question, answer_md) VALU
 INSERT INTO category_guide (category_id, lang, position, heading, body_md, figure, figure_unit) VALUES
   ((SELECT id FROM product_category WHERE slug = 'one-tap-purifier-in-malaysia'), 'ms-MY', 1,
    'Empat suhu dari satu paip',
-   'Sejuk untuk minum, suhu bilik, 45°C, dan 100°C untuk teh, kopi dan mi segera. Tetapan 45°C bukan sekadar anggaran "suam": itulah suhu untuk membancuh susu formula bayi, dan sebab itulah isi rumah yang mempunyai bayi membeli penapis seperti ini.',
+   '100°C untuk teh dan mi segera, 85°C untuk kopi, 45°C untuk minuman susu, dan air yang ditapis pada suhu bilik, iaitu label yang VATTI berikan kepada empat mod itu. Tiada tetapan air sejuk. Untuk susu formula bayi, gunakan suhu air yang tertera pada tin.',
    '45-100', '°C'),
   ((SELECT id FROM product_category WHERE slug = 'one-tap-purifier-in-malaysia'), 'ms-MY', 2,
    'Aliran yang cukup untuk mengisi periuk',
@@ -464,11 +468,11 @@ INSERT INTO category_reason (category_id, lang, position, title, body_md, figure
    '100', '°C', 'heat'),
   ((SELECT id FROM product_category WHERE slug = 'one-tap-purifier-in-malaysia'), 'ms-MY', 3,
    'Empat suhu, satu kelengkapan',
-   'Sejuk, suhu bilik, 45°C dan 100°C, dipilih di paip. Satu kelengkapan menggantikan dispenser, cerek dan jag di pintu peti sejuk.',
+   'Suhu bilik, 45°C, 85°C dan 100°C, dipilih di paip. Satu kelengkapan menggantikan dispenser dan cerek.',
    '4', 'mod', 'water'),
   ((SELECT id FROM product_category WHERE slug = 'one-tap-purifier-in-malaysia'), 'ms-MY', 4,
    'Keluli tahan karat di tempat air berada',
-   'Paip dan tangki kedua-duanya keluli tahan karat SUS 304, bukan plastik. Dalam sistem yang menyimpan air pada 100°C, itulah yang memastikan air tidak berasa apa-apa.',
+   'Paip dan tangki kedua-duanya keluli tahan karat SUS 304, bukan plastik. Dengan air yang mengalir pada suhu sehingga 100°C, itulah yang memastikan air tidak berasa apa-apa.',
    NULL, NULL, 'safety'),
   ((SELECT id FROM product_category WHERE slug = 'one-tap-purifier-in-malaysia'), 'ms-MY', 5,
    'Ia memberitahu bila penapis perlu ditukar',
@@ -482,7 +486,7 @@ INSERT INTO category_reason (category_id, lang, position, title, body_md, figure
 INSERT INTO category_faq (category_id, lang, position, question, answer_md) VALUES
   ((SELECT id FROM product_category WHERE slug = 'one-tap-purifier-in-malaysia'), 'ms-MY', 1,
    'Adakah penapis air satu paip lebih baik daripada dispenser air?',
-   'Untuk kebanyakan rumah, ya. Ia menapis dan mengeluarkan air pada empat suhu dari satu kelengkapan di sinki, tanpa botol untuk diisi semula, tanpa mengambil ruang lantai, dan tanpa menunggu air dipanaskan atau disejukkan.'),
+   'Untuk kebanyakan rumah, ya. Ia menapis dan mengeluarkan air pada empat suhu dari satu kelengkapan di sinki, tanpa botol untuk diisi semula, tanpa mengambil ruang lantai, dan tanpa menunggu air dipanaskan. Ia tiada tetapan air sejuk.'),
   ((SELECT id FROM product_category WHERE slug = 'one-tap-purifier-in-malaysia'), 'ms-MY', 2,
    'Adakah osmosis songsang menyingkirkan mineral?',
    'Sebahagiannya, ya. RO cukup teliti sehingga ia turut menyingkirkan mineral semula jadi bersama logam berat, klorin dan pepejal terlarut. Itu biasa bagi kaedah ini, dan air kekal selamat untuk diminum. Panduan kami tentang [apa itu air osmosis songsang](/tips-tricks/what-is-reverse-osmosis-water/) menerangkan kebaikan dan kelemahannya dengan lengkap.'),

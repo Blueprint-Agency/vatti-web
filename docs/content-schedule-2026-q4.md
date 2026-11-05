@@ -119,9 +119,9 @@ Not counted in the 15. Months are kept from the original plan.
 | 21 | Rework "How long to preheat oven" for intent and links | how long to preheat oven | Dec | Done 14 Sep | `refresh-articles-2026-09.sql` |
 | 22 | Backlink push: 30 Malaysian directory, dealer and PR placements | authority | Dec | Not started | off-repo work; record placements here when they land |
 | 23 | Recipe archive: prune, noindex or consolidate the 25 posts | housekeeping | Dec | Not started | 16 rows in `recipe` plus 23 recipe-titled articles, all published and indexable |
-| 24 | Dishwasher pillar: add size, for `dishwasher size` | dishwasher size (210, SD 22) | Dec | Not started | From N7, dropped 5 Nov. The pillar already sizes by place settings and gives the cabinet opening; add the 598 x 775 x 570 mm machine size from `product_dimension` and 45 cm against 60 cm in a sentence, and take `dishwasher size` into its head. No fitting copy |
-| 25 | Induction article: retarget one of the seven for `induction cooker malaysia` | induction cooker malaysia (590) | Dec | Not started | From N8, swapped 5 Nov. Pick the one with the most induction impressions in GSC; do not add an eighth |
-| 26 | Water purifier pillar and One Tap page: fact fixes | accuracy | Nov | Not started | Found writing N13, 5 Nov. The pillar's "Four temperatures" guide gives cold, ambient, 45°C and 100°C; the spec and VATTI's modes picture give room temperature, 45, 85 and 100°C, and there is no chilled setting. It says 45°C is the temperature baby formula is made at, a health claim the formula maker should make, not us. It says a tank goes in the cabinet; the V818WD heats instantly. The One Tap page's "What it costs to keep running" block prints RM189, RM499 and RM24 a month, against the 3 Oct no-prices rule. Needs the client's nod before changing a live product page |
+| 24 | Dishwasher pillar: add size, for `dishwasher size` | dishwasher size (210, SD 22) | Dec | Done 5 Nov | From N7, dropped 5 Nov. In all three editions (`category-content.sql`, `translation-{ms,zh}-categories.sql`): guide 1 retitled "Dishwasher size: go by the meal, not the kitchen" and given the 598 x 775 x 570 mm machine size and 45 cm against 60 cm; guide 5 now says both machines take the 600 x 780 x 580 mm opening; new FAQ 11, "What size is a dishwasher?". Figures are `product_dimension`. No fitting copy |
+| 25 | Induction article: retarget for `induction cooker malaysia` | induction cooker malaysia (590) | Dec | Done 5 Nov | From N8, swapped 5 Nov. `buying-guide/induction-cooker-vs-gas-stove`, the only page showing for the term (18.2, and 11.9 for `induction stove malaysia`; 8.1 across all induction queries), rewritten in place (`refresh-induction-2026-11.sql`, 517 to 1,240 words). Wok-led comparison with the magnet test, claypots, power cuts and the both-kitchens answer. The old cover and caption showed and linked a rival brand's hob, and the copy argued on purchase price; both gone, cover now the VH-IC9-LA. Re-check position from early December |
+| 26 | Water purifier pillar and One Tap page: fact fixes | accuracy | Nov | Done 5 Nov | Found writing N13. In all three editions of the pillar: the four temperatures are now room temperature, 45, 85 and 100°C with VATTI's labels (were cold, ambient, 45 and 100); "no chilled setting" said in the guide and FAQ 1; the 45°C baby-formula claim replaced by "use the temperature on the tin"; "holds water at 100°C" reworded; the English guide 6 retitled from "Filters are the running cost" as ms and zh already were. On the One Tap page the "What it costs to keep running" feature and the filter-price FAQ lose RM189, RM499 and RM24 a month (`product-features.sql`, `product-content.sql`). The tank mention stays: the spec sheet lists a SUS 304 water tank |
 
 Old #4 and #5 are N1 and N2. Old #8 to #13 are N3, N4, N6, N7, N8 and N3's Malay edition; N4 and N6 were replaced on 19 October. Old #16
 is N11.
@@ -129,6 +129,11 @@ is N11.
 ## Done outside the plan
 
 Work since the workbook was compiled that it did not ask for but which serves the same end:
+
+- The M822G's `power` facet corrected from 3.8 to 4.5 kW, 5 November. The importer takes the first kW
+  figure on a sheet, and the M822G's first is its infrared plate. The burner range on the hob pillar
+  (title, meta, intro and guide, three editions), in N5 (three editions) and on the M822G page now
+  reads 4.5 to 6 kW on the main burner, as the spec sheets give it.
 
 - Ten articles rewritten for the queries they already showed for, 14 September, including the
   ducted-or-ductless hood post that the workbook lists under "Defend".
@@ -152,7 +157,7 @@ New pieces, counted in URLs. Target 15 a month.
 
 N7 was dropped on 5 November and December's fifth slot is open.
 
-Improvements: 17 rows, 9 done, 1 partly done, 7 not started.
+Improvements: 17 rows, 12 done, 1 partly done, 4 not started.
 
 October's new pieces and improvements are all done.
 

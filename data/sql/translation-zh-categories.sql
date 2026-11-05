@@ -91,7 +91,7 @@ INSERT INTO product_category_i18n
    'one-tap-purifier-in-malaysia', '净水器',
    '单龙头净水器与即热饮水机',
    '净水器马来西亚 | VATTI 华帝 One Tap 冷热净水器',
-   '马来西亚 VATTI 华帝净水器：RO 反渗透膜加多级过滤，一个龙头就有冷水、常温、45°C 和 100°C 四种水温，主机装在水槽下方，台面不占位。',
+   '马来西亚 VATTI 华帝净水器：RO 反渗透膜加多级过滤，一个龙头就有常温、45°C、85°C 和 100°C 四种水温，主机装在水槽下方，台面不占位。',
    '按一下，就有安全干净的饮用水。VATTI 华帝单龙头净水系统结合 RO 反渗透膜过滤、多级净化与精准控温，日常使用方便省心。',
    '一台 VATTI 华帝 WDHG01 净水器和它的 V818WD 加热器放在大理石台面上，旁边水槽装着不锈钢 One Tap 龙头。');
 
@@ -192,8 +192,8 @@ INSERT INTO category_faq (category_id, lang, position, question, answer_md) VALU
 INSERT INTO category_guide (category_id, lang, position, heading, body_md, figure, figure_unit) VALUES
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 'zh-MY', 1,
    '从火力开始看',
-   '马来西亚的家常菜是猛火料理，炉火的额定功率决定炒锅能不能烧到够热。本页煤气炉的主火功率从 3.8 kW 到 6 kW。4.8 kW 以上，火力足以让整盘快炒保持镬气；低于这个数字，适合以煮汤、慢炖为主的家庭。我们的[马来西亚煤气炉推荐](/zh/buying-guide/best-gas-hob-malaysia/)为每种厨房各挑了一款。',
-   '3.8-6', 'kW'),
+   '马来西亚的家常菜是猛火料理，炉火的额定功率决定炒锅能不能烧到够热。本页煤气炉的主火功率从 4.5 kW 到 6 kW。4.8 kW 以上，火力足以让整盘快炒保持镬气；低于这个数字，适合以煮汤、慢炖为主的家庭。我们的[马来西亚煤气炉推荐](/zh/buying-guide/best-gas-hob-malaysia/)为每种厨房各挑了一款。',
+   '4.5-6', 'kW'),
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 'zh-MY', 2,
    '量开孔，不是量炉子',
    '煤气炉是要装进一个已经存在的开孔，所以台面开孔比任何规格都更能决定哪些型号装得下。两款 Flexi 煤气炉适用宽 650 至 710 mm、深 350 至 400 mm 的开孔，因此能直接放进原本为其他品牌切好的台面。',
@@ -365,8 +365,8 @@ INSERT INTO category_faq (category_id, lang, position, question, answer_md) VALU
 -- ═══════════════════════════════════════════════════════════════════════════
 INSERT INTO category_guide (category_id, lang, position, heading, body_md, figure, figure_unit) VALUES
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 'zh-MY', 1,
-   '按一餐的份量选，不是按厨房大小',
-   '一套餐具大约是一个人一餐所用的碗盘。两款 VATTI 华帝洗碗机都是大容量机型：DWBB7 可放 17 套，DWID3 可放 20 套外加一个蔬果篮。华帝把 DWID3 满载算作 130 件，其中包括十八个饭碗、九个面碗和 36 双筷子。这适合四人或以上的家庭，或常请客吃饭的人家，一天洗一次。一两个人的话，小型洗碗机更合适，而华帝没有生产小型机。',
+   '洗碗机尺寸：按一餐的份量选，不是按厨房大小',
+   '一套餐具大约是一个人一餐所用的碗盘。两款 VATTI 华帝洗碗机都是大容量机型：DWBB7 可放 17 套，DWID3 可放 20 套外加一个蔬果篮。华帝把 DWID3 满载算作 130 件，其中包括十八个饭碗、九个面碗和 36 双筷子。这适合四人或以上的家庭，或常请客吃饭的人家，一天洗一次。一两个人的话，小型洗碗机更合适，而华帝没有生产小型机。从外观看，两款都是 60 cm 宽的标准尺寸机型，598 x 775 x 570 mm。45 cm 的窄款放得进较窄的位置，但能放的餐具套数较少。',
    '17-20', '套餐具'),
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 'zh-MY', 2,
    '高温才能洗掉炒锅油',
@@ -382,7 +382,7 @@ INSERT INTO category_guide (category_id, lang, position, heading, body_md, figur
    NULL, NULL),
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 'zh-MY', 5,
    '嵌入式还是独立式',
-   '嵌入式洗碗机装进橱柜，外观最整齐，所以新建或装修厨房时就该规划进去。DWID3 是全嵌入式，宽 60 cm，适用 600 x 780 x 580 mm 的橱柜开孔，请先量好开孔再选择，而不是买了才量。独立式洗碗机则只要有水源、排水口和插座，放哪里都可以。',
+   '嵌入式洗碗机装进橱柜，外观最整齐，所以新建或装修厨房时就该规划进去。DWID3 是全嵌入式。两款都宽 60 cm，适用 600 x 780 x 580 mm 的橱柜开孔，请先量好开孔再选择，而不是买了才量。独立式洗碗机则只要有水源、排水口和插座，放哪里都可以。',
    NULL, NULL),
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 'zh-MY', 6,
    '装满再洗，刮掉残渣不必冲洗',
@@ -445,7 +445,11 @@ INSERT INTO category_faq (category_id, lang, position, question, answer_md) VALU
    '这两款可以，都有蔬果程序。DWID3 的蔬果程序以软水洗 26 分钟，并附有专用篮子，华帝测得可去除 95% 的农药残留。葡萄和莓果会以轻柔的翻滚方式清洗，而不是强力冲刷。'),
   ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 'zh-MY', 10,
    '洗碗机一般可以用多久？',
-   '十至十五年，视使用频率和滤网保养而定。我们的[洗碗机选购指南](/buying-guide/is-a-dishwasher-necessary/)介绍购买前该注意的事项。');
+   '十至十五年，视使用频率和滤网保养而定。我们的[洗碗机选购指南](/buying-guide/is-a-dishwasher-necessary/)介绍购买前该注意的事项。'),
+  -- Added 2026-11-05 with the English FAQ 11 (improvement 24).
+  ((SELECT id FROM product_category WHERE slug = 'dishwasher-in-malaysia'), 'zh-MY', 11,
+   '洗碗机尺寸一般多大？',
+   '标准尺寸的洗碗机宽 60 cm，窄款宽 45 cm。两款华帝洗碗机都是标准尺寸：宽 598 mm、高 775 mm、深 570 mm，适用 600 x 780 x 580 mm 的橱柜开孔。DWBB7 可放 17 套餐具，DWID3 可放 20 套，所以先看家里有几个人吃饭，再量空间。');
 
 -- ═══════════════════════════════════════════════════════════════════════════
 -- ONE TAP WATER PURIFIER
@@ -453,7 +457,7 @@ INSERT INTO category_faq (category_id, lang, position, question, answer_md) VALU
 INSERT INTO category_guide (category_id, lang, position, heading, body_md, figure, figure_unit) VALUES
   ((SELECT id FROM product_category WHERE slug = 'one-tap-purifier-in-malaysia'), 'zh-MY', 1,
    '一个龙头，四种水温',
-   '冷水直接喝，还有常温、45°C，以及泡茶、冲咖啡、泡面用的 100°C。45°C 不是随口说的“温水”：它正是冲泡婴儿奶粉的温度，也是家中有婴儿的家庭买它的原因。',
+   '泡茶、泡面用 100°C，冲咖啡用 85°C，冲奶用 45°C，还有常温的过滤水，这是 VATTI 为四种模式标示的用途。没有冰水档。冲婴儿配方奶粉，请按罐子上写的水温。',
    '45-100', '°C'),
   ((SELECT id FROM product_category WHERE slug = 'one-tap-purifier-in-malaysia'), 'zh-MY', 2,
    '水量够大，可以装满一锅',
@@ -487,11 +491,11 @@ INSERT INTO category_reason (category_id, lang, position, title, body_md, figure
    '100', '°C', 'heat'),
   ((SELECT id FROM product_category WHERE slug = 'one-tap-purifier-in-malaysia'), 'zh-MY', 3,
    '四种水温，一个龙头',
-   '冷水、常温、45°C 和 100°C，在龙头上选择。一个龙头就取代了饮水机、热水壶和冰箱门上的水壶。',
+   '常温、45°C、85°C 和 100°C，在龙头上选择。一个龙头就取代了饮水机和热水壶。',
    '4', '种模式', 'water'),
   ((SELECT id FROM product_category WHERE slug = 'one-tap-purifier-in-malaysia'), 'zh-MY', 4,
    '接触水的地方都是不锈钢',
-   '龙头和水箱都采用 SUS 304 不锈钢，而不是塑料。在一个把水保持在 100°C 的系统里，这正是让水喝起来没有任何怪味的原因。',
+   '龙头和水箱都采用 SUS 304 不锈钢，而不是塑料。水以最高 100°C 流过，这正是让水喝起来没有任何怪味的原因。',
    NULL, NULL, 'safety'),
   ((SELECT id FROM product_category WHERE slug = 'one-tap-purifier-in-malaysia'), 'zh-MY', 5,
    '滤芯到期会提醒您',
@@ -505,7 +509,7 @@ INSERT INTO category_reason (category_id, lang, position, title, body_md, figure
 INSERT INTO category_faq (category_id, lang, position, question, answer_md) VALUES
   ((SELECT id FROM product_category WHERE slug = 'one-tap-purifier-in-malaysia'), 'zh-MY', 1,
    '单龙头净水器比饮水机好吗？',
-   '对大多数家庭来说，是的。它在水槽边的一个龙头上完成过滤和四种水温出水，不用换水桶，不占地面空间，也不用等水加热或冷却。'),
+   '对大多数家庭来说，是的。它在水槽边的一个龙头上完成过滤和四种水温出水，不用换水桶，不占地面空间，也不用等水加热。它没有冰水档。'),
   ((SELECT id FROM product_category WHERE slug = 'one-tap-purifier-in-malaysia'), 'zh-MY', 2,
    'RO 反渗透会去除矿物质吗？',
    '会去除一部分。RO 过滤非常彻底，会把天然矿物质连同重金属、氯和溶解性固体一起去除。这是这种方式的正常现象，水依然完全可以安全饮用。我们的[什么是 RO 反渗透水](/tips-tricks/what-is-reverse-osmosis-water/)指南详细说明其中的取舍。'),

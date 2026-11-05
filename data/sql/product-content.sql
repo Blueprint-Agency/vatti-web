@@ -1035,7 +1035,7 @@ SELECT id, 8, 'How much is the DWBB7 and where can I buy it?',
 -- names all three.
 
 UPDATE product SET intro_md =
-  'Two boxes under the sink and one tap above it: the WDHG01 filters through four stages to a 0.0001 micron RO membrane, and the V818WD heats on demand, so hot water arrives in three seconds and a glass fills in six. Four temperatures on the tap, 100°C for tea down to room temperature. You change the filters yourself, RM189 a year and RM499 every second year.'
+  'Two boxes under the sink and one tap above it: the WDHG01 filters through four stages to a 0.0001 micron RO membrane, and the V818WD heats on demand, so hot water arrives in three seconds and a glass fills in six. Four temperatures on the tap, 100°C for tea down to room temperature. You change the filters yourself, and the display tells you when.'
   WHERE slug = 'vatti-one-tap-water-purifier-wdhg01-with-v818wd';
 
 INSERT INTO product_dimension (product_id, position, section, label, value, note, metric, min_mm, max_mm)
@@ -1079,8 +1079,8 @@ SELECT id, 5, 'What temperatures does the tap give?',
   'Four: 100°C for brewing tea, 85°C for coffee, 45°C for making milk, and room temperature. They are picked with one touch on the display in the tap itself.'
   FROM product WHERE slug = 'vatti-one-tap-water-purifier-wdhg01-with-v818wd';
 INSERT INTO product_faq (product_id, position, question, answer_md)
-SELECT id, 6, 'What do the replacement filters cost, and can I change them myself?',
-  'The four-layer carbon filter is RM189 and lasts about 12 months; the RO membrane is RM499 and lasts about 24 months. Both are designed to be changed without a technician: lift the top cover, turn the cap handle to unlock, pull the old filter up and drop the new one in.'
+SELECT id, 6, 'Can I change the filters myself?',
+  'Yes. There are two, the four-layer carbon filter and the RO membrane, and the display reminds you when each is due. Both are designed to be changed without a technician: lift the top cover, turn the cap handle to unlock, pull the old filter up and drop the new one in.'
   FROM product WHERE slug = 'vatti-one-tap-water-purifier-wdhg01-with-v818wd';
 INSERT INTO product_faq (product_id, position, question, answer_md)
 SELECT id, 7, 'What warranty does it carry?',
@@ -1571,7 +1571,7 @@ UPDATE product SET intro_md =
 INSERT INTO product_dimension (product_id, position, section, label, value, note)
 SELECT id, 1, 'product', 'Burners', 'Two', 'partitioned, left and right' FROM product WHERE slug = 'vatti-oylimpic-hob-m822g';
 INSERT INTO product_dimension (product_id, position, section, label, value, note)
-SELECT id, 2, 'product', 'Power', '3.8 kW', '3.5 kW through the micro-flame plate' FROM product WHERE slug = 'vatti-oylimpic-hob-m822g';
+SELECT id, 2, 'product', 'Power', '4.5 kW and 3.8 kW', 'the open burner on the right and the infrared plate on the left, as the spec sheet gives them' FROM product WHERE slug = 'vatti-oylimpic-hob-m822g';
 INSERT INTO product_dimension (product_id, position, section, label, value, note)
 SELECT id, 3, 'product', 'Plate', '13.6 degree angle', 'nearly 10,000 precision fire holes' FROM product WHERE slug = 'vatti-oylimpic-hob-m822g';
 INSERT INTO product_dimension (product_id, position, section, label, value, note)

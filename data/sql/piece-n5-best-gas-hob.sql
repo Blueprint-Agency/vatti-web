@@ -45,7 +45,7 @@ Read three things first: **burner power** (kW), **thermal efficiency** (%) and t
 
 Malaysian cooking asks a lot of a hob. A wok needs a strong, concentrated flame to stir-fry properly, a curry or bak kut teh needs a low flame that holds steady for an hour, and both often happen on the same evening. Five things decide whether a hob keeps up.
 
-**Burner power (kW).** How much heat the burner puts out at full flame. The VATTI gas range runs from 3.8 kW to 6.0 kW. For wok hei, look for 4.5 kW or more on the main burner.
+**Burner power (kW).** How much heat the burner puts out at full flame. The VATTI gas range runs from 4.5 kW to 6.0 kW on the main burner. For heavy daily wok frying, the higher the better.
 
 **Thermal efficiency (%).** How much of the gas''s heat goes into the pan rather than the air around it. A more efficient burner heats the wok faster at the same flame. VATTI publishes 73% on the C836G, 65% on the C821G and C861G, and 63% on the C822G and C823G.
 
@@ -112,7 +112,7 @@ A new hob has to fit the opening the old one leaves in the countertop. The Flexi
 | C823G | 2 | 4.8 | 63% | Tempered glass | Everyday cooking, flexible cut-out |
 | C861G | 2 | 4.8 | 65% | Tempered glass | Easy cleaning, touch control |
 | C835G | 2 | 4.5 | Not published | Tempered glass | Safety, eight flame steps |
-| M822G | 2 | 3.8 | Not published | Tempered glass | Infrared plate burner |
+| M822G | 2 | 4.5, plus 3.8 infrared | Not published | Tempered glass | Infrared plate burner |
 
 ## Pair it with the right hood
 
