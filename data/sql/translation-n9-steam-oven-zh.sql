@@ -73,6 +73,8 @@ VALUES (126, 'what-is-a-steam-oven', 'buying-guide/what-is-a-steam-oven', 'buyin
 
 蒸出来的蔬菜颜色鲜、口感脆。翻热剩菜时，蒸汽能让米饭、面和包子恢复原样，不会像微波炉那样边缘变硬，只是时间长一些。要快速翻热，[嵌入式微波炉](/built-in-microwave-m626/)还是更快。
 
+[![VATTI 华帝 M626 嵌入式微波炉](https://cdn.vattimalaysia.com/2026/08/built-in-microwave-m626-front.webp)](/built-in-microwave-m626/)
+
 ![VA06 低、中、高三档湿度蒸出的芦笋并排比较。](https://cdn.vattimalaysia.com/2026/08/va06-humidity.webp)
 
 ## 为什么用蒸箱蒸，而不是炒锅
@@ -112,6 +114,9 @@ VALUES (126, 'what-is-a-steam-oven', 'buying-guide/what-is-a-steam-oven', 'buyin
 | 自动清洁 | 蒸汽清洁和高温烘干 | 蒸汽清洁和高温烘干 |
 
 常烤肉的选 **VA05**：它有肉类探针，烹饪功能也多一种。常蒸常炖的选 **VA06**：它多了粥、肉、汤三种炖煮模式，还有两种空气炸模式。两款都在[蒸烤箱页面](/zh/combi-and-steam-oven-in-malaysia/)。
+
+[![VATTI 华帝 VA05 蒸烤箱](https://cdn.vattimalaysia.com/2026/08/built-in-combi-oven-va05-front.webp)](/built-in-combi-oven-va05/)
+[![VATTI 华帝 VA06 蒸烤箱](https://cdn.vattimalaysia.com/2026/08/vatti-magic-series-combi-oven-va06-front.webp)](/vatti-magic-series-combi-oven-va06/)
 
 ## 蒸箱常见问题
 

@@ -3,6 +3,8 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { ArrowRight } from "@phosphor-icons/react/dist/ssr/ArrowRight";
 import { WhatsappLogo } from "@phosphor-icons/react/dist/ssr/WhatsappLogo";
+import { Plus } from "@phosphor-icons/react/dist/ssr/Plus";
+import type { ProductCard } from "@/lib/queries/product";
 
 /**
  * A renderer for the markdown our own importer writes, not a markdown library.
@@ -30,17 +32,49 @@ export function Markdown({
   md,
   sizes = {},
   callouts,
+  article = false,
 }: {
   md: string;
   sizes?: ImageSizes;
   callouts?: Callouts;
+  /**
+   * The article reading surface: section ids and rules for the contents list,
+   * the summary panel, term rows, FAQ disclosures and the product panel. Off
+   * for product pages and ProductFeatures, which own their own layout.
+   */
+  article?: boolean;
 }) {
   const lines = md.split("\n");
   const out: ReactNode[] = [];
+  let h2s = 0;
+  let inFaq = false;
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i].trim();
     if (!line) continue;
+
+    if (article) {
+      // "### Quick answer" (or Ringkasan, 简短回答…) followed by a list, before
+      // the first section: the article's answer in one look. It becomes the
+      // summary panel, with each bold lead set as the row's term.
+      const h3 = /^### +(.*)$/.exec(line);
+      const next = nextLine(lines, i);
+      if (h3 && h2s === 0 && next >= 0 && ITEM.exec(lines[next].trim())) {
+        const { items, last } = listAt(lines, next);
+        out.push(
+          // Set like the head of a spec sheet rather than boxed as a callout: a
+          // small heading over a heavy rule, then the answers ruled beneath it.
+          <section key={i} className="my-10">
+            <h3 className="text-sm font-medium text-paper-muted">{inline(h3[1])}</h3>
+            <div className="mt-2 border-t-2 border-paper-ink">
+              <TermRows items={items} compact />
+            </div>
+          </section>
+        );
+        i = last;
+        continue;
+      }
+    }
 
     // A link standing alone on its line is a pointer, not prose: "Explore
     // VATTI Kitchen Hood" closing an article, "Enquire With Us" under a Quick
@@ -59,6 +93,24 @@ export function Markdown({
     if (heading) {
       const level = heading[1].length;
       const Tag = `h${level}` as "h2" | "h3" | "h4";
+      if (article && level === 2) {
+        // Each section after the first opens on a rule, so the page reads as
+        // sections rather than one column; the id is what the contents list
+        // links to (see `outline`). Numbered by order, not slugged: a Chinese
+        // heading slugs to nothing.
+        h2s++;
+        inFaq = FAQ_HEADING.test(heading[2]);
+        out.push(
+          <h2
+            key={i}
+            id={`section-${h2s}`}
+            className={`${HEADING[2]} scroll-mt-24 ${h2s > 1 ? "border-t border-paper-line pt-10 !mt-14" : ""}`}
+          >
+            {inline(heading[2])}
+          </h2>
+        );
+        continue;
+      }
       out.push(
         <Tag key={i} className={HEADING[level]}>
           {inline(heading[2])}
@@ -80,6 +132,12 @@ export function Markdown({
         const m = PRODUCT_SHOT.exec(lines[j].trim());
         if (!m) break;
         shots.push(m);
+      }
+      const cards = callouts?.products;
+      if (article && cards && shots.every(([, , , href]) => cards[slugOf(href)])) {
+        out.push(<ProductPanel key={i} shots={shots} callouts={callouts!} />);
+        i = j - 1;
+        continue;
       }
       out.push(
         <div
@@ -138,7 +196,7 @@ export function Markdown({
     }
 
     if (line.startsWith("|")) {
-      const parsed = table(lines, i);
+      const parsed = table(lines, i, article);
       out.push(
         <div key={i} className="rail my-8 overflow-x-auto pb-2">
           {parsed.node}
@@ -149,6 +207,17 @@ export function Markdown({
     }
 
     const list = ITEM.exec(line);
+    if (article && list && !/^\d/.test(list[1])) {
+      // A bullet list whose every item opens on a bold term ("**Flow.** A slow
+      // tap…") is a set of definitions, and reads faster as term and text side
+      // by side than as a column of dots.
+      const { items, last } = listAt(lines, i);
+      if (items.length >= 2 && items.every((t) => LEAD.test(t))) {
+        out.push(<TermRows key={i} items={items} />);
+        i = last;
+        continue;
+      }
+    }
     if (list) {
       const ordered = /^\d/.test(list[1]);
       const items: string[] = [];
@@ -195,6 +264,30 @@ export function Markdown({
       if (!s || STRUCTURAL.test(s)) break;
       buf.push(s);
     }
+    // Under an FAQ heading, "**Question?**" with its answer on the next line is
+    // a question and answer. It becomes a native disclosure: scannable as a list
+    // of questions, no script, and the answer stays in the HTML for search.
+    const faq = article && inFaq ? FAQ_ITEM.exec(buf.join(" ")) : null;
+    if (faq) {
+      out.push(
+        <details
+          key={i}
+          className="group border-b border-paper-line [:not(details)+&]:mt-6 [:not(details)+&]:border-t"
+        >
+          <summary className="flex cursor-pointer list-none items-start justify-between gap-4 py-4 font-semibold leading-snug transition-colors hover:text-teal [&::-webkit-details-marker]:hidden">
+            <span>{inline(faq[1])}</span>
+            <Plus
+              size={18}
+              aria-hidden="true"
+              className="mt-0.5 shrink-0 text-teal transition-transform duration-200 group-open:rotate-45 motion-reduce:transition-none"
+            />
+          </summary>
+          <p className="pb-5 pr-8 leading-[var(--leading-prose)] text-paper-ink/90">{inline(faq[2])}</p>
+        </details>
+      );
+      i = j - 1;
+      continue;
+    }
     // Leading is a token, not a literal: DESIGN.md § Typography gives
     // light-on-dark +0.05 over the light-mode equivalent, and the reading
     // surface is now whichever ground the visitor chose.
@@ -230,6 +323,177 @@ const HEADING: Record<number, string> = {
 };
 
 const ITEM = /^([-*+]|\d+[.)]) +(.*)$/;
+/** A list item that opens on a bold term: "**Wet kitchen:** the most…", "**它是什么：**把…". */
+const LEAD = /^\*\*([^*]+?)[:.：。]?\*\*[:.：。]?\s*(.*)$/;
+/** The FAQ section's heading in any edition: "Steam oven FAQs", "Soalan lazim…", "…常见问题". */
+const FAQ_HEADING = /\bFAQs?\b|soalan lazim|常见问题/i;
+/** "**Question?** Answer", the shape every FAQ in the hand-written guides takes. */
+const FAQ_ITEM = /^\*\*([^*]+[?？])\*\*\s+(.+)$/;
+
+/** The index of the next non-blank line after `i`, or -1. */
+function nextLine(lines: string[], i: number): number {
+  for (let j = i + 1; j < lines.length; j++) if (lines[j].trim()) return j;
+  return -1;
+}
+
+/** The bullet items from `start` on, blank lines allowed between, as the list block reads them. */
+function listAt(lines: string[], start: number): { items: string[]; last: number } {
+  const items: string[] = [];
+  let last = start;
+  for (let j = start; j < lines.length; j++) {
+    const s = lines[j].trim();
+    if (!s) continue;
+    const m = ITEM.exec(s);
+    if (!m || /^\d/.test(m[1])) break;
+    items.push(m[2]);
+    last = j;
+  }
+  return { items, last };
+}
+
+const slugOf = (href: string) => href.replace(/^\/|\/$/g, "");
+
+/**
+ * The article's sections, in the order Markdown numbers them, for the contents
+ * list beside the body. Inline markup is stripped to its words.
+ */
+export function outline(md: string): string[] {
+  return md
+    .split("\n")
+    .map((l) => /^## +(.*)$/.exec(l.trim()))
+    .filter((m): m is RegExpExecArray => m !== null)
+    .map((m) => m[1].replace(/\[([^\]]*)\]\([^)]*\)/g, "$1").replace(/\*\*?/g, "").trim());
+}
+
+/**
+ * Term beside text, one row per item, ruled between. Used for the summary panel
+ * (compact) and for any bullet list that is really a set of definitions. Items
+ * without a bold lead still render, as a full-width row.
+ */
+function TermRows({ items, compact = false }: { items: string[]; compact?: boolean }) {
+  return (
+    <dl className={compact ? "" : "my-7"}>
+      {items.map((item, k) => {
+        const m = LEAD.exec(item);
+        return (
+          <div
+            key={k}
+            className={`grid gap-x-8 gap-y-1 border-paper-line sm:grid-cols-[minmax(9rem,14rem)_1fr] ${
+              compact ? "py-4" : "py-3"
+            } ${k > 0 || !compact ? "border-t" : ""}`}
+          >
+            {m ? (
+              <>
+                <dt
+                  className={`font-semibold leading-snug text-paper-ink ${
+                    compact ? "text-[1.125rem] tracking-[-0.02em]" : ""
+                  }`}
+                >
+                  {inline(m[1])}
+                </dt>
+                <dd className="leading-relaxed text-paper-ink/90 first-letter:uppercase">{inline(m[2])}</dd>
+              </>
+            ) : (
+              <dd className="leading-relaxed sm:col-span-2">{inline(item)}</dd>
+            )}
+          </div>
+        );
+      })}
+    </dl>
+  );
+}
+
+/**
+ * The models a passage names, as a slice of the product world set into the
+ * reading surface: a teal-tinted panel (built from tokens, so it holds its
+ * contrast on both grounds), each model on a white well the way its studio
+ * shot was taken, with its best-for line and its first three measured facets
+ * in the readout face. This is the one loud element an article has.
+ */
+function ProductPanel({ shots, callouts }: { shots: RegExpExecArray[]; callouts: Callouts }) {
+  const n = shots.length;
+  const single = n === 1;
+  // Columns follow the count so no model is left alone on a row: pairs and
+  // fours go two across, threes (and anything larger) three across. Three
+  // across is narrow, so those cards carry two facets rather than three.
+  const threeUp = n === 3 || n >= 5;
+  const facetCount = threeUp ? 2 : 3;
+  return (
+    <div className="my-10 rounded-sm border border-teal/40 bg-[color-mix(in_oklch,var(--color-teal)_11%,var(--color-paper))] p-4 sm:p-5">
+      <ul
+        className={
+          single
+            ? "grid"
+            : `grid gap-5 sm:gap-x-5 sm:gap-y-8 ${threeUp ? "sm:grid-cols-3" : "sm:grid-cols-2"}`
+        }
+      >
+        {shots.map(([, alt, src, href]) => {
+          const p = callouts.products![slugOf(href)];
+          const model = p.secondary_model ? `${p.model_code} + ${p.secondary_model}` : p.model_code;
+          return (
+            <li key={src}>
+              <Link
+                href={href}
+                className={`group flex h-full gap-4 ${single ? "flex-col sm:flex-row sm:items-center sm:gap-6" : "sm:flex-col"}`}
+              >
+                <div
+                  className={`relative shrink-0 overflow-hidden rounded-sm bg-white ${
+                    single ? "h-40 sm:h-36 sm:w-52" : "size-28 sm:h-36 sm:w-auto"
+                  }`}
+                >
+                  <Image
+                    src={src}
+                    alt={alt}
+                    fill
+                    loading="lazy"
+                    sizes="(max-width: 640px) 90vw, 240px"
+                    className="object-contain p-3 transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover:scale-[1.04] motion-reduce:transition-none"
+                  />
+                </div>
+                <div className="flex min-w-0 flex-1 flex-col">
+                  <p className="readout text-xs text-teal">{model}</p>
+                  <p className="mt-1 pb-3.5 font-semibold leading-snug text-paper-ink transition-colors group-hover:text-teal">
+                    {p.name}
+                  </p>
+                  {p.best_for && (
+                    <p className="-mt-2 pb-3.5 text-sm leading-snug text-paper-muted">
+                      {callouts.labels.bestFor}: {p.best_for}
+                    </p>
+                  )}
+                  {p.facets.length > 0 && (
+                    <dl className="mt-auto flex flex-wrap gap-x-5 gap-y-2 border-t border-paper-line pt-3">
+                      {p.facets.slice(0, facetCount).map((f) => (
+                        <div key={f.facet}>
+                          <dt className="text-[0.625rem] uppercase tracking-[0.12em] text-paper-muted">
+                            {callouts.labels.facet(f.label)}
+                          </dt>
+                          <dd className="readout text-sm text-paper-ink">
+                            {Number.isInteger(f.value) ? f.value.toLocaleString(callouts.labels.tag) : f.value}
+                            {f.unit && (
+                              <span className="text-paper-muted">{f.unit === "%" ? "%" : ` ${f.unit}`}</span>
+                            )}
+                          </dd>
+                        </div>
+                      ))}
+                    </dl>
+                  )}
+                  <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-teal">
+                    {callouts.labels.viewProduct(p.model_code)}
+                    <ArrowRight
+                      size={16}
+                      aria-hidden="true"
+                      className="transition-transform group-hover:translate-x-0.5 motion-reduce:transition-none"
+                    />
+                  </span>
+                </div>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+}
 const STANDALONE = /^(?:👉\s*|\*\*RELATED:\*\*\s*)?\[([^\]]+)\]\(([^)\s]+)\)$/;
 const STRUCTURAL = /^(#{2,4} |[-*+] |\d+[.)] |!\[|\[!\[|\||👉\s*\[|\*\*RELATED:\*\*)/;
 const PRODUCT_SHOT = /^\[!\[([^\]]*)\]\(([^)\s]+)\)\]\((\/[^)\s]*)\)$/;
@@ -255,12 +519,20 @@ export type Callouts = {
   articles: Record<string, CalloutArticle>;
   /** Category and product display names by slug. */
   pages: Record<string, string>;
+  /** The models the article links to as product shots, for the product panel. */
+  products?: Record<string, ProductCard>;
   /** The page's own words for the card and button chrome (src/i18n). */
   labels: {
     related: string;
     minRead: string;
     readTheGuide: string;
     explore: (name: string) => string;
+    viewProduct: (model: string) => string;
+    bestFor: string;
+    /** A facet label as stored (English) in the page's language. */
+    facet: (label: string) => string;
+    /** BCP 47 tag for number formatting. */
+    tag: string;
   };
 };
 
@@ -453,7 +725,7 @@ const LINK =
  * serves — the scrape in research/articles.json had flattened them into loose
  * cells with the row boundaries gone. No cell contains a `|`.
  */
-function table(lines: string[], start: number): { node: ReactNode; end: number } {
+function table(lines: string[], start: number, article = false): { node: ReactNode; end: number } {
   const rows: string[][] = [];
   let end = start;
   for (let i = start; i < lines.length; i++) {
@@ -464,6 +736,45 @@ function table(lines: string[], start: number): { node: ReactNode; end: number }
   }
   // Row 1 is the alignment row. It is required by the format and renders nothing.
   const body = rows.slice(2);
+
+  if (article) {
+    // In an article the table is usually the comparison the reader came for,
+    // so it gets a ground of its own: a tinted header band, the first column
+    // set as the row's name, and rows ruled rather than boxed.
+    return {
+      node: (
+        <table className="w-full min-w-[34rem] border-collapse overflow-hidden rounded-sm border border-paper-line text-left text-[0.9375rem]">
+          <thead className="bg-paper-surface">
+            <tr>
+              {rows[0].map((c, i) => (
+                <th key={i} scope="col" className="px-4 py-3 align-bottom font-semibold">
+                  {inline(c)}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {body.map((row, r) => (
+              <tr key={r} className="border-t border-paper-line align-top">
+                {row.map((c, i) =>
+                  i === 0 ? (
+                    <th key={i} scope="row" className="px-4 py-3 font-semibold leading-snug">
+                      {inline(c)}
+                    </th>
+                  ) : (
+                    <td key={i} className="px-4 py-3 leading-relaxed text-paper-ink/90">
+                      {inline(c)}
+                    </td>
+                  )
+                )}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      ),
+      end,
+    };
+  }
 
   return {
     node: (

@@ -3,12 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { CaretDown } from "@phosphor-icons/react/dist/ssr/CaretDown";
+
 import { CtaBar } from "@/components/CtaBar";
 import { SiteHeader, type Editions } from "@/components/SiteHeader";
-import { OG_LOCALE, localeFromTag, t as dict, type Dict, type Locale } from "@/i18n";
+import { OG_LOCALE, TAG, localeFromTag, t as dict, type Dict, type Locale } from "@/i18n";
 import { hreflang } from "@/lib/alternates";
 import { SITE_ORIGIN } from "@/lib/deployment";
-import { Markdown } from "@/lib/markdown";
+import { Markdown, outline } from "@/lib/markdown";
 import {
   articleCallouts,
   articleEditions,
@@ -22,7 +24,7 @@ import {
   type ArticleCard,
 } from "@/lib/queries/article";
 import { categoryNames } from "@/lib/queries/category";
-import { productNames } from "@/lib/queries/product";
+import { getProductCards, productNames } from "@/lib/queries/product";
 import { getRecipes, type Recipe } from "@/lib/queries/recipe";
 import { archiveHref, homeHref } from "@/lib/routes";
 import { formatDate } from "@/lib/site";
@@ -115,13 +117,27 @@ export function ArticlePage({
   const callouts = {
     articles: articleCallouts(),
     pages: { ...categoryNames(), ...productNames() },
+    // Every model the body shows as a product shot, for the product panel.
+    products: getProductCards(
+      [...body.matchAll(/\[!\[[^\]]*\]\([^)\s]+\)\]\((\/[^)\s]*)\)/g)].map((m) =>
+        m[1].replace(/^\/|\/$/g, "")
+      ),
+      article.lang
+    ),
     labels: {
       related: d.article.related,
       minRead: d.article.minRead,
       readTheGuide: d.article.readTheGuide,
       explore: d.article.explore,
+      viewProduct: d.article.viewProduct,
+      bestFor: d.article.bestFor,
+      facet: (label: string) => (d.facets as Record<string, string>)[label] ?? label,
+      tag: TAG[locale],
     },
   };
+  // The contents list: only worth the space on a page with three sections or more.
+  const sections = outline(body);
+  const contents = sections.length >= 3 ? sections : [];
 
   return (
     <>
@@ -130,7 +146,14 @@ export function ArticlePage({
       {/* The reading surface. Product and category run on the dark chassis; 900
           words of grease-filter maintenance do not. See DESIGN.md § Direction. */}
       <main id="main" className="bg-paper text-paper-ink">
-        <article lang={article.lang} className="mx-auto max-w-3xl px-5 py-10 sm:px-8 sm:py-16">
+        <div
+          className={`mx-auto px-5 py-10 sm:px-8 sm:py-16 ${
+            contents.length
+              ? "max-w-6xl lg:grid lg:grid-cols-[minmax(0,46rem)_14rem] lg:justify-between lg:gap-12"
+              : "max-w-3xl"
+          }`}
+        >
+        <article lang={article.lang} className="min-w-0">
           <nav aria-label="Breadcrumb" className="text-sm">
             <ol className="flex flex-wrap items-center gap-2 text-paper-muted">
               <li>
@@ -190,14 +213,40 @@ export function ArticlePage({
 
           {recipes.length > 0 && <RecipeSummary recipes={recipes} labels={d.article.recipe} />}
 
+          {contents.length > 0 && (
+            <details className="group mt-6 rounded-sm border border-paper-line lg:hidden">
+              <summary className="flex cursor-pointer list-none items-center justify-between px-4 py-3 text-sm font-semibold [&::-webkit-details-marker]:hidden">
+                {t.onThisPage}
+                <CaretDown
+                  size={16}
+                  aria-hidden="true"
+                  className="text-teal transition-transform group-open:rotate-180 motion-reduce:transition-none"
+                />
+              </summary>
+              <Contents sections={contents} className="border-t border-paper-line px-4 py-3" />
+            </details>
+          )}
+
           <div className="mt-6 text-[1.0625rem]">
-            <Markdown md={body} sizes={sizes} callouts={callouts} />
+            <Markdown md={body} sizes={sizes} callouts={callouts} article />
           </div>
 
           {recipes.map((recipe) => (
             <RecipeCard key={recipe.id} recipe={recipe} labels={d.article.recipe} />
           ))}
         </article>
+
+        {contents.length > 0 && (
+          <aside lang={article.lang} className="hidden lg:block">
+            <nav aria-labelledby="contents-heading" className="sticky top-24">
+              <p id="contents-heading" className="text-sm font-semibold">
+                {t.onThisPage}
+              </p>
+              <Contents sections={contents} className="mt-3 border-l border-paper-line" rail />
+            </nav>
+          </aside>
+        )}
+        </div>
 
         {more.length > 0 && (
           <section
@@ -265,7 +314,40 @@ function labels(d: Dict, section: string) {
     more: d.article.more,
     seeAll: d.article.seeAll,
     cta: d.cta.help,
+    onThisPage: d.article.onThisPage,
   };
+}
+
+/**
+ * The article's sections as links to their headings (`section-N`, numbered by
+ * Markdown in the same order). On desktop it is a rail beside the body; on a
+ * phone it sits folded under the hero.
+ */
+function Contents({
+  sections,
+  className = "",
+  rail = false,
+}: {
+  sections: string[];
+  className?: string;
+  rail?: boolean;
+}) {
+  return (
+    <ol className={`flex flex-col text-sm ${className}`}>
+      {sections.map((s, i) => (
+        <li key={i}>
+          <a
+            href={`#section-${i + 1}`}
+            className={`block py-1.5 leading-snug text-paper-muted transition-colors hover:text-paper-ink ${
+              rail ? "-ml-px border-l-2 border-transparent pl-4 hover:border-teal" : ""
+            }`}
+          >
+            {s}
+          </a>
+        </li>
+      ))}
+    </ol>
+  );
 }
 
 const SITE = SITE_ORIGIN;

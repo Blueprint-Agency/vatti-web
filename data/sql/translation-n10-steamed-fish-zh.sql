@@ -38,6 +38,9 @@ VALUES (132, 'steamed-fish-recipe', 'recipe/steamed-fish-recipe', 'recipe',
 
 两款 VATTI 华帝蒸烤箱都能蒸：[VA05](/built-in-combi-oven-va05/) 有低、中、高三种蒸汽模式，[VA06](/vatti-magic-series-combi-oven-va06/) 有三种蒸汽模式和 1.3 L 水箱。蒸鱼用最高档。我们的[蒸烤箱有必要买吗](/zh/buying-guide/what-is-a-steam-oven/)指南说明它怎么运作、还能做什么。
 
+[![VATTI 华帝 VA05 蒸烤箱](https://cdn.vattimalaysia.com/2026/08/built-in-combi-oven-va05-front.webp)](/built-in-combi-oven-va05/)
+[![VATTI 华帝 VA06 蒸烤箱](https://cdn.vattimalaysia.com/2026/08/vatti-magic-series-combi-oven-va06-front.webp)](/vatti-magic-series-combi-oven-va06/)
+
 ## 港式清蒸鱼
 
 港式做法重在鱼本身：蒸的时间短，倒掉蒸出来的水，再铺上新鲜姜丝和葱丝，淋热油和清淡的豉油汁。材料和步骤在下面第一张食谱卡里。

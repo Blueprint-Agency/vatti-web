@@ -73,6 +73,9 @@ export const zh: Dict = {
     related: "相关文章",
     readTheGuide: "阅读指南",
     explore: (name: string) => `了解 VATTI ${name}`,
+    onThisPage: "本页内容",
+    viewProduct: (model: string) => `查看 ${model}`,
+    bestFor: "适合",
     recipe: {
       prep: "准备",
       cook: "烹煮",

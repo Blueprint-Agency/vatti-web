@@ -40,6 +40,9 @@ Di atas dapur, ikan dikukus di atas air mendidih dengan tudung tertutup. Haba da
 
 Kedua-dua ketuhar kombi VATTI boleh mengukus: [VA05](/built-in-combi-oven-va05/) ada mod stim rendah, sederhana dan tinggi, dan [VA06](/vatti-magic-series-combi-oven-va06/) ada tiga mod mengukus dan tangki air 1.3 L. Gunakan tetapan paling tinggi untuk ikan. Panduan kami tentang [apa itu ketuhar stim](/ms/panduan-membeli/apa-itu-ketuhar-stim/) menerangkan cara ia berfungsi dan apa lagi yang boleh dimasak.
 
+[![Ketuhar kombi VATTI VA05](https://cdn.vattimalaysia.com/2026/08/built-in-combi-oven-va05-front.webp)](/built-in-combi-oven-va05/)
+[![Ketuhar kombi VATTI VA06](https://cdn.vattimalaysia.com/2026/08/vatti-magic-series-combi-oven-va06-front.webp)](/vatti-magic-series-combi-oven-va06/)
+
 ## Ikan stim limau
 
 Ikan stim limau masam dan pedas: ikan dikukus bersama serai dan halia, kemudian disiram kuah panas air limau nipis, bawang putih, cili padi dan sos ikan. Ia hampir sama dengan ikan stim limau gaya Thai, dan caranya sama. Bahan dan langkahnya ada dalam kad resepi pertama di bawah.

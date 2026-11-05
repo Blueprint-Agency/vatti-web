@@ -72,6 +72,8 @@ Kedua-dua ketuhar kombi VATTI ada fungsi stim nasi. Pulut untuk lo mai gai, dan 
 
 Sayur yang dikukus kekal berwarna dan rangup. Untuk lauk semalam, wap mengembalikan nasi, mi dan pau tanpa tepi yang keras seperti selepas ketuhar gelombang mikro, walaupun ia mengambil masa lebih lama. [Ketuhar gelombang mikro terbina dalam](/built-in-microwave-m626/) masih pilihan yang lebih cepat untuk memanaskan sekejap.
 
+[![Ketuhar gelombang mikro terbina dalam VATTI M626](https://cdn.vattimalaysia.com/2026/08/built-in-microwave-m626-front.webp)](/built-in-microwave-m626/)
+
 ![Asparagus dikukus pada tahap kelembapan rendah, sederhana dan tinggi VA06, sebelah-menyebelah.](https://cdn.vattimalaysia.com/2026/08/va06-humidity.webp)
 
 ## Kenapa mengukus dalam ketuhar dan bukan kuali
@@ -111,6 +113,9 @@ Inilah yang ditambah ketuhar kombi berbanding ketuhar stim. **Stim-panggang** me
 | Pembersihan automatik | Cuci stim dan kering haba | Cuci stim dan kering haba |
 
 Pilih **VA05** jika anda kerap memanggang daging: ia ada prob daging dan satu fungsi memasak lebih. Pilih **VA06** jika anda kerap mengukus dan merebus: ia menambah tiga mod rebus untuk bubur, daging dan sup, dan dua mod penggoreng udara. Kedua-duanya ada di [halaman ketuhar kombi](/ms/ketuhar-kombi/).
+
+[![Ketuhar kombi VATTI VA05](https://cdn.vattimalaysia.com/2026/08/built-in-combi-oven-va05-front.webp)](/built-in-combi-oven-va05/)
+[![Ketuhar kombi VATTI VA06](https://cdn.vattimalaysia.com/2026/08/vatti-magic-series-combi-oven-va06-front.webp)](/vatti-magic-series-combi-oven-va06/)
 
 ## Soalan lazim ketuhar stim
 

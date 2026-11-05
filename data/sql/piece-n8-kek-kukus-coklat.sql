@@ -48,6 +48,9 @@ The classic way is a big steamer on the hob, with the lid wrapped in a cloth so 
 
 A steam oven does that job for you. Steam fills the cavity evenly, the oven controls it so nothing boils dry, and there is no lid dripping onto the cake. Both VATTI combi ovens steam: the [VA05](/built-in-combi-oven-va05/) has low, mid and high steam modes, and the [VA06](/vatti-magic-series-combi-oven-va06/) has three steaming modes and lists "no water dripping" on its spec sheet. Use the highest setting. Our guide to [what a steam oven is](/buying-guide/what-is-a-steam-oven/) explains what else it cooks.
 
+[![VATTI VA05 combi oven](https://cdn.vattimalaysia.com/2026/08/built-in-combi-oven-va05-front.webp)](/built-in-combi-oven-va05/)
+[![VATTI VA06 combi oven](https://cdn.vattimalaysia.com/2026/08/vatti-magic-series-combi-oven-va06-front.webp)](/vatti-magic-series-combi-oven-va06/)
+
 ## Tips for a moist, even cake
 
 - **Eggs and milk at room temperature.** Cold liquid makes the batter set unevenly.

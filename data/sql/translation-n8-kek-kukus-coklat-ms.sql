@@ -39,6 +39,9 @@ Cara biasa ialah pengukus besar di atas dapur, dengan tudung dibalut kain supaya
 
 Ketuhar stim melakukan kerja itu untuk anda. Wap memenuhi ruang dengan sekata, ketuhar mengawalnya supaya air tidak kering, dan tiada tudung yang menitis ke atas kek. Kedua-dua ketuhar kombi VATTI boleh mengukus: [VA05](/built-in-combi-oven-va05/) ada mod stim rendah, sederhana dan tinggi, dan [VA06](/vatti-magic-series-combi-oven-va06/) ada tiga mod mengukus dan menyenaraikan "no water dripping" pada helaian spesifikasinya. Gunakan tetapan paling tinggi. Panduan kami tentang [apa itu ketuhar stim](/ms/panduan-membeli/apa-itu-ketuhar-stim/) menerangkan apa lagi yang boleh dimasak.
 
+[![Ketuhar kombi VATTI VA05](https://cdn.vattimalaysia.com/2026/08/built-in-combi-oven-va05-front.webp)](/built-in-combi-oven-va05/)
+[![Ketuhar kombi VATTI VA06](https://cdn.vattimalaysia.com/2026/08/vatti-magic-series-combi-oven-va06-front.webp)](/vatti-magic-series-combi-oven-va06/)
+
 ## Tip untuk kek yang lembap dan sekata
 
 - **Telur dan susu pada suhu bilik.** Cecair sejuk menjadikan adunan masak tidak sekata.

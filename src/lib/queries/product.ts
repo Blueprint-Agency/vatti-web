@@ -73,6 +73,39 @@ export function productNames(): Record<string, string> {
   );
 }
 
+/** What an article's product panel shows for one model. Facet labels are as stored (English). */
+export type ProductCard = {
+  slug: string;
+  model_code: string;
+  secondary_model: string | null;
+  name: string;
+  best_for: string | null;
+  facets: Facet[];
+};
+
+/**
+ * The models an article links to as product shots, in that article's language.
+ * Name and best_for fall back to English where an edition has no row, as the
+ * category grid does; facets are the first three by `position`, the same order
+ * the product page's readout strip uses.
+ */
+export function getProductCards(slugs: string[], lang: string): Record<string, ProductCard> {
+  if (slugs.length === 0) return {};
+  const holes = slugs.map(() => "?").join(",");
+  const rows = all<Omit<ProductCard, "facets"> & { id: number }>(
+    `SELECT p.id, p.slug, p.model_code, p.secondary_model,
+            coalesce(pi.name, p.name) AS name, coalesce(pi.best_for, p.best_for) AS best_for
+       FROM product p
+       LEFT JOIN product_i18n pi ON pi.product_id = p.id AND pi.lang = ?
+      WHERE p.slug IN (${holes}) AND p.is_published = 1`,
+    lang,
+    ...slugs
+  );
+  return Object.fromEntries(
+    rows.map(({ id, ...r }) => [r.slug, { ...r, facets: getFacets(id).slice(0, 3) }])
+  );
+}
+
 export function productSlugs(): string[] {
   return all<{ slug: string }>(
     `SELECT slug FROM product WHERE is_published = 1 ORDER BY sort_order`

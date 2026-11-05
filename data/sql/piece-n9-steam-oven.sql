@@ -93,6 +93,8 @@ Both VATTI combi ovens have a steam rice function. Glutinous rice for lo mai gai
 
 Steamed vegetables keep their colour and bite. For leftovers, steam brings rice, noodles and pau back without the hard edges a microwave leaves, though it takes longer. A [built-in microwave](/built-in-microwave-m626/) is still the faster choice for a quick reheat.
 
+[![VATTI M626 built-in microwave](https://cdn.vattimalaysia.com/2026/08/built-in-microwave-m626-front.webp)](/built-in-microwave-m626/)
+
 ![Asparagus steamed at the VA06''s low, medium and high humidity levels, side by side.](https://cdn.vattimalaysia.com/2026/08/va06-humidity.webp)
 
 ## Why steam in an oven instead of the wok
@@ -132,6 +134,9 @@ This is what a combi oven adds over a steam oven. **Steam-grill** roasts with st
 | Auto clean | Steam clean and heat dry | Steam clean and heat dry |
 
 Choose the **VA05** if you roast meat often: it has a meat probe and one more cooking function. Choose the **VA06** if you steam and stew often: it adds three stew modes for porridge, meat and soup, and two air-fryer modes. Both are on the [combi and steam oven page](/combi-and-steam-oven-in-malaysia/).
+
+[![VATTI VA05 combi oven](https://cdn.vattimalaysia.com/2026/08/built-in-combi-oven-va05-front.webp)](/built-in-combi-oven-va05/)
+[![VATTI VA06 combi oven](https://cdn.vattimalaysia.com/2026/08/vatti-magic-series-combi-oven-va06-front.webp)](/vatti-magic-series-combi-oven-va06/)
 
 ## Steam oven FAQs
 

@@ -175,6 +175,32 @@ wrong shape for appliance specs, which are ordered bullets with a nullable key).
 
 Every imported component is restyled to these tokens before it ships. None arrives with its own look.
 
+### The article reading surface
+
+Long-form pages are built to be scanned before they are read. All of it lives in
+`src/lib/markdown.tsx` behind `article` (product pages and `ProductFeatures` do not get it) and is
+detected from the markdown the guides already use, so no article needs re-authoring:
+
+- **Contents rail.** An article with three or more `##` sections gets "On this page": a sticky rail
+  right of a 46rem body on desktop, folded under the hero on a phone. Sections are `section-N` by
+  order, because a Chinese heading slugs to nothing.
+- **Summary panel.** A `###` heading followed by a list before the first section (Quick answer,
+  Ringkasan, 简短回答) is set like the head of a spec sheet: a small muted heading over a 2px
+  `--paper-ink` rule, then each bold lead as a larger semibold term beside its answer, ruled beneath.
+  No box and no coloured side-tab: teal emphasis is spent on the product panel alone.
+- **Term rows.** A bullet list whose every item opens on a bold term is a set of definitions and is
+  set as term beside text, ruled between. Rows, not an icon-heading-text grid.
+- **Section rules.** Every section after the first opens on a `--paper-line` rule.
+- **FAQ disclosures.** Under a heading matching FAQ / Soalan lazim / 常见问题, each `**Question?**`
+  paragraph is a native `<details>`: no script, the answer stays in the HTML for search.
+- **Tables.** A `--paper-surface` header band, the first column as the row's name.
+- **The product panel.** The one loud element. Product shots (`[![alt](hero)](/product/)`) become a
+  panel tinted 11% `--teal` into `--paper`, so it holds its contrast on both grounds (in the light
+  ground `--void` and `--paper` coincide, so a chassis-coloured box would vanish). Each model sits on
+  a white well, with its code in the readout face, its best-for line, and its first facets in the readout
+  face (Geist Mono): three facets one or two across, two facets three across. Columns follow the count so no model
+  is left alone on a row. On a phone each card lies on its side.
+
 ### The ground selector
 
 Two named buttons in the header, not one that flips: a single toggle only tells you where you are

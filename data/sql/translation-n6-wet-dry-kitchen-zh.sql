@@ -53,7 +53,14 @@ VALUES (123, 'wet-kitchen-vs-dry-kitchen', 'buying-guide/wet-kitchen-vs-dry-kitc
 
 **湿厨房**的抽油烟机工作最辛苦，应按风量、风压和油脂分离度来选。[V960](/vatti-stellar-series-cooker-hood-v960/) 是 VATTI 风量最大的型号，3,690 m³/h、1,700 Pa，也适合高楼住宅里排烟管较长的湿厨房。[V919](/vatti-magic-series-cooker-hood-v919/) 风量 3,050 m³/h、风压 1,300 Pa，应付天天猛火煮食。如果最头痛的是油，[V959](/vatti-cooker-hood-v959/) 油脂分离度达 95%，是全系列最高。
 
+[![VATTI 华帝 V960 抽油烟机](https://cdn.vattimalaysia.com/2026/08/vatti-stellar-series-cooker-hood-v960-front.webp)](/vatti-stellar-series-cooker-hood-v960/)
+[![VATTI 华帝 V919 抽油烟机](https://cdn.vattimalaysia.com/2026/08/vatti-magic-series-cooker-hood-v919-front.webp)](/vatti-magic-series-cooker-hood-v919/)
+[![VATTI 华帝 V959 抽油烟机](https://cdn.vattimalaysia.com/2026/08/vatti-cooker-hood-v959-front.webp)](/vatti-cooker-hood-v959/)
+
 **干厨房**的抽油烟机就在眼前，离饭桌也近。[V929](/vatti-aetheris-series-cooker-hood-v929/) 是 VATTI 最安静的型号，只有 46.5 dB，风量仍有 3,125 m³/h，干厨房真正开火煮时也应付得来。[V938](/vatti-hidden-series-range-hood-v938/) 隐藏式设计与橱柜齐平、没有烟囱，48 dB。开放式干厨房常常没有外墙；VATTI 有 13 款抽油烟机可以**外排或内循环**，不接排烟管时用活性炭过滤后把空气送回室内。我们的[马来西亚抽油烟机推荐](/zh/buying-guide/best-kitchen-hood-malaysia/)比较了每一款。
+
+[![VATTI 华帝 V929 抽油烟机](https://cdn.vattimalaysia.com/2026/08/vatti-aetheris-series-cooker-hood-v929-front.webp)](/vatti-aetheris-series-cooker-hood-v929/)
+[![VATTI 华帝 V938 抽油烟机](https://cdn.vattimalaysia.com/2026/08/vatti-hidden-series-range-hood-v938-front.webp)](/vatti-hidden-series-range-hood-v938/)
 
 无论哪个厨房，油腻的烹饪都别只靠抽风机。它换的是整间厨房的空气，抓不住锅上的油烟；[厨房抽风机还是抽油烟机](/zh/buying-guide/kitchen-exhaust-fan-vs-cooker-hood/)一文讲清楚了两者的分别。
 
@@ -61,19 +68,37 @@ VALUES (123, 'wet-kitchen-vs-dry-kitchen', 'buying-guide/wet-kitchen-vs-dry-kitc
 
 **湿厨房**用煤气炉，火力越大越好。[C830G](/vatti-3-burner-gas-hob-c830g/) 三个炉头、6.0 kW，是全系列最高，适合同时煮几道菜的家庭。[C720S](/professional-series-c720s/) 不锈钢面板、三个炉头、5.2 kW，应付重度炒锅。[C836G](/vatti-flexi-hob-c836g/) 热效率 73%，把最多的煤气变成热力。
 
+[![VATTI 华帝 C830G 煤气炉](https://cdn.vattimalaysia.com/2026/08/vatti-3-burner-gas-hob-c830g-front.webp)](/vatti-3-burner-gas-hob-c830g/)
+[![VATTI 华帝 C720S 煤气炉](https://cdn.vattimalaysia.com/2026/08/professional-series-c720s-front.webp)](/professional-series-c720s/)
+[![VATTI 华帝 C836G 煤气炉](https://cdn.vattimalaysia.com/2026/08/vatti-flexi-hob-c836g-front.webp)](/vatti-flexi-hob-c836g/)
+
 **干厨房**很多家庭希望完全没有明火。[ER3601T](/ceramic-cooker-hob-er3601t/) 是三区电陶炉，有童锁和余热提示，平面玻璃一抹就干净。[VH-IC9-LA](/vatti-cooker-hob-vh-ic9-la/) 一边是电磁炉区，加强火力可达 2,300 W，另一边是最高 2,200 W 的电陶炉区。如果干厨房还是想要煤气，[C835G](/vatti-ai-hob-c835g/) 有定时功能和八段火力，适合较温和的烹饪。更多请看我们的[马来西亚煤气炉推荐](/zh/buying-guide/best-gas-hob-malaysia/)，以及[电磁炉与煤气炉的比较](/buying-guide/induction-cooker-vs-gas-stove/)。
+
+[![VATTI 华帝 ER3601T 电陶炉](https://cdn.vattimalaysia.com/2024/08/Top-front-View-On.webp)](/ceramic-cooker-hob-er3601t/)
+[![VATTI 华帝 VH-IC9-LA 电磁电陶双头炉](https://cdn.vattimalaysia.com/2026/08/vatti-cooker-hob-vh-ic09al-front.webp)](/vatti-cooker-hob-vh-ic9-la/)
+[![VATTI 华帝 C835G 煤气炉](https://cdn.vattimalaysia.com/2026/08/vatti-ai-hob-c835g-front.webp)](/vatti-ai-hob-c835g/)
 
 ### 烤箱与微波炉
 
 嵌入式烤箱适合放在**干厨房**，通常叠放在高柜里与视线齐平，方便看着食物、直接上桌。蒸烤箱能蒸也能烤，蒸鱼、蒸蛋和糕点都可以从湿厨房搬出来：[VA05](/built-in-combi-oven-va05/) 和 [VA06](/vatti-magic-series-combi-oven-va06/) 容量都是 70 L。[O7559 空气炸烤箱](/vatti-built-in-air-fryer-oven-07559/)容量 75 L，以整台烤箱的空间做空气炸，能省下不少下锅油炸。[M626](/built-in-microwave-m626/) 是 25 L 嵌入式微波炉，带烧烤功能，用来加热饭菜。请看 [VATTI 蒸烤箱](/zh/combi-and-steam-oven-in-malaysia/)。
 
+[![VATTI 华帝 VA05 蒸烤箱](https://cdn.vattimalaysia.com/2026/08/built-in-combi-oven-va05-front.webp)](/built-in-combi-oven-va05/)
+[![VATTI 华帝 VA06 蒸烤箱](https://cdn.vattimalaysia.com/2026/08/vatti-magic-series-combi-oven-va06-front.webp)](/vatti-magic-series-combi-oven-va06/)
+[![VATTI 华帝 O7559 空气炸烤箱](https://cdn.vattimalaysia.com/2024/08/Built-in-air-fryer-oven-07559-product-photo.webp)](/vatti-built-in-air-fryer-oven-07559/)
+[![VATTI 华帝 M626 嵌入式微波炉](https://cdn.vattimalaysia.com/2026/08/built-in-microwave-m626-front.webp)](/built-in-microwave-m626/)
+
 ### 洗碗机
 
 脏锅最后堆在哪里，洗碗机就放哪里；大部分家庭是**湿厨房**。马来西亚家庭洗碗最难搞的是炒锅的油，而去油靠的是热水。[DWBB7](/vatti-dishwasher-dwbb7/) 以 75°C 清洗、110°C 烘干，容量 17 套，设有重油污程序。[DWID3](/vatti-dishwasher-dwid3-ag-grey/) 容量 20 套，另加蔬果篮，适合常请客的家庭。两款都在[洗碗机页面](/zh/dishwasher-in-malaysia/)比较。
 
+[![VATTI 华帝 DWBB7 洗碗机](https://cdn.vattimalaysia.com/2024/08/Vatti-DWBB7-Dishwasher-photo-2.webp)](/vatti-dishwasher-dwbb7/)
+[![VATTI 华帝 DWID3 洗碗机](https://cdn.vattimalaysia.com/2026/08/vatti-dishwasher-dwid3-ag-grey-front.webp)](/vatti-dishwasher-dwid3-ag-grey/)
+
 ### 净水器
 
 装在你平时装水煮开水、煮饭的那个水槽。很多家庭喝的在干厨房、煮的在湿厨房，就选用得比较多的那一边。[WDHG01 One Tap](/vatti-one-tap-water-purifier-wdhg01-with-v818wd/) 采用 RO 反渗透膜过滤，同一个水龙头就能出 45°C、85°C 或 100°C 热水，在干厨房可以代替电热水壶。详情请看[净水器页面](/zh/one-tap-purifier-in-malaysia/)。
+
+[![VATTI 华帝 WDHG01 One Tap 净水器](https://cdn.vattimalaysia.com/2026/08/vatti-one-tap-water-purifier-wdhg01-with-v818wd-front.webp)](/vatti-one-tap-water-purifier-wdhg01-with-v818wd/)
 
 ## 只有一个厨房怎么办
 

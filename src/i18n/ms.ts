@@ -73,6 +73,9 @@ export const ms: Dict = {
     related: "Berkaitan",
     readTheGuide: "Baca panduan",
     explore: (name: string) => `Terokai ${name} VATTI`,
+    onThisPage: "Dalam halaman ini",
+    viewProduct: (model: string) => `Lihat ${model}`,
+    bestFor: "Sesuai untuk",
     recipe: {
       prep: "Sedia",
       cook: "Masak",

@@ -78,6 +78,9 @@ export const en = {
     related: "Related",
     readTheGuide: "Read the guide",
     explore: (name: string) => `Explore VATTI ${name}`,
+    onThisPage: "On this page",
+    viewProduct: (model: string) => `See the ${model}`,
+    bestFor: "Best for",
     recipe: {
       prep: "Prep",
       cook: "Cook",

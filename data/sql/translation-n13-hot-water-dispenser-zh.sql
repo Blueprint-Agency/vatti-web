@@ -74,6 +74,8 @@ VALUES (129, 'hot-water-dispenser', 'buying-guide/hot-water-dispenser', 'buying-
 
 VATTI 华帝 WDHG01 先经过 VPC 过滤系统和 RO 反渗透膜，水才到加热器，所以热水和常温水都是过滤过的。我们的 [RO 水](/tips-tricks/what-is-reverse-osmosis-water/)指南说明反渗透去掉了什么，[净水器与滤水器](/tips-tricks/water-purifier-vs-water-filter/)则说明两者的分别（英文）。
 
+[![VATTI 华帝 WDHG01 One Tap 净水器](https://cdn.vattimalaysia.com/2026/08/vatti-one-tap-water-purifier-wdhg01-with-v818wd-front.webp)](/vatti-one-tap-water-purifier-wdhg01-with-v818wd/)
+
 ## 选购前要看什么
 
 - **温度档位。**泡茶一个热水档就够；分开的档位可以省下等水降温冲咖啡或冲奶的时间。One Tap 有 45°C、85°C 和 100°C，另加常温。

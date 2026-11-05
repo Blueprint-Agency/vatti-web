@@ -53,7 +53,14 @@ Nama itu merujuk kepada kekotoran, bukan lantai. **Dapur basah** dibina untuk ma
 
 **Di dapur basah**, hood melakukan kerja paling berat, jadi pilih berdasarkan aliran udara, tekanan sedutan dan tapisan minyak. [V960](/vatti-stellar-series-cooker-hood-v960/) mengalirkan udara paling banyak dalam rangkaian VATTI, 3,690 m³/h pada 1,700 Pa, dan sesuai juga untuk dapur basah dengan saluran panjang di kondominium tinggi. [V919](/vatti-magic-series-cooker-hood-v919/) mengalirkan 3,050 m³/h pada 1,300 Pa untuk masakan api besar setiap hari. Jika minyak masalahnya, [V959](/vatti-cooker-hood-v959/) menapis 95% minyak, yang tertinggi dalam rangkaian.
 
+[![Hood dapur VATTI V960](https://cdn.vattimalaysia.com/2026/08/vatti-stellar-series-cooker-hood-v960-front.webp)](/vatti-stellar-series-cooker-hood-v960/)
+[![Hood dapur VATTI V919](https://cdn.vattimalaysia.com/2026/08/vatti-magic-series-cooker-hood-v919-front.webp)](/vatti-magic-series-cooker-hood-v919/)
+[![Hood dapur VATTI V959](https://cdn.vattimalaysia.com/2026/08/vatti-cooker-hood-v959-front.webp)](/vatti-cooker-hood-v959/)
+
 **Di dapur kering**, hood kelihatan jelas dan dekat dengan meja makan. [V929](/vatti-aetheris-series-cooker-hood-v929/) ialah hood VATTI paling senyap pada 46.5 dB tetapi masih mengalirkan 3,125 m³/h, jadi ia mampu apabila dapur kering digunakan untuk masakan sebenar. [V938](/vatti-hidden-series-range-hood-v938/) rata dengan kabinet tanpa cerobong, pada 48 dB. Dapur kering yang terbuka selalunya tiada dinding luar; 13 hood VATTI boleh berfungsi **dengan saluran atau secara kitar semula**, membersihkan udara melalui penapis karbon tanpa saluran. Panduan [hood dapur terbaik](/ms/panduan-membeli/hood-dapur-terbaik/) kami membandingkan setiap model.
+
+[![Hood dapur VATTI V929](https://cdn.vattimalaysia.com/2026/08/vatti-aetheris-series-cooker-hood-v929-front.webp)](/vatti-aetheris-series-cooker-hood-v929/)
+[![Hood dapur VATTI V938](https://cdn.vattimalaysia.com/2026/08/vatti-hidden-series-range-hood-v938-front.webp)](/vatti-hidden-series-range-hood-v938/)
 
 Jangan bergantung pada exhaust fan di mana-mana bilik untuk masakan berminyak. Ia membersihkan udara bilik, bukan di kuali; panduan [exhaust fan dapur atau hood dapur](/ms/panduan-membeli/exhaust-fan-dapur/) kami menerangkan bezanya.
 
@@ -61,19 +68,37 @@ Jangan bergantung pada exhaust fan di mana-mana bilik untuk masakan berminyak. I
 
 **Di dapur basah**, pilih dapur gas, dan lebih tinggi kuasanya lebih baik. [C830G](/vatti-3-burner-gas-hob-c830g/) ada tiga tungku dan 6.0 kW, yang tertinggi dalam rangkaian, untuk keluarga yang memasak beberapa hidangan serentak. [C720S](/professional-series-c720s/) ada permukaan keluli tahan karat, tiga tungku dan 5.2 kW untuk kerja kuali yang berat. [C836G](/vatti-flexi-hob-c836g/) menukar paling banyak gas kepada haba, dengan kecekapan 73%.
 
+[![Dapur gas VATTI C830G](https://cdn.vattimalaysia.com/2026/08/vatti-3-burner-gas-hob-c830g-front.webp)](/vatti-3-burner-gas-hob-c830g/)
+[![Dapur gas VATTI C720S](https://cdn.vattimalaysia.com/2026/08/professional-series-c720s-front.webp)](/professional-series-c720s/)
+[![Dapur gas VATTI C836G](https://cdn.vattimalaysia.com/2026/08/vatti-flexi-hob-c836g-front.webp)](/vatti-flexi-hob-c836g/)
+
 **Di dapur kering**, ramai keluarga mahu tiada api langsung. [ER3601T](/ceramic-cooker-hob-er3601t/) ialah dapur seramik tiga zon dengan kunci kanak-kanak dan amaran haba baki, serta permukaan kaca rata yang mudah dilap. [VH-IC9-LA](/vatti-cooker-hob-vh-ic9-la/) meletakkan zon induksi, dengan rangsangan sehingga 2,300 W, di sebelah zon seramik sehingga 2,200 W. Jika anda masih mahu dapur gas di dapur kering, [C835G](/vatti-ai-hob-c835g/) ada pemasa memasak dan api lapan kelajuan untuk masakan yang lebih lembut. Panduan [dapur gas terbaik](/ms/panduan-membeli/dapur-gas-terbaik/) kami dan perbandingan [dapur induksi dan dapur gas](/buying-guide/induction-cooker-vs-gas-stove/) pergi lebih jauh.
+
+[![Dapur seramik VATTI ER3601T](https://cdn.vattimalaysia.com/2024/08/Top-front-View-On.webp)](/ceramic-cooker-hob-er3601t/)
+[![Dapur induksi dan seramik VATTI VH-IC9-LA](https://cdn.vattimalaysia.com/2026/08/vatti-cooker-hob-vh-ic09al-front.webp)](/vatti-cooker-hob-vh-ic9-la/)
+[![Dapur gas VATTI C835G](https://cdn.vattimalaysia.com/2026/08/vatti-ai-hob-c835g-front.webp)](/vatti-ai-hob-c835g/)
 
 ### Ketuhar dan ketuhar gelombang mikro
 
 Ketuhar terbina dalam sesuai di **dapur kering**, biasanya disusun pada paras mata dalam kabinet tinggi, supaya anda boleh memerhati makanan dan terus menghidang. Ketuhar kombi boleh mengukus selain membakar, jadi ikan stim, telur kukus dan kuih boleh keluar terus dari dapur basah: [VA05](/built-in-combi-oven-va05/) dan [VA06](/vatti-magic-series-combi-oven-va06/) masing-masing berkapasiti 70 L. [Ketuhar air fryer O7559](/vatti-built-in-air-fryer-oven-07559/) berkapasiti 75 L dan menggoreng udara pada saiz ketuhar penuh, yang mengurangkan banyak gorengan di kuali. [M626](/built-in-microwave-m626/) ialah ketuhar gelombang mikro terbina dalam 25 L dengan gril untuk memanaskan makanan. Lihat [ketuhar kombi VATTI](/ms/ketuhar-kombi/).
 
+[![Ketuhar kombi VATTI VA05](https://cdn.vattimalaysia.com/2026/08/built-in-combi-oven-va05-front.webp)](/built-in-combi-oven-va05/)
+[![Ketuhar kombi VATTI VA06](https://cdn.vattimalaysia.com/2026/08/vatti-magic-series-combi-oven-va06-front.webp)](/vatti-magic-series-combi-oven-va06/)
+[![Ketuhar penggoreng udara VATTI O7559](https://cdn.vattimalaysia.com/2024/08/Built-in-air-fryer-oven-07559-product-photo.webp)](/vatti-built-in-air-fryer-oven-07559/)
+[![Ketuhar gelombang mikro terbina dalam VATTI M626](https://cdn.vattimalaysia.com/2026/08/built-in-microwave-m626-front.webp)](/built-in-microwave-m626/)
+
 ### Mesin basuh pinggan
 
 Letakkan mesin basuh pinggan di tempat periuk kotor berakhir, iaitu **dapur basah** di kebanyakan rumah. Minyak kuali ialah bahagian paling sukar dalam membasuh pinggan cara Malaysia, dan air panaslah yang menanggalkannya. [DWBB7](/vatti-dishwasher-dwbb7/) membasuh pada 75°C, mengering pada 110°C, memuatkan 17 tetapan tempat dan ada program khas untuk minyak berat. [DWID3](/vatti-dishwasher-dwid3-ag-grey/) memuatkan 20 tetapan tempat serta bakul buah dan sayur, untuk keluarga yang selalu menerima tetamu. Bandingkan kedua-duanya di halaman [mesin basuh pinggan](/ms/mesin-basuh-pinggan/).
 
+[![Mesin basuh pinggan VATTI DWBB7](https://cdn.vattimalaysia.com/2024/08/Vatti-DWBB7-Dishwasher-photo-2.webp)](/vatti-dishwasher-dwbb7/)
+[![Mesin basuh pinggan VATTI DWID3](https://cdn.vattimalaysia.com/2026/08/vatti-dishwasher-dwid3-ag-grey-front.webp)](/vatti-dishwasher-dwid3-ag-grey/)
+
 ### Penapis air
 
 Letakkan di sinki yang anda gunakan untuk mengisi cerek dan periuk nasi. Di banyak rumah, itu dapur kering untuk minuman dan dapur basah untuk memasak; pilih yang lebih kerap digunakan. [WDHG01 One Tap](/vatti-one-tap-water-purifier-wdhg01-with-v818wd/) menapis melalui membran RO dan memberikan air panas pada 45°C, 85°C atau 100°C dari paip yang sama, jadi ia boleh menggantikan cerek di dapur kering. Maklumat lanjut di halaman [penapis air](/ms/penapis-air/).
+
+[![Penapis air One Tap VATTI WDHG01](https://cdn.vattimalaysia.com/2026/08/vatti-one-tap-water-purifier-wdhg01-with-v818wd-front.webp)](/vatti-one-tap-water-purifier-wdhg01-with-v818wd/)
 
 ## Jika anda hanya ada satu dapur
 

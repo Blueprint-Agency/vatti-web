@@ -38,6 +38,9 @@ VALUES (135, 'moist-chocolate-steamed-cake', 'recipe/moist-chocolate-steamed-cak
 
 蒸烤箱帮你做了这些。蒸汽均匀充满箱体，由箱体控制，不会烧干，也没有会滴水的锅盖。两款 VATTI 华帝蒸烤箱都能蒸：[VA05](/built-in-combi-oven-va05/) 有低、中、高三种蒸汽模式，[VA06](/vatti-magic-series-combi-oven-va06/) 有三种蒸汽模式，规格表上写明“no water dripping”（不滴水）。用最高档。我们的[蒸烤箱有必要买吗](/zh/buying-guide/what-is-a-steam-oven/)指南说明它还能做什么。
 
+[![VATTI 华帝 VA05 蒸烤箱](https://cdn.vattimalaysia.com/2026/08/built-in-combi-oven-va05-front.webp)](/built-in-combi-oven-va05/)
+[![VATTI 华帝 VA06 蒸烤箱](https://cdn.vattimalaysia.com/2026/08/vatti-magic-series-combi-oven-va06-front.webp)](/vatti-magic-series-combi-oven-va06/)
+
 ## 蒸出湿润均匀蛋糕的诀窍
 
 - **鸡蛋和牛奶用室温的。**冷的液体会让面糊凝固得不均匀。

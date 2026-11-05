@@ -54,6 +54,9 @@ On the hob, a fish steams over boiling water with a lid on. The heat comes from 
 
 Both VATTI combi ovens steam: the [VA05](/built-in-combi-oven-va05/) has low, mid and high steam modes, and the [VA06](/vatti-magic-series-combi-oven-va06/) has three steaming modes and a 1.3 L water tank. Use the highest setting for fish. Our guide to [what a steam oven is](/buying-guide/what-is-a-steam-oven/) explains how it works and what else it cooks.
 
+[![VATTI VA05 combi oven](https://cdn.vattimalaysia.com/2026/08/built-in-combi-oven-va05-front.webp)](/built-in-combi-oven-va05/)
+[![VATTI VA06 combi oven](https://cdn.vattimalaysia.com/2026/08/vatti-magic-series-combi-oven-va06-front.webp)](/vatti-magic-series-combi-oven-va06/)
+
 ## Cantonese steamed fish
 
 The Cantonese way is about the fish itself: a short steam, the cooking liquid poured away, then fresh ginger and spring onion, hot oil and a light soy dressing. The ingredients and method are in the first recipe card below.

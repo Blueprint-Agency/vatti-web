@@ -77,6 +77,8 @@ Water dispenser memanaskan apa sahaja yang masuk ke dalamnya. Mendidih membunuh 
 
 VATTI WDHG01 menapis melalui sistem VPC dan membran RO sebelum air sampai ke pemanas, jadi air panas dan air suhu bilik kedua-duanya ditapis. Panduan kami tentang [air RO](/tips-tricks/what-is-reverse-osmosis-water/) menerangkan apa yang dibuang oleh osmosis songsang, dan [penapis air dan pembersih air](/tips-tricks/water-purifier-vs-water-filter/) menerangkan bezanya.
 
+[![Penapis air One Tap VATTI WDHG01](https://cdn.vattimalaysia.com/2026/08/vatti-one-tap-water-purifier-wdhg01-with-v818wd-front.webp)](/vatti-one-tap-water-purifier-wdhg01-with-v818wd/)
+
 ## Apa yang perlu disemak sebelum membeli
 
 - **Tetapan suhu.** Satu tetapan panas cukup untuk teh; tetapan berasingan menjimatkan masa menunggu air sejuk untuk kopi atau susu. One Tap ada 45°C, 85°C dan 100°C, serta suhu bilik.

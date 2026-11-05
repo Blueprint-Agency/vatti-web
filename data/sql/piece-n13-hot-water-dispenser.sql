@@ -94,6 +94,8 @@ A hot water dispenser heats whatever goes into it. Boiling kills germs, but it d
 
 The VATTI WDHG01 filters through its VPC system and an RO membrane before the water reaches the heater, so the hot water and the room-temperature water are both filtered. Our guide to [RO water](/tips-tricks/what-is-reverse-osmosis-water/) explains what reverse osmosis removes, and [water purifier vs water filter](/tips-tricks/water-purifier-vs-water-filter/) explains the difference between the two.
 
+[![VATTI WDHG01 One Tap water purifier](https://cdn.vattimalaysia.com/2026/08/vatti-one-tap-water-purifier-wdhg01-with-v818wd-front.webp)](/vatti-one-tap-water-purifier-wdhg01-with-v818wd/)
+
 ## What to check before you buy
 
 - **Temperature settings.** One hot setting is enough for tea; separate settings save you waiting for water to cool for coffee or milk. The One Tap has 45°C, 85°C and 100°C, plus room temperature.
