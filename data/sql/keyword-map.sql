@@ -126,3 +126,14 @@ INSERT INTO keyword_map (page, lang, keyword, secondary, volume, basis, source, 
   ('article:what-is-a-steam-oven', 'zh-MY', '蒸烤箱有必要买吗', '蒸烤箱能做什么', NULL, 'competitor',
    'Firecrawl KL', '2026-11-05',
    'Nothing measures on Ubersuggest MY zh. The Chinese category page ranks 3 for 蒸烤箱 queries, so this page takes the buyer''s question, as the ranking Chinese guides title it (Zhihu, 蒸烤箱有必要买吗). Malaysian pages say 蒸烤箱 for a combi and 蒸箱 for steam only.');
+
+-- N13, hot water dispenser (content schedule; moved into November on
+-- 2026-11-05). English target recorded in the article header, see
+-- piece-n13-hot-water-dispenser.sql.
+INSERT INTO keyword_map (page, lang, keyword, secondary, volume, basis, source, pulled_on, note) VALUES
+  ('article:hot-water-dispenser', 'ms-MY', 'water dispenser air panas', 'water dispenser with ro', 1000, 'volume',
+   'Ubersuggest MY ms; Search Console sc-domain', '2026-11-05',
+   'Measured as water dispenser hot, 1,000, SD 11; water dispenser with ro 210, SD 8. Malay searchers type the English term; dispenser air panas returns no data. The Search Console query berapa suhu air panas dispenser, on the Malay category page, is what the temperature section answers.'),
+  ('article:hot-water-dispenser', 'zh-MY', '热水机', '饮水机', 210, 'volume',
+   'Ubersuggest MY zh', '2026-11-05',
+   'SD 61; 饮水机 1,000, SD 62. The Chinese category page targets 净水器 and carries 即热饮水机 (20) in its h1, so this page takes 热水机, which nothing of ours targets.');
