@@ -45,7 +45,10 @@ import { CDN } from "./cdn.mjs";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const rest = JSON.parse(readFileSync(join(root, "research/stores-rest.json"), "utf8"));
 const { stores, regions } = JSON.parse(readFileSync(join(root, "research/stores.json"), "utf8"));
-const local = JSON.parse(readFileSync(join(root, "research/stores-local.json"), "utf8")).stores;
+const localFile = JSON.parse(readFileSync(join(root, "research/stores-local.json"), "utf8"));
+const local = localFile.stores;
+// A new photo for a scraped dealer: WordPress slug -> R2 bucket key.
+const imageOverrides = localFile.imageOverrides ?? {};
 
 const q = (v) =>
   v === null || v === undefined || v === "" ? "NULL" : `'${String(v).replace(/'/g, "''")}'`;
@@ -203,7 +206,11 @@ const rows = [
     address: s.address,
     phone: s.phone,
     directionsUrl: s.directionsUrl,
-    image: s.image ? scrapedImage(s.image) : null,
+    image: imageOverrides[wp.slug]
+      ? { cdn: `${CDN}/${imageOverrides[wp.slug]}`, legacy: null }
+      : s.image
+        ? scrapedImage(s.image)
+        : null,
   })),
   ...local.map((s) => ({
     slug: s.slug,
@@ -224,6 +231,14 @@ for (const r of rows) {
   }
   if (!REGION_NAME[r.regionSlug]) {
     throw new Error(`no taxonomy display name for region "${r.regionSlug}"`);
+  }
+}
+
+// An override naming a slug that is not a scraped dealer would change nothing,
+// silently. Fail instead.
+for (const slug of Object.keys(imageOverrides)) {
+  if (!matched.some(({ wp }) => wp.slug === slug)) {
+    throw new Error(`imageOverrides names "${slug}", which is not a WordPress dealer`);
   }
 }
 
