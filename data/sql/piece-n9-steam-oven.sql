@@ -75,7 +75,7 @@ A steamer pot (periuk kukus) is good for a quick plate of fish, but it ties up a
 
 ### Steamed fish
 
-Fish is the dish that sells most people on steam cooking. Steam on every side cooks a whole fish evenly from head to tail, so the thick part near the head is done when the tail is still moist. Cantonese style with soy, ginger and spring onion, and Malay style with lime and chilli, both start the same way: the fish on a plate, the plate on the tray, and the steam doing the rest.
+Fish is the dish that sells most people on steam cooking. Steam on every side cooks a whole fish evenly from head to tail, so the thick part near the head is done when the tail is still moist. Cantonese style with soy, ginger and spring onion, and Malay style with lime and chilli, both start the same way: the fish on a plate, the plate on the tray, and the steam doing the rest. Our [steamed fish recipe](/recipe/steamed-fish-recipe/) gives both styles, step by step.
 
 ### Steamed egg
 
@@ -83,7 +83,7 @@ A smooth Chinese steamed egg (蒸蛋) is mostly about gentle, steady heat and no
 
 ### Pau, dim sum and kuih
 
-Pau, siu mai, har gow, kuih seri muka, kuih talam and steamed cake (kek kukus) all need even steam for a set time. With several trays in one cavity, a whole batch cooks at once instead of in rounds on a stacked steamer, and the bottom tier does not overcook while the top one catches up.
+Pau, siu mai, har gow, kuih seri muka, kuih talam and steamed cake (kek kukus) all need even steam for a set time. With several trays in one cavity, a whole batch cooks at once instead of in rounds on a stacked steamer, and the bottom tier does not overcook while the top one catches up. Our [moist chocolate steamed cake](/recipe/moist-chocolate-steamed-cake/) is a good first bake.
 
 ### Rice and glutinous rice
 

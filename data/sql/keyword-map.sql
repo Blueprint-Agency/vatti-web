@@ -137,3 +137,24 @@ INSERT INTO keyword_map (page, lang, keyword, secondary, volume, basis, source, 
   ('article:hot-water-dispenser', 'zh-MY', '热水机', '饮水机', 210, 'volume',
    'Ubersuggest MY zh', '2026-11-05',
    'SD 61; 饮水机 1,000, SD 62. The Chinese category page targets 净水器 and carries 即热饮水机 (20) in its h1, so this page takes 热水机, which nothing of ours targets.');
+
+-- N10, steamed fish (content schedule, November). English target recorded in
+-- the article header, see piece-n10-steamed-fish.sql.
+INSERT INTO keyword_map (page, lang, keyword, secondary, volume, basis, source, pulled_on, note) VALUES
+  ('article:steamed-fish-recipe', 'ms-MY', 'resepi ikan stim limau', 'resepi ikan stim halia chinese style', 720, 'volume',
+   'Ubersuggest MY ms', '2026-10-07',
+   'SD 17; resepi ikan stim 390 (SD 15) and the halia chinese style term 390. The lime style carries the volume, so it is the first card and the featured image. Slug and title spell it resepi, as searched; the section folder is resipi.'),
+  ('article:steamed-fish-recipe', 'zh-MY', '清蒸鱼', '蒸鱼', NULL, 'competitor',
+   'Firecrawl KL', '2026-11-05',
+   'Nothing measures on Ubersuggest MY zh (蒸鱼, 清蒸鱼, 港式蒸鱼). Malaysian Chinese recipes rank as 清蒸鱼 and 家常蒸鱼 (Lee Kum Kee Malaysia, SanTaste, Double Camel).');
+
+-- N8, moist chocolate steamed cake (content schedule, November; swapped in
+-- 2026-11-05). English target recorded in the article header, see
+-- piece-n8-kek-kukus-coklat.sql.
+INSERT INTO keyword_map (page, lang, keyword, secondary, volume, basis, source, pulled_on, note) VALUES
+  ('article:moist-chocolate-steamed-cake', 'ms-MY', 'kek kukus coklat moist', 'resepi kek kukus', 8100, 'volume',
+   'Ubersuggest MY ms', '2026-11-05',
+   'SD 25. The schedule planned on resepi kek kukus (320, SD 22); the chocolate moist term is 25 times bigger. Also answered: kek kukus coklat 390, kek kukus milo 210, resepi kek kukus sukatan cawan 110. Slug and title spell it resepi, as searched.'),
+  ('article:moist-chocolate-steamed-cake', 'zh-MY', '蒸巧克力蛋糕', '湿润巧克力蛋糕', NULL, 'competitor',
+   'Firecrawl KL', '2026-11-05',
+   'Nothing measures on Ubersuggest MY zh (蒸蛋糕, 马来糕). Malaysian bakers title it 蒸巧克力蛋糕 and 蒸润湿巧克力蛋糕 (Kathrine Kwa, TSL, Oriental Cuisine).');

@@ -54,7 +54,7 @@ Periuk kukus sesuai untuk sepinggan ikan yang cepat, tetapi ia menggunakan satu 
 
 ### Ikan stim
 
-Ikan ialah masakan yang paling banyak meyakinkan orang tentang masakan stim. Wap dari setiap sisi memasak seekor ikan dengan sekata dari kepala ke ekor, jadi bahagian tebal dekat kepala sudah masak ketika ekornya masih lembap. Ikan stim limau dengan cili, dan gaya Kantonis dengan kicap, halia dan daun bawang, kedua-duanya bermula dengan cara yang sama: ikan di atas pinggan, pinggan di atas dulang, dan wap melakukan selebihnya.
+Ikan ialah masakan yang paling banyak meyakinkan orang tentang masakan stim. Wap dari setiap sisi memasak seekor ikan dengan sekata dari kepala ke ekor, jadi bahagian tebal dekat kepala sudah masak ketika ekornya masih lembap. Ikan stim limau dengan cili, dan gaya Kantonis dengan kicap, halia dan daun bawang, kedua-duanya bermula dengan cara yang sama: ikan di atas pinggan, pinggan di atas dulang, dan wap melakukan selebihnya. [Resepi ikan stim limau](/ms/resipi/resepi-ikan-stim-limau/) kami memberi kedua-dua gaya, langkah demi langkah.
 
 ### Telur kukus
 
@@ -62,7 +62,7 @@ Telur kukus yang licin bergantung pada haba yang lembut dan stabil, dan tiada ai
 
 ### Pau, dim sum dan kuih
 
-Pau, siu mai, har gow, kuih seri muka, kuih talam dan kek kukus semuanya memerlukan wap yang sekata untuk masa yang ditetapkan. Dengan beberapa dulang dalam satu ruang, satu kelompok penuh masak serentak dan bukan bergilir-gilir di pengukus bertingkat, dan tingkat bawah tidak terlebih masak sementara tingkat atas menunggu.
+Pau, siu mai, har gow, kuih seri muka, kuih talam dan kek kukus semuanya memerlukan wap yang sekata untuk masa yang ditetapkan. Dengan beberapa dulang dalam satu ruang, satu kelompok penuh masak serentak dan bukan bergilir-gilir di pengukus bertingkat, dan tingkat bawah tidak terlebih masak sementara tingkat atas menunggu. [Resepi kek kukus coklat moist](/ms/resipi/resepi-kek-kukus-coklat-moist/) kami sesuai untuk permulaan.
 
 ### Nasi dan pulut
 
