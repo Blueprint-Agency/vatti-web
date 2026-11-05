@@ -160,12 +160,14 @@ INSERT INTO category_faq (category_id, lang, position, question, answer_md) VALU
 
 -- ── dapur gas ──────────────────────────────────────────────────────────────
 -- Reason 2's title drops "less wasted gas" (an energy claim); the published
--- 73% efficiency figure stays, as a spec. FAQ 10 drops "the authorised dealer
--- you buy from will arrange it" (installation arrangement).
+-- 73% efficiency figure stays, as a spec. Rewritten with the English on
+-- 2026-11-05 (schedule item 14): twelve hobs not eleven, the three electric
+-- hobs named, the installer line and the install-it-yourself FAQ replaced by
+-- a gas, ceramic or induction question. The header row above is untouched.
 INSERT INTO category_guide (category_id, lang, position, heading, body_md, figure, figure_unit) VALUES
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 'ms-MY', 1,
    'Mulakan dengan kuasa tungku',
-   'Masakan Malaysia ialah masakan berapi tinggi, dan kadar kuasa tungku menentukan sama ada kuali dapat mencapai haba itu. Dapur gas di halaman ini mempunyai tungku utama dari 3.8 kW hingga 6 kW. Dari 4.8 kW ke atas, haba cukup untuk mengekalkan wok hei sepanjang satu tumisan penuh; di bawahnya sesuai untuk isi rumah yang kebanyakannya merebus dan mereneh.',
+   'Masakan Malaysia ialah masakan berapi tinggi, dan kadar kuasa tungku menentukan sama ada kuali dapat mencapai haba itu. Dapur gas di halaman ini mempunyai tungku utama dari 3.8 kW hingga 6 kW. Dari 4.8 kW ke atas, haba cukup untuk mengekalkan wok hei sepanjang satu tumisan penuh; di bawahnya sesuai untuk isi rumah yang kebanyakannya merebus dan mereneh. Panduan [dapur gas terbaik](/ms/panduan-membeli/dapur-gas-terbaik/) kami memilih satu untuk setiap jenis dapur.',
    '3.8-6', 'kW'),
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 'ms-MY', 2,
    'Ukur lubang potongan, bukan dapurnya',
@@ -173,15 +175,15 @@ INSERT INTO category_guide (category_id, lang, position, heading, body_md, figur
    '650-710', 'mm'),
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 'ms-MY', 3,
    'Gas, untuk kuali',
-   'Gas bertindak balas sebaik sahaja tombol dipusing, bertukar dari api penuh ke api kecil serta-merta, dan terus berfungsi semasa bekalan elektrik terputus. Ia masih pilihan yang tepat untuk sesiapa yang menumis, dan sembilan daripada sebelas dapur di sini ialah dapur gas.',
+   'Gas bertindak balas sebaik sahaja tombol dipusing, bertukar dari api penuh ke api kecil serta-merta, dan terus berfungsi semasa bekalan elektrik terputus. Ia masih pilihan yang tepat untuk sesiapa yang menumis, dan sembilan daripada dua belas dapur di sini ialah dapur gas.',
    NULL, NULL),
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 'ms-MY', 4,
-   'Seramik elektrik, untuk permukaan rata',
-   'Dapur seramik memanaskan secara sekata, tiada api terbuka, dan boleh dilap sekali lalu kerana seluruh permukaannya rata. Zonnya mencapai 2,200 W, dengan kawalan sentuh dan amaran haba baki. Pilih ia untuk dapur yang memasak dengan lebih perlahan, atau di tempat yang tiada bekalan gas.',
+   'Seramik atau induksi, untuk permukaan rata',
+   'Dapur elektrik memanaskan secara sekata, tiada api terbuka, dan boleh dilap sekali lalu kerana seluruh permukaannya rata. Zon seramik mencapai 2,200 W, dengan kawalan sentuh dan amaran haba baki, dan VH-IC9-LA meletakkan zon induksi dengan rangsangan sehingga 2,300 W di sebelah zon seramik. Pilih ia untuk dapur kering, dapur yang memasak dengan lebih perlahan, atau di tempat yang tiada bekalan gas.',
    NULL, NULL),
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 'ms-MY', 5,
    'Keselamatan yang berfungsi tanpa anda',
-   'Setiap dapur gas di sini mempunyai alat keselamatan yang memutuskan gas apabila api padam. Kebanyakannya menambah kunci kanak-kanak pada tombol kawalan, dan model yang lebih baharu menambah pemutus kering bakar dan pemutus terma serta sensor yang mematikan tungku apabila tiada apa-apa di atasnya. Dapur seramik mempunyai kunci kanak-kanak, pemutus panas lampau dan amaran haba baki.',
+   'Setiap dapur gas di sini mempunyai alat keselamatan yang memutuskan gas apabila api padam. Kebanyakannya menambah kunci kanak-kanak pada tombol kawalan, dan model yang lebih baharu menambah pemutus kering bakar dan pemutus terma serta sensor yang mematikan tungku apabila tiada apa-apa di atasnya. Ketiga-tiga dapur elektrik mempunyai kunci kanak-kanak, pemutus panas lampau dan amaran haba baki.',
    NULL, NULL),
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 'ms-MY', 6,
    'Kaca atau keluli tahan karat',
@@ -199,7 +201,7 @@ INSERT INTO category_reason (category_id, lang, position, title, body_md, figure
    '73', '%', 'heat'),
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 'ms-MY', 3,
    'Keselamatan sebagai standard, bukan tambahan',
-   'Alat keselamatan pada setiap tungku gas memutuskan bekalan sebaik sahaja api padam. Pemutus kering bakar, pemutus terma, sensor tanpa periuk dan tombol berkunci kanak-kanak terdapat merentasi julat ini, dan kedua-dua dapur seramik menambah perlindungan panas lampau dan amaran haba baki.',
+   'Alat keselamatan pada setiap tungku gas memutuskan bekalan sebaik sahaja api padam. Pemutus kering bakar, pemutus terma, sensor tanpa periuk dan tombol berkunci kanak-kanak terdapat merentasi julat ini, dan ketiga-tiga dapur elektrik menambah perlindungan panas lampau dan amaran haba baki.',
    NULL, NULL, 'safety'),
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 'ms-MY', 4,
    'Permukaan yang dibuat untuk dilap',
@@ -211,7 +213,7 @@ INSERT INTO category_reason (category_id, lang, position, title, body_md, figure
    NULL, NULL, 'smart'),
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 'ms-MY', 6,
    'Penyalaan yang menyala pada cubaan pertama',
-   'Penyalaan sifar saat pada M822G dan C836G, penyalaan elektrik atau bateri untuk dapur yang tiada soket di belakang kaunter, dan panel sentuh penuh pada kedua-dua dapur seramik.',
+   'Penyalaan sifar saat pada M822G dan C836G, penyalaan elektrik atau bateri untuk dapur yang tiada soket di belakang kaunter, dan panel sentuh penuh pada ketiga-tiga dapur elektrik.',
    NULL, NULL, 'controls');
 
 INSERT INTO category_faq (category_id, lang, position, question, answer_md) VALUES
@@ -232,7 +234,7 @@ INSERT INTO category_faq (category_id, lang, position, question, answer_md) VALU
    'Kuasa tungku, saiz lubang potongan, bilangan tungku, jenis kawalan dan ciri keselamatan. Ikut urutan itu: kuasa dan muatan menyingkirkan kebanyakan model sebelum perkara lain menjadi penting. Jika anda masih memilih antara gas dan elektrik, [panduan induksi atau seramik](/buying-guide/which-is-better-induction-or-ceramic-cooker/) kami menerangkan pilihan elektrik.'),
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 'ms-MY', 6,
    'Berapa jauh dapur gas perlu dari tingkap?',
-   'Sekurang-kurangnya 100 cm sebagai peraturan umum, supaya pengudaraan berfungsi dengan betul dan angin tidak memadamkan api. Pemasang anda akan mengesahkannya mengikut susun atur dapur anda.'),
+   'Sekurang-kurangnya 100 cm sebagai peraturan umum, supaya pengudaraan berfungsi dengan betul dan angin tidak memadamkan api.'),
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 'ms-MY', 7,
    'Dapur gas yang mana lebih mudah dibersihkan?',
    'Kaca, kerana permukaannya rata dan tumpahan kekal di atasnya. [C836G](/vatti-flexi-hob-c836g/) menambah salutan nano yang menghalang gris melekat, dan [C861G](/vatti-magic-series-cooker-hob-c861g/) melipat tungkunya ke atas supaya anda boleh mengelap terus merentasinya.'),
@@ -243,8 +245,8 @@ INSERT INTO category_faq (category_id, lang, position, question, answer_md) VALU
    'Bagaimana saya boleh memanfaatkan dapur gas saya sepenuhnya?',
    'Padankan periuk dengan tungku: periuk kecil di atas tungku 6 kW menghantar kebanyakan haba ke tepinya. Bersihkan penutup tungku, pastikan lubang api tidak tersumbat, dan gunakan pemasa daripada memerhati jam.'),
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 'ms-MY', 10,
-   'Bolehkah saya memasang dapur gas sendiri?',
-   'Bukan dapur gas. Dapur gas mesti dipasang oleh profesional, dan memasangnya sendiri tidak selamat serta boleh membatalkan waranti.');
+   'Patutkah saya pilih dapur gas, seramik atau induksi?',
+   'Dapur gas, jika anda memasak dengan kuali: api bertindak balas serta-merta pada tombol dan terus berfungsi semasa bekalan elektrik terputus. Seramik atau induksi sesuai untuk dapur kering atau rumah yang tidak mahu api terbuka, dan VH-IC9-LA menggabungkan kedua-duanya pada satu dapur. Panduan [dapur basah dan dapur kering](/ms/panduan-membeli/dapur-basah-dan-dapur-kering/) kami menerangkan dapur mana di mana, dan [perbandingan dapur induksi dan dapur gas](/buying-guide/induction-cooker-vs-gas-stove/) kami menimbang kedua-duanya.');
 
 -- ── ketuhar kombi ──────────────────────────────────────────────────────────
 -- Nothing dropped. "Combi" stays as the loanword where it names the oven type.
@@ -563,7 +565,7 @@ INSERT INTO product_i18n (product_id, lang, name, best_for, intro_md) VALUES
   ((SELECT id FROM product WHERE slug = 'vatti-ai-hob-c835g'), 'ms-MY',
    'Dapur Gas AI VATTI C835G', 'Masakan berpemasa, api lapan kelajuan', NULL),
   ((SELECT id FROM product WHERE slug = 'vatti-cooker-hob-vh-ic9-la'), 'ms-MY',
-   'Dapur Induksi dan Seramik VATTI VH-IC9-LA', NULL, NULL),
+   'Dapur Induksi dan Seramik VATTI VH-IC9-LA', 'Induksi dan seramik, tanpa api', NULL),
   ((SELECT id FROM product WHERE slug = 'vatti-flexi-hob-c822g'), 'ms-MY',
    'Dapur Gas Flexi VATTI C822G', 'Potongan fleksibel, kuasa tinggi', NULL),
   ((SELECT id FROM product WHERE slug = 'vatti-flexi-hob-c823g'), 'ms-MY',

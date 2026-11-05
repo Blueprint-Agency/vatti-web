@@ -185,10 +185,14 @@ INSERT INTO category_faq (category_id, lang, position, question, answer_md) VALU
 -- ═══════════════════════════════════════════════════════════════════════════
 -- COOKER HOB
 -- ═══════════════════════════════════════════════════════════════════════════
+-- Rewritten with the English on 2026-11-05 (schedule item 14): twelve hobs
+-- not eleven, the three electric hobs named, the install-it-yourself FAQ
+-- replaced by a gas, ceramic or induction question. The header row, which
+-- ranks 4.0 for 煤气炉, is untouched.
 INSERT INTO category_guide (category_id, lang, position, heading, body_md, figure, figure_unit) VALUES
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 'zh-MY', 1,
    '从火力开始看',
-   '马来西亚的家常菜是猛火料理，炉火的额定功率决定炒锅能不能烧到够热。本页煤气炉的主火功率从 3.8 kW 到 6 kW。4.8 kW 以上，火力足以让整盘快炒保持镬气；低于这个数字，适合以煮汤、慢炖为主的家庭。',
+   '马来西亚的家常菜是猛火料理，炉火的额定功率决定炒锅能不能烧到够热。本页煤气炉的主火功率从 3.8 kW 到 6 kW。4.8 kW 以上，火力足以让整盘快炒保持镬气；低于这个数字，适合以煮汤、慢炖为主的家庭。我们的[马来西亚煤气炉推荐](/zh/buying-guide/best-gas-hob-malaysia/)为每种厨房各挑了一款。',
    '3.8-6', 'kW'),
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 'zh-MY', 2,
    '量开孔，不是量炉子',
@@ -196,15 +200,15 @@ INSERT INTO category_guide (category_id, lang, position, heading, body_md, figur
    '650-710', 'mm'),
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 'zh-MY', 3,
    '炒锅，还是要用煤气',
-   '煤气一转旋钮就有反应，从大火到小火瞬间切换，停电时照样能用。只要会炒菜，煤气仍是正确的选择；这里十一款中有九款是煤气炉。',
+   '煤气一转旋钮就有反应，从大火到小火瞬间切换，停电时照样能用。只要会炒菜，煤气仍是正确的选择；这里十二款中有九款是煤气炉。',
    NULL, NULL),
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 'zh-MY', 4,
-   '电陶炉，要的是平整台面',
-   '电陶炉加热均匀、没有明火，整个表面平整，一抹就干净。每个炉区最高 2,200 W，配备触控操作和余热提示。适合烹饪节奏较慢的厨房，或没有煤气接口的地方。',
+   '电陶炉或电磁炉，要的是平整台面',
+   '电炉加热均匀、没有明火，整个表面平整，一抹就干净。电陶炉区最高 2,200 W，配备触控操作和余热提示；VH-IC9-LA 则在电陶炉区旁配一个加强火力可达 2,300 W 的电磁炉区。适合干厨房、烹饪节奏较慢的厨房，或没有煤气接口的地方。',
    NULL, NULL),
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 'zh-MY', 5,
    '不用您操心的安全保护',
-   '这里每一款煤气炉都配有熄火保护装置，火一熄就切断煤气。多数型号的旋钮另设童锁，较新的型号还有防干烧和过热自动断气，以及炉上无锅时自动熄火的感应器。电陶炉则配备童锁、过热断电和余热提示。',
+   '这里每一款煤气炉都配有熄火保护装置，火一熄就切断煤气。多数型号的旋钮另设童锁，较新的型号还有防干烧和过热自动断气，以及炉上无锅时自动熄火的感应器。三款电炉都配备童锁、过热断电和余热提示。',
    NULL, NULL),
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 'zh-MY', 6,
    '玻璃面还是不锈钢面',
@@ -222,7 +226,7 @@ INSERT INTO category_reason (category_id, lang, position, title, body_md, figure
    '73', '%', 'heat'),
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 'zh-MY', 3,
    '安全是标配，不是升级',
-   '每个煤气炉头都有熄火保护，火一熄就立即切断供气。防干烧、过热断气、无锅感应和带童锁的旋钮分布在全系列，两款电陶炉另有过热保护和余热提示。',
+   '每个煤气炉头都有熄火保护，火一熄就立即切断供气。防干烧、过热断气、无锅感应和带童锁的旋钮分布在全系列，三款电炉另有过热保护和余热提示。',
    NULL, NULL, 'safety'),
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 'zh-MY', 4,
    '为擦拭而设计的台面',
@@ -234,7 +238,7 @@ INSERT INTO category_reason (category_id, lang, position, title, body_md, figure
    NULL, NULL, 'smart'),
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 'zh-MY', 6,
    '一点即着',
-   'M822G 和 C836G 零秒点火；台面后方没有插座的厨房，可选电子或电池点火；两款电陶炉则是全触控面板。',
+   'M822G 和 C836G 零秒点火；台面后方没有插座的厨房，可选电子或电池点火；三款电炉则是全触控面板。',
    NULL, NULL, 'controls');
 
 INSERT INTO category_faq (category_id, lang, position, question, answer_md) VALUES
@@ -266,8 +270,8 @@ INSERT INTO category_faq (category_id, lang, position, question, answer_md) VALU
    '怎样让煤气炉发挥得更好？',
    '锅要配炉：小锅放在 6 kW 的炉头上，大部分热力都会沿着锅边散走。清洁炉头盖、保持出火孔畅通，并用定时功能代替盯着时钟。'),
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 'zh-MY', 10,
-   '我可以自己安装煤气炉吗？',
-   '煤气炉不行。煤气炉必须由专业人员安装，自行安装不安全，也可能导致保修失效。有任何疑问，可以先向[授权经销商](/store-locations/)咨询。');
+   '该选煤气炉、电陶炉还是电磁炉？',
+   '用炒锅煮食就选煤气炉：旋钮一转火力马上反应，停电时照样能用。电陶炉或电磁炉适合干厨房，或不想要明火的家庭，VH-IC9-LA 更是两者合一。我们的[湿厨房 vs 干厨房](/zh/buying-guide/wet-kitchen-vs-dry-kitchen/)一文说明了哪种炉放在哪里，[电磁炉与煤气炉比较](/buying-guide/induction-cooker-vs-gas-stove/)则把两者并列分析。');
 
 -- ═══════════════════════════════════════════════════════════════════════════
 -- COMBI AND STEAM OVEN
@@ -599,7 +603,7 @@ INSERT INTO product_i18n (product_id, lang, name, best_for, intro_md) VALUES
   ((SELECT id FROM product WHERE slug = 'ceramic-cooker-hob-er5902t'), 'zh-MY',
    'VATTI 华帝电陶炉 ER5902T', '五个电陶炉区，大量烹煮', NULL),
   ((SELECT id FROM product WHERE slug = 'vatti-cooker-hob-vh-ic9-la'), 'zh-MY',
-   'VATTI 华帝电磁电陶炉 VH-IC9-LA', NULL, NULL),
+   'VATTI 华帝电磁电陶炉 VH-IC9-LA', '电磁加电陶，无明火', NULL),
 
   -- combi and steam oven
   ((SELECT id FROM product WHERE slug = 'vatti-built-in-air-fryer-oven-07559'), 'zh-MY',

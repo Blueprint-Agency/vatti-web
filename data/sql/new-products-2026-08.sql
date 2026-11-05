@@ -32,3 +32,10 @@ INSERT INTO product_image (product_id, image_id, position, role) VALUES ((SELECT
 -- category is the pick least likely to claim a feature they may not have.
 INSERT INTO product_collection_member (collection_id, product_id) VALUES ((SELECT id FROM product_collection WHERE slug = 'family-daily-cooking-series' AND category_id = (SELECT id FROM product_category WHERE slug = 'kitchen-hood-in-malaysia')), (SELECT id FROM product WHERE slug = 'vatti-cooker-hood-v959'));
 INSERT INTO product_collection_member (collection_id, product_id) VALUES ((SELECT id FROM product_collection WHERE slug = 'family-everyday-cooking' AND category_id = (SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia')), (SELECT id FROM product WHERE slug = 'vatti-cooker-hob-vh-ic9-la'));
+
+-- The comparison table's "Best for" line for the VH-IC9-LA (2026-11-05,
+-- content schedule item 14). It belongs beside the other hobs' lines in
+-- category-content.sql, but that file loads first ('c' before 'n') and its
+-- UPDATE would match no row, so it is set here, where the product exists.
+UPDATE product SET best_for = 'Induction and ceramic, no flame'
+  WHERE slug = 'vatti-cooker-hob-vh-ic9-la';

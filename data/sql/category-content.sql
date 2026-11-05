@@ -35,7 +35,10 @@
 -- verbatim.
 UPDATE product_category SET h1 = 'Powerful Kitchen Hood in Malaysia for Smoke-Free Malaysian Homes'
   WHERE slug = 'kitchen-hood-in-malaysia';
-UPDATE product_category SET h1 = 'Power & Precision Cooker Hob in Malaysia for Modern Asian Cooking'
+--
+-- The hob H1 no longer carries the live copy: it was rewritten for the generic
+-- head term on 2026-11-05, see "the hob page's head" below.
+UPDATE product_category SET h1 = 'Built-in Gas Hob in Malaysia, Made for Wok Cooking'
   WHERE slug = 'cooker-hob-in-malaysia';
 
 -- The remaining three, same story and same source: each is the hero heading
@@ -66,6 +69,25 @@ UPDATE product_category SET h1 = 'Single Tap Water Purifier & Instant Hot Water 
 UPDATE product_category SET meta_description =
   'VATTI kitchen hoods in Malaysia, compared on measured suction pressure, noise and airflow. Match one to your wok cooking and duct run. 10-year motor warranty.'
   WHERE slug = 'kitchen-hood-in-malaysia';
+
+-- ── the hob page's head ────────────────────────────────────────────────────
+-- Content schedule Q4, item 14. Search Console (sc-domain, 5 Aug to 3 Nov) has
+-- the page on brand queries only (vatti hob, vatti gas hob, vatti gas stove);
+-- for `gas hob malaysia` (590/month, SD 15, Ubersuggest MY) it does not show,
+-- and `built in gas hob malaysia` sits at 20.5 on 2 impressions. Page one is
+-- brand category pages titled "gas hob"; the old title, H1 and meta led on
+-- "cooker hob", a term that measures 30. So the head now leads on built-in gas
+-- hob, keeps VATTI in the title for the brand queries that do click, and
+-- states the measured 3.8 to 6 kW range. `gas stove malaysia` is left to the
+-- N5 guide. The Malay and Chinese heads are untouched: they lead on dapur gas
+-- and 煤气炉 already, and the Chinese page ranks 4.0 for 煤气炉.
+UPDATE product_category SET
+  seo_title = 'Gas Hob Malaysia | VATTI Built-in Gas, Ceramic & Induction Hobs',
+  meta_description =
+    'VATTI built-in gas hobs in Malaysia, 3.8 to 6 kW on the main burner, plus ceramic and induction hobs. Compare burner power, cut-out size and safety.',
+  intro_md =
+    'Built-in gas hobs for a kitchen that cooks with a wok, from 3.8 to 6 kW on the main burner, with a flame-failure safety device on every one. For a kitchen that wants no flame, two ceramic hobs and one that pairs induction with ceramic.'
+  WHERE slug = 'cooker-hob-in-malaysia';
 
 -- ── the dishwasher page's meta description and hero intro ──────────────────
 -- Content schedule Q4, item 1; docs/competitor-gap-dishwasher.md. Both led on
@@ -615,7 +637,7 @@ SELECT p.id, 'burners', m.value, '', 'Burners', m.position, m.source
 INSERT INTO category_guide (category_id, position, heading, body_md, figure, figure_unit) VALUES
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 1,
    'Burner power is where to start',
-   'Malaysian cooking is high-heat cooking, and the burner rating decides whether a wok gets there at all. The gas hobs on this page run from 3.8 kW to 6 kW on their main burners. From 4.8 kW upward there is enough heat to hold wok hei through a full stir-fry; below that suits a household that mostly boils and simmers.',
+   'Malaysian cooking is high-heat cooking, and the burner rating decides whether a wok gets there at all. The gas hobs on this page run from 3.8 kW to 6 kW on their main burners. From 4.8 kW upward there is enough heat to hold wok hei through a full stir-fry; below that suits a household that mostly boils and simmers. Our [best gas hob guide](/buying-guide/best-gas-hob-malaysia/) picks one for each kind of kitchen.',
    '3.8-6', 'kW'),
 
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 2,
@@ -625,17 +647,17 @@ INSERT INTO category_guide (category_id, position, heading, body_md, figure, fig
 
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 3,
    'Gas, for the wok',
-   'Gas answers the moment the knob turns, goes from full flame to a simmer instantly, and keeps working through a power cut. It is still the right choice for anyone who stir-fries, and it is what nine of the eleven hobs here are.',
+   'Gas answers the moment the knob turns, goes from full flame to a simmer instantly, and keeps working through a power cut. It is still the right choice for anyone who stir-fries, and it is what nine of the twelve hobs here are.',
    NULL, NULL),
 
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 4,
-   'Electric ceramic, for a flat top',
-   'A ceramic hob heats evenly, has no open flame, and wipes down in one pass because the whole surface is flat. Zones run up to 2,200 W, with touch control and a residual heat warning. Choose it for a kitchen that cooks more slowly, or where a gas point is not available.',
+   'Ceramic or induction, for a flat top',
+   'An electric hob heats evenly, has no open flame, and wipes down in one pass because the whole surface is flat. The ceramic zones run up to 2,200 W, with touch control and a residual heat warning, and the VH-IC9-LA sets an induction zone that boosts to 2,300 W beside a ceramic one. Choose one for a dry kitchen, a kitchen that cooks more slowly, or where a gas point is not available.',
    NULL, NULL),
 
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 5,
    'Safety that works without you',
-   'Every gas hob here carries a safety device that cuts the gas when a flame goes out. Most add a child lock on the control knob, and the newer models add burn-dry and thermal cut-offs plus a sensor that shuts a burner down with nothing on it. The ceramic hobs carry child lock, overheat cut-off and a residual heat warning.',
+   'Every gas hob here carries a safety device that cuts the gas when a flame goes out. Most add a child lock on the control knob, and the newer models add burn-dry and thermal cut-offs plus a sensor that shuts a burner down with nothing on it. All three electric hobs carry child lock, overheat cut-off and a residual heat warning.',
    NULL, NULL),
 
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 6,
@@ -661,7 +683,7 @@ INSERT INTO category_reason (category_id, position, title, body_md, figure, figu
 
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 3,
    'Safety as standard, not as an upgrade',
-   'A safety device on every gas burner cuts the supply the moment a flame goes out. Burn-dry cut-off, thermal cut-off, a no-cookware sensor and a child-locked knob appear across the range, and both ceramic hobs add overheat protection and a residual heat warning.',
+   'A safety device on every gas burner cuts the supply the moment a flame goes out. Burn-dry cut-off, thermal cut-off, a no-cookware sensor and a child-locked knob appear across the range, and all three electric hobs add overheat protection and a residual heat warning.',
    NULL, NULL, 'safety'),
 
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 4,
@@ -676,7 +698,7 @@ INSERT INTO category_reason (category_id, position, title, body_md, figure, figu
 
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 6,
    'Ignition that catches first time',
-   'Zero-second ignition on the M822G and the C836G, electric or battery firing where the kitchen has no socket behind the counter, and a full touch panel on both ceramic hobs.',
+   'Zero-second ignition on the M822G and the C836G, electric or battery firing where the kitchen has no socket behind the counter, and a full touch panel on all three electric hobs.',
    NULL, NULL, 'controls');
 
 -- ── cooker hob: FAQ ────────────────────────────────────────────────────────
@@ -709,7 +731,7 @@ INSERT INTO category_faq (category_id, position, question, answer_md) VALUES
 
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 6,
    'How far does a cooker hob need to be from a window?',
-   'At least 100 cm as a rule, so ventilation works properly and a draught cannot blow a flame out. Your installer will confirm it against the layout of your kitchen.'),
+   'At least 100 cm as a rule, so ventilation works properly and a draught cannot blow a flame out.'),
 
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 7,
    'Which cooker hob is easier to clean?',
@@ -724,8 +746,8 @@ INSERT INTO category_faq (category_id, position, question, answer_md) VALUES
    'Match the pan to the burner: a small pot on a 6 kW burner sends most of the heat up its sides. Clean the burner caps, keep the ports clear, and use the timer instead of watching the clock.'),
 
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 10,
-   'Can I install a cooker hob myself?',
-   'Not a gas one. Gas hobs have to be fitted by a professional, and doing it yourself is unsafe and can void the warranty. The [authorised dealer](/store-locations/) you buy from will arrange it.');
+   'Should I choose a gas, ceramic or induction hob?',
+   'Gas, if you cook with a wok: the flame answers the knob instantly and keeps working through a power cut. Ceramic or induction suits a dry kitchen or a home that wants no open flame, and the VH-IC9-LA puts both on one hob. Our guide to [wet and dry kitchens](/buying-guide/wet-kitchen-vs-dry-kitchen/) sets out which hob goes where, and our [induction versus gas comparison](/buying-guide/induction-cooker-vs-gas-stove/) weighs the two.');
 
 -- ── cooker hob: the "Best for" row ─────────────────────────────────────────
 -- One line per model for the comparison table, written against the measured
