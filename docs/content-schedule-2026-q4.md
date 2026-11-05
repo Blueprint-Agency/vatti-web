@@ -81,7 +81,7 @@ existed.
 
 | # | Piece | EN keyword | MS keyword | ZH keyword | Status | Evidence |
 |---|---|---|---|---|---|---|
-| N6 | Wet kitchen and dry kitchen: which appliance goes where | wet kitchen design (720, SD 13); wet kitchen (590, SD 16); dry kitchen design (480, SD 12); wet and dry kitchen (320, SD 13) | dapur basah (390, SD 20); design dapur basah (170); dapur kering (110) | 干湿厨房, map first | Not started | New 19 Oct, replacing Vatti vs Rubine (rival comparisons ruled out). The Malaysian two-kitchen layout decides which hood, hob and dishwasher go in which room, and no existing article covers it. Layout-led, not renovation: no installation or cost copy. Links to the hood, hob and dishwasher pillars and to N3, N4 and N5. Check the SERP first: `design dapur` results lean on image galleries |
+| N6 | Wet kitchen and dry kitchen: which appliance goes where | wet kitchen design (720, SD 13); wet kitchen (590, SD 16); dry kitchen design (480, SD 12); wet and dry kitchen (320, SD 13) | dapur basah (390, SD 20); design dapur basah (170); dapur kering (110) | 干湿厨房 (competitor) | Done 5 Nov | `/buying-guide/wet-kitchen-vs-dry-kitchen/`, `/ms/panduan-membeli/dapur-basah-dan-dapur-kering/`, `/zh/buying-guide/wet-kitchen-vs-dry-kitchen/` (`piece-n6-wet-dry-kitchen.sql`, `translation-n6-*`). Targets the "wet and dry kitchen" cluster (four variants at 110 to 320, SD 9 to 13), not the "design" terms, whose SERP leads with an image pack and Pinterest. Page one is cabinet makers on layout; none says which appliance goes where. Malay skips `barang dapur basah` (groceries) and the `ubahsuai` renovation terms. New 19 Oct, replacing Vatti vs Rubine (rival comparisons ruled out). The Malaysian two-kitchen layout decides which hood, hob and dishwasher go in which room, and no existing article covers it. Layout-led, not renovation: no installation or cost copy. Links to the hood, hob and dishwasher pillars and to N3, N4 and N5. Check the SERP first: `design dapur` results lean on image galleries |
 | N7 | Best dishwasher in Malaysia | built in dishwasher (210, SD 16); best dishwasher malaysia (110, SD 44) | mesin basuh pinggan, map first | 洗碗机, map first | Not started | Led by capacity like the dishwasher pillar (17 and 20 place settings). Must not compete with the pillar for `dishwasher malaysia`. Brand keywords (bosch, lg) dropped 19 Oct; no other brand is named |
 | N8 | Best induction hob in Malaysia | best induction hob malaysia (210, SD 11); best induction cooker malaysia (170, SD 16) | map first | map first | Not started | `induction cooker malaysia` measures 590. The existing induction-vs-gas and induction-vs-ceramic articles are comparisons, not a best-of |
 | N9 | Steam oven in Malaysia: what it does for local cooking | steam oven malaysia (210, SD 10) | ketuhar stim, map first | 蒸烤箱 | Not started | New 7 Oct. No article on steam ovens exists. Guide format linking up to the combi oven pillar, which targets `combi oven malaysia`; check the pillar's ranking before and after to catch cannibalisation |
@@ -145,9 +145,9 @@ New pieces, counted in URLs. Target 15 a month.
 | | Pieces | URLs planned | URLs live | Done | Partly | Not started |
 |---|---|---|---|---|---|---|
 | Month 1, October | 5 | 13 | 13 | 5 | 0 | 0 |
-| Month 2, November | 5 | 15 | 0 | 0 | 0 | 5 |
+| Month 2, November | 5 | 15 | 3 | 1 | 0 | 4 |
 | Month 3, December | 5 | 15 | 0 | 0 | 0 | 5 |
-| Quarter | 15 | 43 | 13 | 5 | 0 | 10 |
+| Quarter | 15 | 43 | 16 | 6 | 0 | 9 |
 
 Improvements: 14 rows, 8 done, 1 partly done, 5 not started.
 

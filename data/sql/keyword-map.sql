@@ -105,3 +105,14 @@ INSERT INTO keyword_map (page, lang, keyword, secondary, volume, basis, source, 
   ('article:best-gas-hob-malaysia', 'zh-MY', '煤气炉推荐', '煤气炉哪个牌子好', NULL, 'competitor',
    'Search Console sc-domain; Firecrawl KL', '2026-10-19',
    'The Chinese category page ranks 4.7 for 煤气炉 (377 impressions, 21 Jul to 19 Oct), so this page takes the 推荐 framing N3 used beside 抽油烟机. 嵌入式煤气炉 in the title marks it as built-in.');
+
+-- N6, wet kitchen and dry kitchen (content schedule, November; replaced Vatti
+-- vs Rubine on 2026-10-19). English target recorded in the article header, see
+-- piece-n6-wet-dry-kitchen.sql.
+INSERT INTO keyword_map (page, lang, keyword, secondary, volume, basis, source, pulled_on, note) VALUES
+  ('article:wet-kitchen-vs-dry-kitchen', 'ms-MY', 'dapur basah', 'dapur kering', 390, 'volume',
+   'Ubersuggest MY ms', '2026-11-05',
+   'SD 20; dapur kering 110, SD 18. Left out: barang dapur basah (590) means wet groceries, and the ubahsuai/contoh dapur basah belakang rumah terms (320 to 390) are renovation intent, which the client ruled out. SERP is cabinet makers, PropertyGuru BM and Pinterest; none says which appliance goes where.'),
+  ('article:wet-kitchen-vs-dry-kitchen', 'zh-MY', '干湿厨房', '湿厨房 干厨房', NULL, 'competitor',
+   'Firecrawl KL', '2026-11-05',
+   'Nothing measures. Malaysian pages rank with 湿厨房 vs 干厨房 (iproperty.com.my/zh, clickbina.com/zh, sivenzo.com/zh) and 干湿厨房 (fattinterior.com/zh, flashcast.com.my/zh); the title carries both.');
