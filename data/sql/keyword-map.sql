@@ -116,3 +116,13 @@ INSERT INTO keyword_map (page, lang, keyword, secondary, volume, basis, source, 
   ('article:wet-kitchen-vs-dry-kitchen', 'zh-MY', '干湿厨房', '湿厨房 干厨房', NULL, 'competitor',
    'Firecrawl KL', '2026-11-05',
    'Nothing measures. Malaysian pages rank with 湿厨房 vs 干厨房 (iproperty.com.my/zh, clickbina.com/zh, sivenzo.com/zh) and 干湿厨房 (fattinterior.com/zh, flashcast.com.my/zh); the title carries both.');
+
+-- N9, what a steam oven is (content schedule, November). English target
+-- recorded in the article header, see piece-n9-steam-oven.sql.
+INSERT INTO keyword_map (page, lang, keyword, secondary, volume, basis, source, pulled_on, note) VALUES
+  ('article:what-is-a-steam-oven', 'ms-MY', 'ketuhar stim', 'periuk kukus', NULL, 'competitor',
+   'Ubersuggest MY ms; Search Console sc-domain', '2026-11-05',
+   'Nothing measures: ketuhar stim and oven stim return no data. The Malay oven category page already carries Ketuhar Stim in its h1, so this page leads with the question Apa itu ketuhar stim. periuk kukus (590, SD 20) is the steamer pot buyers already own; it is a section, not the target, since VATTI does not sell one.'),
+  ('article:what-is-a-steam-oven', 'zh-MY', '蒸烤箱有必要买吗', '蒸烤箱能做什么', NULL, 'competitor',
+   'Firecrawl KL', '2026-11-05',
+   'Nothing measures on Ubersuggest MY zh. The Chinese category page ranks 3 for 蒸烤箱 queries, so this page takes the buyer''s question, as the ranking Chinese guides title it (Zhihu, 蒸烤箱有必要买吗). Malaysian pages say 蒸烤箱 for a combi and 蒸箱 for steam only.');
