@@ -307,8 +307,10 @@ const BETTER: Record<string, "high" | "low"> = {
 
 export function getCategoryProducts(categoryId: number, locale: Locale = "en"): CategoryProduct[] {
   const d = t(locale);
-  const rows = all<Omit<CategoryProduct, "facets" | "filters" | "auto_clean" | "href"> & { id: number }>(
-    `SELECT p.id, p.slug, coalesce(pi.name, p.name) AS name, p.model_code, p.secondary_model,
+  const rows = all<
+    Omit<CategoryProduct, "facets" | "filters" | "auto_clean" | "href"> & { id: number; variant_group: string | null }
+  >(
+    `SELECT p.id, p.variant_group, p.slug, coalesce(pi.name, p.name) AS name, p.model_code, p.secondary_model,
             p.series, p.colour_variant, coalesce(pi.best_for, p.best_for) AS best_for, i.url, i.alt
        FROM product p
        LEFT JOIN image i ON i.id = p.hero_image_id
@@ -355,7 +357,7 @@ export function getCategoryProducts(categoryId: number, locale: Locale = "en"): 
     ...ids
   );
 
-  return rows.map(({ id, ...r }) => {
+  return rows.map(({ id, variant_group, ...r }) => {
     const mine = facets
       .filter((f) => f.product_id === id)
       .map((f) => ({ ...f, label: d.facets[f.label] ?? f.label }));
@@ -379,6 +381,13 @@ export function getCategoryProducts(categoryId: number, locale: Locale = "en"): 
 
     return {
       ...r,
+      // The card stands for every colour in its group, so it drops the one
+      // colour its front member's name ends with: "V917 (Carbon Black)" ->
+      // "V917". The product page keeps the full name and offers the swatches.
+      // Full-width brackets too, for the Chinese names.
+      // Same for the compare dropdown, which would otherwise say "V917 - Carbon Black".
+      name: variant_group ? r.name.replace(/\s*[(（][^()（）]*[)）]\s*$/, "") : r.name,
+      colour_variant: variant_group ? null : r.colour_variant,
       href: localProductPath(locale, r.slug),
       auto_clean: cycle && `${cycle}${suffix}`,
       facets: mine,
