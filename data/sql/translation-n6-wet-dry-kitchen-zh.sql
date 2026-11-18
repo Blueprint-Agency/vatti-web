@@ -57,7 +57,7 @@ VALUES (123, 'wet-kitchen-vs-dry-kitchen', 'buying-guide/wet-kitchen-vs-dry-kitc
 [![VATTI 华帝 V919 抽油烟机](https://cdn.vattimalaysia.com/2026/08/vatti-magic-series-cooker-hood-v919-front.webp)](/vatti-magic-series-cooker-hood-v919/)
 [![VATTI 华帝 V959 抽油烟机](https://cdn.vattimalaysia.com/2026/08/vatti-cooker-hood-v959-front.webp)](/vatti-cooker-hood-v959/)
 
-**干厨房**的抽油烟机就在眼前，离饭桌也近。[V929](/vatti-aetheris-series-cooker-hood-v929/) 是 VATTI 最安静的型号，只有 46.5 dB，风量仍有 3,125 m³/h，干厨房真正开火煮时也应付得来。[V938](/vatti-hidden-series-range-hood-v938/) 隐藏式设计与橱柜齐平、没有烟囱，48 dB。开放式干厨房常常没有外墙；VATTI 有 13 款抽油烟机可以**外排或内循环**，不接排烟管时用活性炭过滤后把空气送回室内。我们的[马来西亚抽油烟机推荐](/zh/buying-guide/best-kitchen-hood-malaysia/)比较了每一款。
+**干厨房**的抽油烟机就在眼前，离饭桌也近。[V929](/vatti-aetheris-series-cooker-hood-v929/) 是 VATTI 最安静的型号，只有 46.5 dB，风量仍有 3,125 m³/h，干厨房真正开火煮时也应付得来。[V938](/vatti-hidden-series-range-hood-v938/) 隐藏式设计与橱柜齐平、没有烟囱，48 dB。开放式干厨房常常没有外墙；每一款 VATTI 抽油烟机都可以**外排或内循环**，不接排烟管时用蜂窝状滤网过滤后把空气送回室内。我们的[马来西亚抽油烟机推荐](/zh/buying-guide/best-kitchen-hood-malaysia/)比较了每一款。
 
 [![VATTI 华帝 V929 抽油烟机](https://cdn.vattimalaysia.com/2026/08/vatti-aetheris-series-cooker-hood-v929-front.webp)](/vatti-aetheris-series-cooker-hood-v929/)
 [![VATTI 华帝 V938 抽油烟机](https://cdn.vattimalaysia.com/2026/08/vatti-hidden-series-range-hood-v938-front.webp)](/vatti-hidden-series-range-hood-v938/)
@@ -104,7 +104,7 @@ VALUES (123, 'wet-kitchen-vs-dry-kitchen', 'buying-guide/wet-kitchen-vs-dry-kitc
 
 大部分公寓只有一个厨房，而且常常对客厅开放，两种工作都要包办。把它当成一个客人看得见的湿厨房来规划。
 
-- **抽油烟机：** 要湿厨房级别的风量，加上干厨房级别的安静。V929 风量 3,125 m³/h、噪音 46.5 dB，最接近两者。没有外墙的话，就从 13 款可外排或内循环的型号中选；[免打孔抽油烟机值得买吗](/zh/buying-guide/which-is-better-ducted-or-ductless-range-hood/)一文说明了会有什么不同。
+- **抽油烟机：** 要湿厨房级别的风量，加上干厨房级别的安静。V929 风量 3,125 m³/h、噪音 46.5 dB，最接近两者。没有外墙的话，每一款 VATTI 抽油烟机都能以内循环方式使用，用蜂窝状滤网代替排烟管；[免打孔抽油烟机值得买吗](/zh/buying-guide/which-is-better-ducted-or-ductless-range-hood/)一文说明了会有什么不同。
 - **炉具：** 炒锅用煤气炉。如果还想要一个无明火的区域，旁边再配电陶炉或电磁炉就两全其美。
 - **烟灶联动：** 部分 VATTI 抽油烟机和炉具具备 **Smart Auto Link 烟灶联动**，炉具一开，抽油烟机就跟着启动。在开放式厨房里，第一缕油烟升起时抽油烟机已经在抽。V929、V938、V959、V960 和 V997 抽油烟机都列有此功能，C836G 和 VH-IC9-LA 炉具也有；哪几款可以配对，欢迎问我们。
 

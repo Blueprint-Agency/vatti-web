@@ -148,9 +148,9 @@ VALUES (111, 'types-of-range-hoods', 'buying-guide/types-of-range-hoods', 'buyin
 
 **T 型（烟囱式）抽油烟机。** 平板机身装在煤气炉上方，烟囱直通天花板。经典造型，容易清洁。例如 [V931](/artemis-series-t-type-range-hood-v931/) 和 [V937](/triple-intake-series-t-type-cooker-hood-v937/)。
 
-**升降式抽油烟机。** 吸烟腔会降向煤气炉，离锅具约 350 mm，T 型机约为 580 mm，所以油烟还没扩散到整个厨房就被吸走。例如 Athena 系列：[V991](/athena-series-lifting-type-range-hood-v991/)、[V993](/athena-series-lifting-type-range-hood-v993/) 和 [V999](/athena-series-lifting-type-range-hood-v999/)。
+**升降式抽油烟机。** 吸烟腔会降向煤气炉，离锅具约 350 mm，T 型机约为 580 mm，所以油烟还没扩散到整个厨房就被吸走。例如 Athena 系列：[V993](/athena-series-lifting-type-range-hood-v993/) 和 [V999](/athena-series-lifting-type-range-hood-v999/)。
 
-**纤薄型抽油烟机。** 机身低矮，适合小厨房或装在吊柜下方。例如 [V995](/slim-series-type-range-hood-v995/) 和 [V996](/vatti-slim-series-type-range-hood-v996/)。
+**纤薄型抽油烟机。** 机身低矮，适合小厨房或装在吊柜下方。例如 [V995](/slim-series-type-range-hood-v995/)。
 
 **隐藏式抽油烟机。** 机身藏在吊柜里，从厨房只看得到前面板。[V938](/vatti-hidden-series-range-hood-v938/) 就是一例：机身深 325 mm，运转时面板下降 105 mm，打开吸烟口。
 
@@ -166,7 +166,7 @@ VALUES (111, 'types-of-range-hoods', 'buying-guide/types-of-range-hoods', 'buyin
 
 VATTI 系列的静压由 **420 Pa** 到 **1,700 Pa**：
 
-- **烟管短而直**，像大多数排屋：[V931](/artemis-series-t-type-range-hood-v931/)（420 Pa）、[V995](/slim-series-type-range-hood-v995/)（450 Pa）或 [V991](/athena-series-lifting-type-range-hood-v991/)（460 Pa）就够用。
+- **烟管短而直**，像大多数排屋：[V931](/artemis-series-t-type-range-hood-v931/)（420 Pa）或 [V995](/slim-series-type-range-hood-v995/)（450 Pa）就够用。
 - **高楼公寓、烟管长或弯**：从 1,000 Pa 以上开始选。[V997](/vatti-range-hood-v997/) 1,200 Pa、[V929](/vatti-aetheris-series-cooker-hood-v929/) 1,300 Pa、[V938](/vatti-hidden-series-range-hood-v938/) 1,600 Pa、[V960](/vatti-stellar-series-cooker-hood-v960/) 1,700 Pa。
 
 ### 噪音（dB）
@@ -177,15 +177,15 @@ VATTI 系列的静压由 **420 Pa** 到 **1,700 Pa**：
 
 外排式抽油烟机把油烟排到屋外，油烟、气味、热气和湿气一并带走。免打孔（内循环）抽油烟机则把空气过滤后送回厨房：能拦截油脂、减少气味，但热气和水汽会留下。
 
-大楼允许的话，选外排式。不允许的话，VATTI 有 13 款型号两种模式都能用。详细说明请看[免打孔抽油烟机](/zh/buying-guide/which-is-better-ducted-or-ductless-range-hood/)。
+大楼允许的话，选外排式。不允许的话，每一款 VATTI 抽油烟机两种模式都能用。详细说明请看[免打孔抽油烟机](/zh/buying-guide/which-is-better-ducted-or-ductless-range-hood/)。
 
 ## 油脂分离与清洁
 
-大多数 VATTI 华帝抽油烟机的油脂分离率为 **92%**，[V959](/vatti-cooker-hood-v959/) 高达 **95%**，V931、V937 和 Athena 系列（V991、V993、V999）则为 85%。机内拦下的油越多，黏在橱柜和天花板上的就越少。
+大多数 VATTI 华帝抽油烟机的油脂分离率为 **92%**，[V959](/vatti-cooker-hood-v959/) 高达 **95%**，V931、V937 和 Athena 系列（V993、V999）则为 85%。机内拦下的油越多，黏在橱柜和天花板上的就越少。
 
 拦下的油总要清理，而 VATTI 抽油烟机在这方面有所不同：
 
-- **热熔自动清洗**，例如 [V917](/vatti-cooker-hood-v917-carbon-grey/) 和 [V996](/vatti-slim-series-type-range-hood-v996/)：17 分钟、七个阶段的清洗程序，把机内加热到油脂融化，再由风机把油排出。不用加水，也不用倒水。
+- **热熔自动清洗**，例如 [V917](/vatti-cooker-hood-v917-carbon-grey/)：17 分钟、七个阶段的清洗程序，把机内加热到油脂融化，再由风机把油排出。不用加水，也不用倒水。
 - **蒸汽自动清洗**，例如 [V997](/vatti-range-hood-v997/)；[V938](/vatti-hidden-series-range-hood-v938/) 则同时使用蒸汽和热水。
 
 ## 保修

@@ -34,7 +34,7 @@ VALUES (115, 'kitchen-exhaust-fan-vs-cooker-hood', 'buying-guide/kitchen-exhaust
 
 ### Quick answer
 
-If you cook with a wok, fry or make sambal, you need a **cooker hood**. An exhaust fan cannot catch oil at the pan, and most have no grease filter at all, so the oil mist settles on walls, ceilings and the fan blades. An exhaust fan is still useful for heat, humidity and lingering smells, and works well **beside** a hood. If your kitchen has no outside wall, a hood that runs without a duct is the answer: 13 VATTI hoods can.
+If you cook with a wok, fry or make sambal, you need a **cooker hood**. An exhaust fan cannot catch oil at the pan, and most have no grease filter at all, so the oil mist settles on walls, ceilings and the fan blades. An exhaust fan is still useful for heat, humidity and lingering smells, and works well **beside** a hood. If your kitchen has no outside wall, a hood that runs without a duct is the answer, and every VATTI hood can.
 
 [Ask us which hood fits your kitchen](https://wa.me/60123366082)
 
@@ -74,7 +74,7 @@ If your kitchen already has an exhaust fan and the cabinets are still getting gr
 
 ## When there is no outside wall
 
-Many condo kitchens are in the middle of the unit, with no wall to put a fan in. A wall exhaust fan is not an option there, but a cooker hood still is. Thirteen VATTI hoods list **ducted or recycled** on their spec sheet, so they can run with a charcoal filter and no duct. Without a duct, oil capture and noise matter most, which makes the V959 (95% oil capture) and the [V929](/vatti-aetheris-series-cooker-hood-v929/) (46.5 dB) the strongest choices. Our guide to [ducted or ductless range hoods](/buying-guide/which-is-better-ducted-or-ductless-range-hood/) explains what changes.
+Many condo kitchens are in the middle of the unit, with no wall to put a fan in. A wall exhaust fan is not an option there, but a cooker hood still is. Every VATTI hood can run **ducted or recycled**, so it can run with a honeycomb recirculation filter and no duct. Without a duct, oil capture and noise matter most, which makes the V959 (95% oil capture) and the [V929](/vatti-aetheris-series-cooker-hood-v929/) (46.5 dB) the strongest choices. Our guide to [ducted or ductless range hoods](/buying-guide/which-is-better-ducted-or-ductless-range-hood/) explains what changes.
 
 ## Which VATTI hood to choose instead of relying on a fan
 
@@ -100,7 +100,7 @@ Not well. Most have no grease filter, so oil that reaches the fan coats its blad
 Not for the smoke and oil; the hood handles those. A fan is still useful for heat and humidity in a kitchen that stays warm, and the two work well together.
 
 **What if my kitchen has no window or outside wall?**
-Choose a cooker hood that can run without a duct. It cleans the air through a charcoal filter and returns it to the room. Thirteen VATTI hoods can run this way.
+Choose a cooker hood that can run without a duct. It cleans the air through a charcoal filter and returns it to the room. Every VATTI hood can run this way.
 
 **Is a cooker hood noisy?**
 It depends on the model. The VATTI range runs from 46.5 dB to 54 dB; our guide to [why a silent kitchen hood matters](/buying-guide/why-choose-silent-kitchen-hood-expert-answer/) explains what those numbers sound like.

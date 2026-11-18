@@ -57,7 +57,7 @@ Nama itu merujuk kepada kekotoran, bukan lantai. **Dapur basah** dibina untuk ma
 [![Hood dapur VATTI V919](https://cdn.vattimalaysia.com/2026/08/vatti-magic-series-cooker-hood-v919-front.webp)](/vatti-magic-series-cooker-hood-v919/)
 [![Hood dapur VATTI V959](https://cdn.vattimalaysia.com/2026/08/vatti-cooker-hood-v959-front.webp)](/vatti-cooker-hood-v959/)
 
-**Di dapur kering**, hood kelihatan jelas dan dekat dengan meja makan. [V929](/vatti-aetheris-series-cooker-hood-v929/) ialah hood VATTI paling senyap pada 46.5 dB tetapi masih mengalirkan 3,125 m³/h, jadi ia mampu apabila dapur kering digunakan untuk masakan sebenar. [V938](/vatti-hidden-series-range-hood-v938/) rata dengan kabinet tanpa cerobong, pada 48 dB. Dapur kering yang terbuka selalunya tiada dinding luar; 13 hood VATTI boleh berfungsi **dengan saluran atau secara kitar semula**, membersihkan udara melalui penapis karbon tanpa saluran. Panduan [hood dapur terbaik](/ms/panduan-membeli/hood-dapur-terbaik/) kami membandingkan setiap model.
+**Di dapur kering**, hood kelihatan jelas dan dekat dengan meja makan. [V929](/vatti-aetheris-series-cooker-hood-v929/) ialah hood VATTI paling senyap pada 46.5 dB tetapi masih mengalirkan 3,125 m³/h, jadi ia mampu apabila dapur kering digunakan untuk masakan sebenar. [V938](/vatti-hidden-series-range-hood-v938/) rata dengan kabinet tanpa cerobong, pada 48 dB. Dapur kering yang terbuka selalunya tiada dinding luar; semua hood VATTI boleh berfungsi **dengan saluran atau secara kitar semula**, membersihkan udara melalui penapis sarang lebah tanpa saluran. Panduan [hood dapur terbaik](/ms/panduan-membeli/hood-dapur-terbaik/) kami membandingkan setiap model.
 
 [![Hood dapur VATTI V929](https://cdn.vattimalaysia.com/2026/08/vatti-aetheris-series-cooker-hood-v929-front.webp)](/vatti-aetheris-series-cooker-hood-v929/)
 [![Hood dapur VATTI V938](https://cdn.vattimalaysia.com/2026/08/vatti-hidden-series-range-hood-v938-front.webp)](/vatti-hidden-series-range-hood-v938/)
@@ -104,7 +104,7 @@ Letakkan di sinki yang anda gunakan untuk mengisi cerek dan periuk nasi. Di bany
 
 Kebanyakan kondominium ada satu dapur, selalunya terbuka ke ruang tamu, yang perlu melakukan kedua-dua kerja. Rancang ia seperti dapur basah yang boleh dilihat tetamu.
 
-- **Hood:** ambil aliran udara hood dapur basah dan bunyi hood dapur kering. V929, pada 3,125 m³/h dan 46.5 dB, paling hampir dengan kedua-duanya. Jika tiada dinding luar, pilih salah satu daripada 13 hood yang boleh berfungsi dengan saluran atau secara kitar semula; panduan [hood dapur tanpa tebuk dinding](/ms/panduan-membeli/hood-dapur-tanpa-tebuk-dinding/) kami menerangkan apa yang berubah.
+- **Hood:** ambil aliran udara hood dapur basah dan bunyi hood dapur kering. V929, pada 3,125 m³/h dan 46.5 dB, paling hampir dengan kedua-duanya. Jika tiada dinding luar, semua hood VATTI boleh berfungsi secara kitar semula, melalui penapis sarang lebah tanpa saluran; panduan [hood dapur tanpa tebuk dinding](/ms/panduan-membeli/hood-dapur-tanpa-tebuk-dinding/) kami menerangkan apa yang berubah.
 - **Dapur:** dapur gas untuk kuali. Jika anda juga mahu zon tanpa api, dapur seramik atau induksi di sebelahnya merangkumi kedua-duanya.
 - **Hood dan dapur bersama:** hood dan dapur VATTI terpilih ada **Smart Auto Link**, jadi hood hidup apabila dapur dihidupkan. Di dapur terbuka, ini bermakna hood sudah menyedut apabila asap pertama naik. Hood V929, V938, V959, V960 dan V997 menyenaraikannya, begitu juga dapur C836G dan VH-IC9-LA; tanya kami pasangan mana yang berfungsi bersama.
 

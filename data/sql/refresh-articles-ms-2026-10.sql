@@ -164,9 +164,9 @@ Masakan Barat banyak menggunakan ketuhar. Masakan Malaysia menumis dan menggoren
 
 **Hood jenis T (cerobong).** Badan rata di atas dapur gas dengan cerobong menegak ke siling. Reka bentuk klasik yang mudah dibersihkan. Contohnya [V931](/artemis-series-t-type-range-hood-v931/) dan [V937](/triple-intake-series-t-type-cooker-hood-v937/).
 
-**Hood angkat (lifting type).** Ruang sedutannya turun ke arah dapur gas, kira-kira 350 mm di atas periuk berbanding kira-kira 580 mm bagi hood jenis T, jadi asap disedut sebelum sempat merebak ke seluruh dapur. Contohnya siri Athena: [V991](/athena-series-lifting-type-range-hood-v991/), [V993](/athena-series-lifting-type-range-hood-v993/) dan [V999](/athena-series-lifting-type-range-hood-v999/).
+**Hood angkat (lifting type).** Ruang sedutannya turun ke arah dapur gas, kira-kira 350 mm di atas periuk berbanding kira-kira 580 mm bagi hood jenis T, jadi asap disedut sebelum sempat merebak ke seluruh dapur. Contohnya siri Athena: [V993](/athena-series-lifting-type-range-hood-v993/) dan [V999](/athena-series-lifting-type-range-hood-v999/).
 
-**Hood nipis (slim).** Profil rendah untuk dapur kecil atau di bawah kabinet dinding. Contohnya [V995](/slim-series-type-range-hood-v995/) dan [V996](/vatti-slim-series-type-range-hood-v996/).
+**Hood nipis (slim).** Profil rendah untuk dapur kecil atau di bawah kabinet dinding. Contohnya [V995](/slim-series-type-range-hood-v995/).
 
 **Hood tersembunyi.** Badan hood diletakkan di dalam kabinet dinding, dan dari dapur anda hanya nampak panel hadapan. [V938](/vatti-hidden-series-range-hood-v938/) ialah contohnya: badannya sedalam 325 mm dan panelnya turun 105 mm untuk membuka ruang sedutan apabila ia berjalan.
 
@@ -182,7 +182,7 @@ Ini angka yang paling kerap diabaikan, dan yang paling penting di kondo. Aliran 
 
 Rangkaian VATTI bermula dari **420 Pa** hingga **1,700 Pa**:
 
-- **Saluran pendek dan terus**, seperti di kebanyakan rumah teres: [V931](/artemis-series-t-type-range-hood-v931/) (420 Pa), [V995](/slim-series-type-range-hood-v995/) (450 Pa) atau [V991](/athena-series-lifting-type-range-hood-v991/) (460 Pa) sudah memadai.
+- **Saluran pendek dan terus**, seperti di kebanyakan rumah teres: [V931](/artemis-series-t-type-range-hood-v931/) (420 Pa) atau [V995](/slim-series-type-range-hood-v995/) (450 Pa) sudah memadai.
 - **Kondo tingkat tinggi, saluran panjang atau berliku**: mulakan dari 1,000 Pa ke atas. [V997](/vatti-range-hood-v997/) 1,200 Pa, [V929](/vatti-aetheris-series-cooker-hood-v929/) 1,300 Pa, [V938](/vatti-hidden-series-range-hood-v938/) 1,600 Pa dan [V960](/vatti-stellar-series-cooker-hood-v960/) 1,700 Pa.
 
 ### Bunyi (dB)
@@ -193,7 +193,7 @@ Hood yang terlalu bising akan dimatikan terlalu awal, dan asap yang tinggal akan
 
 Hood bersaluran menolak asap ke luar rumah dan membuang asap, bau, haba serta kelembapan. Hood tanpa tebuk dinding (kitar semula) menapis udara dan mengembalikannya ke dapur. Ia menangkap minyak dan mengurangkan bau, tetapi haba dan wap kekal.
 
-Pilih bersaluran jika bangunan membenarkannya. Jika tidak, 13 model VATTI boleh berfungsi dalam kedua-dua mod. Baca [hood dapur tanpa tebuk dinding](/ms/panduan-membeli/hood-dapur-tanpa-tebuk-dinding/) untuk penjelasan penuh.
+Pilih bersaluran jika bangunan membenarkannya. Jika tidak, semua hood VATTI boleh berfungsi dalam kedua-dua mod. Baca [hood dapur tanpa tebuk dinding](/ms/panduan-membeli/hood-dapur-tanpa-tebuk-dinding/) untuk penjelasan penuh.
 
 ## Tapisan minyak dan pembersihan
 
@@ -201,7 +201,7 @@ Kebanyakan hood VATTI menapis **92%** minyak, dan [V959](/vatti-cooker-hood-v959
 
 Minyak yang ditangkap perlu dibersihkan, dan di sini hood VATTI berbeza:
 
-- **Cuci automatik dengan haba**, seperti pada [V917](/vatti-cooker-hood-v917-carbon-grey/) dan [V996](/vatti-slim-series-type-range-hood-v996/): kitaran 17 minit dalam tujuh peringkat yang memanaskan ruang dalam hood sehingga minyak cair, lalu kipas membuangnya. Tiada air untuk diisi atau dibuang.
+- **Cuci automatik dengan haba**, seperti pada [V917](/vatti-cooker-hood-v917-carbon-grey/): kitaran 17 minit dalam tujuh peringkat yang memanaskan ruang dalam hood sehingga minyak cair, lalu kipas membuangnya. Tiada air untuk diisi atau dibuang.
 - **Cuci automatik dengan wap**, seperti pada [V997](/vatti-range-hood-v997/), dan pada [V938](/vatti-hidden-series-range-hood-v938/) yang menggunakan wap dan air panas bersama.
 
 ## Waranti

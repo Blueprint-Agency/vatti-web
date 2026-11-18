@@ -31,7 +31,7 @@ VALUES (112, 'best-kitchen-hood-malaysia', 'buying-guide/best-kitchen-hood-malay
 
 ### Quick answer
 
-Read three numbers before anything else: **airflow** (m³/h), **static pressure** (Pa) and **noise** (dB). For a high-floor condo with a long shared duct, pick on pressure: the [V960](/vatti-stellar-series-cooker-hood-v960/) holds 1,700 Pa. For an open kitchen, pick on noise: the [V929](/vatti-aetheris-series-cooker-hood-v929/) runs at 46.5 dB. If the wall cannot be drilled, 13 VATTI hoods run without a duct.
+Read three numbers before anything else: **airflow** (m³/h), **static pressure** (Pa) and **noise** (dB). For a high-floor condo with a long shared duct, pick on pressure: the [V960](/vatti-stellar-series-cooker-hood-v960/) holds 1,700 Pa. For an open kitchen, pick on noise: the [V929](/vatti-aetheris-series-cooker-hood-v929/) runs at 46.5 dB. If the wall cannot be drilled, every VATTI hood can run without a duct.
 
 [Ask us which one fits](https://wa.me/60123366082)
 
@@ -87,16 +87,15 @@ Smoke from the outer burners escapes a hood that only pulls from the middle. The
 
 With a short, direct duct, pressure matters less and capture at the pan matters more. On the Athena lifting-type hoods the intake drops toward the hob, about 350 mm above the pot against roughly 580 mm for a T-type hood. The [V993](/athena-series-lifting-type-range-hood-v993/) and [V999](/athena-series-lifting-type-range-hood-v999/) both move 2,500 m³/h; the V999 adds a hand sensor.
 
-### For a small kitchen: V995 or V996
+### For a small kitchen: V995
 
 [![VATTI V995 cooker hood](https://cdn.vattimalaysia.com/2026/08/slim-series-type-range-hood-v995-front.webp)](/slim-series-type-range-hood-v995/)
-[![VATTI V996 cooker hood](https://cdn.vattimalaysia.com/2026/08/vatti-slim-series-type-range-hood-v996-front.webp)](/vatti-slim-series-type-range-hood-v996/)
 
-Where the hood has to fit under a wall cabinet, the slim profiles save the space. The [V995](/slim-series-type-range-hood-v995/) moves 2,050 m³/h at 52 dB and can run without a duct; the [V996](/vatti-slim-series-type-range-hood-v996/) cleans itself with heat, with no water cup to fill.
+Where the hood has to fit under a wall cabinet, the slim profile saves the space. The [V995](/slim-series-type-range-hood-v995/) moves 2,050 m³/h at 52 dB and filters up to 92% of the oil, and like every VATTI hood it can run without a duct.
 
 ### When the wall cannot be drilled
 
-Thirteen VATTI hoods list **ducted or recycled** on their spec sheet, so they can run with a charcoal filter and no duct, and be connected to a duct later. Only the V991 and V996 are ducted only. Without a duct, oil capture and noise matter more than pressure, which makes the V959 (95% oil capture) and the V929 (46.5 dB) the strongest choices. Our guide to [ducted or ductless range hoods](/buying-guide/which-is-better-ducted-or-ductless-range-hood/) explains what changes.
+Every VATTI hood can run **ducted or recycled**: without a duct it uses a honeycomb recirculation filter, and the same hood can be connected to a duct later. Without a duct, oil capture and noise matter more than pressure, which makes the V959 (95% oil capture) and the V929 (46.5 dB) the strongest choices. Our guide to [ducted or ductless range hoods](/buying-guide/which-is-better-ducted-or-ductless-range-hood/) explains what changes.
 
 ## The VATTI range side by side
 
@@ -113,9 +112,7 @@ Thirteen VATTI hoods list **ducted or recycled** on their spec sheet, so they ca
 | V993 | 2,500 | 850 | 50 | Landed house, everyday cooking |
 | V999 | 2,500 | 1,000 | 50 | Everyday cooking, hand sensor |
 | V917 | 2,250 | 900 | 48 | Balanced power, slim body |
-| V991 | 2,050 | 460 | 54 | Short duct, lighter cooking |
 | V995 | 2,050 | 450 | 52 | Small kitchen |
-| V996 | 1,950 | 500 | 54 | Tight spaces |
 | V931 | 1,860 | 420 | 54 | Compact kitchen, short duct |
 
 ## What every VATTI hood comes with
@@ -134,7 +131,7 @@ In the VATTI range, the V929 at 46.5 dB. It still moves 3,125 m³/h.
 For an ordinary kitchen, about 650 to 800 m³/h gives ten air changes an hour, and every VATTI hood is well above that. Heavy wok cooking and open-plan layouts are where the higher figures earn their keep.
 
 **Is a ductless hood good enough?**
-For light cooking, yes. For daily wok frying a duct is better, because a ductless hood returns heat and steam to the room. Thirteen VATTI hoods can run either way.
+For light cooking, yes. For daily wok frying a duct is better, because a ductless hood returns heat and steam to the room. Every VATTI hood can run either way.
 
 **Should I choose a T-type or a lifting-type hood?**
 A T-type is the classic flat canopy and chimney. A lifting-type brings the intake down closer to the pan, which catches smoke earlier. Our guide to the [types of range hoods](/buying-guide/types-of-range-hoods/) compares them.

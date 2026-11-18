@@ -22,7 +22,7 @@ VALUES (117, 'kitchen-exhaust-fan-vs-cooker-hood', 'buying-guide/kitchen-exhaust
 
 ### 简短回答
 
-如果你用炒锅爆炒、油炸或炒参巴，你需要的是**抽油烟机**。抽风机没办法在锅边接住油烟，而且大多数根本没有油网，油雾最后会落在墙壁、天花板和扇叶上。抽风机对散热、除湿和去除余味仍然有用，最好是**和抽油烟机一起用**。如果厨房没有外墙，就选不接排烟管也能用的抽油烟机：VATTI 有 13 款可以这样用。
+如果你用炒锅爆炒、油炸或炒参巴，你需要的是**抽油烟机**。抽风机没办法在锅边接住油烟，而且大多数根本没有油网，油雾最后会落在墙壁、天花板和扇叶上。抽风机对散热、除湿和去除余味仍然有用，最好是**和抽油烟机一起用**。如果厨房没有外墙，就选不接排烟管也能用的抽油烟机，而每一款 VATTI 抽油烟机都可以。
 
 [请在 WhatsApp 问我们哪款适合你的厨房](https://wa.me/60123366082)
 
@@ -62,7 +62,7 @@ VALUES (117, 'kitchen-exhaust-fan-vs-cooker-hood', 'buying-guide/kitchen-exhaust
 
 ## 厨房没有外墙怎么办
 
-很多公寓的厨房在单位中间，没有外墙可以开抽风机。墙上的抽风机行不通，但抽油烟机仍然可以。VATTI 有 13 款抽油烟机的规格表注明 **ducted or recycled**，可以只用活性炭滤网、不接排烟管。不接排烟管时，油脂分离率和噪音最重要，所以 V959（油脂分离率 95%）和 [V929](/vatti-aetheris-series-cooker-hood-v929/)（46.5 dB）是最好的选择。我们的[免打孔抽油烟机指南](/zh/buying-guide/which-is-better-ducted-or-ductless-range-hood/)说明有什么不同。
+很多公寓的厨房在单位中间，没有外墙可以开抽风机。墙上的抽风机行不通，但抽油烟机仍然可以。每一款 VATTI 抽油烟机都可以**外排或内循环**，不接排烟管时使用蜂窝状内循环滤网。不接排烟管时，油脂分离率和噪音最重要，所以 V959（油脂分离率 95%）和 [V929](/vatti-aetheris-series-cooker-hood-v929/)（46.5 dB）是最好的选择。我们的[免打孔抽油烟机指南](/zh/buying-guide/which-is-better-ducted-or-ductless-range-hood/)说明有什么不同。
 
 ## 该选哪一款 VATTI 抽油烟机
 
@@ -88,7 +88,7 @@ VALUES (117, 'kitchen-exhaust-fan-vs-cooker-hood', 'buying-guide/kitchen-exhaust
 油烟交给抽油烟机就行。厨房容易闷热的话，抽风机仍可用来散热除湿，两者一起用效果很好。
 
 **厨房没有窗、也没有外墙怎么办？**
-选可以不接排烟管的抽油烟机，它用活性炭滤网净化空气后送回室内。VATTI 有 13 款可以这样使用。
+选可以不接排烟管的抽油烟机，它用活性炭滤网净化空气后送回室内。每一款 VATTI 抽油烟机都可以这样使用。
 
 **抽油烟机会很吵吗？**
 看型号。VATTI 系列的噪音在 46.5 dB 到 54 dB 之间；我们的[静音抽油烟机指南](/buying-guide/why-choose-silent-kitchen-hood-expert-answer/)说明这些数字听起来是什么感觉。

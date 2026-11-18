@@ -21,7 +21,7 @@ VALUES (113, 'hood-dapur-terbaik', 'panduan-membeli/hood-dapur-terbaik', 'buying
 
 ### Jawapan ringkas
 
-Baca tiga angka sebelum yang lain: **aliran udara** (m³/h), **tekanan statik** (Pa) dan **bunyi** (dB). Untuk kondo tingkat tinggi dengan saluran kongsi yang panjang, pilih berdasarkan tekanan: [V960](/vatti-stellar-series-cooker-hood-v960/) mencapai 1,700 Pa. Untuk dapur terbuka, pilih berdasarkan bunyi: [V929](/vatti-aetheris-series-cooker-hood-v929/) hanya 46.5 dB. Jika dinding tidak boleh ditebuk, 13 hood VATTI boleh berfungsi tanpa saluran.
+Baca tiga angka sebelum yang lain: **aliran udara** (m³/h), **tekanan statik** (Pa) dan **bunyi** (dB). Untuk kondo tingkat tinggi dengan saluran kongsi yang panjang, pilih berdasarkan tekanan: [V960](/vatti-stellar-series-cooker-hood-v960/) mencapai 1,700 Pa. Untuk dapur terbuka, pilih berdasarkan bunyi: [V929](/vatti-aetheris-series-cooker-hood-v929/) hanya 46.5 dB. Jika dinding tidak boleh ditebuk, semua hood VATTI boleh berfungsi tanpa saluran.
 
 [Tanya kami di WhatsApp](https://wa.me/60123366082)
 
@@ -77,16 +77,15 @@ Asap dari tungku di hujung terlepas daripada hood yang hanya menyedut di tengah.
 
 Dengan saluran yang pendek dan terus, tekanan kurang penting dan penyedutan dekat kuali lebih penting. Pada hood jenis angkat siri Athena, bukaan sedutan turun ke arah dapur gas, kira-kira 350 mm di atas periuk berbanding lebih kurang 580 mm untuk hood jenis T. [V993](/athena-series-lifting-type-range-hood-v993/) dan [V999](/athena-series-lifting-type-range-hood-v999/) sama-sama menyedut 2,500 m³/h; V999 menambah sensor tangan.
 
-### Untuk dapur kecil: V995 atau V996
+### Untuk dapur kecil: V995
 
 [![Hood dapur VATTI V995](https://cdn.vattimalaysia.com/2026/08/slim-series-type-range-hood-v995-front.webp)](/slim-series-type-range-hood-v995/)
-[![Hood dapur VATTI V996](https://cdn.vattimalaysia.com/2026/08/vatti-slim-series-type-range-hood-v996-front.webp)](/vatti-slim-series-type-range-hood-v996/)
 
-Jika hood perlu muat di bawah kabinet dinding, profil nipis menjimatkan ruang. [V995](/slim-series-type-range-hood-v995/) menyedut 2,050 m³/h pada 52 dB dan boleh berfungsi tanpa saluran; [V996](/vatti-slim-series-type-range-hood-v996/) membersihkan dirinya dengan haba, tanpa cawan air untuk diisi.
+Jika hood perlu muat di bawah kabinet dinding, profil nipis menjimatkan ruang. [V995](/slim-series-type-range-hood-v995/) menyedut 2,050 m³/h pada 52 dB dan menapis sehingga 92% minyak, dan seperti semua hood VATTI, ia boleh berfungsi tanpa saluran.
 
 ### Jika dinding tidak boleh ditebuk
 
-Tiga belas hood VATTI menyatakan **bersaluran atau kitar semula** (ducted or recycled) dalam spesifikasinya, jadi ia boleh berfungsi dengan penapis karbon tanpa saluran, dan disambung ke saluran kemudian. Hanya V991 dan V996 yang bersaluran sahaja. Tanpa saluran, tapisan minyak dan bunyi lebih penting daripada tekanan, jadi V959 (95% tapisan minyak) dan V929 (46.5 dB) ialah pilihan paling kukuh. Panduan kami tentang [hood dapur tanpa tebuk dinding](/ms/panduan-membeli/hood-dapur-tanpa-tebuk-dinding/) menerangkan apa yang berubah.
+Semua hood VATTI boleh berfungsi **bersaluran atau kitar semula**: tanpa saluran, ia menggunakan penapis kitar semula sarang lebah (honeycomb), dan hood yang sama boleh disambung ke saluran kemudian. Tanpa saluran, tapisan minyak dan bunyi lebih penting daripada tekanan, jadi V959 (95% tapisan minyak) dan V929 (46.5 dB) ialah pilihan paling kukuh. Panduan kami tentang [hood dapur tanpa tebuk dinding](/ms/panduan-membeli/hood-dapur-tanpa-tebuk-dinding/) menerangkan apa yang berubah.
 
 ## Perbandingan rangkaian hood VATTI
 
@@ -103,9 +102,7 @@ Tiga belas hood VATTI menyatakan **bersaluran atau kitar semula** (ducted or rec
 | V993 | 2,500 | 850 | 50 | Rumah teres, masakan harian |
 | V999 | 2,500 | 1,000 | 50 | Masakan harian, sensor tangan |
 | V917 | 2,250 | 900 | 48 | Kuasa seimbang, badan nipis |
-| V991 | 2,050 | 460 | 54 | Saluran pendek, masakan ringan |
 | V995 | 2,050 | 450 | 52 | Dapur kecil |
-| V996 | 1,950 | 500 | 54 | Ruang sempit |
 | V931 | 1,860 | 420 | 54 | Dapur kompak, saluran pendek |
 
 ## Apa yang disertakan dengan setiap hood VATTI
@@ -124,7 +121,7 @@ Dalam rangkaian VATTI, V929 pada 46.5 dB. Ia masih menyedut 3,125 m³/h.
 Untuk dapur biasa, kira-kira 650 hingga 800 m³/h sudah memberi sepuluh pertukaran udara sejam, dan setiap hood VATTI jauh melebihi angka itu. Angka yang lebih tinggi berbaloi untuk masakan kuali yang berat dan dapur terbuka.
 
 **Adakah hood tanpa saluran cukup bagus?**
-Untuk masakan ringan, ya. Untuk menumis dengan kuali setiap hari, saluran lebih baik, kerana hood tanpa saluran mengembalikan haba dan wap ke dalam dapur. Tiga belas hood VATTI boleh berfungsi dengan kedua-dua cara.
+Untuk masakan ringan, ya. Untuk menumis dengan kuali setiap hari, saluran lebih baik, kerana hood tanpa saluran mengembalikan haba dan wap ke dalam dapur. Semua hood VATTI boleh berfungsi dengan kedua-dua cara.
 
 **Patutkah saya pilih hood jenis T atau jenis angkat?**
 Hood jenis T ialah bentuk klasik dengan kanopi rata dan cerobong. Hood jenis angkat membawa bukaan sedutan lebih dekat ke kuali, jadi asap ditangkap lebih awal. Panduan kami tentang [jenis-jenis hood dapur](/ms/panduan-membeli/hood-dapur/) membandingkan kedua-duanya.

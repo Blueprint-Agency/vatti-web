@@ -24,7 +24,7 @@ VALUES (116, 'exhaust-fan-dapur', 'panduan-membeli/exhaust-fan-dapur', 'buying-g
 
 ### Jawapan ringkas
 
-Jika anda memasak dengan kuali, menggoreng atau memasak sambal, anda perlukan **hood dapur**. Exhaust fan tidak dapat menangkap minyak di kuali, dan kebanyakannya tiada penapis minyak langsung, jadi wap minyak hinggap di dinding, siling dan bilah kipas. Exhaust fan masih berguna untuk haba, kelembapan dan bau yang tertinggal, dan berfungsi dengan baik **bersama** hood. Jika dapur anda tiada dinding luar, pilih hood yang boleh berfungsi tanpa saluran: 13 hood VATTI boleh.
+Jika anda memasak dengan kuali, menggoreng atau memasak sambal, anda perlukan **hood dapur**. Exhaust fan tidak dapat menangkap minyak di kuali, dan kebanyakannya tiada penapis minyak langsung, jadi wap minyak hinggap di dinding, siling dan bilah kipas. Exhaust fan masih berguna untuk haba, kelembapan dan bau yang tertinggal, dan berfungsi dengan baik **bersama** hood. Jika dapur anda tiada dinding luar, pilih hood yang boleh berfungsi tanpa saluran, dan semua hood VATTI boleh.
 
 [Tanya kami hood mana yang sesuai](https://wa.me/60123366082)
 
@@ -64,7 +64,7 @@ Jika dapur anda sudah ada exhaust fan tetapi kabinet masih berminyak, itu tandan
 
 ## Jika tiada dinding luar
 
-Banyak dapur kondo terletak di tengah unit, tanpa dinding luar untuk kipas. Exhaust fan dinding tidak mungkin di situ, tetapi hood dapur masih boleh. Tiga belas hood VATTI menyenaraikan **ducted or recycled** pada helaian spesifikasinya, jadi ia boleh berfungsi dengan penapis karbon tanpa saluran. Tanpa saluran, tapisan minyak dan bunyi paling penting, jadi V959 (tapisan minyak 95%) dan [V929](/vatti-aetheris-series-cooker-hood-v929/) (46.5 dB) ialah pilihan paling kuat. Panduan kami tentang [hood dapur tanpa tebuk dinding](/ms/panduan-membeli/hood-dapur-tanpa-tebuk-dinding/) menerangkan apa yang berubah.
+Banyak dapur kondo terletak di tengah unit, tanpa dinding luar untuk kipas. Exhaust fan dinding tidak mungkin di situ, tetapi hood dapur masih boleh. Semua hood VATTI boleh berfungsi **bersaluran atau kitar semula**, jadi ia boleh berfungsi dengan penapis kitar semula sarang lebah tanpa saluran. Tanpa saluran, tapisan minyak dan bunyi paling penting, jadi V959 (tapisan minyak 95%) dan [V929](/vatti-aetheris-series-cooker-hood-v929/) (46.5 dB) ialah pilihan paling kuat. Panduan kami tentang [hood dapur tanpa tebuk dinding](/ms/panduan-membeli/hood-dapur-tanpa-tebuk-dinding/) menerangkan apa yang berubah.
 
 ## Hood VATTI mana yang patut dipilih
 
@@ -90,7 +90,7 @@ Tidak dengan baik. Kebanyakannya tiada penapis minyak, jadi minyak yang sampai k
 Bukan untuk asap dan minyak; hood menguruskan itu. Kipas masih berguna untuk haba dan kelembapan dalam dapur yang terus panas, dan kedua-duanya bekerja dengan baik bersama.
 
 **Bagaimana jika dapur saya tiada tingkap atau dinding luar?**
-Pilih hood dapur yang boleh berfungsi tanpa saluran. Ia membersihkan udara melalui penapis karbon dan mengembalikannya ke bilik. Tiga belas hood VATTI boleh berfungsi begini.
+Pilih hood dapur yang boleh berfungsi tanpa saluran. Ia membersihkan udara melalui penapis karbon dan mengembalikannya ke bilik. Semua hood VATTI boleh berfungsi begini.
 
 **Adakah hood dapur bising?**
 Bergantung pada model. Rangkaian VATTI dari 46.5 dB hingga 54 dB; panduan kami tentang [kenapa hood dapur senyap penting](/buying-guide/why-choose-silent-kitchen-hood-expert-answer/) menerangkan bunyi angka itu.

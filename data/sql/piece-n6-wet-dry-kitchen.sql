@@ -73,7 +73,7 @@ A **dry kitchen** is built for cooking that stays clean: breakfast, reheating, b
 [![VATTI V919 cooker hood](https://cdn.vattimalaysia.com/2026/08/vatti-magic-series-cooker-hood-v919-front.webp)](/vatti-magic-series-cooker-hood-v919/)
 [![VATTI V959 cooker hood](https://cdn.vattimalaysia.com/2026/08/vatti-cooker-hood-v959-front.webp)](/vatti-cooker-hood-v959/)
 
-**In the dry kitchen**, the hood is in full view and within earshot of the dining table. The [V929](/vatti-aetheris-series-cooker-hood-v929/) is the quietest VATTI hood at 46.5 dB and still moves 3,125 m³/h, so it copes when the dry kitchen gets used for real cooking. The [V938](/vatti-hidden-series-range-hood-v938/) sits flush with the cabinets with no chimney, at 48 dB. An open dry kitchen often has no outside wall; 13 VATTI hoods can run **ducted or recycled**, cleaning the air through a charcoal filter instead of a duct. Our guide to the [best kitchen hood in Malaysia](/buying-guide/best-kitchen-hood-malaysia/) compares every model.
+**In the dry kitchen**, the hood is in full view and within earshot of the dining table. The [V929](/vatti-aetheris-series-cooker-hood-v929/) is the quietest VATTI hood at 46.5 dB and still moves 3,125 m³/h, so it copes when the dry kitchen gets used for real cooking. The [V938](/vatti-hidden-series-range-hood-v938/) sits flush with the cabinets with no chimney, at 48 dB. An open dry kitchen often has no outside wall; every VATTI hood can run **ducted or recycled**, cleaning the air through a honeycomb recirculation filter instead of a duct. Our guide to the [best kitchen hood in Malaysia](/buying-guide/best-kitchen-hood-malaysia/) compares every model.
 
 [![VATTI V929 cooker hood](https://cdn.vattimalaysia.com/2026/08/vatti-aetheris-series-cooker-hood-v929-front.webp)](/vatti-aetheris-series-cooker-hood-v929/)
 [![VATTI V938 cooker hood](https://cdn.vattimalaysia.com/2026/08/vatti-hidden-series-range-hood-v938-front.webp)](/vatti-hidden-series-range-hood-v938/)
@@ -120,7 +120,7 @@ Put it at the sink you fill the kettle and the rice pot from. In many homes that
 
 Most condos have one kitchen, often open to the living room, that has to do both jobs. Plan it like a wet kitchen that guests can see.
 
-- **Hood:** take the airflow of a wet-kitchen hood and the noise of a dry-kitchen one. The V929, at 3,125 m³/h and 46.5 dB, is the closest to both. If there is no outside wall, choose one of the 13 hoods that can run ducted or recycled; our guide to [ducted or ductless range hoods](/buying-guide/which-is-better-ducted-or-ductless-range-hood/) explains what changes.
+- **Hood:** take the airflow of a wet-kitchen hood and the noise of a dry-kitchen one. The V929, at 3,125 m³/h and 46.5 dB, is the closest to both. If there is no outside wall, every VATTI hood can run recycled, through a honeycomb filter instead of a duct; our guide to [ducted or ductless range hoods](/buying-guide/which-is-better-ducted-or-ductless-range-hood/) explains what changes.
 - **Hob:** a gas hob for the wok. If you also want a flame-free zone, a ceramic or induction hob beside it covers both.
 - **Hood and hob together:** selected VATTI hoods and hobs carry **Smart Auto Link**, so the hood switches on when the hob does. In an open kitchen that means the hood is already drawing when the first smoke rises. The V929, V938, V959, V960 and V997 hoods list it, and so do the C836G and VH-IC9-LA hobs; ask us which pairs work together.
 

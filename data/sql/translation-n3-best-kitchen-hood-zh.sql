@@ -20,7 +20,7 @@ VALUES (114, 'best-kitchen-hood-malaysia', 'buying-guide/best-kitchen-hood-malay
 
 ### 简短回答
 
-先看三个数字：**风量**（m³/h）、**静压**（Pa）和**噪音**（dB）。住高楼公寓、烟管又长，就看静压：[V960](/vatti-stellar-series-cooker-hood-v960/) 达 1,700 Pa。开放式厨房就看噪音：[V929](/vatti-aetheris-series-cooker-hood-v929/) 运转时只有 46.5 dB。如果墙壁不能打孔，有 13 款 VATTI 抽油烟机可以不接排烟管使用。
+先看三个数字：**风量**（m³/h）、**静压**（Pa）和**噪音**（dB）。住高楼公寓、烟管又长，就看静压：[V960](/vatti-stellar-series-cooker-hood-v960/) 达 1,700 Pa。开放式厨房就看噪音：[V929](/vatti-aetheris-series-cooker-hood-v929/) 运转时只有 46.5 dB。如果墙壁不能打孔，每一款 VATTI 抽油烟机都可以不接排烟管使用。
 
 [请在 WhatsApp 联系我们](https://wa.me/60123366082)
 
@@ -76,16 +76,15 @@ VALUES (114, 'best-kitchen-hood-malaysia', 'buying-guide/best-kitchen-hood-malay
 
 烟管短而直，静压就没那么重要，在锅边把油烟吸走才是关键。Athena 升降式抽油烟机的吸烟腔会降向煤气炉，离锅具约 350 mm，T 型机约为 580 mm。[V993](/athena-series-lifting-type-range-hood-v993/) 和 [V999](/athena-series-lifting-type-range-hood-v999/) 的风量都是 2,500 m³/h；V999 多了手势感应。
 
-### 小厨房：V995 或 V996
+### 小厨房：V995
 
 [![VATTI V995 抽油烟机](https://cdn.vattimalaysia.com/2026/08/slim-series-type-range-hood-v995-front.webp)](/slim-series-type-range-hood-v995/)
-[![VATTI V996 抽油烟机](https://cdn.vattimalaysia.com/2026/08/vatti-slim-series-type-range-hood-v996-front.webp)](/vatti-slim-series-type-range-hood-v996/)
 
-抽油烟机要装在吊柜下方，纤薄机身最省空间。[V995](/slim-series-type-range-hood-v995/) 风量 2,050 m³/h，噪音 52 dB，也可以不接排烟管使用；[V996](/vatti-slim-series-type-range-hood-v996/) 用热熔自动清洗，不用加水。
+抽油烟机要放在吊柜下方的话，纤薄机身最省空间。[V995](/slim-series-type-range-hood-v995/) 风量 2,050 m³/h，噪音 52 dB，油脂分离率高达 92%，和每一款 VATTI 抽油烟机一样，也可以不接排烟管使用。
 
 ### 墙壁不能打孔
 
-有 13 款 VATTI 抽油烟机的规格注明**外排或内循环**（ducted or recycled），可以配活性炭滤网免打孔使用，日后再接上排烟管。只有 V991 和 V996 必须外排。没有排烟管时，油脂分离率和噪音比静压更重要，所以 V959（油脂分离率 95%）和 V929（46.5 dB）是最佳选择。想了解两者的分别，请看我们的[免打孔抽油烟机指南](/zh/buying-guide/which-is-better-ducted-or-ductless-range-hood/)。
+每一款 VATTI 抽油烟机都可以**外排或内循环**：不接排烟管时使用蜂窝状内循环滤网，日后同一台机也能接上排烟管。没有排烟管时，油脂分离率和噪音比静压更重要，所以 V959（油脂分离率 95%）和 V929（46.5 dB）是最佳选择。想了解两者的分别，请看我们的[免打孔抽油烟机指南](/zh/buying-guide/which-is-better-ducted-or-ductless-range-hood/)。
 
 ## VATTI 抽油烟机规格一览
 
@@ -102,9 +101,7 @@ VALUES (114, 'best-kitchen-hood-malaysia', 'buying-guide/best-kitchen-hood-malay
 | V993 | 2,500 | 850 | 50 | 排屋、日常煮食 |
 | V999 | 2,500 | 1,000 | 50 | 日常煮食、手势感应 |
 | V917 | 2,250 | 900 | 48 | 动力均衡、机身纤薄 |
-| V991 | 2,050 | 460 | 54 | 烟管短、煮食清淡 |
 | V995 | 2,050 | 450 | 52 | 小厨房 |
-| V996 | 1,950 | 500 | 54 | 空间狭窄 |
 | V931 | 1,860 | 420 | 54 | 小巧厨房、烟管短 |
 
 ## 每台 VATTI 抽油烟机都享有的保障
@@ -126,7 +123,7 @@ VATTI 系列中是 V929，只有 46.5 dB，风量仍有 3,125 m³/h。
 一般厨房约 650 至 800 m³/h，就能每小时换气十次，而每款 VATTI 抽油烟机都远高于此。天天炒锅猛火煮食和开放式厨房，才是大风量真正派上用场的地方。
 
 **免打孔抽油烟机够用吗？**
-煮食清淡的话，够用。天天猛火爆炒就最好接排烟管，因为内循环油烟机会把热气和水汽送回厨房。有 13 款 VATTI 抽油烟机两种方式都适用。
+煮食清淡的话，够用。天天猛火爆炒就最好接排烟管，因为内循环油烟机会把热气和水汽送回厨房。每一款 VATTI 抽油烟机两种方式都适用。
 
 **T 型还是升降式抽油烟机好？**
 T 型是经典的平板机身加烟囱；升降式把吸烟口降到更靠近锅具的位置，油烟一冒起就被吸走。两者的比较请看[抽油烟机怎么选](/zh/buying-guide/types-of-range-hoods/)。
