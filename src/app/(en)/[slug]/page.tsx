@@ -44,7 +44,7 @@ import {
   type Video,
 } from "@/lib/queries/product";
 import { Inline, Markdown } from "@/lib/markdown";
-import { formatDate, whatsappLink } from "@/lib/site";
+import { whatsappLink } from "@/lib/site";
 import { warrantyFor } from "@/lib/warranty-terms";
 
 import { CATEGORY_GUIDE, CategoryPage, categoryMetadata } from "@/views/CategoryPage";
@@ -246,13 +246,6 @@ function isoDuration(seconds: number): string {
   return `PT${Math.floor(seconds / 60)}M${seconds % 60}S`;
 }
 
-/** 99 -> '1m 39s', for the caption under the embed. */
-function runtime(seconds: number): string {
-  const m = Math.floor(seconds / 60);
-  const rest = seconds % 60;
-  return m ? `${m}m ${rest}s` : `${rest}s`;
-}
-
 /**
  * Scroll offset for anything the section rail links to: the sticky header plus
  * the rail itself. Without it an anchor jump parks the heading underneath both.
@@ -320,7 +313,7 @@ function ProductView({ product }: { product: Product }) {
       label: "Dimensions",
     },
     (story.length > 0 || featureImages.length > 0) && { id: "detail", label: "Detail" },
-    videos.length > 0 && { id: "video", label: "In action" },
+    videos.length > 0 && { id: "video", label: videos.length > 1 ? "Product videos" : "Product video" },
     lineup.length > 1 && compareColumns.length > 0 && { id: "compare", label: "Compare" },
     faqs.length > 0 && { id: "questions", label: "Questions" },
     { id: "enquire", label: "Where to buy" },
@@ -660,29 +653,22 @@ function ProductView({ product }: { product: Product }) {
             className={`mx-auto max-w-6xl px-5 pb-14 sm:px-8 sm:pb-20 ${ANCHOR}`}
           >
             <h2 id="video-heading" className="text-2xl font-semibold tracking-[-0.025em] sm:text-3xl">
-              In action
+              {videos.length > 1 ? "Product videos" : "Product video"}
             </h2>
-            {/* An iframe says nothing to a reader who will not press play, and
-                nothing at all to a crawler. The summary and the date are the
-                video's own, carried in product_video. */}
-            {/* One video is the normal case, and it gets the summary beside the
-                player rather than a dead half-row next to it. Two or more fall
-                back to a plain two-up. */}
+            {/* The player stands alone: the owner asked for no caption under it
+                (2026-11-18). The summary, date and length stay in product_video
+                and still reach crawlers through the VideoObject below. One video
+                is held to a readable width; two or more go two-up. */}
             <div className={`mt-8 grid gap-8 ${videos.length > 1 ? "lg:grid-cols-2" : ""}`}>
               {videos.map((v) => (
                 <figure
                   key={v.video_id ?? v.src_url}
-                  className={
-                    videos.length === 1
-                      ? "grid gap-6 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] lg:items-center lg:gap-12"
-                      : "flex flex-col gap-4"
-                  }
+                  className={videos.length === 1 ? "max-w-4xl" : undefined}
                 >
                   {v.src_url ? (
                     // A file on the CDN rather than a YouTube embed. The box
                     // takes the clip's own aspect, and a portrait clip is held
-                    // to a phone's width rather than filling the column at
-                    // twice the height of the text beside it.
+                    // to a phone's width rather than filling the column.
                     <div
                       className={`overflow-hidden rounded-sm border border-line bg-surface ${
                         (v.height ?? 0) > (v.width ?? 0) ? "mx-auto w-full max-w-[420px]" : ""
@@ -703,7 +689,19 @@ function ProductView({ product }: { product: Product }) {
                       </video>
                     </div>
                   ) : (
-                    <div className="aspect-video overflow-hidden rounded-sm border border-line bg-surface">
+                    // 16:9 unless the row says otherwise: a Short carries its
+                    // portrait width/height and is held to a phone's width,
+                    // the same rule as a hosted clip above.
+                    <div
+                      className={`overflow-hidden rounded-sm border border-line bg-surface ${
+                        v.width && v.height
+                          ? v.height > v.width
+                            ? "mx-auto w-full max-w-[420px]"
+                            : ""
+                          : "aspect-video"
+                      }`}
+                      style={v.width && v.height ? { aspectRatio: `${v.width} / ${v.height}` } : undefined}
+                    >
                       <iframe
                         src={`https://www.youtube-nocookie.com/embed/${v.video_id}`}
                         title={v.title ?? `${product.name} product video`}
@@ -713,17 +711,6 @@ function ProductView({ product }: { product: Product }) {
                         className="size-full"
                       />
                     </div>
-                  )}
-                  {(v.summary || v.published_on) && (
-                    <figcaption className="max-w-[52ch] text-[0.9375rem] leading-relaxed text-ink-muted">
-                      {v.summary}
-                      {v.published_on && (
-                        <span className="readout mt-2 block text-xs">
-                          {formatDate(v.published_on)}
-                          {v.duration_seconds ? ` · ${runtime(v.duration_seconds)}` : ""}
-                        </span>
-                      )}
-                    </figcaption>
                   )}
                 </figure>
               ))}

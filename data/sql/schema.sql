@@ -286,7 +286,8 @@ CREATE TABLE product_download (
 -- has src_url and poster_url and no video_id; width and height give the
 -- player its aspect, since a phone-shot clip is portrait. Exactly one of the
 -- two sources is set, and the page renders a <video> for one and an iframe
--- for the other.
+-- for the other. A YouTube Short sets width and height too, for the same
+-- reason; a YouTube row without them is 16:9.
 CREATE TABLE product_video (
   product_id       INTEGER NOT NULL REFERENCES product(id) ON DELETE CASCADE,
   position         INTEGER NOT NULL,
