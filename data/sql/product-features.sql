@@ -2453,3 +2453,82 @@ SELECT id, 3, 'split', 'One machine, five other jobs',
   FROM product WHERE slug = 'free-standing-combi-oven-va01';
 
 
+
+-- vatti-cooker-hob-vh-ic9-la ------------------------------------------------
+-- Ten square posters from the owner's Drive folder (2026-11-06), the first
+-- feature story this hob has had. The posters are on R2 as
+-- 2026/11/vh-ic9-la-poster-01..10.webp; the crops beside each row are cut from
+-- them by data/crops/vh-ic9-la.json, headline above and page number below.
+-- Wattages agree with the spec bullets in spec-corrections-catalogue-2026-09.sql
+-- (catalogue p.13). Posters 09 and 10 claim app status and alerts only, not
+-- remote control, and the copy claims no more than they do.
+
+INSERT INTO product_feature (product_id, position, layout, title, body_md, image_url, image_alt, image_w, image_h)
+SELECT id, 1, 'banner', 'Two cooking styles. One seamless hob.',
+  'Induction on the left and ceramic on the right, set into a single 750 mm glass top.',
+  'https://cdn.vattimalaysia.com/2026/11/vh-ic9-la-hob.webp',
+  'The VH-IC9-LA built into a stone kitchen island, induction zone left and ceramic zone right', 1254, 627
+  FROM product WHERE slug = 'vatti-cooker-hob-vh-ic9-la';
+
+INSERT INTO product_feature (product_id, position, layout, title, body_md, image_url, image_alt, image_w, image_h)
+SELECT id, 2, 'split', 'Boil on one side. Simmer on the other.',
+  'Both zones run at once, so you can bring a pot of water to the boil on the induction side while a stew simmers on the ceramic side.',
+  'https://cdn.vattimalaysia.com/2026/11/vh-ic9-la-two-dishes.webp',
+  'A pot of boiling water on the induction zone and a stew simmering on the ceramic zone', 1254, 715
+  FROM product WHERE slug = 'vatti-cooker-hob-vh-ic9-la';
+
+INSERT INTO product_feature (product_id, position, layout, title, body_md, image_url, image_alt, image_w, image_h)
+SELECT id, 3, 'split', 'Need more heat? Tap Booster.',
+  'The induction zone runs at 2,000 W. Booster takes it to 2,300 W for a faster boil. The ceramic zone runs from 1,000 W to 2,200 W.',
+  'https://cdn.vattimalaysia.com/2026/11/vh-ic9-la-booster.webp',
+  'Water at a rolling boil on the induction zone, the Booster key lit beside it', 1254, 571
+  FROM product WHERE slug = 'vatti-cooker-hob-vh-ic9-la';
+
+INSERT INTO product_feature (product_id, position, layout, title, body_md, image_url, image_alt, image_w, image_h)
+SELECT id, 4, 'split', 'The right heat for every dish',
+  'Nine power levels on easy touch controls, from a gentle simmer to high heat. Each zone has its own control bar and cooking timer.',
+  'https://cdn.vattimalaysia.com/2026/11/vh-ic9-la-power-levels.webp',
+  'A finger setting the power on the induction control bar under a pot of soup', 1254, 677
+  FROM product WHERE slug = 'vatti-cooker-hob-vh-ic9-la';
+
+INSERT INTO product_feature (product_id, position, layout, title, body_md, image_url, image_alt, image_w, image_h)
+SELECT id, 5, 'split', 'Cook with extra peace of mind',
+  'Overheat protection, auto shut-off and a child lock are built in, and a residual heat warning shows while the glass is still hot after cooking.',
+  'https://cdn.vattimalaysia.com/2026/11/vh-ic9-la-safety.webp',
+  'The VH-IC9-LA on a kitchen counter, its lock and power keys at the right of the panel', 1254, 589
+  FROM product WHERE slug = 'vatti-cooker-hob-vh-ic9-la';
+
+INSERT INTO product_feature (product_id, position, layout, title, body_md, image_url, image_alt, image_w, image_h)
+SELECT id, 6, 'split', 'Wipe down without accidental taps',
+  'Cleaning mode locks the touch controls for 20 seconds, so you can wipe across the panel without changing a setting.',
+  'https://cdn.vattimalaysia.com/2026/11/vh-ic9-la-cleaning-mode.webp',
+  'A hand wiping the ceramic zone and its controls with a cloth', 1254, 677
+  FROM product WHERE slug = 'vatti-cooker-hob-vh-ic9-la';
+
+INSERT INTO product_feature (product_id, position, layout, title, body_md, image_url, image_alt, image_w, image_h)
+SELECT id, 7, 'split', 'Your hob and hood, working together',
+  'Smart Hood-Hob Link pairs the hob with a compatible VATTI cooker hood, so the hood switches on when you start cooking. It works with selected VATTI cooker hood models.',
+  'https://cdn.vattimalaysia.com/2026/11/vh-ic9-la-hood-link.webp',
+  'Smoke rising from a frying pan on the ceramic zone toward a linked cooker hood', 1254, 715
+  FROM product WHERE slug = 'vatti-cooker-hob-vh-ic9-la';
+
+INSERT INTO product_feature (product_id, position, layout, title, body_md, image_url, image_alt, image_w, image_h)
+SELECT id, 8, 'split', 'A refined finish. Easier everyday care.',
+  'AG glass with a fine matte finish. It resists scratches and fingerprints, shows fewer oily marks, and everyday grease wipes away easily.',
+  'https://cdn.vattimalaysia.com/2026/11/vh-ic9-la-ag-glass.webp',
+  'The matte glass top of the VH-IC9-LA, a cloth wiping a grease spot from its edge', 1254, 539
+  FROM product WHERE slug = 'vatti-cooker-hob-vh-ic9-la';
+
+INSERT INTO product_feature (product_id, position, layout, title, body_md, image_url, image_alt, image_w, image_h)
+SELECT id, 9, 'split', 'Out of the house? Check your hob on your phone.',
+  'Not sure you switched it off? Open the app to see the status of each zone. Needs a Wi-Fi connection and the hob paired with the app.',
+  'https://cdn.vattimalaysia.com/2026/11/vh-ic9-la-app-status.webp',
+  'A woman in a car checking the hob status in the app, both zones shown as closed', 1254, 777
+  FROM product WHERE slug = 'vatti-cooker-hob-vh-ic9-la';
+
+INSERT INTO product_feature (product_id, position, layout, title, body_md, image_url, image_alt, image_w, image_h)
+SELECT id, 10, 'split', 'Important alerts, straight to your phone',
+  'Over Wi-Fi the hob sends four kinds of alert: when cooking runs too long or the hob is left unattended; a residual heat reminder that the surface may still be hot; a cleaning reminder after 8 hours of accumulated use; and a fault alert for a sensor fault, coil overheating or abnormal voltage. Needs a Wi-Fi connection and app pairing.',
+  'https://cdn.vattimalaysia.com/2026/11/vh-ic9-la-app-alerts.webp',
+  'A phone lock screen showing a VATTI Hob Alert beside the hob', 1254, 514
+  FROM product WHERE slug = 'vatti-cooker-hob-vh-ic9-la';

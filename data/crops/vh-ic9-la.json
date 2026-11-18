@@ -1,0 +1,16 @@
+{
+  "product": "vatti-cooker-hob-vh-ic9-la",
+  "note": "Ten square posters from the owner's Drive folder (2026-11-06), 1254x1254, headline across the top and a page number at the foot. Each crop keeps the photograph below the copy. The 'Illustration only' tags on 09 and 10 stay: they qualify the picture, not the claim.",
+  "crops": [
+    { "from": "2026/11/vh-ic9-la-poster-01.webp", "to": "2026/11/vh-ic9-la-hob.webp",           "box": [0, 0.43, 1, 0.93], "why": "headline and model code above, page number below" },
+    { "from": "2026/11/vh-ic9-la-poster-02.webp", "to": "2026/11/vh-ic9-la-two-dishes.webp",    "box": [0, 0.36, 1, 0.93], "why": "headline above, page number below" },
+    { "from": "2026/11/vh-ic9-la-poster-03.webp", "to": "2026/11/vh-ic9-la-booster.webp",       "box": [0, 0.475, 1, 0.93], "why": "the 2300W figure sits over the counter; cut below it" },
+    { "from": "2026/11/vh-ic9-la-poster-04.webp", "to": "2026/11/vh-ic9-la-power-levels.webp",  "box": [0, 0.38, 1, 0.92], "why": "three claim lines above" },
+    { "from": "2026/11/vh-ic9-la-poster-05.webp", "to": "2026/11/vh-ic9-la-safety.webp",        "box": [0, 0.45, 1, 0.92], "why": "three safety icons and their labels above" },
+    { "from": "2026/11/vh-ic9-la-poster-06.webp", "to": "2026/11/vh-ic9-la-cleaning-mode.webp", "box": [0, 0.39, 1, 0.93], "why": "headline above, page number below" },
+    { "from": "2026/11/vh-ic9-la-poster-07.webp", "to": "2026/11/vh-ic9-la-hood-link.webp",     "box": [0, 0.35, 1, 0.92], "why": "headline is set over the hood body; keeps its lower edge, the signal and the pan" },
+    { "from": "2026/11/vh-ic9-la-poster-08.webp", "to": "2026/11/vh-ic9-la-ag-glass.webp",      "box": [0, 0.50, 1, 0.93], "why": "three finish icons and two lines of copy above" },
+    { "from": "2026/11/vh-ic9-la-poster-09.webp", "to": "2026/11/vh-ic9-la-app-status.webp",    "box": [0, 0.30, 1, 0.92], "why": "headline above, Wi-Fi footnote below" },
+    { "from": "2026/11/vh-ic9-la-poster-10.webp", "to": "2026/11/vh-ic9-la-app-alerts.webp",    "box": [0, 0.53, 1, 0.94], "why": "four alert cards above, Wi-Fi footnote below" }
+  ]
+}
