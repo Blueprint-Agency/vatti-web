@@ -63,6 +63,12 @@ VALUES (114, 'best-kitchen-hood-malaysia', 'buying-guide/best-kitchen-hood-malay
 
 几乎每天都用炒锅猛火煮食，油脂就是长期的大敌。[V959](/vatti-cooker-hood-v959/) 的油脂分离率高达 95%，是系列中最高的，风量 2,825 m³/h，静压 1,100 Pa。
 
+### 重度煮食：V997
+
+[![VATTI V997 抽油烟机](https://cdn.vattimalaysia.com/2026/08/vatti-range-hood-v997-front.webp)](/vatti-range-hood-v997/)
+
+顶吸式离锅较远；侧吸式从低处吸烟，但部分油烟会从边缘跑掉。[V997](/vatti-range-hood-v997/) 两者兼备，风量 2,800 m³/h，静压 1,200 Pa，噪音 48 dB，并有智能自动调节吸力，另设手势感应和 Turbo Wash 自动清洗。
+
 ### 煤气炉较宽：V937
 
 [![VATTI V937 抽油烟机](https://cdn.vattimalaysia.com/2023/11/VATTI_V937_front_NEW.webp)](/triple-intake-series-t-type-cooker-hood-v937/)
@@ -90,19 +96,19 @@ VALUES (114, 'best-kitchen-hood-malaysia', 'buying-guide/best-kitchen-hood-malay
 
 | 型号 | 风量（m³/h） | 静压（Pa） | 噪音（dB） | 适合 |
 | --- | --- | --- | --- | --- |
-| V960 | 3,690 | 1,700 | 48 | 高楼公寓、烟管长 |
-| V938 | 3,650 | 1,600 | 48 | 藏在吊柜里 |
-| V929 | 3,125 | 1,300 | 46.5 | 开放式厨房、安静 |
-| V919 | 3,050 | 1,300 | 50 | 天天大火煮食 |
-| V998 | 2,850 | 1,250 | 49 | 智能操控 |
-| V959 | 2,825 | 1,100 | 51 | 常油炸、油脂分离率高 |
-| V997 | 2,800 | 1,200 | 48 | 重度煮食 |
-| V937 | 2,500 | 1,050 | 50 | 较宽的煤气炉 |
-| V993 | 2,500 | 850 | 50 | 排屋、日常煮食 |
-| V999 | 2,500 | 1,000 | 50 | 日常煮食、手势感应 |
-| V917 | 2,250 | 900 | 48 | 动力均衡、机身纤薄 |
-| V995 | 2,050 | 450 | 52 | 小厨房 |
-| V931 | 1,860 | 420 | 54 | 小巧厨房、烟管短 |
+| [V960](/vatti-stellar-series-cooker-hood-v960/) | 3,690 | 1,700 | 48 | 高楼公寓、烟管长 |
+| [V938](/vatti-hidden-series-range-hood-v938/) | 3,650 | 1,600 | 48 | 藏在吊柜里 |
+| [V929](/vatti-aetheris-series-cooker-hood-v929/) | 3,125 | 1,300 | 46.5 | 开放式厨房、安静 |
+| [V919](/vatti-magic-series-cooker-hood-v919/) | 3,050 | 1,300 | 50 | 天天大火煮食 |
+| [V998](/vatti-smart-oxygen-range-hood-v998/) | 2,850 | 1,250 | 49 | 智能操控 |
+| [V959](/vatti-cooker-hood-v959/) | 2,825 | 1,100 | 51 | 常油炸、油脂分离率高 |
+| [V997](/vatti-range-hood-v997/) | 2,800 | 1,200 | 48 | 重度煮食 |
+| [V937](/triple-intake-series-t-type-cooker-hood-v937/) | 2,500 | 1,050 | 50 | 较宽的煤气炉 |
+| [V993](/athena-series-lifting-type-range-hood-v993/) | 2,500 | 850 | 50 | 排屋、日常煮食 |
+| [V999](/athena-series-lifting-type-range-hood-v999/) | 2,500 | 1,000 | 50 | 日常煮食、手势感应 |
+| [V917](/vatti-cooker-hood-v917-carbon-grey/) | 2,250 | 900 | 48 | 动力均衡、机身纤薄 |
+| [V995](/slim-series-type-range-hood-v995/) | 2,050 | 450 | 52 | 小厨房 |
+| [V931](/artemis-series-t-type-range-hood-v931/) | 1,860 | 420 | 54 | 小巧厨房、烟管短 |
 
 ## 每台 VATTI 抽油烟机都享有的保障
 
@@ -133,6 +139,6 @@ T 型是经典的平板机身加烟囱；升降式把吸烟口降到更靠近锅
 最好的抽油烟机，是配合你的烟管、厨房格局和煮食习惯的那一台。住高楼看静压，开放式厨房看噪音，天天油炸看油脂分离率。然后到 [VATTI 抽油烟机页面](/zh/kitchen-hood-in-malaysia/) 比较整个系列，每款型号都列出同样的实测数字。
 
 [比较 VATTI 抽油烟机](/zh/kitchen-hood-in-malaysia/)
-', 1850, 5, 'Vatti Malaysia', 9106, '2026-10-07T12:00:00+08:00', '2026-10-07T12:00:00+08:00', 0, 1, 'zh-MY', 'best-kitchen-hood-malaysia',
+', 1850, 5, 'Vatti Malaysia', 9106, '2026-10-07T12:00:00+08:00', '2026-11-25T12:00:00+08:00', 0, 1, 'zh-MY', 'best-kitchen-hood-malaysia',
 'VATTI 华帝 V929 抽油烟机正在吸走煤气炉上平底锅煎牛排冒出的蒸汽。');
 INSERT INTO article_category (article_id, category_id, is_primary) VALUES (114, (SELECT id FROM blog_category WHERE slug = 'buying-guide'), 1);

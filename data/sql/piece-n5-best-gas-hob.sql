@@ -20,6 +20,12 @@
 -- not as fitting instructions: the client ruled out installation copy, prices
 -- and running costs on 2026-10-03, so efficiency is never turned into savings.
 --
+-- 2026-11-25: title and meta rewritten for CTR, leading with 'best gas stove',
+-- the wording most impressions come from. H1 kept. Baseline (GSC, 27 Oct to
+-- 23 Nov 2026): 40 clicks, 2,722 impressions, 1.5% CTR, position 8.7. Old title:
+-- 'Best Gas Hob in Malaysia (2026): Choosing a Built-In Gas Stove'. Judge from
+-- 28 days after deploy. The 9 in the title is the rows in the table.
+--
 -- Featured image: the cooker hob category's signature photograph (the C861G),
 -- already on R2 and until now only a column on product_category. Given an
 -- image row (9108, after N4's 9107).
@@ -30,9 +36,9 @@ INSERT INTO image (id, url, legacy_url, alt, width, height) VALUES
 
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published, lang, translation_key)
 VALUES (118, 'best-gas-hob-malaysia', 'buying-guide/best-gas-hob-malaysia', 'buying-guide',
+'Best Gas Stove in Malaysia 2026: 9 VATTI Gas Hobs Compared',
 'Best Gas Hob in Malaysia (2026): Choosing a Built-In Gas Stove',
-'Best Gas Hob in Malaysia (2026): Choosing a Built-In Gas Stove',
-'The best gas stove in Malaysia depends on how you cook. Compare burner power, thermal efficiency and safety features, and see which VATTI built-in gas hob suits wok frying, a big family or a safer kitchen.',
+'Which built-in gas stove is best for wok frying, a big family or a safer kitchen? Compare 9 VATTI gas hobs by burner power, efficiency and safety features.',
 'There is no single best gas hob in Malaysia, because there is no single way of cooking here. A hob that suits a family wok-frying every night is not the one for a household that mostly simmers soup, or for a parent who worries about a pot left on the flame. This guide is about **built-in gas hobs**, the kind set into the countertop, not portable stoves. It shows what decides a good one, then picks the best VATTI gas hob for each kind of kitchen, with the figures behind every pick.
 
 ### Quick answer
@@ -149,5 +155,5 @@ Usually the battery, a wet or dirty igniter, or the burner cap sitting crooked. 
 The best gas hob is the one matched to how you cook. Read the power if you wok-fry every night, the efficiency if you want the most heat from the gas, and the safety features if someone at home might forget a pot. Then compare the whole range on the [VATTI cooker hob page](/cooker-hob-in-malaysia/), where every model lists its burners, power and cut-out size.
 
 [Compare VATTI gas hobs](/cooker-hob-in-malaysia/)
-', 1520, 8, 'Vatti Malaysia', 9108, '2026-10-19T12:00:00+08:00', '2026-10-19T12:00:00+08:00', 0, 1, 'en-MY', 'best-gas-hob-malaysia');
+', 1520, 8, 'Vatti Malaysia', 9108, '2026-10-19T12:00:00+08:00', '2026-11-25T12:00:00+08:00', 0, 1, 'en-MY', 'best-gas-hob-malaysia');
 INSERT INTO article_category (article_id, category_id, is_primary) VALUES (118, (SELECT id FROM blog_category WHERE slug = 'buying-guide'), 1);

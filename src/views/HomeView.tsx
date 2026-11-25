@@ -13,6 +13,7 @@ import { LOCALES, OG_LOCALE, TAG, t, type Locale } from "@/i18n";
 import { hreflang } from "@/lib/alternates";
 import { all } from "@/lib/db";
 import { cdn } from "@/lib/cdn";
+import { Inline, plain } from "@/lib/markdown";
 import { LOGO_URL } from "@/lib/site";
 import { articleHref } from "@/lib/queries/article";
 import {
@@ -187,7 +188,8 @@ function faqPage(faqs: { q: string; a: string }[]) {
     mainEntity: faqs.map((f) => ({
       "@type": "Question",
       name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
+      // FAQPage wants plain text; the answers carry inline markdown links.
+      acceptedAnswer: { "@type": "Answer", text: plain(f.a) },
     })),
   };
 }
@@ -928,7 +930,9 @@ export function HomePage({ locale = "en" }: { locale?: Locale }) {
             {faqs.map((f) => (
               <div key={f.q} className="border-b border-line py-6 first:border-t">
                 <dt className="text-lg font-semibold tracking-[-0.02em]">{f.q}</dt>
-                <dd className="mt-3 leading-relaxed text-ink-muted">{f.a}</dd>
+                <dd className="mt-3 leading-relaxed text-ink-muted">
+                  <Inline text={f.a} />
+                </dd>
               </div>
             ))}
           </dl>

@@ -15,7 +15,8 @@ INSERT INTO article_image (article_id, image_id, position) VALUES
   (112, 41, 4),
   (112, 9001, 5),
   (112, 9004, 6),
-  (112, 9011, 7);
+  (112, 9011, 7),
+  (112, 9023, 8);
 
 INSERT INTO article_image (article_id, image_id, position) VALUES
   (113, 9030, 0),
@@ -25,7 +26,8 @@ INSERT INTO article_image (article_id, image_id, position) VALUES
   (113, 41, 4),
   (113, 9001, 5),
   (113, 9004, 6),
-  (113, 9011, 7);
+  (113, 9011, 7),
+  (113, 9023, 8);
 
 INSERT INTO article_image (article_id, image_id, position) VALUES
   (114, 9030, 0),
@@ -35,4 +37,5 @@ INSERT INTO article_image (article_id, image_id, position) VALUES
   (114, 41, 4),
   (114, 9001, 5),
   (114, 9004, 6),
-  (114, 9011, 7);
+  (114, 9011, 7),
+  (114, 9023, 8);

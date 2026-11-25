@@ -316,6 +316,11 @@ export function Inline({ text }: { text: string }) {
   return <>{inline(text)}</>;
 }
 
+/** `[label](/href/)` -> `label`. For FAQPage JSON-LD, which wants plain text. */
+export function plain(md: string): string {
+  return md.replace(/\[([^\]]*)\]\([^)\s]+\)/g, "$1").replace(/\*\*?([^*]+)\*\*?/g, "$1");
+}
+
 const HEADING: Record<number, string> = {
   2: "mt-12 mb-4 text-[clamp(1.5rem,1.2rem+1vw,2rem)] font-semibold tracking-[-0.03em]",
   3: "mt-9 mb-3 text-[1.25rem] font-semibold tracking-[-0.025em]",

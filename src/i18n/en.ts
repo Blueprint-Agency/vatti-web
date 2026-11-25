@@ -449,7 +449,7 @@ export const en = {
       },
       {
         q: "What does VATTI Malaysia sell?",
-        a: `Kitchen hoods, cooker hobs, combi and steam ovens, dishwashers and one tap water purifiers. ${models} models in total.`,
+        a: `Kitchen hoods, cooker hobs, combi and steam ovens, dishwashers and one tap water purifiers. ${models} models in total. Popular ones include the [V997](/vatti-range-hood-v997/) and [V938](/vatti-hidden-series-range-hood-v938/) hoods, the [C836G](/vatti-flexi-hob-c836g/) gas hob and the [VA06](/vatti-magic-series-combi-oven-va06/) combi oven.`,
       },
       {
         q: "What warranty do VATTI appliances carry?",

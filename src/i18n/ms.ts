@@ -440,7 +440,7 @@ export const ms: Dict = {
       },
       {
         q: "Apa yang dijual oleh VATTI Malaysia?",
-        a: `Hood dapur, dapur gas, ketuhar kombi dan stim, mesin basuh pinggan serta penapis air One Tap. Kesemuanya ${models} model.`,
+        a: `Hood dapur, dapur gas, ketuhar kombi dan stim, mesin basuh pinggan serta penapis air One Tap. Kesemuanya ${models} model. Antara yang popular ialah hood [V997](/vatti-range-hood-v997/) dan [V938](/vatti-hidden-series-range-hood-v938/), dapur gas [C836G](/vatti-flexi-hob-c836g/) dan ketuhar kombi [VA06](/vatti-magic-series-combi-oven-va06/).`,
       },
       {
         q: "Apakah waranti peralatan VATTI?",

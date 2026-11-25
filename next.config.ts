@@ -79,6 +79,28 @@ const nextConfig: NextConfig = {
     db.close();
 
     return [
+      // www -> apex, which is the canonical host (SITE_HOST in
+      // src/lib/deployment.ts). First, so a www URL makes this hop before the
+      // legacy 301s. Vercel serves both hosts; this keeps the second one out of
+      // search. /api/ is excluded because a redirected cross-origin POST fails.
+      //
+      // Two rules, because the first keeps the trailing slash (a bare :path*
+      // drops it and costs a second redirect) and the second carries files.
+      //
+      // NEVER set the apex to redirect to www in Vercel while this is here: the
+      // two would loop. See docs/vattimalaysia-www-redirect-fix.pdf.
+      {
+        source: "/:path((?!api/).*)/",
+        has: [{ type: "host", value: "www.vattimalaysia.com" }],
+        destination: "https://vattimalaysia.com/:path/",
+        statusCode: 308,
+      },
+      {
+        source: "/:path((?!api/).*)",
+        has: [{ type: "host", value: "www.vattimalaysia.com" }],
+        destination: "https://vattimalaysia.com/:path",
+        statusCode: 308,
+      },
       // 404 on WordPress today and absent from R2, so the prefix rule below
       // would 301 it to a CDN 404. Must come FIRST: /wp-content/uploads/:path*
       // matches this path too, and the first matching rule wins. It also cannot

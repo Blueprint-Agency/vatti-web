@@ -402,7 +402,7 @@ INSERT INTO category_guide (category_id, position, heading, body_md, figure, fig
 
   ((SELECT id FROM product_category WHERE slug = 'kitchen-hood-in-malaysia'), 2,
    'Static pressure is what separates them',
-   'Airflow is measured with nothing in the way. Static pressure is what survives once the air has to climb a riser or turn two corners. Short duct to an outside wall: the lower end is fine. High-rise or a long run through the ceiling: take the top of the range.',
+   'Airflow is measured with nothing in the way. Static pressure is what survives once the air has to climb a riser or turn two corners. Short duct to an outside wall: the lower end is fine. High-rise or a long run through the ceiling: take the top of the range. Our [best kitchen hood guide](/buying-guide/best-kitchen-hood-malaysia/) picks one for each kind of kitchen.',
    '420-1,700', 'Pa'),
 
   ((SELECT id FROM product_category WHERE slug = 'kitchen-hood-in-malaysia'), 3,
@@ -736,7 +736,7 @@ INSERT INTO category_faq (category_id, position, question, answer_md) VALUES
 
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 5,
    'What should I look for when buying a cooker hob?',
-   'Burner power, the cut-out size, the number of burners, the control type and the safety features. Take them in that order: power and fit rule out most of the range before anything else matters. If you are still deciding between gas and electric, our [induction or ceramic guide](/buying-guide/which-is-better-induction-or-ceramic-cooker/) covers the electric side.'),
+   'Burner power, the cut-out size, the number of burners, the control type and the safety features. Take them in that order: power and fit rule out most of the range before anything else matters. Our [best gas stove guide](/buying-guide/best-gas-hob-malaysia/) compares nine gas hobs on them. If you are still deciding between gas and electric, our [induction or ceramic guide](/buying-guide/which-is-better-induction-or-ceramic-cooker/) covers the electric side.'),
 
   ((SELECT id FROM product_category WHERE slug = 'cooker-hob-in-malaysia'), 6,
    'How far does a cooker hob need to be from a window?',

@@ -14,6 +14,13 @@
 -- spec row ("Ducted or recycled" on 13 models; V991 and V996 ducted only).
 -- No price, running cost or installation arrangement (client, 2026-10-03).
 --
+-- 2026-11-25: title and meta rewritten for CTR; V997 pick added and every model
+-- in the table linked, because Google had never crawled the V997 page. H1 kept.
+-- Baseline (GSC, 27 Oct to 23 Nov 2026): 80 clicks, 7,550 impressions, 1.1% CTR,
+-- position 6.2. Old title: 'Best Kitchen Hood in Malaysia (2026): The Right One
+-- for Your Kitchen'. Judge from 28 days after deploy. The 13 in the title is the
+-- rows in the table (V917 is one hood in two colours): change them together.
+--
 -- Featured image: the kitchen hood category's signature photograph, already
 -- on R2 and until now only a column on product_category. Given an image row
 -- (9106, after refresh-infrared's 9105) so an article can point at it.
@@ -24,9 +31,9 @@ INSERT INTO image (id, url, legacy_url, alt, width, height) VALUES
 
 INSERT INTO article (id, slug, path, section, title, h1, meta_description, body_md, word_count, reading_minutes, author, featured_image_id, published_at, modified_at, schema_disabled, is_published, lang, translation_key)
 VALUES (112, 'best-kitchen-hood-malaysia', 'buying-guide/best-kitchen-hood-malaysia', 'buying-guide',
+'Best Kitchen Hood in Malaysia 2026: 13 VATTI Hoods Compared',
 'Best Kitchen Hood in Malaysia (2026): The Right One for Your Kitchen',
-'Best Kitchen Hood in Malaysia (2026): The Right One for Your Kitchen',
-'The best kitchen hood in Malaysia depends on your kitchen. Compare airflow, static pressure and noise, and see which VATTI cooker hood suits a condo, an open kitchen or no duct at all.',
+'Which kitchen hood is best for a condo, an open kitchen or heavy frying? Compare 13 VATTI hoods by airflow, static pressure and noise, with a pick for each.',
 'There is no single best kitchen hood in Malaysia, because there is no single Malaysian kitchen. A hood that clears a landed-house kitchen with a short duct can struggle on the 30th floor of a condo, and the quietest hood is not always the one that copes with daily wok frying. This guide shows what decides it, then picks the best VATTI cooker hood for each kind of kitchen, with the measured figures behind every pick.
 
 ### Quick answer
@@ -74,6 +81,12 @@ If the cabinetry should run unbroken, the [V938](/vatti-hidden-series-range-hood
 
 If the wok is on high heat most days, oil is the long-term enemy. The [V959](/vatti-cooker-hood-v959/) captures 95% of the oil, the highest figure in the range, with 2,825 m³/h at 1,100 Pa.
 
+### For intensive cooking: V997
+
+[![VATTI V997 cooker hood](https://cdn.vattimalaysia.com/2026/08/vatti-range-hood-v997-front.webp)](/vatti-range-hood-v997/)
+
+A top-suction hood sits further from the pan; a side-suction hood catches smoke low but lets some past its edges. The [V997](/vatti-range-hood-v997/) does both, with 2,800 m³/h at 1,200 Pa and 48 dB, and intelligent auto suction control. It also has a hand sensor and turbo wash auto-clean.
+
 ### For a wide hob: V937
 
 [![VATTI V937 cooker hood](https://cdn.vattimalaysia.com/2023/11/VATTI_V937_front_NEW.webp)](/triple-intake-series-t-type-cooker-hood-v937/)
@@ -101,19 +114,19 @@ Every VATTI hood can run **ducted or recycled**: without a duct it uses a honeyc
 
 | Model | Airflow (m³/h) | Static pressure (Pa) | Noise (dB) | Best for |
 | --- | --- | --- | --- | --- |
-| V960 | 3,690 | 1,700 | 48 | High-floor condo, long duct |
-| V938 | 3,650 | 1,600 | 48 | Hidden in the cabinet |
-| V929 | 3,125 | 1,300 | 46.5 | Open kitchen, quiet |
-| V919 | 3,050 | 1,300 | 50 | Heavy cooking, every day |
-| V998 | 2,850 | 1,250 | 49 | Smart controls |
-| V959 | 2,825 | 1,100 | 51 | Heavy frying, oil capture |
-| V997 | 2,800 | 1,200 | 48 | Intensive cooking |
-| V937 | 2,500 | 1,050 | 50 | Wide hob |
-| V993 | 2,500 | 850 | 50 | Landed house, everyday cooking |
-| V999 | 2,500 | 1,000 | 50 | Everyday cooking, hand sensor |
-| V917 | 2,250 | 900 | 48 | Balanced power, slim body |
-| V995 | 2,050 | 450 | 52 | Small kitchen |
-| V931 | 1,860 | 420 | 54 | Compact kitchen, short duct |
+| [V960](/vatti-stellar-series-cooker-hood-v960/) | 3,690 | 1,700 | 48 | High-floor condo, long duct |
+| [V938](/vatti-hidden-series-range-hood-v938/) | 3,650 | 1,600 | 48 | Hidden in the cabinet |
+| [V929](/vatti-aetheris-series-cooker-hood-v929/) | 3,125 | 1,300 | 46.5 | Open kitchen, quiet |
+| [V919](/vatti-magic-series-cooker-hood-v919/) | 3,050 | 1,300 | 50 | Heavy cooking, every day |
+| [V998](/vatti-smart-oxygen-range-hood-v998/) | 2,850 | 1,250 | 49 | Smart controls |
+| [V959](/vatti-cooker-hood-v959/) | 2,825 | 1,100 | 51 | Heavy frying, oil capture |
+| [V997](/vatti-range-hood-v997/) | 2,800 | 1,200 | 48 | Intensive cooking |
+| [V937](/triple-intake-series-t-type-cooker-hood-v937/) | 2,500 | 1,050 | 50 | Wide hob |
+| [V993](/athena-series-lifting-type-range-hood-v993/) | 2,500 | 850 | 50 | Landed house, everyday cooking |
+| [V999](/athena-series-lifting-type-range-hood-v999/) | 2,500 | 1,000 | 50 | Everyday cooking, hand sensor |
+| [V917](/vatti-cooker-hood-v917-carbon-grey/) | 2,250 | 900 | 48 | Balanced power, slim body |
+| [V995](/slim-series-type-range-hood-v995/) | 2,050 | 450 | 52 | Small kitchen |
+| [V931](/artemis-series-t-type-range-hood-v931/) | 1,860 | 420 | 54 | Compact kitchen, short duct |
 
 ## What every VATTI hood comes with
 
@@ -141,5 +154,5 @@ A T-type is the classic flat canopy and chimney. A lifting-type brings the intak
 The best kitchen hood is the one matched to your duct, your layout and how you cook. Read the static pressure if you live high up, the noise if your kitchen is open, and the oil capture if you fry every day. Then compare the whole range on the [VATTI kitchen hood page](/kitchen-hood-in-malaysia/), where every model lists the same measured figures.
 
 [Compare VATTI kitchen hoods](/kitchen-hood-in-malaysia/)
-', 1248, 7, 'Vatti Malaysia', 9106, '2026-10-07T12:00:00+08:00', '2026-10-07T12:00:00+08:00', 0, 1, 'en-MY', 'best-kitchen-hood-malaysia');
+', 1248, 7, 'Vatti Malaysia', 9106, '2026-10-07T12:00:00+08:00', '2026-11-25T12:00:00+08:00', 0, 1, 'en-MY', 'best-kitchen-hood-malaysia');
 INSERT INTO article_category (article_id, category_id, is_primary) VALUES (112, (SELECT id FROM blog_category WHERE slug = 'buying-guide'), 1);

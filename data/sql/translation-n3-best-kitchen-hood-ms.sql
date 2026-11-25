@@ -64,6 +64,12 @@ Jika anda mahu kabinet kelihatan bersambung tanpa gangguan, [V938](/vatti-hidden
 
 Jika kuali di atas api besar hampir setiap hari, minyak ialah musuh jangka panjang. [V959](/vatti-cooker-hood-v959/) menapis 95% minyak, angka tertinggi dalam rangkaian, dengan 2,825 m³/h pada 1,100 Pa.
 
+### Untuk masakan intensif: V997
+
+[![Hood dapur VATTI V997](https://cdn.vattimalaysia.com/2026/08/vatti-range-hood-v997-front.webp)](/vatti-range-hood-v997/)
+
+Hood sedutan atas lebih jauh daripada kuali; hood sedutan sisi menangkap asap dari bawah tetapi sebahagiannya terlepas di tepi. [V997](/vatti-range-hood-v997/) menggabungkan kedua-duanya, dengan 2,800 m³/h pada 1,200 Pa dan 48 dB, serta kawalan sedutan automatik pintar. Ia juga ada sensor tangan dan pembersihan automatik turbo wash.
+
 ### Untuk dapur gas yang lebar: V937
 
 [![Hood dapur VATTI V937](https://cdn.vattimalaysia.com/2023/11/VATTI_V937_front_NEW.webp)](/triple-intake-series-t-type-cooker-hood-v937/)
@@ -91,19 +97,19 @@ Semua hood VATTI boleh berfungsi **bersaluran atau kitar semula**: tanpa saluran
 
 | Model | Aliran udara (m³/h) | Tekanan statik (Pa) | Bunyi (dB) | Paling sesuai untuk |
 | --- | --- | --- | --- | --- |
-| V960 | 3,690 | 1,700 | 48 | Kondo tingkat tinggi, saluran panjang |
-| V938 | 3,650 | 1,600 | 48 | Tersembunyi di dalam kabinet |
-| V929 | 3,125 | 1,300 | 46.5 | Dapur terbuka, senyap |
-| V919 | 3,050 | 1,300 | 50 | Masakan berat setiap hari |
-| V998 | 2,850 | 1,250 | 49 | Kawalan pintar |
-| V959 | 2,825 | 1,100 | 51 | Menggoreng, tapisan minyak |
-| V997 | 2,800 | 1,200 | 48 | Masakan intensif |
-| V937 | 2,500 | 1,050 | 50 | Dapur gas lebar |
-| V993 | 2,500 | 850 | 50 | Rumah teres, masakan harian |
-| V999 | 2,500 | 1,000 | 50 | Masakan harian, sensor tangan |
-| V917 | 2,250 | 900 | 48 | Kuasa seimbang, badan nipis |
-| V995 | 2,050 | 450 | 52 | Dapur kecil |
-| V931 | 1,860 | 420 | 54 | Dapur kompak, saluran pendek |
+| [V960](/vatti-stellar-series-cooker-hood-v960/) | 3,690 | 1,700 | 48 | Kondo tingkat tinggi, saluran panjang |
+| [V938](/vatti-hidden-series-range-hood-v938/) | 3,650 | 1,600 | 48 | Tersembunyi di dalam kabinet |
+| [V929](/vatti-aetheris-series-cooker-hood-v929/) | 3,125 | 1,300 | 46.5 | Dapur terbuka, senyap |
+| [V919](/vatti-magic-series-cooker-hood-v919/) | 3,050 | 1,300 | 50 | Masakan berat setiap hari |
+| [V998](/vatti-smart-oxygen-range-hood-v998/) | 2,850 | 1,250 | 49 | Kawalan pintar |
+| [V959](/vatti-cooker-hood-v959/) | 2,825 | 1,100 | 51 | Menggoreng, tapisan minyak |
+| [V997](/vatti-range-hood-v997/) | 2,800 | 1,200 | 48 | Masakan intensif |
+| [V937](/triple-intake-series-t-type-cooker-hood-v937/) | 2,500 | 1,050 | 50 | Dapur gas lebar |
+| [V993](/athena-series-lifting-type-range-hood-v993/) | 2,500 | 850 | 50 | Rumah teres, masakan harian |
+| [V999](/athena-series-lifting-type-range-hood-v999/) | 2,500 | 1,000 | 50 | Masakan harian, sensor tangan |
+| [V917](/vatti-cooker-hood-v917-carbon-grey/) | 2,250 | 900 | 48 | Kuasa seimbang, badan nipis |
+| [V995](/slim-series-type-range-hood-v995/) | 2,050 | 450 | 52 | Dapur kecil |
+| [V931](/artemis-series-t-type-range-hood-v931/) | 1,860 | 420 | 54 | Dapur kompak, saluran pendek |
 
 ## Apa yang disertakan dengan setiap hood VATTI
 
@@ -131,7 +137,7 @@ Hood jenis T ialah bentuk klasik dengan kanopi rata dan cerobong. Hood jenis ang
 Hood dapur terbaik ialah hood yang sepadan dengan saluran, susun atur dapur dan cara anda memasak. Lihat tekanan statik jika anda tinggal di tingkat tinggi, bunyi jika dapur anda terbuka, dan tapisan minyak jika anda menggoreng setiap hari. Kemudian bandingkan seluruh rangkaian di [halaman hood dapur VATTI](/ms/hood-dapur/), di mana setiap model menyenaraikan angka ukuran yang sama.
 
 [Bandingkan hood dapur VATTI](/ms/hood-dapur/)
-', 1167, 6, 'Vatti Malaysia', 9106, '2026-10-07T12:00:00+08:00', '2026-10-07T12:00:00+08:00', 0, 1, 'ms-MY', 'best-kitchen-hood-malaysia');
+', 1167, 6, 'Vatti Malaysia', 9106, '2026-10-07T12:00:00+08:00', '2026-11-25T12:00:00+08:00', 0, 1, 'ms-MY', 'best-kitchen-hood-malaysia');
 -- Image 9106 is shared with the English post, whose alt is English.
 UPDATE article SET featured_image_alt =
   'Hood dapur VATTI V929 menyedut wap dari stik yang sedang dimasak dalam kuali di atas dapur gas.'

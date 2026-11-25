@@ -25,7 +25,7 @@ import { SoundLevelMark } from "@/components/SoundLevelMark";
 import { TAG, t, type Locale } from "@/i18n";
 import type { Editions } from "@/lib/alternates";
 import { SITE_ORIGIN } from "@/lib/deployment";
-import { Inline } from "@/lib/markdown";
+import { Inline, plain } from "@/lib/markdown";
 import { homeHref, staticHref } from "@/lib/routes";
 import type {
   Category,
@@ -1099,11 +1099,6 @@ function faqPage(faqs: Faq[]) {
       acceptedAnswer: { "@type": "Answer", text: plain(f.answer_md) },
     })),
   };
-}
-
-/** `[label](/href/)` -> `label`. The only markdown these answers carry. */
-function plain(md: string): string {
-  return md.replace(/\[([^\]]*)\]\([^)\s]+\)/g, "$1").replace(/\*\*?([^*]+)\*\*?/g, "$1");
 }
 
 function fmt(n: number, locale: Locale = "en"): string {

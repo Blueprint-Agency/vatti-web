@@ -424,7 +424,7 @@ export const zh: Dict = {
       },
       {
         q: "VATTI 华帝马来西亚卖什么？",
-        a: `抽油烟机、煤气炉、蒸烤箱、洗碗机和 One Tap 净水器，共 ${models} 款型号。`,
+        a: `抽油烟机、煤气炉、蒸烤箱、洗碗机和 One Tap 净水器，共 ${models} 款型号。热门型号包括 [V997](/vatti-range-hood-v997/) 和 [V938](/vatti-hidden-series-range-hood-v938/) 抽油烟机、[C836G](/vatti-flexi-hob-c836g/) 煤气炉和 [VA06](/vatti-magic-series-combi-oven-va06/) 蒸烤箱。`,
       },
       {
         q: "VATTI 华帝电器的保修是多久？",
