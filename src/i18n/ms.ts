@@ -86,6 +86,7 @@ export const ms: Dict = {
       ingredients: "Bahan-bahan",
       method: "Cara",
       note: "Nota",
+      appliance: "Dimasak dengan",
     },
   },
 

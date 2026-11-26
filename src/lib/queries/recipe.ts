@@ -14,6 +14,10 @@ export type Recipe = {
   calories: string | null;
   /** The card's '### Note'. NULL on cream-puff, the one recipe without one. */
   notes: string | null;
+  /** Inline markdown naming the VATTI appliance the method is written for. */
+  appliance_md: string | null;
+  /** Comma-separated terms for the Recipe node's `keywords`. */
+  keywords: string | null;
   ingredients: string[];
   steps: string[];
 };
@@ -27,7 +31,8 @@ export type Recipe = {
 export function getRecipes(articleId: number): Recipe[] {
   const rows = all<Omit<Recipe, "ingredients" | "steps">>(
     `SELECT id, name, description, prep_minutes, cook_minutes, total_minutes,
-            yield_qty, yield_label, cuisine, meal_category, calories, notes
+            yield_qty, yield_label, cuisine, meal_category, calories, notes,
+            appliance_md, keywords
        FROM recipe WHERE article_id = ? ORDER BY position`,
     articleId
   );

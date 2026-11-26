@@ -141,3 +141,7 @@ INSERT INTO recipe_step (recipe_id, position, text) VALUES
   (20, 7, 'Tabur halia muda, daun bawang dan cili yang dihiris di atas ikan.'),
   (20, 8, 'Panaskan minyak masak hingga berkilat dan tuang ke atas halia dan daun bawang sehingga berdesis.'),
   (20, 9, 'Tuang kuah kicap panas di sekeliling ikan, tabur daun ketumbar dan hidangkan segera bersama nasi.');
+
+-- Appliance line ("Cooked in") and Recipe keywords, 2026-11-26. See refresh-recipes-2026-11.sql.
+UPDATE recipe SET appliance_md = 'Ketuhar kombi [VA05](/built-in-combi-oven-va05/) atau [VA06](/vatti-magic-series-combi-oven-va06/), tahap stim tertinggi', keywords = 'resepi ikan stim limau, ikan siakap stim limau, ikan stim, resepi ketuhar stim' WHERE id = 19;
+UPDATE recipe SET appliance_md = 'Ketuhar kombi [VA05](/built-in-combi-oven-va05/) atau [VA06](/vatti-magic-series-combi-oven-va06/), tahap stim tertinggi', keywords = 'ikan stim halia, ikan stim gaya cina, resepi ikan stim, resepi ketuhar stim' WHERE id = 20;

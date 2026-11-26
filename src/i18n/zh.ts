@@ -86,6 +86,7 @@ export const zh: Dict = {
       ingredients: "食材",
       method: "做法",
       note: "备注",
+      appliance: "使用厨电",
     },
   },
 

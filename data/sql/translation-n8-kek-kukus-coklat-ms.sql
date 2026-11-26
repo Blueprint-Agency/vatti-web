@@ -117,3 +117,6 @@ INSERT INTO recipe_step (recipe_id, position, text) VALUES
   (24, 7, 'Uji dengan lidi di tengah; ia patut keluar bersih. Biarkan kek dalam loyang 10 minit, kemudian terbalikkan dan sejukkan sepenuhnya.'),
   (24, 8, 'Untuk topping, panaskan krim sehingga berwap, tuang ke atas coklat yang dicincang, tunggu 2 minit, kacau sehingga berkilat dan masukkan mentega.'),
   (24, 9, 'Tuang topping ke atas kek yang sudah sejuk, biarkan meleleh di tepi, dan sejukkan dalam peti sejuk 30 minit sebelum dipotong.');
+
+-- Appliance line ("Cooked in") and Recipe keywords, 2026-11-26. See refresh-recipes-2026-11.sql.
+UPDATE recipe SET appliance_md = 'Ketuhar kombi [VA05](/built-in-combi-oven-va05/) atau [VA06](/vatti-magic-series-combi-oven-va06/), tahap stim tertinggi', keywords = 'resepi kek kukus coklat moist, kek kukus coklat, kek kukus sukatan cawan, kek kukus milo' WHERE id = 24;

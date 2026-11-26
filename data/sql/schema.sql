@@ -612,6 +612,15 @@ CREATE TABLE recipe (
   -- carries real method detail that appears nowhere else on the page.
   notes         TEXT,
   hero_image_id INTEGER REFERENCES image(id),
+  -- The VATTI appliance the method is written for, as one line of inline
+  -- markdown with links: '[VA05](/built-in-combi-oven-va05/) or [VA06](/…/)
+  -- combi oven, high steam'. Shown on the card as "Cooked in" and, stripped of
+  -- links, as the Recipe node's `tool`. NULL on the generic recipes that name
+  -- no appliance; the card and the schema leave it out.
+  appliance_md  TEXT,
+  -- Comma-separated search terms for the Recipe node's `keywords`: the dish's
+  -- other names (siakap stim, kek kukus) and the method. Not shown on the page.
+  keywords      TEXT,
   UNIQUE (article_id, position)
 );
 

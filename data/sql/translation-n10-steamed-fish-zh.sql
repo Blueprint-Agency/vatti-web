@@ -139,3 +139,7 @@ INSERT INTO recipe_step (recipe_id, position, text) VALUES
   (22, 6, '离火后把青柠汁拌进热汤汁里，试试酸、咸、辣够不够。'),
   (22, 7, '取出碟子，倒掉蒸鱼水，拿走香茅和姜片。'),
   (22, 8, '把热的青柠汤汁淋在鱼上，撒上芫荽和青柠片，马上上桌。');
+
+-- Appliance line ("Cooked in") and Recipe keywords, 2026-11-26. See refresh-recipes-2026-11.sql.
+UPDATE recipe SET appliance_md = '[VA05](/built-in-combi-oven-va05/) 或 [VA06](/vatti-magic-series-combi-oven-va06/) 蒸烤一体机，最高蒸汽档', keywords = '清蒸鱼, 港式清蒸鱼, 清蒸鱼做法, 蒸烤箱食谱' WHERE id = 21;
+UPDATE recipe SET appliance_md = '[VA05](/built-in-combi-oven-va05/) 或 [VA06](/vatti-magic-series-combi-oven-va06/) 蒸烤一体机，最高蒸汽档', keywords = '酸柑蒸鱼, 泰式柠檬蒸鱼, ikan stim limau, 蒸烤箱食谱' WHERE id = 22;

@@ -116,3 +116,6 @@ INSERT INTO recipe_step (recipe_id, position, text) VALUES
   (25, 7, '用竹签插中间测试，拔出干净就熟了。蛋糕留在模里 10 分钟，再倒扣脱模，完全放凉。'),
   (25, 8, '做巧克力酱：鲜奶油加热到冒烟，倒在切碎的巧克力上，等 2 分钟，拌到光亮，再拌入牛油。'),
   (25, 9, '把巧克力酱淋在凉透的蛋糕上，让它沿边流下，放冰箱冷藏 30 分钟凝固后再切。');
+
+-- Appliance line ("Cooked in") and Recipe keywords, 2026-11-26. See refresh-recipes-2026-11.sql.
+UPDATE recipe SET appliance_md = '[VA05](/built-in-combi-oven-va05/) 或 [VA06](/vatti-magic-series-combi-oven-va06/) 蒸烤一体机，最高蒸汽档', keywords = '巧克力蒸蛋糕, 蒸蛋糕做法, kek kukus coklat, 蒸烤箱食谱' WHERE id = 25;

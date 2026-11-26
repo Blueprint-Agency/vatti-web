@@ -10,7 +10,7 @@ import { SiteHeader, type Editions } from "@/components/SiteHeader";
 import { OG_LOCALE, TAG, localeFromTag, t as dict, type Dict, type Locale } from "@/i18n";
 import { hreflang } from "@/lib/alternates";
 import { SITE_ORIGIN } from "@/lib/deployment";
-import { Markdown, outline } from "@/lib/markdown";
+import { Inline, Markdown, faqItems, outline, plain } from "@/lib/markdown";
 import {
   articleCallouts,
   articleEditions,
@@ -107,6 +107,9 @@ export function ArticlePage({
   const href = articleHref(article.lang, article.path);
   const editions = editionsOf(article);
   const { body, cover } = oneCover(article.body_md, article.hero_url);
+  // The FAQ section the body renders as disclosures, again as FAQPage JSON-LD:
+  // the questions are what an answer engine lifts, and they are on the page.
+  const faqs = faqItems(body);
   const sizes = Object.fromEntries(
     getArticleImageSizes(article.id)
       .filter((s) => s.width && s.height)
@@ -231,8 +234,8 @@ export function ArticlePage({
             <Markdown md={body} sizes={sizes} callouts={callouts} article />
           </div>
 
-          {recipes.map((recipe) => (
-            <RecipeCard key={recipe.id} recipe={recipe} labels={d.article.recipe} />
+          {recipes.map((recipe, i) => (
+            <RecipeCard key={recipe.id} recipe={recipe} labels={d.article.recipe} anchor={i === 0} />
           ))}
         </article>
 
@@ -300,6 +303,12 @@ export function ArticlePage({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(recipeSchema(r, article, href)) }}
         />
       ))}
+      {faqs.length >= 2 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleFaqSchema(faqs)) }}
+        />
+      )}
     </>
   );
 }
@@ -439,6 +448,8 @@ function recipeSchema(recipe: Recipe, article: Article, href: string) {
     inLanguage: article.lang,
     image: article.hero_url ? [article.hero_url] : undefined,
     datePublished: article.published_at,
+    dateModified: article.modified_at ?? article.published_at,
+    mainEntityOfPage: `${SITE}${href}`,
     author: article.author ? { "@type": "Organization", name: article.author } : PUBLISHER,
     publisher: PUBLISHER,
     prepTime: minutesToIso(recipe.prep_minutes),
@@ -447,13 +458,38 @@ function recipeSchema(recipe: Recipe, article: Article, href: string) {
     recipeYield: yieldText,
     recipeCuisine: recipe.cuisine ?? undefined,
     recipeCategory: recipe.meal_category ?? undefined,
+    keywords: recipe.keywords ?? undefined,
+    tool: recipe.appliance_md
+      ? [{ "@type": "HowToTool", name: plain(recipe.appliance_md) }]
+      : undefined,
     nutrition: recipe.calories
       ? { "@type": "NutritionInformation", calories: recipe.calories }
       : undefined,
     recipeIngredient: recipe.ingredients.length ? recipe.ingredients : undefined,
     recipeInstructions: recipe.steps.length
-      ? recipe.steps.map((text, i) => ({ "@type": "HowToStep", position: i + 1, text }))
+      ? recipe.steps.map((text, i) => ({
+          "@type": "HowToStep",
+          position: i + 1,
+          text,
+          url: `${SITE}${href}#${stepId(recipe.id, i)}`,
+        }))
       : undefined,
+  };
+}
+
+/** The anchor each method step carries, so a HowToStep can link to it. */
+const stepId = (recipeId: number, i: number) => `recipe-${recipeId}-step-${i + 1}`;
+
+/** The body's FAQ disclosures as FAQPage. Plain text: see `faqItems`. */
+function articleFaqSchema(faqs: { question: string; answer: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
   };
 }
 
@@ -537,12 +573,21 @@ function RecipeSummary({ recipes, labels }: { recipes: Recipe[]; labels: RecipeL
  * which is the whole point of storing them separately. The WordPress recipe-card
  * copy of the same content is stripped out of the body — see lib/markdown.tsx.
  */
-function RecipeCard({ recipe, labels }: { recipe: Recipe; labels: RecipeLabels }) {
+function RecipeCard({
+  recipe,
+  labels,
+  anchor,
+}: {
+  recipe: Recipe;
+  labels: RecipeLabels;
+  /** The first card is the "Jump to recipe" target; ids must stay unique. */
+  anchor: boolean;
+}) {
   if (recipe.ingredients.length === 0 && recipe.steps.length === 0) return null;
 
   return (
     <section
-      id="recipe"
+      id={anchor ? "recipe" : undefined}
       aria-labelledby={`recipe-${recipe.id}`}
       className="mt-14 scroll-mt-20 rounded-sm border border-paper-line bg-paper-surface p-6 sm:p-8"
     >
@@ -558,6 +603,15 @@ function RecipeCard({ recipe, labels }: { recipe: Recipe; labels: RecipeLabels }
 
       {recipe.description && (
         <p className="mt-4 max-w-[62ch] leading-relaxed text-paper-muted">{recipe.description}</p>
+      )}
+
+      {/* The appliance the method is written for: the step from the dish to
+          the VATTI model that cooks it. */}
+      {recipe.appliance_md && (
+        <p className="mt-4 max-w-[62ch] text-sm leading-relaxed">
+          <span className="font-semibold">{labels.appliance}:</span>{" "}
+          <Inline text={recipe.appliance_md} />
+        </p>
       )}
 
       <div className="mt-8 grid gap-10 sm:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]">
@@ -587,7 +641,7 @@ function RecipeCard({ recipe, labels }: { recipe: Recipe; labels: RecipeLabels }
             </h3>
             <ol className="mt-4 flex flex-col gap-4">
               {recipe.steps.map((text, i) => (
-                <li key={i} className="flex gap-4 leading-relaxed">
+                <li key={i} id={stepId(recipe.id, i)} className="flex scroll-mt-24 gap-4 leading-relaxed">
                   <span aria-hidden="true" className="readout shrink-0 text-sm text-teal">
                     {String(i + 1).padStart(2, "0")}
                   </span>

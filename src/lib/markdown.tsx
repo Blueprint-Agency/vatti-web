@@ -316,6 +316,38 @@ export function Inline({ text }: { text: string }) {
   return <>{inline(text)}</>;
 }
 
+/**
+ * The questions and answers the article renders as FAQ disclosures, for its
+ * FAQPage JSON-LD. Same rules as `Markdown`: a "**Question?** Answer" paragraph
+ * under an H2 the FAQ heading pattern matches. Answers come back as plain text.
+ */
+export function faqItems(md: string): { question: string; answer: string }[] {
+  const lines = md.split("\n");
+  const items: { question: string; answer: string }[] = [];
+  let inFaq = false;
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i].trim();
+    if (!line) continue;
+    const h2 = /^## +(.*)$/.exec(line);
+    if (h2) {
+      inFaq = FAQ_HEADING.test(h2[1]);
+      continue;
+    }
+    if (!inFaq || STRUCTURAL.test(line)) continue;
+    const buf = [line];
+    let j = i + 1;
+    for (; j < lines.length; j++) {
+      const s = lines[j].trim();
+      if (!s || STRUCTURAL.test(s)) break;
+      buf.push(s);
+    }
+    const faq = FAQ_ITEM.exec(buf.join(" "));
+    if (faq) items.push({ question: plain(faq[1]), answer: plain(faq[2]) });
+    i = j - 1;
+  }
+  return items;
+}
+
 /** `[label](/href/)` -> `label`. For FAQPage JSON-LD, which wants plain text. */
 export function plain(md: string): string {
   return md.replace(/\[([^\]]*)\]\([^)\s]+\)/g, "$1").replace(/\*\*?([^*]+)\*\*?/g, "$1");

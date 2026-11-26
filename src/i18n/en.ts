@@ -91,6 +91,7 @@ export const en = {
       ingredients: "Ingredients",
       method: "Method",
       note: "Note",
+      appliance: "Cooked in",
     },
   },
 
