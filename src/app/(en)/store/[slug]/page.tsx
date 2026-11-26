@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { SiteHeader } from "@/components/SiteHeader";
-import { getStore, storeSlugs, telHref, type Store } from "@/lib/queries/store";
+import { getStore, storeSlugs, storesNear, telHref, townOf, type Store } from "@/lib/queries/store";
 import { CtaBar } from "@/components/CtaBar";
 import { WHATSAPP } from "@/lib/site";
 
@@ -31,13 +31,14 @@ export async function generateMetadata({
   const store = getStore(slug);
   if (!store) return {};
 
-  const description = `${store.name} is an authorised VATTI dealer in ${store.region}. Address, phone number and directions.`;
+  const title = `${store.name} | Authorised VATTI Dealer`;
+  const description = storeDescription(store);
   return {
-    title: `${store.name} | Authorised VATTI Dealer`,
+    title,
     description,
     alternates: { canonical: `/store/${store.slug}/` },
     openGraph: {
-      title: `${store.name} | Authorised VATTI Dealer`,
+      title,
       description,
       url: `/store/${store.slug}/`,
       images: store.url ? [{ url: store.url }] : undefined,
@@ -49,6 +50,9 @@ export default async function StorePage({ params }: { params: Promise<{ slug: st
   const { slug } = await params;
   const store = getStore(slug);
   if (!store) notFound();
+  const place = placeOf(store);
+  const town = townOf(store) ?? store.region;
+  const near = storesNear(store);
 
   return (
     <>
@@ -77,12 +81,36 @@ export default async function StorePage({ params }: { params: Promise<{ slug: st
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:gap-16">
             <div className="flex flex-col">
               <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-teal">
-                {store.region}
+                {place}
               </p>
 
               <h1 className="mt-3 text-balance text-[clamp(1.75rem,1.1rem+2.4vw,3rem)] font-semibold leading-[1.05] tracking-[-0.035em]">
                 {store.name}
               </h1>
+
+              <p className="mt-5 max-w-[52ch] leading-relaxed text-ink-muted">
+                An authorised VATTI dealer in {place}. Ask here about VATTI{" "}
+                <Link href="/kitchen-hood-in-malaysia/" className="text-teal underline-offset-[3px] hover:underline">
+                  kitchen hoods
+                </Link>
+                ,{" "}
+                <Link href="/cooker-hob-in-malaysia/" className="text-teal underline-offset-[3px] hover:underline">
+                  cooker hobs
+                </Link>
+                ,{" "}
+                <Link href="/combi-and-steam-oven-in-malaysia/" className="text-teal underline-offset-[3px] hover:underline">
+                  ovens
+                </Link>{" "}
+                and{" "}
+                <Link href="/dishwasher-in-malaysia/" className="text-teal underline-offset-[3px] hover:underline">
+                  dishwashers
+                </Link>
+                . A unit bought here carries the VATTI Malaysia warranty; register it at{" "}
+                <Link href="/vatti-ewarranty/" className="text-teal underline-offset-[3px] hover:underline">
+                  VATTI eWarranty
+                </Link>
+                .
+              </p>
 
               <dl className="mt-8 border-t border-line">
                 <div className="border-b border-line py-4">
@@ -175,6 +203,26 @@ export default async function StorePage({ params }: { params: Promise<{ slug: st
             </div>
           </div>
         </section>
+        {near.length > 0 && (
+          <section aria-labelledby="dealers-near" className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
+            <h2 id="dealers-near" className="text-2xl font-semibold tracking-[-0.025em] sm:text-3xl">
+              Other VATTI dealers near {town}
+            </h2>
+            <ul className="mt-8 grid gap-px overflow-hidden rounded-sm border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
+              {near.map((s) => (
+                <li key={s.slug} className="bg-void">
+                  <Link
+                    href={`/store/${s.slug}/`}
+                    className="flex h-full flex-col gap-1 px-5 py-4 transition-colors hover:bg-surface"
+                  >
+                    <span className="font-medium leading-snug">{s.name}</span>
+                    <span className="text-sm text-ink-muted">{placeOf(s)}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
       </main>
 
       <CtaBar />
@@ -186,6 +234,10 @@ export default async function StorePage({ params }: { params: Promise<{ slug: st
         // the dealer pages are where it belongs.
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness(store)) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb(store)) }}
+      />
     </>
   );
 }
@@ -196,15 +248,45 @@ function localBusiness(store: Store) {
     "@type": "LocalBusiness",
     name: store.name,
     url: `https://vattimalaysia.com/store/${store.slug}/`,
+    description: storeDescription(store),
     address: {
       "@type": "PostalAddress",
       streetAddress: store.address,
-      addressRegion: store.region,
+      ...(store.locality && { addressLocality: townOf(store) }),
+      ...(store.postcode && { postalCode: store.postcode }),
+      addressRegion: store.state ?? store.region,
       addressCountry: "MY",
     },
+    ...(store.locality && { areaServed: placeOf(store) }),
     ...(store.phone && { telephone: store.phone }),
     ...(store.directions_url && { hasMap: store.directions_url }),
     ...(store.url && { image: store.url }),
     brand: { "@type": "Brand", name: "VATTI" },
+  };
+}
+
+const SITE = "https://vattimalaysia.com";
+
+/** 'Johor Jaya, Johor Bahru, Johor', or the region for a row with no locality. */
+function placeOf(store: Store): string {
+  return store.locality && store.state ? `${store.locality}, ${store.state}` : store.region;
+}
+
+function storeDescription(store: Store): string {
+  const where = store.locality ? `${store.locality}, ${store.state}` : store.region;
+  const call = store.phone ? `Call ${store.phone}, get directions` : "Get directions";
+  return `${store.name} is an authorised VATTI dealer in ${where}: ${store.address}. ${call}, or ask about VATTI hoods, hobs and ovens.`;
+}
+
+/** Mirrors the visible breadcrumb: Home / Store locations / the dealer. */
+function breadcrumb(store: Store) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
+      { "@type": "ListItem", position: 2, name: "Store locations", item: `${SITE}/store-locations/` },
+      { "@type": "ListItem", position: 3, name: store.name, item: `${SITE}/store/${store.slug}/` },
+    ],
   };
 }

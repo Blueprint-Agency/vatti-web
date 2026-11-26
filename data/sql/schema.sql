@@ -672,7 +672,14 @@ CREATE TABLE store (
   phone          TEXT,
   directions_url TEXT,                   -- 74/75 have one
   image_id       INTEGER REFERENCES image(id),
-  sort_order     INTEGER NOT NULL DEFAULT 0
+  sort_order     INTEGER NOT NULL DEFAULT 0,
+  -- Hand-set in store-locality-2026-11.sql. `locality` is the neighbourhood or
+  -- town a shopper searches ('Kepong', 'Johor Jaya, Johor Bahru'); `state` the
+  -- state; `postcode` the five digits from the address. They drive the page
+  -- title, description, the "dealers nearby" list and the PostalAddress.
+  locality       TEXT,
+  state          TEXT,
+  postcode       TEXT
 );
 CREATE INDEX store_region_idx ON store(region_slug, name);
 
